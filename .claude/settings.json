@@ -2,11 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(find:*)",
-      "Read(//Users/kyawminthu/Dev/tools/**)"
+      "Read(/Users/kyawminthu/Dev/tools/**)"
+    ],
+    "additionalDirectories": [
+      "/Users/kyawminthu/Dev/tools"
     ]
-  }
-}
-{
+  },
   "hooks": {
     "Notification": [
       {
@@ -18,48 +19,14 @@
           }
         ]
       }
-    ]
-  }
-}
-{
-  "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "Edit|Write",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "jq -r '.tool_input.file_path' | xargs npx prettier --write"
-          }
-        ]
-      }
-    ]
-  }
-}
-{
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Edit|Write",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/protect-files.sh"
-          }
-        ]
-      }
-    ]
-  }
-}
-{
-  "hooks": {
+    ],
     "SessionStart": [
       {
-        "matcher": "compact",
+        "matcher": "",
         "hooks": [
           {
             "type": "command",
-            "command": "echo 'Reminder: use Bun, not npm. Run bun test before committing. Current sprint: auth refactor.'"
+            "command": "echo 'Project: Control System Tools. Stack: Jekyll 4.2 + Python 3.13. Authoritative content in control-standards/rag/. Track changes in project_state/.'"
           }
         ]
       }

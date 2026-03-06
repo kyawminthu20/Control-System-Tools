@@ -1,5 +1,26 @@
 # Claude Workflow
 
+## Project
+
+Industrial automation standards knowledge base targeting a personal-use GitHub Pages static site.
+Key directories:
+- `control-standards/rag/` — authoritative standards content (source of truth)
+- `control-standards/work/` — design and planning prompts
+- `tools/` — local automation and validation scripts
+- `project_state/` — operational tracking (phase, changes, env, runbook)
+- `main.py` — placeholder entry point (not the final site)
+
+## Quick Commands
+
+```bash
+python3 main.py                          # run current placeholder
+python3 tools/project_automator.py       # refresh structure summary
+python3 tools/validate_ai_boundaries.py  # validate AI content boundaries
+bash tools/validate_reorg.sh all         # validate repo structure
+```
+
+> Python >=3.12 required; `uv` preferred (run `uv sync` to install deps).
+
 Use `project_state/` as the operational memory for this repository.
 
 ## Required Automation Behavior
