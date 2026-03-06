@@ -679,6 +679,32 @@ tr:nth-child(even) td {
   }
 }
 
+/* --- Accessibility: Focus Indicators -------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Remove default outline only when :focus-visible is supported and not needed */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Skip-to-content link for keyboard users */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  z-index: 200;
+  font-size: 0.875rem;
+}
+.skip-link:focus {
+  top: 0;
+}
+
 /* --- Print ----------------------------------------------------------------- */
 @media print {
   .topnav, .sidebar, .context-panel { display: none; }
