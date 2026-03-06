@@ -1,35 +1,37 @@
 # Control System Tools Workspace
 
-This repository is a workspace for industrial automation standards content, project support material, and local automation.
+This repository combines two related concerns:
 
-The canonical product root is [control-standards](</Users/kyawminthu/Dev/Control System Tools/control-standards/README.md>). The canonical authoritative AI-readable knowledge root is `control-standards/rag/`.
+- an industrial automation standards intelligence knowledge base
+- a project workspace for building tools and interfaces on top of that knowledge
+
+The authoritative engineering content lives in `control-standards/rag/`. The active project-tracking workflow lives in `project_state/`.
+
+## Current Project Focus
+
+The repository is currently in **Phase 1** of a personal-use web project intended for **GitHub Pages**.
+
+In this phase, the goal is to turn the existing standards knowledge base into a simple static web experience that helps navigate standards families, architecture models, scenarios, and related engineering guidance.
 
 ## Start Here
 
-- [AGENTS.md](/Users/kyawminthu/Dev/Control System Tools/AGENTS.md)
-- [PROJECT_STARTUP_CONTEXT.md](/Users/kyawminthu/Dev/Control System Tools/PROJECT_STARTUP_CONTEXT.md)
-- [control-standards/README.md](/Users/kyawminthu/Dev/Control System Tools/control-standards/README.md)
-- [STRUCTURE_SUMMARY.md](/Users/kyawminthu/Dev/Control System Tools/STRUCTURE_SUMMARY.md)
+- [PROJECT_STARTUP_CONTEXT.md](/Users/kyawminthu/Dev/Control System Tools/PROJECT_STARTUP_CONTEXT.md) for repository orientation
+- [control-standards/README.md](/Users/kyawminthu/Dev/Control System Tools/control-standards/README.md) for the product root
+- [project_state/project_state.md](/Users/kyawminthu/Dev/Control System Tools/project_state/project_state.md) for the current implementation phase and backlog
+- [project_state/environment.md](/Users/kyawminthu/Dev/Control System Tools/project_state/environment.md) for runtime and deployment requirements
+- [project_state/how_to.md](/Users/kyawminthu/Dev/Control System Tools/project_state/how_to.md) for setup and run instructions
+- [project_state/change_log.md](/Users/kyawminthu/Dev/Control System Tools/project_state/change_log.md) for project-level changes
 
-## Top-Level Layout
+## Repository Roles
 
-- `control-standards/`: product content and governance
-- `tools/`: workspace automation and validation scripts
-- `planning/`: migration and reorganization plans
-- `data/`: shared raw datasets and captures
-- `rag/`: compatibility symlink to `control-standards/rag/`
+- `control-standards/`: product content, standards knowledge, governance, work areas, and archive
+- `project_state/`: active project tracking for state, run requirements, and workflow notes
+- `tools/`: local automation and validation scripts
+- `planning/`: reorganization and planning artifacts
+- `data/`: raw or shared datasets
 
-## Working Rules
+## Important Boundary
 
-- Put authoritative standards and engineering knowledge in `control-standards/rag/`.
-- Put process and promotion rules in `control-standards/governance/`.
-- Put non-authoritative active work in `control-standards/work/`.
-- Put AI-forbidden raw, copyrighted, or vendor content in `control-standards/restricted/`.
-- Put historical material in `control-standards/archive/`.
+The website or application layer is not the authoritative standards source.
 
-## Primary Workflows
-
-1. Research or author in `control-standards/work/` or `control-standards/restricted/` as appropriate.
-2. Promote verified paraphrased content into `control-standards/rag/`.
-3. Use `python3 tools/validate_ai_boundaries.py` to check AI-readable content.
-4. Use `python3 tools/project_automator.py` to refresh the root structure summary.
+Authoritative standards guidance remains in `control-standards/rag/`. Any site or app built in this repository should be treated as a presentation and navigation layer on top of that corpus.

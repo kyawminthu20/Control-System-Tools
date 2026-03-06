@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-05 20:25:07
+**Last Auto-Updated:** 2026-03-05 21:27:39
 
 ```text
 ├── .claude/
@@ -51,14 +51,14 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   └── pyvenv.cfg
 ├── AGENTS.md
 ├── CLAUDE.md
-├── PRE_MIGRATION_CHECK.sh
 ├── PROJECT_STARTUP_CONTEXT.md
 ├── README.md
 ├── STRUCTURE_SUMMARY.md
 ├── archive/
 │   ├── MIGRATION_GUIDE.md
 │   ├── MIGRATION_READY.md
-│   └── MIGRATION_SCRIPT.sh
+│   ├── MIGRATION_SCRIPT.sh
+│   └── PRE_MIGRATION_CHECK.sh
 ├── control-standards/
 │   ├── .gitignore
 │   ├── QUICK_START.md
@@ -629,7 +629,6 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   ├── historian_exports/
 │   ├── network_captures/
 │   └── plc_exports/
-├── general_change_log.md
 ├── main.py
 ├── planning/
 │   ├── 2026-03-05_12-08-09_project-folder-organization-plan.md
@@ -643,6 +642,11 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       ├── pre_move_checksums.txt
 │       ├── pre_move_git_status.txt
 │       └── pre_move_manifest.txt
+├── project_state/
+│   ├── change_log.md
+│   ├── environment.md
+│   ├── how_to.md
+│   └── project_state.md
 ├── pyproject.toml
 ├── rag -> control-standards/rag
 ├── tools/

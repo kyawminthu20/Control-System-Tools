@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Project Automator "Skill"
-Purpose: Automatically maintain project structure documentation and aggregate change logs.
+Purpose: Automatically maintain project structure documentation.
 Acts as a local MCP (Model Context Protocol) to keep the repository self-documenting.
 """
 
@@ -12,7 +12,6 @@ import re
 # Configuration
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STRUCTURE_FILE = os.path.join(PROJECT_ROOT, "STRUCTURE_SUMMARY.md")
-LOG_FILE = os.path.join(PROJECT_ROOT, "general_change_log.md")
 
 IGNORE_DIRS = {'.git', '__pycache__', '.DS_Store', '.idea', 'venv', 'node_modules'}
 IGNORE_FILES = {'.DS_Store'}
@@ -95,71 +94,5 @@ def update_structure_summary():
     with open(STRUCTURE_FILE, 'w') as f:
         f.write(new_content)
 
-def scan_for_generation_summaries():
-    """Scans for GENERATION_SUMMARY.md files and returns their content."""
-    summaries = []
-    for root, dirs, files in os.walk(PROJECT_ROOT):
-        if "GENERATION_SUMMARY.md" in files:
-            path = os.path.join(root, "GENERATION_SUMMARY.md")
-            rel_path = os.path.relpath(path, PROJECT_ROOT)
-            
-            with open(path, 'r') as f:
-                content = f.read()
-                
-            # Extract key info using regex
-            date_match = re.search(r'\*\*Generated:\*\* ([\d-]+)', content)
-            status_match = re.search(r'\*\*Status:\*\* (.+)', content)
-            title_match = re.search(r'# (.+)', content)
-            
-            if date_match and title_match:
-                summaries.append({
-                    'date': date_match.group(1),
-                    'title': title_match.group(1),
-                    'status': status_match.group(1) if status_match else "Unknown",
-                    'source': rel_path
-                })
-    return summaries
-
-def update_general_log():
-    """Updates general_change_log.md with new findings."""
-    print("🔍 Aggregating distributed logs...")
-    
-    if not os.path.exists(LOG_FILE):
-        print(f"⚠️ {LOG_FILE} not found. Skipping log aggregation.")
-        return
-
-    with open(LOG_FILE, 'r') as f:
-        current_log = f.read()
-
-    summaries = scan_for_generation_summaries()
-    new_entries = []
-
-    for summary in summaries:
-        # Simple check to see if this source is already mentioned for this date
-        # A more robust check would parse the markdown structure
-        check_str = f"Source:** `{summary['source']}`"
-        if check_str not in current_log:
-            entry = f"\n### {summary['date']}: {summary['title']}\n"
-            entry += f"**Type:** Automated Aggregation\n"
-            entry += f"**Source:** `{summary['source']}`\n"
-            entry += f"**Status:** {summary['status']}\n"
-            entry += f"- **Action:** Detected new generation summary file.\n"
-            new_entries.append(entry)
-
-    if new_entries:
-        # Append new entries before the "Upcoming Priorities" section if it exists
-        if "## Upcoming Priorities" in current_log:
-            parts = current_log.split("## Upcoming Priorities")
-            updated_log = parts[0] + "".join(new_entries) + "\n## Upcoming Priorities" + parts[1]
-        else:
-            updated_log = current_log + "\n## Recent Auto-Detected Changes\n" + "".join(new_entries)
-            
-        with open(LOG_FILE, 'w') as f:
-            f.write(updated_log)
-        print(f"✅ Added {len(new_entries)} new entries to {os.path.basename(LOG_FILE)}")
-    else:
-        print("✨ No new distributed logs found.")
-
 if __name__ == "__main__":
     update_structure_summary()
-    update_general_log()
