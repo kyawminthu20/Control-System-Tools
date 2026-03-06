@@ -905,3 +905,49 @@ tr:nth-child(even) td {
 @media print {
   .topnav__search { display: none !important; }
 }
+
+/* ==========================================================================
+   Crosswalk comparison selector
+   ========================================================================== */
+.compare-selector {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.compare-selector select {
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  padding: 0.4rem 0.6rem;
+  min-width: 180px;
+}
+
+.compare-selector__vs {
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.compare-result {
+  margin-top: 1.5rem;
+}
+
+.compare-result[hidden] {
+  display: none;
+}
+
+.compare-no-data {
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-border);
+  padding: 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+.compare-no-data[hidden] {
+  display: none;
+}
