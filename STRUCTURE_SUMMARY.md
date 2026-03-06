@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-06 06:08:02
+**Last Auto-Updated:** 2026-03-06 06:08:49
 
 ```text
 ├── .claude/
@@ -1308,6 +1308,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── assets/
 │   │   │   ├── css/
 │   │   │   │   └── main.css
+│   │   │   ├── data/
+│   │   │   │   └── search.json
 │   │   │   ├── img/
 │   │   │   │   └── favicon.svg
 │   │   │   └── js/
@@ -1413,6 +1415,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   ├── assets/
 │   │   ├── css/
 │   │   │   └── main.css
+│   │   ├── data/
+│   │   │   └── search.json
 │   │   ├── img/
 │   │   │   └── favicon.svg
 │   │   └── js/
