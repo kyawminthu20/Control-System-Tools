@@ -265,7 +265,7 @@ Each card should show:
 
 ## 3. Page Templates
 
-## 3.1 Standards Category Page Template
+### 3.1 Standards Category Page Template
 Example pages:
 - /standards/us-electrical
 - /standards/functional-safety
@@ -292,7 +292,7 @@ Right Rail: Related standards / crosswalks / next clicks
 
 ---
 
-## 3.2 Individual Standard Page Template
+### 3.2 Individual Standard Page Template
 Example pages:
 - /standards/iso-13849-1
 - /standards/iec-61511
@@ -327,7 +327,7 @@ Right rail
 
 ---
 
-## 3.3 Lifecycle Stage Page Template
+### 3.3 Lifecycle Stage Page Template
 Example pages:
 - /lifecycle/concept
 - /lifecycle/detailed-design
@@ -356,7 +356,7 @@ Right rail
 
 ---
 
-## 3.4 Industry Page Template
+### 3.4 Industry Page Template
 Example pages:
 - /industries/semiconductor
 - /industries/oil-and-gas
@@ -387,7 +387,7 @@ Right rail
 
 ---
 
-## 3.5 Scenario Page Template
+### 3.5 Scenario Page Template
 Example pages:
 - /scenarios/us-industrial-control-panel
 - /scenarios/process-skid
@@ -419,7 +419,7 @@ Right rail
 
 ---
 
-## 3.6 Crosswalk Page Template
+### 3.6 Crosswalk Page Template
 Example pages:
 - /crosswalks/nfpa-79-vs-iec-60204-1
 - /crosswalks/pl-vs-sil
@@ -445,7 +445,7 @@ Right rail
 
 ---
 
-## 3.7 Software Stack Page Template
+### 3.7 Software Stack Page Template
 Example pages:
 - /software-stack/plc-and-safety-plc
 - /software-stack/opc-ua-mqtt-and-edge

@@ -473,9 +473,9 @@ The response must contain:
 
 Reference to these files they could be useful for content and design inspiration:
 
-/Users/kyawminthu/Dev/Control System Tools/control-standards/work/design/mermaid_diagrams_to_reference.md
+control-standards/work/design/mermaid_diagrams_to_reference.md
 
-/Users/kyawminthu/Dev/Control System Tools/control-standards/work/design/standards_atlas_homepage_wireframe_and_templates.md
+control-standards/work/design/standards_atlas_homepage_wireframe_and_templates.md
 
 FORMATTING RULES
 
