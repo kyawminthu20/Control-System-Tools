@@ -17,15 +17,26 @@ If a dependency, version, environment variable, toolchain rule, or deployment ta
 
 ## Current Project Surface
 
-- `main.py` is the current executable entry point
+- `main.py` is the current placeholder entry point (not the site)
+- `docs/` contains the Phase 1 Jekyll static site
 - `tools/` contains the main local automation and validation scripts
-- no frontend framework, Node toolchain, or static-site generator is currently defined in the repository
+- `.github/workflows/pages.yml` deploys the site to GitHub Pages on push to master
+
+## Jekyll Site Requirements
+
+- **Ruby:** 2.6+ (local: system Ruby 2.6.10); CI uses Ruby 3.2 via `ruby/setup-ruby@v1`
+- **Bundler:** 2.4.22 (user-installed at `~/.gem/ruby/2.6.0/bin/bundle`)
+- **Jekyll:** 4.3.x (in `docs/vendor/bundle/`)
+- **Gems:** `jekyll-seo-tag`, `webrick` — see `docs/Gemfile`
+- **Local build:** `cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build`
+- **CI build:** `bundle exec jekyll build` (Ruby 3.2, standard PATH)
 
 ## Required Tools
 
 - `python3`
 - `git`
 - `bash` or compatible shell for shell scripts
+- `ruby` (2.6+ for local Jekyll dev; 3.2 used in CI)
 
 ## Recommended Tools
 

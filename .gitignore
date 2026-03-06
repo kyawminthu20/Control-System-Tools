@@ -18,3 +18,12 @@ wheels/
 # Directories that should not be read
 drafts_DO_NOT_READ/
 archive/
+
+# Jekyll build artifacts
+docs/_site/
+docs/.jekyll-cache/
+docs/.jekyll-metadata
+docs/vendor/
+
+# Worktrees
+.worktrees/

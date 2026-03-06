@@ -2,33 +2,27 @@
 
 **Last Updated:** 2026-03-06
 **Status:** Active
-**Current Phase:** Phase 1
+**Current Phase:** Phase 1 — Jekyll site built, pending GitHub Pages deployment
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
 
 This file is the source of truth for the current project state, active implementation scope, and near-term backlog.
 
-Use it to answer:
-
-- what this project is building right now
-- what is already in place
-- what still needs to be implemented
-- what phase the project is in
-
 ## Current Direction
 
-Phase 1 is a personal-use GitHub Pages site that presents the repository's industrial automation standards knowledge in a web-friendly format.
+Phase 1 Jekyll static site is implemented under `docs/`. GitHub Actions workflow is in place at `.github/workflows/pages.yml`. Final step: enable GitHub Pages in repo settings (Source: GitHub Actions).
 
-The site should remain separate from the authoritative knowledge base. Authoritative engineering and standards guidance stays in `control-standards/rag/`. The website is a presentation and navigation layer on top of that content.
+The site is a presentation and navigation layer on top of `control-standards/rag/`. Authoritative engineering and standards guidance stays in `control-standards/rag/`. The website never modifies RAG content.
 
 ## Current Reality
 
-- The repository already contains the core standards knowledge base under `control-standards/rag/standards_intelligence/`.
-- The repository also contains planning and design prompts for a standards-focused web experience under `control-standards/work/design/`.
-- The root Python app is still a minimal placeholder in `main.py`.
-- There is not yet a real frontend, static-site build, or GitHub Pages deployment workflow.
-- Local automation exists for structure summaries and automated change-log aggregation in `tools/`, with commit-time hook support targeting `project_state/change_log.md`.
+- Jekyll site implemented under `docs/` — 48 HTML pages build successfully
+- Three-panel layout (sidebar 240px + main content + context panel 220px)
+- Mermaid.js CDN integration for all diagrams
+- GitHub Actions deployment workflow at `.github/workflows/pages.yml`
+- Site covers: homepage (8 blocks), all standards families, 11 lifecycle stages, 5 scenarios, 3 crosswalks, 9 industry overlays, software stack, about page
+- Root `main.py` remains a placeholder (not the site)
 
 ## Source Of Truth By Topic
 
@@ -37,51 +31,44 @@ The site should remain separate from the authoritative knowledge base. Authorita
 - Runtime, tooling, and deployment requirements: `project_state/environment.md`
 - Setup, run, validation, and deployment steps: `project_state/how_to.md`
 - Authoritative standards content: `control-standards/rag/`
+- Site source: `docs/`
 
-## Phase 1 Scope
+## Phase 1 Scope — COMPLETED
 
-- personal-use website only
-- GitHub Pages compatible delivery
-- static-site friendly architecture
-- standards navigation and overview experience
-- visual explanation of standards families, architecture layers, crosswalks, and scenarios
+- [x] Jekyll scaffold: `docs/_config.yml`, `docs/Gemfile`, Bundler vendor install
+- [x] Three-panel CSS Grid layout: `docs/assets/css/main.css`
+- [x] Layouts and includes: default.html, topnav, sidebar, context-panel, trust-boundary
+- [x] Mermaid.js CDN integration (theme: neutral)
+- [x] Homepage with all 8 content blocks (hero, standards cards, lifecycle ribbon, relationship diagram, industry matrix, scenarios, repo explorer)
+- [x] Standards explorer landing + US Electrical family + Machinery family + Functional Safety family
+- [x] Individual standard pages: NEC, NFPA 79, UL 508A, IEC 60204-1, ISO 12100, ISO 13849-1, IEC 62061, IEC 61508, IEC 61511
+- [x] Lifecycle landing + 11 stage pages
+- [x] Crosswalk pages: NFPA 79 ↔ IEC 60204-1, UL 508A/NEC/NFPA 79, Standards Decision Workflow
+- [x] 5 scenario pages: US Control Panel, Global Machine, Process Skid, Networked Safety PLC, Semiconductor Equipment
+- [x] Industry matrix landing + 9 industry pages
+- [x] Software Stack and Cybersecurity routing page
+- [x] About / trust boundary page
+- [x] GitHub Actions pages.yml workflow
 
-## Phase 1 Non-Goals
+## Remaining Steps to Ship
 
-- no backend or server runtime
-- no claim that the website itself is the authoritative standards source
-- no reproduction of copyrighted standards text
-- no assumption that incomplete functional-safety folders are fully populated
+1. Commit all changes: `git add docs/ .github/ .gitignore`
+2. Push to GitHub: `git push`
+3. Enable GitHub Pages in repo settings: Settings → Pages → Source: GitHub Actions
+4. Verify deployment runs and site is accessible at `https://kyawminthu.github.io/Control-System-Tools/`
 
-## What Is Already Implemented
+## Phase 2 Backlog (after Phase 1 ships)
 
-- repository reorganization under `control-standards/`
-- grouped standards layout under `us/`, `international/`, and `crosswalks/`
-- scenario packages and reference models for standards routing
-- root validation and automation scripts under `tools/`
-- web-page planning prompts under `control-standards/work/design/`
-- `project_state/` folder for operational tracking
+- Client-side search (lunr.js)
+- Diagram lightbox/zoom
+- Comparison mode for crosswalks
+- Standards detail pages (functional-safety pages when corpus is complete)
+- Interactive standards graph
 
-## What Still Needs To Be Implemented
+## Content Gaps (documented with badges on site)
 
-1. Choose the Phase 1 site structure for GitHub Pages.
-2. Build the first static page or pages from the planning prompts.
-3. Decide how web content will be sourced from authoritative files without mixing source and presentation.
-4. Add the frontend asset structure for the GitHub Pages site.
-5. Add a deployment workflow for GitHub Pages.
-6. Add lightweight validation for site generation or content sync if needed.
-7. Extend automation if desired so project-state updates become easier and less manual.
-
-## Current Priorities
-
-1. Keep project tracking current in `project_state/`.
-2. Move from planning prompts to a concrete page implementation plan.
-3. Keep the website layer aligned with the authoritative corpus and its boundaries.
-4. Keep Phase 1 simple enough to ship as a personal-use static site.
-
-## Constraints And Risks
-
-- The authoritative standards content is uneven in depth across families, especially in some functional-safety areas.
-- GitHub Pages requires a static-friendly delivery approach.
-- The project should not blur the boundary between authoritative source content and presentation-layer summaries.
-- Current runtime/application code does not yet represent the intended website.
+- ISO 13849-1, IEC 62061, IEC 61508, IEC 61511 — PLANNED in corpus, not confirmed complete [TO VERIFY]
+- SEMI S2/S8/S14 — NOT IN CORPUS
+- IEC 60079 (hazardous area) — not confirmed in corpus
+- IEC 62443 detail pages — routing reference only
+- Medical, nuclear, marine class rules — not in corpus

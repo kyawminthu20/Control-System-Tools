@@ -28,9 +28,27 @@ uv sync
 
 If `uv` is not available, use the local Python environment directly for the current project state.
 
-## Run The Current Project
+## Run The Jekyll Site Locally
 
-Current app entry point:
+Requires Ruby 2.6+ and Bundler 2.4.22 (user-installed).
+
+```bash
+cd docs
+~/.gem/ruby/2.6.0/bin/bundle exec jekyll serve
+# Opens at http://localhost:4000/Control-System-Tools/
+```
+
+Or build without serving:
+
+```bash
+cd docs
+~/.gem/ruby/2.6.0/bin/bundle exec jekyll build
+# Output: docs/_site/
+```
+
+## Run The Placeholder Python App
+
+Current app entry point (placeholder, not the site):
 
 ```bash
 python3 main.py
@@ -41,10 +59,6 @@ Or with `uv`:
 ```bash
 uv run python main.py
 ```
-
-Current expected behavior:
-
-- prints a placeholder message
 
 ## Refresh Project Automation
 
