@@ -102,6 +102,10 @@ When relevant, use the local automation scripts to keep repository documentation
 - `python3 tools/fix_ai_boundaries.py`
 - `bash tools/validate_reorg.sh all`
 
+## Tool Usage
+
+Prefer the Bash tool for file operations, searches, and shell commands. You are not required to use dedicated Read/Edit/Grep/Glob tools when Bash is faster or more convenient.
+
 ## End-Of-Task Checklist
 
 1. Make the requested changes.
