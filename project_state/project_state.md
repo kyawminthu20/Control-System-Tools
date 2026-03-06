@@ -1,8 +1,8 @@
 # Project State
 
-**Last Updated:** 2026-03-05
+**Last Updated:** 2026-03-06
 **Status:** Active
-**Current Phase:** Phase 1 deployment pending (push + Pages enable) — Phase 2 implementation plan ready
+**Current Phase:** Phase 2 complete — all features committed, ready to push and enable GitHub Pages
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -11,7 +11,7 @@ This file is the source of truth for the current project state, active implement
 
 ## Current Direction
 
-Phase 1 Jekyll static site is complete and committed. Phase 2 design doc and implementation plan are written (`docs/plans/`). Next: execute Phase 2 implementation plan (print stylesheet, diagram lightbox, lunr.js search, crosswalk comparison page), then push all commits and enable GitHub Pages.
+Phase 1 and Phase 2 are complete and committed. All Phase 2 features have been implemented: print stylesheet, diagram lightbox, lunr.js inline search, and crosswalk comparison selector. Next: push all commits and enable GitHub Pages (Settings → Pages → Source: GitHub Actions).
 
 The site is a presentation and navigation layer on top of `control-standards/rag/`. Authoritative engineering and standards guidance stays in `control-standards/rag/`. The website never modifies RAG content.
 
@@ -52,23 +52,23 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 
 ## Phase 1 — SHIPPED (pending push + Pages enable)
 
-All Phase 1 code is committed. Branch is 2 commits ahead of origin.
+All Phase 1 code is committed.
 
 1. Push: `git push`
 2. Enable GitHub Pages: Settings → Pages → Source: GitHub Actions
 3. Verify: `https://kyawminthu.github.io/Control-System-Tools/`
 
-## Phase 2 Scope — Implementation Plan Ready
+## Phase 2 Scope — COMPLETED
 
 Plan: `docs/plans/2026-03-05-phase2-implementation.md`
 Design: `docs/plans/2026-03-05-phase2-design.md`
 
-- [ ] Task 1: Print stylesheet (`main.css` — `@media print`)
-- [ ] Task 2: Diagram lightbox (`main.css` + `main.js`)
-- [ ] Task 3: lunr.js CDN + `search.json` data file
-- [ ] Task 4: Topnav search input + inline dropdown
-- [ ] Task 5: Crosswalk comparison selector page (`/crosswalks/compare/`)
-- [ ] Task 6: Push, verify deployment, update project state
+- [x] Task 1: Print stylesheet (`main.css` — `@media print`)
+- [x] Task 2: Diagram lightbox (`main.css` + `main.js`)
+- [x] Task 3: lunr.js CDN + `search.json` data file
+- [x] Task 4: Topnav search input + inline dropdown
+- [x] Task 5: Crosswalk comparison selector page (`/crosswalks/compare/`)
+- [ ] Task 6: Push + enable GitHub Pages (manual step)
 
 ## Phase 3 Backlog (after Phase 2 ships)
 

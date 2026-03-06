@@ -18,6 +18,23 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-06 — Phase 2 Implementation Complete
+
+**Summary:** All Phase 2 features implemented and committed to master.
+
+**What changed:**
+- `docs/assets/css/main.css` — full `@media print` block (hide nav/sidebar/context, full-width content, URL-after-links, page-break rules); diagram lightbox styles; lunr.js search dropdown styles; crosswalk comparison selector styles
+- `docs/assets/js/main.js` — diagram lightbox IIFE (click `.mermaid` → full-screen SVG clone, close via ×/Escape/click-outside); lunr.js search IIFE (fetch search.json, index on load, arrow-key nav, XSS-safe DOM building)
+- `docs/_layouts/default.html` — lunr.js CDN script tag added before `</body>`
+- `docs/_includes/topnav.html` — search input with ARIA attributes and `data-search-url`
+- `docs/assets/data/search.json` — new Jekyll Liquid template; renders valid JSON search index at build time
+- `docs/crosswalks/compare/index.md` — new comparison selector page; two `<select>` dropdowns; hidden pair divs for NFPA79/IEC60204 and US electrical trio; vanilla JS selector logic
+- `docs/crosswalks/index.md` — compare link added to crosswalk table
+
+**Architecture:** All additive. Vanilla JS + CSS only. No new Jekyll plugins. CDN-only dependency (lunr.js).
+
+**Next step:** `git push` then enable GitHub Pages (Settings → Pages → Source: GitHub Actions).
+
 ### 2026-03-06 — Phase 1 Jekyll Site Implementation
 
 **Summary:** Built the complete Phase 1 GitHub Pages static site under `docs/`.
