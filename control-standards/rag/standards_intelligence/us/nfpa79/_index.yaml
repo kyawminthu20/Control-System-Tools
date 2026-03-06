@@ -1,0 +1,242 @@
+# NFPA 79 RAG Index
+# Auto-generated index for NFPA 79 (2024) chapter files
+# AI_READ_ACCESS: ALLOWED
+
+version: "1.0"
+standard_family: "NFPA"
+standard_id: "NFPA_79"
+standard_title: "Electrical Standard for Industrial Machinery"
+edition: "2024"
+jurisdiction: "US"
+last_updated: "2026-01-15"
+
+documents:
+  - doc_id: "NFPA79-2024-Ch01"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch01__administration.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "1"
+      chapter_title: "Administration"
+    tags:
+      topics: ["applicability", "scope", "enforcement"]
+      systems: ["machine", "robot_cell", "conveyor"]
+
+  - doc_id: "NFPA79-2024-Ch02"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch02__definitions.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "2"
+      chapter_title: "Definitions"
+    tags:
+      topics: ["definitions", "terminology"]
+
+  - doc_id: "NFPA79-2024-Ch03"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch03__general_requirements.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "3"
+      chapter_title: "General Requirements"
+    tags:
+      topics: ["general_safety", "baseline_requirements"]
+
+  - doc_id: "NFPA79-2024-Ch04"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch04__general_conditions_of_installation.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "4"
+      chapter_title: "General Conditions of Installation"
+    tags:
+      topics: ["environment", "installation_conditions"]
+
+  - doc_id: "NFPA79-2024-Ch05"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "5"
+      chapter_title: "Disconnecting Means"
+    tags:
+      topics: ["disconnect", "energy_isolation", "loto"]
+      systems: ["machine", "robot_cell", "conveyor"]
+    priority: "high"  # Most inspected chapter
+
+  - doc_id: "NFPA79-2024-Ch06"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch06__overcurrent_protection.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "6"
+      chapter_title: "Overcurrent Protection"
+    tags:
+      topics: ["overcurrent", "short_circuit", "protection"]
+
+  - doc_id: "NFPA79-2024-Ch07"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "7"
+      chapter_title: "Protection Against Electric Shock"
+    tags:
+      topics: ["electric_shock", "touch_safe"]
+
+  - doc_id: "NFPA79-2024-Ch08"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "8"
+      chapter_title: "Grounding and Bonding"
+    tags:
+      topics: ["grounding", "bonding", "protective_earth"]
+    priority: "high"  # Frequent inspection failure area
+
+  - doc_id: "NFPA79-2024-Ch09"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "9"
+      chapter_title: "Control Circuits and Control Functions"
+    tags:
+      topics: ["control_circuits", "stop_functions", "emergency_stop"]
+    priority: "high"  # Critical for safety
+
+  - doc_id: "NFPA79-2024-Ch10"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "10"
+      chapter_title: "Operator Interface and Control Devices"
+    tags:
+      topics: ["operator_interface", "pushbuttons", "hmi"]
+
+  - doc_id: "NFPA79-2024-Ch11"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch11__control_equipment.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "11"
+      chapter_title: "Control Equipment"
+    tags:
+      topics: ["control_panels", "enclosures", "control_equipment"]
+    related_standards: ["UL508A"]  # Strong overlap
+
+  - doc_id: "NFPA79-2024-Ch12"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch12__motors_and_associated_equipment.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "12"
+      chapter_title: "Motors and Associated Equipment"
+    tags:
+      topics: ["motors", "drives", "motor_protection"]
+    related_standards: ["NEC_Article_430"]
+
+  - doc_id: "NFPA79-2024-Ch13"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch13__appliances_and_accessories.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "13"
+      chapter_title: "Appliances and Accessories"
+    tags:
+      topics: ["appliances", "auxiliary_devices"]
+
+  - doc_id: "NFPA79-2024-Ch14"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch14__lighting.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "14"
+      chapter_title: "Lighting"
+    tags:
+      topics: ["lighting", "machine_illumination"]
+
+  - doc_id: "NFPA79-2024-Ch15"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch15__transformers_and_power_supplies.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "15"
+      chapter_title: "Transformers and Power Supplies"
+    tags:
+      topics: ["transformers", "power_supplies", "control_power"]
+
+  - doc_id: "NFPA79-2024-Ch16"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch16__wiring_methods.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "16"
+      chapter_title: "Wiring Methods"
+    tags:
+      topics: ["wiring", "routing", "segregation"]
+
+  - doc_id: "NFPA79-2024-Ch17"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch17__cables_and_flexible_cords.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "17"
+      chapter_title: "Cables and Flexible Cords"
+    tags:
+      topics: ["flexible_cables", "drag_chain", "robot_cabling"]
+
+  - doc_id: "NFPA79-2024-Ch18"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch18__terminal_blocks_and_connectors.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "18"
+      chapter_title: "Terminal Blocks, Connectors, and Wiring Devices"
+    tags:
+      topics: ["terminal_blocks", "connectors", "field_wiring"]
+
+  - doc_id: "NFPA79-2024-Ch19"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "19"
+      chapter_title: "Marking and Documentation"
+    tags:
+      topics: ["labeling", "documentation", "schematics"]
+    priority: "high"  # Critical for audits
+
+  - doc_id: "NFPA79-2024-Ch20"
+    path: "rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch20__system_integration.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nfpa_hierarchy:
+      chapter: "20"
+      chapter_title: "System Integration"
+    tags:
+      topics: ["system_integration", "overall_compliance"]
+
+# Priority chapters for control panel work (recommended focus)
+priority_chapters:
+  - chapter: "5"  # Disconnecting Means - Most inspected
+  - chapter: "8"  # Grounding and Bonding - Frequent failures
+  - chapter: "9"  # Control Circuits - Safety critical
+  - chapter: "11" # Control Equipment - Panel design
+  - chapter: "19" # Marking and Documentation - Audit critical
+
+# Cross-references to other standards
+related_standards_map:
+  NEC:
+    - article: "430"  # Motors
+      nfpa79_chapters: ["12"]
+    - article: "670"  # Industrial Machinery
+      nfpa79_chapters: ["5", "11"]
+  UL508A:
+    - section: "all"
+      nfpa79_chapters: ["11"]  # Strong overlap with Chapter 11
+  IEC_60204_1:
+    - section: "equivalent_reference"
+      nfpa79_chapters: ["all"]  # International equivalent

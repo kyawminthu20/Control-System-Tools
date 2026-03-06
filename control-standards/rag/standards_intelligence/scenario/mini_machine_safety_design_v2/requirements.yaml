@@ -1,0 +1,434 @@
+metadata:
+  ai_read_access: ALLOWED
+  content_class: RAG_APPROVED
+  status: DRAFT
+  scenario_id: MINI_MACHINE_SAFETY_DESIGN_V2
+  source_scope: local_standards_intelligence_only
+
+requirements:
+  - id: MM-BAS-001
+    title: Main machine disconnect
+    shall_statement: >
+      The machine shall provide a primary disconnecting means that is readily
+      accessible, lockable in the OFF position, clearly indicates ON and OFF,
+      and is located at the point of supply to the machine.
+    subsystem: electrical_power
+    verification_method: Inspect installation and perform lockout trial.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md#1. Main Disconnect Requirements
+      - us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md#2. Location and Accessibility
+      - us/nec/NEC_2023__Art670__industrial_machinery.md#1. Machine disconnecting means
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-002
+    title: Panel SCCR compatibility
+    shall_statement: >
+      The control panel shall be marked with its SCCR, and the installed SCCR
+      shall be equal to or greater than the available fault current at the site.
+    subsystem: electrical_power
+    verification_method: Review panel nameplate, SCCR record, and site AFC record.
+    standard_refs:
+      - us/nec/NEC_2023__Art409__industrial_control_panels.md#2. Short-circuit current rating (SCCR)
+      - us/nec/NEC_2023__Art409__industrial_control_panels.md#3. Labeling requirements
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-003
+    title: Door interlock and line-side guarding
+    shall_statement: >
+      The panel enclosure door shall be interlocked with the disconnect or
+      otherwise controlled for qualified access, and line-side terminals that
+      remain energized with the disconnect OFF shall be guarded and warned.
+    subsystem: control_panel
+    verification_method: Open-door and disconnect-state test plus visual inspection.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md#4. Control Panel Design Rules
+      - us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#3. Panel Layout Implications
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-004
+    title: No automatic restart
+    shall_statement: >
+      Restoration of power, reset of an emergency stop, or reset of a trip shall
+      not cause automatic restart of hazardous motion or chemical transfer.
+    subsystem: safety_logic
+    verification_method: Perform power-cycle and reset functional tests.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#1. Start/Stop Behavior
+      - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#2. Emergency Stop Concepts
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#1. Start/Stop Behavior
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#2. Emergency Stop Concepts
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-005
+    title: Emergency stop priority
+    shall_statement: >
+      The emergency stop function shall override all operating modes, remain
+      available at all times, and require a separate deliberate restart action
+      after reset.
+    subsystem: safety_logic
+    verification_method: Test each E-stop station and verify stop plus restart behavior.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#2. Emergency Stop Concepts
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#2. Emergency Stop Concepts
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-006
+    title: Safety independence
+    shall_statement: >
+      Safety-related control functions shall perform their intended task
+      regardless of the state of the standard PLC or HMI.
+    subsystem: safety_logic
+    verification_method: Review architecture and simulate standard PLC or HMI fault conditions.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#3. Safety vs. Standard Control Separation
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#3. Safety vs. Standard Control Separation
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-007
+    title: HMI limits for safety functions
+    shall_statement: >
+      The HMI shall not be the sole means of emergency stopping or of any other
+      critical safety function whose failure could create a hazardous situation.
+    subsystem: hmi
+    verification_method: Review HMI and hardwired control design against safety functions.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#2. Ergonomics and Safety
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md#2. Ergonomic Considerations
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-008
+    title: Protective bonding and door jumpers
+    shall_statement: >
+      The machine shall provide a main PE or equivalent grounding terminal and
+      maintain continuous bonding to doors, moving conductive parts, and machine
+      frames using effective metal-to-metal connections.
+    subsystem: grounding_bonding
+    verification_method: Inspect conductor color, bonding hardware, and continuity test results.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md#1. Protective Bonding Rules
+      - us/nec/NEC_2023__Art250__grounding_and_bonding.md#2. Bonding of enclosures and doors
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md#1. Bonding Strategy
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-009
+    title: Conductor ampacity and temperature rating
+    shall_statement: >
+      Conductors shall be sized using applicable ampacity, ambient, bundling,
+      and termination-temperature rules for the installed condition.
+    subsystem: wiring
+    verification_method: Review conductor calculations and inspect installed wire sizes.
+    standard_refs:
+      - us/nec/NEC_2023__Art310__conductors_for_general_wiring.md#1. Ampacity and derating
+      - us/nec/NEC_2023__Art310__conductors_for_general_wiring.md#2. Temperature ratings
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-010
+    title: Conductors protected at source
+    shall_statement: >
+      Conductors shall be protected at the point where they receive supply, and
+      supplementary protectors shall not replace required branch-circuit protection.
+    subsystem: wiring
+    verification_method: Review schematic and device schedule.
+    standard_refs:
+      - us/nec/NEC_2023__Art240__overcurrent_protection.md#1. Overcurrent device selection
+      - us/nfpa79/NFPA79_2024__Ch06__overcurrent_protection.md#1. Branch Circuit Protection
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-011
+    title: Class 2 and power separation
+    shall_statement: >
+      Class 2 or other power-limited control circuits shall be segregated from
+      power circuits unless a permitted barrier or equivalent insulation method is used.
+    subsystem: wiring
+    verification_method: Inspect panel wireways and review conductor insulation ratings.
+    standard_refs:
+      - us/nec/NEC_2023__Art725__class_1_2_3_control_circuits.md#2. Separation from power circuits (725.136)
+      - us/nfpa79/NFPA79_2024__Ch16__wiring_methods.md#2. Segregation Rules
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-012
+    title: Device labels and accidental-operation prevention
+    shall_statement: >
+      Control devices shall be clearly labeled for function, and controls that
+      initiate hazardous motion shall be guarded, shrouded, or recessed against accidental actuation.
+    subsystem: hmi
+    verification_method: Inspect operator stations and label schedule.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#1. Control Device Requirements
+      - us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#2. Ergonomics and Safety
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md#2. Ergonomic Considerations
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-013
+    title: Panel organization and heat management
+    shall_statement: >
+      Control equipment shall be mounted rigidly, arranged for service access,
+      and separated as needed to manage heat and electrical interference.
+    subsystem: control_panel
+    verification_method: Review panel layout and inspect installed cabinet.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch11__control_equipment.md#1. Panel Construction Implications
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause11__control_equipment.md#1. Enclosures and Layout
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-014
+    title: Environmental enclosure suitability
+    shall_statement: >
+      Enclosures and operator devices shall be selected for the actual ambient
+      temperature, contaminants, moisture, and corrosion expected at the installation site.
+    subsystem: control_panel
+    verification_method: Review environmental assumptions against enclosure and device ratings.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch04__general_conditions_of_installation.md#0. Environmental Considerations
+      - us/nfpa79/NFPA79_2024__Ch04__general_conditions_of_installation.md#2. Enclosure Implications
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause07__protection_of_equipment.md#2. Environmental Protection
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-015
+    title: Wiring and device identification
+    shall_statement: >
+      Devices, conductors, and terminals shall be identified to match the
+      electrical schematics and maintenance documentation.
+    subsystem: documentation
+    verification_method: Compare panel markings to schematics and IO list.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch16__wiring_methods.md#1. Internal Machine Wiring
+      - us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#1. Labeling Requirements
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md#1. Identification and Labels
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-016
+    title: Documentation package
+    shall_statement: >
+      The project shall deliver electrical schematics, safety-function
+      descriptions, maintenance instructions, installation requirements, and
+      verification records as part of the machine documentation package.
+    subsystem: documentation
+    verification_method: Review turnover package.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#2. Documentation Expectations
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md#2. Documentation Set
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md#0. Purpose
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-017
+    title: Verification before handover
+    shall_statement: >
+      The electrical system shall complete visual inspection, protective-bonding
+      continuity verification, insulation verification, residual-voltage checks,
+      and functional tests before handover.
+    subsystem: verification
+    verification_method: Execute FAT and SAT checklist and retain records.
+    standard_refs:
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md#1. Required Tests
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md#2. Commissioning Alignment
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-018
+    title: External energy identification
+    shall_statement: >
+      Any wiring entering a panel that is not de-energized by that panel main
+      disconnect shall be identified as an external source of energy.
+    subsystem: wiring
+    verification_method: Inspect wire colors, labels, and inter-panel schematics.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch20__system_integration.md#1. Subsystem Coordination
+      - us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#3. Panel Layout Implications
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-019
+    title: Residual voltage discharge
+    shall_statement: >
+      Stored electrical energy shall discharge below 60 V within 5 seconds after
+      power removal, or the equipment shall carry a warning label stating the required wait time.
+    subsystem: electrical_power
+    verification_method: Measure post-disconnect residual voltage decay.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#1. Protective Measures
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md#1. Protective Measures
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-020
+    title: VFD feeder sizing and local isolation
+    shall_statement: >
+      VFD feeder conductors shall be sized from the drive rated input current,
+      and each drive or motor group shall have a maintenance isolation method suited to the installed layout.
+    subsystem: drives
+    verification_method: Review drive package data, conductor calculations, and field isolation points.
+    standard_refs:
+      - us/nec/NEC_2023__Art430__motors_motor_circuits_and_controllers.md#2. VFD considerations (Part X)
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md#1. Motor Protection and Control
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-021
+    title: Hydraulic overpressure shutdown path
+    shall_statement: >
+      The machine shall provide a shutdown path for hydraulic high-high pressure
+      that removes pump drive energy and moves the circuit toward a verified safe state.
+    subsystem: hydraulics
+    verification_method: Simulate high-pressure trip and observe pump stop plus safe-state action.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#0. Control Philosophy
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md#1. Motor Protection and Control
+      - "TO VERIFY: ISO 4413"
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-022
+    title: Chemical spill shutdown path
+    shall_statement: >
+      The machine shall provide a spill or leak shutdown path that stops chemical
+      transfer and requires manual intervention before restart.
+    subsystem: chemical_dosing
+    verification_method: Simulate spill input and verify pump stop plus alarm.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#3. Safety vs. Standard Control Separation
+      - "TO VERIFY: chemical handling standard"
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-023
+    title: Chemical high-high level trip
+    shall_statement: >
+      The machine shall stop or block the relevant dosing path on a high-high
+      level demand in a dose tank or receiving vessel.
+    subsystem: chemical_dosing
+    verification_method: Simulate high-high level switch and confirm stop or valve action.
+    standard_refs:
+      - routing/standards_applicability.md#Special Cases
+      - "TO VERIFY: IEC 61511"
+      - "TO VERIFY: chemical handling standard"
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-024
+    title: UL listing path for listed panels
+    shall_statement: >
+      When UL listing is required, the panel build package shall include a UL
+      508A SCCR determination path and a documented review of the locally identified priority UL sections.
+    subsystem: control_panel
+    verification_method: Review UL package checklist, SCCR worksheet, and label.
+    standard_refs:
+      - us/ul_508a/UL508A_OVERVIEW.md#Priority Sections (Recommended Focus)
+      - us/ul_508a/_index.yaml#inspection_priorities
+      - crosswalks/overlap_matrix/ul508a_nec_nfpa79_overlap.md#SCCR (Short-Circuit Current Rating) ⚠️ CRITICAL
+    industry_tags:
+      - all_industries
+
+  - id: MM-BAS-025
+    title: Event logging and time synchronization
+    shall_statement: >
+      The machine should record safety events, operator actions, and critical
+      transfer events with a common time base; detailed audit-trail and time-sync
+      governance is not found in the local corpus and shall be verified externally where regulated.
+    subsystem: logging
+    verification_method: Review logger configuration and generated event records.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#2. Documentation Expectations
+      - "TO VERIFY: ISA-18.2"
+      - "TO VERIFY: ISA-101"
+      - "TO VERIFY: 21 CFR Part 11"
+    industry_tags:
+      - all_industries
+
+  - id: MM-FOOD-001
+    title: Washdown suitability
+    shall_statement: >
+      For food and beverage deployments, enclosures and operator devices shall
+      be selected for washdown and corrosive cleaning exposure.
+    subsystem: environmental
+    verification_method: Review enclosure ratings and device datasheets.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch04__general_conditions_of_installation.md#2. Enclosure Implications
+      - us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#1. Control Device Requirements
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause07__protection_of_equipment.md#2. Environmental Protection
+    industry_tags:
+      - food_and_beverage
+
+  - id: MM-PET-001
+    title: Classified-area verification for petroleum use
+    shall_statement: >
+      For petroleum deployments, the project shall verify hazardous-area
+      classification and add classified-location standards before applying this baseline as the final design basis.
+    subsystem: project_governance
+    verification_method: Review project standards register and area-classification package.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch01__administration.md#1. Applicability Rules
+      - "TO VERIFY: NEC hazardous location articles"
+      - "TO VERIFY: IEC 61511"
+    industry_tags:
+      - petroleum
+
+  - id: MM-OFF-001
+    title: Offshore standards add-on
+    shall_statement: >
+      For offshore deployments, the project shall add offshore-specific standards
+      and shall not rely on this baseline package alone.
+    subsystem: project_governance
+    verification_method: Review project standards register and design basis memo.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch01__administration.md#1. Applicability Rules
+      - "TO VERIFY: offshore standard"
+    industry_tags:
+      - offshore
+
+  - id: MM-SEMI-001
+    title: Semiconductor standards check
+    shall_statement: >
+      For semiconductor deployments, the project shall add semiconductor-specific
+      equipment and chemical safety standards before release to fabrication.
+    subsystem: project_governance
+    verification_method: Review standards gap register.
+    standard_refs:
+      - crosswalks/overlap_matrix/nfpa79_iec60204_overlap.md#Dual-Compliance Strategy
+      - "TO VERIFY: SEMI standards"
+      - "TO VERIFY: chemical handling standard"
+    industry_tags:
+      - semiconductor
+
+  - id: MM-MED-001
+    title: Medical validation and e-record controls
+    shall_statement: >
+      For medical or regulated recordkeeping deployments, the project shall add
+      validated software, audit-trail, and electronic-record controls before acceptance.
+    subsystem: logging
+    verification_method: Review validation plan and audit-trail specification.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#2. Documentation Expectations
+      - "TO VERIFY: 21 CFR Part 11"
+      - "TO VERIFY: medical device validation standard"
+    industry_tags:
+      - medical
+
+  - id: MM-NUC-001
+    title: Nuclear QA traceability
+    shall_statement: >
+      For nuclear deployments, the project shall add QA traceability, component
+      pedigree, and configuration-control requirements beyond this baseline package.
+    subsystem: project_governance
+    verification_method: Review QA plan and turnover dossier.
+    standard_refs:
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md#0. Purpose
+      - "TO VERIFY: nuclear QA standard"
+    industry_tags:
+      - nuclear

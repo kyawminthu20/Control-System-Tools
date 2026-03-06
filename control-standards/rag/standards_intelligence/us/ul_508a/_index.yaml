@@ -1,0 +1,255 @@
+# UL 508A RAG Index
+# Auto-generated index for UL 508A (2022) Section files
+# AI_READ_ACCESS: ALLOWED
+
+version: "1.0"
+standard_family: "UL"
+standard_id: "UL_508A"
+standard_title: "Industrial Control Panels"
+edition: "2022"
+jurisdiction: "US"
+last_updated: "2026-01-15"
+
+documents:
+  - doc_id: "UL508A-2022-Section1"
+    path: "rag/standards_intelligence/us/ul_508a/UL508A_2022__scope_and_application.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    ul_hierarchy:
+      section: "1"
+      title: "Scope and Application"
+    tags:
+      topics: ["scope", "application", "panel_definition"]
+      systems: ["industrial_control_panel"]
+    priority: "high"  # Defines what qualifies as ICP
+
+  - doc_id: "UL508A-2022-Section2"
+    path: "rag/standards_intelligence/us/ul_508a/UL508A_2022__general_construction_requirements.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    ul_hierarchy:
+      section: "2"
+      title: "General Construction Requirements"
+    tags:
+      topics: ["construction", "panel_layout", "mechanical_integrity"]
+    priority: "standard"
+
+  - doc_id: "UL508A-2022-Section3"
+    path: "rag/standards_intelligence/us/ul_508a/UL508A_2022__enclosures_and_environmental_ratings.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    ul_hierarchy:
+      section: "3"
+      title: "Enclosures and Environmental Considerations"
+    tags:
+      topics: ["enclosures", "nema_ratings", "environment"]
+    priority: "standard"
+
+  - doc_id: "UL508A-2022-Section4"
+    path: "rag/standards_intelligence/us/ul_508a/UL508A_2022__spacing_creepage_clearance.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    ul_hierarchy:
+      section: "4"
+      title: "Spacing, Creepage, and Clearance"
+    tags:
+      topics: ["spacing", "creepage", "clearance"]
+      risks: ["arc_flash", "short_circuit"]
+    priority: "high"  # Critical for safety and UL inspection
+
+  - doc_id: "UL508A-2022-Section5"
+    path: "rag/standards_intelligence/us/ul_508a/UL508A_2022__wiring_methods_and_conductors.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    ul_hierarchy:
+      section: "5"
+      title: "Wiring Methods and Conductors"
+    tags:
+      topics: ["internal_wiring", "conductors", "ampacity"]
+    priority: "high"  # Critical for wire sizing
+    related_standards: ["NEC_Art310"]
+
+  - doc_id: "UL508A-2022-Section6"
+    path: "rag/standards_intelligence/us/ul_508a/UL508A_2022__overcurrent_protection.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    ul_hierarchy:
+      section: "6"
+      title: "Overcurrent Protection"
+    tags:
+      topics: ["overcurrent", "branch_circuits", "coordination"]
+    priority: "high"
+    related_standards: ["NEC_Art240"]
+
+  - doc_id: "UL508A-2022-Section7"
+    path: "rag/standards_intelligence/us/ul_508a/UL508A_2022__grounding_and_bonding.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    ul_hierarchy:
+      section: "7"
+      title: "Grounding and Bonding"
+    tags:
+      topics: ["grounding", "bonding", "protective_earth"]
+    priority: "critical"  # Safety critical
+    related_standards: ["NEC_Art250", "NFPA79_Ch08"]
+
+  - doc_id: "UL508A-2022-SectionSB"
+    path: "rag/standards_intelligence/us/ul_508a/UL508A_2022__sccr_short_circuit_current_rating.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    ul_hierarchy:
+      section: "SB"
+      title: "Short-Circuit Current Rating (SCCR)"
+    tags:
+      topics: ["sccr", "short_circuit_rating"]
+      risks: ["equipment_failure", "fire"]
+    priority: "critical"  # Most important UL 508A topic
+    related_standards: ["NEC_Art409"]
+
+  - doc_id: "UL508A-2022-Section8"
+    path: "rag/standards_intelligence/us/ul_508a/UL508A_2022__marking_and_documentation.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    ul_hierarchy:
+      section: "8"
+      title: "Marking and Documentation"
+    tags:
+      topics: ["labeling", "documentation", "nameplates"]
+    priority: "critical"  # Required for UL listing
+
+  - doc_id: "UL508A-2022-Section9"
+    path: "rag/standards_intelligence/us/ul_508a/UL508A_2022__control_circuits_and_devices.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    ul_hierarchy:
+      section: "9"
+      title: "Control Circuits and Devices"
+    tags:
+      topics: ["control_circuits", "control_devices", "relays"]
+    priority: "standard"
+
+  - doc_id: "UL508A-2022-Section10"
+    path: "rag/standards_intelligence/us/ul_508a/UL508A_2022__motor_controllers_and_drives.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    ul_hierarchy:
+      section: "10"
+      title: "Motor Controllers and Drives"
+    tags:
+      topics: ["motor_controllers", "drives", "vfd"]
+    priority: "high"  # Common in panels
+    related_standards: ["NEC_Art430", "NFPA79_Ch12"]
+
+  - doc_id: "UL508A-2022-Section11"
+    path: "rag/standards_intelligence/us/ul_508a/UL508A_2022__transformers_and_power_supplies.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    ul_hierarchy:
+      section: "11"
+      title: "Transformers and Power Supplies"
+    tags:
+      topics: ["transformers", "power_supplies", "control_power"]
+    priority: "standard"
+    related_standards: ["NFPA79_Ch15"]
+
+# Priority sections for UL 508A panel work
+priority_sections:
+  critical:
+    - section: "SB"  # SCCR - Most important for UL listing
+    - section: "7"   # Grounding and Bonding - Safety critical
+    - section: "8"   # Marking and Documentation - Required for listing
+  high:
+    - section: "1"   # Scope - Defines what qualifies
+    - section: "4"   # Spacing - UL inspection focus
+    - section: "5"   # Wiring Methods - Wire sizing critical
+    - section: "6"   # Overcurrent Protection - Safety
+    - section: "10"  # Motor Controllers - Common component
+  standard:
+    - section: "2"   # General Construction
+    - section: "3"   # Enclosures
+    - section: "9"   # Control Circuits
+    - section: "11"  # Transformers
+
+# Cross-references to other standards
+related_standards_map:
+  NEC:
+    - nec_article: "409"
+      ul_section: ["1", "SB", "8"]  # Panel definition, SCCR, marking
+    - nec_article: "250"
+      ul_section: ["7"]  # Grounding
+    - nec_article: "310"
+      ul_section: ["5"]  # Conductors
+    - nec_article: "240"
+      ul_section: ["6"]  # Overcurrent
+    - nec_article: "430"
+      ul_section: ["10"]  # Motors
+
+  NFPA79:
+    - nfpa79_chapter: "8"
+      ul_section: ["7"]  # Grounding and Bonding
+    - nfpa79_chapter: "11"
+      ul_section: ["1", "2", "3", "4", "5", "6", "7", "8"]  # Control Equipment (strong overlap)
+    - nfpa79_chapter: "12"
+      ul_section: ["10"]  # Motors
+    - nfpa79_chapter: "15"
+      ul_section: ["11"]  # Transformers
+
+# Common UL inspection focus areas
+inspection_priorities:
+  - section: "SB"
+    focus: "SCCR calculation and label"
+    common_failures: "Missing SCCR label, incorrect calculation, weakest link not identified"
+
+  - section: "8"
+    focus: "Nameplate markings complete and correct"
+    common_failures: "Missing voltage, missing SCCR, missing manufacturer info"
+
+  - section: "4"
+    focus: "Live parts spacing meets voltage requirements"
+    common_failures: "Insufficient clearance, improper mounting proximity"
+
+  - section: "7"
+    focus: "Equipment grounding conductor sizing, bonding"
+    common_failures: "Undersized EGC, poor door bonding, missing bonding jumpers"
+
+  - section: "5"
+    focus: "Wire sizing, termination temperature ratings"
+    common_failures: "Undersized conductors, wrong ampacity table used"
+
+# UL 508A specific topics (unique to this standard)
+ul_specific_topics:
+  sccr_calculation:
+    description: "Method for determining panel short-circuit current rating"
+    sections: ["SB"]
+    complexity: "high"
+    automation_potential: "yes"
+
+  spacing_tables:
+    description: "Voltage-based spacing requirements"
+    sections: ["4"]
+    complexity: "medium"
+    automation_potential: "yes"
+
+  wire_sizing_method:
+    description: "UL-specific conductor sizing (differs slightly from NEC)"
+    sections: ["5"]
+    complexity: "medium"
+    automation_potential: "yes"
+
+  panel_construction:
+    description: "Mechanical and assembly requirements"
+    sections: ["2"]
+    complexity: "low"
+    automation_potential: "partial"
+
+notes: |
+  UL 508A is the definitive standard for industrial control panels in North America.
+  It works in conjunction with NEC Article 409 and overlaps significantly with NFPA 79 Chapter 11.
+
+  Key differences from other standards:
+  - SCCR calculation is unique to UL 508A (Supplement SB)
+  - Wire sizing methods differ slightly from NEC
+  - Spacing tables are specific to UL 508A
+  - Panel construction details more prescriptive than NEC
+
+  All files are in DRAFT status and ready for content development.

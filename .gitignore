@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Compressed archives
+*.tar.gz
+
+# macOS system files
+.DS_Store
+
+# Directories that should not be read
+drafts_DO_NOT_READ/
+archive/

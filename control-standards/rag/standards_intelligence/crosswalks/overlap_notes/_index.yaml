@@ -1,0 +1,155 @@
+# Overlap Notes Master Index
+# AI_READ_ACCESS: ALLOWED
+# Generated: 2026-01-15
+
+version: "1.0"
+content_class: "RAG_APPROVED"
+status: "DRAFT"
+
+# Purpose
+# Per-topic overlap notes with decision rules, evidence requirements, and checklists
+# Routes detailed compliance questions to specific overlap analysis
+
+# US Standards Overlap Notes (UL 508A ↔ NEC ↔ NFPA 79)
+us_standards_notes:
+  - topic_id: "scope_boundary"
+    file: "overlap__scope_boundary.md"
+    description: "Panel vs machine vs facility wiring scope decisions"
+
+  - topic_id: "listing_labeling_instructions"
+    file: "overlap__listing_labeling_instructions.md"
+    description: "Component listing and manufacturer instruction compliance"
+
+  - topic_id: "disconnecting_means"
+    file: "overlap__disconnecting_means.md"
+    description: "Disconnect location, accessibility, and LOTO requirements"
+
+  - topic_id: "overcurrent_protection"
+    file: "overlap__overcurrent_protection.md"
+    description: "OCP selection and coordination with SCCR"
+
+  - topic_id: "grounding_bonding"
+    file: "overlap__grounding_bonding.md"
+    description: "Safety grounding vs noise grounding, bonding requirements"
+
+  - topic_id: "wiring_methods_conductors"
+    file: "overlap__wiring_methods_conductors.md"
+    description: "Wire routing, separation, and protection requirements"
+
+  - topic_id: "control_functions"
+    file: "overlap__control_functions.md"
+    description: "Control circuit behavior vs hardware build requirements"
+
+  - topic_id: "emergency_stop"
+    file: "overlap__emergency_stop.md"
+    description: "E-stop functional requirements and implementation"
+
+  - topic_id: "panel_construction"
+    file: "overlap__panel_construction.md"
+    description: "Panel layout, workmanship, and construction standards"
+
+  - topic_id: "sccr"
+    file: "overlap__sccr.md"
+    description: "SCCR determination, labeling, and weakest-link calculation"
+    priority: "CRITICAL"
+
+  - topic_id: "marking_documentation"
+    file: "overlap__marking_documentation.md"
+    description: "Nameplate, labeling, and documentation requirements"
+
+  - topic_id: "motors_drives"
+    file: "overlap__motors_drives.md"
+    description: "Motor protection, drive integration, and coordination"
+
+  - topic_id: "control_power"
+    file: "overlap__control_power.md"
+    description: "Transformers, PSUs, secondary protection, and 24VDC architecture"
+
+  - topic_id: "multi_panel_machines"
+    file: "overlap__multi_panel_machines.md"
+    description: "Multi-panel SCCR aggregation and system-level requirements"
+
+# International Standards Overlap Notes (NFPA 79 ↔ IEC 60204-1)
+international_notes:
+  - topic_id: "scope_boundary"
+    file: "overlap_nfpa79_iec60204__scope_boundary.md"
+    description: "Machine supply boundary for US vs International markets"
+
+  - topic_id: "definitions"
+    file: "overlap_nfpa79_iec60204__definitions.md"
+    description: "Terminology mapping and equivalent terms"
+
+  - topic_id: "general_requirements"
+    file: "overlap_nfpa79_iec60204__general_requirements.md"
+    description: "General safety principles alignment"
+
+  - topic_id: "incoming_supply_disconnect"
+    file: "overlap_nfpa79_iec60204__incoming_supply_disconnect.md"
+    description: "Disconnect and isolation requirements (90%+ equivalent)"
+
+  - topic_id: "electric_shock_protection"
+    file: "overlap_nfpa79_iec60204__electric_shock_protection.md"
+    description: "Touch-safe design and shock protection measures"
+
+  - topic_id: "equipment_protection"
+    file: "overlap_nfpa79_iec60204__equipment_protection.md"
+    description: "Overcurrent and environmental protection alignment"
+
+  - topic_id: "grounding_bonding"
+    file: "overlap_nfpa79_iec60204__grounding_bonding.md"
+    description: "Grounding (US) vs Equipotential Bonding (IEC) - direct equivalent"
+
+  - topic_id: "control_functions"
+    file: "overlap_nfpa79_iec60204__control_functions.md"
+    description: "Control circuit behavior and stop categories"
+
+  - topic_id: "operator_interface"
+    file: "overlap_nfpa79_iec60204__operator_interface.md"
+    description: "HMI, pushbuttons, and operator control requirements"
+
+  - topic_id: "control_equipment"
+    file: "overlap_nfpa79_iec60204__control_equipment.md"
+    description: "Panel/enclosure design for machinery"
+
+  - topic_id: "motors_drives"
+    file: "overlap_nfpa79_iec60204__motors_drives.md"
+    description: "Motor protection and VFD integration"
+
+  - topic_id: "accessories_lighting"
+    file: "overlap_nfpa79_iec60204__accessories_lighting.md"
+    description: "Machine lighting and accessory integration"
+
+  - topic_id: "marking_documentation"
+    file: "overlap_nfpa79_iec60204__marking_documentation.md"
+    description: "Labeling and documentation for US vs EU markets"
+
+  - topic_id: "verification"
+    file: "overlap_nfpa79_iec60204__verification.md"
+    description: "Testing and verification requirements"
+
+# Topic routing
+topic_routing:
+  by_question:
+    "What SCCR do I need?": "overlap__sccr.md"
+    "How do I ground my panel?": "overlap__grounding_bonding.md"
+    "Where does my disconnect go?": "overlap__disconnecting_means.md"
+    "What's the difference between US and EU?": "overlap_nfpa79_iec60204__*"
+    "How do I design for both US and EU?": "overlap_nfpa79_iec60204__*"
+    "Is my panel a UL 508A panel or NFPA 79?": "overlap__scope_boundary.md"
+
+  by_market:
+    us_only: "us_standards_notes"
+    international_only: "international_notes"
+    dual_market: "international_notes (use most restrictive)"
+
+# Integration
+overlap_matrices: "../overlap_matrix/"
+standards_files: "../"
+
+changelog:
+  - date: "2026-01-15"
+    action: "Initial overlap notes index created"
+    us_notes: 14
+    international_notes: 14
+    total: 28
+    status: "Ready for file generation"

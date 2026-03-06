@@ -1,0 +1,189 @@
+# IEC 60204-1 RAG Index
+# Auto-generated index for IEC 60204-1 (2018) Clause files
+# AI_READ_ACCESS: ALLOWED
+
+version: "1.0"
+standard_family: "IEC"
+standard_id: "IEC_60204_1"
+standard_title: "Electrical Equipment of Machines"
+edition: "2018"
+jurisdiction: "GLOBAL"
+last_updated: "2026-01-15"
+
+note: "IEC 60204-1 is the international/global equivalent of NFPA 79 (US)"
+
+documents:
+  - doc_id: "IEC60204-1-2018-Clause01"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause01__scope.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "1"
+      clause_title: "Scope"
+    tags:
+      topics: ["scope", "applicability"]
+      systems: ["machine", "robot_cell", "conveyor"]
+    priority: "standard"
+    us_equivalent: "NFPA79_Ch01"
+
+  - doc_id: "IEC60204-1-2018-Clause05"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause05__incoming_supply.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "5"
+      clause_title: "Incoming Supply"
+    tags:
+      topics: ["incoming_supply", "supply_disconnect"]
+    priority: "high"
+    us_equivalent: "NFPA79_Ch05"  # Disconnecting Means
+
+  - doc_id: "IEC60204-1-2018-Clause06"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "6"
+      clause_title: "Protection Against Electric Shock"
+    tags:
+      topics: ["electric_shock", "touch_safe"]
+    priority: "high"
+    us_equivalent: "NFPA79_Ch07"
+
+  - doc_id: "IEC60204-1-2018-Clause08"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "8"
+      clause_title: "Equipotential Bonding"
+    tags:
+      topics: ["bonding", "protective_earth"]
+    priority: "critical"  # Safety critical
+    us_equivalent: "NFPA79_Ch08"  # Grounding and Bonding
+
+  - doc_id: "IEC60204-1-2018-Clause09"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "9"
+      clause_title: "Control Circuits and Control Functions"
+    tags:
+      topics: ["control_circuits", "stop_functions", "emergency_stop"]
+    priority: "critical"  # Safety critical
+    us_equivalent: "NFPA79_Ch09"
+
+  - doc_id: "IEC60204-1-2018-Clause11"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause11__control_equipment.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "11"
+      clause_title: "Control Equipment"
+    tags:
+      topics: ["control_equipment", "enclosures"]
+    priority: "high"
+    us_equivalent: "NFPA79_Ch11"
+
+  - doc_id: "IEC60204-1-2018-Clause14"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "14"
+      clause_title: "Marking and Documentation"
+    tags:
+      topics: ["marking", "documentation"]
+    priority: "high"
+    us_equivalent: "NFPA79_Ch19"
+
+  - doc_id: "IEC60204-1-2018-Clause15"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "15"
+      clause_title: "Verification"
+    tags:
+      topics: ["verification", "testing", "inspection"]
+    priority: "high"
+
+# Priority clauses for IEC 60204-1
+priority_clauses:
+  critical:
+    - clause: "8"   # Equipotential Bonding - Safety critical
+    - clause: "9"   # Control Circuits - Safety critical
+  high:
+    - clause: "5"   # Incoming Supply - Disconnect requirements
+    - clause: "6"   # Electric Shock Protection
+    - clause: "11"  # Control Equipment - Panel design
+    - clause: "14"  # Marking and Documentation
+    - clause: "15"  # Verification - Testing
+  standard:
+    - clause: "1"   # Scope
+    - clause: "2"   # Normative References
+    - clause: "3"   # Terms and Definitions
+    - clause: "4"   # General Requirements
+    - clause: "7"   # Protection of Equipment
+    - clause: "10"  # Operator Interface
+    - clause: "12"  # Motors and Drives
+    - clause: "13"  # Accessories and Lighting
+
+# IEC 60204-1 ↔ NFPA 79 Direct Equivalents
+iec_to_nfpa_mapping:
+  - iec_clause: "5"
+    nfpa_chapter: "5"
+    topic: "Disconnecting Means / Incoming Supply"
+    notes: "Similar requirements, terminology differs"
+
+  - iec_clause: "8"
+    nfpa_chapter: "8"
+    topic: "Equipotential Bonding / Grounding and Bonding"
+    notes: "Direct equivalent, IEC uses 'equipotential bonding' term"
+
+  - iec_clause: "9"
+    nfpa_chapter: "9"
+    topic: "Control Circuits and Control Functions"
+    notes: "Nearly identical requirements"
+
+  - iec_clause: "11"
+    nfpa_chapter: "11"
+    topic: "Control Equipment"
+    notes: "Same scope, some construction detail differences"
+
+  - iec_clause: "14"
+    nfpa_chapter: "19"
+    topic: "Marking and Documentation"
+    notes: "Similar requirements, format differences"
+
+# Regional differences (IEC vs NFPA 79)
+regional_considerations:
+  voltage_levels:
+    iec: "Based on IEC voltage standards (230V, 400V typical)"
+    nfpa: "Based on US voltage standards (120V, 480V typical)"
+
+  color_codes:
+    iec: "IEC 60446 color standards"
+    nfpa: "US color standards (different from IEC)"
+
+  component_standards:
+    iec: "IEC component standards (contactors, relays, etc.)"
+    nfpa: "UL/NEMA component standards"
+
+  safety_approach:
+    iec: "Risk assessment per ISO 12100, safety functions per ISO 13849/IEC 62061"
+    nfpa: "NFPA 79 safety requirements, OSHA compliance"
+
+notes: |
+  IEC 60204-1 is the international standard for electrical equipment of machines.
+  It is the direct equivalent of NFPA 79 for global/EU markets.
+
+  Key differences from NFPA 79:
+  - Uses "clauses" instead of "chapters"
+  - Global jurisdiction vs US-specific
+  - Different voltage standards
+  - Different component certification (CE vs UL)
+  - Pairs with ISO 13849/IEC 62061 for safety (vs NFPA 79 standalone)
+
+  All files are in DRAFT status and ready for content development.
