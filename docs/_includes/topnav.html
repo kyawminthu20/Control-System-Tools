@@ -9,5 +9,19 @@
     <li><a href="{{ '/software-stack/' | relative_url }}"{% if page.url contains '/software-stack/' %} class="active"{% endif %}>Software Stack</a></li>
     <li><a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about/' %} class="active"{% endif %}>About</a></li>
   </ul>
+  <div class="topnav__search">
+    <input
+      type="search"
+      id="search-input"
+      class="topnav__search-input"
+      placeholder="Search standards&#8230;"
+      autocomplete="off"
+      aria-label="Search standards"
+      aria-autocomplete="list"
+      aria-controls="search-dropdown"
+      data-search-url="{{ '/assets/data/search.json' | relative_url }}"
+    >
+    <div class="search-dropdown" id="search-dropdown" role="listbox" aria-label="Search results"></div>
+  </div>
   <button class="topnav__hamburger" id="sidebar-toggle" aria-label="Toggle sidebar">&#9776;</button>
 </nav>
