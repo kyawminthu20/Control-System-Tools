@@ -1,0 +1,15 @@
+---
+layout: none
+---
+[
+  {% assign first = true %}
+  {% for page in site.pages %}
+  {% if page.title %}
+  {% unless page.url contains '/vendor/' or page.url contains '/assets/' or page.url contains '/plans/' %}
+  {% unless first %},{% endunless %}
+  {% assign first = false %}
+  {"title":{{ page.title | jsonify }},"url":{{ page.url | relative_url | jsonify }},"content":{{ page.content | strip_html | normalize_whitespace | truncate: 220 | jsonify }},"section":{{ page.url | split: '/' | slice: 1 | first | jsonify }}}
+  {% endunless %}
+  {% endif %}
+  {% endfor %}
+]
