@@ -92,3 +92,125 @@
     });
   }
 })();
+
+// Client-side search (lunr.js)
+(function () {
+  var searchInput = document.getElementById('search-input');
+  var searchDropdown = document.getElementById('search-dropdown');
+  if (!searchInput || !searchDropdown) return;
+
+  var lunrIndex = null;
+  var docs = [];
+  var selectedIndex = -1;
+
+  var searchUrl = searchInput.getAttribute('data-search-url');
+
+  fetch(searchUrl)
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      docs = data;
+      lunrIndex = lunr(function () {
+        this.field('title', { boost: 10 });
+        this.field('section', { boost: 5 });
+        this.field('content');
+        this.ref('url');
+        data.forEach(function (doc) { this.add(doc); }, this);
+      });
+    })
+    .catch(function () { /* search unavailable — silent fail */ });
+
+  function sectionLabel(s) {
+    if (!s) return '';
+    return s.charAt(0).toUpperCase() + s.slice(1).replace(/-/g, ' ');
+  }
+
+  function clearDropdown() {
+    while (searchDropdown.firstChild) {
+      searchDropdown.removeChild(searchDropdown.firstChild);
+    }
+  }
+
+  function buildResultNode(doc) {
+    // Use safe DOM methods — no innerHTML with dynamic data
+    var a = document.createElement('a');
+    a.className = 'search-result';
+    a.href = doc.url;
+    a.setAttribute('role', 'option');
+
+    var sec = sectionLabel(doc.section);
+    if (sec) {
+      var secSpan = document.createElement('span');
+      secSpan.className = 'search-result__section';
+      secSpan.textContent = sec;
+      a.appendChild(secSpan);
+    }
+
+    var titleSpan = document.createElement('span');
+    titleSpan.className = 'search-result__title';
+    titleSpan.textContent = doc.title;
+    a.appendChild(titleSpan);
+
+    return a;
+  }
+
+  function renderResults(results) {
+    selectedIndex = -1;
+    clearDropdown();
+
+    if (!results.length) {
+      var empty = document.createElement('div');
+      empty.className = 'search-dropdown__empty';
+      empty.textContent = 'No results';
+      searchDropdown.appendChild(empty);
+      searchDropdown.classList.add('is-open');
+      return;
+    }
+
+    results.slice(0, 8).forEach(function (r) {
+      var doc = docs.find(function (d) { return d.url === r.ref; });
+      if (!doc) return;
+      searchDropdown.appendChild(buildResultNode(doc));
+    });
+
+    searchDropdown.classList.add('is-open');
+  }
+
+  function close() {
+    searchDropdown.classList.remove('is-open');
+    clearDropdown();
+    selectedIndex = -1;
+  }
+
+  searchInput.addEventListener('input', function () {
+    var q = searchInput.value.trim();
+    if (!q || !lunrIndex) { close(); return; }
+    var results = lunrIndex.search(q + '*');
+    if (!results.length) results = lunrIndex.search(q);
+    renderResults(results);
+  });
+
+  searchInput.addEventListener('keydown', function (e) {
+    var items = searchDropdown.querySelectorAll('.search-result');
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      selectedIndex = Math.min(selectedIndex + 1, items.length - 1);
+      items.forEach(function (el, i) { el.classList.toggle('is-selected', i === selectedIndex); });
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      selectedIndex = Math.max(selectedIndex - 1, -1);
+      items.forEach(function (el, i) { el.classList.toggle('is-selected', i === selectedIndex); });
+    } else if (e.key === 'Enter' && selectedIndex >= 0) {
+      e.preventDefault();
+      items[selectedIndex].click();
+    } else if (e.key === 'Escape') {
+      close();
+      searchInput.blur();
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!searchInput.contains(e.target) && !searchDropdown.contains(e.target)) {
+      close();
+    }
+  });
+})();
