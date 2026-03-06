@@ -1,0 +1,210 @@
+# Troubleshooting Decision Trees Master Index
+# AI_READ_ACCESS: ALLOWED
+# Purpose: Routes troubleshooting queries to appropriate diagnostic decision trees
+
+version: "1.0"
+content_class: "RAG_APPROVED"
+last_updated: "2026-01-15"
+
+# System Categories
+categories:
+  - category_id: "digital_io"
+    category_name: "Digital I/O"
+    folder: "digital_io"
+    description: "Discrete input/output troubleshooting"
+    common_symptoms:
+      - "Input not reading"
+      - "Output not energizing"
+      - "Intermittent I/O"
+      - "Wrong state indication"
+
+  - category_id: "analog_io"
+    category_name: "Analog I/O"
+    folder: "analog_io"
+    description: "Analog signal troubleshooting"
+    common_symptoms:
+      - "Incorrect reading"
+      - "Noisy signal"
+      - "Out of range"
+      - "Signal drift"
+      - "No signal"
+
+  - category_id: "networks"
+    category_name: "Industrial Networks"
+    folder: "networks"
+    description: "Network communication diagnostics"
+    common_symptoms:
+      - "Communication timeout"
+      - "Device not found"
+      - "Intermittent communication"
+      - "Slow response"
+      - "Data corruption"
+
+  - category_id: "motion_servo"
+    category_name: "Motion and Servo Systems"
+    folder: "motion_servo"
+    description: "Motion control troubleshooting"
+    common_symptoms:
+      - "Servo fault"
+      - "Following error"
+      - "Motor vibration"
+      - "Position error"
+      - "Velocity overshoot"
+
+  - category_id: "pid_control"
+    category_name: "PID Control Loops"
+    folder: "pid_control"
+    description: "PID loop tuning and diagnostics"
+    common_symptoms:
+      - "Oscillation"
+      - "Slow response"
+      - "Overshoot"
+      - "Steady state error"
+      - "Instability"
+
+# Decision Tree Templates
+decision_tree_structure:
+  symptom:
+    description: "Observable problem or fault"
+    example: "Digital input showing OFF when switch is ON"
+
+  preliminary_checks:
+    description: "Quick verification steps before detailed diagnosis"
+    examples:
+      - "Check power supply"
+      - "Verify wiring connections"
+      - "Check program logic"
+
+  diagnostic_branches:
+    description: "Systematic isolation of root cause"
+    steps:
+      - "Measure/verify"
+      - "Evaluate result"
+      - "Next action based on result"
+
+  root_cause:
+    description: "Identified failure mode"
+    example: "Failed input module"
+
+  solution:
+    description: "Corrective action"
+    example: "Replace input module, verify configuration"
+
+  standards_reference:
+    description: "Link to relevant standards for compliance verification"
+    example: "NFPA 79 Chapter 11 - Control Equipment"
+
+# Symptom-to-Category Routing
+symptom_routing:
+  "input not reading":
+    category: "digital_io"
+    priority: "high"
+
+  "output not energizing":
+    category: "digital_io"
+    priority: "high"
+
+  "incorrect analog reading":
+    category: "analog_io"
+    priority: "medium"
+
+  "noisy signal":
+    category: "analog_io"
+    priority: "medium"
+
+  "communication timeout":
+    category: "networks"
+    priority: "high"
+
+  "servo fault":
+    category: "motion_servo"
+    priority: "high"
+
+  "pid oscillation":
+    category: "pid_control"
+    priority: "medium"
+
+  "following error":
+    category: "motion_servo"
+    priority: "high"
+
+# Common Root Causes by Category
+common_root_causes:
+  digital_io:
+    - "Failed I/O module"
+    - "Loose wiring"
+    - "Incorrect addressing"
+    - "Power supply issue"
+    - "Program logic error"
+    - "Wrong I/O configuration"
+
+  analog_io:
+    - "Sensor failure"
+    - "Signal conditioning issue"
+    - "Grounding/noise problem"
+    - "Scaling error"
+    - "Loop power issue"
+    - "Wiring fault"
+
+  networks:
+    - "Cable fault"
+    - "Termination issue"
+    - "IP address conflict"
+    - "Network overload"
+    - "EMI/RFI interference"
+    - "Device configuration error"
+
+  motion_servo:
+    - "Tuning parameters incorrect"
+    - "Mechanical binding"
+    - "Feedback device failure"
+    - "Amplifier fault"
+    - "Motor fault"
+    - "Incorrect scaling"
+
+  pid_control:
+    - "Incorrect PID gains"
+    - "Sensor error"
+    - "Actuator saturation"
+    - "Process disturbance"
+    - "Incorrect scan time"
+    - "Derivative kick"
+
+# Integration Points
+integration:
+  standards_intelligence:
+    description: "Link to standards for compliance verification"
+    path: "../standards_intelligence/"
+
+  design_framework:
+    description: "Reference design patterns to prevent recurrence"
+    path: "../design_framework/"
+
+  commissioning_checklists:
+    description: "Verification procedures after repair"
+    path: "../commissioning_checklists/"
+
+# Usage Guidelines
+usage_notes: |
+  Troubleshooting workflow:
+  1. Identify symptom
+  2. Route to appropriate category using symptom_routing
+  3. Follow decision tree in category folder
+  4. Isolate root cause
+  5. Apply solution
+  6. Verify against standards (standards_intelligence)
+  7. Run commissioning checklist to verify repair
+
+  Decision tree format in each folder:
+  - Start with observable symptom
+  - Perform preliminary checks
+  - Follow diagnostic branches
+  - Arrive at root cause
+  - Apply documented solution
+  - Reference applicable standards
+
+changelog:
+  - date: "2026-01-15"
+    action: "Initial decision trees index created"
+    categories: 5
+    status: "Structure ready for content development"

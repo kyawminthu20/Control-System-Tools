@@ -1,0 +1,296 @@
+metadata:
+  ai_read_access: ALLOWED
+  content_class: RAG_APPROVED
+  status: DRAFT
+  scenario_id: CNC_MACHINE_SAFETY_DESIGN
+  source_scope: local_standards_intelligence_only
+
+requirements:
+  - id: CNC-BAS-001
+    title: Main machine disconnect
+    shall_statement: >
+      The CNC machine shall provide a primary disconnecting means that is
+      readily accessible, lockable in the OFF position, clearly indicates ON
+      and OFF, and is located at the point of supply to the machine.
+    subsystem: electrical_power
+    verification_method: Inspect installation and perform lockout trial.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md#1-main-disconnect-requirements
+      - us/nec/NEC_2023__Art670__industrial_machinery.md#1-machine-disconnecting-means
+    industry_tags:
+      - cnc
+      - us
+      - international
+
+  - id: CNC-BAS-002
+    title: No automatic restart
+    shall_statement: >
+      Restoration of power, reset of an emergency stop, or reset of a trip shall
+      not cause automatic restart of hazardous spindle or axis motion.
+    subsystem: safety_logic
+    verification_method: Perform power-cycle and reset functional tests.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#1-startstop-behavior
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#1-startstop-behavior
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-003
+    title: Reset shall not restart
+    shall_statement: >
+      Reset of an emergency stop or guard trip shall not restart the machine and
+      shall only permit a separate deliberate start action.
+    subsystem: safety_logic
+    verification_method: Functional test.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#2-emergency-stop-concepts
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#2-emergency-stop-concepts
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-004
+    title: Safety path independence
+    shall_statement: >
+      Safety-related control functions shall remain capable of performing their
+      task regardless of the state of the standard CNC controller or HMI.
+    subsystem: safety_logic
+    verification_method: Architecture review and simulated fault test.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#3-safety-vs-standard-control-separation
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#3-safety-vs-standard-control-separation
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-005
+    title: Physical emergency stop devices
+    shall_statement: >
+      The machine shall provide physical emergency stop devices at operator and
+      service locations, and the HMI shall not be the sole means of emergency stopping.
+    subsystem: operator_interface
+    verification_method: Inspection and functional test.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#2-ergonomics-and-safety
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md#2-ergonomic-considerations
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-006
+    title: Front door safety interlock
+    shall_statement: >
+      Opening the front enclosure door during hazardous automatic operation
+      shall remove hazardous spindle and axis motion and inhibit restart until reset.
+    subsystem: guarding
+    verification_method: Door-open functional test in AUTO mode.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#3-safety-vs-standard-control-separation
+      - TO VERIFY: ISO 16090-1
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-007
+    title: Spindle torque removal on safety demand
+    shall_statement: >
+      A safety demand shall remove spindle torque using STO or an equivalent
+      certified torque-removal means.
+    subsystem: spindle
+    verification_method: Drive safety functional test.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch12__motors_and_associated_equipment.md#2-drive-protection-considerations
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md#2-drive-integration
+      - TO VERIFY: drive STO certification
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-008
+    title: Axis torque removal on safety demand
+    shall_statement: >
+      A safety demand shall remove hazardous axis torque using STO or an
+      equivalent certified torque-removal means, and the design shall define any
+      required holding behavior for gravity-loaded axes.
+    subsystem: axes
+    verification_method: Safety functional test and hold-behavior review.
+    standard_refs:
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md#2-drive-integration
+      - TO VERIFY: machine-tool-specific safety standard
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-009
+    title: Tool change interlock
+    shall_statement: >
+      The automatic tool-change sequence shall be enabled only when the required
+      tool-change permissives are satisfied, including spindle-safe state and
+      the defined axis or machine position.
+    subsystem: tool_changer
+    verification_method: Simulated tool-change permissive test.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#0-control-philosophy
+      - TO VERIFY: ISO 16090-1
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-010
+    title: Workholding permissive before cycle start
+    shall_statement: >
+      Automatic cycle start shall be inhibited until required workholding or
+      clamp permissives are confirmed where the application presents a part-ejection hazard.
+    subsystem: workholding
+    verification_method: Simulated permissive-loss test.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#0-control-philosophy
+      - TO VERIFY: machine-tool-specific safety standard
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-011
+    title: Panel door interlock and line-side guarding
+    shall_statement: >
+      The panel enclosure door shall be interlocked with the disconnect or
+      otherwise controlled for qualified access, and line-side terminals that
+      remain energized with the disconnect OFF shall be guarded and warned.
+    subsystem: control_panel
+    verification_method: Open-door and disconnect-state test plus visual inspection.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md#4-control-panel-design-rules
+      - us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#3-panel-layout-implications
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-012
+    title: Grounding and door bonding
+    shall_statement: >
+      The machine shall maintain continuous protective bonding to enclosure
+      doors, frames, and conductive parts using dedicated bonding means and effective metal-to-metal contact.
+    subsystem: grounding_bonding
+    verification_method: Inspect bonding hardware and review continuity results.
+    standard_refs:
+      - us/nec/NEC_2023__Art250__grounding_and_bonding.md#2-bonding-of-enclosures-and-doors
+      - us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md#1-protective-bonding-rules
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md#1-bonding-strategy
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-013
+    title: Conductor sizing and protection
+    shall_statement: >
+      Conductors shall be sized using applicable ampacity, ambient, bundling,
+      and terminal-temperature rules and shall be protected at their source.
+    subsystem: wiring
+    verification_method: Calculation review and schematic review.
+    standard_refs:
+      - us/nec/NEC_2023__Art310__conductors_for_general_wiring.md#1-ampacity-and-derating
+      - us/nec/NEC_2023__Art240__overcurrent_protection.md#1-overcurrent-device-selection
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-014
+    title: Routing and segregation
+    shall_statement: >
+      Power, control, feedback, and safety-related conductors shall be routed
+      to prevent physical damage and unacceptable interference, and power-limited
+      circuits shall be segregated from power circuits unless a permitted method is used.
+    subsystem: wiring
+    verification_method: Inspection and panel layout review.
+    standard_refs:
+      - us/nec/NEC_2023__Art300__general_wiring_methods.md#1-routing-and-protection-rules
+      - us/nec/NEC_2023__Art725__class_1_2_3_control_circuits.md#2-separation-from-power-circuits-725136
+      - us/nfpa79/NFPA79_2024__Ch16__wiring_methods.md#2-segregation-rules
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-015
+    title: Flexing cable protection
+    shall_statement: >
+      Conductors that cross a door hinge or other flexing point shall use
+      suitable flexible construction, be anchored at both ends of the flex point,
+      and be routed against fatigue damage.
+    subsystem: wiring
+    verification_method: Inspection.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch16__wiring_methods.md#1-internal-machine-wiring
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-016
+    title: HMI shall not be sole safety means
+    shall_statement: >
+      The HMI may provide cycle, diagnostic, and reset functions, but it shall
+      not be the sole means of emergency stopping or other critical safety actions.
+    subsystem: hmi
+    verification_method: Control review and functional test.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#2-ergonomics-and-safety
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md#2-ergonomic-considerations
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-017
+    title: Logger shall not bypass safety path
+    shall_statement: >
+      The event logger or historian interface shall consume status and event data
+      from the control system without providing a path that can disable or bypass the safety function.
+    subsystem: logging
+    verification_method: Architecture review.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#3-safety-vs-standard-control-separation
+      - reference_models/software_safety_and_intrinsic_safety_standards.md#Secure Development And Cybersecurity
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-018
+    title: Residual-voltage protection
+    shall_statement: >
+      Stored electrical energy shall discharge below 60 V within 5 seconds after
+      power removal or the enclosure shall display the required wait time.
+    subsystem: electrical_safety
+    verification_method: Residual-voltage test and label inspection.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#1-protective-measures
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md#1-protective-measures
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-019
+    title: Setup mode shall inhibit automatic cycle
+    shall_statement: >
+      The machine shall inhibit automatic cycle initiation while in setup or jog
+      conditions that are intended for controlled manual intervention.
+    subsystem: modes
+    verification_method: Mode transition test.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#1-startstop-behavior
+      - TO VERIFY: ISO 16090-1
+    industry_tags:
+      - cnc
+      - all
+
+  - id: CNC-BAS-020
+    title: Verification records
+    shall_statement: >
+      The project shall retain electrical verification records, safety-function
+      test records, and turnover documentation for the CNC machine.
+    subsystem: documentation
+    verification_method: Document review.
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#2-documentation-expectations
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md#0-purpose
+    industry_tags:
+      - cnc
+      - all

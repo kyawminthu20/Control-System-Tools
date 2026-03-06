@@ -1,0 +1,70 @@
+# Overlap Matrix Master Index
+# AI_READ_ACCESS: ALLOWED
+# Generated: 2026-01-15
+
+version: "1.0"
+content_class: "RAG_APPROVED"
+status: "DRAFT"
+
+# Purpose
+# Route standards overlap queries to appropriate matrix files
+# Each matrix shows topic-based cross-references between standards
+
+matrices:
+  - matrix_id: "UL508A_NEC_NFPA79"
+    file: "ul508a_nec_nfpa79_overlap.md"
+    standards:
+      - "UL_508A_2022"
+      - "NEC_2023"
+      - "NFPA_79_2024"
+    jurisdiction: "US"
+    description: "US standards overlap - panel vs machine vs code"
+    use_case: "US industrial control panels and machinery"
+
+  - matrix_id: "NFPA79_IEC60204"
+    file: "nfpa79_iec60204_overlap.md"
+    standards:
+      - "NFPA_79_2024"
+      - "IEC_60204_1_2018"
+    jurisdiction: "US + International"
+    description: "US vs International machinery standards"
+    use_case: "Dual-market machinery (US + EU)"
+
+# Topic routing to matrices
+topic_routing:
+  us_panel_design:
+    primary_matrix: "UL508A_NEC_NFPA79"
+    topics:
+      - "scope_boundary"
+      - "sccr"
+      - "panel_construction"
+      - "grounding_bonding"
+      - "marking_documentation"
+
+  us_machinery:
+    primary_matrix: "UL508A_NEC_NFPA79"
+    secondary_matrix: "NFPA79_IEC60204"
+    topics:
+      - "disconnecting_means"
+      - "control_functions"
+      - "emergency_stop"
+      - "motors_drives"
+
+  dual_us_eu_machinery:
+    primary_matrix: "NFPA79_IEC60204"
+    topics:
+      - "incoming_supply_disconnect"
+      - "grounding_bonding"
+      - "control_functions"
+      - "verification"
+      - "marking_documentation"
+
+# Integration
+overlap_notes_location: "../overlap_notes/"
+standards_location: "../"
+
+changelog:
+  - date: "2026-01-15"
+    action: "Initial overlap matrix index created"
+    matrices: 2
+    status: "DRAFT"

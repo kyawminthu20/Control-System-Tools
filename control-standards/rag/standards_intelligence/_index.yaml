@@ -1,0 +1,229 @@
+# Standards Intelligence Master Index
+# AI_READ_ACCESS: ALLOWED
+# Updated: 2026-03-05
+
+version: "2.0"
+content_class: "RAG_APPROVED"
+repository: "control-standards"
+
+standards:
+  us:
+    - standard_id: "NEC_2023"
+      standard_name: "National Electrical Code"
+      folder: "us/nec"
+      edition: "2023"
+      jurisdiction: "United States"
+      elements: 10
+      element_type: "articles"
+      status: "complete"
+
+    - standard_id: "NFPA_79_2024"
+      standard_name: "Electrical Standard for Industrial Machinery"
+      folder: "us/nfpa79"
+      edition: "2024"
+      jurisdiction: "United States"
+      elements: 20
+      element_type: "chapters"
+      status: "complete"
+
+    - standard_id: "UL_508A_2022"
+      standard_name: "Industrial Control Panels"
+      folder: "us/ul_508a"
+      edition: "2022"
+      jurisdiction: "United States"
+      elements: 11
+      element_type: "sections"
+      status: "complete"
+
+  international:
+    machinery:
+      - standard_id: "IEC_60204_1_2018"
+        standard_name: "Electrical Equipment of Machines"
+        folder: "international/machinery/iec_60204_1"
+        edition: "2018"
+        jurisdiction: "Global"
+        elements: 15
+        element_type: "clauses"
+        status: "complete"
+
+    functional_safety:
+      - standard_id: "ISO_13849_1_2023"
+        standard_name: "Safety of Machinery - Control Systems"
+        folder: "international/functional_safety/iso_13849_1"
+        edition: "2023"
+        jurisdiction: "Global"
+        elements: "TBD"
+        element_type: "clauses"
+        status: "planned"
+
+      - standard_id: "ISO_12100_2010"
+        standard_name: "Risk Assessment and Risk Reduction"
+        folder: "international/functional_safety/iso_12100"
+        edition: "2010"
+        jurisdiction: "Global"
+        elements: "TBD"
+        element_type: "clauses"
+        status: "planned"
+
+      - standard_id: "IEC_62061_2021"
+        standard_name: "Functional Safety - Safety Control Systems"
+        folder: "international/functional_safety/iec_62061"
+        edition: "2021"
+        jurisdiction: "Global"
+        elements: "TBD"
+        element_type: "clauses"
+        status: "planned"
+
+      - standard_id: "IEC_61508_2010"
+        standard_name: "Functional Safety of Electrical/Electronic Systems"
+        folder: "international/functional_safety/iec_61508"
+        edition: "2010"
+        jurisdiction: "Global"
+        elements: "TBD"
+        element_type: "parts"
+        status: "planned"
+
+      - standard_id: "IEC_61511_2016"
+        standard_name: "Functional Safety - Process Industry"
+        folder: "international/functional_safety/iec_61511"
+        edition: "2016"
+        jurisdiction: "Global"
+        elements: "TBD"
+        element_type: "parts"
+        status: "planned"
+
+topic_routing:
+  grounding_bonding:
+    us_standards:
+      - "NEC_2023 Article 250"
+      - "UL_508A_2022 Section 7"
+      - "NFPA_79_2024 Chapter 8"
+    international_standards:
+      - "IEC_60204_1_2018 Clause 8"
+
+  emergency_stop:
+    us_standards:
+      - "NFPA_79_2024 Chapter 9"
+    international_standards:
+      - "IEC_60204_1_2018 Clause 9"
+      - "ISO_13849_1_2023"
+
+  control_panels:
+    us_standards:
+      - "NEC_2023 Article 409"
+      - "UL_508A_2022 All Sections"
+      - "NFPA_79_2024 Chapter 11"
+    international_standards:
+      - "IEC_60204_1_2018 Clause 11"
+
+  motor_protection:
+    us_standards:
+      - "NEC_2023 Article 430"
+      - "NFPA_79_2024 Chapter 12"
+    international_standards:
+      - "IEC_60204_1_2018 Clause 12"
+
+  disconnect_isolation:
+    us_standards:
+      - "NFPA_79_2024 Chapter 5"
+    international_standards:
+      - "IEC_60204_1_2018 Clause 5"
+
+  safety_functions:
+    international_standards:
+      - "ISO_13849_1_2023"
+      - "IEC_62061_2021"
+      - "IEC_61508_2010"
+      - "IEC_61511_2016"
+    guidance_file: "reference_models/software_safety_and_intrinsic_safety_standards.md"
+
+  risk_assessment:
+    international_standards:
+      - "ISO_12100_2010"
+
+  software_implementation:
+    international_standards:
+      - "IEC 61508-3:2010"
+      - "IEC 61511-1:2016"
+      - "IEC 62061:2021"
+      - "ISO 13849-1:2023"
+      - "IEC 61131-3:2025"
+    guidance_file: "reference_models/software_safety_and_intrinsic_safety_standards.md"
+
+  secure_development:
+    international_standards:
+      - "IEC 62443-4-1:2018"
+      - "IEC 62443-4-2:2019"
+      - "IEC 62443-3-3:2013"
+    guidance_file: "reference_models/software_safety_and_intrinsic_safety_standards.md"
+
+  intrinsic_safety:
+    international_standards:
+      - "IEC 60079-11:2023"
+      - "IEC 60079-14:2024"
+      - "IEC 60079-25:2020"
+    us_standards:
+      - "UL 60079-11"
+      - "UL 698A"
+      - "NEC hazardous location articles"
+    guidance_file: "reference_models/software_safety_and_intrinsic_safety_standards.md"
+
+regional_routing:
+  us_only:
+    description: "US-specific installations"
+    standards: ["NEC_2023", "NFPA_79_2024", "UL_508A_2022"]
+
+  eu_ce_marking:
+    description: "EU/CE marking requirements"
+    standards: ["IEC_60204_1_2018", "ISO_13849_1_2023", "ISO_12100_2010"]
+
+  dual_us_eu:
+    description: "Global machinery (US + EU markets)"
+    standards: ["NFPA_79_2024", "IEC_60204_1_2018", "ISO_13849_1_2023", "UL_508A_2022"]
+
+  process_industry:
+    description: "Process industry functional safety"
+    standards: ["IEC_61511_2016", "IEC_61508_2010"]
+
+cross_references:
+  root: "crosswalks/"
+  overlap_matrix: "crosswalks/overlap_matrix/"
+  overlap_notes: "crosswalks/overlap_notes/"
+
+routing_documents:
+  - title: "Standards Applicability"
+    file: "routing/standards_applicability.md"
+    status: "authoritative_reference"
+
+guidance_documents:
+  - title: "Software Safety, Redundancy, and Intrinsic Safety Standards"
+    file: "reference_models/software_safety_and_intrinsic_safety_standards.md"
+    status: "authoritative_reference"
+  - title: "7-Layer Industrial Machine Architecture Model"
+    file: "reference_models/7-Layer Industrial Machine Architecture Model.md"
+    status: "authoritative_reference"
+  - title: "Universal Machine Safety Architecture"
+    file: "reference_models/Universal Machine Safety Architecture.md"
+    status: "authoritative_reference"
+
+administrative_documents:
+  root: "library_admin/"
+
+notes: |
+  This index routes the grouped standards layout introduced on 2026-03-05.
+
+  For US industrial control panels:
+    - Start with NEC Article 409
+    - Use UL 508A for construction and listing
+    - Use NFPA 79 for machinery context
+
+  For international machinery:
+    - Start with IEC 60204-1
+    - Use ISO 13849-1 or IEC 62061 for safety functions
+    - Use ISO 12100 for risk assessment
+    - Use routing/standards_applicability.md for project and market routing
+    - Use reference_models/software_safety_and_intrinsic_safety_standards.md for safety PLC software, redundancy, and intrinsic-safety routing
+
+changelog:
+  - date: "2026-03-05"
+    action: "Reorganized standards into grouped us/international/crosswalks layout"

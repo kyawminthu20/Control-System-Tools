@@ -1,0 +1,203 @@
+# NEC (NFPA 70) RAG Index
+# Auto-generated index for NEC 2023 Article files
+# AI_READ_ACCESS: ALLOWED
+
+version: "1.0"
+standard_family: "NEC"
+standard_id: "NFPA_70"
+standard_title: "National Electrical Code"
+edition: "2023"
+jurisdiction: "US"
+last_updated: "2026-01-15"
+
+documents:
+  - doc_id: "NEC2023-Art110"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art110__requirements_for_electrical_installations.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "110"
+      article_title: "Requirements for Electrical Installations"
+    tags:
+      topics: ["listing", "labeling", "installation_instructions"]
+      systems: ["industrial_control_panel", "machine"]
+      risks: ["shock", "fire", "arc_flash"]
+    priority: "high"  # Fundamental to all installations
+
+  - doc_id: "NEC2023-Art250"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art250__grounding_and_bonding.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "250"
+      article_title: "Grounding and Bonding"
+    tags:
+      topics: ["grounding", "bonding", "protective_earth"]
+      systems: ["industrial_control_panel"]
+    priority: "critical"  # Safety-critical, frequent inspection failures
+    related_standards: ["NFPA79_Ch08"]
+
+  - doc_id: "NEC2023-Art300"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art300__general_wiring_methods.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "300"
+      article_title: "General Wiring Methods"
+    tags:
+      topics: ["wiring_methods", "routing", "mechanical_protection"]
+    priority: "standard"
+
+  - doc_id: "NEC2023-Art310"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art310__conductors_for_general_wiring.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "310"
+      article_title: "Conductors for General Wiring"
+    tags:
+      topics: ["conductors", "ampacity", "temperature_rating"]
+    priority: "high"  # Critical for wire sizing
+    related_standards: ["UL508A_Section30"]
+
+  - doc_id: "NEC2023-Art409"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art409__industrial_control_panels.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "409"
+      article_title: "Industrial Control Panels"
+    tags:
+      topics: ["industrial_control_panel", "sccr", "labeling"]
+      systems: ["control_panel"]
+    priority: "critical"  # Defines industrial control panels
+    related_standards: ["UL508A"]
+
+  - doc_id: "NEC2023-Art430"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art430__motors_motor_circuits_and_controllers.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "430"
+      article_title: "Motors, Motor Circuits, and Controllers"
+    tags:
+      topics: ["motors", "drives", "motor_protection"]
+    priority: "high"  # Common in control panels
+    related_standards: ["NFPA79_Ch12"]
+
+  - doc_id: "NEC2023-Art240"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art240__overcurrent_protection.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "240"
+      article_title: "Overcurrent Protection"
+    tags:
+      topics: ["overcurrent", "short_circuit", "breakers", "fuses"]
+      systems: ["industrial_control_panel"]
+    priority: "high"  # Critical for safety
+    related_standards: ["UL508A_Section29"]
+
+  - doc_id: "NEC2023-Art408"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art408__switchboards_switchgear_and_panelboards.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "408"
+      article_title: "Switchboards, Switchgear, and Panelboards"
+    tags:
+      topics: ["switchboards", "panelboards", "power_distribution"]
+      systems: ["industrial_control_panel"]
+    priority: "standard"
+    note: "Article 409 often supersedes for industrial control panels"
+
+  - doc_id: "NEC2023-Art725"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art725__class_1_2_3_control_circuits.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "725"
+      article_title: "Class 1, Class 2, and Class 3 Remote-Control Circuits"
+    tags:
+      topics: ["control_circuits", "class_2", "power_limited"]
+    priority: "standard"
+
+  - doc_id: "NEC2023-Art670"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art670__industrial_machinery.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "670"
+      article_title: "Industrial Machinery"
+    tags:
+      topics: ["industrial_machinery", "machine_wiring", "disconnects"]
+      systems: ["machine", "robot_cell", "conveyor"]
+    priority: "high"  # Important for machinery installations
+    related_standards: ["NFPA79"]
+
+# Priority articles for control panel work
+priority_articles:
+  critical:
+    - article: "250"  # Grounding and Bonding - Safety critical
+    - article: "409"  # Industrial Control Panels - Defines the scope
+  high:
+    - article: "110"  # Requirements for Electrical Installations - Fundamental
+    - article: "240"  # Overcurrent Protection - Safety
+    - article: "310"  # Conductors - Wire sizing
+    - article: "430"  # Motors - Common loads
+    - article: "670"  # Industrial Machinery - Machine installations
+  standard:
+    - article: "300"  # Wiring Methods
+    - article: "408"  # Switchboards (less common for industrial control panels)
+    - article: "725"  # Control Circuits
+
+# Cross-references to other standards
+related_standards_map:
+  UL508A:
+    - ul_section: "Section 28"  # SCCR
+      nec_articles: ["409"]
+    - ul_section: "Section 29"  # Overcurrent Protection
+      nec_articles: ["240"]
+    - ul_section: "Section 30"  # Wire Sizing
+      nec_articles: ["310"]
+    - ul_section: "Section 35"  # Grounding
+      nec_articles: ["250"]
+
+  NFPA79:
+    - nfpa79_chapter: "5"  # Disconnecting Means
+      nec_articles: ["670"]
+    - nfpa79_chapter: "8"  # Grounding and Bonding
+      nec_articles: ["250"]
+    - nfpa79_chapter: "11"  # Control Equipment
+      nec_articles: ["409"]
+    - nfpa79_chapter: "12"  # Motors
+      nec_articles: ["430"]
+
+# Common inspection focus areas
+inspection_priorities:
+  - article: "250"
+    focus: "Equipment grounding conductor sizing, bonding jumpers"
+    common_failures: "Undersized EGC, poor bonding to doors/subpanels"
+
+  - article: "409"
+    focus: "SCCR marking, labeling compliance"
+    common_failures: "Missing SCCR label, incorrect voltage marking"
+
+  - article: "430"
+    focus: "Motor overload protection, branch circuit sizing"
+    common_failures: "Oversized branch circuit breakers, missing overload protection"
+
+  - article: "110"
+    focus: "Listed equipment, installation per manufacturer instructions"
+    common_failures: "Unlisted devices, ignoring installation manuals"
+
+# Article coverage assessment
+coverage_notes:
+  complete: ["110", "250", "310", "409", "430", "670"]
+  partial: []
+  planned: ["511", "514", "800"]  # Hazardous locations, communications
+
+notes: |
+  This index covers the core NEC articles for industrial control panel design.
+  Additional articles (hazardous locations, communications, etc.) can be added as needed.
+  All files are in DRAFT status and ready for content development.
