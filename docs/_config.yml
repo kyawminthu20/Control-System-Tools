@@ -1,0 +1,24 @@
+title: "Control System Standards Atlas"
+description: "An engineering reference for industrial automation standards — navigate families, lifecycle stages, and repository sources."
+baseurl: "/Control-System-Tools"
+url: "https://kyawminthu.github.io"
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

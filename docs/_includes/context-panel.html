@@ -1,0 +1,60 @@
+<aside class="context-panel">
+  {% if page.related_standards %}
+  <div class="context-panel__section">
+    <div class="context-panel__title">Related Standards</div>
+    <ul>
+      {% for std in page.related_standards %}
+      <li><a href="{{ std.url | relative_url }}">{{ std.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if page.lifecycle_stage %}
+  <div class="context-panel__section">
+    <div class="context-panel__title">Lifecycle Stage</div>
+    <ul>
+      {% for stage in page.lifecycle_stage %}
+      <li><a href="{{ '/lifecycle/' | relative_url }}{{ stage.slug }}/">{{ stage.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if page.industries %}
+  <div class="context-panel__section">
+    <div class="context-panel__title">Industries</div>
+    <ul>
+      {% for ind in page.industries %}
+      <li><a href="{{ '/industries/' | relative_url }}{{ ind.slug }}/">{{ ind.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if page.crosswalk_refs %}
+  <div class="context-panel__section">
+    <div class="context-panel__title">Crosswalk References</div>
+    <ul>
+      {% for ref in page.crosswalk_refs %}
+      <li><a href="{{ ref.url | relative_url }}">{{ ref.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if page.repo_path %}
+  <div class="context-panel__section">
+    <div class="context-panel__title">Repository Path</div>
+    <code style="display:block;word-break:break-all;font-size:0.72rem;">{{ page.repo_path }}</code>
+  </div>
+  {% endif %}
+
+  <div class="context-panel__section">
+    <div class="context-panel__title">Content Status</div>
+    <p style="font-size:0.72rem;color:var(--color-text-muted);">
+      This site is a paraphrase and navigation aid. Content is sourced from the local RAG corpus.
+      Always verify against authoritative standards documents.
+    </p>
+  </div>
+</aside>

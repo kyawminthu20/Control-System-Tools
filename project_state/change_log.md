@@ -18,6 +18,31 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-06 — Phase 1 Jekyll Site Implementation
+
+**Summary:** Built the complete Phase 1 GitHub Pages static site under `docs/`.
+
+**What changed:**
+- Created `docs/` Jekyll scaffold with `_config.yml`, `Gemfile`, and vendor bundle (Ruby 2.6 / Bundler 2.4.22 local)
+- Built three-panel layout: CSS Grid (240px sidebar + 1fr main + 220px context), responsive to tablet/mobile
+- Mermaid.js CDN integration (theme: neutral) in default layout
+- 48 HTML pages across all planned sections
+- GitHub Actions workflow at `.github/workflows/pages.yml` (deploys from master branch)
+- Updated `.gitignore` to exclude `docs/_site/`, `docs/vendor/`, `docs/.jekyll-cache/`
+
+**Site sections implemented:**
+- Homepage: 8 content blocks (hero, standards cards, lifecycle ribbon, relationship diagram, industry matrix, scenarios, repo explorer, trust boundary)
+- Standards: explorer landing, US Electrical (NEC, NFPA 79, UL 508A), International Machinery (IEC 60204-1), Functional Safety (ISO 12100, ISO 13849-1, IEC 62061, IEC 61508, IEC 61511)
+- Lifecycle: landing + 11 stage pages
+- Crosswalks: NFPA 79 ↔ IEC 60204-1, UL 508A/NEC/NFPA 79, Decision Workflow
+- Scenarios: 5 pages (US Control Panel, Global Machine, Process Skid, Networked Safety PLC, Semiconductor Equipment)
+- Industries: matrix landing + 9 industry overlay pages
+- Software Stack, About
+
+**Architecture decision:** Jekyll static site with custom CSS (no framework). Content sourced from RAG corpus paraphrase. `docs/` is presentation only — never modifies `rag/`.
+
+**Next step:** Commit, push, enable GitHub Pages in repo settings (Source: GitHub Actions).
+
 ### 2026-03-06: Commit Automation Retargeted To Project-State Log
 
 **Type:** Automation / Workflow
