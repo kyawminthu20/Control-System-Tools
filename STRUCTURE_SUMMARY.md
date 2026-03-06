@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-05 23:20:59
+**Last Auto-Updated:** 2026-03-05 23:33:04
 
 ```text
 ├── .claude/
@@ -54,6 +54,415 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │           ├── _virtualenv.pth
 │   │           └── _virtualenv.py
 │   └── pyvenv.cfg
+├── .worktrees/
+│   └── feature-phase2/
+│       ├── .claude/
+│       │   ├── agents/
+│       │   │   ├── rag-reviewer.md
+│       │   │   └── standards-lookup.md
+│       │   ├── settings.json
+│       │   └── skills/
+│       │       ├── explain-code/
+│       │       │   └── SKILL.md
+│       │       ├── new-rag-module/
+│       │       │   └── SKILL.md
+│       │       ├── promote-draft/
+│       │       │   └── SKILL.md
+│       │       └── validate-rag/
+│       │           └── SKILL.md
+│       ├── .github/
+│       │   └── workflows/
+│       │       └── pages.yml
+│       ├── .gitignore
+│       ├── .mcp.json
+│       ├── .playwright-mcp/
+│       │   └── console-2026-03-06T07-01-55-004Z.log
+│       ├── .python-version
+│       ├── AGENTS.md
+│       ├── CLAUDE.md
+│       ├── PROJECT_STARTUP_CONTEXT.md
+│       ├── README.md
+│       ├── STRUCTURE_SUMMARY.md
+│       ├── control-standards/
+│       │   ├── .gitignore
+│       │   ├── QUICK_START.md
+│       │   ├── README.md
+│       │   ├── STRUCTURE_SUMMARY.md
+│       │   ├── exports/
+│       │   │   ├── README.md
+│       │   │   └── legacy_root/
+│       │   │       └── README.md
+│       │   ├── governance/
+│       │   │   ├── README.md
+│       │   │   ├── decision_log.md
+│       │   │   ├── design_change_policy.md
+│       │   │   ├── promotion_checklist_drafts_to_rag.md
+│       │   │   └── release_notes.md
+│       │   ├── rag/
+│       │   │   ├── MIGRATION_SUMMARY_20260115_221742.md
+│       │   │   ├── RAG_DIRECTORY_STATUS.md
+│       │   │   ├── VERSION_OVERVIEW.md
+│       │   │   ├── standards_intelligence/
+│       │   │   │   ├── README.md
+│       │   │   │   ├── _glossary.md
+│       │   │   │   ├── _index.yaml
+│       │   │   │   ├── _standards_map.md
+│       │   │   │   ├── crosswalks/
+│       │   │   │   │   ├── overlap_matrix/
+│       │   │   │   │   │   ├── _index.yaml
+│       │   │   │   │   │   ├── file_structure.md
+│       │   │   │   │   │   ├── nfpa79_iec60204_overlap.md
+│       │   │   │   │   │   ├── standards_decision_workflow.md
+│       │   │   │   │   │   ├── standards_overlap.md
+│       │   │   │   │   │   └── ul508a_nec_nfpa79_overlap.md
+│       │   │   │   │   └── overlap_notes/
+│       │   │   │   │       ├── GENERATION_STATUS.md
+│       │   │   │   │       ├── _index.yaml
+│       │   │   │   │       ├── file_structure.md
+│       │   │   │   │       └── overlap__sccr.md
+│       │   │   │   ├── file_structure.md
+│       │   │   │   ├── international/
+│       │   │   │   │   ├── functional_safety/
+│       │   │   │   │   │   └── iso_13849_1/
+│       │   │   │   │   │       └── file_structure.md
+│       │   │   │   │   └── machinery/
+│       │   │   │   │       └── iec_60204_1/
+│       │   │   │   │           ├── GENERATION_SUMMARY.md
+│       │   │   │   │           ├── IEC60204_1_2018__Clause01__scope.md
+│       │   │   │   │           ├── IEC60204_1_2018__Clause02__normative_references.md
+│       │   │   │   │           ├── IEC60204_1_2018__Clause03__terms_and_definitions.md
+│       │   │   │   │           ├── IEC60204_1_2018__Clause04__general_requirements.md
+│       │   │   │   │           ├── IEC60204_1_2018__Clause05__incoming_supply.md
+│       │   │   │   │           ├── IEC60204_1_2018__Clause06__protection_against_electric_shock.md
+│       │   │   │   │           ├── IEC60204_1_2018__Clause07__protection_of_equipment.md
+│       │   │   │   │           ├── IEC60204_1_2018__Clause08__equipotential_bonding.md
+│       │   │   │   │           ├── IEC60204_1_2018__Clause09__control_circuits_and_functions.md
+│       │   │   │   │           ├── IEC60204_1_2018__Clause10__operator_interface.md
+│       │   │   │   │           ├── IEC60204_1_2018__Clause11__control_equipment.md
+│       │   │   │   │           ├── IEC60204_1_2018__Clause12__motors_and_drives.md
+│       │   │   │   │           ├── IEC60204_1_2018__Clause13__accessories_and_lighting.md
+│       │   │   │   │           ├── IEC60204_1_2018__Clause14__marking_and_documentation.md
+│       │   │   │   │           ├── IEC60204_1_2018__Clause15__verification.md
+│       │   │   │   │           ├── IEC60204_OVERVIEW.md
+│       │   │   │   │           ├── README.md
+│       │   │   │   │           └── _index.yaml
+│       │   │   │   ├── library_admin/
+│       │   │   │   │   ├── COMPLETE_STANDARDS_PORTFOLIO.md
+│       │   │   │   │   ├── README.md
+│       │   │   │   │   ├── STANDARDS_COMPLETION_STATUS.md
+│       │   │   │   │   ├── STANDARDS_MODULES_SUMMARY.md
+│       │   │   │   │   └── STANDARDS_PURCHASE_TRACKER.md
+│       │   │   │   ├── reference_models/
+│       │   │   │   │   ├── 15-Standard Minimum Compliance Stack.md
+│       │   │   │   │   ├── 7-Layer Industrial Machine Architecture Model.md
+│       │   │   │   │   ├── README.md
+│       │   │   │   │   ├── Software_Safety_and_Intrinsic_Safety_Standards.md
+│       │   │   │   │   ├── Universal Machine Safety Architecture.md
+│       │   │   │   │   └── standards_atlas_diagrams_reference.md
+│       │   │   │   ├── routing/
+│       │   │   │   │   ├── README.md
+│       │   │   │   │   └── standards_applicability.md
+│       │   │   │   ├── scenario/
+│       │   │   │   │   ├── cnc_machine_safety_design/
+│       │   │   │   │   │   ├── README.md
+│       │   │   │   │   │   ├── control_architecture_and_network.md
+│       │   │   │   │   │   ├── hazards_and_risk_assessment.md
+│       │   │   │   │   │   ├── mechanical_and_electrical_isolation.md
+│       │   │   │   │   │   ├── requirements.yaml
+│       │   │   │   │   │   ├── safety_functions_register.md
+│       │   │   │   │   │   ├── safety_integrity_and_sil_strategy.md
+│       │   │   │   │   │   ├── standards_applicability_matrix.md
+│       │   │   │   │   │   ├── system_description.md
+│       │   │   │   │   │   ├── ul_nec_design_requirements.md
+│       │   │   │   │   │   └── verification_and_validation_plan.md
+│       │   │   │   │   ├── mini_machine_safety_design/
+│       │   │   │   │   │   ├── README.md
+│       │   │   │   │   │   ├── control_architecture_and_network.md
+│       │   │   │   │   │   ├── hazards_and_risk_assessment.md
+│       │   │   │   │   │   ├── industry_overlays/
+│       │   │   │   │   │   │   ├── commercial.md
+│       │   │   │   │   │   │   ├── energy.md
+│       │   │   │   │   │   │   ├── food_and_beverage.md
+│       │   │   │   │   │   │   ├── marine.md
+│       │   │   │   │   │   │   ├── medical.md
+│       │   │   │   │   │   │   ├── nuclear.md
+│       │   │   │   │   │   │   ├── offshore.md
+│       │   │   │   │   │   │   ├── petroleum.md
+│       │   │   │   │   │   │   └── semiconductor.md
+│       │   │   │   │   │   ├── mechanical_and_electrical_isolation.md
+│       │   │   │   │   │   ├── requirements.yaml
+│       │   │   │   │   │   ├── safety_functions_register.md
+│       │   │   │   │   │   ├── safety_integrity_and_sil_strategy.md
+│       │   │   │   │   │   ├── standards_applicability_matrix.md
+│       │   │   │   │   │   ├── system_description.md
+│       │   │   │   │   │   ├── ul_nec_design_requirements.md
+│       │   │   │   │   │   └── verification_and_validation_plan.md
+│       │   │   │   │   └── mini_machine_safety_design_v2/
+│       │   │   │   │       ├── README.md
+│       │   │   │   │       ├── control_architecture_and_network.md
+│       │   │   │   │       ├── hazards_and_risk_assessment.md
+│       │   │   │   │       ├── industry_overlays/
+│       │   │   │   │       │   ├── commercial.md
+│       │   │   │   │       │   ├── energy.md
+│       │   │   │   │       │   ├── food_and_beverage.md
+│       │   │   │   │       │   ├── marine.md
+│       │   │   │   │       │   ├── medical.md
+│       │   │   │   │       │   ├── nuclear.md
+│       │   │   │   │       │   ├── offshore.md
+│       │   │   │   │       │   ├── petroleum.md
+│       │   │   │   │       │   └── semiconductor.md
+│       │   │   │   │       ├── mechanical_and_electrical_isolation.md
+│       │   │   │   │       ├── requirements.yaml
+│       │   │   │   │       ├── safety_functions_register.md
+│       │   │   │   │       ├── safety_integrity_and_sil_strategy.md
+│       │   │   │   │       ├── standards_applicability_matrix.md
+│       │   │   │   │       ├── system_description.md
+│       │   │   │   │       ├── ul_nec_design_requirements.md
+│       │   │   │   │       └── verification_and_validation_plan.md
+│       │   │   │   └── us/
+│       │   │   │       ├── nec/
+│       │   │   │       │   ├── GENERATION_SUMMARY.md
+│       │   │   │       │   ├── NEC_2023__Art110__requirements_for_electrical_installations.md
+│       │   │   │       │   ├── NEC_2023__Art240__overcurrent_protection.md
+│       │   │   │       │   ├── NEC_2023__Art250__grounding_and_bonding.md
+│       │   │   │       │   ├── NEC_2023__Art300__general_wiring_methods.md
+│       │   │   │       │   ├── NEC_2023__Art310__conductors_for_general_wiring.md
+│       │   │   │       │   ├── NEC_2023__Art408__switchboards_switchgear_and_panelboards.md
+│       │   │   │       │   ├── NEC_2023__Art409__industrial_control_panels.md
+│       │   │   │       │   ├── NEC_2023__Art430__motors_motor_circuits_and_controllers.md
+│       │   │   │       │   ├── NEC_2023__Art670__industrial_machinery.md
+│       │   │   │       │   ├── NEC_2023__Art725__class_1_2_3_control_circuits.md
+│       │   │   │       │   ├── NEC_COMPLETION_STATUS.md
+│       │   │   │       │   ├── NEC_OVERVIEW.md
+│       │   │   │       │   ├── README.md
+│       │   │   │       │   └── _index.yaml
+│       │   │   │       ├── nfpa79/
+│       │   │   │       │   ├── GENERATION_SUMMARY.md
+│       │   │   │       │   ├── NFPA79_2024__Ch01__administration.md
+│       │   │   │       │   ├── NFPA79_2024__Ch02__definitions.md
+│       │   │   │       │   ├── NFPA79_2024__Ch03__general_requirements.md
+│       │   │   │       │   ├── NFPA79_2024__Ch04__general_conditions_of_installation.md
+│       │   │   │       │   ├── NFPA79_2024__Ch05__disconnecting_means.md
+│       │   │   │       │   ├── NFPA79_2024__Ch06__overcurrent_protection.md
+│       │   │   │       │   ├── NFPA79_2024__Ch07__protection_against_electric_shock.md
+│       │   │   │       │   ├── NFPA79_2024__Ch08__grounding_and_bonding.md
+│       │   │   │       │   ├── NFPA79_2024__Ch09__control_circuits_and_control_functions.md
+│       │   │   │       │   ├── NFPA79_2024__Ch10__operator_interface_devices.md
+│       │   │   │       │   ├── NFPA79_2024__Ch11__control_equipment.md
+│       │   │   │       │   ├── NFPA79_2024__Ch12__motors_and_associated_equipment.md
+│       │   │   │       │   ├── NFPA79_2024__Ch13__appliances_and_accessories.md
+│       │   │   │       │   ├── NFPA79_2024__Ch14__lighting.md
+│       │   │   │       │   ├── NFPA79_2024__Ch15__transformers_and_power_supplies.md
+│       │   │   │       │   ├── NFPA79_2024__Ch16__wiring_methods.md
+│       │   │   │       │   ├── NFPA79_2024__Ch17__cables_and_flexible_cords.md
+│       │   │   │       │   ├── NFPA79_2024__Ch18__terminal_blocks_and_connectors.md
+│       │   │   │       │   ├── NFPA79_2024__Ch19__marking_and_documentation.md
+│       │   │   │       │   ├── NFPA79_2024__Ch20__system_integration.md
+│       │   │   │       │   ├── NFPA_OVERVIEW.md
+│       │   │   │       │   ├── README.md
+│       │   │   │       │   └── _index.yaml
+│       │   │   │       └── ul_508a/
+│       │   │   │           ├── GENERATION_SUMMARY.md
+│       │   │   │           ├── README.md
+│       │   │   │           ├── UL508A_2022__control_circuits_and_devices.md
+│       │   │   │           ├── UL508A_2022__enclosures_and_environmental_ratings.md
+│       │   │   │           ├── UL508A_2022__general_construction_requirements.md
+│       │   │   │           ├── UL508A_2022__grounding_and_bonding.md
+│       │   │   │           ├── UL508A_2022__marking_and_documentation.md
+│       │   │   │           ├── UL508A_2022__motor_controllers_and_drives.md
+│       │   │   │           ├── UL508A_2022__overcurrent_protection.md
+│       │   │   │           ├── UL508A_2022__sccr_short_circuit_current_rating.md
+│       │   │   │           ├── UL508A_2022__scope_and_application.md
+│       │   │   │           ├── UL508A_2022__spacing_creepage_clearance.md
+│       │   │   │           ├── UL508A_2022__transformers_and_power_supplies.md
+│       │   │   │           ├── UL508A_2022__wiring_methods_and_conductors.md
+│       │   │   │           ├── UL508A_OVERVIEW.md
+│       │   │   │           └── _index.yaml
+│       │   │   └── troubleshooting_engine/
+│       │   │       └── decision_trees.yaml
+│       │   ├── templates/
+│       │   │   ├── README.md
+│       │   │   └── md_headers/
+│       │   │       ├── draft_only_header.md
+│       │   │       └── rag_approved_header.md
+│       │   ├── tools/
+│       │   │   ├── audit_tool/
+│       │   │   │   └── README.md
+│       │   │   ├── business_metrics_profit_engine/
+│       │   │   │   └── README.md
+│       │   │   ├── design_package_generator/
+│       │   │   │   └── README.md
+│       │   │   ├── ip_library_licensing/
+│       │   │   │   └── README.md
+│       │   │   ├── knowledge_platform/
+│       │   │   │   └── README.md
+│       │   │   ├── retainer_support_engine/
+│       │   │   │   └── README.md
+│       │   │   └── ul508a_panel_automation/
+│       │   │       └── README.md
+│       │   └── work/
+│       │       ├── README.md
+│       │       ├── design/
+│       │       │   ├── README.md
+│       │       │   ├── mermaid_diagrams_to_reference.md
+│       │       │   ├── mini_machine_safety_design_v2_project_status.md
+│       │       │   ├── standards_atlas_homepage_wireframe_and_templates.md
+│       │       │   ├── standards_web_page_design_prompt_v1.md
+│       │       │   ├── standards_web_page_design_prompt_v3.md
+│       │       │   ├── standards_web_page_design_prompt_v4.1.md
+│       │       │   └── standards_web_page_design_prompt_v4.md
+│       │       └── general/
+│       │           ├── 00_inbox_notes.md
+│       │           └── README.md
+│       ├── data/
+│       │   └── README.md
+│       ├── docs/
+│       │   ├── .bundle/
+│       │   │   └── config
+│       │   ├── Gemfile
+│       │   ├── Gemfile.lock
+│       │   ├── _config.yml
+│       │   ├── _includes/
+│       │   │   ├── context-panel.html
+│       │   │   ├── sidebar.html
+│       │   │   ├── topnav.html
+│       │   │   └── trust-boundary.html
+│       │   ├── _layouts/
+│       │   │   └── default.html
+│       │   ├── about/
+│       │   │   └── index.md
+│       │   ├── assets/
+│       │   │   ├── css/
+│       │   │   │   └── main.css
+│       │   │   ├── img/
+│       │   │   │   └── favicon.svg
+│       │   │   └── js/
+│       │   │       └── main.js
+│       │   ├── crosswalks/
+│       │   │   ├── index.md
+│       │   │   ├── nfpa79-iec60204/
+│       │   │   │   └── index.md
+│       │   │   ├── standards-decision-workflow/
+│       │   │   │   └── index.md
+│       │   │   └── ul508a-nec-nfpa79/
+│       │   │       └── index.md
+│       │   ├── index.md
+│       │   ├── industries/
+│       │   │   ├── commercial/
+│       │   │   │   └── index.md
+│       │   │   ├── energy/
+│       │   │   │   └── index.md
+│       │   │   ├── food-and-beverage/
+│       │   │   │   └── index.md
+│       │   │   ├── index.md
+│       │   │   ├── marine/
+│       │   │   │   └── index.md
+│       │   │   ├── medical/
+│       │   │   │   └── index.md
+│       │   │   ├── nuclear/
+│       │   │   │   └── index.md
+│       │   │   ├── offshore/
+│       │   │   │   └── index.md
+│       │   │   ├── petroleum/
+│       │   │   │   └── index.md
+│       │   │   └── semiconductor/
+│       │   │       └── index.md
+│       │   ├── lifecycle/
+│       │   │   ├── commissioning/
+│       │   │   │   └── index.md
+│       │   │   ├── concept/
+│       │   │   │   └── index.md
+│       │   │   ├── detailed-design/
+│       │   │   │   └── index.md
+│       │   │   ├── draft-documentation/
+│       │   │   │   └── index.md
+│       │   │   ├── index.md
+│       │   │   ├── installation/
+│       │   │   │   └── index.md
+│       │   │   ├── maintenance/
+│       │   │   │   └── index.md
+│       │   │   ├── pre-commissioning/
+│       │   │   │   └── index.md
+│       │   │   ├── risk-assessment/
+│       │   │   │   └── index.md
+│       │   │   ├── safety-architecture/
+│       │   │   │   └── index.md
+│       │   │   └── standards-selection/
+│       │   │       └── index.md
+│       │   ├── plans/
+│       │   │   ├── 2026-03-05-phase2-design.md
+│       │   │   └── 2026-03-05-phase2-implementation.md
+│       │   ├── scenarios/
+│       │   │   ├── global-machine/
+│       │   │   │   └── index.md
+│       │   │   ├── index.md
+│       │   │   ├── networked-safety-plc/
+│       │   │   │   └── index.md
+│       │   │   ├── process-skid/
+│       │   │   │   └── index.md
+│       │   │   ├── semiconductor-equipment/
+│       │   │   │   └── index.md
+│       │   │   └── us-industrial-control-panel/
+│       │   │       └── index.md
+│       │   ├── software-stack/
+│       │   │   └── index.md
+│       │   └── standards/
+│       │       ├── functional-safety/
+│       │       │   ├── iec-61508/
+│       │       │   │   └── index.md
+│       │       │   ├── iec-61511/
+│       │       │   │   └── index.md
+│       │       │   ├── iec-62061/
+│       │       │   │   └── index.md
+│       │       │   ├── index.md
+│       │       │   ├── iso-12100/
+│       │       │   │   └── index.md
+│       │       │   └── iso-13849-1/
+│       │       │       └── index.md
+│       │       ├── index.md
+│       │       ├── machinery/
+│       │       │   ├── iec-60204-1/
+│       │       │   │   └── index.md
+│       │       │   └── index.md
+│       │       └── us-electrical/
+│       │           ├── index.md
+│       │           ├── nec/
+│       │           │   └── index.md
+│       │           ├── nfpa-79/
+│       │           │   └── index.md
+│       │           └── ul-508a/
+│       │               └── index.md
+│       ├── lifecycle-build-page.png
+│       ├── main.py
+│       ├── planning/
+│       │   ├── 2026-03-05_12-08-09_project-folder-organization-plan.md
+│       │   ├── 2026-03-05_12-22-49_reorg-execution-report.md
+│       │   ├── backups/
+│       │   │   └── pre_move_snapshot_2026-03-05_12-08-09.tgz
+│       │   └── manifests/
+│       │       ├── post_move_checksums.txt
+│       │       ├── post_move_git_status.txt
+│       │       ├── post_move_manifest.txt
+│       │       ├── pre_move_checksums.txt
+│       │       ├── pre_move_git_status.txt
+│       │       └── pre_move_manifest.txt
+│       ├── project_state/
+│       │   ├── change_log.md
+│       │   ├── environment.md
+│       │   ├── how_to.md
+│       │   └── project_state.md
+│       ├── pyproject.toml
+│       ├── rag -> control-standards/rag
+│       ├── tools/
+│       │   ├── README.md
+│       │   ├── fix_ai_boundaries.py
+│       │   ├── generate_rag_index.py
+│       │   ├── generate_standards_overview.py
+│       │   ├── project_automator.py
+│       │   ├── setup_hooks.sh
+│       │   ├── validate_ai_boundaries.py
+│       │   └── validate_reorg.sh
+│       └── uv.lock
 ├── AGENTS.md
 ├── CLAUDE.md
 ├── PROJECT_STARTUP_CONTEXT.md

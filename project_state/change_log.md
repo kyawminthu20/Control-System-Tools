@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-03-06
+**Last Updated:** 2026-03-05
 **Status:** Active
 
 ## Purpose
@@ -65,6 +65,17 @@ Keep entries concise and oriented to what future work needs to know.
   - `change_log.md` for project-level change tracking
 - Updated root documentation so the project state is discoverable from the repository root.
 - Set the current delivery target to Phase 1 GitHub Pages deployment for personal use.
+
+### 2026-03-05 — Phase 2 Planning Docs Added
+
+**Type:** Planning / Documentation
+**Status:** Active
+
+- Added Phase 2 design doc: `docs/plans/2026-03-05-phase2-design.md`
+- Added Phase 2 implementation plan: `docs/plans/2026-03-05-phase2-implementation.md`
+- Features planned: print stylesheet, diagram lightbox, lunr.js inline search, crosswalk comparison selector
+- Architecture: all additive changes to existing files; vanilla JS + CSS only; no build step; CDN-only deps
+- Implementation structured as 2 releases (Release 1: print + lightbox; Release 2: search + comparison)
 
 ### 2026-03-05: Repository Reorganization Executed
 

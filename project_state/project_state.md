@@ -1,8 +1,8 @@
 # Project State
 
-**Last Updated:** 2026-03-06
+**Last Updated:** 2026-03-05
 **Status:** Active
-**Current Phase:** Phase 1 — Jekyll site built, pending GitHub Pages deployment
+**Current Phase:** Phase 1 deployment pending (push + Pages enable) — Phase 2 implementation plan ready
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -11,7 +11,7 @@ This file is the source of truth for the current project state, active implement
 
 ## Current Direction
 
-Phase 1 Jekyll static site is implemented under `docs/`. GitHub Actions workflow is in place at `.github/workflows/pages.yml`. Final step: enable GitHub Pages in repo settings (Source: GitHub Actions).
+Phase 1 Jekyll static site is complete and committed. Phase 2 design doc and implementation plan are written (`docs/plans/`). Next: execute Phase 2 implementation plan (print stylesheet, diagram lightbox, lunr.js search, crosswalk comparison page), then push all commits and enable GitHub Pages.
 
 The site is a presentation and navigation layer on top of `control-standards/rag/`. Authoritative engineering and standards guidance stays in `control-standards/rag/`. The website never modifies RAG content.
 
@@ -50,20 +50,31 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 - [x] About / trust boundary page
 - [x] GitHub Actions pages.yml workflow
 
-## Remaining Steps to Ship
+## Phase 1 — SHIPPED (pending push + Pages enable)
 
-1. Commit all changes: `git add docs/ .github/ .gitignore`
-2. Push to GitHub: `git push`
-3. Enable GitHub Pages in repo settings: Settings → Pages → Source: GitHub Actions
-4. Verify deployment runs and site is accessible at `https://kyawminthu.github.io/Control-System-Tools/`
+All Phase 1 code is committed. Branch is 2 commits ahead of origin.
 
-## Phase 2 Backlog (after Phase 1 ships)
+1. Push: `git push`
+2. Enable GitHub Pages: Settings → Pages → Source: GitHub Actions
+3. Verify: `https://kyawminthu.github.io/Control-System-Tools/`
 
-- Client-side search (lunr.js)
-- Diagram lightbox/zoom
-- Comparison mode for crosswalks
-- Standards detail pages (functional-safety pages when corpus is complete)
+## Phase 2 Scope — Implementation Plan Ready
+
+Plan: `docs/plans/2026-03-05-phase2-implementation.md`
+Design: `docs/plans/2026-03-05-phase2-design.md`
+
+- [ ] Task 1: Print stylesheet (`main.css` — `@media print`)
+- [ ] Task 2: Diagram lightbox (`main.css` + `main.js`)
+- [ ] Task 3: lunr.js CDN + `search.json` data file
+- [ ] Task 4: Topnav search input + inline dropdown
+- [ ] Task 5: Crosswalk comparison selector page (`/crosswalks/compare/`)
+- [ ] Task 6: Push, verify deployment, update project state
+
+## Phase 3 Backlog (after Phase 2 ships)
+
 - Interactive standards graph
+- Remaining functional-safety detail pages (when corpus is confirmed complete)
+- SEMI S2/S8/S14 standard pages (not yet in corpus)
 
 ## Content Gaps (documented with badges on site)
 

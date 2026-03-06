@@ -28,27 +28,9 @@ uv sync
 
 If `uv` is not available, use the local Python environment directly for the current project state.
 
-## Run The Jekyll Site Locally
+## Run The Current Project
 
-Requires Ruby 2.6+ and Bundler 2.4.22 (user-installed).
-
-```bash
-cd docs
-~/.gem/ruby/2.6.0/bin/bundle exec jekyll serve
-# Opens at http://localhost:4000/Control-System-Tools/
-```
-
-Or build without serving:
-
-```bash
-cd docs
-~/.gem/ruby/2.6.0/bin/bundle exec jekyll build
-# Output: docs/_site/
-```
-
-## Run The Placeholder Python App
-
-Current app entry point (placeholder, not the site):
+Current app entry point:
 
 ```bash
 python3 main.py
@@ -59,6 +41,10 @@ Or with `uv`:
 ```bash
 uv run python main.py
 ```
+
+Current expected behavior:
+
+- prints a placeholder message
 
 ## Refresh Project Automation
 
@@ -99,15 +85,38 @@ After meaningful code, documentation, architecture, workflow, or deployment chan
 
 The pre-commit hook stages `project_state/change_log.md`, but it does not replace manual project-log updates.
 
-## Phase 1 GitHub Pages Workflow
+## Jekyll Site (GitHub Pages)
 
-Current status:
+The site lives under `docs/`. Jekyll is installed in `docs/vendor/bundle/` using Ruby 2.6 / Bundler 2.4.22.
 
-- not implemented yet
+### Build
 
-When the static website exists, this section should document:
+```bash
+cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build
+```
 
-- how to build the site
-- where the static output is generated
-- how the site is published to GitHub Pages
-- how to preview the site locally
+Output: `docs/_site/`
+
+### Serve locally
+
+```bash
+cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll serve
+```
+
+Preview at `http://localhost:4000/Control-System-Tools/`
+
+### Deploy to GitHub Pages
+
+```bash
+git push
+```
+
+Then in repo Settings → Pages → Source: **GitHub Actions** (workflow at `.github/workflows/pages.yml`).
+
+Live URL: `https://kyawminthu.github.io/Control-System-Tools/`
+
+### Notes
+
+- CI uses Ruby 3.2 via `ruby/setup-ruby@v1`
+- `baseurl: "/Control-System-Tools"` is set in `docs/_config.yml`
+- `docs/_site/`, `docs/vendor/`, `docs/.jekyll-cache/` are gitignored
