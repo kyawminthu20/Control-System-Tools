@@ -705,9 +705,51 @@ tr:nth-child(even) td {
   top: 0;
 }
 
-/* --- Print ----------------------------------------------------------------- */
+/* ==========================================================================
+   Print stylesheet
+   ========================================================================== */
 @media print {
-  .topnav, .sidebar, .context-panel { display: none; }
-  .site-body { display: block; margin-top: 0; }
-  .main-content { padding: 0; max-width: 100%; }
+  .topnav,
+  .sidebar,
+  .context-panel,
+  .skip-link,
+  #sidebar-toggle,
+  .trust-boundary {
+    display: none !important;
+  }
+
+  .site-body {
+    display: block;
+  }
+
+  .main-content {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #555;
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+
+  pre {
+    page-break-inside: avoid;
+    white-space: pre-wrap;
+  }
 }
