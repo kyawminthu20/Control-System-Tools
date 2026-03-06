@@ -20,6 +20,7 @@ repo_path: "control-standards/rag/standards_intelligence/crosswalks/overlap_matr
 | [NFPA 79 ↔ IEC 60204-1]({{ '/crosswalks/nfpa79-iec60204/' | relative_url }}) | NFPA 79:2024, IEC 60204-1:2018 | Machine sold in US + EU markets |
 | [UL 508A / NEC / NFPA 79]({{ '/crosswalks/ul508a-nec-nfpa79/' | relative_url }}) | UL 508A:2022, NEC 2023, NFPA 79:2024 | US panel design with all three standards |
 | [Standards Decision Workflow]({{ '/crosswalks/standards-decision-workflow/' | relative_url }}) | All major standards | Selecting which standards apply to your project |
+| [Standards Comparison Tool]({{ '/crosswalks/compare/' | relative_url }}) | All 9 standards | Select any two standards to view their overlap matrix |
 
 ## When to Use Crosswalks
 
