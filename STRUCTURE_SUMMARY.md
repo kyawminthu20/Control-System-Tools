@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-06 21:00:30
+**Last Auto-Updated:** 2026-03-06 21:21:16
 
 ```text
 ├── .claude/
@@ -395,6 +395,11 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   │   ├── iec_61508/
 │   │   │   │   │   ├── iec_61511/
 │   │   │   │   │   ├── iec_62061/
+│   │   │   │   │   │   ├── IEC62061_2021__AnnexA__silcl_tables.md
+│   │   │   │   │   │   ├── IEC62061_2021__Clause04__scope_context.md
+│   │   │   │   │   │   ├── IEC62061_2021__Clause06__srecs_design.md
+│   │   │   │   │   │   ├── IEC62061_2021__Clause07__subsystem_design.md
+│   │   │   │   │   │   └── _index.yaml
 │   │   │   │   │   ├── iso_12100/
 │   │   │   │   │   │   ├── ISO12100_2010__AnnexA__hazard_list.md
 │   │   │   │   │   │   ├── ISO12100_2010__Clause04__risk_assessment_principles.md
@@ -403,7 +408,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   │   │   ├── ISO12100_2010__Clause07__risk_reduction.md
 │   │   │   │   │   │   └── _index.yaml
 │   │   │   │   │   └── iso_13849_1/
-│   │   │   │   │       └── file_structure.md
+│   │   │   │   │       ├── ISO13849_2023__AnnexA__risk_assessment.md
+│   │   │   │   │       ├── ISO13849_2023__AnnexF__ccf.md
+│   │   │   │   │       ├── ISO13849_2023__Clause04__design_strategy.md
+│   │   │   │   │       ├── ISO13849_2023__Clause05__srp_cs.md
+│   │   │   │   │       ├── ISO13849_2023__Clause06__categories.md
+│   │   │   │   │       ├── ISO13849_2023__Clause07__validation.md
+│   │   │   │   │       └── _index.yaml
 │   │   │   │   └── machinery/
 │   │   │   │       └── iec_60204_1/
 │   │   │   │           ├── GENERATION_SUMMARY.md
@@ -670,6 +681,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 0b/
 │   │               │   ├── 23e434b41214de015244201734a4457b8658eaf57d3ffa015a237ba741d88d
 │   │               │   └── 36fd9699ea3c594f2935d5b180504cca916d440e00a16fc4081cc59274562a
+│   │               ├── 0c/
+│   │               │   └── b884b6343a61259ab5eacf2fb4394a401d05919cfd0fc5fcdc94957f0dc271
 │   │               ├── 0d/
 │   │               │   └── 0b2dfd9fcde91ec81a829dbc690e60db0c9de83282525b18f277a4434ae4bf
 │   │               ├── 0f/
@@ -688,6 +701,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 28/
 │   │               │   └── dd4852dc932337b5b961300ebd0a735a9adf198f740984d8983e8c6aa279a9
 │   │               ├── 2a/
+│   │               │   ├── aa3f7d45023ddf87b1d0d05b61b38d7d58d66e3010aa79f6a2986399295f5d
 │   │               │   └── aafba3bfdbb57933a12300e21feab6c83cfb4e57334fb6f70b4d8ae1ba973a
 │   │               ├── 2b/
 │   │               │   └── 1df1b19b5a468913e187313dcf8e21bd90e54fcb0a75b86d6f7f87bf86f888
@@ -780,6 +794,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 592017cebc796956c4d9c01e38768d2600acd2991b25d011cbc86a8ac7c8c7
 │   │               ├── 84/
 │   │               │   └── b1e0eacbf30e2919561e86db5d4f15b41366cd6e1c421514cbf0241c0ead23
+│   │               ├── 85/
+│   │               │   └── fc8f1d8aaa1881f365e5e03e485dc3ce0f1f31decbe705adc3080b8940277f
 │   │               ├── 8f/
 │   │               │   └── c1213ea092e22c325fa5ad42f2e3bcae32d7f5f3cef57979a008f427e9d7d0
 │   │               ├── 92/
@@ -892,6 +908,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 4de0c2dfa4009076ed6ba8d42c9b22d122562a5d0f63fef83c1d37c980aa05
 │   │               ├── f2/
 │   │               │   └── 6474473b95c88cb3306339ea2de52245f119f46242683f7a76257ddd70a461
+│   │               ├── f8/
+│   │               │   └── af3b8919e60de352473986a794bb7f5130ea78933de5f04ae860178f2d24a1
 │   │               ├── f9/
 │   │               │   ├── 6beea3b5952d170ff7a0a3bf096ba1774e419484af218b83b8f106363f19cf
 │   │               │   └── e856f21719585ba00f827f2c44aca692005fd416150b4bd497ffd16d39cb88
