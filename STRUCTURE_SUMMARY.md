@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-06 21:33:15
+**Last Auto-Updated:** 2026-03-07 06:24:03
 
 ```text
 ├── .claude/
@@ -399,6 +399,11 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   │   │   ├── IEC61508_2010__Part3__software.md
 │   │   │   │   │   │   └── _index.yaml
 │   │   │   │   │   ├── iec_61511/
+│   │   │   │   │   │   ├── IEC61511_2016__Clause08__sil_determination.md
+│   │   │   │   │   │   ├── IEC61511_2016__Clause10__sis_design.md
+│   │   │   │   │   │   ├── IEC61511_2016__Clause16__operation_maintenance.md
+│   │   │   │   │   │   ├── IEC61511_2016__Part1__framework.md
+│   │   │   │   │   │   └── _index.yaml
 │   │   │   │   │   ├── iec_62061/
 │   │   │   │   │   │   ├── IEC62061_2021__AnnexA__silcl_tables.md
 │   │   │   │   │   │   ├── IEC62061_2021__Clause04__scope_context.md
@@ -812,6 +817,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 98/
 │   │               │   ├── 2ce3f1ee993bedb1f3922dc43eeee9246752ccc8902496627f5695ae8de45b
 │   │               │   └── b154ebeefb18f0d89106cabf20003ebc5ea1045b8c401c014b8a639e24d30b
+│   │               ├── 9b/
+│   │               │   └── c4024f9f30d4f17a7689e9224daa9922c1ae7cdb80c160b2f488a07dc4accd
 │   │               ├── 9c/
 │   │               │   └── ce64096a34a558a31ba7ff9d177d232c0206705337bde319aceb17a3670eb0
 │   │               ├── 9d/
@@ -881,6 +888,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 3a555dae8da5d95d957efec151bd184b427167c8ae1856c1a08016b9d57d24
 │   │               ├── d7/
 │   │               │   └── 92c6bf5ca0cb6a01484eb838c34af15433bcb0da692b9084a472d9c4b505d9
+│   │               ├── d8/
+│   │               │   └── 460058dd46e923c304cee7010502aba8c4093fd64832454cd7047c0adc7473
 │   │               ├── db/
 │   │               │   └── c25cc47c033af87e9e88e49fc3db2da361c878bc8cef3070720fa89ead405c
 │   │               ├── dc/

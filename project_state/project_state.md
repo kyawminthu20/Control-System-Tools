@@ -1,8 +1,8 @@
 # Project State
 
-**Last Updated:** 2026-03-06
+**Last Updated:** 2026-03-07
 **Status:** Active
-**Current Phase:** Phase 3 in progress — ISO 13849-1 RAG corpus complete; IEC 62061 next
+**Current Phase:** Phase 3 COMPLETE — all four functional safety RAG corpora done (ISO 13849-1, IEC 62061, IEC 61508, IEC 61511)
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -107,7 +107,9 @@ Two new site pages to surface practical machine safety knowledge from the design
 ## Content Gaps (documented with badges on site)
 
 - ISO 13849-1 — Phase 3 corpus complete (6 RAG files)
-- IEC 62061, IEC 61508, IEC 61511 — PLANNED in corpus, not confirmed complete [TO VERIFY]
+- IEC 62061 — Phase 3 corpus complete (4 RAG files + index)
+- IEC 61508 — Phase 3 corpus complete (4 RAG files + index)
+- IEC 61511 — Phase 3 corpus complete (4 RAG files + index)
 - SEMI S2/S8/S14 — NOT IN CORPUS
 - IEC 60079 (hazardous area) — not confirmed in corpus
 - IEC 62443 detail pages — routing reference only
