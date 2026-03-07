@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-06 20:27:08
+**Last Auto-Updated:** 2026-03-06 20:51:10
 
 ```text
 ├── .claude/
@@ -396,6 +396,12 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   │   ├── iec_61511/
 │   │   │   │   │   ├── iec_62061/
 │   │   │   │   │   ├── iso_12100/
+│   │   │   │   │   │   ├── ISO12100_2010__AnnexA__hazard_list.md
+│   │   │   │   │   │   ├── ISO12100_2010__Clause04__risk_assessment_principles.md
+│   │   │   │   │   │   ├── ISO12100_2010__Clause05__risk_estimation.md
+│   │   │   │   │   │   ├── ISO12100_2010__Clause06__risk_evaluation.md
+│   │   │   │   │   │   ├── ISO12100_2010__Clause07__risk_reduction.md
+│   │   │   │   │   │   └── _index.yaml
 │   │   │   │   │   └── iso_13849_1/
 │   │   │   │   │       └── file_structure.md
 │   │   │   │   └── machinery/
@@ -619,6 +625,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       │   ├── mermaid_diagrams_to_reference.md
 │       │   ├── mini_machine_safety_design_v2_project_status.md
 │       │   ├── scratch_notes/
+│       │   ├── simple_safety_system_design.md
 │       │   ├── standards_atlas_homepage_wireframe_and_templates.md
 │       │   ├── standards_web_page_design_prompt_v1.md
 │       │   ├── standards_web_page_design_prompt_v3.md
@@ -812,6 +819,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── a98b8058482a0b71c9b67d339eb45b3b0e746af96a11cdbfab810c099a84b1
 │   │               ├── af/
 │   │               │   └── 9bc10db82a427568dca37ac69bd91aa0aeea461a1c2b411c9b895ca2e54aeb
+│   │               ├── b1/
+│   │               │   └── 6f24b19847d0a130a6132bfe2913fd5ab055cb5d0e8961a1da2ceb2273b42e
 │   │               ├── b2/
 │   │               │   └── e5bca22395754bc7201e96b2b02289851cce6945b939836f8b35506f65dc1e
 │   │               ├── b3/
@@ -970,7 +979,9 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │       └── index.html
 │   │   ├── plans/
 │   │   │   ├── 2026-03-05-phase2-design.md
-│   │   │   └── 2026-03-05-phase2-implementation.md
+│   │   │   ├── 2026-03-05-phase2-implementation.md
+│   │   │   ├── 2026-03-06-phase3-functional-safety-design.md
+│   │   │   └── 2026-03-06-phase3-implementation.md
 │   │   ├── scenarios/
 │   │   │   ├── global-machine/
 │   │   │   │   └── index.html

@@ -1,0 +1,21 @@
+standard_id: ISO_12100
+edition: 2010
+publisher: ISO
+corpus_status: phase3_complete
+scope: Risk assessment and risk reduction for machinery — the foundation Type A standard
+files:
+  - filename: ISO12100_2010__Clause04__risk_assessment_principles.md
+    clause: "4"
+    topic: Risk assessment principles and methodology
+  - filename: ISO12100_2010__Clause05__risk_estimation.md
+    clause: "5"
+    topic: Risk estimation — severity, probability, avoidance
+  - filename: ISO12100_2010__Clause06__risk_evaluation.md
+    clause: "6"
+    topic: Risk evaluation — acceptability decision
+  - filename: ISO12100_2010__Clause07__risk_reduction.md
+    clause: "7"
+    topic: Risk reduction — three-step method
+  - filename: ISO12100_2010__AnnexA__hazard_list.md
+    clause: "Annex A"
+    topic: Normative hazard list and examples
