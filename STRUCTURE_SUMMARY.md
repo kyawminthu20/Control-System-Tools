@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-06 21:24:50
+**Last Auto-Updated:** 2026-03-06 21:33:15
 
 ```text
 ├── .claude/
@@ -393,6 +393,11 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── international/
 │   │   │   │   ├── functional_safety/
 │   │   │   │   │   ├── iec_61508/
+│   │   │   │   │   │   ├── IEC61508_2010__Clause07__safety_lifecycle.md
+│   │   │   │   │   │   ├── IEC61508_2010__Part1__framework.md
+│   │   │   │   │   │   ├── IEC61508_2010__Part2__hardware.md
+│   │   │   │   │   │   ├── IEC61508_2010__Part3__software.md
+│   │   │   │   │   │   └── _index.yaml
 │   │   │   │   │   ├── iec_61511/
 │   │   │   │   │   ├── iec_62061/
 │   │   │   │   │   │   ├── IEC62061_2021__AnnexA__silcl_tables.md
@@ -805,7 +810,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 95/
 │   │               │   └── f626e0e9943cc078b905ce2ba6c08a14cd8b3031c9e12f8aa3f8e8d74ea015
 │   │               ├── 98/
-│   │               │   └── 2ce3f1ee993bedb1f3922dc43eeee9246752ccc8902496627f5695ae8de45b
+│   │               │   ├── 2ce3f1ee993bedb1f3922dc43eeee9246752ccc8902496627f5695ae8de45b
+│   │               │   └── b154ebeefb18f0d89106cabf20003ebc5ea1045b8c401c014b8a639e24d30b
 │   │               ├── 9c/
 │   │               │   └── ce64096a34a558a31ba7ff9d177d232c0206705337bde319aceb17a3670eb0
 │   │               ├── 9d/

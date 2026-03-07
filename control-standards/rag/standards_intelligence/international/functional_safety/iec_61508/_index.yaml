@@ -1,0 +1,18 @@
+standard_id: IEC_61508
+edition: 2010
+publisher: IEC
+corpus_status: phase3_complete
+scope: Functional safety of E/E/PE safety-related systems — the parent standard for IEC 62061 and IEC 61511
+files:
+  - filename: IEC61508_2010__Part1__framework.md
+    clause: "Part 1"
+    topic: General requirements — safety lifecycle, SIL, risk-based approach
+  - filename: IEC61508_2010__Part2__hardware.md
+    clause: "Part 2"
+    topic: Hardware requirements — HFT, SFF, PFDAVG
+  - filename: IEC61508_2010__Part3__software.md
+    clause: "Part 3"
+    topic: Software requirements — SIL-appropriate development practices
+  - filename: IEC61508_2010__Clause07__safety_lifecycle.md
+    clause: "7"
+    topic: Overall safety lifecycle — 16 phases
