@@ -1,0 +1,24 @@
+standard_id: ISO_13849_1
+edition: 2023
+publisher: ISO
+corpus_status: phase3_complete
+scope: Safety-related parts of control systems — Performance Level (PL) determination and verification
+files:
+  - filename: ISO13849_2023__Clause04__design_strategy.md
+    clause: "4"
+    topic: Design strategy and safety function specification
+  - filename: ISO13849_2023__Clause05__srp_cs.md
+    clause: "5"
+    topic: SRP/CS requirements — MTTFd, DC, CCF
+  - filename: ISO13849_2023__Clause06__categories.md
+    clause: "6"
+    topic: Categories B, 1, 2, 3, 4 — architecture requirements
+  - filename: ISO13849_2023__Clause07__validation.md
+    clause: "7"
+    topic: Validation of PL
+  - filename: ISO13849_2023__AnnexA__risk_assessment.md
+    clause: "Annex A"
+    topic: PLr determination — S/F/P risk parameters graph
+  - filename: ISO13849_2023__AnnexF__ccf.md
+    clause: "Annex F"
+    topic: Common Cause Failure scoring

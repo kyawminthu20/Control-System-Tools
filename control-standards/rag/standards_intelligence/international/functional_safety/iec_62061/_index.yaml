@@ -1,0 +1,18 @@
+standard_id: IEC_62061
+edition: 2021
+publisher: IEC
+corpus_status: phase3_complete
+scope: Functional safety of safety-related electrical control systems on machinery — SIL determination and SRECS design
+files:
+  - filename: IEC62061_2021__Clause04__scope_context.md
+    clause: "4"
+    topic: Scope, context, and relationship to IEC 61508
+  - filename: IEC62061_2021__Clause06__srecs_design.md
+    clause: "6"
+    topic: SRECS design — SIL determination and allocation
+  - filename: IEC62061_2021__Clause07__subsystem_design.md
+    clause: "7"
+    topic: Subsystem design — PFHd calculation
+  - filename: IEC62061_2021__AnnexA__silcl_tables.md
+    clause: "Annex A"
+    topic: SILCL and SIL capability tables
