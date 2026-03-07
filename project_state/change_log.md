@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-03-05
+**Last Updated:** 2026-03-06
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,36 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+### 2026-03-06 — Phase 4 Queue Defined: Practical Safety Guides
+
+**Summary:** Identified two new site pages to implement after Phase 3 completes, sourced from `control-standards/work/design/simple_safety_system_design.md`.
+
+**What changed:**
+- Added Phase 4 queue to `project_state/project_state.md`
+- New untracked design file: `control-standards/work/design/simple_safety_system_design.md`
+
+**Planned pages:**
+- `docs/scenarios/machine-safety-implementation/index.md` — Practical Machine Safety Implementation (Scenario 05)
+- `docs/lifecycle/safety-wiring/index.md` — Safety Wiring Practices lifecycle stage
+
+**No RAG changes required** — source doc already in `control-standards/work/design/`.
+
+---
+
+### 2026-03-06 — Phase 3 Group 2: IEC 62061 RAG Corpus and Site Page Complete
+
+**Summary:** Full IEC 62061 RAG corpus created; site page rewritten with Phase 3 Complete badge and detailed content. DC vs SFF distinction clarified post-review.
+
+**What changed:**
+- Created `control-standards/rag/standards_intelligence/international/functional_safety/iec_62061/` corpus (Clause 06, 07, 08, Annex B, plus index)
+- IEC 62061 Clause 07 fix: corrected DC labels and clarified DC vs SFF distinction
+- Deepened `docs/standards/functional-safety/iec-62061/index.md` — badge updated to Phase 3 Complete
+- ISO 13849-1 site page: removed Annex B stub reference, corrected RAG status, clarified PLr table
+
+**Phase 3 status after this group:** ISO 13849-1 complete, IEC 62061 complete. IEC 61508 and IEC 61511 remain.
+
+---
 
 ### 2026-03-06 — Phase 3: ISO 13849-1 RAG Corpus and Site Page Complete
 
