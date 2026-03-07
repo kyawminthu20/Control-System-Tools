@@ -114,7 +114,6 @@ The three-step method is mandatory in the order shown. A lower-priority step can
 | 5.6 | Possibility of avoiding or limiting harm | P1/P2 classification |
 | 6 | Risk evaluation | Acceptability decision; state-of-the-art benchmark |
 | Annex A | Normative hazard list | Checklist of 8 hazard categories with sub-categories |
-| Annex B | Risk reduction strategy examples | Illustrative worked examples for common machine hazards |
 
 ---
 

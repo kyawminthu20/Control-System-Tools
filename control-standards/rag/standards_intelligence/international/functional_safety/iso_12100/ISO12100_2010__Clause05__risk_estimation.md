@@ -1,7 +1,7 @@
 <!--
 CONTENT_CLASS: RAG_APPROVED
 AI_READ_ACCESS: ALLOWED
-STATUS: DRAFT
+STATUS: COMPLETE
 
 STANDARD_FAMILY: ISO
 STANDARD_ID: ISO_12100
@@ -93,8 +93,8 @@ The S/F/P parameters from ISO 12100 Clause 5 feed directly into ISO 13849-1 Anne
 
 The six possible combinations of S, F, P yield PLr values from PLr a through PLr e:
 
-| S | F | P | Typical PLr |
-|---|---|---|------------|
+| S | F | P | PLr (Annex A graph) |
+|---|---|---|---------------------|
 | S1 | F1 | P1 | a |
 | S1 | F1 | P2 | b |
 | S1 | F2 | P1 | b |
@@ -105,5 +105,7 @@ The six possible combinations of S, F, P yield PLr values from PLr a through PLr
 | S2 | F2 | P2 | e |
 
 Note: PLr e is the highest requirement; PLr a is the lowest. The ISO 13849-1 Annex A graph is normative — where the risk graph is used, its output is mandatory, not advisory.
+
+> **Clarification:** The PLr values in this table represent the typical outputs of the ISO 13849-1:2023 Annex A risk graph for the corresponding S/F/P parameter combinations. The normative source is the Annex A graph itself, not this table. Boundary cases and intermediate combinations must be resolved by reference to the graph directly.
 
 IEC 62061 uses a parallel but numerically different scheme: severity (Se), frequency of exposure (Fr), and probability of avoidance (Av) combine into a Cl (class) value that maps to a SIL target. The underlying risk estimation concepts are the same; only the parameterisation and arithmetic differ.
