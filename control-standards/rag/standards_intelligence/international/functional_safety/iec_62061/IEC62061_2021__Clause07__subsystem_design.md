@@ -93,9 +93,9 @@ where:
 
 **Effect of diagnostic coverage:** Higher DC reduces lambda_DU and therefore PFHd. For a 1oo1 subsystem, DC is the only lever available to improve PFHd — there is no redundancy. DC values are bounded:
 - DC = 0: no diagnostics, lambda_DU = lambda_D
-- DC = 60%: medium diagnostics, lambda_DU = 0.4 x lambda_D
-- DC = 90%: good diagnostics, lambda_DU = 0.1 x lambda_D
-- DC = 99%: excellent diagnostics, lambda_DU = 0.01 x lambda_D
+- DC = 60%: low diagnostics, lambda_DU = 0.4 x lambda_D
+- DC = 90%: medium diagnostics, lambda_DU = 0.1 x lambda_D
+- DC = 99%: high diagnostics, lambda_DU = 0.01 x lambda_D
 
 Even with DC = 99%, the 1oo1 architecture has an architectural SILCL limit imposed by its HFT = 0 — see Annex A.
 
@@ -166,6 +166,13 @@ where:
 
 **How DC is set:** DC is not a property of the component alone — it is a property of the diagnostic measures implemented around the component in the subsystem design. A safety PLC performing cross-channel comparison on two sensor channels achieves high DC. A single sensor with no monitoring achieves DC = 0. The designer selects diagnostic measures to achieve the required DC level.
 
-**DC and SILCL interaction:** Higher DC enables higher achievable SIL for the same architecture type. For a 1oo1 subsystem (HFT = 0), moving from no diagnostics (DC = 0) to high diagnostics (DC = 99%) increases the SILCL from "not allowed" to SIL 3 for Type B subsystems — see Annex A for the full table. DC is therefore both a quantitative parameter (reducing lambda_DU in the PFHd formula) and an architectural qualifier (enabling higher SILCL).
+**DC and SILCL interaction:** Higher DC enables higher achievable SIL for the same architecture type, but the SILCL table in Annex A uses the Safe Failure Fraction (SFF), not DC directly. SFF and DC are related but distinct metrics:
+
+- DC = lambda_DD / lambda_D (fraction of dangerous failures that are detected)
+- SFF = (lambda_S + lambda_DD) / (lambda_S + lambda_D) (fraction of all failures — safe and dangerous detected — that do not lead to a dangerous undetected state)
+
+DC contributes strongly to SFF, but SFF also depends on the safe failure rate (lambda_S). A device with a significant proportion of safe failures will have a higher SFF than DC alone implies. For this reason, two devices can have the same DC yet different SFFs.
+
+For a 1oo1 (HFT = 0) Type B subsystem, the SILCL table in Annex A requires SFF ≥ 99% to achieve SILCL SIL 3. Reaching SFF ≥ 99% typically requires both high DC (so that lambda_DD is a large fraction of lambda_D) and a device design with non-trivial safe failures. High DC is the primary lever the designer controls at subsystem level, but the SFF claim must account for the full failure mode distribution. DC is therefore both a quantitative parameter (reducing lambda_DU in the PFHd formula) and a contributor to SFF, which is the architectural qualifier for SILCL.
 
 **Systematic vs. random hardware failures:** DC addresses random hardware failures. It does not address systematic failures (failures caused by design errors, software bugs, or incorrect specification). Systematic integrity is handled by the development process requirements in IEC 62061 Clause 5 and the software requirements referenced from IEC 61508-3.
