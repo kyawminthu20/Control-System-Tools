@@ -1,0 +1,18 @@
+standard_id: IEC_61511
+edition: 2016
+publisher: IEC
+corpus_status: phase3_complete
+scope: Functional safety — safety instrumented systems for the process industry; process-domain application of IEC 61508
+files:
+  - filename: IEC61511_2016__Part1__framework.md
+    clause: "Part 1"
+    topic: Framework — SIS/SIF concepts, lifecycle overview, relationship to IEC 61508
+  - filename: IEC61511_2016__Clause08__sil_determination.md
+    clause: "8"
+    topic: Hazard and risk assessment — LOPA, risk graph, SIL determination
+  - filename: IEC61511_2016__Clause10__sis_design.md
+    clause: "10"
+    topic: SIS design — hardware, redundancy, PFDavg calculation, architectural constraints
+  - filename: IEC61511_2016__Clause16__operation_maintenance.md
+    clause: "16"
+    topic: Operation, maintenance, and modification — proof testing, change control
