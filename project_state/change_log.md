@@ -18,6 +18,17 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-08 — Phase 9 Complete: Interactive Standards Graph
+
+- Added `docs/_data/standards_graph.yml` — 12 nodes (6 families), 14 edges (4 types)
+- Added `docs/_includes/standards-graph.html` — Cytoscape.js 3.28.1, parameterized mini/full
+- Added `/standards/graph/` full page with zoom, pan, hover highlights, edge tooltips
+- Homepage Mermaid block replaced with mini Cytoscape graph (preset layout, click-navigable)
+- Edge types: requires (amber), pairs-with (blue), enforces (green), aligns-with (gray)
+- Planned nodes (IEC 60079, SEMI) shown as dashed/dimmed — auto-activate when corpus added
+
+---
+
 ### 2026-03-08 — Phase 8 Complete: NEC RAG Corpus Expanded to 19 Articles
 
 **Type:** RAG Corpus / Content
