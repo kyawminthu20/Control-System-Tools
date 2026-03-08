@@ -103,6 +103,12 @@ flowchart TD
 
 ## Step 1 — Identify Your Market
 
+**Key question:** What markets will this machine be sold or installed in?
+
+**Outputs:**
+- Required standard set
+- Whether CE marking applies
+
 | Market | Required Standards |
 |--------|-------------------|
 | **US only** | NEC + NFPA 79 + UL 508A (if listing required) |
@@ -113,6 +119,12 @@ flowchart TD
 ---
 
 ## Step 2 — Identify Machine / System Type
+
+**Key question:** What is the machine or system doing, and what is its risk context?
+
+**Outputs:**
+- Core applicable standards
+- Whether functional safety standards apply
 
 | System Type | Core Standards | Notes |
 |-------------|---------------|-------|
@@ -128,6 +140,12 @@ flowchart TD
 ---
 
 ## Step 3 — Identify Safety Requirements
+
+**Key question:** Does this system perform safety functions, and in what environment?
+
+**Outputs:**
+- Additional standards required
+- Safety integrity target (PL or SIL)
 
 | Safety Situation | Add This Standard |
 |------------------|------------------|
