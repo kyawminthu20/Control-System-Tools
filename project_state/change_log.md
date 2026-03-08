@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-03-06
+**Last Updated:** 2026-03-08
 **Status:** Active
 
 ## Purpose
@@ -214,3 +214,19 @@ Keep entries concise and oriented to what future work needs to know.
 
 - Older migration and generation details remain available elsewhere in the repository as historical context.
 - This file should stay focused on the active project and current implementation effort.
+
+### 2026-03-08: NEC Page — Compliance-Focused Update
+
+**Type:** Content / Standards
+**Status:** Complete
+
+- Added "Use This Page For" section clarifying NEC scope vs NFPA 79, UL 508A, ISO 13849-1
+- Added "What the NEC Does Not Cover" section (PL, SIL, safety arch, stop categories)
+- Expanded Key Articles table: added Article 300, 409.70 (surge protection), 670.6 (overvoltage protection)
+- Tightened Article 409 SCCR language — UL 508A SB is one approved method, not the only path
+- Softened Article 670 / NFPA 79 relationship language to be more accurate
+- Added adoption warning callout (AHJ edition verification)
+- Added "Typical Machine Builder Workflow" step sequence
+- Added "Machine Builder Compliance Checklist" (8-point pre-installation checklist)
+- Replaced ASCII relationship diagram with a proper standards table and summary blockquote
+- Build: 52 pages, clean

@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 00:56:12
+**Last Auto-Updated:** 2026-03-08 05:55:38
 
 ```text
 ├── .claude/
@@ -648,6 +648,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       ├── README.md
 │       ├── design/
 │       │   ├── README.md
+│       │   ├── decision_workflow.md
 │       │   ├── diagrams/
 │       │   ├── experiments/
 │       │   ├── mermaid_diagrams_to_reference.md
@@ -920,6 +921,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 3a555dae8da5d95d957efec151bd184b427167c8ae1856c1a08016b9d57d24
 │   │               ├── d5/
 │   │               │   └── bd3094d0ad18bb35e581c2994241c11383381cd4bd274ec339b250c609ea6c
+│   │               ├── d6/
+│   │               │   └── b7bb1d58f549ca44a0764e7fd94e3714f7cbb6049fb24202664de210aacfdd
 │   │               ├── d7/
 │   │               │   └── 92c6bf5ca0cb6a01484eb838c34af15433bcb0da692b9084a472d9c4b505d9
 │   │               ├── d8/
@@ -1053,6 +1056,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-05-phase2-implementation.md
 │   │   │   ├── 2026-03-06-phase3-functional-safety-design.md
 │   │   │   ├── 2026-03-06-phase3-implementation.md
+│   │   │   ├── 2026-03-08-decision-workflow-enhancements.md
 │   │   │   └── 2026-03-08-nec-page-update.md
 │   │   ├── scenarios/
 │   │   │   ├── global-machine/
@@ -1173,6 +1177,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── 2026-03-05-phase2-implementation.md
 │   │   ├── 2026-03-06-phase3-functional-safety-design.md
 │   │   ├── 2026-03-06-phase3-implementation.md
+│   │   ├── 2026-03-08-decision-workflow-enhancements.md
 │   │   └── 2026-03-08-nec-page-update.md
 │   ├── scenarios/
 │   │   ├── global-machine/
