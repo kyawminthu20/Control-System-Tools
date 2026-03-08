@@ -2,6 +2,14 @@
 layout: default
 title: "Standards Decision Workflow"
 description: "Which standards apply to your project? Decision tree routing by machine type, market, and safety requirements."
+last_reviewed: "2026-03-08"
+standards_editions:
+  - "NEC 2023"
+  - "NFPA 79 2024"
+  - "UL 508A 2022"
+  - "IEC 60204-1 2018"
+  - "ISO 12100 2010"
+  - "ISO 13849-1 2023"
 breadcrumb:
   - name: "Crosswalks"
     url: "/crosswalks/"
