@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 14:31:56
+**Last Auto-Updated:** 2026-03-08 14:39:57
 
 ```text
 ├── .claude/
@@ -1203,11 +1203,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── 2026-03-05-phase2-implementation.md
 │   │   ├── 2026-03-06-phase3-functional-safety-design.md
 │   │   ├── 2026-03-06-phase3-implementation.md
+│   │   ├── 2026-03-08-corpus-gap-fill-design.md
 │   │   ├── 2026-03-08-decision-workflow-enhancements.md
 │   │   ├── 2026-03-08-glossary-design.md
 │   │   ├── 2026-03-08-glossary-implementation.md
 │   │   ├── 2026-03-08-nec-missing-articles.md
 │   │   ├── 2026-03-08-nec-page-update.md
+│   │   ├── 2026-03-08-standards-graph-design.md
 │   │   ├── 2026-03-08-theme-switching-design.md
 │   │   └── 2026-03-08-theme-switching-implementation.md
 │   ├── scenarios/
