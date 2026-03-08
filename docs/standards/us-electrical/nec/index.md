@@ -44,7 +44,7 @@ companion_standards:
 | **Publisher** | National Fire Protection Association (NFPA) |
 | **Jurisdiction** | United States (adopted by most states and local jurisdictions) |
 | **Scope** | All electrical installations in the US |
-| **Repository** | `rag/us/nec/` — 10 articles |
+| **Repository** | `rag/us/nec/` — 19 articles |
 | **Status in Corpus** | Complete |
 | **Legal status** | Adopted as law in most US jurisdictions; enforced by AHJ |
 
@@ -99,7 +99,38 @@ These are handled by ISO 12100, ISO 13849-1, IEC 62061, and related functional s
 | **440** | Air-conditioning equipment | HVAC-related motor control |
 | **670** | Industrial machinery | Installation requirements for machines; references NFPA 79 for machine electrical design |
 | **670.6** | Overvoltage protection | Overvoltage protection for industrial machinery supply circuits |
-| **725** | Class 1, 2, 3 remote-control circuits | Control and signaling circuit wiring methods |
+| **725** | Class 2 and 3 remote-control circuits | Low-energy control and signaling wiring (Class 1 moved to Art. 206 in 2026 NEC) |
+
+---
+
+## 2026 NEC — Key Changes for Control Engineers
+
+> **Adoption status:** The 2026 NEC was published in 2025. Most jurisdictions are still enforcing the 2020 or 2023 edition. Confirm the adopted edition with the local AHJ before applying these changes to a live project.
+
+The 2026 edition restructures how control and signaling circuits are classified — directly affecting control panel design:
+
+### Article 206 (New) — Non-Power-Limited Remote Control and Signaling Circuits
+
+**Article 206 is new in the 2026 NEC.** It covers line-voltage remote control, signaling, and power-limited circuits that do not originate from a Class 2 or Class 3 power source. In practical terms: line-voltage control wiring inside a panel that is not a branch circuit and is not powered by a Class 2/3 source now belongs in **Article 206**, not Article 725.
+
+This is significant for control panel designers:
+- Motor control circuits fed from a control transformer at 120 V AC → **Article 206**
+- PLC I/O wiring at 24 VDC from a Class 2 power supply → **Article 725**
+- Safety relay input circuits at 24 VDC from a dedicated safety power supply → confirm power supply classification
+
+### Article 725 (Changed) — Now Class 2 and Class 3 Only
+
+In the 2026 NEC, **Class 1 circuits are removed from Article 725**. Article 725 now exclusively covers Class 2 and Class 3 circuits — the low-energy, limited-power wiring used for sensors, communication, and instrumentation. Class 1 line-voltage control wiring moves to the new Article 206.
+
+If you currently cite Article 725 for line-voltage motor control circuits, that reference is incorrect under the 2026 NEC.
+
+### Article 120 (Relocated) — Load Calculations
+
+Load calculations for branch circuits, feeders, and services have moved from Article 220 to **Article 120**. The rules are the same; only the article number changed. If your design documents reference Article 220 for load calculations, they will still be correct under 2023 NEC but should be updated to Article 120 for 2026 compliance.
+
+### Article 130 (Relocated) — Energy Management Systems
+
+Energy management system requirements moved from Article 750 to **Article 130**. Relevant for installations with demand-response controls or building energy management integrated with industrial power distribution.
 
 ---
 

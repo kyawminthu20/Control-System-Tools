@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 14:08:00
+**Last Auto-Updated:** 2026-03-08 14:14:03
 
 ```text
 ├── .claude/
@@ -663,6 +663,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       │   ├── conductor_protection_and_ampacity_transcript_summary.md
 │       │   ├── decision_workflow.md
 │       │   ├── diagrams/
+│       │   ├── electrical exam prep.md
 │       │   ├── equipment_grounding_conductor_topics/
 │       │   │   ├── README.md
 │       │   │   ├── egc_cable_methods_ac_and_mc.md
@@ -934,8 +935,6 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 2747846fce151666135aebce8a8af85eb1eea8cdbde7f7e7ea77f795066b00
 │   │               ├── cc/
 │   │               │   └── cca6c3bfd574eb97bcbac50bcd9a577ae1f9ef049eee6ad1ca713bcf09be0a
-│   │               ├── cd/
-│   │               │   └── f51f3998da7290225d387d975fc7a97a9f27c103de38273c5e62b15d16190b
 │   │               ├── cf/
 │   │               │   └── 92a9502650587c6b587bf0bd2fbe8408688be12db457cf57d12d7fa7447406
 │   │               ├── d1/
@@ -973,6 +972,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── f867c0ee7664e62c7dbd27fba23467f1652c419dcce1c4ee57c7772dab4e48
 │   │               ├── f1/
 │   │               │   └── 4de0c2dfa4009076ed6ba8d42c9b22d122562a5d0f63fef83c1d37c980aa05
+│   │               ├── f2/
+│   │               │   └── 16d33f112023cdaa8f08ed311b046393960f669b4bd3667d5c1af12aedaad7
 │   │               ├── f6/
 │   │               │   └── 5cd8a0bbb88a838309164c51364f7a4aade6eb52086ca1c3c73c4de227ad93
 │   │               ├── f9/
@@ -1074,6 +1075,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-08-decision-workflow-enhancements.md
 │   │   │   ├── 2026-03-08-glossary-design.md
 │   │   │   ├── 2026-03-08-glossary-implementation.md
+│   │   │   ├── 2026-03-08-nec-missing-articles.md
 │   │   │   ├── 2026-03-08-nec-page-update.md
 │   │   │   ├── 2026-03-08-theme-switching-design.md
 │   │   │   └── 2026-03-08-theme-switching-implementation.md
