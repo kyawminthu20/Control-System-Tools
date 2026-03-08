@@ -2,7 +2,7 @@
 
 **Last Updated:** 2026-03-08
 **Status:** Active
-**Current Phase:** Phase 5 COMPLETE — IEC 62443 Cybersecurity corpus and site pages added
+**Current Phase:** Phase 8 COMPLETE — NEC RAG corpus expanded to 19 articles
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -137,39 +137,37 @@ requires zero user interaction while still allowing manual override.
 - [x] `docs/assets/js/main.js` — toggle handler with `localStorage` persistence
 - [x] Jekyll build clean
 
-## Phase 8 Scope — NEC RAG Gap-Fill — IN PROGRESS
+## Phase 8 Scope — NEC RAG Gap-Fill — COMPLETE
 
 **Plan:** `docs/plans/2026-03-08-nec-missing-articles.md`
-**Goal:** Add 8 missing NEC 2023 article files + update index/status files.
+**Goal:** Add 9 missing NEC 2023 article files + update index/status files.
 
-### Task 1 — Art 90 + Art 100 — COMPLETE (committed)
+### Task 1 — Art 90 + Art 100 — COMPLETE
 - [x] `NEC_2023__Art090__scope_and_purpose.md`
 - [x] `NEC_2023__Art100__definitions.md`
 
-### Task 2 — Art 500 + Art 504 — FILES CREATED, NOT COMMITTED
-- [x] `NEC_2023__Art500__hazardous_locations_general.md` — created, unstaged
-- [x] `NEC_2023__Art504__intrinsically_safe_systems.md` — created, unstaged
+### Task 2 — Art 500 + Art 504 — COMPLETE
+- [x] `NEC_2023__Art500__hazardous_locations_general.md`
+- [x] `NEC_2023__Art504__intrinsically_safe_systems.md`
 
-### Task 3 — Art 505 (Zone Classification) — OPEN
-- [ ] `NEC_2023__Art505__zone_0_1_2_classification.md`
+### Task 3 — Art 505 (Zone Classification) — COMPLETE
+- [x] `NEC_2023__Art505__zone_0_1_2_gas_vapors.md`
 
-### Task 4 — Art 215 + Art 230 (Feeders and Services) — OPEN
-- [ ] `NEC_2023__Art215__feeders.md`
-- [ ] `NEC_2023__Art230__services.md`
+### Task 4 — Art 215 + Art 230 (Feeders and Services) — COMPLETE
+- [x] `NEC_2023__Art215__feeders.md`
+- [x] `NEC_2023__Art230__services.md`
 
-### Task 5 — Art 700–702 (Emergency/Standby Systems) — OPEN
-- [ ] `NEC_2023__Art700__emergency_systems.md`
-- [ ] `NEC_2023__Art701__legally_required_standby.md`
-- [ ] `NEC_2023__Art702__optional_standby.md`
+### Task 5 — Art 700–702 (Emergency/Standby Systems) — COMPLETE
+- [x] `NEC_2023__Art700_702__emergency_standby_systems.md` (combined file)
 
-### Task 6 — Update _index.yaml + NEC_COMPLETION_STATUS + NEC_OVERVIEW — OPEN
-- [ ] Register all new articles in `_index.yaml`
-- [ ] Update `NEC_COMPLETION_STATUS.md`
-- [ ] Update `NEC_OVERVIEW.md`
+### Task 6 — Update _index.yaml + NEC_COMPLETION_STATUS + NEC_OVERVIEW — COMPLETE
+- [x] All 8 new articles registered in `_index.yaml` (19 total indexed)
+- [x] `NEC_COMPLETION_STATUS.md` updated to 19 articles
+- [x] `NEC_OVERVIEW.md` updated with new article sections
 
 ### Additional items (from Art250.4 session)
-- [x] `NEC_2023__Art250_4__purposes_of_grounding_and_bonding.md` — created, unstaged
-- [x] `_index.yaml` — NEC2023-Art250-4 entry added, `coverage_notes.complete` corrected
+- [x] `NEC_2023__Art250_4__purposes_of_grounding_and_bonding.md` — committed
+- [x] `_index.yaml` — NEC2023-Art250-4 entry added
 
 ## Phase 5 Backlog (after IEC 62443)
 
