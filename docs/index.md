@@ -143,29 +143,9 @@ description: "Navigate industrial automation standards families, lifecycle stage
 
 ## Standards Relationship Graph
 
-<span class="section-label">How standards reference and depend on each other — Diagram 3</span>
+<span class="section-label">How standards reference and depend on each other</span>
 
-<div class="mermaid-wrap">
-<pre class="mermaid">
-graph TD
-    ISO12100[ISO 12100] --> ISO13849[ISO 13849-1]
-    ISO12100 --> IEC62061[IEC 62061]
-    ISO13849 --> IEC60204[IEC 60204-1]
-    IEC62061 --> IEC61508[IEC 61508]
-    IEC61511[IEC 61511] --> IEC61508
-    NFPA79[NFPA 79] --> NEC[NEC]
-    UL508A[UL 508A] --> NEC
-    UL508A --> NFPA79
-    IEC60204 --> NFPA79
-    IEC62443[IEC 62443] --> IEC61508
-    IEC62443 --> IEC61511
-    IEC61131[IEC 61131-3] --> IEC62061
-    IEC61131 --> IEC61508
-    IEC60079[IEC 60079 Family] --> IEC61511
-</pre>
-</div>
-
-<p style="font-size:0.82rem;color:var(--color-text-muted);">Source: <code>rag/reference_models/standards_atlas_diagrams_reference.md</code></p>
+{% include standards-graph.html mode="mini" container_id="standards-graph-home" %}
 
 ---
 
