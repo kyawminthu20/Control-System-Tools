@@ -98,7 +98,7 @@ These are handled by ISO 12100, ISO 13849-1, IEC 62061, and related functional s
 | **430** | Motors, motor circuits, and controllers | Motor protection, overcurrent, disconnects |
 | **440** | Air-conditioning equipment | HVAC-related motor control |
 | **670** | Industrial machinery | Installation requirements for machines; references NFPA 79 for machine electrical design |
-| **670.6** | Overvoltage protection | Overvoltage protection for industrial machinery supply circuits (NEC 2023) |
+| **670.6** | Overvoltage protection | Overvoltage protection for industrial machinery supply circuits |
 | **725** | Class 1, 2, 3 remote-control circuits | Control and signaling circuit wiring methods |
 
 ---
@@ -135,7 +135,7 @@ In practice:
 - **NEC governs how electrical systems are installed in the facility**
 - **NFPA 79 governs machine electrical design**
 
-**On 670.6 — Overvoltage Protection (NEC 2023):** Industrial machinery supply circuits may require overvoltage protection per 670.6, particularly where safety system components are sensitive to supply voltage transients.
+**On 670.6 — Overvoltage Protection:** Industrial machinery supply circuits may require overvoltage protection per 670.6, particularly where safety system components are sensitive to supply voltage transients.
 
 ---
 
