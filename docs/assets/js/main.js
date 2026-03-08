@@ -34,10 +34,9 @@
   });
 })();
 
-// Diagram lightbox
+// Diagram lightbox with zoom + pan
 (function () {
   function initLightbox() {
-    // Build overlay DOM with safe element creation (no dynamic innerHTML)
     var overlay = document.createElement('div');
     overlay.className = 'lightbox-overlay';
     overlay.setAttribute('role', 'dialog');
@@ -47,27 +46,77 @@
     var inner = document.createElement('div');
     inner.className = 'lightbox-inner';
 
+    var hint = document.createElement('p');
+    hint.className = 'lightbox-hint';
+    hint.textContent = 'Scroll to zoom \u00b7 Drag to pan \u00b7 Double-click to reset';
+
     var closeBtn = document.createElement('button');
     closeBtn.className = 'lightbox-close';
     closeBtn.setAttribute('aria-label', 'Close diagram');
     closeBtn.textContent = '\u00D7';
 
     inner.appendChild(closeBtn);
+    inner.appendChild(hint);
     overlay.appendChild(inner);
     document.body.appendChild(overlay);
 
+    // Pan/zoom state
+    var scale = 1, tx = 0, ty = 0;
+    var dragging = false, startX, startY, startTx, startTy;
+    var currentSvg = null;
+
+    function applyTransform() {
+      if (!currentSvg) return;
+      currentSvg.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+    }
+
+    function resetTransform() {
+      scale = 1; tx = 0; ty = 0;
+      applyTransform();
+    }
+
+    inner.addEventListener('wheel', function (e) {
+      e.preventDefault();
+      var delta = e.deltaY < 0 ? 0.15 : -0.15;
+      scale = Math.max(0.3, Math.min(8, scale + delta));
+      applyTransform();
+    }, { passive: false });
+
+    inner.addEventListener('mousedown', function (e) {
+      if (e.target === closeBtn) return;
+      dragging = true;
+      startX = e.clientX; startY = e.clientY;
+      startTx = tx; startTy = ty;
+      inner.style.cursor = 'grabbing';
+    });
+
+    window.addEventListener('mousemove', function (e) {
+      if (!dragging) return;
+      tx = startTx + (e.clientX - startX);
+      ty = startTy + (e.clientY - startY);
+      applyTransform();
+    });
+
+    window.addEventListener('mouseup', function () {
+      dragging = false;
+      inner.style.cursor = '';
+    });
+
+    inner.addEventListener('dblclick', function (e) {
+      if (e.target === closeBtn) return;
+      resetTransform();
+    });
+
     function close() {
       overlay.classList.remove('is-active');
-      var svgs = inner.querySelectorAll('svg');
-      svgs.forEach(function (svg) { inner.removeChild(svg); });
+      if (currentSvg) { inner.removeChild(currentSvg); currentSvg = null; }
+      resetTransform();
     }
 
     closeBtn.addEventListener('click', close);
-
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) close();
     });
-
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && overlay.classList.contains('is-active')) close();
     });
@@ -75,15 +124,25 @@
     document.querySelectorAll('.mermaid').forEach(function (el) {
       var svg = el.querySelector('svg');
       if (!svg) return;
-      el.setAttribute('title', 'Click to enlarge');
+      el.setAttribute('title', 'Click to enlarge \u2014 scroll/drag to zoom & pan');
       el.addEventListener('click', function () {
-        inner.appendChild(svg.cloneNode(true));
+        var clone = svg.cloneNode(true);
+        // Remove fixed dimensions so SVG fills the lightbox naturally
+        clone.removeAttribute('width');
+        clone.removeAttribute('height');
+        clone.style.width = '100%';
+        clone.style.height = 'auto';
+        clone.style.transformOrigin = 'center center';
+        clone.style.transition = 'transform 0.1s ease';
+        clone.style.display = 'block';
+        currentSvg = clone;
+        inner.appendChild(clone);
+        resetTransform();
         overlay.classList.add('is-active');
       });
     });
   }
 
-  // Mermaid renders after DOMContentLoaded; use window load + small delay
   if (document.readyState === 'complete') {
     setTimeout(initLightbox, 150);
   } else {

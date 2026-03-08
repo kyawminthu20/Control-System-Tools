@@ -88,12 +88,38 @@ Design: `docs/plans/2026-03-05-phase2-design.md`
 - [x] `docs/lifecycle/detailed-design/index.md` — See Also link to safety-wiring added
 - [x] Jekyll build clean (50 pages)
 
-## Phase 5 Candidates
+## Phase 5 Scope — IEC 62443 Cybersecurity Detail Pages
 
-- Interactive standards graph
+**Rationale:** Cybersecurity is increasingly required alongside functional safety. The site has a routing stub only. Pairs naturally with Scenario 04 (Networked Safety PLC). IEC 62443 corpus and a full site page closes a visible gap.
+
+### RAG Corpus (new files under `control-standards/rag/standards_intelligence/international/cybersecurity/iec_62443/`)
+
+- [ ] `_index.yaml` — corpus index
+- [ ] `IEC62443_2_1__security_management.md` — IACS security management system, risk assessment process, security policy, asset inventory
+- [ ] `IEC62443_3_3__system_security_requirements.md` — Security Levels (SL 1–4), Zone/Conduit model, foundational requirements (FRs), system security requirements (SSRs)
+- [ ] `IEC62443_4_2__component_requirements.md` — component security requirements, embedded device requirements, software application requirements
+- [ ] `IEC62443_lifecycle.md` — IACS security lifecycle (assess → implement → maintain), patch management, incident response, SL-T vs SL-C distinction
+
+### Site Pages
+
+- [ ] `docs/standards/cybersecurity/iec-62443/index.md` — full deepened page (badge: Phase 5 Complete), Zone/Conduit diagram, SL table, FR overview, lifecycle, pairing with IEC 62061
+
+### Nav / Index Updates
+
+- [ ] `docs/standards/cybersecurity/index.md` — update IEC 62443 entry from routing stub to full page
+- [ ] `docs/scenarios/networked-safety-plc/index.md` — add See Also link to IEC 62443 page
+
+### Notes
+
+- No existing IEC 62443 RAG files confirmed — full corpus creation required
+- Do not modify functional safety RAG files
+- Cybersecurity SL levels (SL 1–4) vs safety SIL levels (1–4) distinction must be clearly explained on site
+
+## Phase 5 Backlog (after IEC 62443)
+
 - SEMI S2/S8/S14 standard pages (not yet in corpus)
 - IEC 60079 hazardous area pages (corpus not confirmed)
-- IEC 62443 detail pages (routing reference only)
+- Interactive standards graph
 
 ## Content Gaps (documented with badges on site)
 
