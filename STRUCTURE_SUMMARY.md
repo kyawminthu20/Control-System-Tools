@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 14:39:57
+**Last Auto-Updated:** 2026-03-08 14:40:40
 
 ```text
 ├── .claude/
@@ -891,6 +891,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── a2/
 │   │               │   └── 8e2ef91e74d4e0d9af056141b1aa5c6a84d61d339e66103419b15ddf62e9ec
 │   │               ├── a5/
+│   │               │   ├── 94d5cef218e42ffd6252ba7587c9163678a26eee6a72988f3252f6d5352c8b
 │   │               │   └── ce0567a59bbb95a147ad313bdbb5e9a6f80e3b1071ac421f6b3d4183b96d22
 │   │               ├── a6/
 │   │               │   └── ea9eca2f0fd8b821ed941651a07f433957b83e4deed7e7231cf6f689d8ccf4
@@ -1075,11 +1076,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-05-phase2-implementation.md
 │   │   │   ├── 2026-03-06-phase3-functional-safety-design.md
 │   │   │   ├── 2026-03-06-phase3-implementation.md
+│   │   │   ├── 2026-03-08-corpus-gap-fill-design.md
 │   │   │   ├── 2026-03-08-decision-workflow-enhancements.md
 │   │   │   ├── 2026-03-08-glossary-design.md
 │   │   │   ├── 2026-03-08-glossary-implementation.md
 │   │   │   ├── 2026-03-08-nec-missing-articles.md
 │   │   │   ├── 2026-03-08-nec-page-update.md
+│   │   │   ├── 2026-03-08-standards-graph-design.md
 │   │   │   ├── 2026-03-08-theme-switching-design.md
 │   │   │   └── 2026-03-08-theme-switching-implementation.md
 │   │   ├── scenarios/
