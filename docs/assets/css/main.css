@@ -730,17 +730,30 @@ tr:nth-child(even) td {
 .lightbox-inner {
   background: var(--color-bg);
   border: 1px solid var(--color-border);
-  padding: 1.5rem;
-  max-width: 90vw;
-  max-height: 90vh;
-  overflow: auto;
+  padding: 2.5rem 1.5rem 1.5rem;
+  width: 92vw;
+  height: 88vh;
+  overflow: hidden;
   position: relative;
+  cursor: grab;
+  user-select: none;
 }
 
 .lightbox-inner svg {
-  max-width: 100%;
-  height: auto;
+  /* Dimensions set dynamically by JS */
   display: block;
+}
+
+.lightbox-hint {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  pointer-events: none;
+  margin: 0;
 }
 
 .lightbox-close {

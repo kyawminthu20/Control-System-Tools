@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-07 19:57:42
+**Last Auto-Updated:** 2026-03-07 20:48:50
 
 ```text
 ├── .claude/
