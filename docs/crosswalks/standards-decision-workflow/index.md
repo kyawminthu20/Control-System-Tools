@@ -190,6 +190,17 @@ Many engineers confuse these three overlapping standards. The table below clarif
 
 ---
 
+## Common Engineering Mistakes
+
+1. **Designing safety circuits before risk assessment** — the required Performance Level (PLr) comes from ISO 12100 risk assessment; skipping this step produces safety circuits with no verified integrity basis.
+2. **Assuming NEC defines machine electrical design** — NEC governs facility installation; NFPA 79 governs the machine. Using NEC rules inside a machine is a compliance error.
+3. **Ignoring SCCR when selecting components** — Short Circuit Current Rating must be coordinated across all panel components. Mismatches cause failures at listing.
+4. **Installing panels without verifying available fault current** — UL 508A SCCR must meet or exceed the available fault current at the installation point (NEC 110.10).
+5. **Mixing NFPA 79 and UL 508A requirements incorrectly** — NFPA 79 governs machine-mounted enclosures; UL 508A governs separately mounted control panels. Requirements differ.
+6. **Skipping AHJ coordination** — The Authority Having Jurisdiction has final approval authority. Engage early on non-standard installations.
+
+---
+
 ## Routing Source
 
 This decision workflow is derived from `rag/routing/standards_applicability.md` and `rag/crosswalks/overlap_matrix/standards_decision_workflow.md`. See also `rag/standards_intelligence/_standards_map.md` for the full applicability matrix.
