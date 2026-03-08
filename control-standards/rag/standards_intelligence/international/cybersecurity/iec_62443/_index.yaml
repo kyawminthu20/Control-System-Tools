@@ -1,0 +1,18 @@
+standard_id: IEC_62443
+edition: Series (2-1: 2010, 3-3: 2013, 4-2: 2019)
+publisher: IEC
+corpus_status: phase5_complete
+scope: Industrial Automation and Control System (IACS) security — security management, system requirements, component requirements, and security lifecycle
+files:
+  - filename: IEC62443_2_1__security_management.md
+    part: "2-1"
+    topic: IACS security management system — risk assessment, security policy, asset inventory
+  - filename: IEC62443_3_3__system_security_requirements.md
+    part: "3-3"
+    topic: System security requirements — Security Levels (SL 1–4), Zone/Conduit model, Foundational Requirements
+  - filename: IEC62443_4_2__component_requirements.md
+    part: "4-2"
+    topic: Component security requirements — embedded devices, software applications, host devices, network devices
+  - filename: IEC62443_lifecycle.md
+    part: "lifecycle"
+    topic: IACS security lifecycle — assess, implement, maintain; SL-T vs SL-C; patch management; incident response

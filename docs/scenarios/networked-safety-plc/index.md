@@ -12,6 +12,8 @@ related_standards:
     url: "/standards/functional-safety/iso-13849-1/"
   - name: "IEC 62061"
     url: "/standards/functional-safety/iec-62061/"
+  - name: "IEC 62443 (Cybersecurity)"
+    url: "/standards/cybersecurity/iec-62443/"
   - name: "Software Stack"
     url: "/software-stack/"
 ---
@@ -19,7 +21,7 @@ related_standards:
 <div class="page-header">
   <span class="page-header__label">Scenario 04</span>
   <h1>Networked Safety PLC Architecture</h1>
-  <span class="badge badge--verify">TO VERIFY — IEC 62443 corpus coverage limited</span>
+  <span class="badge badge--complete">Phase 5 — IEC 62443 corpus complete</span>
 </div>
 
 ## Project Summary
@@ -37,7 +39,7 @@ related_standards:
 |----------|------|--------|
 | **ISO 13849-1 2023** | PL design for safety functions | Planned <span class="badge badge--verify">TO VERIFY</span> |
 | **IEC 62061 2021** | SIL design for safety functions (alternative) | Planned <span class="badge badge--verify">TO VERIFY</span> |
-| **IEC 62443** | Industrial cybersecurity | Routing reference <span class="badge badge--verify">TO VERIFY</span> |
+| **IEC 62443** | Industrial cybersecurity | <span class="badge badge--complete">Phase 5 Complete</span> — [detail page]({{ '/standards/cybersecurity/iec-62443/' | relative_url }}) |
 | **IEC 61131-3** | PLC programming | Routing reference |
 
 ## Two-Layer Architecture
@@ -92,7 +94,7 @@ IEC 62443 is a series of standards for industrial automation and control system 
 | IEC 62443-4-1 | Secure product development lifecycle |
 | IEC 62443-4-2 | Technical security requirements for IACS components |
 
-**Note:** IEC 62443 detail pages are not confirmed complete in this corpus. See [Software Stack]({{ '/software-stack/' | relative_url }}) for routing guidance.
+See the [IEC 62443 detail page]({{ '/standards/cybersecurity/iec-62443/' | relative_url }}) for Zone/Conduit design, Security Level table, Foundational Requirements, and safety system checklist. See [Software Stack]({{ '/software-stack/' | relative_url }}) for routing guidance on IEC 61131-3 and related topics.
 
 ## Repository Paths
 

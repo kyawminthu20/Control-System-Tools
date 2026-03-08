@@ -18,6 +18,27 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-08 — Phase 5 Complete: IEC 62443 Cybersecurity Corpus and Site Pages
+
+**Summary:** IEC 62443 cybersecurity corpus created from scratch (no prior RAG files). Full site page with Zone/Conduit diagram, SL table, FR overview, SIL vs SL distinction, and safety checklist. Cybersecurity family index created. Standards index updated. Networked Safety PLC scenario updated.
+
+**What changed:**
+- Created `control-standards/rag/standards_intelligence/international/cybersecurity/iec_62443/` — new directory
+- Created `_index.yaml` — corpus index
+- Created `IEC62443_2_1__security_management.md` — CSMS, risk assessment process, asset inventory, policy elements, IT vs OT distinctions
+- Created `IEC62443_3_3__system_security_requirements.md` — Zone/Conduit model, SL 1–4 definitions, SL-T/SL-C/SL-A, FR 1–7, selected SR table, safety Zone guidance
+- Created `IEC62443_4_2__component_requirements.md` — four component types (ED/SA/HD/ND), SL-C concept, selected requirements by component, secure development (4-1), component selection guidance
+- Created `IEC62443_lifecycle.md` — Assess/Implement/Maintain lifecycle, SL designation lifecycle perspective, IACS patch management procedure, incident response for OT, functional safety coordination points
+- Created `docs/standards/cybersecurity/iec-62443/index.md` — full site page: SL table, SIL vs SL section, Zone/Conduit Mermaid diagram, FR overview, lifecycle flowchart, safety/security coordination table, practical checklist
+- Created `docs/standards/cybersecurity/index.md` — cybersecurity family page with routing table and out-of-scope gaps documented
+- Updated `docs/standards/index.md` — added Cybersecurity Standards section
+- Updated `docs/scenarios/networked-safety-plc/index.md` — added IEC 62443 to related_standards; updated badge to Phase 5 Complete; updated routing note to link to IEC 62443 detail page
+- Jekyll build clean — 52 pages
+
+**Phase 5 status: COMPLETE**
+
+---
+
 ### 2026-03-07 — Phase 4 Complete: Practical Safety Guides
 
 **Summary:** Two new site pages added sourcing content from `control-standards/work/design/simple_safety_system_design.md`. No RAG changes.
