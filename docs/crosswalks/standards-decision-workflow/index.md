@@ -218,6 +218,30 @@ For a standard US industrial machine with safety functions, the full compliance 
 
 ---
 
+## Worked Example — Automated Conveyor System
+
+The following traces a US-market conveyor through the full workflow.
+
+**System:** Belt conveyor with automated loading, pinch points at drive and tail sections, maintenance access door.
+
+| Step | Action | Standard Applied |
+|------|--------|-----------------|
+| 1 | US market, no CE marking required | NEC + NFPA 79 + UL 508A |
+| 2 | Industrial machinery with guarding | NFPA 79 + NEC Art. 670 + UL 508A |
+| 3 | Risk assessment identifies pinch hazard at access door | ISO 12100 |
+| 4 | Safety function required: guard door interlock (Category 3, PLd) | ISO 13849-1 |
+| 5 | Machine wiring designed to NFPA 79 | NFPA 79 2024 |
+| 6 | Control panel built and listed to UL 508A | UL 508A 2022 |
+| 7 | Machine installed per NEC, SCCR verified against available fault current | NEC 2023 |
+| 8 | AHJ inspection completed, permit issued | AHJ |
+
+**Key decisions made:**
+- ISO 13849-1 chosen over IEC 62061 (single machine, PL route simpler)
+- PLd required (ISO 12100 risk graph: severe injury possible, frequent access, avoidance difficult)
+- Category 3 dual-channel interlock with cross-monitoring
+
+---
+
 ## Routing Source
 
 This decision workflow is derived from `rag/routing/standards_applicability.md` and `rag/crosswalks/overlap_matrix/standards_decision_workflow.md`. See also `rag/standards_intelligence/_standards_map.md` for the full applicability matrix.
