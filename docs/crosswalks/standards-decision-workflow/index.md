@@ -79,6 +79,28 @@ flowchart TD
 
 ---
 
+## Lifecycle Workflow
+
+The diagram below shows the **sequence** standards apply across a machine's design and installation lifecycle.
+
+<div class="mermaid-wrap">
+<pre class="mermaid">
+flowchart TD
+    A[Machine Concept] --> B[Risk Assessment<br/>ISO 12100]
+    B --> C[Safety Function Requirements]
+    C --> D{Safety framework?}
+    D -->|PL route| E[ISO 13849-1]
+    D -->|SIL route| F[IEC 62061]
+    E --> G[Machine Electrical Design<br/>NFPA 79]
+    F --> G
+    G --> H[Control Panel Construction<br/>UL 508A]
+    H --> I[Electrical Installation<br/>NEC]
+    I --> J[Inspection & Approval<br/>AHJ]
+</pre>
+</div>
+
+---
+
 ## Step 1 — Identify Your Market
 
 | Market | Required Standards |
