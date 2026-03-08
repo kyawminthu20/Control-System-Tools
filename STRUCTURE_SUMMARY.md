@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 00:40:02
+**Last Auto-Updated:** 2026-03-08 00:54:29
 
 ```text
 ├── .claude/
@@ -391,6 +391,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │       └── overlap__sccr.md
 │   │   │   ├── file_structure.md
 │   │   │   ├── international/
+│   │   │   │   ├── cybersecurity/
+│   │   │   │   │   └── iec_62443/
+│   │   │   │   │       ├── IEC62443_2_1__security_management.md
+│   │   │   │   │       ├── IEC62443_3_3__system_security_requirements.md
+│   │   │   │   │       ├── IEC62443_4_2__component_requirements.md
+│   │   │   │   │       ├── IEC62443_lifecycle.md
+│   │   │   │   │       └── _index.yaml
 │   │   │   │   ├── functional_safety/
 │   │   │   │   │   ├── iec_61508/
 │   │   │   │   │   │   ├── IEC61508_2010__Clause07__safety_lifecycle.md
@@ -645,6 +652,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       │   ├── experiments/
 │       │   ├── mermaid_diagrams_to_reference.md
 │       │   ├── mini_machine_safety_design_v2_project_status.md
+│       │   ├── nec_update.md
 │       │   ├── scratch_notes/
 │       │   ├── simple_safety_system_design.md
 │       │   ├── standards_atlas_homepage_wireframe_and_templates.md
@@ -681,11 +689,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 03/
 │   │               │   └── 0cd6164ad2049de1dadb6afb15ff7b238db25e1b7e6ae3b6919d7db7db7708
 │   │               ├── 04/
+│   │               │   ├── 40782a1a0d97a682c271d1e3c42b89937299677161492792e8e48d4a3c4de4
 │   │               │   └── 8ae153d1cc2aef54095eadad06148ac1372da0e9f585dc95e40b643279a3ea
 │   │               ├── 06/
 │   │               │   └── d3a687ff4b25e2062eb633ed15fbe1736c9f6c4345811632c44f80c9c712bd
 │   │               ├── 08/
-│   │               │   └── 4ce4c9fe25a2e3a4783c96c116b5041352ed067bc5c830467b332afcbe86fa
+│   │               │   ├── 4ce4c9fe25a2e3a4783c96c116b5041352ed067bc5c830467b332afcbe86fa
+│   │               │   └── cb215652a3ec3a6b7c85b5d2946ec0dd877fb6c4a83a80c02ebb66aef23c78
 │   │               ├── 0a/
 │   │               │   └── 46242bc7af14bf7af61342f0928754a9f55af3b85e5ed37689bdc43e37538f
 │   │               ├── 0b/
@@ -727,11 +737,15 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 33/
 │   │               │   ├── b95d3c72b1293a7ca1aa200291cf6491cce8b27ca46349cb20ae2df406a431
 │   │               │   └── f71006d652ee55f235e9f005fc6620afcbbf683f2e8332e81378e5d2ae4975
+│   │               ├── 36/
+│   │               │   └── d582097a42b157b16a059c76c099e57f145550bc3b1266e8823f4c06a7146b
 │   │               ├── 3a/
 │   │               │   └── 78695388b38b5cceefaf6796b0137877514593543b91af2752d5a17e3d736c
 │   │               ├── 3b/
 │   │               │   ├── 337c3092c08d7a55343ebef55b0e7ea6c253bd90db4b44ae431484db745587
 │   │               │   └── ca9d58be429a9e9a507c2c31486d80a475e1c53683e002ba45d40231a51d4d
+│   │               ├── 3c/
+│   │               │   └── 0b48fc82605fe676f17415632e8cbd4fb2a2108041b657de120996fe62bf1a
 │   │               ├── 3d/
 │   │               │   ├── 59b21cc1d68ca8331c7c38de212f1af165ddd8eb490ba34df87b0a36f9a04f
 │   │               │   └── f4d444ee0040c89311c2d73c3326794e46176bf3eb9d6c6a849a664aa51167
@@ -742,6 +756,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 4c/
 │   │               │   └── c13b24eb0a0019b4f4fff2f237b36c8ed17e43d7e7663945b8791a99fa65d1
 │   │               ├── 4d/
+│   │               │   ├── 375658a3dee103e24a7a4bc7f92754e1a7e981bade529055cb96a01c852b8a
 │   │               │   └── b8b58d02d7843550d6ad60a54ee453b56301f4858fa670c97095dd332c9d32
 │   │               ├── 4e/
 │   │               │   ├── 469c2281456ea6b8c3574a8de06961878eeb16282aabec232f3e7cdaa20e7c
@@ -781,6 +796,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 6f/
 │   │               │   └── 5c8de5795d1e958681cfe90b53a1dfc00c8e8be18d2f2b662621eac3d01fff
 │   │               ├── 70/
+│   │               │   ├── 6bf1a4e30a45c09272b0ab99a32a2c2b556106edc929b96d7c5b545048fe62
 │   │               │   └── c3114be24f5d35bdb46412573e383fa0ebf515e5e094039e4b3f3615a1dd86
 │   │               ├── 71/
 │   │               │   └── 3a92a6f35e2100179cec7de3c2189ccb03a159f80d22271a8df5d7e554e49e
@@ -875,6 +891,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 6bc0b2ee31345100572fb539a65f9bbb7ae04b3392d53f663e0c9bed14384d
 │   │               ├── c0/
 │   │               │   └── 9113fb9557c9aff69a9fb0828f6cd9085707003347509662864a5ae54d707b
+│   │               ├── c1/
+│   │               │   └── 8e3fce589275c09a49f1a4cc7677ad37b290a8c78dbe1646be80feb378da27
 │   │               ├── c2/
 │   │               │   ├── cc6b84a9f4eb9b6e8b0c003d26650092a3a7bf97c633dfdd28196004e5f120
 │   │               │   ├── ef846d9adcc041c4563da65557ef2554f2838ebcc000c3278a7b0603730cd8
@@ -899,6 +917,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── adf2390a11c4437b01dfbf3a0bdf78750fd0ee85614df683fe95428b8d6199
 │   │               ├── d4/
 │   │               │   └── 3a555dae8da5d95d957efec151bd184b427167c8ae1856c1a08016b9d57d24
+│   │               ├── d5/
+│   │               │   └── bd3094d0ad18bb35e581c2994241c11383381cd4bd274ec339b250c609ea6c
 │   │               ├── d7/
 │   │               │   └── 92c6bf5ca0cb6a01484eb838c34af15433bcb0da692b9084a472d9c4b505d9
 │   │               ├── d8/
@@ -936,6 +956,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 4de0c2dfa4009076ed6ba8d42c9b22d122562a5d0f63fef83c1d37c980aa05
 │   │               ├── f2/
 │   │               │   └── 6474473b95c88cb3306339ea2de52245f119f46242683f7a76257ddd70a461
+│   │               ├── f6/
+│   │               │   └── 5cd8a0bbb88a838309164c51364f7a4aade6eb52086ca1c3c73c4de227ad93
 │   │               ├── f8/
 │   │               │   └── af3b8919e60de352473986a794bb7f5130ea78933de5f04ae860178f2d24a1
 │   │               ├── f9/
@@ -1029,7 +1051,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-05-phase2-design.md
 │   │   │   ├── 2026-03-05-phase2-implementation.md
 │   │   │   ├── 2026-03-06-phase3-functional-safety-design.md
-│   │   │   └── 2026-03-06-phase3-implementation.md
+│   │   │   ├── 2026-03-06-phase3-implementation.md
+│   │   │   └── 2026-03-08-nec-page-update.md
 │   │   ├── scenarios/
 │   │   │   ├── global-machine/
 │   │   │   │   └── index.html
@@ -1047,6 +1070,10 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── software-stack/
 │   │   │   └── index.html
 │   │   └── standards/
+│   │       ├── cybersecurity/
+│   │       │   ├── iec-62443/
+│   │       │   │   └── index.html
+│   │       │   └── index.html
 │   │       ├── functional-safety/
 │   │       │   ├── iec-61508/
 │   │       │   │   └── index.html
@@ -1144,7 +1171,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── 2026-03-05-phase2-design.md
 │   │   ├── 2026-03-05-phase2-implementation.md
 │   │   ├── 2026-03-06-phase3-functional-safety-design.md
-│   │   └── 2026-03-06-phase3-implementation.md
+│   │   ├── 2026-03-06-phase3-implementation.md
+│   │   └── 2026-03-08-nec-page-update.md
 │   ├── scenarios/
 │   │   ├── global-machine/
 │   │   │   └── index.md
@@ -1162,6 +1190,10 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   ├── software-stack/
 │   │   └── index.md
 │   ├── standards/
+│   │   ├── cybersecurity/
+│   │   │   ├── iec-62443/
+│   │   │   │   └── index.md
+│   │   │   └── index.md
 │   │   ├── functional-safety/
 │   │   │   ├── iec-61508/
 │   │   │   │   └── index.md

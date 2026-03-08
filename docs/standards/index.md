@@ -67,6 +67,16 @@ Global (US + EU)?            → NFPA 79 + IEC 60204-1 + ISO 13849-1 (design to 
 
 ---
 
+## Cybersecurity Standards
+
+| Standard | Edition | Scope | Status |
+|----------|---------|-------|--------|
+| [IEC 62443]({{ '/standards/cybersecurity/iec-62443/' | relative_url }}) | Series | IACS security — Zone/Conduit, Security Levels, FRs, lifecycle | <span class="badge badge--complete">Phase 5 Complete</span> |
+
+<p><a href="{{ '/standards/cybersecurity/' | relative_url }}">View Cybersecurity family page &rarr;</a></p>
+
+---
+
 ## Standards Relationship Diagram
 
 <div class="mermaid-wrap">
