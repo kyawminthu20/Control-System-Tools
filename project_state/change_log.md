@@ -32,6 +32,19 @@ Keep entries concise and oriented to what future work needs to know.
 
 ---
 
+### 2026-03-08: Glossary Page Added
+
+**Type:** Content / Reference
+**Status:** Complete
+
+- Added `docs/_data/glossary.yml` with 28 seed terms (SIL, PL, SL, SCCR, AHJ, HFT, SFF, MTTFd, DC, Category, PFH, PLC, SIS, SIF, LOPA, E-stop, AFC, AIC, VFD, SPD, NEC, NFPA, UL, IEC, ISO, SEMI, CE, OSHA)
+- Added `docs/glossary/index.md` — A-Z anchor navigation, domain badges, cross-links to standard pages, lifecycle stages, and related terms
+- Added glossary card CSS and domain badge color variants to `main.css`
+- Added Glossary to Reference section in sidebar
+- Build clean
+
+---
+
 ## 2026-03-08: NEC Page — Compliance-Focused Update
 
 **Type:** Content / Standards
