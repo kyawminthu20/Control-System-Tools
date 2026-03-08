@@ -1174,3 +1174,59 @@ tr:nth-child(even) td {
   color: var(--color-topnav-text-strong);
   border-color: var(--color-topnav-btn-border);
 }
+
+/* ============================================================
+   Standards Relationship Graph
+   ============================================================ */
+
+.standards-graph-wrap {
+  margin: 1.5rem 0;
+}
+
+.standards-graph-canvas {
+  width: 100%;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+.standards-graph-wrap--full .standards-graph-canvas {
+  height: 520px;
+}
+
+.standards-graph-wrap--mini .standards-graph-canvas {
+  height: 280px;
+  pointer-events: none; /* disable pan/zoom on mini */
+}
+
+.standards-graph-wrap--mini .standards-graph-canvas node {
+  cursor: default;
+}
+
+.standards-graph-link {
+  text-align: right;
+  font-size: 0.8rem;
+  margin: 0.4rem 0 0;
+}
+
+/* Legend */
+.standards-graph-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.legend-item {
+  padding: 2px 8px;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.legend-item--requires    { background: #f59e0b; }
+.legend-item--pairs-with  { background: #3b82f6; }
+.legend-item--enforces    { background: #10b981; }
+.legend-item--aligns-with { background: #9ca3af; }
+.legend-item--planned     { background: transparent; border: 2px dashed #9ca3af; color: var(--color-text-muted); }
