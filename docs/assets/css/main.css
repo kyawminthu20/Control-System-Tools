@@ -1006,7 +1006,7 @@ tr:nth-child(even) td {
   font-family: var(--font-mono);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--color-muted);
+  color: var(--color-text-muted);
   border-bottom: 1px solid var(--color-border);
   margin: 2rem 0 1rem;
   padding-bottom: 0.25rem;
@@ -1031,12 +1031,12 @@ tr:nth-child(even) td {
   font-family: var(--font-mono);
   font-size: 1rem;
   font-weight: 700;
-  color: var(--color-fg);
+  color: var(--color-text);
 }
 
 .glossary-entry__term {
   font-size: 0.9rem;
-  color: var(--color-muted);
+  color: var(--color-text-muted);
 }
 
 .glossary-entry__definition {
@@ -1056,7 +1056,7 @@ tr:nth-child(even) td {
 .glossary-entry__meta dt {
   font-family: var(--font-mono);
   font-weight: 600;
-  color: var(--color-muted);
+  color: var(--color-text-muted);
   white-space: nowrap;
 }
 
