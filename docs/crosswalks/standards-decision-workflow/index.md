@@ -201,6 +201,23 @@ Many engineers confuse these three overlapping standards. The table below clarif
 
 ---
 
+## Typical Machine Compliance Stack
+
+For a standard US industrial machine with safety functions, the full compliance stack is:
+
+| Layer | Standard | Edition |
+|-------|----------|---------|
+| Risk assessment | ISO 12100 | 2010 |
+| Functional safety architecture | ISO 13849-1 or IEC 62061 | 2023 / 2021 |
+| Machine electrical design | NFPA 79 | 2024 |
+| Control panel construction | UL 508A | 2022 |
+| Facility electrical installation | NEC | 2023 |
+| Final inspection | AHJ jurisdiction | — |
+
+> For EU/CE markets, add **IEC 60204-1 (2018)** alongside NFPA 79 and design to the more restrictive requirement at each point.
+
+---
+
 ## Routing Source
 
 This decision workflow is derived from `rag/routing/standards_applicability.md` and `rag/crosswalks/overlap_matrix/standards_decision_workflow.md`. See also `rag/standards_intelligence/_standards_map.md` for the full applicability matrix.
