@@ -50,7 +50,7 @@ related_standards:
 **Step 2: Verify Jekyll still builds**
 
 ```bash
-cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
+cd docs && bundle exec jekyll build 2>&1 | tail -5
 ```
 Expected: `done in X seconds` with no errors.
 
@@ -99,7 +99,7 @@ This workflow helps engineers determine **which standards apply at each stage of
 **Step 2: Build and verify**
 
 ```bash
-cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
+cd docs && bundle exec jekyll build 2>&1 | tail -5
 ```
 
 **Step 3: Commit**
@@ -147,7 +147,7 @@ flowchart TD
 **Step 2: Build and check Mermaid renders**
 
 ```bash
-cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
+cd docs && bundle exec jekyll build 2>&1 | tail -5
 ```
 
 Open `docs/_site/crosswalks/standards-decision-workflow/index.html` and confirm the `<pre class="mermaid">` block is present.
@@ -201,7 +201,7 @@ Before the existing Step 1 table, add:
 **Step 4: Build and verify**
 
 ```bash
-cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
+cd docs && bundle exec jekyll build 2>&1 | tail -5
 ```
 
 **Step 5: Commit**
@@ -239,7 +239,7 @@ Many engineers confuse these three overlapping standards. The table below clarif
 **Step 2: Build and verify**
 
 ```bash
-cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
+cd docs && bundle exec jekyll build 2>&1 | tail -5
 ```
 
 **Step 3: Commit**
@@ -274,7 +274,7 @@ git commit -m "feat(workflow): add NFPA 79 / NEC / UL 508A boundary clarificatio
 **Step 2: Build and verify**
 
 ```bash
-cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
+cd docs && bundle exec jekyll build 2>&1 | tail -5
 ```
 
 **Step 3: Commit**
@@ -315,7 +315,7 @@ For a standard US industrial machine with safety functions, the full compliance 
 **Step 2: Build and verify**
 
 ```bash
-cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
+cd docs && bundle exec jekyll build 2>&1 | tail -5
 ```
 
 **Step 3: Commit**
@@ -363,7 +363,7 @@ The following traces a US-market conveyor through the full workflow.
 **Step 2: Build and verify full site**
 
 ```bash
-cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -10
+cd docs && bundle exec jekyll build 2>&1 | tail -10
 ```
 Expected: clean build, page count ≥ 48.
 
@@ -381,7 +381,7 @@ git commit -m "feat(workflow): add conveyor worked example tracing all 8 standar
 After all tasks complete:
 
 ```bash
-cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | grep -E "done|error|warn"
+cd docs && bundle exec jekyll build 2>&1 | grep -E "done|error|warn"
 ```
 
 Check `docs/_site/crosswalks/standards-decision-workflow/index.html` contains:
