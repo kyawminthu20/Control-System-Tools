@@ -58,6 +58,7 @@ flowchart LR
 | 3 | [Risk Assessment]({{ '/lifecycle/risk-assessment/' | relative_url }}) | ISO 12100, ISO 13849-1, IEC 62061, IEC 61511 | Risk assessment report | PL/SIL decision point |
 | 4 | [Safety Architecture]({{ '/lifecycle/safety-architecture/' | relative_url }}) | ISO 13849-1, IEC 62061, IEC 61508 | Safety architecture document | Confirm PL or SIL |
 | 5 | [Detailed Design]({{ '/lifecycle/detailed-design/' | relative_url }}) | NFPA 79, UL 508A, IEC 60204-1 | BOM, circuit diagrams, verification plan | — |
+| — | [Safety Wiring Practices]({{ '/lifecycle/safety-wiring/' | relative_url }}) | NFPA 79, IEC 60204-1, IEC 61140 | Dual-channel input spec, wire gauge, color, termination | — |
 | 6 | [Draft Documentation]({{ '/lifecycle/draft-documentation/' | relative_url }}) | All applicable | Safety manual draft | — |
 | 7 | [Build]({{ '/lifecycle/build/' | relative_url }}) | UL 508A, NFPA 79 | Shop traveler, build records | — |
 | 8 | [Installation]({{ '/lifecycle/installation/' | relative_url }}) | NEC, NFPA 79 | Installation record | — |
