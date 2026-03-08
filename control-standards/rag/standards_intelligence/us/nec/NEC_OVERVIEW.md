@@ -72,11 +72,12 @@ NEC_2023__Art<NNN>__<descriptive_slug>.md
 
 | Article | Title | Priority | Focus Area |
 |---------|-------|----------|------------|
-| 700–702 | Emergency / Legally Required / Optional Standby | Standard | Transfer time tiers, ATS requirements, safety system power coordination |
+| 700, 701, 702 | Emergency Systems / Legally Required Standby / Optional Standby | Standard | Transfer time tiers (10s/60s/owner), ATS requirements, safety system power coordination |
 
 ### Planned (Not Yet Created)
 
-- Article 511/514 — Hazardous Locations: motor fuel dispensing, bulk storage (dust environments)
+- Article 511 — Commercial Garages (classified areas within garages)
+- Article 514 — Motor Fuel Dispensing Facilities (gas stations, fueling areas)
 - Article 800/820/830 — Communications Circuits (if applicable)
 
 ## Priority Articles (Recommended Focus)

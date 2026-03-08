@@ -67,7 +67,7 @@ Service entrance conductors must have ampacity not less than the load determined
 
 ## 5. Grounding at the service (250.24)
 
-The neutral conductor is grounded at the service equipment — the **neutral-to-ground bond**. This bond occurs **only at the service**. Downstream panels and separately derived systems must NOT have a neutral-to-ground bond (they connect only the EGC to ground). Creating a second neutral-to-ground bond downstream creates a parallel ground path, causes nuisance breaker trips, and creates safety hazards.
+The neutral conductor is grounded at the service equipment — the **neutral-to-ground bond**. This bond occurs at the service and at separately derived systems (SDSs) — for example, at the secondary of an isolation transformer or at a generator output. Downstream distribution panels that are **not** separately derived systems must NOT have a second neutral-to-ground bond; they connect the equipment grounding conductor (EGC) to ground, but not the neutral. Creating an unintended N-G bond downstream creates a parallel ground path, causes nuisance breaker trips, and introduces safety hazards.
 
 ## 6. Change log
 
