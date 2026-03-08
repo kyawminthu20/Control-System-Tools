@@ -273,3 +273,25 @@
     }
   });
 })();
+
+// Theme toggle
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+
+  function updateBtn(theme) {
+    btn.textContent = theme === 'dark' ? '\u2600' : '\u263E'; // ☀ or ☾
+    btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+
+  // Sync button icon with current theme (set by inline head script)
+  var current = document.documentElement.getAttribute('data-theme') || 'light';
+  updateBtn(current);
+
+  btn.addEventListener('click', function () {
+    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateBtn(next);
+  });
+})();
