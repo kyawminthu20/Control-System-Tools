@@ -61,3 +61,7 @@ related_standards:
 ## Next Stage
 
 → [Detailed Design]({{ '/lifecycle/detailed-design/' | relative_url }})
+
+## See Also
+
+→ [Safety Wiring Practices]({{ '/lifecycle/safety-wiring/' | relative_url }}) — dual-channel wiring, contact type, termination, and discrepancy time guidance

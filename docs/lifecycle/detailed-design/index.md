@@ -49,6 +49,10 @@ related_standards:
 | Grounding drawing | NEC 250 / NFPA 79 Ch 8 |
 | Safety function verification plan | ISO 13849-1 / IEC 62061 |
 
+## See Also
+
+→ [Safety Wiring Practices]({{ '/lifecycle/safety-wiring/' | relative_url }}) — 24 VDC rationale, NC contact logic, wire gauge, color coding, and dual-channel input specification
+
 ## Next Stage
 
 → [Draft Documentation]({{ '/lifecycle/draft-documentation/' | relative_url }})

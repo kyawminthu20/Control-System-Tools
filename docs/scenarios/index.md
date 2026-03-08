@@ -46,4 +46,10 @@ repo_path: "control-standards/rag/standards_intelligence/scenario/"
     <p class="scenario-card__start"><strong>Start:</strong> 15-Standard Minimum Compliance Stack</p>
     <a href="{{ '/scenarios/semiconductor-equipment/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
   </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario 06</span>
+    <span class="scenario-card__title">Practical Machine Safety Implementation</span>
+    <p class="scenario-card__start"><strong>Start:</strong> ISO 13849-1 / IEC 62061 — 10-step SIL/PL workflow</p>
+    <a href="{{ '/scenarios/machine-safety-implementation/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
+  </div>
 </div>

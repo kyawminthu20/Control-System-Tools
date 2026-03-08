@@ -2,7 +2,7 @@
 
 **Last Updated:** 2026-03-07
 **Status:** Active
-**Current Phase:** Phase 3 COMPLETE — all four functional safety RAG corpora done (ISO 13849-1, IEC 62061, IEC 61508, IEC 61511)
+**Current Phase:** Phase 4 COMPLETE — Practical Safety Guides added (Scenario 06 + Safety Wiring lifecycle page)
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -76,33 +76,24 @@ Design: `docs/plans/2026-03-05-phase2-design.md`
 - Remaining functional-safety detail pages (when corpus is confirmed complete)
 - SEMI S2/S8/S14 standard pages (not yet in corpus)
 
-## Phase 4 Queue — Practical Safety Guides (next after Phase 3)
+## Phase 4 Scope — COMPLETED
 
 **Source:** `control-standards/work/design/simple_safety_system_design.md`
 
-Two new site pages to surface practical machine safety knowledge from the design file:
+- [x] `docs/scenarios/machine-safety-implementation/index.md` — Scenario 06: Practical Machine Safety Implementation (10-step workflow, SIL/PL equivalence, Category B–4, device selection, example stack, Mermaid diagrams)
+- [x] `docs/lifecycle/safety-wiring/index.md` — Safety Wiring Practices (24 VDC, NC contacts, dual-channel separation, wire gauge, color coding, termination, discrepancy time, baseline spec)
+- [x] `docs/scenarios/index.md` — Scenario 06 card added
+- [x] `docs/lifecycle/index.md` — safety-wiring row added to stage table
+- [x] `docs/lifecycle/safety-architecture/index.md` — See Also link to safety-wiring added
+- [x] `docs/lifecycle/detailed-design/index.md` — See Also link to safety-wiring added
+- [x] Jekyll build clean (50 pages)
 
-### Page 1 — New Scenario: Practical Machine Safety Implementation
-- **File:** `docs/scenarios/machine-safety-implementation/index.md`
-- **Label:** Scenario 05
-- **Content:** 10-step machine builder workflow (risk assessment → safety functions → hardware architecture → validation), SIL/PL equivalence table, Category B/1/2/3/4 selection, example machine safety stack (hydraulic + chemical machine), hardware device selection and vendors
-- **Standards referenced:** ISO 13849-1, IEC 62061, IEC 61508, NFPA 79
-- **Mermaid diagram:** Input → Safety PLC → Output flow
+## Phase 5 Candidates
 
-### Page 2 — New Lifecycle Page: Safety Wiring Practices
-- **File:** `docs/lifecycle/safety-wiring/index.md`
-- **Content:** 24 VDC rationale (SELV, device ecosystem, diagnostics), NC vs NO contact logic (fail-safe default), wire gauge (18 AWG), color coding (NFPA 79/UL 508A), termination (ferrules, spring clamps, vibration resistance), discrepancy time (20–100 ms guidance), baseline dual-channel input spec
-- **Standards referenced:** NFPA 79, IEC 60204-1, IEC 61140
-
-### Nav / index updates also required
-- `docs/scenarios/index.md` — add Scenario 05 entry
-- `docs/lifecycle/index.md` — add safety-wiring stage entry
-- `docs/lifecycle/safety-architecture/index.md` — add "See also: Safety Wiring Practices" link
-- `docs/lifecycle/detailed-design/index.md` — add cross-reference to wiring page
-
-### Notes
-- No new RAG files needed; source doc is already in `control-standards/work/design/`
-- Do not fragment content across existing lifecycle pages
+- Interactive standards graph
+- SEMI S2/S8/S14 standard pages (not yet in corpus)
+- IEC 60079 hazardous area pages (corpus not confirmed)
+- IEC 62443 detail pages (routing reference only)
 
 ## Content Gaps (documented with badges on site)
 

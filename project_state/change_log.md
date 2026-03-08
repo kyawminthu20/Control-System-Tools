@@ -18,6 +18,23 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-07 — Phase 4 Complete: Practical Safety Guides
+
+**Summary:** Two new site pages added sourcing content from `control-standards/work/design/simple_safety_system_design.md`. No RAG changes.
+
+**What changed:**
+- Created `docs/scenarios/machine-safety-implementation/index.md` — Scenario 06: Practical Machine Safety Implementation. 10-step workflow (risk assessment → safety functions → architecture → device selection → wiring → safety logic → validation), SIL/PL equivalence table, Category B/1/2/3/4 selection table, example hydraulic+chemical machine safety stack, Mermaid input→PLC→output and Category 3 architecture diagrams.
+- Created `docs/lifecycle/safety-wiring/index.md` — Safety Wiring Practices lifecycle page. 24 VDC SELV rationale, NC contact fail-safe logic, dual-channel separation requirements, diagnostic test pulse explanation, discrepancy time (20–100 ms), wire gauge (18 AWG default), insulation rating, NFPA 79/UL 508A color coding, ferrule and spring-clamp termination guidance, baseline dual-channel input specification table.
+- `docs/scenarios/index.md` — added Scenario 06 card
+- `docs/lifecycle/index.md` — added safety-wiring row to stage table
+- `docs/lifecycle/safety-architecture/index.md` — added See Also link
+- `docs/lifecycle/detailed-design/index.md` — added See Also link
+- Jekyll build clean.
+
+**Phase 4 status: COMPLETE**
+
+---
+
 ### 2026-03-07 — Phase 3 Complete: IEC 61511 RAG Corpus and Site Page
 
 **Summary:** IEC 61511 RAG corpus created and site page rewritten with Phase 3 Complete badge. Phase 3 is now fully complete across all four functional safety standards.
