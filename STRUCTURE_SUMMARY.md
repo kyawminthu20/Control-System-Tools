@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 06:13:09
+**Last Auto-Updated:** 2026-03-08 06:17:50
 
 ```text
 ├── .claude/
@@ -988,6 +988,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   ├── Gemfile
 │   ├── Gemfile.lock
 │   ├── _config.yml
+│   ├── _data/
+│   │   └── glossary.yml
 │   ├── _includes/
 │   │   ├── context-panel.html
 │   │   ├── sidebar.html
