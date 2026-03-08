@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 13:58:14
+**Last Auto-Updated:** 2026-03-08 14:08:00
 
 ```text
 ├── .claude/
@@ -656,15 +656,30 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   └── work/
 │       ├── README.md
 │       ├── design/
+│       │   ├── 2026 NEC Changes.md
 │       │   ├── Grounding, System and Equipment [250.4, 2020 NEC].md
 │       │   ├── README.md
 │       │   ├── check_this.md
 │       │   ├── conductor_protection_and_ampacity_transcript_summary.md
 │       │   ├── decision_workflow.md
 │       │   ├── diagrams/
+│       │   ├── equipment_grounding_conductor_topics/
+│       │   │   ├── README.md
+│       │   │   ├── egc_cable_methods_ac_and_mc.md
+│       │   │   ├── egc_definition_and_effective_fault_path.md
+│       │   │   ├── egc_other_listed_systems.md
+│       │   │   ├── egc_sizing_and_250_122_notes.md
+│       │   │   └── egc_wire_and_raceway_methods.md
 │       │   ├── experiments/
 │       │   ├── mermaid_diagrams_to_reference.md
 │       │   ├── mini_machine_safety_design_v2_project_status.md
+│       │   ├── nec_2026_changes_topics/
+│       │   │   ├── 2026_nec_codewide_editorial_and_90_3_changes.md
+│       │   │   ├── 2026_nec_limited_energy_restructure.md
+│       │   │   ├── 2026_nec_medium_voltage_restructure.md
+│       │   │   ├── 2026_nec_new_and_relocated_articles.md
+│       │   │   ├── 2026_nec_overview_and_2029_transition.md
+│       │   │   └── README.md
 │       │   ├── nec_210_4_multiwire_branch_circuits_transcript_summary.md
 │       │   ├── nec_update.md
 │       │   ├── residential_nec_top_articles_transcript_summary.md

@@ -67,7 +67,7 @@ Keep entries concise and oriented to what future work needs to know.
 
 ---
 
-## 2026-03-08 — Standards Decision Workflow Enhancements
+### 2026-03-08 — Standards Decision Workflow Enhancements
 
 - Added `last_reviewed` and `standards_editions` to front matter
 - Added Purpose section with audience list and standards scope table
@@ -94,7 +94,7 @@ Keep entries concise and oriented to what future work needs to know.
 
 ---
 
-## 2026-03-08: NEC Page — Compliance-Focused Update
+### 2026-03-08: NEC Page — Compliance-Focused Update
 
 **Type:** Content / Standards
 **Status:** Complete

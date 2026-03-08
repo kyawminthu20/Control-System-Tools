@@ -71,16 +71,22 @@ Electrical equipment in hazardous locations must not heat surfaces to a temperat
 
 Select equipment whose T-code maximum surface temperature is **below the auto-ignition temperature** of the gas or dust present. Equipment must be marked with its T-code.
 
-## 5. Protection methods for Class I, Division 1
+## 5. Protection methods for Class I locations
 
-Equipment in the most hazardous locations must use one or more of these protection methods:
+**Division 1** (most hazardous) requires one or more of the following:
 
 | Method | NEC Term | Principle |
 |--------|----------|-----------|
 | Explosion-proof | XP | Enclosure contains explosion; cools gases before release |
 | Intrinsically safe | IS | Circuit energy too low to ignite (see Art. 504) |
 | Purged/Pressurized | PX/PY/PZ | Maintains inert gas positive pressure inside enclosure |
-| Non-incendive | NI | Circuit/equipment cannot ignite under normal conditions (Div. 2 only) |
+
+**Division 2** (less hazardous) allows the above methods plus:
+
+| Method | NEC Term | Principle |
+|--------|----------|-----------|
+| Non-incendive | NI | Circuit/equipment cannot ignite under normal conditions |
+| Hermetically sealed | — | Contacts sealed to prevent contact with atmosphere |
 
 ## 6. Area classification documentation (500.4)
 
@@ -104,7 +110,7 @@ Class II groups:
 
 ## 7. Relationship to IEC 60079
 
-The Zone classification system (Art. 505/506) aligns directly with IEC 60079. Equipment marked with ATEX or IECEx certification can be used in Zone-classified areas. Zone 0 ≈ Division 1 most hazardous; Zone 1 ≈ Division 1; Zone 2 ≈ Division 2. The mapping is approximate; always verify with the area classification drawing.
+The Zone classification system (Art. 505/506) aligns directly with IEC 60079. Equipment marked with ATEX or IECEx certification can be used in Zone-classified areas. Zone 0 (continuous) and Zone 1 (intermittent) both fall within the scope of Division 1; Zone 2 (unlikely, brief) maps to Division 2. The mapping is approximate; always verify with the area classification drawing.
 
 ## 8. Change log
 

@@ -311,7 +311,7 @@ inspection_priorities:
 coverage_notes:
   complete: ["090", "100", "110", "215", "230", "240", "250", "250.4", "300", "310", "408", "409", "430", "500", "504", "505", "670", "700-702", "725"]
   partial: []
-  planned: ["511", "514", "800"]  # Hazardous locations (dust), communications
+  planned: ["511", "514", "800"]  # Art 511: commercial garages; Art 514: motor fuel dispensing; Art 800: communications
 
 notes: |
   This index covers the core NEC articles for industrial control panel design.
