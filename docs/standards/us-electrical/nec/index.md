@@ -180,8 +180,6 @@ Critical for motor control panel designs:
 <details>
 <summary><strong>Expand — 2026 NEC changes (most jurisdictions are still on 2020 or 2023)</strong></summary>
 
-> **Adoption status:** The 2026 NEC is a finalized edition, published in 2025. Most jurisdictions are still enforcing the 2020 or 2023 edition. Always confirm the adopted edition with the **local AHJ** before applying 2026 references to a live project.
-
 **What changed at a glance:**
 
 | Article | Change type | Topic | Impact |
@@ -190,6 +188,12 @@ Critical for motor control panel designs:
 | **725** | Narrowed | Now Class 2 / Class 3 only | High — Class 1 citations in existing docs become incorrect |
 | **120** | Relocated | Load calculations (was Art. 220) | Low — rules unchanged, article number only |
 | **130** | Relocated | Energy management (was Art. 750) | Low — relevant for demand-response installations only |
+
+> **Adoption status:** The 2026 NEC is a finalized edition, published in 2025. Most jurisdictions are still enforcing the 2020 or 2023 edition. Always confirm the adopted edition with the **local AHJ** before applying 2026 references to a live project.
+
+---
+
+#### High-impact changes
 
 ---
 
@@ -227,6 +231,10 @@ Critical for motor control panel designs:
 
 **Engineer takeaway**
 > If you cite Art. 725 for anything other than low-energy Class 2 / Class 3 wiring, that reference needs to be updated to Art. 206.
+
+---
+
+#### Low-impact changes (article renumbering only)
 
 ---
 
