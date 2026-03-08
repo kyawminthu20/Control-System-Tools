@@ -35,6 +35,25 @@ companion_standards:
   <h1>NEC (NFPA 70):2023 — National Electrical Code</h1>
 </div>
 
+> **NEC at a glance:** Art. 409 → control panel SCCR marking. Art. 670 → machine disconnecting means. Art. 430 → motor protection. Art. 250 → grounding and bonding. NEC governs facility installation; NFPA 79 governs machine internal wiring design.
+
+---
+
+## Contents
+
+- [Standard Overview](#standard-overview)
+- [Scope and Limitations](#scope-and-limitations)
+- [Key Articles](#key-articles-for-industrial-control-systems)
+- [Article 409 — Industrial Control Panels](#article-409--industrial-control-panels)
+- [Article 670 — Industrial Machinery](#article-670--industrial-machinery)
+- [Article 430 — Motors](#article-430--motors)
+- [2026 NEC Changes](#2026-nec--key-changes-for-control-engineers)
+- [Relationship to Other Standards](#relationship-to-other-standards)
+- [Typical Machine Builder Workflow](#typical-machine-builder-workflow)
+- [Machine Builder Compliance Checklist](#machine-builder-compliance-checklist)
+
+---
+
 ## Standard Overview
 
 | Field | Value |
@@ -54,7 +73,7 @@ companion_standards:
 
 ---
 
-## Use This Page For
+## Scope and Limitations
 
 **Use NEC for:**
 - Feeder sizing and branch circuit protection
@@ -70,12 +89,7 @@ companion_standards:
 - Functional safety validation (SIL, PL) — use **ISO 13849-1** or **IEC 62061**
 - Risk reduction architecture — use **ISO 12100**
 
----
-
-## What the NEC Does Not Cover
-
-The NEC does **not** determine:
-
+**NEC does not determine:**
 - Performance Level (PL) or Safety Integrity Level (SIL) targets
 - Safety controller architecture or category selection
 - Stop category selection
@@ -103,37 +117,6 @@ These are handled by ISO 12100, ISO 13849-1, IEC 62061, and related functional s
 
 ---
 
-## 2026 NEC — Key Changes for Control Engineers
-
-> **Adoption status:** The 2026 NEC was published in 2025. Most jurisdictions are still enforcing the 2020 or 2023 edition. Confirm the adopted edition with the local AHJ before applying these changes to a live project.
-
-The 2026 edition restructures how control and signaling circuits are classified — directly affecting control panel design:
-
-### Article 206 (New) — Non-Power-Limited Remote Control and Signaling Circuits
-
-**Article 206 is new in the 2026 NEC.** It covers line-voltage remote control, signaling, and power-limited circuits that do not originate from a Class 2 or Class 3 power source. In practical terms: line-voltage control wiring inside a panel that is not a branch circuit and is not powered by a Class 2/3 source now belongs in **Article 206**, not Article 725.
-
-This is significant for control panel designers:
-- Motor control circuits fed from a control transformer at 120 V AC → **Article 206**
-- PLC I/O wiring at 24 VDC from a Class 2 power supply → **Article 725**
-- Safety relay input circuits at 24 VDC from a dedicated safety power supply → confirm power supply classification
-
-### Article 725 (Changed) — Now Class 2 and Class 3 Only
-
-In the 2026 NEC, **Class 1 circuits are removed from Article 725**. Article 725 now exclusively covers Class 2 and Class 3 circuits — the low-energy, limited-power wiring used for sensors, communication, and instrumentation. Class 1 line-voltage control wiring moves to the new Article 206.
-
-If you currently cite Article 725 for line-voltage motor control circuits, that reference is incorrect under the 2026 NEC.
-
-### Article 120 (Relocated) — Load Calculations
-
-Load calculations for branch circuits, feeders, and services have moved from Article 220 to **Article 120**. The rules are the same; only the article number changed. If your design documents reference Article 220 for load calculations, they will still be correct under 2023 NEC but should be updated to Article 120 for 2026 compliance.
-
-### Article 130 (Relocated) — Energy Management Systems
-
-Energy management system requirements moved from Article 750 to **Article 130**. Relevant for installations with demand-response controls or building energy management integrated with industrial power distribution.
-
----
-
 ## Article 409 — Industrial Control Panels
 
 NEC Article 409 governs **industrial control panels installed in facilities**.
@@ -141,7 +124,7 @@ NEC Article 409 governs **industrial control panels installed in facilities**.
 Key requirements include:
 
 - Panels must be properly marked
-- The **Short-Circuit Current Rating (SCCR)** must be determined and displayed (409.110)
+- The **Short-Circuit Current Rating (SCCR)** must be determined and displayed **(409.110)**
 - The panel must be installed within its marked SCCR
 - The marked SCCR must meet or exceed the available fault current at the installation point
 
@@ -174,11 +157,47 @@ In practice:
 
 Critical for motor control panel designs:
 
-- Branch circuit protection sizing (430.52)
-- Motor overload protection (430.32)
-- Disconnecting means (430.102)
-- Multi-motor applications (430.53)
+- Branch circuit protection sizing **(430.52)**
+- Motor overload protection **(430.32)**
+- Disconnecting means **(430.102)**
+- Multi-motor applications **(430.53)**
 - HVAC / air conditioning motors cross-reference to Article 440
+
+---
+
+## 2026 NEC — Key Changes for Control Engineers
+
+<details>
+<summary><strong>Expand — 2026 NEC changes (most jurisdictions are still on 2020 or 2023)</strong></summary>
+
+> **Adoption status:** The 2026 NEC was published in 2025. Most jurisdictions are still enforcing the 2020 or 2023 edition. Confirm the adopted edition with the local AHJ before applying these changes to a live project.
+
+The 2026 edition restructures how control and signaling circuits are classified — directly affecting control panel design:
+
+### Art. 206 (New) — Non-Power-Limited Remote Control and Signaling Circuits
+
+**Article 206 is new in the 2026 NEC.** It covers line-voltage remote control, signaling, and power-limited circuits that do not originate from a Class 2 or Class 3 power source. In practical terms: line-voltage control wiring inside a panel that is not a branch circuit and is not powered by a Class 2/3 source now belongs in **Article 206**, not Article 725.
+
+This is significant for control panel designers:
+- Motor control circuits fed from a control transformer at 120 V AC → **Article 206**
+- PLC I/O wiring at 24 VDC from a Class 2 power supply → **Article 725**
+- Safety relay input circuits at 24 VDC from a dedicated safety power supply → confirm power supply classification
+
+### Art. 725 (Changed) — Now Class 2 and Class 3 Only
+
+In the 2026 NEC, **Class 1 circuits are removed from Article 725**. Article 725 now exclusively covers Class 2 and Class 3 circuits — the low-energy, limited-power wiring used for sensors, communication, and instrumentation. Class 1 line-voltage control wiring moves to the new Article 206.
+
+If you currently cite Article 725 for line-voltage motor control circuits, that reference is incorrect under the 2026 NEC.
+
+### Art. 120 (Relocated) — Load Calculations
+
+Load calculations for branch circuits, feeders, and services have moved from Article 220 to **Article 120**. The rules are the same; only the article number changed. If your design documents reference Article 220 for load calculations, they will still be correct under 2023 NEC but should be updated to Article 120 for 2026 compliance.
+
+### Art. 130 (Relocated) — Energy Management Systems
+
+Energy management system requirements moved from Article 750 to **Article 130**. Relevant for installations with demand-response controls or building energy management integrated with industrial power distribution.
+
+</details>
 
 ---
 
@@ -207,12 +226,20 @@ NEC is the **enforceable installation code**. It works in combination with desig
 
 When designing a machine for the US market:
 
+**Phase 1 — Safety Design**
+
 1. Perform machine **risk assessment** (ISO 12100)
 2. Determine required **PL or SIL** level (ISO 13849-1 / IEC 62061)
 3. Design the **safety architecture**
+
+**Phase 2 — Electrical Design and Construction**
+
 4. Design machine electrical system (**NFPA 79**)
 5. Build control panel (**UL 508A**)
 6. Verify **SCCR** against available fault current (UL 508A SB)
+
+**Phase 3 — Installation and Compliance**
+
 7. Install equipment per **NEC** requirements
 8. Pass **AHJ inspection**
 
@@ -223,13 +250,13 @@ When designing a machine for the US market:
 Before installing a machine in a facility, verify the following:
 
 - [ ] Determine available fault current at the installation point
-- [ ] Verify panel SCCR meets or exceeds available fault current (409.110)
-- [ ] Feeder and branch circuit conductors properly sized (Articles 310, 430)
-- [ ] Motor branch circuit short-circuit and ground-fault protection verified (430.52)
-- [ ] Motor overload protection verified (430.32)
-- [ ] Machine disconnecting means location and sizing verified (Article 670)
-- [ ] Equipment grounding and bonding verified (Article 250)
-- [ ] Surge and overvoltage protection evaluated where safety circuits are present (409.70, 670.6)
+- [ ] Verify panel SCCR meets or exceeds available fault current **(Art. 409.110)**
+- [ ] Feeder and branch circuit conductors properly sized **(Art. 310, 430)**
+- [ ] Motor branch circuit short-circuit and ground-fault protection verified **(Art. 430.52)**
+- [ ] Motor overload protection verified **(Art. 430.32)**
+- [ ] Machine disconnecting means location and sizing verified **(Art. 670)**
+- [ ] Equipment grounding and bonding verified **(Art. 250)**
+- [ ] Surge and overvoltage protection evaluated where safety circuits are present **(Art. 409.70, 670.6)**
 
 ---
 
