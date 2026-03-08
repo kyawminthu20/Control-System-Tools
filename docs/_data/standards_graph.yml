@@ -1,0 +1,161 @@
+# Standards relationship graph data
+# nodes: id, label, family, url, x/y (for mini preset layout)
+# edges: source, target, type (requires|pairs-with|enforces|aligns-with), label
+
+nodes:
+  - id: nec
+    label: "NEC"
+    family: us-electrical
+    url: "/Control-System-Tools/standards/us-electrical/nec/"
+    x: 400
+    y: 320
+
+  - id: nfpa79
+    label: "NFPA 79"
+    family: us-electrical
+    url: "/Control-System-Tools/standards/us-electrical/nfpa-79/"
+    x: 250
+    y: 220
+
+  - id: ul508a
+    label: "UL 508A"
+    family: us-electrical
+    url: "/Control-System-Tools/standards/us-electrical/ul-508a/"
+    x: 400
+    y: 220
+
+  - id: iec60204
+    label: "IEC 60204-1"
+    family: machinery
+    url: "/Control-System-Tools/standards/machinery/iec-60204-1/"
+    x: 250
+    y: 120
+
+  - id: iso12100
+    label: "ISO 12100"
+    family: functional-safety
+    url: "/Control-System-Tools/standards/functional-safety/iso-12100/"
+    x: 100
+    y: 60
+
+  - id: iso138491
+    label: "ISO 13849-1"
+    family: functional-safety
+    url: "/Control-System-Tools/standards/functional-safety/iso-13849-1/"
+    x: 100
+    y: 180
+
+  - id: iec62061
+    label: "IEC 62061"
+    family: functional-safety
+    url: "/Control-System-Tools/standards/functional-safety/iec-62061/"
+    x: 250
+    y: 60
+
+  - id: iec61508
+    label: "IEC 61508"
+    family: functional-safety
+    url: "/Control-System-Tools/standards/functional-safety/iec-61508/"
+    x: 100
+    y: 300
+
+  - id: iec61511
+    label: "IEC 61511"
+    family: functional-safety
+    url: "/Control-System-Tools/standards/functional-safety/iec-61511/"
+    x: 250
+    y: 340
+
+  - id: iec62443
+    label: "IEC 62443"
+    family: cybersecurity
+    url: "/Control-System-Tools/standards/cybersecurity/iec-62443/"
+    x: 550
+    y: 120
+
+  - id: iec60079
+    label: "IEC 60079"
+    family: hazardous-area
+    url: "/Control-System-Tools/standards/hazardous-area/iec-60079/"
+    planned: true
+    x: 550
+    y: 320
+
+  - id: semi
+    label: "SEMI S2/S8/S14"
+    family: semiconductor
+    url: "/Control-System-Tools/standards/semiconductor/semi/"
+    planned: true
+    x: 550
+    y: 220
+
+edges:
+  - source: nfpa79
+    target: nec
+    type: enforces
+    label: "enforced via Art. 670"
+
+  - source: ul508a
+    target: nec
+    type: enforces
+    label: "SCCR per Art. 409"
+
+  - source: nfpa79
+    target: iec60204
+    type: aligns-with
+    label: "US/international equivalent"
+
+  - source: ul508a
+    target: nfpa79
+    type: pairs-with
+    label: "panel + machine wiring"
+
+  - source: iso138491
+    target: iso12100
+    type: requires
+    label: "requires risk assessment"
+
+  - source: iec62061
+    target: iso12100
+    type: requires
+    label: "requires risk assessment"
+
+  - source: iec60204
+    target: iso12100
+    type: requires
+    label: "requires risk assessment"
+
+  - source: iso138491
+    target: iec62061
+    type: pairs-with
+    label: "machinery SRP/CS: choose one"
+
+  - source: iec61511
+    target: iec61508
+    type: requires
+    label: "derives from IEC 61508"
+
+  - source: iec62061
+    target: iec61508
+    type: requires
+    label: "derives from IEC 61508"
+
+  - source: iec62443
+    target: iec62061
+    type: pairs-with
+    label: "safety + security pairing"
+
+  - source: iec62443
+    target: iec61511
+    type: pairs-with
+    label: "SIS security coordination"
+
+  - source: iec60079
+    target: nec
+    type: aligns-with
+    label: "Zone system via Art. 505"
+
+  - source: semi
+    target: iec60204
+    type: aligns-with
+    label: "semiconductor equipment"
