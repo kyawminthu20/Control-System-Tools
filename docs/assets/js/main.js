@@ -282,6 +282,7 @@
   function updateBtn(theme) {
     btn.textContent = theme === 'dark' ? '\u2600' : '\u263E'; // ☀ or ☾
     btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
   }
 
   // Sync button icon with current theme (set by inline head script)
