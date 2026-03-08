@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 06:37:49
+**Last Auto-Updated:** 2026-03-08 06:42:49
 
 ```text
 ├── .claude/
@@ -1209,7 +1209,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── 2026-03-08-glossary-design.md
 │   │   ├── 2026-03-08-glossary-implementation.md
 │   │   ├── 2026-03-08-nec-page-update.md
-│   │   └── 2026-03-08-theme-switching-design.md
+│   │   ├── 2026-03-08-theme-switching-design.md
+│   │   └── 2026-03-08-theme-switching-implementation.md
 │   ├── scenarios/
 │   │   ├── global-machine/
 │   │   │   └── index.md
