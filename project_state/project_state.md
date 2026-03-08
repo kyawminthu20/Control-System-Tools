@@ -169,6 +169,21 @@ requires zero user interaction while still allowing manual override.
 - [x] `NEC_2023__Art250_4__purposes_of_grounding_and_bonding.md` — committed
 - [x] `_index.yaml` — NEC2023-Art250-4 entry added
 
+## Phase 9 Backlog — NEC Page Polish + Code Review Fixes
+
+From CodeRabbit review (2026-03-08) and readability review:
+
+### NEC page (`docs/standards/us-electrical/nec/index.md`)
+- [ ] Rename Key Articles table column "Article" → "Article / Section" and section heading to "Key Articles and Sections for Industrial Control Systems"
+- [ ] Verify Art. 409.70 and Art. 670.6 exist in NEC 2023 corpus (`control-standards/rag/standards_intelligence/us/nec/`) and confirm accuracy of all references on the page
+
+### Other files flagged by code review
+- [ ] `control-standards/work/design/nec_update.md` — CRITICAL: file appears to contain a raw video transcript; review and clean up or remove
+- [ ] `control-standards/work/design/Grounding...2020 NEC.md` — NEC edition mismatch between title (2020) and authoritative link (2023); add clarifying note or align editions
+- [ ] `docs/glossary/index.md` — 2 potential issues flagged; review and fix
+- [ ] `docs/assets/css/main.css` — 1 potential issue flagged; review and fix
+- [ ] `docs/plans/` files — multiple potential issues in plan files; review for accuracy
+
 ## Phase 5 Backlog (after IEC 62443)
 
 - SEMI S2/S8/S14 standard pages (not yet in corpus)

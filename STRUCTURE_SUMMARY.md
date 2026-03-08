@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 14:57:14
+**Last Auto-Updated:** 2026-03-08 14:59:00
 
 ```text
 ├── .claude/
@@ -753,8 +753,12 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── d3316f7c16039a4102c5a6253e8e9b67d37db908b0678995a7bf4a813b9221
 │   │               ├── 1d/
 │   │               │   └── 250bb7b7aa156123d8f05946de1c67eab85119aa8ee3e2b875f738549d9bd3
+│   │               ├── 1e/
+│   │               │   └── 66cf06507d7410aa2c21264d3c2affb5b5ef8e49f1ec94db2a1285d47a9225
 │   │               ├── 23/
 │   │               │   └── 7ae4631ab84a0848ee51d4ecb6b14d359e0e4555074581c35f903dfdc94737
+│   │               ├── 25/
+│   │               │   └── 8e30e04480a1d85dfbce1ae190a0d36926dbc8e652e2f007f1afdabe1b4bd9
 │   │               ├── 27/
 │   │               │   └── e44a450c423c9eb130be0e89f59aeb0f1ed6640b8c00fe1432a47164899edc
 │   │               ├── 28/
@@ -925,6 +929,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── bf/
 │   │               │   └── 6bc0b2ee31345100572fb539a65f9bbb7ae04b3392d53f663e0c9bed14384d
 │   │               ├── c1/
+│   │               │   ├── 59482e0be98a982c5578f479cd8d27ab4165a8f5b1a6800bd3be57aeeb3fa9
 │   │               │   └── 8e3fce589275c09a49f1a4cc7677ad37b290a8c78dbe1646be80feb378da27
 │   │               ├── c2/
 │   │               │   └── ef846d9adcc041c4563da65557ef2554f2838ebcc000c3278a7b0603730cd8
@@ -1126,6 +1131,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │       │   │   └── index.html
 │   │       │   └── iso-13849-1/
 │   │       │       └── index.html
+│   │       ├── graph/
+│   │       │   └── index.html
 │   │       ├── index.html
 │   │       ├── machinery/
 │   │       │   ├── iec-60204-1/
@@ -1258,6 +1265,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   └── index.md
 │   │   │   └── iso-13849-1/
 │   │   │       └── index.md
+│   │   ├── graph/
+│   │   │   └── index.md
 │   │   ├── index.md
 │   │   ├── machinery/
 │   │   │   ├── iec-60204-1/
