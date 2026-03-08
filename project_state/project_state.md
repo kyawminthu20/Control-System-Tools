@@ -125,6 +125,18 @@ across multiple pages with no single reference point. A cross-linked glossary cl
 - [x] `docs/_includes/sidebar.html` — Glossary added to Reference section
 - [x] Jekyll build clean
 
+## Phase 7 Scope — Theme Switching — COMPLETED
+
+**Rationale:** Engineers use reference sites in varied lighting environments. Dark mode
+reduces eye strain during late-night or low-light reading. Following OS preference
+requires zero user interaction while still allowing manual override.
+
+- [x] `docs/assets/css/main.css` — new CSS variables for hardcoded colors; `[data-theme="dark"]` token block; `@media (prefers-color-scheme: dark)` fallback; toggle button styles
+- [x] `docs/_layouts/default.html` — inline flash-prevention script in `<head>`
+- [x] `docs/_includes/topnav.html` — theme toggle button (☾/☀)
+- [x] `docs/assets/js/main.js` — toggle handler with `localStorage` persistence
+- [x] Jekyll build clean
+
 ## Phase 5 Backlog (after IEC 62443)
 
 - SEMI S2/S8/S14 standard pages (not yet in corpus)

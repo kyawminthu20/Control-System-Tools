@@ -18,6 +18,21 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-08: Dark Mode / Theme Switching Added
+
+**Type:** UX / CSS
+**Status:** Complete
+
+- Added CSS custom property variables for all previously hardcoded colors (topnav, cards, table stripes, lifecycle stages)
+- Added `[data-theme="dark"]` token block and `@media (prefers-color-scheme: dark)` fallback
+- Added inline flash-prevention script in `<head>` — resolves theme before first paint
+- Added theme toggle button (☾/☀) to topnav
+- Added toggle handler in `main.js` with `localStorage` persistence
+- Default: follows OS `prefers-color-scheme`; user override saved across sessions
+- Build clean
+
+---
+
 ## 2026-03-08 — Standards Decision Workflow Enhancements
 
 - Added `last_reviewed` and `standards_editions` to front matter
