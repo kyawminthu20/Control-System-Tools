@@ -32,7 +32,7 @@ related_standards:
 
 ## Purpose
 
-This workflow helps engineers determine **which standards apply at each stage of industrial machine design and installation** in the United States.
+This workflow helps engineers determine **which standards apply at each stage of industrial machine design and installation**, with a primary focus on US requirements and guidance for EU/CE and international standards (IEC 60204-1, ISO 12100, ISO 13849-1).
 
 **Intended for:**
 - Control engineers
