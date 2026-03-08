@@ -157,6 +157,20 @@ flowchart TD
 
 ---
 
+## Standard Scope Boundaries
+
+Many engineers confuse these three overlapping standards. The table below clarifies where each one applies.
+
+| Standard | Governs | Applies To |
+|----------|---------|------------|
+| **NFPA 79** | Electrical design of the machine itself | Machine wiring, enclosures, control devices |
+| **UL 508A** | Construction of industrial control panels | Panel shop fabrication, listing |
+| **NEC** | Electrical installation in buildings | Facility wiring from the panel to the machine |
+
+> **Key boundary:** NFPA 79 stops at the machine connection point. NEC governs everything from the building supply to that point. UL 508A governs how the panel is built, not where it connects.
+
+---
+
 ## Step 4 — Confirm Coverage in This Repository
 
 | Standard | Corpus Status |
