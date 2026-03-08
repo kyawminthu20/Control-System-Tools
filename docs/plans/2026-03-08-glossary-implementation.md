@@ -627,7 +627,7 @@ Create `docs/_data/glossary.yml` with the following content exactly — 30 terms
 python3 -c "import yaml; data = yaml.safe_load(open('docs/_data/glossary.yml')); print(f'OK — {len(data)} terms loaded')"
 ```
 
-Run from: `/Users/kyawminthu/Dev/Control System Tools/`
+Run from repository root: `./`
 
 Expected output: `OK — 30 terms loaded`
 
@@ -718,7 +718,7 @@ last_reviewed: "2026-03-08"
 **Step 2: Verify Jekyll builds cleanly**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools/docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -6
+cd docs && bundle exec jekyll build 2>&1 | tail -6
 ```
 
 Expected: `done in X seconds.` with no errors. Page count should increase by 1 (from 52 to 53).
@@ -872,7 +872,7 @@ Add the following block at the end of `docs/assets/css/main.css`:
 **Step 2: Verify build is still clean**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools/docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -4
+cd docs && bundle exec jekyll build 2>&1 | tail -4
 ```
 
 Expected: clean build, no errors.
@@ -917,13 +917,13 @@ Replace with:
 **Step 2: Verify build and sidebar renders correctly**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools/docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -4
+cd docs && bundle exec jekyll build 2>&1 | tail -4
 ```
 
 Then confirm the sidebar link appears in the built HTML:
 
 ```bash
-grep -c "glossary" /Users/kyawminthu/Dev/Control\ System\ Tools/docs/_site/index.html
+grep -c "glossary" docs/_site/index.html
 ```
 
 Expected: `1` or more (link appears in sidebar on every page).
