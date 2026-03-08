@@ -37,6 +37,23 @@ documents:
     priority: "critical"  # Safety-critical, frequent inspection failures
     related_standards: ["NFPA79_Ch08"]
 
+  - doc_id: "NEC2023-Art250-4"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art250_4__purposes_of_grounding_and_bonding.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "250"
+      section: "250.4"
+      article_title: "Grounding and Bonding"
+      section_title: "General Requirements for Grounding and Bonding"
+    tags:
+      topics: ["grounding", "bonding", "system_grounding", "equipment_grounding", "overvoltage", "effective_ground_fault_path", "grounding_electrode_conductor"]
+      systems: ["industrial_control_panel", "machine"]
+      risks: ["shock", "fire", "overvoltage", "lightning"]
+    priority: "critical"  # Foundational purposes section — explains why all Art250 rules exist
+    related_standards: ["NFPA79_Ch08"]
+    note: "Synthesized from NEC 250.4 code text and Mike Holt 2020 instructional content. Covers grounded and ungrounded system purposes, GEC installation rationale. Companion to NEC2023-Art250."
+
   - doc_id: "NEC2023-Art300"
     path: "rag/standards_intelligence/us/nec/NEC_2023__Art300__general_wiring_methods.md"
     content_class: "RAG_APPROVED"
@@ -193,7 +210,7 @@ inspection_priorities:
 
 # Article coverage assessment
 coverage_notes:
-  complete: ["110", "250", "310", "409", "430", "670"]
+  complete: ["090", "100", "110", "240", "250", "250.4", "300", "310", "408", "409", "430", "670", "725"]
   partial: []
   planned: ["511", "514", "800"]  # Hazardous locations, communications
 

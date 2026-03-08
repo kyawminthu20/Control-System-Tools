@@ -18,6 +18,18 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-08 — NEC RAG Gap-Fill: Art250.4 Added
+
+**Type:** RAG Corpus / Content
+**Status:** Partial (250.4 complete; 409.70, 670.6 outstanding)
+
+- Created `NEC_2023__Art250_4__purposes_of_grounding_and_bonding.md` — synthesized from NEC 250.4 code text and Mike Holt 2020 instructional content. No verbatim NEC text. Covers: system grounding vs equipment grounding, bonding vs grounding distinction, effective ground-fault current path, GEC routing rationale (inductive reactance / skin effect), grounded and ungrounded system differences, common engineering errors.
+- Updated `_index.yaml`: registered NEC2023-Art250-4 entry using `note` field (valid); corrected `coverage_notes.complete` to list all 13 article files actually present in the corpus.
+- Source file: `control-standards/work/design/Grounding, System and Equipment [250.4, 2020 NEC].md` (raw transcript — not committed to RAG).
+- Remaining gaps: Art409.70 (surge protection) and Art670.6 (overvoltage protection) referenced on NEC site page but no dedicated RAG sub-files.
+
+---
+
 ### 2026-03-08: Dark Mode / Theme Switching Added
 
 **Type:** UX / CSS

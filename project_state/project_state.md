@@ -137,6 +137,40 @@ requires zero user interaction while still allowing manual override.
 - [x] `docs/assets/js/main.js` — toggle handler with `localStorage` persistence
 - [x] Jekyll build clean
 
+## Phase 8 Scope — NEC RAG Gap-Fill — IN PROGRESS
+
+**Plan:** `docs/plans/2026-03-08-nec-missing-articles.md`
+**Goal:** Add 8 missing NEC 2023 article files + update index/status files.
+
+### Task 1 — Art 90 + Art 100 — COMPLETE (committed)
+- [x] `NEC_2023__Art090__scope_and_purpose.md`
+- [x] `NEC_2023__Art100__definitions.md`
+
+### Task 2 — Art 500 + Art 504 — FILES CREATED, NOT COMMITTED
+- [x] `NEC_2023__Art500__hazardous_locations_general.md` — created, unstaged
+- [x] `NEC_2023__Art504__intrinsically_safe_systems.md` — created, unstaged
+
+### Task 3 — Art 505 (Zone Classification) — OPEN
+- [ ] `NEC_2023__Art505__zone_0_1_2_classification.md`
+
+### Task 4 — Art 215 + Art 230 (Feeders and Services) — OPEN
+- [ ] `NEC_2023__Art215__feeders.md`
+- [ ] `NEC_2023__Art230__services.md`
+
+### Task 5 — Art 700–702 (Emergency/Standby Systems) — OPEN
+- [ ] `NEC_2023__Art700__emergency_systems.md`
+- [ ] `NEC_2023__Art701__legally_required_standby.md`
+- [ ] `NEC_2023__Art702__optional_standby.md`
+
+### Task 6 — Update _index.yaml + NEC_COMPLETION_STATUS + NEC_OVERVIEW — OPEN
+- [ ] Register all new articles in `_index.yaml`
+- [ ] Update `NEC_COMPLETION_STATUS.md`
+- [ ] Update `NEC_OVERVIEW.md`
+
+### Additional items (from Art250.4 session)
+- [x] `NEC_2023__Art250_4__purposes_of_grounding_and_bonding.md` — created, unstaged
+- [x] `_index.yaml` — NEC2023-Art250-4 entry added, `coverage_notes.complete` corrected
+
 ## Phase 5 Backlog (after IEC 62443)
 
 - SEMI S2/S8/S14 standard pages (not yet in corpus)
