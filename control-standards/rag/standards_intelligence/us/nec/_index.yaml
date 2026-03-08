@@ -8,7 +8,7 @@ standard_id: "NFPA_70"
 standard_title: "National Electrical Code"
 edition: "2023"
 jurisdiction: "US"
-last_updated: "2026-01-15"
+last_updated: "2026-03-08"
 
 documents:
   - doc_id: "NEC2023-Art110"
@@ -152,6 +152,105 @@ documents:
     priority: "high"  # Important for machinery installations
     related_standards: ["NFPA79"]
 
+  - doc_id: "NEC2023-Art090"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art090__scope_and_purpose.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "90"
+      article_title: "Introduction — Scope and Purpose"
+    tags:
+      topics: ["scope", "purpose", "ahj", "adoption"]
+      systems: ["all"]
+    priority: "high"
+
+  - doc_id: "NEC2023-Art100"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art100__definitions.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "100"
+      article_title: "Definitions"
+    tags:
+      topics: ["definitions", "terminology", "sccr", "listed", "grounding"]
+      systems: ["all"]
+    priority: "high"
+
+  - doc_id: "NEC2023-Art215"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art215__feeders.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "215"
+      article_title: "Feeders"
+    tags:
+      topics: ["feeders", "conductor_sizing", "continuous_load"]
+      systems: ["power_distribution", "industrial_control_panel"]
+    priority: "standard"
+
+  - doc_id: "NEC2023-Art230"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art230__services.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "230"
+      article_title: "Services"
+    tags:
+      topics: ["service_entrance", "available_fault_current", "sccr"]
+      systems: ["power_distribution", "industrial_facility"]
+    priority: "standard"
+
+  - doc_id: "NEC2023-Art500"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art500__hazardous_locations_general.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "500"
+      article_title: "Hazardous Locations — General"
+    tags:
+      topics: ["hazardous_locations", "class_I", "class_II", "division_1", "division_2", "explosion_proof"]
+      systems: ["process_control", "oil_gas", "chemical"]
+    priority: "high"
+
+  - doc_id: "NEC2023-Art504"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art504__intrinsically_safe_systems.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "504"
+      article_title: "Intrinsically Safe Systems"
+    tags:
+      topics: ["intrinsically_safe", "IS", "zener_barrier", "galvanic_isolator", "FISCO"]
+      systems: ["process_control", "instrumentation", "oil_gas"]
+    priority: "high"
+    related_standards: ["IEC60079-11"]
+
+  - doc_id: "NEC2023-Art505"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art505__zone_0_1_2_gas_vapors.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "505"
+      article_title: "Zone 0, 1, and 2 Locations"
+    tags:
+      topics: ["zone_0", "zone_1", "zone_2", "IEC_60079", "ATEX", "IECEx"]
+      systems: ["process_control", "oil_gas"]
+    priority: "standard"
+    related_standards: ["IEC60079-0", "IEC60079-11"]
+
+  - doc_id: "NEC2023-Art700-702"
+    path: "rag/standards_intelligence/us/nec/NEC_2023__Art700_702__emergency_standby_systems.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    nec_hierarchy:
+      article: "700"
+      article_title: "Emergency / Legally Required Standby / Optional Standby Systems"
+    tags:
+      topics: ["emergency_systems", "standby_power", "transfer_switch", "UPS", "generator"]
+      systems: ["safety_systems", "process_safety", "fire_alarm"]
+    priority: "standard"
+    related_standards: ["IEC61511", "ISO13849"]
+
 # Priority articles for control panel work
 priority_articles:
   critical:
@@ -210,9 +309,9 @@ inspection_priorities:
 
 # Article coverage assessment
 coverage_notes:
-  complete: ["090", "100", "110", "240", "250", "250.4", "300", "310", "408", "409", "430", "670", "725"]
+  complete: ["090", "100", "110", "215", "230", "240", "250", "250.4", "300", "310", "408", "409", "430", "500", "504", "505", "670", "700-702", "725"]
   partial: []
-  planned: ["511", "514", "800"]  # Hazardous locations, communications
+  planned: ["511", "514", "800"]  # Hazardous locations (dust), communications
 
 notes: |
   This index covers the core NEC articles for industrial control panel design.

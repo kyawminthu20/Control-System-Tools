@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 13:43:27
+**Last Auto-Updated:** 2026-03-08 13:53:17
 
 ```text
 ├── .claude/
@@ -658,19 +658,23 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       ├── design/
 │       │   ├── Grounding, System and Equipment [250.4, 2020 NEC].md
 │       │   ├── README.md
+│       │   ├── check_this.md
+│       │   ├── conductor_protection_and_ampacity_transcript_summary.md
 │       │   ├── decision_workflow.md
 │       │   ├── diagrams/
 │       │   ├── experiments/
 │       │   ├── mermaid_diagrams_to_reference.md
 │       │   ├── mini_machine_safety_design_v2_project_status.md
+│       │   ├── nec_210_4_multiwire_branch_circuits_transcript_summary.md
 │       │   ├── nec_update.md
-│       │   ├── scratch_notes/
-│       │   ├── simple_safety_system_design.md
-│       │   ├── standards_atlas_homepage_wireframe_and_templates.md
-│       │   ├── standards_web_page_design_prompt_v1.md
-│       │   ├── standards_web_page_design_prompt_v3.md
-│       │   ├── standards_web_page_design_prompt_v4.1.md
-│       │   └── standards_web_page_design_prompt_v4.md
+│       │   ├── residential_nec_top_articles_transcript_summary.md
+│       │   └── scratch_notes/
+│       │       ├── simple_safety_system_design.md
+│       │       ├── standards_atlas_homepage_wireframe_and_templates.md
+│       │       ├── standards_web_page_design_prompt_v1.md
+│       │       ├── standards_web_page_design_prompt_v3.md
+│       │       ├── standards_web_page_design_prompt_v4.1.md
+│       │       └── standards_web_page_design_prompt_v4.md
 │       └── general/
 │           ├── 00_inbox_notes.md
 │           ├── README.md

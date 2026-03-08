@@ -46,9 +46,37 @@ NEC_2023__Art<NNN>__<descriptive_slug>.md
 |---------|-------|----------|------------|
 | 670 | Industrial Machinery | **HIGH** | Machine disconnects, NFPA 79 overlap |
 
+### General and Definitions
+
+| Article | Title | Priority | Focus Area |
+|---------|-------|----------|------------|
+| 90 | Introduction — Scope and Purpose | **HIGH** | NEC scope limits, AHJ authority, adoption process |
+| 100 | Definitions | **HIGH** | Authoritative definitions: listed, labeled, grounded, SCCR |
+
+### Power Distribution
+
+| Article | Title | Priority | Focus Area |
+|---------|-------|----------|------------|
+| 215 | Feeders | Standard | Feeder conductor sizing, continuous load rule, 125% factor |
+| 230 | Services | Standard | Available fault current, service disconnect, neutral-to-ground bond |
+
+### Hazardous Locations
+
+| Article | Title | Priority | Focus Area |
+|---------|-------|----------|------------|
+| 500 | Hazardous Locations — General | **HIGH** | Class/Division framework, T-code, equipment selection |
+| 504 | Intrinsically Safe Systems | **HIGH** | IS design rules, zener barriers, galvanic isolators |
+| 505 | Zone 0, 1, and 2 Locations | Standard | IEC-aligned zone system, ATEX/IECEx equipment use in US |
+
+### Emergency and Standby Power
+
+| Article | Title | Priority | Focus Area |
+|---------|-------|----------|------------|
+| 700–702 | Emergency / Legally Required / Optional Standby | Standard | Transfer time tiers, ATS requirements, safety system power coordination |
+
 ### Planned (Not Yet Created)
 
-- Article 511/514 — Hazardous Locations (if applicable)
+- Article 511/514 — Hazardous Locations: motor fuel dispensing, bulk storage (dust environments)
 - Article 800/820/830 — Communications Circuits (if applicable)
 
 ## Priority Articles (Recommended Focus)
