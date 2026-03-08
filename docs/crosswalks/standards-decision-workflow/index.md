@@ -30,6 +30,30 @@ related_standards:
   <p>Use this page at the start of a project to determine which standards apply.</p>
 </div>
 
+## Purpose
+
+This workflow helps engineers determine **which standards apply at each stage of industrial machine design and installation** in the United States.
+
+**Intended for:**
+- Control engineers
+- Machine builders
+- Panel designers
+- System integrators
+
+**Standards covered:**
+
+| Standard | Role |
+|----------|------|
+| ISO 12100 | Risk assessment methodology |
+| ISO 13849-1 / IEC 62061 | Functional safety architecture |
+| NFPA 79 | Machine electrical design |
+| UL 508A | Control panel construction |
+| NEC | Electrical installation in buildings |
+
+> **Scope note:** This workflow covers US-market industrial machines. EU/CE requirements add IEC 60204-1 and the Machinery Directive. Process safety systems follow IEC 61511 instead of ISO 13849.
+
+---
+
 ## Quick Decision Tree
 
 <div class="mermaid-wrap">
