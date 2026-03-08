@@ -114,6 +114,17 @@ Design: `docs/plans/2026-03-05-phase2-design.md`
 
 - [x] Jekyll build clean — 52 pages
 
+## Phase 6 Scope — Glossary — COMPLETED
+
+**Rationale:** Engineers using the site encounter terms (SIL, PL, SCCR, AHJ, HFT, SFF, MTTFd)
+across multiple pages with no single reference point. A cross-linked glossary closes this gap.
+
+- [x] `docs/_data/glossary.yml` — 28 seed terms across Safety, Electrical, Standards Bodies, Regulatory domains
+- [x] `docs/glossary/index.md` — rendered page with A-Z anchor strip, domain badges, standard links, lifecycle links, See Also cross-links
+- [x] `docs/assets/css/main.css` — glossary entry card styles and domain badge variants
+- [x] `docs/_includes/sidebar.html` — Glossary added to Reference section
+- [x] Jekyll build clean
+
 ## Phase 5 Backlog (after IEC 62443)
 
 - SEMI S2/S8/S14 standard pages (not yet in corpus)
