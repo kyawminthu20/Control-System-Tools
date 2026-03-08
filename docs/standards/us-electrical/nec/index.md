@@ -50,44 +50,92 @@ companion_standards:
 
 **Purpose:** NEC is the minimum standard for electrical installations. For industrial control systems, it is the legally enforced baseline — NFPA 79 and UL 508A add additional requirements on top.
 
+> **Edition adoption caveat:** The NEC is published every three years, but each state or municipality adopts a specific edition independently. Always verify the applicable NEC edition with the **local Authority Having Jurisdiction (AHJ)** before beginning design work — especially on multi-state or retrofit projects.
+
+---
+
+## Use This Page For
+
+**Use NEC for:**
+- Feeder sizing and branch circuit protection
+- Grounding and bonding requirements
+- Disconnecting means location and sizing
+- Electrical installation rules for the facility
+- Wiring methods (conduit, cable tray, etc.)
+- Verifying panel SCCR against available fault current
+
+**Do not use NEC alone for:**
+- Machine internal wiring details — use **NFPA 79**
+- Panel construction method and component ratings — use **UL 508A**
+- Functional safety validation (SIL, PL) — use **ISO 13849-1** or **IEC 62061**
+- Risk reduction architecture — use **ISO 12100**
+
+---
+
+## What the NEC Does Not Cover
+
+The NEC does **not** determine:
+
+- Performance Level (PL) or Safety Integrity Level (SIL) targets
+- Safety controller architecture or category selection
+- Stop category selection
+- Guarding strategy
+- Machine risk assessment method
+
+These are handled by ISO 12100, ISO 13849-1, IEC 62061, and related functional safety standards.
+
 ---
 
 ## Key Articles for Industrial Control Systems
 
-| Article | Topic | Relationship |
-|---------|-------|-------------|
-| **250** | Grounding and bonding | Foundation for all electrical installations |
-| **310** | Conductors for general wiring | Wire sizing basis |
-| **409** | Industrial control panels | Panel installation; requires UL listing or field evaluation |
+| Article | Topic | Relevance |
+|---------|-------|-----------|
+| **250** | Grounding and bonding | Foundation for all electrical installations; protective grounding for equipment and panels |
+| **300** | Wiring methods | Installation rules for cables, conduits, and raceways |
+| **310** | Conductors for general wiring | Conductor sizing and insulation ratings |
+| **409** | Industrial control panels | Panel installation; SCCR marking requirement (409.110) |
+| **409.70** | Surge protection | Surge protection requirements for industrial control panels (NEC 2023) |
 | **430** | Motors, motor circuits, and controllers | Motor protection, overcurrent, disconnects |
 | **440** | Air-conditioning equipment | HVAC-related motor control |
-| **670** | Industrial machinery | References NFPA 79 for electrical design |
-| **725** | Class 1, 2, 3 remote-control circuits | Control circuit wiring methods |
+| **670** | Industrial machinery | Installation requirements for machines; references NFPA 79 for machine electrical design |
+| **670.6** | Overvoltage protection | Overvoltage protection for industrial machinery supply circuits (NEC 2023) |
+| **725** | Class 1, 2, 3 remote-control circuits | Control and signaling circuit wiring methods |
 
 ---
 
 ## Article 409 — Industrial Control Panels
 
-NEC Article 409 is the primary article for industrial control panels:
+NEC Article 409 governs **industrial control panels installed in facilities**.
 
-- Requires listed equipment or field evaluation
-- Requires marked SCCR (409.110) — must match available fault current
-- Covers installation requirements for the panel enclosure
-- Specifies marking requirements
+Key requirements include:
 
-**SCCR requirement:** `409.110` requires the panel to be marked with the SCCR. This is calculated per UL 508A Section SB and must meet or exceed the available fault current at the installation point.
+- Panels must be properly marked
+- The **Short-Circuit Current Rating (SCCR)** must be determined and displayed (409.110)
+- The panel must be installed within its marked SCCR
+- The marked SCCR must meet or exceed the available fault current at the installation point
+
+**On SCCR determination:** NEC Article 409 requires SCCR to be established by an approved method. UL 508A Supplement SB is a commonly used approved method for determining SCCR. A listed/labeled assembly satisfies this requirement; a field-evaluated panel may use other approved methods. Avoid stating that UL 508A listing is the only path — it is one approved method among others.
+
+**On 409.70 — Surge Protection (NEC 2023):** Where industrial control panels contain electronic components or safety circuits sensitive to transient voltage events, surge protective devices (SPDs) may be required. This is particularly relevant where safety relay modules, PLCs, or safety controllers are housed in the panel.
 
 ---
 
 ## Article 670 — Industrial Machinery
 
-Article 670 covers industrial machinery as a complete unit:
+Article 670 applies to **industrial machines installed in facilities**.
 
-- References NFPA 79 for electrical design requirements of the machine
-- Covers supply conductor sizing for the machine feeder
-- Addresses disconnecting means for the machine
+It primarily addresses:
+- Machine disconnecting means
+- Supply circuit requirements and feeder sizing
+- Overcurrent protection at the machine supply
 
-**Important:** Article 670 makes NFPA 79 the effective electrical design standard for industrial machinery in the US market.
+**NEC / NFPA 79 relationship:** For industrial machinery, NEC Article 670 points engineers toward **NFPA 79** for many machine electrical design details, while NEC remains the enforceable installation code.
+
+In practice:
+- **NEC governs how electrical systems are installed in the facility**
+- **NFPA 79 governs machine electrical design**
+
+**On 670.6 — Overvoltage Protection (NEC 2023):** Industrial machinery supply circuits may require overvoltage protection per 670.6, particularly where safety system components are sensitive to supply voltage transients.
 
 ---
 
@@ -105,12 +153,53 @@ Critical for motor control panel designs:
 
 ## Relationship to Other Standards
 
-```
-NEC (legally enforced)
-    ├── Article 409  →  requires UL 508A listing for panels
-    └── Article 670  →  references NFPA 79 for machine design
-                              ↓
-                         NFPA 79 applies
-```
+NEC is the **enforceable installation code**. It works in combination with design and construction standards:
+
+| Standard | Scope |
+|----------|-------|
+| **NEC (NFPA 70)** | Electrical installation — enforced by AHJ |
+| **NFPA 79** | Machine electrical design |
+| **UL 508A** | Industrial control panel construction |
+| **ISO 12100** | Machine risk assessment |
+| **ISO 13849-1** | Safety control system Performance Levels |
+| **IEC 60204-1** | Electrical equipment of machinery (international) |
+
+> **NEC is the enforceable installation code.**
+> **Article 409** governs industrial control panel installation and marking, including SCCR marking.
+> **Article 670** applies to industrial machinery as installed equipment and points to NFPA 79 for many machine electrical design details.
+> **UL 508A** is commonly used to construct and evaluate panels, including SCCR determination by approved method.
+> Functional safety requirements such as PL/SIL are handled separately through standards such as **ISO 13849-1** and **IEC 62061**.
+
+---
+
+## Typical Machine Builder Workflow
+
+When designing a machine for the US market:
+
+1. Perform machine **risk assessment** (ISO 12100)
+2. Determine required **PL or SIL** level (ISO 13849-1 / IEC 62061)
+3. Design the **safety architecture**
+4. Design machine electrical system (**NFPA 79**)
+5. Build control panel (**UL 508A**)
+6. Verify **SCCR** against available fault current (UL 508A SB)
+7. Install equipment per **NEC** requirements
+8. Pass **AHJ inspection**
+
+---
+
+## Machine Builder Compliance Checklist
+
+Before installing a machine in a facility, verify the following:
+
+- [ ] Determine available fault current at the installation point
+- [ ] Verify panel SCCR meets or exceeds available fault current (409.110)
+- [ ] Feeder and branch circuit conductors properly sized (Articles 310, 430)
+- [ ] Motor branch circuit short-circuit and ground-fault protection verified (430.52)
+- [ ] Motor overload protection verified (430.32)
+- [ ] Machine disconnecting means location and sizing verified (Article 670)
+- [ ] Equipment grounding and bonding verified (Article 250)
+- [ ] Surge and overvoltage protection evaluated where safety circuits are present (409.70, 670.6)
+
+---
 
 <a href="{{ '/standards/us-electrical/' | relative_url }}" class="card__link">&larr; US Electrical family overview</a>
