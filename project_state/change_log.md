@@ -18,6 +18,20 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-03-08 — Standards Decision Workflow Enhancements
+
+- Added `last_reviewed` and `standards_editions` to front matter
+- Added Purpose section with audience list and standards scope table
+- Added sequential Lifecycle Workflow Mermaid diagram
+- Added decision questions (key question + outputs) to Steps 1–3
+- Added Standard Scope Boundaries table (NFPA 79 / UL 508A / NEC)
+- Added Common Engineering Mistakes section (6 items)
+- Added Typical Machine Compliance Stack table with editions
+- Added Worked Example — Automated Conveyor System
+- File: `docs/crosswalks/standards-decision-workflow/index.md`
+
+---
+
 ### 2026-03-08 — Phase 5 Complete: IEC 62443 Cybersecurity Corpus and Site Pages
 
 **Summary:** IEC 62443 cybersecurity corpus created from scratch (no prior RAG files). Full site page with Zone/Conduit diagram, SL table, FR overview, SIL vs SL distinction, and safety checklist. Cybersecurity family index created. Standards index updated. Networked Safety PLC scenario updated.
