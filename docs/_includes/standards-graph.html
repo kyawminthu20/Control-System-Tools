@@ -1,0 +1,183 @@
+{% assign graph_mode = include.mode | default: "full" %}
+{% assign container_id = include.container_id | default: "standards-graph" %}
+
+<div class="standards-graph-wrap standards-graph-wrap--{{ graph_mode }}" id="{{ container_id }}-wrap">
+  <div id="{{ container_id }}" class="standards-graph-canvas"></div>
+  {% if graph_mode == "mini" %}
+  <p class="standards-graph-link">
+    <a href="{{ '/standards/graph/' | relative_url }}">View full interactive graph &rarr;</a>
+  </p>
+  {% else %}
+  <div class="standards-graph-legend">
+    <span class="legend-item legend-item--requires">requires</span>
+    <span class="legend-item legend-item--pairs-with">pairs&nbsp;with</span>
+    <span class="legend-item legend-item--enforces">enforces</span>
+    <span class="legend-item legend-item--aligns-with">aligns&nbsp;with</span>
+    <span class="legend-item legend-item--planned">planned</span>
+  </div>
+  {% endif %}
+</div>
+
+<script>
+(function() {
+  var GRAPH_DATA = {{ site.data.standards_graph | jsonify }};
+  var MODE = "{{ graph_mode }}";
+  var CONTAINER_ID = "{{ container_id }}";
+
+  var FAMILY_COLORS = {
+    "us-electrical": "#3b82f6",
+    "machinery":     "#f97316",
+    "functional-safety": "#10b981",
+    "cybersecurity": "#ef4444",
+    "hazardous-area": "#eab308",
+    "semiconductor": "#a855f7"
+  };
+
+  var EDGE_COLORS = {
+    "requires":    "#f59e0b",
+    "pairs-with":  "#3b82f6",
+    "enforces":    "#10b981",
+    "aligns-with": "#9ca3af"
+  };
+
+  function buildElements() {
+    var els = [];
+    GRAPH_DATA.nodes.forEach(function(n) {
+      var el = {
+        data: {
+          id: n.id,
+          label: n.label,
+          family: n.family,
+          url: n.url,
+          planned: n.planned || false
+        }
+      };
+      if (MODE === "mini" && n.x !== undefined) {
+        el.position = { x: n.x * 0.9, y: n.y * 0.9 };
+      }
+      els.push(el);
+    });
+    GRAPH_DATA.edges.forEach(function(e) {
+      els.push({
+        data: {
+          source: e.source,
+          target: e.target,
+          type: e.type,
+          label: e.label
+        }
+      });
+    });
+    return els;
+  }
+
+  function buildStyle() {
+    return [
+      {
+        selector: "node",
+        style: {
+          "label": "data(label)",
+          "font-size": MODE === "mini" ? 9 : 11,
+          "font-family": "system-ui, sans-serif",
+          "text-valign": "center",
+          "text-halign": "center",
+          "text-wrap": "wrap",
+          "text-max-width": 70,
+          "width": MODE === "mini" ? 60 : 80,
+          "height": MODE === "mini" ? 28 : 34,
+          "shape": "roundrectangle",
+          "background-color": function(ele) {
+            return FAMILY_COLORS[ele.data("family")] || "#6b7280";
+          },
+          "border-width": function(ele) { return ele.data("planned") ? 2 : 0; },
+          "border-style": function(ele) { return ele.data("planned") ? "dashed" : "solid"; },
+          "border-color": "#ffffff",
+          "color": "#ffffff",
+          "opacity": function(ele) { return ele.data("planned") ? 0.55 : 1; },
+          "cursor": "pointer"
+        }
+      },
+      {
+        selector: "edge",
+        style: {
+          "line-color": function(ele) { return EDGE_COLORS[ele.data("type")] || "#9ca3af"; },
+          "target-arrow-color": function(ele) { return EDGE_COLORS[ele.data("type")] || "#9ca3af"; },
+          "target-arrow-shape": "triangle",
+          "arrow-scale": 0.8,
+          "curve-style": "bezier",
+          "width": 1.5,
+          "opacity": 0.7
+        }
+      },
+      {
+        selector: "node:selected, node.highlighted",
+        style: { "border-width": 3, "border-color": "#ffffff", "opacity": 1 }
+      },
+      {
+        selector: "edge.faded",
+        style: { "opacity": 0.1 }
+      }
+    ];
+  }
+
+  function initGraph() {
+    if (typeof cytoscape === "undefined") { return; }
+
+    var cy = cytoscape({
+      container: document.getElementById(CONTAINER_ID),
+      elements: buildElements(),
+      style: buildStyle(),
+      layout: MODE === "mini"
+        ? { name: "preset" }
+        : { name: "cose", animate: false, padding: 40, nodeRepulsion: 8000, idealEdgeLength: 100 },
+      userZoomingEnabled: MODE !== "mini",
+      userPanningEnabled: MODE !== "mini",
+      boxSelectionEnabled: false
+    });
+
+    // Click to navigate
+    cy.on("tap", "node", function(evt) {
+      var url = evt.target.data("url");
+      if (url && !evt.target.data("planned")) {
+        window.location.href = url;
+      }
+    });
+
+    // Hover: highlight connected edges
+    if (MODE === "full") {
+      cy.on("mouseover", "node", function(evt) {
+        var node = evt.target;
+        cy.edges().addClass("faded");
+        node.connectedEdges().removeClass("faded");
+      });
+      cy.on("mouseout", "node", function() {
+        cy.edges().removeClass("faded");
+      });
+
+      // Edge tooltip
+      var tooltip = document.createElement("div");
+      tooltip.className = "graph-tooltip";
+      tooltip.style.cssText = "display:none;position:fixed;background:var(--color-bg-card);border:1px solid var(--color-border);padding:4px 8px;border-radius:4px;font-size:0.75rem;pointer-events:none;z-index:9999;";
+      document.body.appendChild(tooltip);
+
+      cy.on("mouseover", "edge", function(evt) {
+        tooltip.textContent = evt.target.data("label");
+        tooltip.style.display = "block";
+      });
+      cy.on("mousemove", "edge", function(evt) {
+        tooltip.style.left = (evt.originalEvent.clientX + 10) + "px";
+        tooltip.style.top  = (evt.originalEvent.clientY + 10) + "px";
+      });
+      cy.on("mouseout", "edge", function() {
+        tooltip.style.display = "none";
+      });
+    }
+  }
+
+  // Wait for Cytoscape to load
+  if (typeof cytoscape !== "undefined") {
+    initGraph();
+  } else {
+    document.addEventListener("DOMContentLoaded", initGraph);
+  }
+})();
+</script>
