@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "NEC (NFPA 70) — National Electrical Code"
-description: "NEC 2023 — key articles for industrial control panels and machinery: 409, 430, 670, 250, 725."
+description: "NEC 2023 — key articles for industrial control panels and machinery: 409, 409.70, 430, 670, 670.6, 250, 725."
 breadcrumb:
   - name: "Standards"
     url: "/standards/"
@@ -19,6 +19,15 @@ lifecycle_stage:
     slug: "detailed-design/"
   - name: "Installation"
     slug: "installation/"
+last_reviewed: "2026-03-08"
+primary_audience: "Panel designers, machine builders, controls engineers, AHJ-facing documentation"
+edition_note: "Always verify the edition adopted by the local AHJ. Many jurisdictions are not on the current NEC cycle."
+companion_standards:
+  - "NFPA 79"
+  - "UL 508A"
+  - "ISO 12100"
+  - "ISO 13849-1"
+  - "IEC 60204-1"
 ---
 
 <div class="page-header">
