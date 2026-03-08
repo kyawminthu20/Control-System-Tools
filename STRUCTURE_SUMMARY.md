@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 07:39:50
+**Last Auto-Updated:** 2026-03-08 13:41:39
 
 ```text
 ├── .claude/
@@ -532,14 +532,21 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │       │   ├── NEC_2023__Art090__scope_and_purpose.md
 │   │   │       │   ├── NEC_2023__Art100__definitions.md
 │   │   │       │   ├── NEC_2023__Art110__requirements_for_electrical_installations.md
+│   │   │       │   ├── NEC_2023__Art215__feeders.md
+│   │   │       │   ├── NEC_2023__Art230__services.md
 │   │   │       │   ├── NEC_2023__Art240__overcurrent_protection.md
+│   │   │       │   ├── NEC_2023__Art250_4__purposes_of_grounding_and_bonding.md
 │   │   │       │   ├── NEC_2023__Art250__grounding_and_bonding.md
 │   │   │       │   ├── NEC_2023__Art300__general_wiring_methods.md
 │   │   │       │   ├── NEC_2023__Art310__conductors_for_general_wiring.md
 │   │   │       │   ├── NEC_2023__Art408__switchboards_switchgear_and_panelboards.md
 │   │   │       │   ├── NEC_2023__Art409__industrial_control_panels.md
 │   │   │       │   ├── NEC_2023__Art430__motors_motor_circuits_and_controllers.md
+│   │   │       │   ├── NEC_2023__Art500__hazardous_locations_general.md
+│   │   │       │   ├── NEC_2023__Art504__intrinsically_safe_systems.md
+│   │   │       │   ├── NEC_2023__Art505__zone_0_1_2_gas_vapors.md
 │   │   │       │   ├── NEC_2023__Art670__industrial_machinery.md
+│   │   │       │   ├── NEC_2023__Art700_702__emergency_standby_systems.md
 │   │   │       │   ├── NEC_2023__Art725__class_1_2_3_control_circuits.md
 │   │   │       │   ├── NEC_COMPLETION_STATUS.md
 │   │   │       │   ├── NEC_OVERVIEW.md
