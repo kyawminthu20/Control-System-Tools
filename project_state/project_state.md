@@ -2,7 +2,7 @@
 
 **Last Updated:** 2026-03-08
 **Status:** Active
-**Current Phase:** Phase 8 COMPLETE — NEC RAG corpus expanded to 19 articles
+**Current Phase:** Phase 9 COMPLETE — Interactive Standards Graph; Phase 10 next
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -169,34 +169,55 @@ requires zero user interaction while still allowing manual override.
 - [x] `NEC_2023__Art250_4__purposes_of_grounding_and_bonding.md` — committed
 - [x] `_index.yaml` — NEC2023-Art250-4 entry added
 
-## Phase 9 Backlog — NEC Page Polish + Code Review Fixes
+## Phase 9 Scope — Interactive Standards Graph — COMPLETE
 
-From CodeRabbit review (2026-03-08) and readability review:
+- [x] `docs/_data/standards_graph.yml` — 12 nodes, 14 edges
+- [x] `docs/_includes/standards-graph.html` — Cytoscape.js include (mini + full modes)
+- [x] `docs/standards/graph/index.md` — full interactive page
+- [x] `docs/index.md` — mini graph replaces static Mermaid block
+- [x] CSS legend and canvas styles in main.css
+- [x] Cytoscape.js 3.28.1 CDN added to default layout
 
-### NEC page (`docs/standards/us-electrical/nec/index.md`)
-- [ ] Rename Key Articles table column "Article" → "Article / Section" and section heading to "Key Articles and Sections for Industrial Control Systems"
-- [ ] Verify Art. 409.70 and Art. 670.6 exist in NEC 2023 corpus (`control-standards/rag/standards_intelligence/us/nec/`) and confirm accuracy of all references on the page
+## Phase 10 — Corpus Gap-Fill + NEC Polish — NEXT PHASE
 
-### Other files flagged by code review
-- [ ] `control-standards/work/design/nec_update.md` — CRITICAL: file appears to contain a raw video transcript; review and clean up or remove
-- [ ] `control-standards/work/design/Grounding...2020 NEC.md` — NEC edition mismatch between title (2020) and authoritative link (2023); add clarifying note or align editions
-- [ ] `docs/glossary/index.md` — 2 potential issues flagged; review and fix
-- [ ] `docs/assets/css/main.css` — 1 potential issue flagged; review and fix
-- [ ] `docs/plans/` files — multiple potential issues in plan files; review for accuracy
+**Plan:** `docs/plans/2026-03-08-phase10-corpus-gap-fill.md`
+**Goal:** Add IEC 60079 (6 RAG files) and SEMI S2/S8/S14 (3 RAG files) to corpus, plus site pages, family landing pages, and NEC page code-review fixes.
 
-## Phase 5 Backlog (after IEC 62443)
+> **RESTART POINT:** Begin here next session. Run `uv sync` then start with P10-T1.
 
-- SEMI S2/S8/S14 standard pages (not yet in corpus)
-- IEC 60079 hazardous area pages (corpus not confirmed)
-- Interactive standards graph
+### IEC 60079 RAG Corpus
+- [ ] **P10-T1:** `control-standards/rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_0__general_requirements.md` — EPL system, gas groups, T-codes, marking format, Ex equipment selection
+- [ ] **P10-T2:** `IEC60079_1__flameproof_Ex_d.md` — Ex d protection, flameproof enclosures, gap requirements, cable entry
+- [ ] **P10-T3:** `IEC60079_10_1__area_classification.md` + `IEC60079_11__intrinsic_safety_Ex_i.md` — zone classification methodology (10-1); Ex i protection, ia/ib/ic levels, associated apparatus (11)
+- [ ] **P10-T4:** `IEC60079_14__installation.md` + `IEC60079_17__inspection_maintenance.md` — installation requirements for Ex areas (14); initial and periodic inspection, visual/close/detailed (17)
+- [ ] **P10-T5 (combined):** `_index.yaml` for iec_60079 directory — register all 6 files
+
+### SEMI S2/S8/S14 RAG Corpus
+- [ ] **P10-T5:** `control-standards/rag/standards_intelligence/us/semi/` directory + `_index.yaml` + RAG files:
+  - `SEMI_S2__environmental_health_safety.md` — EHS guidelines for semiconductor equipment
+  - `SEMI_S8__ergonomics.md` — ergonomics for semiconductor equipment design
+  - `SEMI_S14__fire_protection.md` — fire protection guidelines for semiconductor equipment
+
+### Site Pages
+- [ ] **P10-T6:** `docs/standards/hazardous-area/` family landing + `docs/standards/hazardous-area/iec-60079/index.md` — IEC 60079 full page (EPL table, gas group table, zone ↔ division equivalence, protection method selection guide, marking decode example, installation checklist)
+- [ ] **P10-T7:** `docs/standards/semiconductor/` family landing + `docs/standards/semiconductor/semi/index.md` — SEMI S-series page (S2/S8/S14 scope, semiconductor equipment lifecycle, EHS checklist)
+- [ ] **P10-T8:** Update `docs/standards/index.md` — add Hazardous Area and Semiconductor sections; update sidebar and nav
+
+### NEC Page Polish (from CodeRabbit review)
+- [ ] **P10-T9:** `docs/standards/us-electrical/nec/index.md` — rename table column "Article" → "Article / Section"; verify Art. 409.70 and 670.6 against corpus
+- [ ] **P10-T10:** `control-standards/work/design/nec_update.md` — CRITICAL: appears to be raw transcript; review and clean up or remove
+
+### Build + Validation
+- [ ] **P10-T11:** `python3 tools/validate_ai_boundaries.py` — validate all new RAG files
+- [ ] **P10-T12:** Jekyll build clean; update `project_state/` and push
 
 ## Content Gaps (documented with badges on site)
 
-- ISO 13849-1 — Phase 3 corpus complete (6 RAG files)
-- IEC 62061 — Phase 3 corpus complete (4 RAG files + index)
-- IEC 61508 — Phase 3 corpus complete (4 RAG files + index)
-- IEC 61511 — Phase 3 corpus complete (4 RAG files + index)
-- SEMI S2/S8/S14 — NOT IN CORPUS
-- IEC 60079 (hazardous area) — not confirmed in corpus
-- IEC 62443 detail pages — routing reference only
-- Medical, nuclear, marine class rules — not in corpus
+- ISO 13849-1 — corpus complete (6 RAG files)
+- IEC 62061 — corpus complete (4 RAG files + index)
+- IEC 61508 — corpus complete (4 RAG files + index)
+- IEC 61511 — corpus complete (4 RAG files + index)
+- IEC 62443 — corpus complete (4 RAG files + index)
+- **IEC 60079 (hazardous area) — NOT IN CORPUS → Phase 10 target**
+- **SEMI S2/S8/S14 — NOT IN CORPUS → Phase 10 target**
+- Medical, nuclear, marine class rules — not in corpus (no plan)
