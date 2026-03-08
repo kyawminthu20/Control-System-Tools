@@ -26,6 +26,23 @@ Keep entries concise and oriented to what future work needs to know.
 - Homepage Mermaid block replaced with mini Cytoscape graph (preset layout, click-navigable)
 - Edge types: requires (amber), pairs-with (blue), enforces (green), aligns-with (gray)
 - Planned nodes (IEC 60079, SEMI) shown as dashed/dimmed — auto-activate when corpus added
+- NEC page: readability overhaul (TOC, quick-reference callout, scope/limitations merge, 2026 section as change-log cards with impact levels + engineer takeaways, phased workflow)
+- NEC page: technical improvements (Art. 240 added, SCCR critical rule + 4 determination methods, Art. 670 scoped to facility connection only, standards table updated)
+
+---
+
+### 2026-03-08 — Phase 10 Queued: IEC 60079 + SEMI Corpus Gap-Fill
+
+**Type:** Planning
+**Status:** NOT STARTED — begin next session
+
+- Plan doc: `docs/plans/2026-03-08-phase10-corpus-gap-fill.md`
+- **IEC 60079 (6 RAG files):** Parts 0, 1, 10-1, 11, 14, 17 → `control-standards/rag/standards_intelligence/international/hazardous_area/iec_60079/`
+- **SEMI S2/S8/S14 (3 RAG files):** → `control-standards/rag/standards_intelligence/us/semi/`
+- **Site pages:** `/standards/hazardous-area/` family + `/standards/hazardous-area/iec-60079/`; `/standards/semiconductor/` family + `/standards/semiconductor/semi/`
+- **Standards index:** add Hazardous Area and Semiconductor sections
+- **NEC polish:** rename table column, verify 409.70/670.6, clean up nec_update.md
+- Full task list with file paths in `project_state/project_state.md` Phase 10 section
 
 ---
 
