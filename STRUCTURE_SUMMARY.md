@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 14:49:06
+**Last Auto-Updated:** 2026-03-08 14:52:28
 
 ```text
 ├── .claude/
@@ -943,6 +943,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── cca6c3bfd574eb97bcbac50bcd9a577ae1f9ef049eee6ad1ca713bcf09be0a
 │   │               ├── cf/
 │   │               │   └── 92a9502650587c6b587bf0bd2fbe8408688be12db457cf57d12d7fa7447406
+│   │               ├── d0/
+│   │               │   └── 1aae1338774fdde8ec1aa87676962369687042492f671fb83eaef4a7c8a4cf
 │   │               ├── d1/
 │   │               │   ├── 974bd06596719580558f58eb297118a7afe09a544da9e1eefaa77295f81aa1
 │   │               │   └── adf2390a11c4437b01dfbf3a0bdf78750fd0ee85614df683fe95428b8d6199
@@ -994,7 +996,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   ├── Gemfile.lock
 │   ├── _config.yml
 │   ├── _data/
-│   │   └── glossary.yml
+│   │   ├── glossary.yml
+│   │   └── standards_graph.yml
 │   ├── _includes/
 │   │   ├── context-panel.html
 │   │   ├── sidebar.html
