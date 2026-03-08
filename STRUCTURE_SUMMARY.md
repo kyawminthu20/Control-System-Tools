@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 14:20:42
+**Last Auto-Updated:** 2026-03-08 14:31:56
 
 ```text
 ├── .claude/
@@ -970,13 +970,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 2c762ee67e5c599d533c1f0abc210d41a8270c2c85b178c08642755fcbf5f7
 │   │               ├── ea/
 │   │               │   └── df3dfe34d237e72b57a6f65a765e995f6d280ae9df43d31475c6ddd56ab30c
+│   │               ├── eb/
+│   │               │   └── 789cf255b95dfe186125857ae770134fa48335ef070e250c8e6ad72d68211e
 │   │               ├── ed/
 │   │               │   ├── bc97ede5832fc84913b39dc6483c59021402f4de631cca082a5825bba5b22b
 │   │               │   └── f867c0ee7664e62c7dbd27fba23467f1652c419dcce1c4ee57c7772dab4e48
 │   │               ├── f1/
 │   │               │   └── 4de0c2dfa4009076ed6ba8d42c9b22d122562a5d0f63fef83c1d37c980aa05
-│   │               ├── f2/
-│   │               │   └── 16d33f112023cdaa8f08ed311b046393960f669b4bd3667d5c1af12aedaad7
 │   │               ├── f6/
 │   │               │   └── 5cd8a0bbb88a838309164c51364f7a4aade6eb52086ca1c3c73c4de227ad93
 │   │               ├── f9/
@@ -1264,6 +1264,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │                   │   ├── jekyll
 │                   │   ├── kramdown
 │                   │   ├── listen
+│                   │   ├── rake
 │                   │   ├── rougify
 │                   │   └── safe_yaml
 │                   ├── build_info/
@@ -1290,12 +1291,14 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │                   │   ├── mercenary-0.4.0.gem
 │                   │   ├── pathutil-0.16.2.gem
 │                   │   ├── public_suffix-5.1.1.gem
+│                   │   ├── rake-13.3.1.gem
 │                   │   ├── rb-fsevent-0.11.2.gem
 │                   │   ├── rb-inotify-0.11.1.gem
 │                   │   ├── rexml-3.4.4.gem
 │                   │   ├── rouge-3.30.0.gem
 │                   │   ├── safe_yaml-1.0.5.gem
 │                   │   ├── sass-embedded-1.58.3-arm64-darwin.gem
+│                   │   ├── sass-embedded-1.58.3.gem
 │                   │   ├── terminal-table-3.0.2.gem
 │                   │   ├── unicode-display_width-2.6.0.gem
 │                   │   └── webrick-1.9.2.gem
@@ -1314,10 +1317,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │                   │           │   ├── gem.build_complete
 │                   │           │   ├── gem_make.out
 │                   │           │   └── mkmf.log
-│                   │           └── http_parser.rb-0.8.1/
+│                   │           ├── http_parser.rb-0.8.1/
+│                   │           │   ├── gem.build_complete
+│                   │           │   ├── gem_make.out
+│                   │           │   └── ruby_http_parser.bundle
+│                   │           └── sass-embedded-1.58.3/
 │                   │               ├── gem.build_complete
-│                   │               ├── gem_make.out
-│                   │               └── ruby_http_parser.bundle
+│                   │               └── gem_make.out
 │                   ├── gems/
 │                   │   ├── addressable-2.8.9/
 │                   │   │   ├── CHANGELOG.md
@@ -3932,6 +3938,74 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │                   │   │       │   ├── rule.rb
 │                   │   │       │   └── version.rb
 │                   │   │       └── public_suffix.rb
+│                   │   ├── rake-13.3.1/
+│                   │   │   ├── History.rdoc
+│                   │   │   ├── MIT-LICENSE
+│                   │   │   ├── README.rdoc
+│                   │   │   ├── doc/
+│                   │   │   │   ├── command_line_usage.rdoc
+│                   │   │   │   ├── example/
+│                   │   │   │   │   ├── Rakefile1
+│                   │   │   │   │   ├── Rakefile2
+│                   │   │   │   │   ├── a.c
+│                   │   │   │   │   ├── b.c
+│                   │   │   │   │   └── main.c
+│                   │   │   │   ├── glossary.rdoc
+│                   │   │   │   ├── jamis.rb
+│                   │   │   │   ├── proto_rake.rdoc
+│                   │   │   │   ├── rake.1
+│                   │   │   │   ├── rakefile.rdoc
+│                   │   │   │   └── rational.rdoc
+│                   │   │   ├── exe/
+│                   │   │   │   └── rake
+│                   │   │   ├── lib/
+│                   │   │   │   ├── rake/
+│                   │   │   │   │   ├── application.rb
+│                   │   │   │   │   ├── backtrace.rb
+│                   │   │   │   │   ├── clean.rb
+│                   │   │   │   │   ├── cloneable.rb
+│                   │   │   │   │   ├── cpu_counter.rb
+│                   │   │   │   │   ├── default_loader.rb
+│                   │   │   │   │   ├── dsl_definition.rb
+│                   │   │   │   │   ├── early_time.rb
+│                   │   │   │   │   ├── ext/
+│                   │   │   │   │   │   ├── core.rb
+│                   │   │   │   │   │   └── string.rb
+│                   │   │   │   │   ├── file_creation_task.rb
+│                   │   │   │   │   ├── file_list.rb
+│                   │   │   │   │   ├── file_task.rb
+│                   │   │   │   │   ├── file_utils.rb
+│                   │   │   │   │   ├── file_utils_ext.rb
+│                   │   │   │   │   ├── invocation_chain.rb
+│                   │   │   │   │   ├── invocation_exception_mixin.rb
+│                   │   │   │   │   ├── late_time.rb
+│                   │   │   │   │   ├── linked_list.rb
+│                   │   │   │   │   ├── loaders/
+│                   │   │   │   │   │   └── makefile.rb
+│                   │   │   │   │   ├── multi_task.rb
+│                   │   │   │   │   ├── name_space.rb
+│                   │   │   │   │   ├── packagetask.rb
+│                   │   │   │   │   ├── phony.rb
+│                   │   │   │   │   ├── private_reader.rb
+│                   │   │   │   │   ├── promise.rb
+│                   │   │   │   │   ├── pseudo_status.rb
+│                   │   │   │   │   ├── rake_module.rb
+│                   │   │   │   │   ├── rake_test_loader.rb
+│                   │   │   │   │   ├── rule_recursion_overflow_error.rb
+│                   │   │   │   │   ├── scope.rb
+│                   │   │   │   │   ├── task.rb
+│                   │   │   │   │   ├── task_argument_error.rb
+│                   │   │   │   │   ├── task_arguments.rb
+│                   │   │   │   │   ├── task_manager.rb
+│                   │   │   │   │   ├── tasklib.rb
+│                   │   │   │   │   ├── testtask.rb
+│                   │   │   │   │   ├── thread_history_display.rb
+│                   │   │   │   │   ├── thread_pool.rb
+│                   │   │   │   │   ├── trace_output.rb
+│                   │   │   │   │   ├── version.rb
+│                   │   │   │   │   └── win32.rb
+│                   │   │   │   └── rake.rb
+│                   │   │   └── rake.gemspec
 │                   │   ├── rb-fsevent-0.11.2/
 │                   │   │   ├── .gitignore
 │                   │   │   ├── Gemfile
@@ -4655,6 +4729,62 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │                   │   │       │   ├── to_integer_spec.rb
 │                   │   │       │   └── to_symbol_spec.rb
 │                   │   │       └── yaml_spec.rb
+│                   │   ├── sass-embedded-1.58.3/
+│                   │   │   ├── LICENSE
+│                   │   │   ├── README.md
+│                   │   │   ├── ext/
+│                   │   │   │   └── sass/
+│                   │   │   │       ├── Rakefile
+│                   │   │   │       ├── embedded.rb
+│                   │   │   │       ├── embedded_sass_pb.rb
+│                   │   │   │       ├── expand-archive.ps1
+│                   │   │   │       ├── package.json
+│                   │   │   │       └── sass_embedded/
+│                   │   │   │           ├── dart-sass-embedded
+│                   │   │   │           └── src/
+│                   │   │   │               ├── LICENSE
+│                   │   │   │               ├── dart
+│                   │   │   │               └── dart-sass-embedded.snapshot
+│                   │   │   └── lib/
+│                   │   │       ├── sass/
+│                   │   │       │   ├── compile_error.rb
+│                   │   │       │   ├── compile_result.rb
+│                   │   │       │   ├── embedded/
+│                   │   │       │   │   ├── async.rb
+│                   │   │       │   │   ├── channel.rb
+│                   │   │       │   │   ├── compiler.rb
+│                   │   │       │   │   ├── dispatcher.rb
+│                   │   │       │   │   ├── host/
+│                   │   │       │   │   │   ├── function_registry.rb
+│                   │   │       │   │   │   ├── importer_registry.rb
+│                   │   │       │   │   │   ├── logger_registry.rb
+│                   │   │       │   │   │   └── value_protofier.rb
+│                   │   │       │   │   ├── host.rb
+│                   │   │       │   │   ├── protofier.rb
+│                   │   │       │   │   ├── structifier.rb
+│                   │   │       │   │   ├── varint.rb
+│                   │   │       │   │   └── version.rb
+│                   │   │       │   ├── embedded.rb
+│                   │   │       │   ├── logger/
+│                   │   │       │   │   ├── silent.rb
+│                   │   │       │   │   ├── source_location.rb
+│                   │   │       │   │   └── source_span.rb
+│                   │   │       │   ├── script_error.rb
+│                   │   │       │   ├── value/
+│                   │   │       │   │   ├── argument_list.rb
+│                   │   │       │   │   ├── boolean.rb
+│                   │   │       │   │   ├── color.rb
+│                   │   │       │   │   ├── function.rb
+│                   │   │       │   │   ├── fuzzy_math.rb
+│                   │   │       │   │   ├── list.rb
+│                   │   │       │   │   ├── map.rb
+│                   │   │       │   │   ├── null.rb
+│                   │   │       │   │   ├── number/
+│                   │   │       │   │   │   └── unit.rb
+│                   │   │       │   │   ├── number.rb
+│                   │   │       │   │   └── string.rb
+│                   │   │       │   └── value.rb
+│                   │   │       └── sass-embedded.rb
 │                   │   ├── sass-embedded-1.58.3-arm64-darwin/
 │                   │   │   ├── LICENSE
 │                   │   │   ├── README.md
@@ -4863,12 +4993,14 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │                       ├── mercenary-0.4.0.gemspec
 │                       ├── pathutil-0.16.2.gemspec
 │                       ├── public_suffix-5.1.1.gemspec
+│                       ├── rake-13.3.1.gemspec
 │                       ├── rb-fsevent-0.11.2.gemspec
 │                       ├── rb-inotify-0.11.1.gemspec
 │                       ├── rexml-3.4.4.gemspec
 │                       ├── rouge-3.30.0.gemspec
 │                       ├── safe_yaml-1.0.5.gemspec
 │                       ├── sass-embedded-1.58.3-arm64-darwin.gemspec
+│                       ├── sass-embedded-1.58.3.gemspec
 │                       ├── terminal-table-3.0.2.gemspec
 │                       ├── unicode-display_width-2.6.0.gemspec
 │                       └── webrick-1.9.2.gemspec
