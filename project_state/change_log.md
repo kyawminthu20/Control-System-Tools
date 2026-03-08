@@ -18,6 +18,28 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-08 — Phase 8 Complete: NEC RAG Corpus Expanded to 19 Articles
+
+**Type:** RAG Corpus / Content
+**Status:** Complete
+
+- Added Art 90 (scope and purpose) — NEC jurisdiction limits, AHJ authority, adoption process
+- Added Art 100 (definitions) — authoritative NEC terminology (listed, labeled, SCCR, grounded conductor, EGC)
+- Added Art 215 (feeders) — feeder conductor sizing, 125% continuous load rule, OCPD coordination
+- Added Art 230 (services) — available fault current, service disconnect, neutral-to-ground bond rule
+- Added Art 250.4 (grounding purposes) — synthesized from NEC 250.4 + Mike Holt 2020; system vs equipment grounding, GEC routing
+- Added Art 500 (hazardous locations general) — Class I/II/III, Division 1/2, T-codes, explosion-proof equipment
+- Added Art 504 (intrinsically safe systems) — IS design rules, zener barriers, galvanic isolators, FISCO model
+- Added Art 505 (Zone 0/1/2) — IEC-aligned zone system, ATEX/IECEx equipment acceptance, EPL markings
+- Added Art 700–702 (emergency/standby) — three-tier power architecture, transfer times, ATS requirements, safety system coordination
+- Updated _index.yaml: 19 articles now indexed (was 12); coverage_notes.complete updated
+- Updated NEC_COMPLETION_STATUS.md: 19/19 articles complete (~9,500 words)
+- Updated NEC_OVERVIEW.md: new sections for General, Power Distribution, Hazardous Locations, Emergency Power
+
+**NEC corpus now covers:** general/definitions, power distribution, grounding, hazardous locations (Class/Division + Zone), IS systems, emergency power, industrial control panels, motors, conductors, wiring methods, overcurrent protection
+
+---
+
 ### 2026-03-08 — NEC RAG Gap-Fill: Art250.4 Added
 
 **Type:** RAG Corpus / Content
