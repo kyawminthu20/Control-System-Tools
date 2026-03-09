@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 18:34:27
+**Last Auto-Updated:** 2026-03-08 18:36:10
 
 ```text
 ├── .claude/
@@ -910,6 +910,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── fd8b42aff0c079bae80128c9428181e50e5edeae6575f3584e464b954b6e61
 │   │               ├── 6b/
 │   │               │   └── 5079b8aa71cc7d1e63c57441cf6677a8a972ad712c8930d6c922349b7bfa65
+│   │               ├── 6c/
+│   │               │   └── 6d08fb5ee3326c00c6332725018a3a2a0349ea0291fd9f7d3d98dda94c3aeb
 │   │               ├── 70/
 │   │               │   ├── 6bf1a4e30a45c09272b0ab99a32a2c2b556106edc929b96d7c5b545048fe62
 │   │               │   └── c3114be24f5d35bdb46412573e383fa0ebf515e5e094039e4b3f3615a1dd86
@@ -948,7 +950,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 8c/
 │   │               │   └── 790933e8d3d2256b2638a3d42ce6d34b8986543f7101bf9dc6b9e7d03c47b6
 │   │               ├── 8f/
-│   │               │   └── c1213ea092e22c325fa5ad42f2e3bcae32d7f5f3cef57979a008f427e9d7d0
+│   │               │   ├── c1213ea092e22c325fa5ad42f2e3bcae32d7f5f3cef57979a008f427e9d7d0
+│   │               │   └── cb4f06ec334eadf27f365cb5f7b336e280ce0098dea2bb6ba5ab8e8ce654b9
 │   │               ├── 92/
 │   │               │   ├── 4fe926ec4cd47e0304801483afc663a1829e779476c492f7be2996fdb7717c
 │   │               │   ├── b9caa5fd19144b5bd1bba6ec83668f106f81e52903398f269d8cb64f18c1aa
@@ -989,6 +992,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 5d094960622fc5122d5539cbd569d8485816130a28dbbcc5b5756b95dda412
 │   │               │   └── b418e8347c01680d53a837227020a598007cf23fa79e4991a57cfc392f7891
 │   │               ├── ad/
+│   │               │   ├── 3462c1503ba1d909cacc959f8ee96424190038a5ac7ced5f5fc7dd6839910a
 │   │               │   └── 3de1e36946a4311545bc36a4eeec565a8d126a3fd220cf5adc3d64ee6a24d4
 │   │               ├── ae/
 │   │               │   └── a98b8058482a0b71c9b67d339eb45b3b0e746af96a11cdbfab810c099a84b1
@@ -1170,6 +1174,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-06-phase3-implementation.md
 │   │   │   ├── 2026-03-08-corpus-gap-fill-design.md
 │   │   │   ├── 2026-03-08-decision-workflow-enhancements.md
+│   │   │   ├── 2026-03-08-electrical-intelligence-integration-design.md
 │   │   │   ├── 2026-03-08-glossary-design.md
 │   │   │   ├── 2026-03-08-glossary-implementation.md
 │   │   │   ├── 2026-03-08-nec-missing-articles.md
@@ -1188,6 +1193,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── machine-safety-implementation/
 │   │   │   │   └── index.html
 │   │   │   ├── networked-safety-plc/
+│   │   │   │   └── index.html
+│   │   │   ├── oil-gas-process-skid/
 │   │   │   │   └── index.html
 │   │   │   ├── process-skid/
 │   │   │   │   └── index.html
@@ -1314,6 +1321,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── 2026-03-06-phase3-implementation.md
 │   │   ├── 2026-03-08-corpus-gap-fill-design.md
 │   │   ├── 2026-03-08-decision-workflow-enhancements.md
+│   │   ├── 2026-03-08-electrical-intelligence-integration-design.md
 │   │   ├── 2026-03-08-glossary-design.md
 │   │   ├── 2026-03-08-glossary-implementation.md
 │   │   ├── 2026-03-08-nec-missing-articles.md
@@ -1332,6 +1340,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── machine-safety-implementation/
 │   │   │   └── index.md
 │   │   ├── networked-safety-plc/
+│   │   │   └── index.md
+│   │   ├── oil-gas-process-skid/
 │   │   │   └── index.md
 │   │   ├── process-skid/
 │   │   │   └── index.md
