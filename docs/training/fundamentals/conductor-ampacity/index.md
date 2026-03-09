@@ -105,14 +105,6 @@ Ampacity is not a one-step table lookup. It is a sequence:
 
 If any one of those steps is skipped, the design can fail review or overheat in service.
 
-## Related standards
-
-- NEC 2023, Article 110 — Requirements for electrical installations
-- NEC 2023, Article 240 — Overcurrent protection
-- NEC 2023, Article 310 — Conductors for general wiring
-- NFPA 79-2024, Chapter 6 — Overcurrent protection
-- UL 508A-2022 — Wiring methods and conductors
-
 ---
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
