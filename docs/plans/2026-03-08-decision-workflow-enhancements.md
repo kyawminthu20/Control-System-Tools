@@ -2,7 +2,7 @@
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
-**Goal:** Implement all 8 recommendations from `control-standards/work/design/decision_workflow.md` into the live site page.
+**Goal:** Implement all 8 recommendations from `control-standards/archive/superseded_designs/work_design/site_source_notes/decision_workflow.md` into the live site page.
 
 **Architecture:** Single-file content update to `docs/crosswalks/standards-decision-workflow/index.md`. No new files, no layout changes, no config changes. All additions are Markdown + Mermaid compatible with the existing Jekyll site.
 

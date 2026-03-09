@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 19:22:57
+**Last Auto-Updated:** 2026-03-08 19:42:44
 
 ```text
 ├── .claude/
@@ -342,6 +342,21 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── old_decision_trees/
 │   │   ├── past_audits/
 │   │   └── superseded_designs/
+│   │       └── work_design/
+│   │           ├── README.md
+│   │           ├── historical_prompts/
+│   │           │   └── scratch_notes/
+│   │           │       ├── standards_atlas_homepage_wireframe_and_templates.md
+│   │           │       ├── standards_web_page_design_prompt_v1.md
+│   │           │       ├── standards_web_page_design_prompt_v3.md
+│   │           │       ├── standards_web_page_design_prompt_v4.1.md
+│   │           │       └── standards_web_page_design_prompt_v4.md
+│   │           ├── promoted_to_rag/
+│   │           │   ├── Grounding, System and Equipment [250.4, 2020 NEC].md
+│   │           │   ├── spacing creepage clearance.md
+│   │           │   └── ul 508a.md
+│   │           └── site_source_notes/
+│   │               └── decision_workflow.md
 │   ├── exports/
 │   │   ├── README.md
 │   │   ├── docx/
@@ -615,6 +630,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── training_modules/
 │   │   │   ├── commissioning/
 │   │   │   ├── fundamentals/
+│   │   │   │   ├── README.md
+│   │   │   │   └── conductor_ampacity_and_termination_temperature.md
 │   │   │   ├── safety/
 │   │   │   └── troubleshooting/
 │   │   └── troubleshooting_engine/
@@ -675,11 +692,9 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       ├── README.md
 │       ├── design/
 │       │   ├── 2026 NEC Changes.md
-│       │   ├── Grounding, System and Equipment [250.4, 2020 NEC].md
 │       │   ├── README.md
 │       │   ├── check_this.md
 │       │   ├── conductor_protection_and_ampacity_transcript_summary.md
-│       │   ├── decision_workflow.md
 │       │   ├── diagrams/
 │       │   ├── electrical exam prep.md
 │       │   ├── equipment_grounding_conductor_topics/
@@ -736,17 +751,10 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       │   │   │   ├── induction_motor_nameplate_and_enclosures.md
 │       │   │   │   ├── induction_motor_poles_torque_curves_and_nema_designs.md
 │       │   │   │   └── induction_motor_terminal_connections_and_star_delta.md
-│       │   │   ├── spacing creepage clearance.md
-│       │   │   ├── temp links.md
-│       │   │   └── ul 508a.md
+│       │   │   └── temp links.md
 │       │   ├── residential_nec_top_articles_transcript_summary.md
 │       │   ├── scratch_notes/
-│       │   │   ├── simple_safety_system_design.md
-│       │   │   ├── standards_atlas_homepage_wireframe_and_templates.md
-│       │   │   ├── standards_web_page_design_prompt_v1.md
-│       │   │   ├── standards_web_page_design_prompt_v3.md
-│       │   │   ├── standards_web_page_design_prompt_v4.1.md
-│       │   │   └── standards_web_page_design_prompt_v4.md
+│       │   │   └── simple_safety_system_design.md
 │       │   ├── types of equipment ground conductors.md
 │       │   └── voltage_drop_topics/
 │       │       ├── README.md
