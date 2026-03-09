@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 17:25:18
+**Last Auto-Updated:** 2026-03-08 17:30:06
 
 ```text
 ├── .claude/
@@ -438,6 +438,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   ├── hazardous_area/
 │   │   │   │   │   └── iec_60079/
 │   │   │   │   │       ├── IEC60079_0__general_requirements.md
+│   │   │   │   │       ├── IEC60079_10_1__area_classification_gas.md
+│   │   │   │   │       ├── IEC60079_11__intrinsically_safe_Ex_i.md
 │   │   │   │   │       └── IEC60079_1__flameproof_Ex_d.md
 │   │   │   │   └── machinery/
 │   │   │   │       └── iec_60204_1/
@@ -694,6 +696,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       │   │   ├── 20260308_status.md
 │       │   │   ├── electrical and practical circuit analysis.md
 │       │   │   ├── importance of electrical safety in control panels.md
+│       │   │   ├── motors.md
+│       │   │   ├── temp links.md
 │       │   │   └── ul 508a.md
 │       │   ├── residential_nec_top_articles_transcript_summary.md
 │       │   ├── scratch_notes/
