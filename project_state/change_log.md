@@ -18,6 +18,17 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-09 — Phase 12 Complete: Offshore / Marine Industry Overlay
+
+- `DNV_OS_D201__electrical_installations.md` — RAG module: marine grade, IT earthing, LSOH cable, DP class, ESD/F&G class requirements, class approval workflow
+- `ABS_offshore_electrical_control.md` — RAG module: ABS class notations, type approval, IT earthing implications, emergency power requirements
+- `docs/industries/offshore/index.md` — full reference page: standards matrix by phase, DNV/ABS selection flow, IT earthing, LSOH, 11-item compliance checklist
+- `docs/industries/marine/index.md` — deepened with IMO regulatory framework, IEC 60092 series structure, marine vs. offshore comparison; IEC 60092 corpus gap documented
+- `docs/scenarios/offshore-platform-control/index.md` — Scenario 09: 4-phase workflow, ESD level hierarchy, Mermaid power/ESD architecture diagram, IT earthing and FAT decisions
+- Scenarios index and sidebar updated
+
+---
+
 ### 2026-03-09 — Electrical Knowledge Integration complete
 
 Promoted three transcript-derived electrical learning sources into the existing canonical RAG layers.
