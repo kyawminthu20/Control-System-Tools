@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 18:27:14
+**Last Auto-Updated:** 2026-03-08 18:31:03
 
 ```text
 ├── .claude/
@@ -708,6 +708,12 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       │   │   │   ├── INTEGRATION_PLAN.md
 │       │   │   │   ├── README.md
 │       │   │   │   ├── circuit_analysis_overview_and_linear_elements.md
+│       │   │   │   ├── equivalent_circuit_methods_topics/
+│       │   │   │   │   ├── README.md
+│       │   │   │   │   ├── norton_equivalent_method.md
+│       │   │   │   │   ├── source_transformation_basics.md
+│       │   │   │   │   ├── superposition_theorem_notes.md
+│       │   │   │   │   └── thevenin_equivalent_method.md
 │       │   │   │   ├── kcl_and_nodal_analysis.md
 │       │   │   │   ├── kvl_and_loop_analysis.md
 │       │   │   │   ├── practical_components_diodes_and_transistors.md
@@ -1309,6 +1315,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── 2026-03-08-nec-page-update.md
 │   │   ├── 2026-03-08-phase10-corpus-gap-fill.md
 │   │   ├── 2026-03-08-phase11-industry-overlay-depth-design.md
+│   │   ├── 2026-03-08-phase11-industry-overlay-depth.md
 │   │   ├── 2026-03-08-phase9-standards-graph.md
 │   │   ├── 2026-03-08-standards-graph-design.md
 │   │   ├── 2026-03-08-theme-switching-design.md
