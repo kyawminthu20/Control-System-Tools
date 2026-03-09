@@ -18,7 +18,7 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 
 ## Current Reality
 
-- Jekyll site deployed on GitHub Pages — `https://kyawminthu.github.io/Control-System-Tools/`
+- Jekyll site deployed on GitHub Pages — `https://kyawminthu20.github.io/Control-System-Tools/`
 - Jekyll build: ~60 pages, clean build (0.27 s locally)
 - Three-panel layout (sidebar 240px + main content + context panel 220px)
 - Mermaid.js CDN integration for all diagrams; Cytoscape.js 3.28.1 for interactive standards graph
@@ -60,7 +60,7 @@ All Phase 1 code is committed.
 
 1. Push: `git push`
 2. Enable GitHub Pages: Settings → Pages → Source: GitHub Actions
-3. Verify: `https://kyawminthu.github.io/Control-System-Tools/`
+3. Verify: `https://kyawminthu20.github.io/Control-System-Tools/`
 
 ## Phase 2 Scope — COMPLETED
 
@@ -220,6 +220,22 @@ requires zero user interaction while still allowing manual override.
 ### Nav
 - [x] `docs/scenarios/index.md` — Scenario 07 and 08 cards added
 - [x] `docs/_includes/sidebar.html` — both new scenarios added
+
+## RAG Layer — Electrical Knowledge Integration — COMPLETE
+
+Design doc: `docs/plans/2026-03-08-electrical-intelligence-integration-design.md`
+
+Transcript-derived electrical learning content promoted into the existing canonical RAG layers.
+
+- [x] `training_modules/fundamentals/` — 7 circuit analysis + components files
+- [x] `training_modules/electrical_machines/` — 9 motor/drive/servo files
+- [x] `training_modules/nec_application/` — 3 NEC code-reading and application files
+- [x] `design_framework/electrical_review/` — 4 calculation workflow files
+- [x] `design_framework/motor_systems/` — 13 motor/drive design and workflow files
+- [x] `commissioning_checklists/checklists/` — 6 motor, drive, and circuit checklist files
+- [x] `standards_intelligence/crosswalks/overlap_notes/` — 2 motors/drives crosswalk files
+
+EV motor files held as WIP. No new parallel layer created.
 
 ## Content Gaps (documented with badges on site)
 
