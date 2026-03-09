@@ -28,11 +28,32 @@ related_standards:
 
 ## Activities
 
-**Panel build:**
-- Wire per approved schematics
-- Component installation per BOM
-- Point-to-point wire check
-- SCCR labeling
+**Panel build (UL 508A):**
+
+*Layout and construction:*
+- Install components per approved layout — separate power and control areas, drive/starter heat zones from PLCs and communication gear
+- Mount all components on rigid backpanel, DIN rail, or frame per component instructions (orientation, ventilation clearance, accessory combinations)
+- Install wire duct or equivalent routing support before pulling conductors
+
+*Wiring and conductors:*
+- Wire per approved schematics — use correct conductor type, voltage rating, and temperature rating
+- Terminate field wiring on terminal blocks, not loose internal splices
+- Verify communication/Ethernet cable voltage rating matches wiring environment (300 V vs 600 V as required by segregation)
+- Identify conductors where they enter wire duct, bundles, or dense terminal areas
+
+*Grounding and bonding:*
+- Install bonding jumpers on door assemblies — hinges and paint are not reliable bond paths
+- Verify bond continuity to removable subpanels and mounting plates
+- Confirm protective-earth path is sized and routed for fault-clearing duty, not just for noise management
+
+*Enclosure integrity:*
+- Verify all cutouts, penetrations, and fittings preserve the intended enclosure type rating
+- Confirm cooling method (vents, fans, heat exchangers) does not defeat the enclosure rating
+
+*SCCR and marking:*
+- Verify SCCR basis — identify the weakest-rated power-circuit component (contactors, fuse holders, power distribution blocks, SPDs are common limiting items, not just the main breaker)
+- Apply permanent external nameplate: manufacturer, panel ID, supply ratings, FLA/MCA, SCCR, enclosure type, grounding terminal identification
+- Apply SCCR label where visible externally for installer/inspector comparison with site available fault current
 - UL field evaluation (if required but not factory listed)
 
 **Software implementation:**

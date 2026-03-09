@@ -18,6 +18,30 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-08 — UL 508A website update: scenario and lifecycle pages
+
+- `docs/scenarios/us-industrial-control-panel/index.md` — major rework: 4 thin engineering decisions expanded to 12 topic-aligned decisions covering listing basis, enclosures, layout, spacing/creepage, wiring, SCCR (weakest-link), grounding, control circuits, motor controllers, transformers, marking, and E-stop; added inspection readiness checklist table.
+- `docs/lifecycle/detailed-design/index.md` — key activities updated: old UL section number references replaced with descriptive topic references; SCCR bullet expanded with weakest-link logic; spacing/creepage bullet improved; deliverables table updated to match current RAG module names.
+
+---
+
+### 2026-03-08 — UL 508A spacing/creepage/clearance module populated
+
+- `UL508A_2022__spacing_creepage_clearance.md` — populated from project working note: clearance vs creepage definitions, voltage-based heuristics (0–150 V, 151–300 V, 301–600 V), live parts review logic, mitigation methods (barriers, finger-safe, routing, layout), field inspection failure patterns.
+- `docs/standards/us-electrical/ul-508a/index.md` — topic table updated (removed "in progress" marker); spacing/creepage section added between Enclosures and Wiring Methods.
+- All 11 UL 508A RAG modules now populated.
+
+---
+
+### 2026-03-08 — UL 508A RAG populated; website updated
+
+- All 11 UL 508A RAG modules filled from `_TODO_` to substantive practical guidance (10 populated; `spacing_creepage_clearance` still TODO).
+- `docs/standards/us-electrical/ul-508a/index.md` — major rework: RAG-aligned topic table, practical topic sections for all 10 populated modules, expanded SCCR weakest-link section, marking/documentation section.
+- `docs/crosswalks/ul508a-nec-nfpa79/index.md` — minor: expanded grounding row with safety vs noise grounding distinction.
+- `docs/lifecycle/build/index.md` — expanded panel build activity into detailed UL 508A build checklist (layout, wiring, grounding, enclosure integrity, SCCR, nameplate).
+
+---
+
 ### 2026-03-08 — Phase 11 Complete: Industry Overlay Depth
 
 - `docs/industries/petroleum/index.md` — full reference page: standards matrix by phase, selection flow, checklist; all gap badges removed
