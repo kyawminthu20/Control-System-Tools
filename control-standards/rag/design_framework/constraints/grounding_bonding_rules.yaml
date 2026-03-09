@@ -8,6 +8,11 @@ metadata:
   purpose: >
     Reusable grounding and bonding rules for panel and machine design review,
     future automation, and consistency checks.
+  not_a_standard: >
+    These rules are paraphrased from the cited standards and are intended as
+    design-review aids only. They are not a substitute for the actual standard
+    text. Verify all requirements against the current edition of the cited
+    standard before using as compliance evidence.
 
 rules:
   - id: GND-001

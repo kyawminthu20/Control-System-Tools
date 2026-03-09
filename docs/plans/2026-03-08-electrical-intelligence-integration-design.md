@@ -121,10 +121,35 @@ Motors source → compliance crosswalk gap fills:
 
 ---
 
+### `design_framework/constraints/` (unplanned addition)
+
+Reusable design-rule YAML derived from NEC 250, NFPA 79, UL 508A, IEC 60204-1:
+
+- `grounding_bonding_rules.yaml` — normative rules paraphrased from cited standards with `not_a_standard` disclaimer; intended as design-review aid only
+
+### `design_framework/us_eu_compliance_wizard/` (unplanned addition)
+
+US/EU machine compliance wizard seeded for future automation:
+
+- `US_EU_Machine_Compliance_Wizard.md` — wizard specification and decision logic
+- `us_eu_wizard_rules.yaml` — machine-readable rules; references 14 overlap note files of which only 2 currently exist; non-existent files are forward-looking references documented with `availability_note`
+- `us_eu_delta_report_template.md` — report output template
+
+### `design_framework/design_guides/` (unplanned addition)
+
+- `02_power_distribution_guide.md` — power distribution design guide
+
+### Note on EV/drone content in `motor_systems/`
+
+The EV source files (`ev_motor_types_overview.md`, `ev_motor_powertrain_configurations.md`) were held as WIP. However, EV and drone motor-drive comparison content was promoted into `motor_systems/` under design-framework framing (comparison notes, standards matrices). These files discuss EV traction inverters, ISO 26262, UNECE R100, and drone ESC configurations as comparison points for industrial motor selection decisions. This is an intentional scope expansion beyond the original design, documented here for traceability.
+
+---
+
 ## What was not promoted
 
-- EV motor files (`ev_motor_types_overview.md`, `ev_motor_powertrain_configurations.md`) — held as WIP
+- EV motor source files (`ev_motor_types_overview.md`, `ev_motor_powertrain_configurations.md`) — held as WIP in `work/design/`
 - NEC article-specific addenda (Art 430, 409, 725, 250, 240, 215) — not justified by current source material
+- Residential load calculation notes — held as WIP source only
 
 ---
 

@@ -31,6 +31,12 @@ inputs_schema:
 
 overlap_notes:
   base_path: "../../standards_intelligence/crosswalks/overlap_notes/"
+  availability_note: >
+    Most overlap note files listed below do not yet exist. Only
+    overlap_nfpa79_iec60204__motors_drives.md and overlap__motors_drives.md
+    are currently present. All other topic files are forward-looking references
+    for when those overlap notes are written. Do not treat missing files as
+    errors — check for existence before loading.
   topics:
     - topic_id: scope_boundary
       note_file: "overlap_nfpa79_iec60204__scope_boundary.md"
