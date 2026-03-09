@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 19:42:44
+**Last Auto-Updated:** 2026-03-08 22:19:47
 
 ```text
 ├── .claude/
@@ -378,17 +378,61 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── RAG_DIRECTORY_STATUS.md
 │   │   ├── VERSION_OVERVIEW.md
 │   │   ├── commissioning_checklists/
+│   │   │   ├── README.md
+│   │   │   ├── _index.yaml
+│   │   │   ├── checklists/
+│   │   │   │   ├── README.md
+│   │   │   │   ├── _index.yaml
+│   │   │   │   ├── basic_circuit_polarity_and_power_checks.md
+│   │   │   │   ├── capacitor_discharge_awareness_check.md
+│   │   │   │   ├── drive_commissioning.md
+│   │   │   │   ├── motor_nameplate_and_overload_setting.md
+│   │   │   │   ├── motor_rotation_and_overload_verification.md
+│   │   │   │   └── pre_power_panel_and_incoming_supply_check.md
 │   │   │   ├── dry_run/
 │   │   │   ├── handover/
 │   │   │   ├── live_run/
 │   │   │   └── pre_power/
 │   │   ├── design_framework/
+│   │   │   ├── README.md
+│   │   │   ├── _index.yaml
+│   │   │   ├── constraints/
+│   │   │   │   └── grounding_bonding_rules.yaml
 │   │   │   ├── control_system_design/
+│   │   │   ├── design_guides/
+│   │   │   │   └── 02_power_distribution_guide.md
+│   │   │   ├── electrical_review/
+│   │   │   │   ├── README.md
+│   │   │   │   ├── _index.yaml
+│   │   │   │   ├── basic_resistive_network_review.md
+│   │   │   │   ├── component_selection_basics.md
+│   │   │   │   ├── ohms_law_and_power_check_workflow.md
+│   │   │   │   └── simple_signal_and_interface_circuit_notes.md
 │   │   │   ├── io_architecture/
+│   │   │   ├── motor_systems/
+│   │   │   │   ├── README.md
+│   │   │   │   ├── _index.yaml
+│   │   │   │   ├── industrial_vs_ev_vs_drone_motor_drive_standards_matrix.md
+│   │   │   │   ├── integrated_drive_failure_modes_and_tradeoffs.md
+│   │   │   │   ├── integrated_drive_serviceability_and_field_replacement_review.md
+│   │   │   │   ├── integrated_motor_drive_architecture_comparison.md
+│   │   │   │   ├── motor_mounted_drive_thermal_and_emc_design_notes.md
+│   │   │   │   ├── motor_nameplate_review_checklist.md
+│   │   │   │   ├── motor_selection_comparison_matrix.md
+│   │   │   │   ├── motor_selection_workflow.md
+│   │   │   │   ├── motor_troubleshooting_decision_tree.md
+│   │   │   │   ├── servo_commissioning_workflow.md
+│   │   │   │   ├── star_delta_and_supply_matching_notes.md
+│   │   │   │   ├── vfd_commissioning_workflow.md
+│   │   │   │   └── vfd_motor_integration_review.md
 │   │   │   ├── network_architecture/
 │   │   │   ├── power_distribution/
 │   │   │   ├── safety_architecture/
 │   │   │   └── us_eu_compliance_wizard/
+│   │   │       ├── README.md
+│   │   │       ├── US_EU_Machine_Compliance_Wizard.md
+│   │   │       ├── us_eu_delta_report_template.md
+│   │   │       └── us_eu_wizard_rules.yaml
 │   │   ├── standards_intelligence/
 │   │   │   ├── README.md
 │   │   │   ├── _glossary.md
@@ -406,7 +450,9 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │       ├── GENERATION_STATUS.md
 │   │   │   │       ├── _index.yaml
 │   │   │   │       ├── file_structure.md
-│   │   │   │       └── overlap__sccr.md
+│   │   │   │       ├── overlap__motors_drives.md
+│   │   │   │       ├── overlap__sccr.md
+│   │   │   │       └── overlap_nfpa79_iec60204__motors_drives.md
 │   │   │   ├── file_structure.md
 │   │   │   ├── international/
 │   │   │   │   ├── cybersecurity/
@@ -628,10 +674,38 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │           ├── UL508A_OVERVIEW.md
 │   │   │           └── _index.yaml
 │   │   ├── training_modules/
+│   │   │   ├── README.md
+│   │   │   ├── _index.yaml
 │   │   │   ├── commissioning/
+│   │   │   ├── electrical_machines/
+│   │   │   │   ├── README.md
+│   │   │   │   ├── _index.yaml
+│   │   │   │   ├── ac_vs_dc_motor_comparison.md
+│   │   │   │   ├── brushless_dc_ev_and_drone_motor_comparison.md
+│   │   │   │   ├── dc_motor_basics.md
+│   │   │   │   ├── induction_motor_basics.md
+│   │   │   │   ├── motor_family_comparison.md
+│   │   │   │   ├── motor_nameplates_slip_and_torque.md
+│   │   │   │   ├── servo_drive_fundamentals.md
+│   │   │   │   ├── vfd_and_servo_architecture_diagrams.md
+│   │   │   │   └── vfd_fundamentals.md
 │   │   │   ├── fundamentals/
 │   │   │   │   ├── README.md
-│   │   │   │   └── conductor_ampacity_and_termination_temperature.md
+│   │   │   │   ├── _index.yaml
+│   │   │   │   ├── conductor_ampacity_and_termination_temperature.md
+│   │   │   │   ├── diodes_transistors_and_switching_basics.md
+│   │   │   │   ├── electrical_equations_reference.md
+│   │   │   │   ├── electrical_quantities_and_circuit_language.md
+│   │   │   │   ├── equivalent_circuit_methods.md
+│   │   │   │   ├── kirchhoff_laws_and_systematic_analysis.md
+│   │   │   │   ├── passive_components_resistors_capacitors.md
+│   │   │   │   └── series_parallel_and_divider_methods.md
+│   │   │   ├── nec_application/
+│   │   │   │   ├── README.md
+│   │   │   │   ├── _index.yaml
+│   │   │   │   ├── motor_and_panel_code_application.md
+│   │   │   │   ├── nec_code_reading_fundamentals.md
+│   │   │   │   └── working_space_and_table_navigation.md
 │   │   │   ├── safety/
 │   │   │   └── troubleshooting/
 │   │   └── troubleshooting_engine/
@@ -657,11 +731,17 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   ├── templates/
 │   │   ├── README.md
 │   │   ├── checklists/
+│   │   │   └── checklist_template.md
 │   │   ├── design_guides/
+│   │   │   └── design_guide_template.md
 │   │   ├── md_headers/
+│   │   │   ├── archived_header.md
 │   │   │   ├── draft_only_header.md
 │   │   │   └── rag_approved_header.md
-│   │   └── reports/
+│   │   ├── reports/
+│   │   │   └── report_template.md
+│   │   └── work_notes/
+│   │       └── work_note_template.md
 │   ├── tools/
 │   │   ├── audit_tool/
 │   │   │   ├── README.md
@@ -751,6 +831,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       │   │   │   ├── induction_motor_nameplate_and_enclosures.md
 │       │   │   │   ├── induction_motor_poles_torque_curves_and_nema_designs.md
 │       │   │   │   └── induction_motor_terminal_connections_and_star_delta.md
+│       │   │   ├── nec_exam_prep_topics/
+│       │   │   │   ├── INTEGRATION_PLAN.md
+│       │   │   │   ├── README.md
+│       │   │   │   ├── electrical_exam_math_ohms_law_and_power.md
+│       │   │   │   ├── nec_code_reading_and_index_method.md
+│       │   │   │   ├── nec_table_reading_and_working_space_example.md
+│       │   │   │   └── residential_load_calculation_notes.md
 │       │   │   └── temp links.md
 │       │   ├── residential_nec_top_articles_transcript_summary.md
 │       │   ├── scratch_notes/
@@ -1351,6 +1438,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── 2026-03-08-decision-workflow-enhancements.md
 │   │   ├── 2026-03-08-electrical-intelligence-integration-design.md
 │   │   ├── 2026-03-08-electrical-intelligence-integration-plan.md
+│   │   ├── 2026-03-08-electrical-intelligence-integration-requirements.md
 │   │   ├── 2026-03-08-glossary-design.md
 │   │   ├── 2026-03-08-glossary-implementation.md
 │   │   ├── 2026-03-08-nec-missing-articles.md
@@ -1361,7 +1449,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── 2026-03-08-phase9-standards-graph.md
 │   │   ├── 2026-03-08-standards-graph-design.md
 │   │   ├── 2026-03-08-theme-switching-design.md
-│   │   └── 2026-03-08-theme-switching-implementation.md
+│   │   ├── 2026-03-08-theme-switching-implementation.md
+│   │   └── 2026-03-09-phase12-offshore-marine-overlay.md
 │   ├── scenarios/
 │   │   ├── global-machine/
 │   │   │   └── index.md
