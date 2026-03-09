@@ -30,23 +30,23 @@ related_standards:
 
 ## Key Activities
 
-- **Wire sizing** — per NEC Article 310 / UL 508A Section 5 / IEC 60204-1 Clause 12
-- **Motor protection** — overcurrent protection, overload relay sizing (NEC 430 / IEC 60204-1 Clause 13)
-- **Short-circuit current rating (SCCR)** — panel SCCR calculation per UL 508A Section SB
-- **Grounding design** — per NEC 250 / NFPA 79 Ch 8 / IEC 60204-1 Clause 8
-- **Panel layout** — clearance, creepage, component spacing
-- **Control circuit design** — safety circuit implementation per safety architecture
+- **Wire sizing** — NEC Art. 310 for field conductors; UL 508A wiring and conductors rules for internal panel; IEC 60204-1 Clause 12 (international); account for temperature rating relative to heat sources (drives, starters, power supplies)
+- **Motor protection** — coordinated branch design: protective device + starter + overload relay + contactor; NEC Art. 430 / UL 508A motor controllers module / IEC 60204-1 Clause 13
+- **SCCR** — weakest-link method per UL 508A Supplement SB; evaluate every power-circuit component (not just the main breaker: contactors, fuse holders, power distribution blocks, SPDs are common limiting items); result must appear on the panel nameplate per NEC Art. 409.110
+- **Grounding design** — three-layer approach: NEC Art. 250 baseline / NFPA 79 Ch. 8 machine bonding / UL 508A panel bonding workmanship; keep protective grounding and functional/EMC grounding separate; door bonding jumpers required
+- **Spacing, creepage, and clearance** — review high-voltage power zones, mixed-voltage areas, and communication cable routing; use finger-safe components and barriers as mitigation; verify final minimums against UL 508A tables and component listing conditions (voltage-based heuristics are screening tools only)
+- **Control circuit design** — control-power architecture (transformer vs direct DC supply), PLC/relay interface design, safety circuit implementation per safety architecture
 
 ## Key Deliverables
 
 | Deliverable | Standard Reference |
 |-------------|-------------------|
 | Bill of Materials (BOM) | — |
-| Circuit diagrams / schematics | NFPA 79 Ch 19 / IEC 60204-1 Clause 17 |
-| Wire schedule | NEC 310 / UL 508A Sec. 5 |
-| Panel layout drawing | UL 508A / IEC 60204-1 Clause 11 |
-| SCCR calculation worksheet | UL 508A Section SB |
-| Grounding drawing | NEC 250 / NFPA 79 Ch 8 |
+| Circuit diagrams / schematics | NFPA 79 Ch. 19 / IEC 60204-1 Clause 17 |
+| Wire schedule | NEC Art. 310 / UL 508A wiring and conductors |
+| Panel layout drawing | UL 508A general construction / IEC 60204-1 Clause 11 |
+| SCCR calculation worksheet | UL 508A Supplement SB (weakest-link method) |
+| Grounding drawing | NEC Art. 250 / NFPA 79 Ch. 8 / UL 508A grounding and bonding |
 | Safety function verification plan | ISO 13849-1 / IEC 62061 |
 
 ## See Also

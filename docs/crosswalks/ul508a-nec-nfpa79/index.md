@@ -82,9 +82,11 @@ Three standards all address grounding; each adds a layer:
 | UL 508A Sec. 7 | Panel bonding workmanship — how PE is connected inside the panel enclosure |
 
 **Key points:**
-- Keep "noise grounding" (signal reference) separate from safety bonding
-- Door bonding jumpers are required
-- PE continuity must be maintained throughout the machine
+- Keep "noise grounding" (signal reference) separate from safety bonding — these are not the same function
+- Safety/protective grounding exists to clear faults and protect people; functional grounding is for EMC/noise purposes only
+- Functional grounding must not compromise the protective-earth path
+- Door bonding jumpers are required (hinges and paint can interrupt continuity)
+- PE continuity must be maintained throughout the machine and after any field modifications
 
 ---
 
