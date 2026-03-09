@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 22:29:10
+**Last Auto-Updated:** 2026-03-08 22:31:08
 
 ```text
 ├── .claude/
@@ -981,7 +981,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 4e/
 │   │               │   ├── 469c2281456ea6b8c3574a8de06961878eeb16282aabec232f3e7cdaa20e7c
 │   │               │   ├── c44749192e6403d781993ea22db7c4ba02a7889befc85700615b7872d9ce16
-│   │               │   └── d6a389b09b4429688c735a86f8a0f3b92d5176bcd2d9295630442404a5e6b6
+│   │               │   ├── d6a389b09b4429688c735a86f8a0f3b92d5176bcd2d9295630442404a5e6b6
+│   │               │   └── d7561b2378bcc3783ff908636f33a0687da111975ccbac41d085218d7c9298
 │   │               ├── 4f/
 │   │               │   ├── 22047c6ccca17ed77b8b96ad6638fc34c17902034215785307430e687d1d47
 │   │               │   └── f6a3baebc55f69a127eca51eeda6a21b39ed4f11852068669241c01e7da412
@@ -1144,6 +1145,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 2747846fce151666135aebce8a8af85eb1eea8cdbde7f7e7ea77f795066b00
 │   │               ├── cc/
 │   │               │   └── cca6c3bfd574eb97bcbac50bcd9a577ae1f9ef049eee6ad1ca713bcf09be0a
+│   │               ├── ce/
+│   │               │   └── 56e418f60022276340ba06bab420db1a39b86f2417cf2b901f88438c6ac08f
 │   │               ├── cf/
 │   │               │   └── 92a9502650587c6b587bf0bd2fbe8408688be12db457cf57d12d7fa7447406
 │   │               ├── d0/
@@ -1157,6 +1160,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── d7/
 │   │               │   └── 92c6bf5ca0cb6a01484eb838c34af15433bcb0da692b9084a472d9c4b505d9
 │   │               ├── d8/
+│   │               │   ├── 2926753f513fd8557263c0003c7618ac35a95d5b8c4acd57ade2cab28e343c
 │   │               │   └── 460058dd46e923c304cee7010502aba8c4093fd64832454cd7047c0adc7473
 │   │               ├── db/
 │   │               │   └── c25cc47c033af87e9e88e49fc3db2da361c878bc8cef3070720fa89ead405c
@@ -1187,6 +1191,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── f867c0ee7664e62c7dbd27fba23467f1652c419dcce1c4ee57c7772dab4e48
 │   │               ├── f1/
 │   │               │   └── 4de0c2dfa4009076ed6ba8d42c9b22d122562a5d0f63fef83c1d37c980aa05
+│   │               ├── f2/
+│   │               │   └── 48a81c51e97671fae488a6b4296eece2c592cb3e97fcf690b7b7fb05c693bc
 │   │               ├── f6/
 │   │               │   └── 5cd8a0bbb88a838309164c51364f7a4aade6eb52086ca1c3c73c4de227ad93
 │   │               ├── f9/
@@ -1292,6 +1298,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-08-decision-workflow-enhancements.md
 │   │   │   ├── 2026-03-08-electrical-intelligence-integration-design.md
 │   │   │   ├── 2026-03-08-electrical-intelligence-integration-plan.md
+│   │   │   ├── 2026-03-08-electrical-intelligence-integration-requirements.md
 │   │   │   ├── 2026-03-08-glossary-design.md
 │   │   │   ├── 2026-03-08-glossary-implementation.md
 │   │   │   ├── 2026-03-08-nec-missing-articles.md
@@ -1302,7 +1309,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-08-phase9-standards-graph.md
 │   │   │   ├── 2026-03-08-standards-graph-design.md
 │   │   │   ├── 2026-03-08-theme-switching-design.md
-│   │   │   └── 2026-03-08-theme-switching-implementation.md
+│   │   │   ├── 2026-03-08-theme-switching-implementation.md
+│   │   │   └── 2026-03-09-phase12-offshore-marine-overlay.md
 │   │   ├── scenarios/
 │   │   │   ├── global-machine/
 │   │   │   │   └── index.html
