@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 17:40:07
+**Last Auto-Updated:** 2026-03-08 17:43:58
 
 ```text
 ├── .claude/
@@ -806,6 +806,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── f71006d652ee55f235e9f005fc6620afcbbf683f2e8332e81378e5d2ae4975
 │   │               ├── 36/
 │   │               │   └── d582097a42b157b16a059c76c099e57f145550bc3b1266e8823f4c06a7146b
+│   │               ├── 39/
+│   │               │   └── 05a5f4115608928c4c1bf892740f3662a163ad4fb503f93ee2322eb41487a0
 │   │               ├── 3a/
 │   │               │   └── 78695388b38b5cceefaf6796b0137877514593543b91af2752d5a17e3d736c
 │   │               ├── 3b/
@@ -843,6 +845,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 8ae6a5381cd39978b24dd3db2fcd95b36e4ea0a99731137cdcaa5262a3af56
 │   │               ├── 5b/
 │   │               │   ├── aaa7b65775d52ee9cfb41de62b27d7cf0bf3981ac35c58fdc2f6490f31d81d
+│   │               │   ├── b4cee0ce4ebdec75855f7910ccfd56ce0e5b23b07d2e3924308557890541b2
 │   │               │   └── d4b2fa17815610d897c1dbfd754724e6e17f5d8607dfbba9dc9a09b195d453
 │   │               ├── 5c/
 │   │               │   └── 89640df2443aa0d8cc29262765c2de8514a348524c3c271900ab45566232cc
@@ -865,7 +868,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 6bf1a4e30a45c09272b0ab99a32a2c2b556106edc929b96d7c5b545048fe62
 │   │               │   └── c3114be24f5d35bdb46412573e383fa0ebf515e5e094039e4b3f3615a1dd86
 │   │               ├── 71/
-│   │               │   └── 3a92a6f35e2100179cec7de3c2189ccb03a159f80d22271a8df5d7e554e49e
+│   │               │   ├── 3a92a6f35e2100179cec7de3c2189ccb03a159f80d22271a8df5d7e554e49e
+│   │               │   └── ee933cfab88aadf41ba80e25123f3d0b31a1aff8ffc1caff3ea7606b5638f0
 │   │               ├── 72/
 │   │               │   └── ceb13fd79a594294d73a17d599411f34d2410abf8c489e5b75cc36b1ecd445
 │   │               ├── 75/
@@ -874,6 +878,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── d5d2ed8c3e2bcef1476c89e6d8ece7a0b379b592f89ff7669668c3b6231cb9
 │   │               │   └── f20e4f21d32454e4ccbbabbf6adf78ec95abcb9c60b64a274ab8ad2c3d7ef6
 │   │               ├── 78/
+│   │               │   ├── 260c5e2493d53e1cc9a05b56d01391e6281374e159dd0c1d615536db98aec0
 │   │               │   └── 9c0a33a7ef2814d2a1ee3d386ffa519dbb166402a4aa7ae54d05b34da87f37
 │   │               ├── 7a/
 │   │               │   └── 057d9014c25f4b76198a8779e97d958c5f1386f164f8aa91e8b3fae6abd568
@@ -884,7 +889,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 7e/
 │   │               │   └── 1dbc1110aecfe097d8f86fe19410161e74d12a58a0ea1fef8809ad81124306
 │   │               ├── 7f/
-│   │               │   └── 53770c6fc9a4b6368b5d8693ad59fe612232f13dcf1b8358180f510bc97ee9
+│   │               │   ├── 53770c6fc9a4b6368b5d8693ad59fe612232f13dcf1b8358180f510bc97ee9
+│   │               │   └── 717bbdd539c963b4d3792cc2557b18946dc22fb46ae6adfe9d24b02f15fed7
 │   │               ├── 80/
 │   │               │   └── c4a4cbd716179311441280d346ac16f88a7ab2a807d9d67e904d9db008899d
 │   │               ├── 83/
@@ -899,6 +905,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── c1213ea092e22c325fa5ad42f2e3bcae32d7f5f3cef57979a008f427e9d7d0
 │   │               ├── 92/
 │   │               │   ├── 4fe926ec4cd47e0304801483afc663a1829e779476c492f7be2996fdb7717c
+│   │               │   ├── b9caa5fd19144b5bd1bba6ec83668f106f81e52903398f269d8cb64f18c1aa
 │   │               │   └── d45446618749d74bb3377b0f68eca3c1f4392f9b094ecf71f6b7c11e47421f
 │   │               ├── 94/
 │   │               │   └── 54c281d58441cd4e68f7e6f853f27334d19bc43f1eaf6f654287cf165f582a
@@ -1157,6 +1164,10 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │       │       └── index.html
 │   │       ├── graph/
 │   │       │   └── index.html
+│   │       ├── hazardous-area/
+│   │       │   ├── iec-60079/
+│   │       │   │   └── index.html
+│   │       │   └── index.html
 │   │       ├── index.html
 │   │       ├── machinery/
 │   │       │   ├── iec-60204-1/
@@ -1290,6 +1301,10 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   └── iso-13849-1/
 │   │   │       └── index.md
 │   │   ├── graph/
+│   │   │   └── index.md
+│   │   ├── hazardous-area/
+│   │   │   ├── iec-60079/
+│   │   │   │   └── index.md
 │   │   │   └── index.md
 │   │   ├── index.md
 │   │   ├── machinery/
