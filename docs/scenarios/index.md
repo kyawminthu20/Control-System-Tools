@@ -52,4 +52,16 @@ repo_path: "control-standards/rag/standards_intelligence/scenario/"
     <p class="scenario-card__start"><strong>Start:</strong> ISO 13849-1 / IEC 62061 — 10-step SIL/PL workflow</p>
     <a href="{{ '/scenarios/machine-safety-implementation/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
   </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario 07</span>
+    <span class="scenario-card__title">O&amp;G Onshore Process Skid (ESD / F&amp;G)</span>
+    <p class="scenario-card__start"><strong>Start:</strong> IEC 61511 + IEC 60079 + NEC Art. 500–505</p>
+    <a href="{{ '/scenarios/oil-gas-process-skid/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario 08</span>
+    <span class="scenario-card__title">Semiconductor Fab Tool (Etch / CVD)</span>
+    <p class="scenario-card__start"><strong>Start:</strong> SEMI S2/S8/S14 + IEC 60204-1 + ISO 12100</p>
+    <a href="{{ '/scenarios/semiconductor-fab-tool/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
+  </div>
 </div>
