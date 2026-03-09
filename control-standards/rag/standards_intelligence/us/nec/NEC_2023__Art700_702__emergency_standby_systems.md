@@ -8,8 +8,11 @@ STANDARD_ID: NFPA_70
 EDITION: 2023
 
 NEC_HIERARCHY:
-  article: "700"
-  article_title: "Emergency Systems / Legally Required Standby / Optional Standby"
+  articles: ["700", "701", "702"]
+  article_titles:
+    - "700: Emergency Systems"
+    - "701: Legally Required Standby Systems"
+    - "702: Optional Standby Systems"
 
 INDEX_TAGS:
   topics: ["emergency_systems", "standby_power", "transfer_switch", "generator", "UPS", "safety_systems"]
