@@ -18,6 +18,48 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-09 — Electrical Knowledge Integration complete
+
+Promoted three transcript-derived electrical learning sources into the existing canonical RAG layers.
+No new parallel layer created. All content routes into existing `training_modules/`, `design_framework/`,
+`commissioning_checklists/checklists/`, and `standards_intelligence/crosswalks/overlap_notes/`.
+
+Design doc: `docs/plans/2026-03-08-electrical-intelligence-integration-design.md`
+
+#### training_modules/fundamentals/ (new)
+- 7 files: `electrical_quantities_and_circuit_language`, `series_parallel_and_divider_methods`,
+  `kirchhoff_laws_and_systematic_analysis`, `equivalent_circuit_methods`,
+  `electrical_equations_reference`, `passive_components_resistors_capacitors`,
+  `diodes_transistors_and_switching_basics`
+
+#### training_modules/electrical_machines/ (expanded)
+- 3 core motor files + 6 additional: `vfd_fundamentals`, `servo_drive_fundamentals`,
+  `ac_vs_dc_motor_comparison`, `motor_family_comparison`,
+  `brushless_dc_ev_and_drone_motor_comparison`, `vfd_and_servo_architecture_diagrams`
+
+#### training_modules/nec_application/ (new)
+- 3 files: `nec_code_reading_fundamentals`, `working_space_and_table_navigation`,
+  `motor_and_panel_code_application`
+
+#### design_framework/electrical_review/ (new)
+- 4 files: `ohms_law_and_power_check_workflow`, `basic_resistive_network_review`,
+  `component_selection_basics`, `simple_signal_and_interface_circuit_notes`
+
+#### design_framework/motor_systems/ (expanded)
+- 13 total files including: selection workflow, nameplate checklist, star-delta notes,
+  VFD integration review, commissioning workflows, troubleshooting decision tree,
+  comparison matrices, integrated-drive architecture notes
+
+#### commissioning_checklists/checklists/ (expanded)
+- 6 files: motor rotation/overload, nameplate/overload setting, circuit polarity,
+  capacitor discharge, drive commissioning, pre-power panel check
+
+#### standards_intelligence/crosswalks/overlap_notes/ (gap fill)
+- `overlap__motors_drives.md`
+- `overlap_nfpa79_iec60204__motors_drives.md`
+
+---
+
 ### 2026-03-09 — Integrated motor-drive architecture notes extracted from work-note source
 
 - `control-standards/work/design/check_this.md` — used as a read-only source for integrated drive-on-motor content; source file left unchanged during extraction.

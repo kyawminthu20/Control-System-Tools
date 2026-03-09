@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 22:23:02
+**Last Auto-Updated:** 2026-03-08 22:24:51
 
 ```text
 ├── .claude/
@@ -527,6 +527,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   │       ├── README.md
 │   │   │   │   │       └── _index.yaml
 │   │   │   │   ├── offshore/
+│   │   │   │   │   ├── ABS_offshore_electrical_control.md
 │   │   │   │   │   └── DNV_OS_D201__electrical_installations.md
 │   │   │   │   └── semiconductor/
 │   │   │   │       └── semi/
