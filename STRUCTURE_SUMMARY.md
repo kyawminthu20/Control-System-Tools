@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-09 07:26:03
+**Last Auto-Updated:** 2026-03-09 07:35:04
 
 ```text
 ├── .claude/
@@ -32,7 +32,9 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   ├── console-2026-03-06T07-01-55-004Z.log
 │   ├── console-2026-03-08T21-17-22-955Z.log
 │   ├── console-2026-03-08T21-19-03-191Z.log
-│   └── console-2026-03-08T21-19-12-540Z.log
+│   ├── console-2026-03-08T21-19-12-540Z.log
+│   ├── console-2026-03-09T14-33-31-511Z.log
+│   └── page-2026-03-09T14-32-39-211Z.png
 ├── .python-version
 ├── .venv/
 │   ├── .gitignore
@@ -894,6 +896,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 04/
 │   │               │   └── 8ae153d1cc2aef54095eadad06148ac1372da0e9f585dc95e40b643279a3ea
 │   │               ├── 06/
+│   │               │   ├── 368909b6af8c85b1b4b8293d52d4feafba3ed38f31455e36bd188ef79838f2
 │   │               │   └── d3a687ff4b25e2062eb633ed15fbe1736c9f6c4345811632c44f80c9c712bd
 │   │               ├── 08/
 │   │               │   ├── 4ce4c9fe25a2e3a4783c96c116b5041352ed067bc5c830467b332afcbe86fa
@@ -911,7 +914,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 0d/
 │   │               │   ├── 0b2dfd9fcde91ec81a829dbc690e60db0c9de83282525b18f277a4434ae4bf
 │   │               │   ├── 13eb23d2173fd50fd78814a4c2f7f2c1ad049673f217c51511484eeef6f394
-│   │               │   └── a6f65922f6e117f784b372bf390c599e40d300c4c48b9b71cc5fc2abb0f263
+│   │               │   ├── a6f65922f6e117f784b372bf390c599e40d300c4c48b9b71cc5fc2abb0f263
+│   │               │   └── d6645068b4a94d3ab97587546cabb9ec4fbee5782921b346e4c6357088dfa3
 │   │               ├── 0f/
 │   │               │   ├── 260c0f2220909dd3e4dd4990c35bacc6ec27c2c18b194b8205187fb96a4ecf
 │   │               │   └── 5293790685d198f5e3c499d4946e60f45ec443a49787d3eca6637dd8f1132a
@@ -924,7 +928,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 15/
 │   │               │   └── 20a9fe1914a393702bbf6c979b685d8a752a4008d15bf3a3a2898148d9a521
 │   │               ├── 16/
-│   │               │   └── 128c2f7a863b1b2b6234ab7bcaf801793dd4ab4dd1321ebd6c09633010da40
+│   │               │   ├── 128c2f7a863b1b2b6234ab7bcaf801793dd4ab4dd1321ebd6c09633010da40
+│   │               │   └── 1f2c6c4eeac8516244a86fa521c300b4a3a1bd7a73b5512d47329f4a81a86a
 │   │               ├── 18/
 │   │               │   ├── 94e9d75cee6275fe7456cab2534c4169cb6f49d5802986022b81540a8112cd
 │   │               │   ├── c51a279f5cb2e4648501e75da94e6dd98e8d64407b0b7068685ae0cb0ffc8f
@@ -975,6 +980,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 2d/
 │   │               │   ├── d2aa9c6b18d70106e2dc99bb9588df36a49fe8052a89972a452387ef102970
 │   │               │   └── fb1cb269939f6009dbbbfdd06c26c3a9115d80d4b514ad236904dd13924683
+│   │               ├── 2e/
+│   │               │   └── 92f99a760124a7ec7a6d5e2056f46b5a084595e50a5cdf2d15db8e3e5a344a
 │   │               ├── 2f/
 │   │               │   └── 5e1412735984ba77818de876dcf7007c5dce7da5d99c244a86b7d4444a7d59
 │   │               ├── 30/
@@ -991,6 +998,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── a8948028acd0a21c7d75f4d4f39372c26477b6e36b3a6bed4809055da4e823
 │   │               ├── 38/
 │   │               │   ├── 0b419f3d060ea0e1951a0d6245ee53269117f5fe5cf7043c76ba4438be637b
+│   │               │   ├── dd56ef3443877fc869c69b1b48708bd7faeedd2c7d77c090eaabb7fb66269b
 │   │               │   └── de1662201ef5e677745f5054219d0debaa4c2fcec5c686cc90561c75d46279
 │   │               ├── 39/
 │   │               │   ├── 05a5f4115608928c4c1bf892740f3662a163ad4fb503f93ee2322eb41487a0
@@ -1023,6 +1031,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 4a/
 │   │               │   └── 67fb88704aac3c2bd6bb8c5d17208f2ca69ea25dc191269f9dc1761a8a5049
 │   │               ├── 4c/
+│   │               │   ├── 22bcda91b7a5a6e3b68dab26914226aaee23ea7d2451d9d87fd585c760a8b6
 │   │               │   ├── 3bf1c49ca5aa726d54a1ebf1f63c1b8a76718f67202ebeac8fded59718059d
 │   │               │   ├── 4e436f9a453c776dbf011f98d932d615988bb08bddec6051625340e88d012f
 │   │               │   └── c13b24eb0a0019b4f4fff2f237b36c8ed17e43d7e7663945b8791a99fa65d1
@@ -1084,6 +1093,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 5079b8aa71cc7d1e63c57441cf6677a8a972ad712c8930d6c922349b7bfa65
 │   │               ├── 6c/
 │   │               │   └── 6d08fb5ee3326c00c6332725018a3a2a0349ea0291fd9f7d3d98dda94c3aeb
+│   │               ├── 6e/
+│   │               │   └── d2d979ae7c534e25317b5760827fda5f9be9654c7f9bc524080d062cb4f755
 │   │               ├── 6f/
 │   │               │   └── 2c4b9f8c6077793de797f6bd4ddac57b33ccf67e8f8b472df8c86f418082ce
 │   │               ├── 70/
@@ -1235,6 +1246,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 316f2201fe24eb666a2f2a7161fa1bfcddf0176b10a22762b438dc7fa5d6e6
 │   │               ├── bf/
 │   │               │   └── 6bc0b2ee31345100572fb539a65f9bbb7ae04b3392d53f663e0c9bed14384d
+│   │               ├── c0/
+│   │               │   └── 3586ddc55002cc48e60716400590fc8bf5a126e0926103a7391860d8be0ac0
 │   │               ├── c1/
 │   │               │   ├── 59482e0be98a982c5578f479cd8d27ab4165a8f5b1a6800bd3be57aeeb3fa9
 │   │               │   └── 8e3fce589275c09a49f1a4cc7677ad37b290a8c78dbe1646be80feb378da27
@@ -1305,6 +1318,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── b4f236aae87abb1af2c130f9a4ff24d8c53a3013f1eebd24fa995c591a47ae
 │   │               │   └── ec92bcae9c2f53c49835dd78fa7e9e7c044dd1ef756421bd8233b8c15fa9f2
 │   │               ├── e1/
+│   │               │   ├── 5c8d6df772b18abf395260e097cfea7074edd55c85938b8483ca48fa377055
 │   │               │   └── 6915de1ee145b4551bf365486a617cad9de4723e8bd4e1108200e9fbcef526
 │   │               ├── e3/
 │   │               │   └── b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -1328,6 +1342,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── ec/
 │   │               │   └── dcbf297318d7c67f23e689d68f1e36f47e54759bdc936c3f73660143404c8d
 │   │               ├── ed/
+│   │               │   ├── 4cfa9205091e8cb2b68e99b71271eb2f6db5fee00a99cb8bbf8880d425b899
 │   │               │   ├── bc97ede5832fc84913b39dc6483c59021402f4de631cca082a5825bba5b22b
 │   │               │   └── f867c0ee7664e62c7dbd27fba23467f1652c419dcce1c4ee57c7772dab4e48
 │   │               ├── f0/
@@ -1534,6 +1549,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │       │   │   └── index.html
 │   │       │   ├── dc-motor-basics/
 │   │       │   │   └── index.html
+│   │       │   ├── index.html
 │   │       │   ├── induction-motor-basics/
 │   │       │   │   └── index.html
 │   │       │   ├── motor-control-methods/
@@ -1565,6 +1581,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │       │   │   └── index.html
 │   │       │   ├── equivalent-circuit-methods/
 │   │       │   │   └── index.html
+│   │       │   ├── index.html
 │   │       │   ├── kirchhoff-laws/
 │   │       │   │   └── index.html
 │   │       │   ├── passive-components/
@@ -1573,6 +1590,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │       │       └── index.html
 │   │       ├── index.html
 │   │       └── nec-application/
+│   │           ├── index.html
 │   │           ├── motor-panel-code-application/
 │   │           │   └── index.html
 │   │           ├── nec-code-reading/
@@ -1742,6 +1760,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   └── index.md
 │   │   │   ├── dc-motor-basics/
 │   │   │   │   └── index.md
+│   │   │   ├── index.md
 │   │   │   ├── induction-motor-basics/
 │   │   │   │   └── index.md
 │   │   │   ├── motor-control-methods/
@@ -1773,6 +1792,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   └── index.md
 │   │   │   ├── equivalent-circuit-methods/
 │   │   │   │   └── index.md
+│   │   │   ├── index.md
 │   │   │   ├── kirchhoff-laws/
 │   │   │   │   └── index.md
 │   │   │   ├── passive-components/
@@ -1781,6 +1801,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │       └── index.md
 │   │   ├── index.md
 │   │   └── nec-application/
+│   │       ├── index.md
 │   │       ├── motor-panel-code-application/
 │   │       │   └── index.md
 │   │       ├── nec-code-reading/
