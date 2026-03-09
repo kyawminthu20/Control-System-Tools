@@ -26,18 +26,19 @@ Article 310 covers the general requirements for conductors, including their desi
 
 The "allowable ampacity" is not a fixed number; it is a calculated value based on environmental and installation conditions.
 
-* **The Master Table (310.16):** This table is the baseline for wire sizing. For panel design, the ** column** is the most common reference for sizing terminations.
-* **Ambient Temperature Adjustment (Table 310.15(B)(1)):** If the internal temperature of the control panel exceeds  (), the ampacity must be multiplied by a correction factor (e.g.,  for ).
-* **Adjustment for Proximity (Table 310.15(C)(1)):** When more than three current-carrying conductors are bundled together (as is common in dense wire duct), the ampacity must be reduced to account for the lack of airflow.
-* *4-6 conductors:* 80% capacity
-* *7-9 conductors:* 70% capacity
+* **The baseline ampacity table:** The applicable ampacity table provides the starting value for conductor sizing. In most industrial design work, engineers begin with the conductor insulation rating and installation method, then adjust from there.
+* **Ambient temperature correction:** If the conductor operates in a higher-than-normal ambient temperature, allowable ampacity must be corrected downward.
+* **Adjustment for bundling or proximity:** When more than three current-carrying conductors are grouped together, conductor heating increases and allowable ampacity is reduced.
+* **Current-carrying conductor count matters:** Equipment grounding conductors are not normally treated as current-carrying conductors for ampacity-adjustment purposes. Neutrals require more careful review because they count in some circuit arrangements but not all.
 
 
 
 ## 2. Temperature ratings
 
-* **Terminations (110.14(C)):** Even if you use  rated wire (like MTW or THHN), you must generally size the wire based on the ** column** of Table 310.16 because most circuit breaker and terminal block lugs are only rated for .
-* **Using  for Derating:** You are permitted to use the higher  ampacity as your *starting point* for math when applying derating factors, provided the final calculated ampacity does not exceed the  rating of the termination.
+* **Terminations (110.14(C)):** Final usable ampacity is limited by the temperature rating of the connected terminals and equipment, not just by the conductor insulation marking.
+* **High-temperature insulation is not the final answer:** A 90 C conductor does not automatically mean the circuit can be used at the 90 C ampacity value. In many real panel applications, the final usable ampacity is constrained by 75 C or 60 C terminations.
+* **Using the higher insulation column for calculation:** Higher insulation ratings are often used as the starting point for correction and adjustment calculations, but the final result still has to respect the termination limit.
+* **Read the actual conductor marking:** Dual-rated conductors such as THHN/THWN or THWN-2 require designers to pay attention to the actual marking and the environment in which the conductor is installed.
 
 ## 3. Control panel wire sizing logic
 
@@ -46,10 +47,36 @@ To correctly size a wire for a panel branch circuit:
 1. **Determine the Load:** Calculate the continuous load (run for 3+ hours) vs. non-continuous load.
 2. **Select Insulation Type:** Common panel wire is **MTW** (Machine Tool Wire) or **THHN/THWN-2**.
 3. **Apply Correction Factors:** Check the ambient temperature inside the enclosure and the number of wires in the wire duct.
-4. **Verify Terminal Rating:** Ensure the wire size fits and is compliant with the  terminal rule.
+4. **Verify Terminal Rating:** Confirm the final usable ampacity does not exceed the temperature limit of the connected lugs, breakers, terminals, or devices.
+5. **Coordinate with Article 240:** Choose conductor protection that matches the corrected allowable ampacity and does not violate small-conductor rules or other special limitations.
 
-## 4. Change log
+## 4. Practical interpretation for industrial panels
+
+Common design mistakes happen when engineers treat ampacity as a single table lookup instead of a sequence:
+
+1. pick a wire size from the base table
+2. forget bundling or enclosure heat
+3. forget terminal-temperature limits
+4. choose an OCPD from the wrong column
+
+For dense control panels, this sequence matters because:
+
+- wire duct can drive bundling adjustments
+- enclosure heat can drive ambient corrections
+- device terminals often limit the final usable ampacity
+- mixed cable types can create wet-location, dry-location, or voltage-rating issues
+
+## 5. Common failures
+
+1. **Using the 90 C column as the final permitted ampacity** without checking terminal limits.
+2. **Ignoring bundling effects** in dense wire duct or multi-conductor routing paths.
+3. **Forgetting ambient correction** in hot enclosures with drives, power supplies, or poor ventilation.
+4. **Assuming all neutrals are non-current-carrying** without reviewing the actual circuit arrangement.
+5. **Confusing conductor insulation rating with usable circuit ampacity** for NM, SE, UF, or dual-rated panel wire.
+
+## 6. Change log
 
 * 2026-01-15 — Initial draft created; added 310.16 application logic and termination temperature constraints.
+* 2026-03-09 — Rewrote ampacity, current-carrying-conductor, and terminal-temperature guidance using transcript-derived conductor-protection notes.
 
 ---
