@@ -18,6 +18,17 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-09 — Training site pages complete (24 modules)
+
+- `docs/training/index.md` — landing page, 24 modules in 3 groups
+- `docs/training/fundamentals/` — 8 pages: circuit theory, components, equations, conductor sizing
+- `docs/training/electrical-machines/` — 13 pages: motors, drives, servo systems
+- `docs/training/nec-application/` — 3 pages: code reading, table navigation, motor/panel application
+- Sidebar updated with Training section (Training → Fundamentals / Electrical Machines / NEC Application)
+- Build: 85 pages, clean
+
+---
+
 ### 2026-03-09 — Motor interview source note promoted into additional training and design files
 
 - `control-standards/work/design/check_this.md` — used as a read-only source for motor interview-style fundamentals, VFD electrical design points, and troubleshooting patterns; source file left unchanged.

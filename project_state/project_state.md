@@ -266,6 +266,13 @@ EV motor files held as WIP. No new parallel layer created.
 
 ## Phase 13 Backlog (Secondary Backlog)
 
+### Training site pages — COMPLETE
+- [x] `docs/training/index.md` — landing page, 24 modules, 3 groups
+- [x] `docs/training/fundamentals/` — 8 pages
+- [x] `docs/training/electrical-machines/` — 13 pages
+- [x] `docs/training/nec-application/` — 3 pages
+- [x] Sidebar: Training section added
+
 ### Thin industry pages (7 stubs remaining)
 - [ ] `docs/industries/energy/index.md` — deepen: IEC 61511 (process), IEC 60204-1, NEC, utility NERC CIP if applicable
 - [ ] `docs/industries/food-and-beverage/index.md` — deepen: hygiene-grade enclosures, NFPA 79, wash-down requirements
