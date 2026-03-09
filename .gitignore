@@ -1,3 +1,6 @@
+# Staging / scratch files
+control-standards/work/design/check_this.md
+
 # Python-generated files
 __pycache__/
 *.py[oc]
