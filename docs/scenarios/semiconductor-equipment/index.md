@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Scenario 05 — Semiconductor Equipment Compliance"
-description: "15-standard minimum compliance stack for semiconductor fab equipment. SEMI standards not in local corpus."
+description: "15-standard minimum compliance stack for semiconductor fab equipment. SEMI S2/S8/S14 corpus complete."
 breadcrumb:
   - name: "Scenarios"
     url: "/scenarios/"
@@ -14,6 +14,10 @@ related_standards:
     url: "/standards/functional-safety/iso-13849-1/"
   - name: "IEC 60204-1"
     url: "/standards/machinery/iec-60204-1/"
+  - name: "SEMI S2/S8/S14"
+    url: "/standards/semiconductor/semi/"
+  - name: "IEC 60079"
+    url: "/standards/hazardous-area/iec-60079/"
 industries:
   - name: "Semiconductor"
     slug: "semiconductor/"
@@ -22,7 +26,7 @@ industries:
 <div class="page-header">
   <span class="page-header__label">Scenario 05</span>
   <h1>Semiconductor Equipment Compliance</h1>
-  <span class="badge badge--gap">SEMI S2/S8/S14 — NOT IN LOCAL CORPUS</span>
+  <span class="badge badge--complete">SEMI S2/S8/S14 — Phase 10 Complete</span>
 </div>
 
 ## Project Summary
@@ -32,7 +36,7 @@ industries:
 | **Application** | Semiconductor fab equipment (process tool, metrology, handler) |
 | **Markets** | US fabs + EU fabs + Asian fabs (global) |
 | **Standards approach** | 15-Standard Minimum Compliance Stack |
-| **Unique requirement** | SEMI standards (S2, S8, S14) — not in local corpus |
+| **Unique requirement** | SEMI standards (S2, S8, S14) — [corpus complete](/standards/semiconductor/semi/) |
 
 ## The 15-Standard Compliance Stack
 
@@ -64,13 +68,13 @@ Source: `rag/reference_models/15-Standard Minimum Compliance Stack.md`
 
 ### Domain 4 — Hazardous Materials and Gas Systems
 
-**These standards are unique to semiconductor fabs. They are NOT in the local corpus.**
+**These standards are unique to semiconductor fabs.**
 
 | # | Standard | Purpose | Corpus Status |
 |---|----------|---------|---------------|
-| 10 | SEMI S2 | Semiconductor equipment safety | <span class="badge badge--gap">NOT IN CORPUS</span> |
-| 11 | SEMI S8 | Operator safety | <span class="badge badge--gap">NOT IN CORPUS</span> |
-| 12 | SEMI S14 | Fire hazards in tools | <span class="badge badge--gap">NOT IN CORPUS</span> |
+| 10 | SEMI S2 | Semiconductor equipment safety | <span class="badge badge--complete">Complete</span> |
+| 11 | SEMI S8 | Operator safety | <span class="badge badge--complete">Complete</span> |
+| 12 | SEMI S14 | Fire hazards in tools | <span class="badge badge--complete">Complete</span> |
 | — | NFPA 318 | Fab safety requirements | Not confirmed in corpus |
 
 ### Domain 5 — Cybersecurity

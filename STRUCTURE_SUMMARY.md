@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 17:43:58
+**Last Auto-Updated:** 2026-03-08 17:55:19
 
 ```text
 ├── .claude/
@@ -704,8 +704,30 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       │   ├── project_implementation_gaps/
 │       │   │   ├── 20260308_status.md
 │       │   │   ├── electrical and practical circuit analysis.md
+│       │   │   ├── electrical_and_practical_circuit_analysis_topics/
+│       │   │   │   ├── README.md
+│       │   │   │   ├── circuit_analysis_overview_and_linear_elements.md
+│       │   │   │   ├── kcl_and_nodal_analysis.md
+│       │   │   │   ├── kvl_and_loop_analysis.md
+│       │   │   │   ├── practical_components_diodes_and_transistors.md
+│       │   │   │   ├── practical_components_resistors_and_capacitors.md
+│       │   │   │   ├── practical_ohms_law_power_and_resistor_color_code.md
+│       │   │   │   ├── series_parallel_and_divider_methods.md
+│       │   │   │   └── source_transformation_and_equivalent_methods.md
 │       │   │   ├── importance of electrical safety in control panels.md
 │       │   │   ├── motors.md
+│       │   │   ├── motors_topics/
+│       │   │   │   ├── README.md
+│       │   │   │   ├── dc_motor_armature_winding_and_torque_production.md
+│       │   │   │   ├── dc_motor_commutator_brushes_and_power_path.md
+│       │   │   │   ├── dc_motor_magnetism_stator_and_mechanical_structure.md
+│       │   │   │   ├── ev_motor_powertrain_configurations.md
+│       │   │   │   ├── ev_motor_types_overview.md
+│       │   │   │   ├── induction_motor_components_induction_and_slip.md
+│       │   │   │   ├── induction_motor_construction_and_rotating_field.md
+│       │   │   │   ├── induction_motor_nameplate_and_enclosures.md
+│       │   │   │   ├── induction_motor_poles_torque_curves_and_nema_designs.md
+│       │   │   │   └── induction_motor_terminal_connections_and_star_delta.md
 │       │   │   ├── temp links.md
 │       │   │   └── ul 508a.md
 │       │   ├── residential_nec_top_articles_transcript_summary.md
@@ -749,6 +771,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │           └── Jekyll--Converters--Markdown/
 │   │               ├── 01/
 │   │               │   └── 490aeb193504bfbf24410f4a2ca9635a499a3f5f6f946c84532507b40ad03c
+│   │               ├── 03/
+│   │               │   └── 436ee6fecf0265cb92d47b4aa51d12bca647ddd4b9f44d699443a5592035fd
 │   │               ├── 04/
 │   │               │   └── 8ae153d1cc2aef54095eadad06148ac1372da0e9f585dc95e40b643279a3ea
 │   │               ├── 06/
@@ -769,10 +793,15 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 0f/
 │   │               │   └── 260c0f2220909dd3e4dd4990c35bacc6ec27c2c18b194b8205187fb96a4ecf
 │   │               ├── 10/
+│   │               │   ├── ab67672986a248e3d174b9f20697adaa90523305d1d8ce4b84685ab48db068
 │   │               │   └── da3413b3d068d25f0f0f6333d381ba222d1cdbc1405613dcaeeeba2b097f37
+│   │               ├── 16/
+│   │               │   └── 128c2f7a863b1b2b6234ab7bcaf801793dd4ab4dd1321ebd6c09633010da40
 │   │               ├── 18/
 │   │               │   ├── c51a279f5cb2e4648501e75da94e6dd98e8d64407b0b7068685ae0cb0ffc8f
 │   │               │   └── d3316f7c16039a4102c5a6253e8e9b67d37db908b0678995a7bf4a813b9221
+│   │               ├── 19/
+│   │               │   └── 11b453a7b71283880d3624077780fe48aaefd82f638d5870794abfb325baef
 │   │               ├── 1d/
 │   │               │   └── 250bb7b7aa156123d8f05946de1c67eab85119aa8ee3e2b875f738549d9bd3
 │   │               ├── 1e/
@@ -781,6 +810,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 7ae4631ab84a0848ee51d4ecb6b14d359e0e4555074581c35f903dfdc94737
 │   │               ├── 25/
 │   │               │   └── 8e30e04480a1d85dfbce1ae190a0d36926dbc8e652e2f007f1afdabe1b4bd9
+│   │               ├── 26/
+│   │               │   └── 0785d22eb41cc5c77249078677a780cdb9142ae2328e59639d4806b6c1950f
 │   │               ├── 27/
 │   │               │   └── e44a450c423c9eb130be0e89f59aeb0f1ed6640b8c00fe1432a47164899edc
 │   │               ├── 28/
@@ -807,9 +838,11 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 36/
 │   │               │   └── d582097a42b157b16a059c76c099e57f145550bc3b1266e8823f4c06a7146b
 │   │               ├── 39/
-│   │               │   └── 05a5f4115608928c4c1bf892740f3662a163ad4fb503f93ee2322eb41487a0
+│   │               │   ├── 05a5f4115608928c4c1bf892740f3662a163ad4fb503f93ee2322eb41487a0
+│   │               │   └── 869c0db11031d05c0dc870c0567ab24e49c875e210c76718cb09122c79bfee
 │   │               ├── 3a/
-│   │               │   └── 78695388b38b5cceefaf6796b0137877514593543b91af2752d5a17e3d736c
+│   │               │   ├── 78695388b38b5cceefaf6796b0137877514593543b91af2752d5a17e3d736c
+│   │               │   └── ca65754b87c739f59edf7d108574a472160e242f7166740fcb9f905fd4075b
 │   │               ├── 3b/
 │   │               │   ├── 337c3092c08d7a55343ebef55b0e7ea6c253bd90db4b44ae431484db745587
 │   │               │   └── ca9d58be429a9e9a507c2c31486d80a475e1c53683e002ba45d40231a51d4d
@@ -940,6 +973,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 33b54f032203b8633e2fdde0f9857f0350e262a479cd0e9050d467a519b21b
 │   │               │   └── bb62bdd2991c0e0ae466c64f16527e36fbc886947b58a4d474ac03c39936b7
 │   │               ├── ac/
+│   │               │   ├── 5d094960622fc5122d5539cbd569d8485816130a28dbbcc5b5756b95dda412
 │   │               │   └── b418e8347c01680d53a837227020a598007cf23fa79e4991a57cfc392f7891
 │   │               ├── ad/
 │   │               │   └── 3de1e36946a4311545bc36a4eeec565a8d126a3fd220cf5adc3d64ee6a24d4
@@ -972,6 +1006,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── c6/
 │   │               │   └── b20534916e2ba117b370e18f5877c70f9277d97b0f9a8e31884c36ecb67968
 │   │               ├── c9/
+│   │               │   ├── c3da26f95bb86eb05aeb70cfd28850446cb9d2577313e1ebd7eaeb879bc270
 │   │               │   └── d5e20a5f7b3fca081d0e9fefda3ed37bceb84e645a9d71e24adc07baece46b
 │   │               ├── cb/
 │   │               │   └── 2747846fce151666135aebce8a8af85eb1eea8cdbde7f7e7ea77f795066b00
@@ -1173,6 +1208,10 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │       │   ├── iec-60204-1/
 │   │       │   │   └── index.html
 │   │       │   └── index.html
+│   │       ├── semiconductor/
+│   │       │   ├── index.html
+│   │       │   └── semi/
+│   │       │       └── index.html
 │   │       └── us-electrical/
 │   │           ├── index.html
 │   │           ├── nec/
@@ -1311,6 +1350,10 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── iec-60204-1/
 │   │   │   │   └── index.md
 │   │   │   └── index.md
+│   │   ├── semiconductor/
+│   │   │   ├── index.md
+│   │   │   └── semi/
+│   │   │       └── index.md
 │   │   └── us-electrical/
 │   │       ├── index.md
 │   │       ├── nec/
