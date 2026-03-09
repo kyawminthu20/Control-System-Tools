@@ -213,3 +213,8 @@ requires zero user interaction while still allowing manual override.
 - IEC 60079 (hazardous area) — corpus complete (6 RAG files + index)
 - SEMI S2/S8/S14 — corpus complete (3 RAG files + index)
 - Medical, nuclear, marine class rules — not in corpus (no plan)
+
+## Future Backlog (not yet planned)
+
+- **Phase 12 backlog — Offshore / Marine industry overlay:** Deepened offshore platform industry page + scenario; requires adding class society standards (DNV, ABS) to corpus first
+- **Phase 12 backlog — General upstream + midstream O&G:** Pipeline control and midstream segment coverage extending the Phase 11 onshore process skid scenario
