@@ -17,5 +17,7 @@ Use it for:
 - servo-drive fundamentals and feedback concepts
 - motor family comparison and AC/DC comparison
 - broader comparison context for BLDC, EV traction, and drone propulsion topics
+- motor equations, efficiency, power factor, and loss concepts
+- motor-control methods, field weakening, and servo inertia basics
 
 When a topic becomes compliance-relevant, route back to `../../standards_intelligence/`.
