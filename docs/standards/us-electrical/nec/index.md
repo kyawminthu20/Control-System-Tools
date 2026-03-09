@@ -104,8 +104,8 @@ These are handled by ISO 12100, ISO 13849-1, IEC 62061, and related functional s
 
 ## Key Articles for Industrial Control Systems
 
-| Article | Topic | Relevance |
-|---------|-------|-----------|
+| Article / Section | Topic | Relevance |
+|-------------------|-------|-----------|
 | **240** | Overcurrent protection | Circuit breaker and fuse sizing rules for feeders and branch circuits |
 | **250** | Grounding and bonding | Foundation for all electrical installations; protective grounding for equipment and panels |
 | **300** | Wiring methods | Installation rules for cables, conduits, and raceways |

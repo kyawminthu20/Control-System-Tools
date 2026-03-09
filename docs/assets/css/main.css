@@ -1185,7 +1185,7 @@ tr:nth-child(even) td {
 
 .standards-graph-canvas {
   width: 100%;
-  background: var(--color-bg-card);
+  background: var(--color-bg-elevated);
   border: 1px solid var(--color-border);
   border-radius: 6px;
 }
@@ -1197,10 +1197,6 @@ tr:nth-child(even) td {
 .standards-graph-wrap--mini .standards-graph-canvas {
   height: 280px;
   pointer-events: none; /* disable pan/zoom on mini */
-}
-
-.standards-graph-wrap--mini .standards-graph-canvas node {
-  cursor: default;
 }
 
 .standards-graph-link {

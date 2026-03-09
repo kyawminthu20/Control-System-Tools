@@ -156,7 +156,7 @@
       // Edge tooltip
       var tooltip = document.createElement("div");
       tooltip.className = "graph-tooltip";
-      tooltip.style.cssText = "display:none;position:fixed;background:var(--color-bg-card);border:1px solid var(--color-border);padding:4px 8px;border-radius:4px;font-size:0.75rem;pointer-events:none;z-index:9999;";
+      tooltip.style.cssText = "display:none;position:fixed;background:var(--color-bg-elevated);border:1px solid var(--color-border);padding:4px 8px;border-radius:4px;font-size:0.75rem;pointer-events:none;z-index:9999;";
       document.body.appendChild(tooltip);
 
       cy.on("mouseover", "edge", function(evt) {
