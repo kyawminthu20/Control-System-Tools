@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 22:53:07
+**Last Auto-Updated:** 2026-03-08 23:06:06
 
 ```text
 ├── .claude/
@@ -416,10 +416,12 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   ├── integrated_drive_failure_modes_and_tradeoffs.md
 │   │   │   │   ├── integrated_drive_serviceability_and_field_replacement_review.md
 │   │   │   │   ├── integrated_motor_drive_architecture_comparison.md
+│   │   │   │   ├── motor_cable_and_protection_review.md
 │   │   │   │   ├── motor_mounted_drive_thermal_and_emc_design_notes.md
 │   │   │   │   ├── motor_nameplate_review_checklist.md
 │   │   │   │   ├── motor_selection_comparison_matrix.md
 │   │   │   │   ├── motor_selection_workflow.md
+│   │   │   │   ├── motor_symptom_troubleshooting_patterns.md
 │   │   │   │   ├── motor_troubleshooting_decision_tree.md
 │   │   │   │   ├── servo_commissioning_workflow.md
 │   │   │   │   ├── star_delta_and_supply_matching_notes.md
@@ -688,9 +690,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   ├── brushless_dc_ev_and_drone_motor_comparison.md
 │   │   │   │   ├── dc_motor_basics.md
 │   │   │   │   ├── induction_motor_basics.md
+│   │   │   │   ├── motor_and_vfd_equations_reference.md
+│   │   │   │   ├── motor_control_methods_and_operating_regions.md
+│   │   │   │   ├── motor_efficiency_power_factor_and_losses.md
 │   │   │   │   ├── motor_family_comparison.md
 │   │   │   │   ├── motor_nameplates_slip_and_torque.md
 │   │   │   │   ├── servo_drive_fundamentals.md
+│   │   │   │   ├── servo_feedback_and_inertia_matching.md
 │   │   │   │   ├── vfd_and_servo_architecture_diagrams.md
 │   │   │   │   └── vfd_fundamentals.md
 │   │   │   ├── fundamentals/
@@ -777,7 +783,6 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       ├── design/
 │       │   ├── 2026 NEC Changes.md
 │       │   ├── README.md
-│       │   ├── check_this.md
 │       │   ├── conductor_protection_and_ampacity_transcript_summary.md
 │       │   ├── diagrams/
 │       │   ├── electrical exam prep.md
@@ -1007,6 +1012,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 5f/
 │   │               │   ├── 0b833a96ec0aec240d4945019807eaf088d4f47d501e20e79e187b26bd7e79
 │   │               │   └── c0437ae37bc5a23052d7cbafe7881634831bbae9709f11df7bc8310f407d09
+│   │               ├── 61/
+│   │               │   └── 2ba654c9ad14d10888fe33ddd6500579f33f6d464c9c802e617bbdceb59470
 │   │               ├── 63/
 │   │               │   └── 582519d06633dba633befe67088a06e0abdc9e0cbf034d0ec1ca869fa36213
 │   │               ├── 64/
@@ -1047,12 +1054,14 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 7c/
 │   │               │   └── 4141881a2e73d857a5e0a2ee06128726e369fd041a403e0691e7f2c692362b
 │   │               ├── 7e/
-│   │               │   └── 1dbc1110aecfe097d8f86fe19410161e74d12a58a0ea1fef8809ad81124306
+│   │               │   ├── 1dbc1110aecfe097d8f86fe19410161e74d12a58a0ea1fef8809ad81124306
+│   │               │   └── 2a21f09ccc214270180cffd6a802fcb5da79f6d0afe4ec97ad7f33fbe6c14b
 │   │               ├── 7f/
 │   │               │   ├── 53770c6fc9a4b6368b5d8693ad59fe612232f13dcf1b8358180f510bc97ee9
 │   │               │   ├── 717bbdd539c963b4d3792cc2557b18946dc22fb46ae6adfe9d24b02f15fed7
 │   │               │   └── 780be62ae66559f2958cae201152a8de57515d9563b58041cdc0b1fc0b2e02
 │   │               ├── 80/
+│   │               │   ├── 639ce32914a864d197f56260546116e128c936d797a9b73bd6020c8b52232d
 │   │               │   └── c4a4cbd716179311441280d346ac16f88a7ab2a807d9d67e904d9db008899d
 │   │               ├── 83/
 │   │               │   └── 592017cebc796956c4d9c01e38768d2600acd2991b25d011cbc86a8ac7c8c7
@@ -1204,7 +1213,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── f9/
 │   │               │   ├── 6beea3b5952d170ff7a0a3bf096ba1774e419484af218b83b8f106363f19cf
 │   │               │   ├── e856f21719585ba00f827f2c44aca692005fd416150b4bd497ffd16d39cb88
-│   │               │   └── f58353edf6419ff056fdabc3eeb6ed2a4f8d1c981793c21d9763c637ea515d
+│   │               │   ├── f58353edf6419ff056fdabc3eeb6ed2a4f8d1c981793c21d9763c637ea515d
+│   │               │   └── f834994f2ffeba68039dac89932e074e1a3e70c5567a6bdaace07722827d3f
 │   │               ├── fa/
 │   │               │   └── 7e3898b35bd6336f764b2de29f0c1ff11b73239574bd17c491fce466ecaf2d
 │   │               └── fc/
@@ -1304,7 +1314,6 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-08-decision-workflow-enhancements.md
 │   │   │   ├── 2026-03-08-electrical-intelligence-integration-design.md
 │   │   │   ├── 2026-03-08-electrical-intelligence-integration-plan.md
-│   │   │   ├── 2026-03-08-electrical-intelligence-integration-requirements.md
 │   │   │   ├── 2026-03-08-glossary-design.md
 │   │   │   ├── 2026-03-08-glossary-implementation.md
 │   │   │   ├── 2026-03-08-nec-missing-articles.md
@@ -1316,7 +1325,9 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-08-standards-graph-design.md
 │   │   │   ├── 2026-03-08-theme-switching-design.md
 │   │   │   ├── 2026-03-08-theme-switching-implementation.md
-│   │   │   └── 2026-03-09-phase12-offshore-marine-overlay.md
+│   │   │   ├── 2026-03-09-phase12-offshore-marine-overlay.md
+│   │   │   ├── 2026-03-09-training-site-pages-design.md
+│   │   │   └── 2026-03-09-training-site-pages-plan.md
 │   │   ├── scenarios/
 │   │   │   ├── global-machine/
 │   │   │   │   └── index.html
@@ -1339,46 +1350,48 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │       └── index.html
 │   │   ├── software-stack/
 │   │   │   └── index.html
-│   │   └── standards/
-│   │       ├── cybersecurity/
-│   │       │   ├── iec-62443/
-│   │       │   │   └── index.html
-│   │       │   └── index.html
-│   │       ├── functional-safety/
-│   │       │   ├── iec-61508/
-│   │       │   │   └── index.html
-│   │       │   ├── iec-61511/
-│   │       │   │   └── index.html
-│   │       │   ├── iec-62061/
-│   │       │   │   └── index.html
-│   │       │   ├── index.html
-│   │       │   ├── iso-12100/
-│   │       │   │   └── index.html
-│   │       │   └── iso-13849-1/
-│   │       │       └── index.html
-│   │       ├── graph/
-│   │       │   └── index.html
-│   │       ├── hazardous-area/
-│   │       │   ├── iec-60079/
-│   │       │   │   └── index.html
-│   │       │   └── index.html
-│   │       ├── index.html
-│   │       ├── machinery/
-│   │       │   ├── iec-60204-1/
-│   │       │   │   └── index.html
-│   │       │   └── index.html
-│   │       ├── semiconductor/
-│   │       │   ├── index.html
-│   │       │   └── semi/
-│   │       │       └── index.html
-│   │       └── us-electrical/
-│   │           ├── index.html
-│   │           ├── nec/
-│   │           │   └── index.html
-│   │           ├── nfpa-79/
-│   │           │   └── index.html
-│   │           └── ul-508a/
-│   │               └── index.html
+│   │   ├── standards/
+│   │   │   ├── cybersecurity/
+│   │   │   │   ├── iec-62443/
+│   │   │   │   │   └── index.html
+│   │   │   │   └── index.html
+│   │   │   ├── functional-safety/
+│   │   │   │   ├── iec-61508/
+│   │   │   │   │   └── index.html
+│   │   │   │   ├── iec-61511/
+│   │   │   │   │   └── index.html
+│   │   │   │   ├── iec-62061/
+│   │   │   │   │   └── index.html
+│   │   │   │   ├── index.html
+│   │   │   │   ├── iso-12100/
+│   │   │   │   │   └── index.html
+│   │   │   │   └── iso-13849-1/
+│   │   │   │       └── index.html
+│   │   │   ├── graph/
+│   │   │   │   └── index.html
+│   │   │   ├── hazardous-area/
+│   │   │   │   ├── iec-60079/
+│   │   │   │   │   └── index.html
+│   │   │   │   └── index.html
+│   │   │   ├── index.html
+│   │   │   ├── machinery/
+│   │   │   │   ├── iec-60204-1/
+│   │   │   │   │   └── index.html
+│   │   │   │   └── index.html
+│   │   │   ├── semiconductor/
+│   │   │   │   ├── index.html
+│   │   │   │   └── semi/
+│   │   │   │       └── index.html
+│   │   │   └── us-electrical/
+│   │   │       ├── index.html
+│   │   │       ├── nec/
+│   │   │       │   └── index.html
+│   │   │       ├── nfpa-79/
+│   │   │       │   └── index.html
+│   │   │       └── ul-508a/
+│   │   │           └── index.html
+│   │   └── training/
+│   │       └── index.html
 │   ├── about/
 │   │   └── index.md
 │   ├── assets/
@@ -1469,7 +1482,9 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── 2026-03-08-standards-graph-design.md
 │   │   ├── 2026-03-08-theme-switching-design.md
 │   │   ├── 2026-03-08-theme-switching-implementation.md
-│   │   └── 2026-03-09-phase12-offshore-marine-overlay.md
+│   │   ├── 2026-03-09-phase12-offshore-marine-overlay.md
+│   │   ├── 2026-03-09-training-site-pages-design.md
+│   │   └── 2026-03-09-training-site-pages-plan.md
 │   ├── scenarios/
 │   │   ├── global-machine/
 │   │   │   └── index.md
@@ -1532,6 +1547,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │       │   └── index.md
 │   │       └── ul-508a/
 │   │           └── index.md
+│   ├── training/
+│   │   └── index.md
 │   └── vendor/
 │       └── bundle/
 │           └── ruby/
