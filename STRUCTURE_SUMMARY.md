@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 17:30:06
+**Last Auto-Updated:** 2026-03-08 17:36:35
 
 ```text
 ├── .claude/
@@ -440,7 +440,10 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   │       ├── IEC60079_0__general_requirements.md
 │   │   │   │   │       ├── IEC60079_10_1__area_classification_gas.md
 │   │   │   │   │       ├── IEC60079_11__intrinsically_safe_Ex_i.md
-│   │   │   │   │       └── IEC60079_1__flameproof_Ex_d.md
+│   │   │   │   │       ├── IEC60079_14__installation_design.md
+│   │   │   │   │       ├── IEC60079_17__inspection_maintenance.md
+│   │   │   │   │       ├── IEC60079_1__flameproof_Ex_d.md
+│   │   │   │   │       └── _index.yaml
 │   │   │   │   └── machinery/
 │   │   │   │       └── iec_60204_1/
 │   │   │   │           ├── GENERATION_SUMMARY.md
