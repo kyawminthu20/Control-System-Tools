@@ -1,0 +1,118 @@
+metadata:
+  ai_read_access: ALLOWED
+  content_class: RAG_APPROVED
+  status: DRAFT
+  ruleset_id: grounding_bonding_rules
+  module: design_framework
+  last_updated: "2026-03-09"
+  purpose: >
+    Reusable grounding and bonding rules for panel and machine design review,
+    future automation, and consistency checks.
+
+rules:
+  - id: GND-001
+    title: Safety grounding takes priority
+    rule: >
+      Grounding and bonding decisions shall first preserve personnel protection
+      and an effective fault-current path; functional or noise-grounding
+      preferences shall not weaken that safety path.
+    applies_to:
+      - industrial_control_panels
+      - machinery
+    verify_by:
+      - review grounding path from all exposed conductive parts back to source
+      - confirm no functional-grounding choice compromises fault clearing
+    standard_refs:
+      - us/nec/NEC_2023__Art250__grounding_and_bonding.md
+      - us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md
+      - us/ul_508a/UL508A_2022__grounding_and_bonding.md
+
+  - id: GND-002
+    title: Bond all required exposed conductive parts
+    rule: >
+      Doors, subpanels, removable metallic parts, and other exposed conductive
+      parts that require bonding shall remain electrically continuous with the
+      panel or machine protective bonding system.
+    applies_to:
+      - industrial_control_panels
+      - machinery
+    verify_by:
+      - inspect bonding jumpers or equivalent bonding means
+      - verify continuity across movable or removable sections where required
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md
+      - us/ul_508a/UL508A_2022__grounding_and_bonding.md
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md
+
+  - id: GND-003
+    title: EGC path shall be intentional and traceable
+    rule: >
+      Equipment grounding conductor routing and bonding connections shall be
+      documented and should not depend on accidental contact through paint,
+      hinges, loose hardware, or undocumented assembly details.
+    applies_to:
+      - industrial_control_panels
+      - machinery
+    verify_by:
+      - inspect drawings and hardware selections
+      - confirm bonding points are deliberate and repeatable
+    standard_refs:
+      - us/nec/NEC_2023__Art250_4__purposes_of_grounding_and_bonding.md
+      - us/ul_508a/UL508A_2022__grounding_and_bonding.md
+
+  - id: GND-004
+    title: Conductor and terminal compatibility must be checked
+    rule: >
+      Grounding and bonding conductors, terminals, and lugs shall be compatible
+      with the selected conductor material, size, and installation method.
+    applies_to:
+      - industrial_control_panels
+      - machinery
+    verify_by:
+      - review lug ratings and conductor material
+      - confirm conductor sizing basis matches the selected terminals
+    standard_refs:
+      - us/nec/NEC_2023__Art110__requirements_for_electrical_installations.md
+      - us/nec/NEC_2023__Art250__grounding_and_bonding.md
+      - us/ul_508a/UL508A_2022__grounding_and_bonding.md
+
+  - id: GND-005
+    title: Separate safety grounding from noise-control decisions
+    rule: >
+      Shielding, drain wires, and signal reference practices may support EMC or
+      noise control, but they are not substitutes for required equipment
+      grounding and bonding.
+    applies_to:
+      - industrial_control_panels
+      - machinery
+      - networked_control_systems
+    verify_by:
+      - review shield termination notes separately from protective grounding
+      - confirm safety grounding remains complete if signal shields are modified
+    standard_refs:
+      - us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md
+
+  - id: GND-006
+    title: Multi-standard designs need one documented grounding basis
+    rule: >
+      For designs spanning NEC, NFPA 79, UL 508A, and IEC 60204-1, the project
+      should record one explicit grounding and bonding basis so the build,
+      verification, and inspection teams use the same logic.
+    applies_to:
+      - dual_market_machines
+      - industrial_control_panels
+      - machinery
+    verify_by:
+      - create project grounding note or standards decision record
+      - link the selected basis to panel drawings and verification checklists
+    standard_refs:
+      - us/nec/NEC_2023__Art250__grounding_and_bonding.md
+      - us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md
+      - us/ul_508a/UL508A_2022__grounding_and_bonding.md
+      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md
+
+changelog:
+  - date: "2026-03-09"
+    action: "Initial grounding and bonding ruleset created"
+    status: "ready for design review use"
