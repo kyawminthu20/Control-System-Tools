@@ -1,0 +1,39 @@
+# SEMI S2/S8/S14 RAG Index
+# AI_READ_ACCESS: ALLOWED
+
+version: "1.0"
+standard_family: "SEMI"
+standard_title: "SEMI Safety Guidelines"
+jurisdiction: "International (semiconductor industry)"
+last_updated: "2026-03-08"
+
+documents:
+  - doc_id: "SEMI-S2"
+    path: "rag/standards_intelligence/international/semiconductor/semi/SEMI_S2__equipment_safety.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    tags:
+      topics: ["equipment_safety", "electrical_safety", "lockout_tagout", "interlocks", "chemical_safety"]
+    priority: "high"
+    related_standards: ["IEC60204-1", "NFPA79", "ISO12100"]
+
+  - doc_id: "SEMI-S8"
+    path: "rag/standards_intelligence/international/semiconductor/semi/SEMI_S8__ergonomics.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    tags:
+      topics: ["ergonomics", "human_factors", "maintenance_access", "control_placement"]
+    priority: "standard"
+
+  - doc_id: "SEMI-S14"
+    path: "rag/standards_intelligence/international/semiconductor/semi/SEMI_S14__fire_risk_assessment.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    tags:
+      topics: ["fire_risk", "flammability", "fire_detection", "cleanroom_fire", "suppression"]
+    priority: "high"
+    related_standards: ["ISO12100"]
+
+coverage_notes:
+  complete: ["S2", "S8", "S14"]
+  planned: ["S6", "S22"]

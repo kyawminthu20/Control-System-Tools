@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 17:36:35
+**Last Auto-Updated:** 2026-03-08 17:40:07
 
 ```text
 ├── .claude/
@@ -444,26 +444,32 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   │       ├── IEC60079_17__inspection_maintenance.md
 │   │   │   │   │       ├── IEC60079_1__flameproof_Ex_d.md
 │   │   │   │   │       └── _index.yaml
-│   │   │   │   └── machinery/
-│   │   │   │       └── iec_60204_1/
-│   │   │   │           ├── GENERATION_SUMMARY.md
-│   │   │   │           ├── IEC60204_1_2018__Clause01__scope.md
-│   │   │   │           ├── IEC60204_1_2018__Clause02__normative_references.md
-│   │   │   │           ├── IEC60204_1_2018__Clause03__terms_and_definitions.md
-│   │   │   │           ├── IEC60204_1_2018__Clause04__general_requirements.md
-│   │   │   │           ├── IEC60204_1_2018__Clause05__incoming_supply.md
-│   │   │   │           ├── IEC60204_1_2018__Clause06__protection_against_electric_shock.md
-│   │   │   │           ├── IEC60204_1_2018__Clause07__protection_of_equipment.md
-│   │   │   │           ├── IEC60204_1_2018__Clause08__equipotential_bonding.md
-│   │   │   │           ├── IEC60204_1_2018__Clause09__control_circuits_and_functions.md
-│   │   │   │           ├── IEC60204_1_2018__Clause10__operator_interface.md
-│   │   │   │           ├── IEC60204_1_2018__Clause11__control_equipment.md
-│   │   │   │           ├── IEC60204_1_2018__Clause12__motors_and_drives.md
-│   │   │   │           ├── IEC60204_1_2018__Clause13__accessories_and_lighting.md
-│   │   │   │           ├── IEC60204_1_2018__Clause14__marking_and_documentation.md
-│   │   │   │           ├── IEC60204_1_2018__Clause15__verification.md
-│   │   │   │           ├── IEC60204_OVERVIEW.md
-│   │   │   │           ├── README.md
+│   │   │   │   ├── machinery/
+│   │   │   │   │   └── iec_60204_1/
+│   │   │   │   │       ├── GENERATION_SUMMARY.md
+│   │   │   │   │       ├── IEC60204_1_2018__Clause01__scope.md
+│   │   │   │   │       ├── IEC60204_1_2018__Clause02__normative_references.md
+│   │   │   │   │       ├── IEC60204_1_2018__Clause03__terms_and_definitions.md
+│   │   │   │   │       ├── IEC60204_1_2018__Clause04__general_requirements.md
+│   │   │   │   │       ├── IEC60204_1_2018__Clause05__incoming_supply.md
+│   │   │   │   │       ├── IEC60204_1_2018__Clause06__protection_against_electric_shock.md
+│   │   │   │   │       ├── IEC60204_1_2018__Clause07__protection_of_equipment.md
+│   │   │   │   │       ├── IEC60204_1_2018__Clause08__equipotential_bonding.md
+│   │   │   │   │       ├── IEC60204_1_2018__Clause09__control_circuits_and_functions.md
+│   │   │   │   │       ├── IEC60204_1_2018__Clause10__operator_interface.md
+│   │   │   │   │       ├── IEC60204_1_2018__Clause11__control_equipment.md
+│   │   │   │   │       ├── IEC60204_1_2018__Clause12__motors_and_drives.md
+│   │   │   │   │       ├── IEC60204_1_2018__Clause13__accessories_and_lighting.md
+│   │   │   │   │       ├── IEC60204_1_2018__Clause14__marking_and_documentation.md
+│   │   │   │   │       ├── IEC60204_1_2018__Clause15__verification.md
+│   │   │   │   │       ├── IEC60204_OVERVIEW.md
+│   │   │   │   │       ├── README.md
+│   │   │   │   │       └── _index.yaml
+│   │   │   │   └── semiconductor/
+│   │   │   │       └── semi/
+│   │   │   │           ├── SEMI_S14__fire_risk_assessment.md
+│   │   │   │           ├── SEMI_S2__equipment_safety.md
+│   │   │   │           ├── SEMI_S8__ergonomics.md
 │   │   │   │           └── _index.yaml
 │   │   │   ├── library_admin/
 │   │   │   │   ├── COMPLETE_STANDARDS_PORTFOLIO.md
