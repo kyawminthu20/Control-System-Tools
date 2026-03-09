@@ -83,7 +83,9 @@ In simple terms, power factor indicates how effectively current is being convert
 
 For quick review:
 
-`P = sqrt(3) x V_LL x I_L x PF`
+`P(W) = sqrt(3) x V_LL(V) x I_L(A) x PF`
+
+To convert to kilowatts: `P(kW) = P(W) / 1000`
 
 This is a useful relationship when estimating the electrical side of a motor system.
 
