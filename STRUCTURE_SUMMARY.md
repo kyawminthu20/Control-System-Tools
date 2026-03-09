@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 22:31:13
+**Last Auto-Updated:** 2026-03-08 22:34:03
 
 ```text
 ├── .claude/
@@ -1048,7 +1048,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 1dbc1110aecfe097d8f86fe19410161e74d12a58a0ea1fef8809ad81124306
 │   │               ├── 7f/
 │   │               │   ├── 53770c6fc9a4b6368b5d8693ad59fe612232f13dcf1b8358180f510bc97ee9
-│   │               │   └── 717bbdd539c963b4d3792cc2557b18946dc22fb46ae6adfe9d24b02f15fed7
+│   │               │   ├── 717bbdd539c963b4d3792cc2557b18946dc22fb46ae6adfe9d24b02f15fed7
+│   │               │   └── 780be62ae66559f2958cae201152a8de57515d9563b58041cdc0b1fc0b2e02
 │   │               ├── 80/
 │   │               │   └── c4a4cbd716179311441280d346ac16f88a7ab2a807d9d67e904d9db008899d
 │   │               ├── 83/
@@ -1074,6 +1075,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── a35491545eb36158a850db0b7d017ba1eafcf1616d72f2588f4757e4ea910f
 │   │               ├── 98/
 │   │               │   └── b154ebeefb18f0d89106cabf20003ebc5ea1045b8c401c014b8a639e24d30b
+│   │               ├── 9a/
+│   │               │   └── ea98b42c3fd3ed0ec3b101f80bb4a8c0024a278215223e457c09f26c80181a
 │   │               ├── 9b/
 │   │               │   └── c4024f9f30d4f17a7689e9224daa9922c1ae7cdb80c160b2f488a07dc4accd
 │   │               ├── 9c/
@@ -1085,6 +1088,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 9f/
 │   │               │   └── 09412d4907979d035e6548c38ac8ff04ccc98e23cae749e631d2b50c6d57a8
 │   │               ├── a1/
+│   │               │   ├── 34d32eb0310385cb512029719285ff593d4f1e73199db60afe326ae7ff16b9
 │   │               │   └── ab8a89eecbb75b021354dc570a802d76726d522ee29946a3d5b342db30d77f
 │   │               ├── a2/
 │   │               │   └── 8e2ef91e74d4e0d9af056141b1aa5c6a84d61d339e66103419b15ddf62e9ec
@@ -1319,6 +1323,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   └── index.html
 │   │   │   ├── networked-safety-plc/
 │   │   │   │   └── index.html
+│   │   │   ├── offshore-platform-control/
+│   │   │   │   └── index.html
 │   │   │   ├── oil-gas-process-skid/
 │   │   │   │   └── index.html
 │   │   │   ├── process-skid/
@@ -1470,6 +1476,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── machine-safety-implementation/
 │   │   │   └── index.md
 │   │   ├── networked-safety-plc/
+│   │   │   └── index.md
+│   │   ├── offshore-platform-control/
 │   │   │   └── index.md
 │   │   ├── oil-gas-process-skid/
 │   │   │   └── index.md
