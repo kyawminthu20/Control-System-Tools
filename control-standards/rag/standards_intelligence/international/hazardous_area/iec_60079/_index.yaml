@@ -1,0 +1,70 @@
+# IEC 60079 Hazardous Area RAG Index
+# AI_READ_ACCESS: ALLOWED
+
+version: "1.0"
+standard_family: "IEC_60079"
+standard_id: "IEC_60079"
+standard_title: "Explosive Atmospheres"
+edition: "Various (2011–2017)"
+jurisdiction: "International"
+last_updated: "2026-03-08"
+
+documents:
+  - doc_id: "IEC60079-0"
+    path: "rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_0__general_requirements.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    tags:
+      topics: ["equipment_marking", "EPL", "temperature_class", "gas_group", "ATEX", "IECEx"]
+    priority: "high"
+
+  - doc_id: "IEC60079-1"
+    path: "rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_1__flameproof_Ex_d.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    tags:
+      topics: ["flameproof", "Ex_d", "flame_path", "cable_gland"]
+    priority: "high"
+
+  - doc_id: "IEC60079-10-1"
+    path: "rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_10_1__area_classification_gas.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    tags:
+      topics: ["area_classification", "zone_0", "zone_1", "zone_2", "release_grade", "ventilation"]
+    priority: "high"
+    related_standards: ["NEC_Art505"]
+
+  - doc_id: "IEC60079-11"
+    path: "rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_11__intrinsically_safe_Ex_i.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    tags:
+      topics: ["intrinsic_safety", "Ex_i", "zener_barrier", "galvanic_isolator", "entity_parameters", "FISCO"]
+    priority: "high"
+    related_standards: ["NEC_Art504"]
+
+  - doc_id: "IEC60079-14"
+    path: "rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_14__installation_design.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    tags:
+      topics: ["installation_design", "cable_selection", "equipotential_bonding", "initial_inspection"]
+    priority: "standard"
+
+  - doc_id: "IEC60079-17"
+    path: "rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_17__inspection_maintenance.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    tags:
+      topics: ["inspection", "periodic_inspection", "inspection_grade", "competency"]
+    priority: "standard"
+
+coverage_notes:
+  complete: ["60079-0", "60079-1", "60079-10-1", "60079-11", "60079-14", "60079-17"]
+  planned: ["60079-10-2", "60079-18", "60079-31"]
+
+notes: |
+  6 parts covering the core IEC 60079 series for control engineers:
+  general requirements, flameproof (Ex d), area classification (gas),
+  intrinsic safety (Ex i), installation design, and inspection/maintenance.
