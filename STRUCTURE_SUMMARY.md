@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 18:36:10
+**Last Auto-Updated:** 2026-03-08 18:38:09
 
 ```text
 ├── .claude/
@@ -817,7 +817,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 23/
 │   │               │   └── 7ae4631ab84a0848ee51d4ecb6b14d359e0e4555074581c35f903dfdc94737
 │   │               ├── 25/
-│   │               │   └── 8e30e04480a1d85dfbce1ae190a0d36926dbc8e652e2f007f1afdabe1b4bd9
+│   │               │   ├── 8e30e04480a1d85dfbce1ae190a0d36926dbc8e652e2f007f1afdabe1b4bd9
+│   │               │   └── e098db094b039c606a27db71721fdf46955576a0655a9f884500aa95fae9ee
 │   │               ├── 26/
 │   │               │   └── 0785d22eb41cc5c77249078677a780cdb9142ae2328e59639d4806b6c1950f
 │   │               ├── 27/
@@ -1076,7 +1077,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 5cd8a0bbb88a838309164c51364f7a4aade6eb52086ca1c3c73c4de227ad93
 │   │               ├── f9/
 │   │               │   ├── 6beea3b5952d170ff7a0a3bf096ba1774e419484af218b83b8f106363f19cf
-│   │               │   └── e856f21719585ba00f827f2c44aca692005fd416150b4bd497ffd16d39cb88
+│   │               │   ├── e856f21719585ba00f827f2c44aca692005fd416150b4bd497ffd16d39cb88
+│   │               │   └── f58353edf6419ff056fdabc3eeb6ed2a4f8d1c981793c21d9763c637ea515d
 │   │               ├── fa/
 │   │               │   └── 7e3898b35bd6336f764b2de29f0c1ff11b73239574bd17c491fce466ecaf2d
 │   │               └── fc/
@@ -1175,6 +1177,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-08-corpus-gap-fill-design.md
 │   │   │   ├── 2026-03-08-decision-workflow-enhancements.md
 │   │   │   ├── 2026-03-08-electrical-intelligence-integration-design.md
+│   │   │   ├── 2026-03-08-electrical-intelligence-integration-plan.md
 │   │   │   ├── 2026-03-08-glossary-design.md
 │   │   │   ├── 2026-03-08-glossary-implementation.md
 │   │   │   ├── 2026-03-08-nec-missing-articles.md
@@ -1322,6 +1325,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── 2026-03-08-corpus-gap-fill-design.md
 │   │   ├── 2026-03-08-decision-workflow-enhancements.md
 │   │   ├── 2026-03-08-electrical-intelligence-integration-design.md
+│   │   ├── 2026-03-08-electrical-intelligence-integration-plan.md
 │   │   ├── 2026-03-08-glossary-design.md
 │   │   ├── 2026-03-08-glossary-implementation.md
 │   │   ├── 2026-03-08-nec-missing-articles.md
