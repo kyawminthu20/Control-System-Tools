@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 18:38:09
+**Last Auto-Updated:** 2026-03-08 18:41:25
 
 ```text
 ├── .claude/
@@ -797,7 +797,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 21a7d7aadd1a042168087ad4dd2323df1ae50a4de93a8da4b920963100b904
 │   │               │   └── b884b6343a61259ab5eacf2fb4394a401d05919cfd0fc5fcdc94957f0dc271
 │   │               ├── 0d/
-│   │               │   └── 0b2dfd9fcde91ec81a829dbc690e60db0c9de83282525b18f277a4434ae4bf
+│   │               │   ├── 0b2dfd9fcde91ec81a829dbc690e60db0c9de83282525b18f277a4434ae4bf
+│   │               │   └── a6f65922f6e117f784b372bf390c599e40d300c4c48b9b71cc5fc2abb0f263
 │   │               ├── 0f/
 │   │               │   └── 260c0f2220909dd3e4dd4990c35bacc6ec27c2c18b194b8205187fb96a4ecf
 │   │               ├── 10/
@@ -815,6 +816,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 1e/
 │   │               │   └── 66cf06507d7410aa2c21264d3c2affb5b5ef8e49f1ec94db2a1285d47a9225
 │   │               ├── 23/
+│   │               │   ├── 10a2e52d8068e80d62b9bcc513338e87235b5f7de581a98baa0c54e1c34895
 │   │               │   └── 7ae4631ab84a0848ee51d4ecb6b14d359e0e4555074581c35f903dfdc94737
 │   │               ├── 25/
 │   │               │   ├── 8e30e04480a1d85dfbce1ae190a0d36926dbc8e652e2f007f1afdabe1b4bd9
@@ -914,6 +916,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 6c/
 │   │               │   └── 6d08fb5ee3326c00c6332725018a3a2a0349ea0291fd9f7d3d98dda94c3aeb
 │   │               ├── 70/
+│   │               │   ├── 11377ba62d5c64fabcbbe1f7ada9bd44663e462adc8ee9869b5afaa994a5ea
 │   │               │   ├── 6bf1a4e30a45c09272b0ab99a32a2c2b556106edc929b96d7c5b545048fe62
 │   │               │   └── c3114be24f5d35bdb46412573e383fa0ebf515e5e094039e4b3f3615a1dd86
 │   │               ├── 71/
@@ -1203,6 +1206,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   └── index.html
 │   │   │   ├── semiconductor-equipment/
 │   │   │   │   └── index.html
+│   │   │   ├── semiconductor-fab-tool/
+│   │   │   │   └── index.html
 │   │   │   └── us-industrial-control-panel/
 │   │   │       └── index.html
 │   │   ├── software-stack/
@@ -1350,6 +1355,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── process-skid/
 │   │   │   └── index.md
 │   │   ├── semiconductor-equipment/
+│   │   │   └── index.md
+│   │   ├── semiconductor-fab-tool/
 │   │   │   └── index.md
 │   │   └── us-industrial-control-panel/
 │   │       └── index.md
