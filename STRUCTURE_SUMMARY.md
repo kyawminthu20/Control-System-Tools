@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 18:43:21
+**Last Auto-Updated:** 2026-03-08 19:12:43
 
 ```text
 ├── .claude/
@@ -736,6 +736,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       │   │   │   ├── induction_motor_nameplate_and_enclosures.md
 │       │   │   │   ├── induction_motor_poles_torque_curves_and_nema_designs.md
 │       │   │   │   └── induction_motor_terminal_connections_and_star_delta.md
+│       │   │   ├── spacing creepage clearance.md
 │       │   │   ├── temp links.md
 │       │   │   └── ul 508a.md
 │       │   ├── residential_nec_top_articles_transcript_summary.md
@@ -815,6 +816,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 250bb7b7aa156123d8f05946de1c67eab85119aa8ee3e2b875f738549d9bd3
 │   │               ├── 1e/
 │   │               │   └── 66cf06507d7410aa2c21264d3c2affb5b5ef8e49f1ec94db2a1285d47a9225
+│   │               ├── 21/
+│   │               │   └── f23f6b6ccf01bad061aa3952538f401e3ad8e2e67cd0bf71b4b9c185419ea7
 │   │               ├── 23/
 │   │               │   ├── 10a2e52d8068e80d62b9bcc513338e87235b5f7de581a98baa0c54e1c34895
 │   │               │   └── 7ae4631ab84a0848ee51d4ecb6b14d359e0e4555074581c35f903dfdc94737
@@ -878,6 +881,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── b8b58d02d7843550d6ad60a54ee453b56301f4858fa670c97095dd332c9d32
 │   │               ├── 4e/
 │   │               │   ├── 469c2281456ea6b8c3574a8de06961878eeb16282aabec232f3e7cdaa20e7c
+│   │               │   ├── c44749192e6403d781993ea22db7c4ba02a7889befc85700615b7872d9ce16
 │   │               │   └── d6a389b09b4429688c735a86f8a0f3b92d5176bcd2d9295630442404a5e6b6
 │   │               ├── 4f/
 │   │               │   ├── 22047c6ccca17ed77b8b96ad6638fc34c17902034215785307430e687d1d47
@@ -924,6 +928,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── ee933cfab88aadf41ba80e25123f3d0b31a1aff8ffc1caff3ea7606b5638f0
 │   │               ├── 72/
 │   │               │   └── ceb13fd79a594294d73a17d599411f34d2410abf8c489e5b75cc36b1ecd445
+│   │               ├── 74/
+│   │               │   └── 072c932b1beaf3435a17ce929d8f5cc2bd66480a42a33809a14fbeea0ea0cc
 │   │               ├── 75/
 │   │               │   └── 24553e12d75198ecd44b29e18f860a05e2ca0453b46c13af5c4004ec4c9f30
 │   │               ├── 76/
@@ -951,6 +957,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── b1e0eacbf30e2919561e86db5d4f15b41366cd6e1c421514cbf0241c0ead23
 │   │               ├── 85/
 │   │               │   └── fc8f1d8aaa1881f365e5e03e485dc3ce0f1f31decbe705adc3080b8940277f
+│   │               ├── 89/
+│   │               │   └── fa749315cb6dcab88442c32da3cfb29bb56d8a48d9c812e938de6f9bc9f4d6
 │   │               ├── 8c/
 │   │               │   └── 790933e8d3d2256b2638a3d42ce6d34b8986543f7101bf9dc6b9e7d03c47b6
 │   │               ├── 8f/
@@ -1027,6 +1035,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── f52c30d3d71e3ff1ab6df08da429cc145c4dba7f227e6e9bd7dba3230806c1
 │   │               ├── c6/
 │   │               │   └── b20534916e2ba117b370e18f5877c70f9277d97b0f9a8e31884c36ecb67968
+│   │               ├── c8/
+│   │               │   └── e0817380d15df1ab5b49551fc826690e959e72dc6a7326939ecc692de2792f
 │   │               ├── c9/
 │   │               │   ├── 8d8eb119a9df9a1795ee53ae9206a5e893eff63a1e928602cb159299853f9d
 │   │               │   ├── c3da26f95bb86eb05aeb70cfd28850446cb9d2577313e1ebd7eaeb879bc270
@@ -1067,7 +1077,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── e7/
 │   │               │   └── 71c382aa34051b00868eff65d922b969dc3bb7b1eaae356637abf78f9be551
 │   │               ├── e9/
-│   │               │   └── 2c762ee67e5c599d533c1f0abc210d41a8270c2c85b178c08642755fcbf5f7
+│   │               │   ├── 2c762ee67e5c599d533c1f0abc210d41a8270c2c85b178c08642755fcbf5f7
+│   │               │   └── f2ade5075d3887096811dee42eba2fc278372544291fd0931322986bcf724e
 │   │               ├── ea/
 │   │               │   └── df3dfe34d237e72b57a6f65a765e995f6d280ae9df43d31475c6ddd56ab30c
 │   │               ├── eb/
