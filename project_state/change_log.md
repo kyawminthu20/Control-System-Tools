@@ -18,6 +18,14 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-09 — Motor interview source note promoted into additional training and design files
+
+- `control-standards/work/design/check_this.md` — used as a read-only source for motor interview-style fundamentals, VFD electrical design points, and troubleshooting patterns; source file left unchanged.
+- `control-standards/rag/training_modules/electrical_machines/` — added `motor_and_vfd_equations_reference.md`, `motor_efficiency_power_factor_and_losses.md`, `motor_control_methods_and_operating_regions.md`, and `servo_feedback_and_inertia_matching.md`; updated the module README and `_index.yaml`.
+- `control-standards/rag/design_framework/motor_systems/` — added `motor_cable_and_protection_review.md` and `motor_symptom_troubleshooting_patterns.md`; updated the module README and `_index.yaml`.
+
+---
+
 ### 2026-03-09 — Phase 12 Complete: Offshore / Marine Industry Overlay
 
 - `DNV_OS_D201__electrical_installations.md` — RAG module: marine grade, IT earthing, LSOH cable, DP class, ESD/F&G class requirements, class approval workflow
