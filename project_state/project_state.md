@@ -3,6 +3,7 @@
 **Last Updated:** 2026-03-08
 **Status:** Active
 **Current Phase:** Phase 11 COMPLETE — Industry Overlay Depth
+**Next Phase:** Phase 12 — Offshore / Marine Industry Overlay (see backlog below)
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -11,17 +12,19 @@ This file is the source of truth for the current project state, active implement
 
 ## Current Direction
 
-Phase 1 and Phase 2 are complete and committed. All Phase 2 features have been implemented: print stylesheet, diagram lightbox, lunr.js inline search, and crosswalk comparison selector. Next: push all commits and enable GitHub Pages (Settings → Pages → Source: GitHub Actions).
+Phase 11 is complete and pushed. The site is live on GitHub Pages. All planned corpus gap-fills are complete. The next phase (Phase 12) targets the Offshore / Marine industry overlay, which requires adding class society standards (DNV, ABS) to the RAG corpus before site pages can be built.
 
 The site is a presentation and navigation layer on top of `control-standards/rag/`. Authoritative engineering and standards guidance stays in `control-standards/rag/`. The website never modifies RAG content.
 
 ## Current Reality
 
-- Jekyll site implemented under `docs/` — 48 HTML pages build successfully
+- Jekyll site deployed on GitHub Pages — `https://kyawminthu.github.io/Control-System-Tools/`
+- Jekyll build: ~60 pages, clean build (0.27 s locally)
 - Three-panel layout (sidebar 240px + main content + context panel 220px)
-- Mermaid.js CDN integration for all diagrams
+- Mermaid.js CDN integration for all diagrams; Cytoscape.js 3.28.1 for interactive standards graph
 - GitHub Actions deployment workflow at `.github/workflows/pages.yml`
-- Site covers: homepage (8 blocks), all standards families, 11 lifecycle stages, 5 scenarios, 3 crosswalks, 9 industry overlays, software stack, about page
+- Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 11 lifecycle stages + safety wiring, 8 scenarios, 3 crosswalks, 9 industry overlays (2 fully deepened), glossary (28 terms), software stack, about page
+- Interactive standards graph: 12 nodes, 14 edges (does not yet include IEC 60079, IEC 61511, SEMI)
 - Root `main.py` remains a placeholder (not the site)
 
 ## Source Of Truth By Topic
@@ -228,7 +231,36 @@ requires zero user interaction while still allowing manual override.
 - SEMI S2/S8/S14 — corpus complete (3 RAG files + index)
 - Medical, nuclear, marine class rules — not in corpus (no plan)
 
-## Future Backlog (not yet planned)
+## Phase 12 Backlog — Offshore / Marine (PRIMARY NEXT PHASE)
 
-- **Phase 12 backlog — Offshore / Marine industry overlay:** Deepened offshore platform industry page + scenario; requires adding class society standards (DNV, ABS) to corpus first
-- **Phase 12 backlog — General upstream + midstream O&G:** Pipeline control and midstream segment coverage extending the Phase 11 onshore process skid scenario
+**Blocked on:** DNV-ST-0378, ABS Rules for Building and Classing FPSOs, or equivalent class society standards must be added to corpus first.
+
+### Corpus work required first
+- [ ] DNV-ST-0378 (Offshore and Platform Lifting Appliances) or DNV-ST-0145 (Offshore Substations) — select most relevant for control systems scope
+- [ ] ABS — at minimum a summary RAG module covering electrical and control system requirements for offshore platforms
+- [ ] `control-standards/rag/standards_intelligence/international/offshore/` — new directory + `_index.yaml`
+
+### Site pages (after corpus)
+- [ ] `docs/industries/offshore/index.md` — deepen from stub: standards matrix by phase, selection flow, offshore-specific decisions (marine grade, Ex, power redundancy)
+- [ ] `docs/industries/marine/index.md` — deepen from stub: class society requirements, IEC 60092, flag-state authority
+- [ ] `docs/scenarios/offshore-platform-control/index.md` — Scenario 09: offshore platform ESD + F&G + power management
+
+## Secondary Backlog (not yet scheduled)
+
+### Thin industry pages (7 stubs remaining)
+- [ ] `docs/industries/energy/index.md` — deepen: IEC 61511 (process), IEC 60204-1, NEC, utility NERC CIP if applicable
+- [ ] `docs/industries/food-and-beverage/index.md` — deepen: hygiene-grade enclosures, NFPA 79, wash-down requirements
+- [ ] `docs/industries/medical/index.md` — deepen: IEC 60601-1, ISO 14971; note corpus gap
+- [ ] `docs/industries/nuclear/index.md` — deepen: IEC 61513, IEEE 603; note corpus gap
+- [ ] `docs/industries/commercial/index.md` — deepen: NEC, IBC, building automation scope
+
+### Standards graph expansion
+- [ ] Add IEC 60079, IEC 61511, SEMI S2 nodes to `docs/_data/standards_graph.yml` (currently 12 nodes — missing hazardous area and semiconductor families)
+
+### Glossary expansion
+- [ ] Add O&G/SEMI/hazardous-area terms: SIF, SRS, LOPA, PFDavg, IPL, EPL, T-code, Ex ia, SECS/GEM, PTI
+- [ ] Current count: 28 terms — target ~45
+
+### Crosswalk additions
+- [ ] IEC 61511 ↔ IEC 61508 (application vs. foundation) crosswalk
+- [ ] IEC 60079 ↔ NEC Art. 500/505 (Zone vs. Division) crosswalk
