@@ -1,62 +1,130 @@
 ---
 layout: default
 title: "Semiconductor Industry Standards Overlay"
+description: "Standards path for semiconductor fab equipment: SEMI S2/S8/S14, IEC 60204-1, ISO 12100, NFPA 79, IEC 62443."
 breadcrumb:
   - name: "Industries"
     url: "/industries/"
   - name: "Semiconductor"
-repo_path: "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/semiconductor.md"
 related_standards:
-  - name: "ISO 13849-1"
-    url: "/standards/functional-safety/iso-13849-1/"
+  - name: "SEMI S2/S8/S14"
+    url: "/standards/semiconductor/semi/"
   - name: "IEC 60204-1"
     url: "/standards/machinery/iec-60204-1/"
+  - name: "ISO 12100"
+    url: "/standards/functional-safety/iso-12100/"
+  - name: "IEC 62443"
+    url: "/standards/cybersecurity/iec-62443/"
 ---
 
 <div class="page-header">
   <span class="page-header__label">Industry Overlay — Semiconductor</span>
   <h1>Semiconductor Equipment Standards</h1>
+  <span class="badge badge--complete">Phase 11 — SEMI Corpus Complete</span>
 </div>
 
 ## Industry Profile
 
 | Field | Value |
 |-------|-------|
-| **Industry** | Semiconductor fab equipment |
-| **Typical machines** | Etch, deposition, CMP, metrology, handlers, implant |
-| **Markets** | US, EU, Asia (global installation) |
-| **Special concern** | Hazardous process gases, cleanroom EMC, SEMI standards |
+| **Industry** | Semiconductor fab equipment (process tools, metrology, handlers) |
+| **Typical tools** | Etch, CVD, PVD, CMP, diffusion, implant, metrology, wafer handlers |
+| **Markets** | US fabs + EU fabs + Asian fabs (global installation) |
+| **Special concerns** | Flammable/toxic process gases, cleanroom EMC, SEMI qualification requirements, automated host interface |
 
-## Standards Path
+---
+
+## Standards Applicability by Project Phase
+
+| Phase | Standards | Purpose |
+|-------|-----------|---------|
+| **Tool Design** | ISO 12100, SEMI S2 §4–6, SEMI S14 | Risk assessment, interlock architecture, fire risk evaluation |
+| **Electrical Build** | IEC 60204-1, NFPA 79, UL 508A | Machine electrical design, US electrical compliance, panel listing |
+| **Ergonomics Review** | SEMI S8 | Control placement, force limits, maintenance access |
+| **Fab Qualification** | SEMI S2 (full), SEMI S8, SEMI S14 | EH&S review, SEMI compliance checklist |
+| **Installation** | NEC, IEC 60204-1 §8 | Facility connection, equipotential bonding |
+| **Networked Operation** | IEC 62443 | Cybersecurity for fab host interface and remote diagnostics |
+| **Periodic Inspection** | SEMI S2 §15 | Interlock function verification, LOTO procedure audit |
+
+---
+
+## Standards Selection Flow
+
+```
+Is the tool for a US fab?
+  YES → NFPA 79 (machine electrical) + NEC (installation) + UL 508A (panel listing)
+  NO  → IEC 60204-1 (machine electrical)
+  BOTH → Apply NFPA 79 and IEC 60204-1 in parallel (most global tools)
+
+Does the tool use flammable or toxic process gases?
+  YES → SEMI S14 fire risk assessment required
+       → NC shutoff valves on all gas lines
+       → Exhaust flow monitoring interlock
+       → Gas detector integration with automatic shutoff
+
+Does the tool have high-voltage circuits (>50 V AC or >120 V DC)?
+  YES → SEMI S2: interlocks must de-energize before panel access
+       → Stored energy: capacitors must discharge to <50 V within 5 s of isolation
+       → All energy isolation points must accept a padlock (LOTO)
+
+Is the tool connected to fab host or remote network?
+  YES → IEC 62443: apply appropriate Security Level (SL-T) based on risk
+       → Segment tool network from process control network (conduit model)
+```
+
+---
+
+## Standards Path Summary
 
 | Category | Standards | Corpus Status |
 |----------|-----------|---------------|
-| US electrical | NEC, NFPA 79, UL 508A | Complete |
-| International electrical | IEC 60204-1 | Complete |
-| Risk assessment | ISO 12100 | Planned <span class="badge badge--verify">TO VERIFY</span> |
-| Safety functions | ISO 13849-1 (PLd or PLe typical) | Planned <span class="badge badge--verify">TO VERIFY</span> |
-| Semiconductor-specific | SEMI S2, S8, S14 | <span class="badge badge--gap">NOT IN LOCAL CORPUS</span> |
-| Cybersecurity | IEC 62443 | Routing reference only <span class="badge badge--verify">TO VERIFY</span> |
-| Fab safety | NFPA 318 | Not confirmed in corpus |
+| Risk assessment | ISO 12100 | <span class="badge badge--complete">Complete</span> |
+| Safety functions | ISO 13849-1 (PLd typical for tools) | <span class="badge badge--complete">Complete</span> |
+| Machine electrical (international) | IEC 60204-1 | <span class="badge badge--complete">Complete</span> |
+| US electrical | NEC, NFPA 79, UL 508A | <span class="badge badge--complete">Complete</span> |
+| Semiconductor-specific | SEMI S2, S8, S14 | <span class="badge badge--complete">Complete</span> |
+| Cybersecurity | IEC 62443 | <span class="badge badge--complete">Complete</span> |
+| Fab fire code | NFPA 318 | Not in corpus |
 
-## What Changes vs Baseline Machine Design
+---
 
-Per the industry overlay file at `rag/scenario/mini_machine_safety_design_v2/industry_overlays/semiconductor.md`:
+## Key Engineering Decisions for Semiconductor Tools
 
-- **Chemical compatibility, leak containment, purge logic:** Higher priority than in a standard industrial machine. SEMI standards (S2, S8, S14) govern these requirements — **NOT IN LOCAL CORPUS**.
-- **Single-point ground and EMC discipline:** More stringent due to co-existence with sensitive instrumentation and networked tooling. IEC 60204-1 Clause 8 (equipotential bonding) provides partial coverage.
-- **Documentation and interlock validation:** Deeper than baseline. Tool integration often requires interface qualification and host handshake records. SEMI semiconductor acceptance artifacts are **NOT IN LOCAL CORPUS**.
+**Capacitor discharge interlock design (SEMI S2):**
+High-voltage power supplies (RF generators, ion implant supplies) store significant energy. The interlock must either: (a) discharge capacitors to <50 V within 5 seconds of isolation, OR (b) provide a discharge indicator visible at the access point AND an access interlock that prevents opening until discharge is confirmed. Option (b) is safer and easier to verify during qualification.
 
-## Typical Acceptance Artifacts
+**Single-point ground vs. equipotential bonding:**
+RF-intensive tools (etch, CVD) require single-point grounding to prevent RF ground loops. Equipotential bonding per IEC 60204-1 §8 must still be maintained for safety — achieve both by designing the safety ground and signal ground as a star topology meeting at one point.
 
-- Chemical P&ID with valve lineup and spill sensors <span class="badge badge--verify">TO VERIFY</span>
-- Tool interface and interlock cause-and-effect matrix
-- EMC bonding layout and cable segregation record
-- SEMI compliance checklist or gap register <span class="badge badge--gap">NOT IN LOCAL CORPUS</span>
+**SEMI S2 interlock independence:**
+S2 requires that safety interlocks be independent of the process control system where a single failure could cause injury. In practice: use a dedicated safety relay or safety PLC for personnel protection interlocks (door interlocks, E-stops, gas shutoffs), separate from the process recipe controller.
 
-## Repository Path
+---
 
-- Local: `rag/reference_models/15-Standard Minimum Compliance Stack.md`
-- Industry overlay: `rag/scenario/mini_machine_safety_design_v2/industry_overlays/semiconductor.md`
+## SEMI S2 Compliance Flow
 
-<a href="{{ '/scenarios/semiconductor-equipment/' | relative_url }}" class="card__link">See full semiconductor equipment scenario &rarr;</a>
+```
+1. ISO 12100 risk assessment → identify all hazards
+2. For each hazard: determine required risk reduction (PL per ISO 13849-1)
+3. SEMI S2 electrical safety:
+   - Ground all accessible conductive surfaces
+   - Interlock all HV panels (de-energize before opening)
+   - LOTO: one padlock per energy isolation point
+   - Capacitor discharge: <50 V within 5 s
+4. SEMI S14 fire risk assessment:
+   - Identify all flammable/pyrophoric materials
+   - Automatic shutoff on fire detection
+   - Independent over-temperature cutout on all heater circuits
+5. SEMI S8 ergonomics review:
+   - E-stop: 600–1400 mm height, ≤40 N force
+   - Maintenance access: 600 mm wide × 900 mm high minimum
+6. Documentation package: interlock list, schematic, LOTO procedure, HazMat inventory
+```
+
+---
+
+<a href="{{ '/scenarios/semiconductor-fab-tool/' | relative_url }}" class="card__link">See Semiconductor Fab Tool scenario &rarr;</a>
+
+<a href="{{ '/scenarios/semiconductor-equipment/' | relative_url }}" class="card__link">See Semiconductor Equipment Compliance scenario &rarr;</a>
+
+<a href="{{ '/industries/' | relative_url }}" class="card__link">&larr; Industry matrix</a>
