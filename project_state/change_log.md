@@ -18,11 +18,106 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-09 — Integrated motor-drive architecture notes extracted from work-note source
+
+- `control-standards/work/design/check_this.md` — used as a read-only source for integrated drive-on-motor content; source file left unchanged during extraction.
+- `control-standards/rag/design_framework/motor_systems/` — added `integrated_motor_drive_architecture_comparison.md`, `industrial_vs_ev_vs_drone_motor_drive_standards_matrix.md`, `motor_mounted_drive_thermal_and_emc_design_notes.md`, `integrated_drive_failure_modes_and_tradeoffs.md`, and `integrated_drive_serviceability_and_field_replacement_review.md`.
+- `control-standards/rag/design_framework/motor_systems/README.md` and `_index.yaml` — updated to include the new integrated-drive architecture note set.
+
+---
+
+### 2026-03-09 — Motor comparison pages extracted from work-note source
+
+- `control-standards/work/design/check_this.md` — used as a read-only source for new motor comparison and architecture content; source file left unchanged during the extraction pass.
+- `control-standards/rag/training_modules/electrical_machines/` — added `motor_family_comparison.md`, `ac_vs_dc_motor_comparison.md`, `vfd_and_servo_architecture_diagrams.md`, and `brushless_dc_ev_and_drone_motor_comparison.md`; updated the module README and `_index.yaml`.
+- `control-standards/rag/design_framework/motor_systems/motor_selection_comparison_matrix.md` — added a concept-stage motor-family selection matrix; updated the module README and `_index.yaml`.
+
+---
+
+### 2026-03-09 — Motor comparison/diagram source note normalized for RAG promotion prep
+
+- `control-standards/work/design/check_this.md` — converted a raw generated draft on motor, VFD, servo, BLDC, EV, and drone comparison pages into a scoped promotion-prep note.
+- The note now identifies which content should enrich existing motor fundamentals files, which new RAG files are high-value next additions, and which EV/drone topics should remain lower-priority unless the repository scope expands.
+
+---
+
+### 2026-03-09 — Motor/VFD/servo RAG modules expanded from updated work note
+
+- `control-standards/work/design/check_this.md` — used as a source note for additional motor-drive training, workflow, and checklist content; source left in place as work material.
+- `control-standards/rag/training_modules/electrical_machines/` — added `vfd_fundamentals.md` and `servo_drive_fundamentals.md`, and updated the module README and `_index.yaml`.
+- `control-standards/rag/design_framework/motor_systems/` — added `motor_troubleshooting_decision_tree.md`, `vfd_commissioning_workflow.md`, and `servo_commissioning_workflow.md`, and updated the module README and `_index.yaml`.
+- `control-standards/rag/commissioning_checklists/checklists/drive_commissioning.md` — added a field checklist for first drive power-up and early verification; checklist README and `_index.yaml` updated accordingly.
+
+---
+
+### 2026-03-09 — Templates folder refreshed to current project conventions
+
+- `control-standards/templates/README.md` — rewritten to match the current repo structure and actual available templates.
+- `control-standards/templates/md_headers/` — refreshed `rag_approved_header.md` and `draft_only_header.md`, and added `archived_header.md` in the current metadata style.
+- `control-standards/templates/checklists/checklist_template.md` — added a real checklist starter.
+- `control-standards/templates/design_guides/design_guide_template.md` — added a design-guide starter.
+- `control-standards/templates/reports/report_template.md` — added a report starter.
+- `control-standards/templates/work_notes/work_note_template.md` — added a work-note starter for transcript-derived and normalized source notes.
+
+---
+
+### 2026-03-09 — Pre-power commissioning checklist promoted from work note
+
+- `control-standards/work/design/check_this.md` — normalized as a commissioning source note for pre-power panel and incoming-supply verification.
+- `control-standards/rag/commissioning_checklists/checklists/pre_power_panel_and_incoming_supply_check.md` — added a new pre-power checklist covering incoming supply, upstream protection, panel inspection, grounding/bonding, staged energization, and stored-energy awareness.
+- `control-standards/rag/commissioning_checklists/README.md` and `checklists/README.md` — updated to reflect the expanded checklist set.
+- `control-standards/rag/commissioning_checklists/checklists/_index.yaml` — updated with the new pre-power checklist.
+
+---
+
+### 2026-03-09 — Fundamentals training modules expanded from circuit-analysis source set
+
+- `control-standards/rag/training_modules/fundamentals/` — added seven missing fundamentals modules covering circuit language, series/parallel methods, Kirchhoff laws, equivalent-circuit methods, electrical equations, passive components, and diode/transistor switching basics.
+- `control-standards/rag/training_modules/fundamentals/README.md` — updated to reflect the expanded fundamentals module set.
+- `control-standards/rag/training_modules/fundamentals/_index.yaml` — updated with the new module list.
+
+---
+
+### 2026-03-09 — Electrical integration design and implementation docs rewritten
+
+- `docs/plans/2026-03-08-electrical-intelligence-integration-design.md` — replaced the obsolete `electrical_intelligence/` parallel-layer design with the current canonical architecture using `training_modules`, `design_framework`, `commissioning_checklists/checklists`, and `standards_intelligence`.
+- `docs/plans/2026-03-08-electrical-intelligence-integration-plan.md` — replaced the stale implementation plan with a current executable backlog focused on the remaining circuit-analysis promotions and current validation constraints.
+
+---
+
+### 2026-03-09 — Electrical integration requirements doc added
+
+- `docs/plans/2026-03-08-electrical-intelligence-integration-requirements.md` — added a concrete requirement list covering architecture, source readiness, metadata, target files, engineering-rule constraints, validation, and acceptance criteria for rewriting the Phase 11 electrical integration docs.
+
+---
+
+### 2026-03-09 — Missing electrical-intelligence components promoted into current RAG architecture
+
+- `control-standards/work/design/project_implementation_gaps/nec_exam_prep_topics/` — added a normalized source package from `electrical exam prep.md`, including README and integration guidance based on the source's real content.
+- `control-standards/rag/training_modules/` — added root README/index plus new `electrical_machines/` and `nec_application/` submodules with induction-motor, DC-motor, nameplate/slip/torque, NEC code-reading, table-navigation, and article-routing modules.
+- `control-standards/rag/design_framework/electrical_review/` — added quick electrical review workflows for Ohm's law, resistive networks, component selection, and simple interface circuits.
+- `control-standards/rag/design_framework/motor_systems/` — added motor selection, nameplate review, star/delta supply matching, and VFD integration review notes.
+- `control-standards/rag/commissioning_checklists/` — added root README/index plus starter field checklists for circuit polarity/power, capacitor discharge awareness, and motor startup verification.
+- `control-standards/rag/standards_intelligence/crosswalks/overlap_notes/` — added the previously missing `motors_drives` overlap notes for UL 508A/NEC/NFPA 79 and NFPA 79/IEC 60204-1 routing.
+
+---
+
+### 2026-03-09 — Design framework minimum viable set created
+
+- `control-standards/rag/design_framework/README.md` — added module purpose and scope note.
+- `control-standards/rag/design_framework/_index.yaml` — added seeded-content index for the design framework.
+- `control-standards/rag/design_framework/design_guides/02_power_distribution_guide.md` — added applied power-distribution workflow guide.
+- `control-standards/rag/design_framework/constraints/grounding_bonding_rules.yaml` — added reusable grounding and bonding ruleset.
+- `control-standards/rag/design_framework/us_eu_compliance_wizard/` — added wizard README, spec, rules, and delta-report template to satisfy existing internal references.
+
+---
+
 ### 2026-03-09 — Google tag added sitewide
 
 - `docs/_layouts/default.html` — added the Google tag (`gtag.js`) snippet in `<head>` with measurement ID `G-RPL3G47EFZ`, which applies to every page using the default Jekyll layout.
 - `project_state/project_state.md` — updated current-state tracking to record sitewide analytics installation.
 - `project_state/environment.md` — recorded the active measurement ID and layout location for site analytics.
+- Corrected the documented live GitHub Pages URL to `https://kyawminthu20.github.io/Control-System-Tools/`.
 
 ---
 
