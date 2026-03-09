@@ -77,6 +77,20 @@ Global (US + EU)?            → NFPA 79 + IEC 60204-1 + ISO 13849-1 (design to 
 
 ---
 
+## Hazardous Area Standards
+
+| Standard | Publisher | Scope | Status |
+|----------|-----------|-------|--------|
+| [IEC 60079 (6 parts)]({{ '/standards/hazardous-area/iec-60079/' | relative_url }}) | IEC | Explosive atmosphere equipment and installation | <span class="badge badge--complete">Complete</span> |
+
+## Semiconductor Equipment Standards
+
+| Standard | Publisher | Scope | Status |
+|----------|-----------|-------|--------|
+| [SEMI S2 / S8 / S14]({{ '/standards/semiconductor/semi/' | relative_url }}) | SEMI | Semiconductor equipment safety, ergonomics, fire risk | <span class="badge badge--complete">Complete</span> |
+
+---
+
 ## Standards Relationship Diagram
 
 <div class="mermaid-wrap">
