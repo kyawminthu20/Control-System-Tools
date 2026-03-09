@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 15:03:03
+**Last Auto-Updated:** 2026-03-08 17:21:36
 
 ```text
 ├── .claude/
@@ -435,6 +435,9 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   │       ├── ISO13849_2023__Clause06__categories.md
 │   │   │   │   │       ├── ISO13849_2023__Clause07__validation.md
 │   │   │   │   │       └── _index.yaml
+│   │   │   │   ├── hazardous_area/
+│   │   │   │   │   └── iec_60079/
+│   │   │   │   │       └── IEC60079_0__general_requirements.md
 │   │   │   │   └── machinery/
 │   │   │   │       └── iec_60204_1/
 │   │   │   │           ├── GENERATION_SUMMARY.md
@@ -686,6 +689,9 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       │   │   └── README.md
 │       │   ├── nec_210_4_multiwire_branch_circuits_transcript_summary.md
 │       │   ├── nec_update.md
+│       │   ├── project_implementation_gaps/
+│       │   │   ├── 20260308_status.md
+│       │   │   └── ul 508a.md
 │       │   ├── residential_nec_top_articles_transcript_summary.md
 │       │   ├── scratch_notes/
 │       │   │   ├── simple_safety_system_design.md
