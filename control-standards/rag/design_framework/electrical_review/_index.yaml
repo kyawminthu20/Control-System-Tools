@@ -1,0 +1,11 @@
+version: "1.0"
+content_class: "RAG_APPROVED"
+status: "DRAFT"
+module_id: "design_framework_electrical_review"
+last_updated: "2026-03-09"
+
+files:
+  - "ohms_law_and_power_check_workflow.md"
+  - "basic_resistive_network_review.md"
+  - "component_selection_basics.md"
+  - "simple_signal_and_interface_circuit_notes.md"

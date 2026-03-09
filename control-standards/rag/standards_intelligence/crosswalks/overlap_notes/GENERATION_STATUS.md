@@ -35,7 +35,7 @@ Per-topic overlap notes provide detailed:
 9. [ ] `overlap__panel_construction.md` - Panel layout and workmanship
 10. [x] `overlap__sccr.md` - **SCCR determination (CRITICAL)** ✅ CREATED
 11. [ ] `overlap__marking_documentation.md` - Labeling requirements
-12. [ ] `overlap__motors_drives.md` - Motor protection and drives
+12. [x] `overlap__motors_drives.md` - Motor protection and drives ✅ CREATED
 13. [ ] `overlap__control_power.md` - Transformers and PSUs
 14. [ ] `overlap__multi_panel_machines.md` - Multi-panel SCCR aggregation
 
@@ -52,7 +52,7 @@ Per-topic overlap notes provide detailed:
 8. [ ] `overlap_nfpa79_iec60204__control_functions.md` - Control behavior
 9. [ ] `overlap_nfpa79_iec60204__operator_interface.md` - HMI and controls
 10. [ ] `overlap_nfpa79_iec60204__control_equipment.md` - Panel/enclosure design
-11. [ ] `overlap_nfpa79_iec60204__motors_drives.md` - Motor protection
+11. [x] `overlap_nfpa79_iec60204__motors_drives.md` - Motor protection ✅ CREATED
 12. [ ] `overlap_nfpa79_iec60204__accessories_lighting.md` - Accessories and lighting
 13. [ ] `overlap_nfpa79_iec60204__marking_documentation.md` - US vs EU labeling
 14. [ ] `overlap_nfpa79_iec60204__verification.md` - Testing and verification
@@ -62,9 +62,9 @@ Per-topic overlap notes provide detailed:
 | Category | Total | Created | Remaining | Status |
 |----------|-------|---------|-----------|--------|
 | **Core Files** | 3 | 3 | 0 | ✅ Complete |
-| **US Overlap Notes** | 14 | 1 | 13 | 🔄 In Progress |
-| **International Notes** | 14 | 0 | 14 | ⏳ Pending |
-| **TOTAL** | 31 | 4 | 27 | **13% Complete** |
+| **US Overlap Notes** | 14 | 2 | 12 | 🔄 In Progress |
+| **International Notes** | 14 | 1 | 13 | 🔄 In Progress |
+| **TOTAL** | 31 | 6 | 25 | **19% Complete** |
 
 ## Priority for Next Phase
 
@@ -202,13 +202,14 @@ Before marking complete, verify:
 
 - 2026-01-15 — Generation status tracking document created
   - Total files needed: 31 (3 core + 28 overlap notes)
-  - Files created: 4 (13% complete)
+  - Files created: 6 (19% complete)
   - Critical SCCR overlap note completed
+  - Motor and drive overlap notes completed for US and NFPA79/IEC routing
   - Priority order established
   - Status: IN PROGRESS
 
 ---
 
-**Current Status**: 13% Complete (4 of 31 files)
+**Current Status**: 19% Complete (6 of 31 files)
 **Next Step**: Create 3 remaining critical priority files
-**Estimated Completion**: Requires systematic generation of 27 remaining files
+**Estimated Completion**: Requires systematic generation of 25 remaining files

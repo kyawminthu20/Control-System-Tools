@@ -1,0 +1,13 @@
+version: "1.0"
+content_class: "RAG_APPROVED"
+status: "DRAFT"
+module_id: "commissioning_field_checks"
+last_updated: "2026-03-09"
+
+files:
+  - "pre_power_panel_and_incoming_supply_check.md"
+  - "basic_circuit_polarity_and_power_checks.md"
+  - "capacitor_discharge_awareness_check.md"
+  - "drive_commissioning.md"
+  - "motor_nameplate_and_overload_setting.md"
+  - "motor_rotation_and_overload_verification.md"

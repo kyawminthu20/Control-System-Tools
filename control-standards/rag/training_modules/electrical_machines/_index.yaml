@@ -1,0 +1,16 @@
+version: "1.0"
+content_class: "RAG_APPROVED"
+status: "DRAFT"
+module_id: "electrical_machines"
+last_updated: "2026-03-09"
+
+files:
+  - "induction_motor_basics.md"
+  - "dc_motor_basics.md"
+  - "motor_nameplates_slip_and_torque.md"
+  - "vfd_fundamentals.md"
+  - "servo_drive_fundamentals.md"
+  - "motor_family_comparison.md"
+  - "ac_vs_dc_motor_comparison.md"
+  - "vfd_and_servo_architecture_diagrams.md"
+  - "brushless_dc_ev_and_drone_motor_comparison.md"

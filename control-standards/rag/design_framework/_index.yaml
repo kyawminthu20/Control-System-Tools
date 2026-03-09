@@ -1,0 +1,73 @@
+# Design Framework Index
+# AI_READ_ACCESS: ALLOWED
+
+version: "1.0"
+content_class: "RAG_APPROVED"
+status: "DRAFT"
+module_id: "design_framework"
+last_updated: "2026-03-09"
+
+purpose: >
+  Applied engineering workflows, reusable design guides, and automation-friendly
+  rules that translate standards intelligence into design execution.
+
+seeded_content:
+  - category: "design_guides"
+    file: "design_guides/02_power_distribution_guide.md"
+    description: "Applied power-distribution and conductor/OCPD review workflow"
+
+  - category: "constraints"
+    file: "constraints/grounding_bonding_rules.yaml"
+    description: "Machine and panel grounding/bonding ruleset for design review and automation"
+
+  - category: "electrical_review"
+    file: "electrical_review/ohms_law_and_power_check_workflow.md"
+    description: "Quick calculation and component-sanity workflow for simple electrical review"
+
+  - category: "electrical_review"
+    file: "electrical_review/basic_resistive_network_review.md"
+    description: "First-pass series/parallel/divider review workflow"
+
+  - category: "motor_systems"
+    file: "motor_systems/motor_selection_workflow.md"
+    description: "First-pass motor selection workflow for machine and panel projects"
+
+  - category: "motor_systems"
+    file: "motor_systems/vfd_motor_integration_review.md"
+    description: "Motor-drive integration review note for VFD-driven systems"
+
+  - category: "us_eu_compliance_wizard"
+    file: "us_eu_compliance_wizard/US_EU_Machine_Compliance_Wizard.md"
+    description: "Human-readable dual-market machine compliance wizard spec"
+
+  - category: "us_eu_compliance_wizard"
+    file: "us_eu_compliance_wizard/us_eu_wizard_rules.yaml"
+    description: "Decision-engine rules for US/EU machine compliance delta analysis"
+
+  - category: "us_eu_compliance_wizard"
+    file: "us_eu_compliance_wizard/us_eu_delta_report_template.md"
+    description: "Report template for US/EU compliance deltas"
+
+planned_subtrees:
+  - "control_system_design"
+  - "electrical_review"
+  - "io_architecture"
+  - "motor_systems"
+  - "network_architecture"
+  - "power_distribution"
+  - "safety_architecture"
+
+integration_points:
+  standards_intelligence: "../standards_intelligence/"
+  training_modules: "../training_modules/"
+  commissioning_checklists: "../commissioning_checklists/"
+  troubleshooting_engine: "../troubleshooting_engine/"
+
+changelog:
+  - date: "2026-03-09"
+    action: "Seeded minimum viable design framework"
+    status: "initial content added"
+
+  - date: "2026-03-09"
+    action: "Added electrical review and motor-systems subcontent"
+    status: "expanded applied-engineering coverage"
