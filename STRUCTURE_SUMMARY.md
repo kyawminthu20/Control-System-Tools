@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 18:31:03
+**Last Auto-Updated:** 2026-03-08 18:34:27
 
 ```text
 ├── .claude/
@@ -847,6 +847,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── f71006d652ee55f235e9f005fc6620afcbbf683f2e8332e81378e5d2ae4975
 │   │               ├── 36/
 │   │               │   └── d582097a42b157b16a059c76c099e57f145550bc3b1266e8823f4c06a7146b
+│   │               ├── 38/
+│   │               │   └── de1662201ef5e677745f5054219d0debaa4c2fcec5c686cc90561c75d46279
 │   │               ├── 39/
 │   │               │   ├── 05a5f4115608928c4c1bf892740f3662a163ad4fb503f93ee2322eb41487a0
 │   │               │   └── 869c0db11031d05c0dc870c0567ab24e49c875e210c76718cb09122c79bfee
@@ -1017,6 +1019,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── c6/
 │   │               │   └── b20534916e2ba117b370e18f5877c70f9277d97b0f9a8e31884c36ecb67968
 │   │               ├── c9/
+│   │               │   ├── 8d8eb119a9df9a1795ee53ae9206a5e893eff63a1e928602cb159299853f9d
 │   │               │   ├── c3da26f95bb86eb05aeb70cfd28850446cb9d2577313e1ebd7eaeb879bc270
 │   │               │   └── d5e20a5f7b3fca081d0e9fefda3ed37bceb84e645a9d71e24adc07baece46b
 │   │               ├── cb/
@@ -1172,6 +1175,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-08-nec-missing-articles.md
 │   │   │   ├── 2026-03-08-nec-page-update.md
 │   │   │   ├── 2026-03-08-phase10-corpus-gap-fill.md
+│   │   │   ├── 2026-03-08-phase11-industry-overlay-depth-design.md
+│   │   │   ├── 2026-03-08-phase11-industry-overlay-depth.md
 │   │   │   ├── 2026-03-08-phase9-standards-graph.md
 │   │   │   ├── 2026-03-08-standards-graph-design.md
 │   │   │   ├── 2026-03-08-theme-switching-design.md
