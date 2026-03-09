@@ -1,20 +1,40 @@
-# [Document Title]
-**AI_READ_ACCESS: FORBIDDEN**
-**Status:** Draft - Work in Progress
+<!--
+AI_READ_ACCESS: ALLOWED (with caution)
+CONTENT_CLASS: WORK_IN_PROGRESS
+STATUS: DRAFT
+CATEGORY: [WORK_NOTE_CATEGORY]
+-->
 
-[Notes about what this draft is exploring and what needs to be resolved before promotion]
+# [Working Title]
 
-**Blockers**:
-- [ ] Issue 1 to resolve
-- [ ] Issue 2 to resolve
+## What this file is
 
----
+[Describe the source, the note type, and why it exists.]
 
-[Draft content goes here]
+## Topic focus
 
----
+[State what this note is trying to capture.]
 
-**Next Steps**:
-1. Complete checklist items above
-2. Follow promotion_checklist_drafts_to_rag.md
-3. Move to appropriate /rag/ location when ready
+## Main concepts captured
+
+### 1. [Main idea]
+
+- [Bullet]
+- [Bullet]
+
+### 2. [Main idea]
+
+- [Bullet]
+- [Bullet]
+
+## What should be treated carefully
+
+- [List assumptions, weak spots, or items needing verification]
+
+## Best promotion target
+
+- [State likely destination path if this becomes promotable]
+
+## Important caution
+
+[State why this file is not yet authoritative.]

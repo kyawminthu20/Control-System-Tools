@@ -1,0 +1,10 @@
+version: "1.0"
+content_class: "RAG_APPROVED"
+status: "DRAFT"
+module_id: "commissioning_checklists"
+last_updated: "2026-03-09"
+
+submodules:
+  - name: "checklists"
+    path: "checklists/"
+    description: "Field verification checklists for startup and validation"

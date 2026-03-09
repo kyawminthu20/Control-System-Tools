@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 19:42:44
+**Last Auto-Updated:** 2026-03-08 22:53:07
 
 ```text
 ├── .claude/
@@ -378,17 +378,61 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── RAG_DIRECTORY_STATUS.md
 │   │   ├── VERSION_OVERVIEW.md
 │   │   ├── commissioning_checklists/
+│   │   │   ├── README.md
+│   │   │   ├── _index.yaml
+│   │   │   ├── checklists/
+│   │   │   │   ├── README.md
+│   │   │   │   ├── _index.yaml
+│   │   │   │   ├── basic_circuit_polarity_and_power_checks.md
+│   │   │   │   ├── capacitor_discharge_awareness_check.md
+│   │   │   │   ├── drive_commissioning.md
+│   │   │   │   ├── motor_nameplate_and_overload_setting.md
+│   │   │   │   ├── motor_rotation_and_overload_verification.md
+│   │   │   │   └── pre_power_panel_and_incoming_supply_check.md
 │   │   │   ├── dry_run/
 │   │   │   ├── handover/
 │   │   │   ├── live_run/
 │   │   │   └── pre_power/
 │   │   ├── design_framework/
+│   │   │   ├── README.md
+│   │   │   ├── _index.yaml
+│   │   │   ├── constraints/
+│   │   │   │   └── grounding_bonding_rules.yaml
 │   │   │   ├── control_system_design/
+│   │   │   ├── design_guides/
+│   │   │   │   └── 02_power_distribution_guide.md
+│   │   │   ├── electrical_review/
+│   │   │   │   ├── README.md
+│   │   │   │   ├── _index.yaml
+│   │   │   │   ├── basic_resistive_network_review.md
+│   │   │   │   ├── component_selection_basics.md
+│   │   │   │   ├── ohms_law_and_power_check_workflow.md
+│   │   │   │   └── simple_signal_and_interface_circuit_notes.md
 │   │   │   ├── io_architecture/
+│   │   │   ├── motor_systems/
+│   │   │   │   ├── README.md
+│   │   │   │   ├── _index.yaml
+│   │   │   │   ├── industrial_vs_ev_vs_drone_motor_drive_standards_matrix.md
+│   │   │   │   ├── integrated_drive_failure_modes_and_tradeoffs.md
+│   │   │   │   ├── integrated_drive_serviceability_and_field_replacement_review.md
+│   │   │   │   ├── integrated_motor_drive_architecture_comparison.md
+│   │   │   │   ├── motor_mounted_drive_thermal_and_emc_design_notes.md
+│   │   │   │   ├── motor_nameplate_review_checklist.md
+│   │   │   │   ├── motor_selection_comparison_matrix.md
+│   │   │   │   ├── motor_selection_workflow.md
+│   │   │   │   ├── motor_troubleshooting_decision_tree.md
+│   │   │   │   ├── servo_commissioning_workflow.md
+│   │   │   │   ├── star_delta_and_supply_matching_notes.md
+│   │   │   │   ├── vfd_commissioning_workflow.md
+│   │   │   │   └── vfd_motor_integration_review.md
 │   │   │   ├── network_architecture/
 │   │   │   ├── power_distribution/
 │   │   │   ├── safety_architecture/
 │   │   │   └── us_eu_compliance_wizard/
+│   │   │       ├── README.md
+│   │   │       ├── US_EU_Machine_Compliance_Wizard.md
+│   │   │       ├── us_eu_delta_report_template.md
+│   │   │       └── us_eu_wizard_rules.yaml
 │   │   ├── standards_intelligence/
 │   │   │   ├── README.md
 │   │   │   ├── _glossary.md
@@ -406,7 +450,9 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │       ├── GENERATION_STATUS.md
 │   │   │   │       ├── _index.yaml
 │   │   │   │       ├── file_structure.md
-│   │   │   │       └── overlap__sccr.md
+│   │   │   │       ├── overlap__motors_drives.md
+│   │   │   │       ├── overlap__sccr.md
+│   │   │   │       └── overlap_nfpa79_iec60204__motors_drives.md
 │   │   │   ├── file_structure.md
 │   │   │   ├── international/
 │   │   │   │   ├── cybersecurity/
@@ -480,6 +526,10 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   │       ├── IEC60204_OVERVIEW.md
 │   │   │   │   │       ├── README.md
 │   │   │   │   │       └── _index.yaml
+│   │   │   │   ├── offshore/
+│   │   │   │   │   ├── ABS_offshore_electrical_control.md
+│   │   │   │   │   ├── DNV_OS_D201__electrical_installations.md
+│   │   │   │   │   └── _index.yaml
 │   │   │   │   └── semiconductor/
 │   │   │   │       └── semi/
 │   │   │   │           ├── SEMI_S14__fire_risk_assessment.md
@@ -628,10 +678,38 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │           ├── UL508A_OVERVIEW.md
 │   │   │           └── _index.yaml
 │   │   ├── training_modules/
+│   │   │   ├── README.md
+│   │   │   ├── _index.yaml
 │   │   │   ├── commissioning/
+│   │   │   ├── electrical_machines/
+│   │   │   │   ├── README.md
+│   │   │   │   ├── _index.yaml
+│   │   │   │   ├── ac_vs_dc_motor_comparison.md
+│   │   │   │   ├── brushless_dc_ev_and_drone_motor_comparison.md
+│   │   │   │   ├── dc_motor_basics.md
+│   │   │   │   ├── induction_motor_basics.md
+│   │   │   │   ├── motor_family_comparison.md
+│   │   │   │   ├── motor_nameplates_slip_and_torque.md
+│   │   │   │   ├── servo_drive_fundamentals.md
+│   │   │   │   ├── vfd_and_servo_architecture_diagrams.md
+│   │   │   │   └── vfd_fundamentals.md
 │   │   │   ├── fundamentals/
 │   │   │   │   ├── README.md
-│   │   │   │   └── conductor_ampacity_and_termination_temperature.md
+│   │   │   │   ├── _index.yaml
+│   │   │   │   ├── conductor_ampacity_and_termination_temperature.md
+│   │   │   │   ├── diodes_transistors_and_switching_basics.md
+│   │   │   │   ├── electrical_equations_reference.md
+│   │   │   │   ├── electrical_quantities_and_circuit_language.md
+│   │   │   │   ├── equivalent_circuit_methods.md
+│   │   │   │   ├── kirchhoff_laws_and_systematic_analysis.md
+│   │   │   │   ├── passive_components_resistors_capacitors.md
+│   │   │   │   └── series_parallel_and_divider_methods.md
+│   │   │   ├── nec_application/
+│   │   │   │   ├── README.md
+│   │   │   │   ├── _index.yaml
+│   │   │   │   ├── motor_and_panel_code_application.md
+│   │   │   │   ├── nec_code_reading_fundamentals.md
+│   │   │   │   └── working_space_and_table_navigation.md
 │   │   │   ├── safety/
 │   │   │   └── troubleshooting/
 │   │   └── troubleshooting_engine/
@@ -657,11 +735,17 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   ├── templates/
 │   │   ├── README.md
 │   │   ├── checklists/
+│   │   │   └── checklist_template.md
 │   │   ├── design_guides/
+│   │   │   └── design_guide_template.md
 │   │   ├── md_headers/
+│   │   │   ├── archived_header.md
 │   │   │   ├── draft_only_header.md
 │   │   │   └── rag_approved_header.md
-│   │   └── reports/
+│   │   ├── reports/
+│   │   │   └── report_template.md
+│   │   └── work_notes/
+│   │       └── work_note_template.md
 │   ├── tools/
 │   │   ├── audit_tool/
 │   │   │   ├── README.md
@@ -751,6 +835,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       │   │   │   ├── induction_motor_nameplate_and_enclosures.md
 │       │   │   │   ├── induction_motor_poles_torque_curves_and_nema_designs.md
 │       │   │   │   └── induction_motor_terminal_connections_and_star_delta.md
+│       │   │   ├── nec_exam_prep_topics/
+│       │   │   │   ├── INTEGRATION_PLAN.md
+│       │   │   │   ├── README.md
+│       │   │   │   ├── electrical_exam_math_ohms_law_and_power.md
+│       │   │   │   ├── nec_code_reading_and_index_method.md
+│       │   │   │   ├── nec_table_reading_and_working_space_example.md
+│       │   │   │   └── residential_load_calculation_notes.md
 │       │   │   └── temp links.md
 │       │   ├── residential_nec_top_articles_transcript_summary.md
 │       │   ├── scratch_notes/
@@ -824,6 +915,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 250bb7b7aa156123d8f05946de1c67eab85119aa8ee3e2b875f738549d9bd3
 │   │               ├── 1e/
 │   │               │   └── 66cf06507d7410aa2c21264d3c2affb5b5ef8e49f1ec94db2a1285d47a9225
+│   │               ├── 1f/
+│   │               │   └── ecc2fdd009c57f77739f4c8efd3c82c2034598daaf82b6d7e8989bd75f696d
 │   │               ├── 21/
 │   │               │   └── f23f6b6ccf01bad061aa3952538f401e3ad8e2e67cd0bf71b4b9c185419ea7
 │   │               ├── 23/
@@ -890,7 +983,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 4e/
 │   │               │   ├── 469c2281456ea6b8c3574a8de06961878eeb16282aabec232f3e7cdaa20e7c
 │   │               │   ├── c44749192e6403d781993ea22db7c4ba02a7889befc85700615b7872d9ce16
-│   │               │   └── d6a389b09b4429688c735a86f8a0f3b92d5176bcd2d9295630442404a5e6b6
+│   │               │   ├── d6a389b09b4429688c735a86f8a0f3b92d5176bcd2d9295630442404a5e6b6
+│   │               │   └── d7561b2378bcc3783ff908636f33a0687da111975ccbac41d085218d7c9298
 │   │               ├── 4f/
 │   │               │   ├── 22047c6ccca17ed77b8b96ad6638fc34c17902034215785307430e687d1d47
 │   │               │   └── f6a3baebc55f69a127eca51eeda6a21b39ed4f11852068669241c01e7da412
@@ -956,7 +1050,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 1dbc1110aecfe097d8f86fe19410161e74d12a58a0ea1fef8809ad81124306
 │   │               ├── 7f/
 │   │               │   ├── 53770c6fc9a4b6368b5d8693ad59fe612232f13dcf1b8358180f510bc97ee9
-│   │               │   └── 717bbdd539c963b4d3792cc2557b18946dc22fb46ae6adfe9d24b02f15fed7
+│   │               │   ├── 717bbdd539c963b4d3792cc2557b18946dc22fb46ae6adfe9d24b02f15fed7
+│   │               │   └── 780be62ae66559f2958cae201152a8de57515d9563b58041cdc0b1fc0b2e02
 │   │               ├── 80/
 │   │               │   └── c4a4cbd716179311441280d346ac16f88a7ab2a807d9d67e904d9db008899d
 │   │               ├── 83/
@@ -982,6 +1077,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── a35491545eb36158a850db0b7d017ba1eafcf1616d72f2588f4757e4ea910f
 │   │               ├── 98/
 │   │               │   └── b154ebeefb18f0d89106cabf20003ebc5ea1045b8c401c014b8a639e24d30b
+│   │               ├── 9a/
+│   │               │   └── ea98b42c3fd3ed0ec3b101f80bb4a8c0024a278215223e457c09f26c80181a
 │   │               ├── 9b/
 │   │               │   └── c4024f9f30d4f17a7689e9224daa9922c1ae7cdb80c160b2f488a07dc4accd
 │   │               ├── 9c/
@@ -993,6 +1090,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 9f/
 │   │               │   └── 09412d4907979d035e6548c38ac8ff04ccc98e23cae749e631d2b50c6d57a8
 │   │               ├── a1/
+│   │               │   ├── 34d32eb0310385cb512029719285ff593d4f1e73199db60afe326ae7ff16b9
 │   │               │   └── ab8a89eecbb75b021354dc570a802d76726d522ee29946a3d5b342db30d77f
 │   │               ├── a2/
 │   │               │   └── 8e2ef91e74d4e0d9af056141b1aa5c6a84d61d339e66103419b15ddf62e9ec
@@ -1053,6 +1151,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 2747846fce151666135aebce8a8af85eb1eea8cdbde7f7e7ea77f795066b00
 │   │               ├── cc/
 │   │               │   └── cca6c3bfd574eb97bcbac50bcd9a577ae1f9ef049eee6ad1ca713bcf09be0a
+│   │               ├── ce/
+│   │               │   └── 56e418f60022276340ba06bab420db1a39b86f2417cf2b901f88438c6ac08f
 │   │               ├── cf/
 │   │               │   └── 92a9502650587c6b587bf0bd2fbe8408688be12db457cf57d12d7fa7447406
 │   │               ├── d0/
@@ -1066,6 +1166,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── d7/
 │   │               │   └── 92c6bf5ca0cb6a01484eb838c34af15433bcb0da692b9084a472d9c4b505d9
 │   │               ├── d8/
+│   │               │   ├── 2926753f513fd8557263c0003c7618ac35a95d5b8c4acd57ade2cab28e343c
 │   │               │   └── 460058dd46e923c304cee7010502aba8c4093fd64832454cd7047c0adc7473
 │   │               ├── db/
 │   │               │   └── c25cc47c033af87e9e88e49fc3db2da361c878bc8cef3070720fa89ead405c
@@ -1096,6 +1197,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── f867c0ee7664e62c7dbd27fba23467f1652c419dcce1c4ee57c7772dab4e48
 │   │               ├── f1/
 │   │               │   └── 4de0c2dfa4009076ed6ba8d42c9b22d122562a5d0f63fef83c1d37c980aa05
+│   │               ├── f2/
+│   │               │   └── 48a81c51e97671fae488a6b4296eece2c592cb3e97fcf690b7b7fb05c693bc
 │   │               ├── f6/
 │   │               │   └── 5cd8a0bbb88a838309164c51364f7a4aade6eb52086ca1c3c73c4de227ad93
 │   │               ├── f9/
@@ -1201,6 +1304,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-08-decision-workflow-enhancements.md
 │   │   │   ├── 2026-03-08-electrical-intelligence-integration-design.md
 │   │   │   ├── 2026-03-08-electrical-intelligence-integration-plan.md
+│   │   │   ├── 2026-03-08-electrical-intelligence-integration-requirements.md
 │   │   │   ├── 2026-03-08-glossary-design.md
 │   │   │   ├── 2026-03-08-glossary-implementation.md
 │   │   │   ├── 2026-03-08-nec-missing-articles.md
@@ -1211,7 +1315,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-08-phase9-standards-graph.md
 │   │   │   ├── 2026-03-08-standards-graph-design.md
 │   │   │   ├── 2026-03-08-theme-switching-design.md
-│   │   │   └── 2026-03-08-theme-switching-implementation.md
+│   │   │   ├── 2026-03-08-theme-switching-implementation.md
+│   │   │   └── 2026-03-09-phase12-offshore-marine-overlay.md
 │   │   ├── scenarios/
 │   │   │   ├── global-machine/
 │   │   │   │   └── index.html
@@ -1219,6 +1324,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── machine-safety-implementation/
 │   │   │   │   └── index.html
 │   │   │   ├── networked-safety-plc/
+│   │   │   │   └── index.html
+│   │   │   ├── offshore-platform-control/
 │   │   │   │   └── index.html
 │   │   │   ├── oil-gas-process-skid/
 │   │   │   │   └── index.html
@@ -1361,7 +1468,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── 2026-03-08-phase9-standards-graph.md
 │   │   ├── 2026-03-08-standards-graph-design.md
 │   │   ├── 2026-03-08-theme-switching-design.md
-│   │   └── 2026-03-08-theme-switching-implementation.md
+│   │   ├── 2026-03-08-theme-switching-implementation.md
+│   │   └── 2026-03-09-phase12-offshore-marine-overlay.md
 │   ├── scenarios/
 │   │   ├── global-machine/
 │   │   │   └── index.md
@@ -1369,6 +1477,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── machine-safety-implementation/
 │   │   │   └── index.md
 │   │   ├── networked-safety-plc/
+│   │   │   └── index.md
+│   │   ├── offshore-platform-control/
 │   │   │   └── index.md
 │   │   ├── oil-gas-process-skid/
 │   │   │   └── index.md
