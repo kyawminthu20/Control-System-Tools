@@ -32,7 +32,7 @@ Working-space questions are useful training examples because they force the read
 - Confirm the correct table
 - Interpret voltage category and condition statements
 
-NEC 110.26 defines working space for equipment operating at 600 V or less. The table requires knowing the voltage to ground and the condition of the space on the opposite side.
+NEC 110.26 defines working space for equipment operating at 1000 V nominal or less to ground. The table requires knowing the voltage to ground and the condition of the space on the opposite side.
 
 ## Table-reading discipline
 
@@ -49,16 +49,16 @@ Use this order every time you open an NEC table:
 A common mistake is to see a familiar table and grab a value before checking:
 
 - Whether the table uses voltage to ground or line-to-line
-- Which condition applies (A, B, or C in Table 110.26(A)(1))
+- Which condition applies (Condition 1, 2, or 3 in Table 110.26(A)(1))
 - Whether nearby notes change the result
 
-Condition A, B, and C in 110.26 describe what is on the opposite side of the working space:
+Conditions 1, 2, and 3 in Table 110.26(A)(1) describe what is on the opposite side of the working space:
 
 | Condition | Description |
 |-----------|-------------|
-| A | Exposed live parts on one side, grounded or no live parts on the other |
-| B | Exposed live parts on both sides (but guarded or isolated) |
-| C | Exposed live parts on both sides, unguarded |
+| 1 | Exposed live parts on one side and no live or grounded parts on the other |
+| 2 | Exposed live parts on one side and grounded parts on the other |
+| 3 | Exposed live parts on both sides |
 
 Getting the condition wrong changes the required depth from roughly 900 mm (3 ft) to 1.2 m (4 ft) or more.
 
