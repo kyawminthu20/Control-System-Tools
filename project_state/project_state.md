@@ -2,7 +2,7 @@
 
 **Last Updated:** 2026-03-08
 **Status:** Active
-**Current Phase:** Phase 10 COMPLETE — IEC 60079 + SEMI Corpus Gap-Fill
+**Current Phase:** Phase 11 COMPLETE — Industry Overlay Depth
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -202,6 +202,20 @@ requires zero user interaction while still allowing manual override.
 - [x] docs/standards/semiconductor/semi/index.md
 - [x] docs/standards/index.md updated (2 new families)
 - [x] docs/scenarios/semiconductor-equipment/index.md updated
+
+## Phase 11 Scope — Industry Overlay Depth — COMPLETE
+
+### Petroleum / Oil & Gas
+- [x] `docs/industries/petroleum/index.md` — deepened: standards matrix by phase, selection flow, checklist, all gap badges removed
+- [x] `docs/scenarios/oil-gas-process-skid/index.md` — Scenario 07: ESD/F&G/HIPPS onshore skid
+
+### Semiconductor
+- [x] `docs/industries/semiconductor/index.md` — deepened: standards matrix by phase, SEMI S2 flow, all SEMI badges updated
+- [x] `docs/scenarios/semiconductor-fab-tool/index.md` — Scenario 08: etch/CVD tool with gas control, HV interlocks
+
+### Nav
+- [x] `docs/scenarios/index.md` — Scenario 07 and 08 cards added
+- [x] `docs/_includes/sidebar.html` — both new scenarios added
 
 ## Content Gaps (documented with badges on site)
 
