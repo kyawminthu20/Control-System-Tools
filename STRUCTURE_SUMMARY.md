@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-08 17:21:36
+**Last Auto-Updated:** 2026-03-08 17:25:18
 
 ```text
 ├── .claude/
@@ -437,7 +437,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   │       └── _index.yaml
 │   │   │   │   ├── hazardous_area/
 │   │   │   │   │   └── iec_60079/
-│   │   │   │   │       └── IEC60079_0__general_requirements.md
+│   │   │   │   │       ├── IEC60079_0__general_requirements.md
+│   │   │   │   │       └── IEC60079_1__flameproof_Ex_d.md
 │   │   │   │   └── machinery/
 │   │   │   │       └── iec_60204_1/
 │   │   │   │           ├── GENERATION_SUMMARY.md
@@ -691,6 +692,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       │   ├── nec_update.md
 │       │   ├── project_implementation_gaps/
 │       │   │   ├── 20260308_status.md
+│       │   │   ├── electrical and practical circuit analysis.md
+│       │   │   ├── importance of electrical safety in control panels.md
 │       │   │   └── ul 508a.md
 │       │   ├── residential_nec_top_articles_transcript_summary.md
 │       │   ├── scratch_notes/
