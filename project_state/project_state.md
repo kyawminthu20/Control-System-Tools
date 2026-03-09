@@ -1,6 +1,6 @@
 # Project State
 
-**Last Updated:** 2026-03-08
+**Last Updated:** 2026-03-09
 **Status:** Active
 **Current Phase:** Phase 11 COMPLETE — Industry Overlay Depth
 **Next Phase:** Phase 12 — Offshore / Marine Industry Overlay (see backlog below)
@@ -22,6 +22,7 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 - Jekyll build: ~60 pages, clean build (0.27 s locally)
 - Three-panel layout (sidebar 240px + main content + context panel 220px)
 - Mermaid.js CDN integration for all diagrams; Cytoscape.js 3.28.1 for interactive standards graph
+- Google Analytics tag installed sitewide in `docs/_layouts/default.html` using measurement ID `G-RPL3G47EFZ`
 - GitHub Actions deployment workflow at `.github/workflows/pages.yml`
 - Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 11 lifecycle stages + safety wiring, 8 scenarios, 3 crosswalks, 9 industry overlays (2 fully deepened), glossary (28 terms), software stack, about page
 - Interactive standards graph: 12 nodes, 14 edges (does not yet include IEC 60079, IEC 61511, SEMI)

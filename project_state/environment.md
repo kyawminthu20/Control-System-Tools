@@ -1,6 +1,6 @@
 # Environment
 
-**Last Updated:** 2026-03-06
+**Last Updated:** 2026-03-09
 **Status:** Active
 
 ## Purpose
@@ -55,6 +55,12 @@ If a dependency, version, environment variable, toolchain rule, or deployment ta
 ## Environment Variables
 
 - none required currently
+
+## Site Analytics
+
+- Google tag (`gtag.js`) installed in `docs/_layouts/default.html`
+- Measurement ID: `G-RPL3G47EFZ`
+- Applies to all pages using the shared default Jekyll layout
 
 ## Validation And Automation Commands
 
