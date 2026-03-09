@@ -10,6 +10,8 @@ files:
   - "star_delta_and_supply_matching_notes.md"
   - "vfd_motor_integration_review.md"
   - "motor_troubleshooting_decision_tree.md"
+  - "motor_symptom_troubleshooting_patterns.md"
+  - "motor_cable_and_protection_review.md"
   - "vfd_commissioning_workflow.md"
   - "servo_commissioning_workflow.md"
   - "motor_selection_comparison_matrix.md"

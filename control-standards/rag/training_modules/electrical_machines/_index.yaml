@@ -14,3 +14,7 @@ files:
   - "ac_vs_dc_motor_comparison.md"
   - "vfd_and_servo_architecture_diagrams.md"
   - "brushless_dc_ev_and_drone_motor_comparison.md"
+  - "motor_and_vfd_equations_reference.md"
+  - "motor_efficiency_power_factor_and_losses.md"
+  - "motor_control_methods_and_operating_regions.md"
+  - "servo_feedback_and_inertia_matching.md"

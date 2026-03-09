@@ -19,3 +19,5 @@ Use it for:
 - comparison-based motor selection at the concept stage
 - integrated drive-on-motor architecture review
 - thermal, EMC, serviceability, and standards-routing notes for integrated drives
+- motor cable, shielding, conductor, and protection review
+- symptom-based troubleshooting patterns after first-pass diagnosis
