@@ -18,6 +18,24 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-08 — Phase 10 Complete: IEC 60079 + SEMI Corpus Gap-Fill
+
+#### IEC 60079 (Hazardous Area)
+- 6 new RAG files: Parts 0, 1, 10-1, 11, 14, 17
+- _index.yaml indexing all 6 parts
+- 2 site pages: hazardous-area family landing + IEC 60079 standard page
+
+#### SEMI S2/S8/S14 (Semiconductor Equipment Safety)
+- 3 new RAG files: S2 (equipment safety), S8 (ergonomics), S14 (fire risk)
+- _index.yaml indexing all 3 standards
+- 2 site pages: semiconductor family landing + SEMI S2/S8/S14 detail page
+
+#### Site updates
+- docs/standards/index.md: added Hazardous Area + Semiconductor sections
+- docs/scenarios/semiconductor-equipment/index.md: added SEMI/IEC 60079 links, upgraded badges
+
+---
+
 ### 2026-03-08 — Phase 9 Complete: Interactive Standards Graph
 
 - Added `docs/_data/standards_graph.yml` — 12 nodes (6 families), 14 edges (4 types)

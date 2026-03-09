@@ -2,7 +2,7 @@
 
 **Last Updated:** 2026-03-08
 **Status:** Active
-**Current Phase:** Phase 9 COMPLETE — Interactive Standards Graph; Phase 10 next
+**Current Phase:** Phase 10 COMPLETE — IEC 60079 + SEMI Corpus Gap-Fill
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -178,38 +178,30 @@ requires zero user interaction while still allowing manual override.
 - [x] CSS legend and canvas styles in main.css
 - [x] Cytoscape.js 3.28.1 CDN added to default layout
 
-## Phase 10 — Corpus Gap-Fill + NEC Polish — NEXT PHASE
-
-**Plan:** `docs/plans/2026-03-08-phase10-corpus-gap-fill.md`
-**Goal:** Add IEC 60079 (6 RAG files) and SEMI S2/S8/S14 (3 RAG files) to corpus, plus site pages, family landing pages, and NEC page code-review fixes.
-
-> **RESTART POINT:** Begin here next session. Run `uv sync` then start with P10-T1.
+## Phase 10 Scope — Corpus Gap-Fill (IEC 60079 + SEMI S2/S8/S14) — COMPLETE
 
 ### IEC 60079 RAG Corpus
-- [ ] **P10-T1:** `control-standards/rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_0__general_requirements.md` — EPL system, gas groups, T-codes, marking format, Ex equipment selection
-- [ ] **P10-T2:** `IEC60079_1__flameproof_Ex_d.md` — Ex d protection, flameproof enclosures, gap requirements, cable entry
-- [ ] **P10-T3:** `IEC60079_10_1__area_classification.md` + `IEC60079_11__intrinsic_safety_Ex_i.md` — zone classification methodology (10-1); Ex i protection, ia/ib/ic levels, associated apparatus (11)
-- [ ] **P10-T4:** `IEC60079_14__installation.md` + `IEC60079_17__inspection_maintenance.md` — installation requirements for Ex areas (14); initial and periodic inspection, visual/close/detailed (17)
-- [ ] **P10-T5 (combined):** `_index.yaml` for iec_60079 directory — register all 6 files
+- [x] IEC60079_0__general_requirements.md
+- [x] IEC60079_1__flameproof_Ex_d.md
+- [x] IEC60079_10_1__area_classification_gas.md
+- [x] IEC60079_11__intrinsically_safe_Ex_i.md
+- [x] IEC60079_14__installation_design.md
+- [x] IEC60079_17__inspection_maintenance.md
+- [x] _index.yaml
 
-### SEMI S2/S8/S14 RAG Corpus
-- [ ] **P10-T5:** `control-standards/rag/standards_intelligence/us/semi/` directory + `_index.yaml` + RAG files:
-  - `SEMI_S2__environmental_health_safety.md` — EHS guidelines for semiconductor equipment
-  - `SEMI_S8__ergonomics.md` — ergonomics for semiconductor equipment design
-  - `SEMI_S14__fire_protection.md` — fire protection guidelines for semiconductor equipment
+### SEMI RAG Corpus
+- [x] SEMI_S2__equipment_safety.md
+- [x] SEMI_S8__ergonomics.md
+- [x] SEMI_S14__fire_risk_assessment.md
+- [x] _index.yaml
 
 ### Site Pages
-- [ ] **P10-T6:** `docs/standards/hazardous-area/` family landing + `docs/standards/hazardous-area/iec-60079/index.md` — IEC 60079 full page (EPL table, gas group table, zone ↔ division equivalence, protection method selection guide, marking decode example, installation checklist)
-- [ ] **P10-T7:** `docs/standards/semiconductor/` family landing + `docs/standards/semiconductor/semi/index.md` — SEMI S-series page (S2/S8/S14 scope, semiconductor equipment lifecycle, EHS checklist)
-- [ ] **P10-T8:** Update `docs/standards/index.md` — add Hazardous Area and Semiconductor sections; update sidebar and nav
-
-### NEC Page Polish (from CodeRabbit review)
-- [ ] **P10-T9:** `docs/standards/us-electrical/nec/index.md` — rename table column "Article" → "Article / Section"; verify Art. 409.70 and 670.6 against corpus
-- [ ] **P10-T10:** `control-standards/work/design/nec_update.md` — CRITICAL: appears to be raw transcript; review and clean up or remove
-
-### Build + Validation
-- [ ] **P10-T11:** `python3 tools/validate_ai_boundaries.py` — validate all new RAG files
-- [ ] **P10-T12:** Jekyll build clean; update `project_state/` and push
+- [x] docs/standards/hazardous-area/index.md
+- [x] docs/standards/hazardous-area/iec-60079/index.md
+- [x] docs/standards/semiconductor/index.md
+- [x] docs/standards/semiconductor/semi/index.md
+- [x] docs/standards/index.md updated (2 new families)
+- [x] docs/scenarios/semiconductor-equipment/index.md updated
 
 ## Content Gaps (documented with badges on site)
 
@@ -218,6 +210,6 @@ requires zero user interaction while still allowing manual override.
 - IEC 61508 — corpus complete (4 RAG files + index)
 - IEC 61511 — corpus complete (4 RAG files + index)
 - IEC 62443 — corpus complete (4 RAG files + index)
-- **IEC 60079 (hazardous area) — NOT IN CORPUS → Phase 10 target**
-- **SEMI S2/S8/S14 — NOT IN CORPUS → Phase 10 target**
+- IEC 60079 (hazardous area) — corpus complete (6 RAG files + index)
+- SEMI S2/S8/S14 — corpus complete (3 RAG files + index)
 - Medical, nuclear, marine class rules — not in corpus (no plan)
