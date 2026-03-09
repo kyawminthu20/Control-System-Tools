@@ -1,0 +1,149 @@
+metadata:
+  ai_read_access: ALLOWED
+  content_class: RAG_APPROVED
+  status: DRAFT
+  wizard_id: US_EU_MACHINE_COMPLIANCE
+  version: "0.1"
+  last_updated: "2026-03-09"
+
+inputs_schema:
+  market_target:
+    allowed: ["US_ONLY", "EU_ONLY", "BOTH"]
+  machine_type:
+    allowed: ["conveyor", "robot_cell", "packaging", "process_skid", "custom"]
+  supply:
+    voltage_v: "number"
+    phases: ["1", "3"]
+    frequency_hz: "number"
+    available_fault_current_ka: "number|null"
+  environment:
+    location: ["indoor", "outdoor", "washdown"]
+    hazardous_area: ["no", "yes_unknown", "yes_confirmed"]
+  control_system:
+    plc: "string"
+    safety_plc: ["no", "yes"]
+    safety_functions: "list<string>"
+    estop_count: "number"
+    drives_count: "number"
+    networks: "list<string>"
+  doc_stage:
+    allowed: ["concept", "design", "build", "commission", "ops"]
+
+overlap_notes:
+  base_path: "../../standards_intelligence/crosswalks/overlap_notes/"
+  availability_note: >
+    Most overlap note files listed below do not yet exist. Only
+    overlap_nfpa79_iec60204__motors_drives.md and overlap__motors_drives.md
+    are currently present. All other topic files are forward-looking references
+    for when those overlap notes are written. Do not treat missing files as
+    errors — check for existence before loading.
+  topics:
+    - topic_id: scope_boundary
+      note_file: "overlap_nfpa79_iec60204__scope_boundary.md"
+    - topic_id: definitions
+      note_file: "overlap_nfpa79_iec60204__definitions.md"
+    - topic_id: general_requirements
+      note_file: "overlap_nfpa79_iec60204__general_requirements.md"
+    - topic_id: incoming_supply_disconnect
+      note_file: "overlap_nfpa79_iec60204__incoming_supply_disconnect.md"
+    - topic_id: electric_shock_protection
+      note_file: "overlap_nfpa79_iec60204__electric_shock_protection.md"
+    - topic_id: equipment_protection
+      note_file: "overlap_nfpa79_iec60204__equipment_protection.md"
+    - topic_id: grounding_bonding
+      note_file: "overlap_nfpa79_iec60204__grounding_bonding.md"
+    - topic_id: control_functions
+      note_file: "overlap_nfpa79_iec60204__control_functions.md"
+    - topic_id: operator_interface
+      note_file: "overlap_nfpa79_iec60204__operator_interface.md"
+    - topic_id: control_equipment
+      note_file: "overlap_nfpa79_iec60204__control_equipment.md"
+    - topic_id: motors_drives
+      note_file: "overlap_nfpa79_iec60204__motors_drives.md"
+    - topic_id: accessories_lighting
+      note_file: "overlap_nfpa79_iec60204__accessories_lighting.md"
+    - topic_id: marking_documentation
+      note_file: "overlap_nfpa79_iec60204__marking_documentation.md"
+    - topic_id: verification
+      note_file: "overlap_nfpa79_iec60204__verification.md"
+
+anchors:
+  scope_boundary:
+    us:
+      - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch01__administration.md"
+    eu:
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause01__scope.md"
+  definitions:
+    us:
+      - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch02__definitions.md"
+    eu:
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause03__terms_and_definitions.md"
+  incoming_supply_disconnect:
+    us:
+      - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md"
+    eu:
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause05__incoming_supply.md"
+  equipment_protection:
+    us:
+      - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch06__overcurrent_protection.md"
+    eu:
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause07__protection_of_equipment.md"
+  grounding_bonding:
+    us:
+      - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md"
+    eu:
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md"
+  control_functions:
+    us:
+      - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md"
+    eu:
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md"
+  operator_interface:
+    us:
+      - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md"
+    eu:
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md"
+  control_equipment:
+    us:
+      - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch11__control_equipment.md"
+    eu:
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause11__control_equipment.md"
+  motors_drives:
+    us:
+      - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch12__motors_and_associated_equipment.md"
+    eu:
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md"
+  accessories_lighting:
+    us:
+      - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch13__appliances_and_accessories.md"
+      - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch14__lighting.md"
+    eu:
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause13__accessories_and_lighting.md"
+  marking_documentation:
+    us:
+      - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md"
+    eu:
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md"
+  verification:
+    us:
+      - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch20__system_integration.md"
+    eu:
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md"
+
+routing_logic:
+  market_owner_rules:
+    US_ONLY:
+      default_owner: NFPA79
+    EU_ONLY:
+      default_owner: IEC60204_1
+    BOTH:
+      default_owner: MOST_STRINGENT
+      tie_breaker: DOCUMENT_DECISION
+
+outputs:
+  delta_report_template: "./us_eu_delta_report_template.md"
+
+changelog:
+  - date: "2026-03-09"
+    action: "Initial wizard rules created"
+    status: "seeded for future automation"

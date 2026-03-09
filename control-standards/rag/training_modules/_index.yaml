@@ -1,0 +1,18 @@
+version: "1.0"
+content_class: "RAG_APPROVED"
+status: "DRAFT"
+module_id: "training_modules"
+last_updated: "2026-03-09"
+
+submodules:
+  - name: "fundamentals"
+    path: "fundamentals/"
+    description: "Core electrical concepts used across panel and machine work"
+
+  - name: "electrical_machines"
+    path: "electrical_machines/"
+    description: "Motor-concept training modules for induction and DC machines"
+
+  - name: "nec_application"
+    path: "nec_application/"
+    description: "Training notes for code navigation and NEC application logic"

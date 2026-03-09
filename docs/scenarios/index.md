@@ -64,4 +64,10 @@ repo_path: "control-standards/rag/standards_intelligence/scenario/"
     <p class="scenario-card__start"><strong>Start:</strong> SEMI S2/S8/S14 + IEC 60204-1 + ISO 12100</p>
     <a href="{{ '/scenarios/semiconductor-fab-tool/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
   </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario 09</span>
+    <span class="scenario-card__title">Offshore Platform ESD / F&amp;G</span>
+    <p class="scenario-card__start"><strong>Start:</strong> DNV-OS-D201 + IEC 61511 + IEC 60079</p>
+    <a href="{{ '/scenarios/offshore-platform-control/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
+  </div>
 </div>

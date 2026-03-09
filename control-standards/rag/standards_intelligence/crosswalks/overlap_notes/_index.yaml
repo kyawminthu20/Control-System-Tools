@@ -153,3 +153,8 @@ changelog:
     international_notes: 14
     total: 28
     status: "Ready for file generation"
+
+  - date: "2026-03-09"
+    action: "Added motors_drives overlap notes for US and international routing"
+    us_notes_created: 2
+    international_notes_created: 1

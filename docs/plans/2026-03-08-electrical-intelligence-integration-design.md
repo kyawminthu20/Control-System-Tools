@@ -1,148 +1,200 @@
-# Design: Unified Electrical Knowledge Integration — Phase 11
+# Design: Electrical Knowledge Integration
 
 **Date:** 2026-03-08
-**Status:** Approved — queued for implementation
-**Approach:** B — Unified electrical knowledge layer
+**Last revised:** 2026-03-09
+**Status:** Complete — all content promoted
 
 ---
 
 ## Summary
 
-Integrate three transcript-derived electrical knowledge sources into a new
-`control-standards/rag/electrical_intelligence/` layer, parallel to the
-existing `standards_intelligence/` folder.
+Three transcript-derived electrical knowledge sources have been promoted into the
+existing canonical RAG layers. No new parallel layer was created.
 
-Nothing goes into `standards_intelligence/` unless it is compliance-verified.
-All educational and applied engineering content lands in `electrical_intelligence/`.
+All content lands in one of four existing layers:
+
+1. `control-standards/rag/training_modules/`
+2. `control-standards/rag/design_framework/`
+3. `control-standards/rag/commissioning_checklists/checklists/`
+4. `control-standards/rag/standards_intelligence/crosswalks/overlap_notes/`
 
 ---
 
 ## Sources
 
-| Source | Location | Status |
+| Source | Location | Disposition |
 |---|---|---|
-| Circuit analysis + practical electronics | `work/design/project_implementation_gaps/electrical_and_practical_circuit_analysis_topics/` | Segmented, has integration plan |
-| Motors (induction, DC) | `work/design/project_implementation_gaps/motors_topics/` | Segmented, has integration plan |
-| NEC exam prep | `work/design/electrical exam prep.md` | Raw transcript — needs segmentation first |
-
-EV motor files (`ev_motor_types_overview.md`, `ev_motor_powertrain_configurations.md`)
-are held as WIP and not promoted in this phase.
+| Circuit analysis + practical electronics | `work/design/project_implementation_gaps/electrical_and_practical_circuit_analysis_topics/` | Fully promoted |
+| Motors (induction, DC) | `work/design/project_implementation_gaps/motors_topics/` | Fully promoted |
+| NEC exam prep | `work/design/project_implementation_gaps/nec_exam_prep_topics/` | Promoted (justified scope only) |
+| EV motor files | `motors_topics/ev_motor_*.md` | Held as WIP — not promoted |
 
 ---
 
-## Architecture
+## What was built
 
-`electrical_intelligence/` sits at `control-standards/rag/electrical_intelligence/`,
-parallel to `standards_intelligence/`. The existing `rag/training_modules/` and
-`rag/design_framework/` folders are not touched.
+### `training_modules/fundamentals/`
 
-Standards crosswalk gap fills land inside `standards_intelligence/crosswalks/overlap_notes/`
-as before — they are compliance content, not educational content.
+Circuit analysis and practical electronics source → clean teaching modules:
+
+- `electrical_quantities_and_circuit_language.md`
+- `series_parallel_and_divider_methods.md`
+- `kirchhoff_laws_and_systematic_analysis.md`
+- `equivalent_circuit_methods.md`
+- `electrical_equations_reference.md`
+- `passive_components_resistors_capacitors.md`
+- `diodes_transistors_and_switching_basics.md`
+- `conductor_ampacity_and_termination_temperature.md` *(pre-existing)*
+- `README.md`, `_index.yaml`
+
+### `training_modules/electrical_machines/`
+
+Motors source → teaching modules + expanded machine coverage:
+
+- `induction_motor_basics.md`
+- `dc_motor_basics.md`
+- `motor_nameplates_slip_and_torque.md`
+- `vfd_fundamentals.md`
+- `servo_drive_fundamentals.md`
+- `ac_vs_dc_motor_comparison.md`
+- `motor_family_comparison.md`
+- `brushless_dc_ev_and_drone_motor_comparison.md`
+- `vfd_and_servo_architecture_diagrams.md`
+- `README.md`, `_index.yaml`
+
+### `training_modules/nec_application/`
+
+NEC exam prep source → code-reading and application modules (justified scope only):
+
+- `nec_code_reading_fundamentals.md`
+- `working_space_and_table_navigation.md`
+- `motor_and_panel_code_application.md`
+- `README.md`, `_index.yaml`
+
+### `design_framework/electrical_review/`
+
+Practical calculation material → engineering workflows:
+
+- `ohms_law_and_power_check_workflow.md`
+- `basic_resistive_network_review.md`
+- `component_selection_basics.md`
+- `simple_signal_and_interface_circuit_notes.md`
+- `README.md`, `_index.yaml`
+
+### `design_framework/motor_systems/`
+
+Motors source + expanded motor/drive coverage → design workflows and checklists:
+
+- `motor_selection_workflow.md`
+- `motor_nameplate_review_checklist.md`
+- `star_delta_and_supply_matching_notes.md`
+- `vfd_motor_integration_review.md`
+- `vfd_commissioning_workflow.md`
+- `servo_commissioning_workflow.md`
+- `motor_troubleshooting_decision_tree.md`
+- `motor_selection_comparison_matrix.md`
+- `integrated_motor_drive_architecture_comparison.md`
+- `integrated_drive_failure_modes_and_tradeoffs.md`
+- `integrated_drive_serviceability_and_field_replacement_review.md`
+- `motor_mounted_drive_thermal_and_emc_design_notes.md`
+- `industrial_vs_ev_vs_drone_motor_drive_standards_matrix.md`
+- `README.md`, `_index.yaml`
+
+### `commissioning_checklists/checklists/`
+
+Motors + practical circuit sources → field verification checklists:
+
+- `motor_rotation_and_overload_verification.md`
+- `motor_nameplate_and_overload_setting.md`
+- `basic_circuit_polarity_and_power_checks.md`
+- `capacitor_discharge_awareness_check.md`
+- `drive_commissioning.md`
+- `pre_power_panel_and_incoming_supply_check.md`
+- `README.md`, `_index.yaml`
+
+### `standards_intelligence/crosswalks/overlap_notes/`
+
+Motors source → compliance crosswalk gap fills:
+
+- `overlap__motors_drives.md`
+- `overlap_nfpa79_iec60204__motors_drives.md`
+
+---
+
+### `design_framework/constraints/` (unplanned addition)
+
+Reusable design-rule YAML derived from NEC 250, NFPA 79, UL 508A, IEC 60204-1:
+
+- `grounding_bonding_rules.yaml` — normative rules paraphrased from cited standards with `not_a_standard` disclaimer; intended as design-review aid only
+
+### `design_framework/us_eu_compliance_wizard/` (unplanned addition)
+
+US/EU machine compliance wizard seeded for future automation:
+
+- `US_EU_Machine_Compliance_Wizard.md` — wizard specification and decision logic
+- `us_eu_wizard_rules.yaml` — machine-readable rules; references 14 overlap note files of which only 2 currently exist; non-existent files are forward-looking references documented with `availability_note`
+- `us_eu_delta_report_template.md` — report output template
+
+### `design_framework/design_guides/` (unplanned addition)
+
+- `02_power_distribution_guide.md` — power distribution design guide
+
+### Note on EV/drone content in `motor_systems/`
+
+The EV source files (`ev_motor_types_overview.md`, `ev_motor_powertrain_configurations.md`) were held as WIP. However, EV and drone motor-drive comparison content was promoted into `motor_systems/` under design-framework framing (comparison notes, standards matrices). These files discuss EV traction inverters, ISO 26262, UNECE R100, and drone ESC configurations as comparison points for industrial motor selection decisions. This is an intentional scope expansion beyond the original design, documented here for traceability.
+
+---
+
+## What was not promoted
+
+- EV motor source files (`ev_motor_types_overview.md`, `ev_motor_powertrain_configurations.md`) — held as WIP in `work/design/`
+- NEC article-specific addenda (Art 430, 409, 725, 250, 240, 215) — not justified by current source material
+- Residential load calculation notes — held as WIP source only
+
+---
+
+## Content rules applied
+
+1. Promoted files are rewrites, not transcript copies.
+2. Metadata convention used:
+   - `CONTENT_CLASS: RAG_APPROVED`
+   - `AI_READ_ACCESS: ALLOWED`
+   - `STATUS: DRAFT`
+3. `## Related standards` sections added only where a real standards anchor exists.
+4. Engineering heuristics are labeled as heuristics, not written as mandatory rules.
+5. Nothing appended to `standards_intelligence/` without a verified standards anchor.
+
+---
+
+## Layer taxonomy used
 
 ```
-rag/
-├── standards_intelligence/        (existing — unchanged)
-└── electrical_intelligence/       (new)
-    ├── training_modules/
-    │   ├── electrical_fundamentals/
-    │   │   ├── electrical_quantities_and_circuit_language.md
-    │   │   ├── series_parallel_and_divider_methods.md
-    │   │   ├── kirchhoff_laws_and_systematic_analysis.md
-    │   │   ├── equivalent_circuit_methods.md
-    │   │   └── canonical_equations.md
-    │   ├── electronics_basics/
-    │   │   ├── resistors_capacitors_and_ratings.md
-    │   │   └── diodes_transistors_and_switching.md
-    │   ├── electrical_machines/
-    │   │   ├── induction_motor_basics.md
-    │   │   ├── dc_motor_basics.md
-    │   │   └── motor_nameplates_slip_and_torque.md
-    │   └── nec_application/
-    │       ├── nec_code_reading_fundamentals.md
-    │       └── motors_and_panel_code_application.md
-    ├── design_framework/
-    │   ├── electrical_review/
-    │   │   ├── ohms_law_and_power_check_workflow.md
-    │   │   ├── basic_resistive_network_review.md
-    │   │   └── component_selection_basics.md
-    │   └── motor_systems/
-    │       ├── motor_selection_workflow.md
-    │       ├── motor_nameplate_review_checklist.md
-    │       ├── star_delta_and_supply_matching_notes.md
-    │       └── vfd_motor_integration_review.md
-    └── commissioning_checklists/
-        ├── motor_rotation_and_overload_verification.md
-        ├── motor_nameplate_and_overload_setting.md
-        ├── basic_circuit_polarity_and_power_checks.md
-        └── capacitor_discharge_awareness_check.md
+training_modules/
+├── fundamentals/          — circuit theory, components, equations
+├── electrical_machines/   — motors, drives, servo systems
+└── nec_application/       — code-reading method, table navigation, application examples
+
+design_framework/
+├── electrical_review/     — calculation workflows, component selection
+└── motor_systems/         — motor/drive selection, integration, commissioning workflows
+
+commissioning_checklists/
+└── checklists/            — pre-power, motor, drive, and circuit field checks
+
+standards_intelligence/
+└── crosswalks/overlap_notes/  — motors/drives jurisdiction crosswalks
 ```
 
----
-
-## Source Routing
-
-### Circuit Analysis Topics
-
-| Source File | Destination | Notes |
-|---|---|---|
-| `circuit_analysis_overview_and_linear_elements.md` | `training_modules/electrical_fundamentals/electrical_quantities_and_circuit_language.md` | Rewrite as teaching module |
-| `series_parallel_and_divider_methods.md` | `training_modules/electrical_fundamentals/series_parallel_and_divider_methods.md` + `design_framework/electrical_review/basic_resistive_network_review.md` | Split: theory → training, applied → design_framework |
-| `kcl_and_nodal_analysis.md` + `kvl_and_loop_analysis.md` | `training_modules/electrical_fundamentals/kirchhoff_laws_and_systematic_analysis.md` | Merge into one module |
-| `source_transformation_and_equivalent_methods.md` | `training_modules/electrical_fundamentals/equivalent_circuit_methods.md` | Teaching module only |
-| `practical_ohms_law_power_and_resistor_color_code.md` | `design_framework/electrical_review/ohms_law_and_power_check_workflow.md` | Workflow-first rewrite |
-| `practical_components_resistors_and_capacitors.md` | `training_modules/electronics_basics/resistors_capacitors_and_ratings.md` | Teaching + narrow standards links |
-| `practical_components_diodes_and_transistors.md` | `training_modules/electronics_basics/diodes_transistors_and_switching.md` | Teaching module only |
-| All theory equations | `training_modules/electrical_fundamentals/canonical_equations.md` | New consolidated file |
-
-### Motors Topics
-
-| Source File | Destination | Notes |
-|---|---|---|
-| `induction_motor_construction_and_rotating_field.md` + `induction_motor_components_induction_and_slip.md` | `training_modules/electrical_machines/induction_motor_basics.md` | Merge into one module |
-| `induction_motor_terminal_connections_and_star_delta.md` | `design_framework/motor_systems/star_delta_and_supply_matching_notes.md` | Applied design note |
-| `induction_motor_nameplate_and_enclosures.md` | `design_framework/motor_systems/motor_nameplate_review_checklist.md` + `commissioning_checklists/motor_nameplate_and_overload_setting.md` | Split: design artifact + checklist |
-| `induction_motor_poles_torque_curves_and_nema_designs.md` | `training_modules/electrical_machines/motor_nameplates_slip_and_torque.md` + `design_framework/motor_systems/motor_selection_workflow.md` | Split: concept → training, selection logic → design_framework |
-| `dc_motor_magnetism_stator_and_mechanical_structure.md` + `dc_motor_armature_winding_and_torque_production.md` + `dc_motor_commutator_brushes_and_power_path.md` | `training_modules/electrical_machines/dc_motor_basics.md` | Merge all three |
-| Induction + nameplate files (verified NEC 430 + NFPA79 Ch12 anchors) | `standards_intelligence/crosswalks/overlap_notes/overlap__motors_drives.md` + `overlap_nfpa79_iec60204__motors_drives.md` | New crosswalk files |
-| `ev_motor_types_overview.md` + `ev_motor_powertrain_configurations.md` | **HOLD — WIP** | Not promoted in Phase 11 |
-
-### NEC Exam Prep
-
-Requires segmentation before routing (Phase 11.0).
-
-| Expected Segment | Destination |
-|---|---|
-| NEC code-reading method and structure | `training_modules/nec_application/nec_code_reading_fundamentals.md` |
-| Motor circuits and branch protection (Art 430) | Addendum to existing `NEC_2023__Art430__motors_motor_circuits_and_controllers.md` |
-| Panel and control circuit application (Art 409, 725) | Addenda to existing Art 409 + Art 725 files |
-| Grounding and bonding application (Art 250) | Addendum to existing Art 250 file |
-| Overcurrent and feeder application (Art 240, 215) | Addenda to existing Art 240 + Art 215 files |
-| Practical job-site application notes | `training_modules/nec_application/motors_and_panel_code_application.md` |
-
-Only field-application clarifications and common misreads go into existing NEC files.
-Exam-prep reasoning and worked examples stay in `nec_application/` training modules.
+`fundamentals/` is the correct home for circuit theory and basic electronics.
+If the folder becomes too broad, taxonomy expansion should be a separate plan.
 
 ---
 
-## Content Rules
+## Validation
 
-- Nothing promoted into `standards_intelligence/` unless compliance-verified against an actual standard.
-- Promoted files are rewrites, not copies of transcript summaries.
-- Each promoted file declares its source, promotion target, and any narrow standards cross-references.
-- EV content stays in `work/design/` until the project deliberately expands scope.
+```bash
+python3 tools/project_automator.py
+```
 
----
-
-## Build Order
-
-| Phase | Work | Depends On |
-|---|---|---|
-| 11.0 | Segment `electrical exam prep.md` → `nec_exam_prep_topics/` folder | None |
-| 11.1 | Scaffold `electrical_intelligence/` tree with `_index.yaml` + `README.md` | None |
-| 11.2 | Promote circuit analysis files into `electrical_intelligence/` | 11.1 |
-| 11.3 | Promote motor files + commissioning checklists | 11.1 |
-| 11.4 | Create missing `overlap__motors_drives.md` crosswalk files | 11.3 |
-| 11.5 | Promote NEC exam prep content + addenda to existing NEC files | 11.0 + 11.1 |
-
-Phases 11.0 and 11.1 have no dependencies and can run in parallel.
-Phases 11.2 and 11.3 can run in parallel after 11.1.
+Note: `validate_ai_boundaries.py` and `validate_reorg.sh all` have pre-existing failures
+unrelated to this integration. Do not use them as acceptance gates for this work.

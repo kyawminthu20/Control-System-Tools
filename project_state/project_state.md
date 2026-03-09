@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-03-09
 **Status:** Active
-**Current Phase:** Phase 11 COMPLETE — Industry Overlay Depth
-**Next Phase:** Phase 12 — Offshore / Marine Industry Overlay (see backlog below)
+**Current Phase:** Phase 12 COMPLETE — Offshore / Marine Industry Overlay
+**Next Phase:** Phase 13 — Secondary Backlog (see backlog below)
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -18,7 +18,7 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 
 ## Current Reality
 
-- Jekyll site deployed on GitHub Pages — `https://kyawminthu.github.io/Control-System-Tools/`
+- Jekyll site deployed on GitHub Pages — `https://kyawminthu20.github.io/Control-System-Tools/`
 - Jekyll build: ~60 pages, clean build (0.27 s locally)
 - Three-panel layout (sidebar 240px + main content + context panel 220px)
 - Mermaid.js CDN integration for all diagrams; Cytoscape.js 3.28.1 for interactive standards graph
@@ -60,7 +60,7 @@ All Phase 1 code is committed.
 
 1. Push: `git push`
 2. Enable GitHub Pages: Settings → Pages → Source: GitHub Actions
-3. Verify: `https://kyawminthu.github.io/Control-System-Tools/`
+3. Verify: `https://kyawminthu20.github.io/Control-System-Tools/`
 
 ## Phase 2 Scope — COMPLETED
 
@@ -221,6 +221,38 @@ requires zero user interaction while still allowing manual override.
 - [x] `docs/scenarios/index.md` — Scenario 07 and 08 cards added
 - [x] `docs/_includes/sidebar.html` — both new scenarios added
 
+## Phase 12 Scope — Offshore / Marine Industry Overlay — COMPLETE
+
+### RAG Corpus
+- [x] `control-standards/rag/standards_intelligence/international/offshore/DNV_OS_D201__electrical_installations.md`
+- [x] `control-standards/rag/standards_intelligence/international/offshore/ABS_offshore_electrical_control.md`
+- [x] `control-standards/rag/standards_intelligence/international/offshore/_index.yaml`
+
+### Site Pages
+- [x] `docs/industries/offshore/index.md` — deepened: DNV/ABS standards matrix, IT earthing, LSOH, class approval checklist
+- [x] `docs/industries/marine/index.md` — deepened: IMO framework, IEC 60092 overview, class society comparison
+- [x] `docs/scenarios/offshore-platform-control/index.md` — Scenario 09: ESD/F&G/power management, IT earthing, LSOH, class FAT workflow
+
+### Nav
+- [x] `docs/scenarios/index.md` — Scenario 09 card added
+- [x] `docs/_includes/sidebar.html` — Offshore Platform scenario link added
+
+## RAG Layer — Electrical Knowledge Integration — COMPLETE
+
+Design doc: `docs/plans/2026-03-08-electrical-intelligence-integration-design.md`
+
+Transcript-derived electrical learning content promoted into the existing canonical RAG layers.
+
+- [x] `training_modules/fundamentals/` — 7 circuit analysis + components files
+- [x] `training_modules/electrical_machines/` — 9 motor/drive/servo files
+- [x] `training_modules/nec_application/` — 3 NEC code-reading and application files
+- [x] `design_framework/electrical_review/` — 4 calculation workflow files
+- [x] `design_framework/motor_systems/` — 13 motor/drive design and workflow files
+- [x] `commissioning_checklists/checklists/` — 6 motor, drive, and circuit checklist files
+- [x] `standards_intelligence/crosswalks/overlap_notes/` — 2 motors/drives crosswalk files
+
+EV motor files held as WIP. No new parallel layer created.
+
 ## Content Gaps (documented with badges on site)
 
 - ISO 13849-1 — corpus complete (6 RAG files)
@@ -232,21 +264,7 @@ requires zero user interaction while still allowing manual override.
 - SEMI S2/S8/S14 — corpus complete (3 RAG files + index)
 - Medical, nuclear, marine class rules — not in corpus (no plan)
 
-## Phase 12 Backlog — Offshore / Marine (PRIMARY NEXT PHASE)
-
-**Blocked on:** DNV-ST-0378, ABS Rules for Building and Classing FPSOs, or equivalent class society standards must be added to corpus first.
-
-### Corpus work required first
-- [ ] DNV-ST-0378 (Offshore and Platform Lifting Appliances) or DNV-ST-0145 (Offshore Substations) — select most relevant for control systems scope
-- [ ] ABS — at minimum a summary RAG module covering electrical and control system requirements for offshore platforms
-- [ ] `control-standards/rag/standards_intelligence/international/offshore/` — new directory + `_index.yaml`
-
-### Site pages (after corpus)
-- [ ] `docs/industries/offshore/index.md` — deepen from stub: standards matrix by phase, selection flow, offshore-specific decisions (marine grade, Ex, power redundancy)
-- [ ] `docs/industries/marine/index.md` — deepen from stub: class society requirements, IEC 60092, flag-state authority
-- [ ] `docs/scenarios/offshore-platform-control/index.md` — Scenario 09: offshore platform ESD + F&G + power management
-
-## Secondary Backlog (not yet scheduled)
+## Phase 13 Backlog (Secondary Backlog)
 
 ### Thin industry pages (7 stubs remaining)
 - [ ] `docs/industries/energy/index.md` — deepen: IEC 61511 (process), IEC 60204-1, NEC, utility NERC CIP if applicable
