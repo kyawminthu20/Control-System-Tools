@@ -1,0 +1,37 @@
+# Offshore / Marine RAG Index
+# AI_READ_ACCESS: ALLOWED
+
+version: "1.0"
+standard_family: "OFFSHORE_MARINE"
+standard_id: "OFFSHORE_MARINE"
+standard_title: "Offshore and Marine Electrical and Control Standards"
+edition: "2023"
+jurisdiction: "International"
+last_updated: "2026-03-09"
+
+documents:
+  - doc_id: "DNV-OS-D201"
+    path: "rag/standards_intelligence/international/offshore/DNV_OS_D201__electrical_installations.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    tags:
+      topics: ["marine_grade", "power_redundancy", "DNV_class", "ESD", "fire_and_gas", "DP_class", "LSOH_cable"]
+    priority: "high"
+
+  - doc_id: "ABS-OFFSHORE-ELECTRICAL"
+    path: "rag/standards_intelligence/international/offshore/ABS_offshore_electrical_control.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    tags:
+      topics: ["ABS_class", "IT_earthing", "type_approval", "marine_grade", "emergency_power"]
+    priority: "high"
+
+coverage_notes:
+  complete: ["DNV-OS-D201", "ABS-offshore-electrical"]
+  planned: ["IEC-60092-series", "DNV-OS-A101-safety-principles", "NFPA-306-marine-fire"]
+
+notes: |
+  Two corpus modules covering the primary class society requirements for offshore control
+  and electrical installations: DNV-OS-D201 (North Sea / international) and ABS Part 4
+  (US Gulf of Mexico / US-flagged). IEC 60092 series (electrical installations in ships)
+  is not yet in corpus — note gap when answering marine vessel queries.
