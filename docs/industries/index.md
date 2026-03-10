@@ -17,10 +17,10 @@ repo_path: "control-standards/rag/standards_intelligence/scenario/mini_machine_s
 
 | Industry | US Standards Path | International Path | Safety Method | Special Overlays |
 |----------|------------------|--------------------|---------------|-----------------|
-| [Semiconductor]({{ '/industries/semiconductor/' | relative_url }}) | NEC, NFPA 79, UL 508A | IEC 60204-1, ISO 13849-1 | PL or SIL | SEMI S2/S8/S14 <span class="badge badge--gap">NOT IN CORPUS</span> |
+| [Semiconductor]({{ '/industries/semiconductor/' | relative_url }}) | NEC, NFPA 79, UL 508A | IEC 60204-1, ISO 13849-1 | PL or SIL | SEMI S2/S8/S14 <span class="badge badge--complete">Complete</span> |
 | [Food &amp; Beverage]({{ '/industries/food-and-beverage/' | relative_url }}) | NEC, NFPA 79, UL 508A | IEC 60204-1 | PL | Washdown, hygienic design |
 | [Energy]({{ '/industries/energy/' | relative_url }}) | NEC, NFPA 79 | IEC 60204-1, IEC 62443 | SIL | Outdoor, process safety, cybersecurity |
-| [Petroleum / Oil &amp; Gas]({{ '/industries/petroleum/' | relative_url }}) | NEC, NFPA 79 | IEC 61511, IEC 60079 | SIL | Hazardous area <span class="badge badge--verify">TO VERIFY</span> |
+| [Petroleum / Oil &amp; Gas]({{ '/industries/petroleum/' | relative_url }}) | NEC, NFPA 79 | IEC 61511, IEC 60079 | SIL | Hazardous area <span class="badge badge--complete">Complete</span> |
 | [Marine]({{ '/industries/marine/' | relative_url }}) | NEC | IEC 60204-1 | PL / SIL | Marine class rules |
 | [Medical]({{ '/industries/medical/' | relative_url }}) | NEC, FDA regs | IEC 60204-1, IEC 62304 | SIL | FDA, software lifecycle |
 | [Nuclear]({{ '/industries/nuclear/' | relative_url }}) | NEC, IEEE | IEC 60204-1 | SIL | Nuclear QA |

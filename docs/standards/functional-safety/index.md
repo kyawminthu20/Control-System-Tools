@@ -17,7 +17,7 @@ related_standards:
 <div class="page-header">
   <span class="page-header__label">Functional Safety Standards Family</span>
   <h1>ISO 12100 · ISO 13849-1 · IEC 62061 · IEC 61508 · IEC 61511</h1>
-  <p>Risk assessment and safety function design standards. <span class="badge badge--verify">PLANNED — TO VERIFY detail page completeness</span></p>
+  <p>Risk assessment and safety function design standards. <span class="badge badge--complete">Phase 3 Complete</span></p>
 </div>
 
 ## PL vs SIL — Which Path?
@@ -39,7 +39,7 @@ The choice between Performance Level (PL) and Safety Integrity Level (SIL) depen
 
 ### ISO 12100 — Risk Assessment Foundation
 
-**Status:** Planned <span class="badge badge--verify">TO VERIFY</span>
+**Status:** <span class="badge badge--complete">Complete</span>
 
 Foundation standard for all machinery safety. Required as the first step for CE marking. Provides a systematic process for risk assessment and risk reduction.
 
@@ -53,7 +53,7 @@ Foundation standard for all machinery safety. Required as the first step for CE 
 
 ### ISO 13849-1 — Performance Level (PL)
 
-**Status:** Planned <span class="badge badge--verify">TO VERIFY</span>
+**Status:** <span class="badge badge--complete">Complete</span>
 
 Safety-related parts of control systems. The PL approach uses architectural categories (B, 1–4) and diagnostic coverage to determine the achievable Performance Level (PLa–PLe).
 
@@ -67,7 +67,7 @@ Safety-related parts of control systems. The PL approach uses architectural cate
 
 ### IEC 62061 — Machinery SIL
 
-**Status:** Planned <span class="badge badge--verify">TO VERIFY</span>
+**Status:** <span class="badge badge--complete">Complete</span>
 
 Functional safety for safety-related electrical control systems on machinery. Uses SIL (1–3) instead of PL. More aligned with IEC 61508 methodology but scoped to machinery.
 
@@ -81,7 +81,7 @@ Functional safety for safety-related electrical control systems on machinery. Us
 
 ### IEC 61508 — Generic Functional Safety
 
-**Status:** Planned <span class="badge badge--verify">TO VERIFY</span>
+**Status:** <span class="badge badge--complete">Complete</span>
 
 The foundation standard for all functional safety. IEC 62061 and IEC 61511 both derive from IEC 61508. Multi-part standard covering E/E/PE safety-related systems across all industries.
 
@@ -95,14 +95,14 @@ The foundation standard for all functional safety. IEC 62061 and IEC 61511 both 
 
 ### IEC 61511 — Process Industry SIS
 
-**Status:** Planned <span class="badge badge--verify">TO VERIFY</span> — limited local coverage
+**Status:** <span class="badge badge--complete">Complete</span>
 
 Application standard for safety instrumented systems (SIS) in the process industry. Covers the SIS lifecycle from concept through decommissioning.
 
 - Applies to oil and gas, chemicals, power generation, and similar process industries
 - SIF (Safety Instrumented Function) design and allocation
 - Proof test interval and PFDavg calculation
-- **Note:** Local corpus coverage is limited — verify against published IEC 61511 documents
+- Process SIS lifecycle, SIL determination, SIS design, and operation or maintenance pages are present in the local corpus
 
 <a href="{{ '/standards/functional-safety/iec-61511/' | relative_url }}" class="card__link">IEC 61511 page &rarr;</a>
 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <meta name="description" content="Browse RAG source files from control-standards/rag/">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      if (saved !== 'light' && saved !== 'dark') { saved = null; }
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved ? saved : (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  {% seo %}
+</head>
+<body>
+  <a href="#rag-main" class="skip-link">Skip to main content</a>
+  {% include topnav.html %}
+
+  <div class="site-body rag-browser-body">
+
+    <!-- Left: folder tree -->
+    <nav class="rag-tree-panel" id="rag-tree-panel" aria-label="RAG file tree">
+      <div class="rag-tree-header">
+        <span class="section-label">RAG Source Files</span>
+        <code class="rag-tree-root">control-standards/rag/</code>
+      </div>
+      <div class="rag-tree-scroll">
+        <ul class="rag-tree" id="rag-tree-root" role="tree">
+          {% assign tree = site.data.rag_tree %}
+          {% include rag-tree-nodes.html nodes=tree %}
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main: file content -->
+    <main class="rag-file-content" id="rag-main" role="main">
+      <div class="rag-file-header" id="rag-file-header">
+        <span class="rag-file-path" id="rag-file-path">Select a file to read</span>
+        <a class="rag-raw-link" id="rag-raw-link" style="display:none" target="_blank" rel="noopener">View raw &rarr;</a>
+      </div>
+      <div class="rag-file-body prose" id="rag-file-body">
+        <p class="rag-placeholder">Click any <code>.md</code> file in the tree to render it here.</p>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Embed tree data for JS -->
+  <script>
+    window.RAG_TREE = {{ site.data.rag_tree | jsonify }};
+    window.RAG_BASE_URL = "https://raw.githubusercontent.com/kyawminthu20/Control-System-Tools/master/";
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/rag-browser.js' | relative_url }}"></script>
+</body>
+</html>
