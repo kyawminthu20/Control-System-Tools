@@ -10,32 +10,38 @@
           {
             "name": "basic_circuit_polarity_and_power_checks.md",
             "type": "file",
-            "path": "control-standards/rag/commissioning_checklists/checklists/basic_circuit_polarity_and_power_checks.md"
+            "path": "control-standards/rag/commissioning_checklists/checklists/basic_circuit_polarity_and_power_checks.md",
+            "serve_path": "commissioning_checklists/checklists/basic_circuit_polarity_and_power_checks.md"
           },
           {
             "name": "capacitor_discharge_awareness_check.md",
             "type": "file",
-            "path": "control-standards/rag/commissioning_checklists/checklists/capacitor_discharge_awareness_check.md"
+            "path": "control-standards/rag/commissioning_checklists/checklists/capacitor_discharge_awareness_check.md",
+            "serve_path": "commissioning_checklists/checklists/capacitor_discharge_awareness_check.md"
           },
           {
             "name": "drive_commissioning.md",
             "type": "file",
-            "path": "control-standards/rag/commissioning_checklists/checklists/drive_commissioning.md"
+            "path": "control-standards/rag/commissioning_checklists/checklists/drive_commissioning.md",
+            "serve_path": "commissioning_checklists/checklists/drive_commissioning.md"
           },
           {
             "name": "motor_nameplate_and_overload_setting.md",
             "type": "file",
-            "path": "control-standards/rag/commissioning_checklists/checklists/motor_nameplate_and_overload_setting.md"
+            "path": "control-standards/rag/commissioning_checklists/checklists/motor_nameplate_and_overload_setting.md",
+            "serve_path": "commissioning_checklists/checklists/motor_nameplate_and_overload_setting.md"
           },
           {
             "name": "motor_rotation_and_overload_verification.md",
             "type": "file",
-            "path": "control-standards/rag/commissioning_checklists/checklists/motor_rotation_and_overload_verification.md"
+            "path": "control-standards/rag/commissioning_checklists/checklists/motor_rotation_and_overload_verification.md",
+            "serve_path": "commissioning_checklists/checklists/motor_rotation_and_overload_verification.md"
           },
           {
             "name": "pre_power_panel_and_incoming_supply_check.md",
             "type": "file",
-            "path": "control-standards/rag/commissioning_checklists/checklists/pre_power_panel_and_incoming_supply_check.md"
+            "path": "control-standards/rag/commissioning_checklists/checklists/pre_power_panel_and_incoming_supply_check.md",
+            "serve_path": "commissioning_checklists/checklists/pre_power_panel_and_incoming_supply_check.md"
           }
         ]
       }
@@ -52,7 +58,8 @@
           {
             "name": "02_power_distribution_guide.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/design_guides/02_power_distribution_guide.md"
+            "path": "control-standards/rag/design_framework/design_guides/02_power_distribution_guide.md",
+            "serve_path": "design_framework/design_guides/02_power_distribution_guide.md"
           }
         ]
       },
@@ -63,22 +70,26 @@
           {
             "name": "basic_resistive_network_review.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/electrical_review/basic_resistive_network_review.md"
+            "path": "control-standards/rag/design_framework/electrical_review/basic_resistive_network_review.md",
+            "serve_path": "design_framework/electrical_review/basic_resistive_network_review.md"
           },
           {
             "name": "component_selection_basics.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/electrical_review/component_selection_basics.md"
+            "path": "control-standards/rag/design_framework/electrical_review/component_selection_basics.md",
+            "serve_path": "design_framework/electrical_review/component_selection_basics.md"
           },
           {
             "name": "ohms_law_and_power_check_workflow.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/electrical_review/ohms_law_and_power_check_workflow.md"
+            "path": "control-standards/rag/design_framework/electrical_review/ohms_law_and_power_check_workflow.md",
+            "serve_path": "design_framework/electrical_review/ohms_law_and_power_check_workflow.md"
           },
           {
             "name": "simple_signal_and_interface_circuit_notes.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/electrical_review/simple_signal_and_interface_circuit_notes.md"
+            "path": "control-standards/rag/design_framework/electrical_review/simple_signal_and_interface_circuit_notes.md",
+            "serve_path": "design_framework/electrical_review/simple_signal_and_interface_circuit_notes.md"
           }
         ]
       },
@@ -89,77 +100,92 @@
           {
             "name": "industrial_vs_ev_vs_drone_motor_drive_standards_matrix.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/motor_systems/industrial_vs_ev_vs_drone_motor_drive_standards_matrix.md"
+            "path": "control-standards/rag/design_framework/motor_systems/industrial_vs_ev_vs_drone_motor_drive_standards_matrix.md",
+            "serve_path": "design_framework/motor_systems/industrial_vs_ev_vs_drone_motor_drive_standards_matrix.md"
           },
           {
             "name": "integrated_drive_failure_modes_and_tradeoffs.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/motor_systems/integrated_drive_failure_modes_and_tradeoffs.md"
+            "path": "control-standards/rag/design_framework/motor_systems/integrated_drive_failure_modes_and_tradeoffs.md",
+            "serve_path": "design_framework/motor_systems/integrated_drive_failure_modes_and_tradeoffs.md"
           },
           {
             "name": "integrated_drive_serviceability_and_field_replacement_review.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/motor_systems/integrated_drive_serviceability_and_field_replacement_review.md"
+            "path": "control-standards/rag/design_framework/motor_systems/integrated_drive_serviceability_and_field_replacement_review.md",
+            "serve_path": "design_framework/motor_systems/integrated_drive_serviceability_and_field_replacement_review.md"
           },
           {
             "name": "integrated_motor_drive_architecture_comparison.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/motor_systems/integrated_motor_drive_architecture_comparison.md"
+            "path": "control-standards/rag/design_framework/motor_systems/integrated_motor_drive_architecture_comparison.md",
+            "serve_path": "design_framework/motor_systems/integrated_motor_drive_architecture_comparison.md"
           },
           {
             "name": "motor_cable_and_protection_review.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/motor_systems/motor_cable_and_protection_review.md"
+            "path": "control-standards/rag/design_framework/motor_systems/motor_cable_and_protection_review.md",
+            "serve_path": "design_framework/motor_systems/motor_cable_and_protection_review.md"
           },
           {
             "name": "motor_mounted_drive_thermal_and_emc_design_notes.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/motor_systems/motor_mounted_drive_thermal_and_emc_design_notes.md"
+            "path": "control-standards/rag/design_framework/motor_systems/motor_mounted_drive_thermal_and_emc_design_notes.md",
+            "serve_path": "design_framework/motor_systems/motor_mounted_drive_thermal_and_emc_design_notes.md"
           },
           {
             "name": "motor_nameplate_review_checklist.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/motor_systems/motor_nameplate_review_checklist.md"
+            "path": "control-standards/rag/design_framework/motor_systems/motor_nameplate_review_checklist.md",
+            "serve_path": "design_framework/motor_systems/motor_nameplate_review_checklist.md"
           },
           {
             "name": "motor_selection_comparison_matrix.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/motor_systems/motor_selection_comparison_matrix.md"
+            "path": "control-standards/rag/design_framework/motor_systems/motor_selection_comparison_matrix.md",
+            "serve_path": "design_framework/motor_systems/motor_selection_comparison_matrix.md"
           },
           {
             "name": "motor_selection_workflow.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/motor_systems/motor_selection_workflow.md"
+            "path": "control-standards/rag/design_framework/motor_systems/motor_selection_workflow.md",
+            "serve_path": "design_framework/motor_systems/motor_selection_workflow.md"
           },
           {
             "name": "motor_symptom_troubleshooting_patterns.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/motor_systems/motor_symptom_troubleshooting_patterns.md"
+            "path": "control-standards/rag/design_framework/motor_systems/motor_symptom_troubleshooting_patterns.md",
+            "serve_path": "design_framework/motor_systems/motor_symptom_troubleshooting_patterns.md"
           },
           {
             "name": "motor_troubleshooting_decision_tree.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/motor_systems/motor_troubleshooting_decision_tree.md"
+            "path": "control-standards/rag/design_framework/motor_systems/motor_troubleshooting_decision_tree.md",
+            "serve_path": "design_framework/motor_systems/motor_troubleshooting_decision_tree.md"
           },
           {
             "name": "servo_commissioning_workflow.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/motor_systems/servo_commissioning_workflow.md"
+            "path": "control-standards/rag/design_framework/motor_systems/servo_commissioning_workflow.md",
+            "serve_path": "design_framework/motor_systems/servo_commissioning_workflow.md"
           },
           {
             "name": "star_delta_and_supply_matching_notes.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/motor_systems/star_delta_and_supply_matching_notes.md"
+            "path": "control-standards/rag/design_framework/motor_systems/star_delta_and_supply_matching_notes.md",
+            "serve_path": "design_framework/motor_systems/star_delta_and_supply_matching_notes.md"
           },
           {
             "name": "vfd_commissioning_workflow.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/motor_systems/vfd_commissioning_workflow.md"
+            "path": "control-standards/rag/design_framework/motor_systems/vfd_commissioning_workflow.md",
+            "serve_path": "design_framework/motor_systems/vfd_commissioning_workflow.md"
           },
           {
             "name": "vfd_motor_integration_review.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/motor_systems/vfd_motor_integration_review.md"
+            "path": "control-standards/rag/design_framework/motor_systems/vfd_motor_integration_review.md",
+            "serve_path": "design_framework/motor_systems/vfd_motor_integration_review.md"
           }
         ]
       },
@@ -170,12 +196,14 @@
           {
             "name": "US_EU_Machine_Compliance_Wizard.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/us_eu_compliance_wizard/US_EU_Machine_Compliance_Wizard.md"
+            "path": "control-standards/rag/design_framework/us_eu_compliance_wizard/US_EU_Machine_Compliance_Wizard.md",
+            "serve_path": "design_framework/us_eu_compliance_wizard/US_EU_Machine_Compliance_Wizard.md"
           },
           {
             "name": "us_eu_delta_report_template.md",
             "type": "file",
-            "path": "control-standards/rag/design_framework/us_eu_compliance_wizard/us_eu_delta_report_template.md"
+            "path": "control-standards/rag/design_framework/us_eu_compliance_wizard/us_eu_delta_report_template.md",
+            "serve_path": "design_framework/us_eu_compliance_wizard/us_eu_delta_report_template.md"
           }
         ]
       }
@@ -188,12 +216,14 @@
       {
         "name": "RAG_DIRECTORY_STATUS.md",
         "type": "file",
-        "path": "control-standards/rag/meta/RAG_DIRECTORY_STATUS.md"
+        "path": "control-standards/rag/meta/RAG_DIRECTORY_STATUS.md",
+        "serve_path": "meta/RAG_DIRECTORY_STATUS.md"
       },
       {
         "name": "VERSION_OVERVIEW.md",
         "type": "file",
-        "path": "control-standards/rag/meta/VERSION_OVERVIEW.md"
+        "path": "control-standards/rag/meta/VERSION_OVERVIEW.md",
+        "serve_path": "meta/VERSION_OVERVIEW.md"
       }
     ]
   },
@@ -204,12 +234,14 @@
       {
         "name": "_glossary.md",
         "type": "file",
-        "path": "control-standards/rag/standards_intelligence/_glossary.md"
+        "path": "control-standards/rag/standards_intelligence/_glossary.md",
+        "serve_path": "standards_intelligence/_glossary.md"
       },
       {
         "name": "_standards_map.md",
         "type": "file",
-        "path": "control-standards/rag/standards_intelligence/_standards_map.md"
+        "path": "control-standards/rag/standards_intelligence/_standards_map.md",
+        "serve_path": "standards_intelligence/_standards_map.md"
       },
       {
         "name": "crosswalks",
@@ -222,27 +254,32 @@
               {
                 "name": "file_structure.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/file_structure.md"
+                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/file_structure.md",
+                "serve_path": "standards_intelligence/crosswalks/overlap_matrix/file_structure.md"
               },
               {
                 "name": "nfpa79_iec60204_overlap.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/nfpa79_iec60204_overlap.md"
+                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/nfpa79_iec60204_overlap.md",
+                "serve_path": "standards_intelligence/crosswalks/overlap_matrix/nfpa79_iec60204_overlap.md"
               },
               {
                 "name": "standards_decision_workflow.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/standards_decision_workflow.md"
+                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/standards_decision_workflow.md",
+                "serve_path": "standards_intelligence/crosswalks/overlap_matrix/standards_decision_workflow.md"
               },
               {
                 "name": "standards_overlap.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/standards_overlap.md"
+                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/standards_overlap.md",
+                "serve_path": "standards_intelligence/crosswalks/overlap_matrix/standards_overlap.md"
               },
               {
                 "name": "ul508a_nec_nfpa79_overlap.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/ul508a_nec_nfpa79_overlap.md"
+                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/ul508a_nec_nfpa79_overlap.md",
+                "serve_path": "standards_intelligence/crosswalks/overlap_matrix/ul508a_nec_nfpa79_overlap.md"
               }
             ]
           },
@@ -253,27 +290,32 @@
               {
                 "name": "GENERATION_STATUS.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_notes/GENERATION_STATUS.md"
+                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_notes/GENERATION_STATUS.md",
+                "serve_path": "standards_intelligence/crosswalks/overlap_notes/GENERATION_STATUS.md"
               },
               {
                 "name": "file_structure.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_notes/file_structure.md"
+                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_notes/file_structure.md",
+                "serve_path": "standards_intelligence/crosswalks/overlap_notes/file_structure.md"
               },
               {
                 "name": "overlap__motors_drives.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_notes/overlap__motors_drives.md"
+                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_notes/overlap__motors_drives.md",
+                "serve_path": "standards_intelligence/crosswalks/overlap_notes/overlap__motors_drives.md"
               },
               {
                 "name": "overlap__sccr.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_notes/overlap__sccr.md"
+                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_notes/overlap__sccr.md",
+                "serve_path": "standards_intelligence/crosswalks/overlap_notes/overlap__sccr.md"
               },
               {
                 "name": "overlap_nfpa79_iec60204__motors_drives.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_notes/overlap_nfpa79_iec60204__motors_drives.md"
+                "path": "control-standards/rag/standards_intelligence/crosswalks/overlap_notes/overlap_nfpa79_iec60204__motors_drives.md",
+                "serve_path": "standards_intelligence/crosswalks/overlap_notes/overlap_nfpa79_iec60204__motors_drives.md"
               }
             ]
           }
@@ -282,7 +324,8 @@
       {
         "name": "file_structure.md",
         "type": "file",
-        "path": "control-standards/rag/standards_intelligence/file_structure.md"
+        "path": "control-standards/rag/standards_intelligence/file_structure.md",
+        "serve_path": "standards_intelligence/file_structure.md"
       },
       {
         "name": "international",
@@ -299,22 +342,26 @@
                   {
                     "name": "IEC62443_2_1__security_management.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/cybersecurity/iec_62443/IEC62443_2_1__security_management.md"
+                    "path": "control-standards/rag/standards_intelligence/international/cybersecurity/iec_62443/IEC62443_2_1__security_management.md",
+                    "serve_path": "standards_intelligence/international/cybersecurity/iec_62443/IEC62443_2_1__security_management.md"
                   },
                   {
                     "name": "IEC62443_3_3__system_security_requirements.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/cybersecurity/iec_62443/IEC62443_3_3__system_security_requirements.md"
+                    "path": "control-standards/rag/standards_intelligence/international/cybersecurity/iec_62443/IEC62443_3_3__system_security_requirements.md",
+                    "serve_path": "standards_intelligence/international/cybersecurity/iec_62443/IEC62443_3_3__system_security_requirements.md"
                   },
                   {
                     "name": "IEC62443_4_2__component_requirements.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/cybersecurity/iec_62443/IEC62443_4_2__component_requirements.md"
+                    "path": "control-standards/rag/standards_intelligence/international/cybersecurity/iec_62443/IEC62443_4_2__component_requirements.md",
+                    "serve_path": "standards_intelligence/international/cybersecurity/iec_62443/IEC62443_4_2__component_requirements.md"
                   },
                   {
                     "name": "IEC62443_lifecycle.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/cybersecurity/iec_62443/IEC62443_lifecycle.md"
+                    "path": "control-standards/rag/standards_intelligence/international/cybersecurity/iec_62443/IEC62443_lifecycle.md",
+                    "serve_path": "standards_intelligence/international/cybersecurity/iec_62443/IEC62443_lifecycle.md"
                   }
                 ]
               }
@@ -331,22 +378,26 @@
                   {
                     "name": "IEC61508_2010__Clause07__safety_lifecycle.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_61508/IEC61508_2010__Clause07__safety_lifecycle.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_61508/IEC61508_2010__Clause07__safety_lifecycle.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iec_61508/IEC61508_2010__Clause07__safety_lifecycle.md"
                   },
                   {
                     "name": "IEC61508_2010__Part1__framework.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_61508/IEC61508_2010__Part1__framework.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_61508/IEC61508_2010__Part1__framework.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iec_61508/IEC61508_2010__Part1__framework.md"
                   },
                   {
                     "name": "IEC61508_2010__Part2__hardware.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_61508/IEC61508_2010__Part2__hardware.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_61508/IEC61508_2010__Part2__hardware.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iec_61508/IEC61508_2010__Part2__hardware.md"
                   },
                   {
                     "name": "IEC61508_2010__Part3__software.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_61508/IEC61508_2010__Part3__software.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_61508/IEC61508_2010__Part3__software.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iec_61508/IEC61508_2010__Part3__software.md"
                   }
                 ]
               },
@@ -357,22 +408,26 @@
                   {
                     "name": "IEC61511_2016__Clause08__sil_determination.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_61511/IEC61511_2016__Clause08__sil_determination.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_61511/IEC61511_2016__Clause08__sil_determination.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iec_61511/IEC61511_2016__Clause08__sil_determination.md"
                   },
                   {
                     "name": "IEC61511_2016__Clause10__sis_design.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_61511/IEC61511_2016__Clause10__sis_design.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_61511/IEC61511_2016__Clause10__sis_design.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iec_61511/IEC61511_2016__Clause10__sis_design.md"
                   },
                   {
                     "name": "IEC61511_2016__Clause16__operation_maintenance.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_61511/IEC61511_2016__Clause16__operation_maintenance.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_61511/IEC61511_2016__Clause16__operation_maintenance.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iec_61511/IEC61511_2016__Clause16__operation_maintenance.md"
                   },
                   {
                     "name": "IEC61511_2016__Part1__framework.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_61511/IEC61511_2016__Part1__framework.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_61511/IEC61511_2016__Part1__framework.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iec_61511/IEC61511_2016__Part1__framework.md"
                   }
                 ]
               },
@@ -383,22 +438,26 @@
                   {
                     "name": "IEC62061_2021__AnnexA__silcl_tables.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_62061/IEC62061_2021__AnnexA__silcl_tables.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_62061/IEC62061_2021__AnnexA__silcl_tables.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iec_62061/IEC62061_2021__AnnexA__silcl_tables.md"
                   },
                   {
                     "name": "IEC62061_2021__Clause04__scope_context.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_62061/IEC62061_2021__Clause04__scope_context.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_62061/IEC62061_2021__Clause04__scope_context.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iec_62061/IEC62061_2021__Clause04__scope_context.md"
                   },
                   {
                     "name": "IEC62061_2021__Clause06__srecs_design.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_62061/IEC62061_2021__Clause06__srecs_design.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_62061/IEC62061_2021__Clause06__srecs_design.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iec_62061/IEC62061_2021__Clause06__srecs_design.md"
                   },
                   {
                     "name": "IEC62061_2021__Clause07__subsystem_design.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_62061/IEC62061_2021__Clause07__subsystem_design.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iec_62061/IEC62061_2021__Clause07__subsystem_design.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iec_62061/IEC62061_2021__Clause07__subsystem_design.md"
                   }
                 ]
               },
@@ -409,27 +468,32 @@
                   {
                     "name": "ISO12100_2010__AnnexA__hazard_list.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_12100/ISO12100_2010__AnnexA__hazard_list.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_12100/ISO12100_2010__AnnexA__hazard_list.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iso_12100/ISO12100_2010__AnnexA__hazard_list.md"
                   },
                   {
                     "name": "ISO12100_2010__Clause04__risk_assessment_principles.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_12100/ISO12100_2010__Clause04__risk_assessment_principles.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_12100/ISO12100_2010__Clause04__risk_assessment_principles.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iso_12100/ISO12100_2010__Clause04__risk_assessment_principles.md"
                   },
                   {
                     "name": "ISO12100_2010__Clause05__risk_estimation.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_12100/ISO12100_2010__Clause05__risk_estimation.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_12100/ISO12100_2010__Clause05__risk_estimation.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iso_12100/ISO12100_2010__Clause05__risk_estimation.md"
                   },
                   {
                     "name": "ISO12100_2010__Clause06__risk_evaluation.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_12100/ISO12100_2010__Clause06__risk_evaluation.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_12100/ISO12100_2010__Clause06__risk_evaluation.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iso_12100/ISO12100_2010__Clause06__risk_evaluation.md"
                   },
                   {
                     "name": "ISO12100_2010__Clause07__risk_reduction.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_12100/ISO12100_2010__Clause07__risk_reduction.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_12100/ISO12100_2010__Clause07__risk_reduction.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iso_12100/ISO12100_2010__Clause07__risk_reduction.md"
                   }
                 ]
               },
@@ -440,32 +504,38 @@
                   {
                     "name": "ISO13849_2023__AnnexA__risk_assessment.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__AnnexA__risk_assessment.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__AnnexA__risk_assessment.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__AnnexA__risk_assessment.md"
                   },
                   {
                     "name": "ISO13849_2023__AnnexF__ccf.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__AnnexF__ccf.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__AnnexF__ccf.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__AnnexF__ccf.md"
                   },
                   {
                     "name": "ISO13849_2023__Clause04__design_strategy.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__Clause04__design_strategy.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__Clause04__design_strategy.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__Clause04__design_strategy.md"
                   },
                   {
                     "name": "ISO13849_2023__Clause05__srp_cs.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__Clause05__srp_cs.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__Clause05__srp_cs.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__Clause05__srp_cs.md"
                   },
                   {
                     "name": "ISO13849_2023__Clause06__categories.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__Clause06__categories.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__Clause06__categories.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__Clause06__categories.md"
                   },
                   {
                     "name": "ISO13849_2023__Clause07__validation.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__Clause07__validation.md"
+                    "path": "control-standards/rag/standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__Clause07__validation.md",
+                    "serve_path": "standards_intelligence/international/functional_safety/iso_13849_1/ISO13849_2023__Clause07__validation.md"
                   }
                 ]
               }
@@ -482,32 +552,38 @@
                   {
                     "name": "IEC60079_0__general_requirements.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_0__general_requirements.md"
+                    "path": "control-standards/rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_0__general_requirements.md",
+                    "serve_path": "standards_intelligence/international/hazardous_area/iec_60079/IEC60079_0__general_requirements.md"
                   },
                   {
                     "name": "IEC60079_10_1__area_classification_gas.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_10_1__area_classification_gas.md"
+                    "path": "control-standards/rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_10_1__area_classification_gas.md",
+                    "serve_path": "standards_intelligence/international/hazardous_area/iec_60079/IEC60079_10_1__area_classification_gas.md"
                   },
                   {
                     "name": "IEC60079_11__intrinsically_safe_Ex_i.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_11__intrinsically_safe_Ex_i.md"
+                    "path": "control-standards/rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_11__intrinsically_safe_Ex_i.md",
+                    "serve_path": "standards_intelligence/international/hazardous_area/iec_60079/IEC60079_11__intrinsically_safe_Ex_i.md"
                   },
                   {
                     "name": "IEC60079_14__installation_design.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_14__installation_design.md"
+                    "path": "control-standards/rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_14__installation_design.md",
+                    "serve_path": "standards_intelligence/international/hazardous_area/iec_60079/IEC60079_14__installation_design.md"
                   },
                   {
                     "name": "IEC60079_17__inspection_maintenance.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_17__inspection_maintenance.md"
+                    "path": "control-standards/rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_17__inspection_maintenance.md",
+                    "serve_path": "standards_intelligence/international/hazardous_area/iec_60079/IEC60079_17__inspection_maintenance.md"
                   },
                   {
                     "name": "IEC60079_1__flameproof_Ex_d.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_1__flameproof_Ex_d.md"
+                    "path": "control-standards/rag/standards_intelligence/international/hazardous_area/iec_60079/IEC60079_1__flameproof_Ex_d.md",
+                    "serve_path": "standards_intelligence/international/hazardous_area/iec_60079/IEC60079_1__flameproof_Ex_d.md"
                   }
                 ]
               }
@@ -524,87 +600,104 @@
                   {
                     "name": "GENERATION_SUMMARY.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/GENERATION_SUMMARY.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/GENERATION_SUMMARY.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/GENERATION_SUMMARY.md"
                   },
                   {
                     "name": "IEC60204_1_2018__Clause01__scope.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause01__scope.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause01__scope.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause01__scope.md"
                   },
                   {
                     "name": "IEC60204_1_2018__Clause02__normative_references.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause02__normative_references.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause02__normative_references.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause02__normative_references.md"
                   },
                   {
                     "name": "IEC60204_1_2018__Clause03__terms_and_definitions.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause03__terms_and_definitions.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause03__terms_and_definitions.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause03__terms_and_definitions.md"
                   },
                   {
                     "name": "IEC60204_1_2018__Clause04__general_requirements.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause04__general_requirements.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause04__general_requirements.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause04__general_requirements.md"
                   },
                   {
                     "name": "IEC60204_1_2018__Clause05__incoming_supply.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause05__incoming_supply.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause05__incoming_supply.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause05__incoming_supply.md"
                   },
                   {
                     "name": "IEC60204_1_2018__Clause06__protection_against_electric_shock.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md"
                   },
                   {
                     "name": "IEC60204_1_2018__Clause07__protection_of_equipment.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause07__protection_of_equipment.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause07__protection_of_equipment.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause07__protection_of_equipment.md"
                   },
                   {
                     "name": "IEC60204_1_2018__Clause08__equipotential_bonding.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md"
                   },
                   {
                     "name": "IEC60204_1_2018__Clause09__control_circuits_and_functions.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md"
                   },
                   {
                     "name": "IEC60204_1_2018__Clause10__operator_interface.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md"
                   },
                   {
                     "name": "IEC60204_1_2018__Clause11__control_equipment.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause11__control_equipment.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause11__control_equipment.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause11__control_equipment.md"
                   },
                   {
                     "name": "IEC60204_1_2018__Clause12__motors_and_drives.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md"
                   },
                   {
                     "name": "IEC60204_1_2018__Clause13__accessories_and_lighting.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause13__accessories_and_lighting.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause13__accessories_and_lighting.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause13__accessories_and_lighting.md"
                   },
                   {
                     "name": "IEC60204_1_2018__Clause14__marking_and_documentation.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md"
                   },
                   {
                     "name": "IEC60204_1_2018__Clause15__verification.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md"
                   },
                   {
                     "name": "IEC60204_OVERVIEW.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_OVERVIEW.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_OVERVIEW.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_OVERVIEW.md"
                   }
                 ]
               }
@@ -617,12 +710,14 @@
               {
                 "name": "ABS_offshore_electrical_control.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/international/offshore/ABS_offshore_electrical_control.md"
+                "path": "control-standards/rag/standards_intelligence/international/offshore/ABS_offshore_electrical_control.md",
+                "serve_path": "standards_intelligence/international/offshore/ABS_offshore_electrical_control.md"
               },
               {
                 "name": "DNV_OS_D201__electrical_installations.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/international/offshore/DNV_OS_D201__electrical_installations.md"
+                "path": "control-standards/rag/standards_intelligence/international/offshore/DNV_OS_D201__electrical_installations.md",
+                "serve_path": "standards_intelligence/international/offshore/DNV_OS_D201__electrical_installations.md"
               }
             ]
           },
@@ -637,17 +732,20 @@
                   {
                     "name": "SEMI_S14__fire_risk_assessment.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/semiconductor/semi/SEMI_S14__fire_risk_assessment.md"
+                    "path": "control-standards/rag/standards_intelligence/international/semiconductor/semi/SEMI_S14__fire_risk_assessment.md",
+                    "serve_path": "standards_intelligence/international/semiconductor/semi/SEMI_S14__fire_risk_assessment.md"
                   },
                   {
                     "name": "SEMI_S2__equipment_safety.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/semiconductor/semi/SEMI_S2__equipment_safety.md"
+                    "path": "control-standards/rag/standards_intelligence/international/semiconductor/semi/SEMI_S2__equipment_safety.md",
+                    "serve_path": "standards_intelligence/international/semiconductor/semi/SEMI_S2__equipment_safety.md"
                   },
                   {
                     "name": "SEMI_S8__ergonomics.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/semiconductor/semi/SEMI_S8__ergonomics.md"
+                    "path": "control-standards/rag/standards_intelligence/international/semiconductor/semi/SEMI_S8__ergonomics.md",
+                    "serve_path": "standards_intelligence/international/semiconductor/semi/SEMI_S8__ergonomics.md"
                   }
                 ]
               }
@@ -662,22 +760,26 @@
           {
             "name": "COMPLETE_STANDARDS_PORTFOLIO.md",
             "type": "file",
-            "path": "control-standards/rag/standards_intelligence/library_admin/COMPLETE_STANDARDS_PORTFOLIO.md"
+            "path": "control-standards/rag/standards_intelligence/library_admin/COMPLETE_STANDARDS_PORTFOLIO.md",
+            "serve_path": "standards_intelligence/library_admin/COMPLETE_STANDARDS_PORTFOLIO.md"
           },
           {
             "name": "STANDARDS_COMPLETION_STATUS.md",
             "type": "file",
-            "path": "control-standards/rag/standards_intelligence/library_admin/STANDARDS_COMPLETION_STATUS.md"
+            "path": "control-standards/rag/standards_intelligence/library_admin/STANDARDS_COMPLETION_STATUS.md",
+            "serve_path": "standards_intelligence/library_admin/STANDARDS_COMPLETION_STATUS.md"
           },
           {
             "name": "STANDARDS_MODULES_SUMMARY.md",
             "type": "file",
-            "path": "control-standards/rag/standards_intelligence/library_admin/STANDARDS_MODULES_SUMMARY.md"
+            "path": "control-standards/rag/standards_intelligence/library_admin/STANDARDS_MODULES_SUMMARY.md",
+            "serve_path": "standards_intelligence/library_admin/STANDARDS_MODULES_SUMMARY.md"
           },
           {
             "name": "STANDARDS_PURCHASE_TRACKER.md",
             "type": "file",
-            "path": "control-standards/rag/standards_intelligence/library_admin/STANDARDS_PURCHASE_TRACKER.md"
+            "path": "control-standards/rag/standards_intelligence/library_admin/STANDARDS_PURCHASE_TRACKER.md",
+            "serve_path": "standards_intelligence/library_admin/STANDARDS_PURCHASE_TRACKER.md"
           }
         ]
       },
@@ -688,27 +790,32 @@
           {
             "name": "15-Standard Minimum Compliance Stack.md",
             "type": "file",
-            "path": "control-standards/rag/standards_intelligence/reference_models/15-Standard Minimum Compliance Stack.md"
+            "path": "control-standards/rag/standards_intelligence/reference_models/15-Standard Minimum Compliance Stack.md",
+            "serve_path": "standards_intelligence/reference_models/15-Standard Minimum Compliance Stack.md"
           },
           {
             "name": "7-Layer Industrial Machine Architecture Model.md",
             "type": "file",
-            "path": "control-standards/rag/standards_intelligence/reference_models/7-Layer Industrial Machine Architecture Model.md"
+            "path": "control-standards/rag/standards_intelligence/reference_models/7-Layer Industrial Machine Architecture Model.md",
+            "serve_path": "standards_intelligence/reference_models/7-Layer Industrial Machine Architecture Model.md"
           },
           {
             "name": "Software_Safety_and_Intrinsic_Safety_Standards.md",
             "type": "file",
-            "path": "control-standards/rag/standards_intelligence/reference_models/Software_Safety_and_Intrinsic_Safety_Standards.md"
+            "path": "control-standards/rag/standards_intelligence/reference_models/Software_Safety_and_Intrinsic_Safety_Standards.md",
+            "serve_path": "standards_intelligence/reference_models/Software_Safety_and_Intrinsic_Safety_Standards.md"
           },
           {
             "name": "Universal Machine Safety Architecture.md",
             "type": "file",
-            "path": "control-standards/rag/standards_intelligence/reference_models/Universal Machine Safety Architecture.md"
+            "path": "control-standards/rag/standards_intelligence/reference_models/Universal Machine Safety Architecture.md",
+            "serve_path": "standards_intelligence/reference_models/Universal Machine Safety Architecture.md"
           },
           {
             "name": "standards_atlas_diagrams_reference.md",
             "type": "file",
-            "path": "control-standards/rag/standards_intelligence/reference_models/standards_atlas_diagrams_reference.md"
+            "path": "control-standards/rag/standards_intelligence/reference_models/standards_atlas_diagrams_reference.md",
+            "serve_path": "standards_intelligence/reference_models/standards_atlas_diagrams_reference.md"
           }
         ]
       },
@@ -719,7 +826,8 @@
           {
             "name": "standards_applicability.md",
             "type": "file",
-            "path": "control-standards/rag/standards_intelligence/routing/standards_applicability.md"
+            "path": "control-standards/rag/standards_intelligence/routing/standards_applicability.md",
+            "serve_path": "standards_intelligence/routing/standards_applicability.md"
           }
         ]
       },
@@ -734,47 +842,56 @@
               {
                 "name": "control_architecture_and_network.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/control_architecture_and_network.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/control_architecture_and_network.md",
+                "serve_path": "standards_intelligence/scenario/cnc_machine_safety_design/control_architecture_and_network.md"
               },
               {
                 "name": "hazards_and_risk_assessment.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/hazards_and_risk_assessment.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/hazards_and_risk_assessment.md",
+                "serve_path": "standards_intelligence/scenario/cnc_machine_safety_design/hazards_and_risk_assessment.md"
               },
               {
                 "name": "mechanical_and_electrical_isolation.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/mechanical_and_electrical_isolation.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/mechanical_and_electrical_isolation.md",
+                "serve_path": "standards_intelligence/scenario/cnc_machine_safety_design/mechanical_and_electrical_isolation.md"
               },
               {
                 "name": "safety_functions_register.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/safety_functions_register.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/safety_functions_register.md",
+                "serve_path": "standards_intelligence/scenario/cnc_machine_safety_design/safety_functions_register.md"
               },
               {
                 "name": "safety_integrity_and_sil_strategy.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/safety_integrity_and_sil_strategy.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/safety_integrity_and_sil_strategy.md",
+                "serve_path": "standards_intelligence/scenario/cnc_machine_safety_design/safety_integrity_and_sil_strategy.md"
               },
               {
                 "name": "standards_applicability_matrix.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/standards_applicability_matrix.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/standards_applicability_matrix.md",
+                "serve_path": "standards_intelligence/scenario/cnc_machine_safety_design/standards_applicability_matrix.md"
               },
               {
                 "name": "system_description.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/system_description.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/system_description.md",
+                "serve_path": "standards_intelligence/scenario/cnc_machine_safety_design/system_description.md"
               },
               {
                 "name": "ul_nec_design_requirements.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/ul_nec_design_requirements.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/ul_nec_design_requirements.md",
+                "serve_path": "standards_intelligence/scenario/cnc_machine_safety_design/ul_nec_design_requirements.md"
               },
               {
                 "name": "verification_and_validation_plan.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/verification_and_validation_plan.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/cnc_machine_safety_design/verification_and_validation_plan.md",
+                "serve_path": "standards_intelligence/scenario/cnc_machine_safety_design/verification_and_validation_plan.md"
               }
             ]
           },
@@ -785,12 +902,14 @@
               {
                 "name": "control_architecture_and_network.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/control_architecture_and_network.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/control_architecture_and_network.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/control_architecture_and_network.md"
               },
               {
                 "name": "hazards_and_risk_assessment.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/hazards_and_risk_assessment.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/hazards_and_risk_assessment.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/hazards_and_risk_assessment.md"
               },
               {
                 "name": "industry_overlays",
@@ -799,84 +918,100 @@
                   {
                     "name": "commercial.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/commercial.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/commercial.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/commercial.md"
                   },
                   {
                     "name": "energy.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/energy.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/energy.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/energy.md"
                   },
                   {
                     "name": "food_and_beverage.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/food_and_beverage.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/food_and_beverage.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/food_and_beverage.md"
                   },
                   {
                     "name": "marine.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/marine.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/marine.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/marine.md"
                   },
                   {
                     "name": "medical.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/medical.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/medical.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/medical.md"
                   },
                   {
                     "name": "nuclear.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/nuclear.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/nuclear.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/nuclear.md"
                   },
                   {
                     "name": "offshore.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/offshore.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/offshore.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/offshore.md"
                   },
                   {
                     "name": "petroleum.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/petroleum.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/petroleum.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/petroleum.md"
                   },
                   {
                     "name": "semiconductor.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/semiconductor.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/semiconductor.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/industry_overlays/semiconductor.md"
                   }
                 ]
               },
               {
                 "name": "mechanical_and_electrical_isolation.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/mechanical_and_electrical_isolation.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/mechanical_and_electrical_isolation.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/mechanical_and_electrical_isolation.md"
               },
               {
                 "name": "safety_functions_register.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/safety_functions_register.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/safety_functions_register.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/safety_functions_register.md"
               },
               {
                 "name": "safety_integrity_and_sil_strategy.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/safety_integrity_and_sil_strategy.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/safety_integrity_and_sil_strategy.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/safety_integrity_and_sil_strategy.md"
               },
               {
                 "name": "standards_applicability_matrix.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/standards_applicability_matrix.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/standards_applicability_matrix.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/standards_applicability_matrix.md"
               },
               {
                 "name": "system_description.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/system_description.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/system_description.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/system_description.md"
               },
               {
                 "name": "ul_nec_design_requirements.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/ul_nec_design_requirements.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/ul_nec_design_requirements.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/ul_nec_design_requirements.md"
               },
               {
                 "name": "verification_and_validation_plan.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/verification_and_validation_plan.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design/verification_and_validation_plan.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design/verification_and_validation_plan.md"
               }
             ]
           },
@@ -887,12 +1022,14 @@
               {
                 "name": "control_architecture_and_network.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/control_architecture_and_network.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/control_architecture_and_network.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/control_architecture_and_network.md"
               },
               {
                 "name": "hazards_and_risk_assessment.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/hazards_and_risk_assessment.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/hazards_and_risk_assessment.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/hazards_and_risk_assessment.md"
               },
               {
                 "name": "industry_overlays",
@@ -901,84 +1038,100 @@
                   {
                     "name": "commercial.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/commercial.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/commercial.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/commercial.md"
                   },
                   {
                     "name": "energy.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/energy.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/energy.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/energy.md"
                   },
                   {
                     "name": "food_and_beverage.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/food_and_beverage.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/food_and_beverage.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/food_and_beverage.md"
                   },
                   {
                     "name": "marine.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/marine.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/marine.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/marine.md"
                   },
                   {
                     "name": "medical.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/medical.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/medical.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/medical.md"
                   },
                   {
                     "name": "nuclear.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/nuclear.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/nuclear.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/nuclear.md"
                   },
                   {
                     "name": "offshore.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/offshore.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/offshore.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/offshore.md"
                   },
                   {
                     "name": "petroleum.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/petroleum.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/petroleum.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/petroleum.md"
                   },
                   {
                     "name": "semiconductor.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/semiconductor.md"
+                    "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/semiconductor.md",
+                    "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/semiconductor.md"
                   }
                 ]
               },
               {
                 "name": "mechanical_and_electrical_isolation.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/mechanical_and_electrical_isolation.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/mechanical_and_electrical_isolation.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/mechanical_and_electrical_isolation.md"
               },
               {
                 "name": "safety_functions_register.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/safety_functions_register.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/safety_functions_register.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/safety_functions_register.md"
               },
               {
                 "name": "safety_integrity_and_sil_strategy.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/safety_integrity_and_sil_strategy.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/safety_integrity_and_sil_strategy.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/safety_integrity_and_sil_strategy.md"
               },
               {
                 "name": "standards_applicability_matrix.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/standards_applicability_matrix.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/standards_applicability_matrix.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/standards_applicability_matrix.md"
               },
               {
                 "name": "system_description.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/system_description.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/system_description.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/system_description.md"
               },
               {
                 "name": "ul_nec_design_requirements.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/ul_nec_design_requirements.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/ul_nec_design_requirements.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/ul_nec_design_requirements.md"
               },
               {
                 "name": "verification_and_validation_plan.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/verification_and_validation_plan.md"
+                "path": "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/verification_and_validation_plan.md",
+                "serve_path": "standards_intelligence/scenario/mini_machine_safety_design_v2/verification_and_validation_plan.md"
               }
             ]
           }
@@ -995,112 +1148,134 @@
               {
                 "name": "GENERATION_SUMMARY.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/GENERATION_SUMMARY.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/GENERATION_SUMMARY.md",
+                "serve_path": "standards_intelligence/us/nec/GENERATION_SUMMARY.md"
               },
               {
                 "name": "NEC_2023__Art090__scope_and_purpose.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art090__scope_and_purpose.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art090__scope_and_purpose.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art090__scope_and_purpose.md"
               },
               {
                 "name": "NEC_2023__Art100__definitions.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art100__definitions.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art100__definitions.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art100__definitions.md"
               },
               {
                 "name": "NEC_2023__Art110__requirements_for_electrical_installations.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art110__requirements_for_electrical_installations.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art110__requirements_for_electrical_installations.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art110__requirements_for_electrical_installations.md"
               },
               {
                 "name": "NEC_2023__Art215__feeders.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art215__feeders.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art215__feeders.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art215__feeders.md"
               },
               {
                 "name": "NEC_2023__Art230__services.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art230__services.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art230__services.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art230__services.md"
               },
               {
                 "name": "NEC_2023__Art240__overcurrent_protection.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art240__overcurrent_protection.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art240__overcurrent_protection.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art240__overcurrent_protection.md"
               },
               {
                 "name": "NEC_2023__Art250_4__purposes_of_grounding_and_bonding.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art250_4__purposes_of_grounding_and_bonding.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art250_4__purposes_of_grounding_and_bonding.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art250_4__purposes_of_grounding_and_bonding.md"
               },
               {
                 "name": "NEC_2023__Art250__grounding_and_bonding.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art250__grounding_and_bonding.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art250__grounding_and_bonding.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art250__grounding_and_bonding.md"
               },
               {
                 "name": "NEC_2023__Art300__general_wiring_methods.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art300__general_wiring_methods.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art300__general_wiring_methods.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art300__general_wiring_methods.md"
               },
               {
                 "name": "NEC_2023__Art310__conductors_for_general_wiring.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art310__conductors_for_general_wiring.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art310__conductors_for_general_wiring.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art310__conductors_for_general_wiring.md"
               },
               {
                 "name": "NEC_2023__Art408__switchboards_switchgear_and_panelboards.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art408__switchboards_switchgear_and_panelboards.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art408__switchboards_switchgear_and_panelboards.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art408__switchboards_switchgear_and_panelboards.md"
               },
               {
                 "name": "NEC_2023__Art409__industrial_control_panels.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art409__industrial_control_panels.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art409__industrial_control_panels.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art409__industrial_control_panels.md"
               },
               {
                 "name": "NEC_2023__Art430__motors_motor_circuits_and_controllers.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art430__motors_motor_circuits_and_controllers.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art430__motors_motor_circuits_and_controllers.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art430__motors_motor_circuits_and_controllers.md"
               },
               {
                 "name": "NEC_2023__Art500__hazardous_locations_general.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art500__hazardous_locations_general.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art500__hazardous_locations_general.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art500__hazardous_locations_general.md"
               },
               {
                 "name": "NEC_2023__Art504__intrinsically_safe_systems.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art504__intrinsically_safe_systems.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art504__intrinsically_safe_systems.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art504__intrinsically_safe_systems.md"
               },
               {
                 "name": "NEC_2023__Art505__zone_0_1_2_gas_vapors.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art505__zone_0_1_2_gas_vapors.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art505__zone_0_1_2_gas_vapors.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art505__zone_0_1_2_gas_vapors.md"
               },
               {
                 "name": "NEC_2023__Art670__industrial_machinery.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art670__industrial_machinery.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art670__industrial_machinery.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art670__industrial_machinery.md"
               },
               {
                 "name": "NEC_2023__Art700_702__emergency_standby_systems.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art700_702__emergency_standby_systems.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art700_702__emergency_standby_systems.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art700_702__emergency_standby_systems.md"
               },
               {
                 "name": "NEC_2023__Art725__class_1_2_3_control_circuits.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art725__class_1_2_3_control_circuits.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_2023__Art725__class_1_2_3_control_circuits.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_2023__Art725__class_1_2_3_control_circuits.md"
               },
               {
                 "name": "NEC_COMPLETION_STATUS.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_COMPLETION_STATUS.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_COMPLETION_STATUS.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_COMPLETION_STATUS.md"
               },
               {
                 "name": "NEC_OVERVIEW.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_OVERVIEW.md"
+                "path": "control-standards/rag/standards_intelligence/us/nec/NEC_OVERVIEW.md",
+                "serve_path": "standards_intelligence/us/nec/NEC_OVERVIEW.md"
               }
             ]
           },
@@ -1111,112 +1286,134 @@
               {
                 "name": "GENERATION_SUMMARY.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/GENERATION_SUMMARY.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/GENERATION_SUMMARY.md",
+                "serve_path": "standards_intelligence/us/nfpa79/GENERATION_SUMMARY.md"
               },
               {
                 "name": "NFPA79_2024__Ch01__administration.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch01__administration.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch01__administration.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch01__administration.md"
               },
               {
                 "name": "NFPA79_2024__Ch02__definitions.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch02__definitions.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch02__definitions.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch02__definitions.md"
               },
               {
                 "name": "NFPA79_2024__Ch03__general_requirements.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch03__general_requirements.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch03__general_requirements.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch03__general_requirements.md"
               },
               {
                 "name": "NFPA79_2024__Ch04__general_conditions_of_installation.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch04__general_conditions_of_installation.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch04__general_conditions_of_installation.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch04__general_conditions_of_installation.md"
               },
               {
                 "name": "NFPA79_2024__Ch05__disconnecting_means.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md"
               },
               {
                 "name": "NFPA79_2024__Ch06__overcurrent_protection.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch06__overcurrent_protection.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch06__overcurrent_protection.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch06__overcurrent_protection.md"
               },
               {
                 "name": "NFPA79_2024__Ch07__protection_against_electric_shock.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md"
               },
               {
                 "name": "NFPA79_2024__Ch08__grounding_and_bonding.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md"
               },
               {
                 "name": "NFPA79_2024__Ch09__control_circuits_and_control_functions.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md"
               },
               {
                 "name": "NFPA79_2024__Ch10__operator_interface_devices.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md"
               },
               {
                 "name": "NFPA79_2024__Ch11__control_equipment.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch11__control_equipment.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch11__control_equipment.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch11__control_equipment.md"
               },
               {
                 "name": "NFPA79_2024__Ch12__motors_and_associated_equipment.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch12__motors_and_associated_equipment.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch12__motors_and_associated_equipment.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch12__motors_and_associated_equipment.md"
               },
               {
                 "name": "NFPA79_2024__Ch13__appliances_and_accessories.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch13__appliances_and_accessories.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch13__appliances_and_accessories.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch13__appliances_and_accessories.md"
               },
               {
                 "name": "NFPA79_2024__Ch14__lighting.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch14__lighting.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch14__lighting.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch14__lighting.md"
               },
               {
                 "name": "NFPA79_2024__Ch15__transformers_and_power_supplies.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch15__transformers_and_power_supplies.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch15__transformers_and_power_supplies.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch15__transformers_and_power_supplies.md"
               },
               {
                 "name": "NFPA79_2024__Ch16__wiring_methods.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch16__wiring_methods.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch16__wiring_methods.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch16__wiring_methods.md"
               },
               {
                 "name": "NFPA79_2024__Ch17__cables_and_flexible_cords.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch17__cables_and_flexible_cords.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch17__cables_and_flexible_cords.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch17__cables_and_flexible_cords.md"
               },
               {
                 "name": "NFPA79_2024__Ch18__terminal_blocks_and_connectors.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch18__terminal_blocks_and_connectors.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch18__terminal_blocks_and_connectors.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch18__terminal_blocks_and_connectors.md"
               },
               {
                 "name": "NFPA79_2024__Ch19__marking_and_documentation.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md"
               },
               {
                 "name": "NFPA79_2024__Ch20__system_integration.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch20__system_integration.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch20__system_integration.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA79_2024__Ch20__system_integration.md"
               },
               {
                 "name": "NFPA_OVERVIEW.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA_OVERVIEW.md"
+                "path": "control-standards/rag/standards_intelligence/us/nfpa79/NFPA_OVERVIEW.md",
+                "serve_path": "standards_intelligence/us/nfpa79/NFPA_OVERVIEW.md"
               }
             ]
           },
@@ -1227,72 +1424,86 @@
               {
                 "name": "GENERATION_SUMMARY.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/ul_508a/GENERATION_SUMMARY.md"
+                "path": "control-standards/rag/standards_intelligence/us/ul_508a/GENERATION_SUMMARY.md",
+                "serve_path": "standards_intelligence/us/ul_508a/GENERATION_SUMMARY.md"
               },
               {
                 "name": "UL508A_2022__control_circuits_and_devices.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__control_circuits_and_devices.md"
+                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__control_circuits_and_devices.md",
+                "serve_path": "standards_intelligence/us/ul_508a/UL508A_2022__control_circuits_and_devices.md"
               },
               {
                 "name": "UL508A_2022__enclosures_and_environmental_ratings.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__enclosures_and_environmental_ratings.md"
+                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__enclosures_and_environmental_ratings.md",
+                "serve_path": "standards_intelligence/us/ul_508a/UL508A_2022__enclosures_and_environmental_ratings.md"
               },
               {
                 "name": "UL508A_2022__general_construction_requirements.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__general_construction_requirements.md"
+                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__general_construction_requirements.md",
+                "serve_path": "standards_intelligence/us/ul_508a/UL508A_2022__general_construction_requirements.md"
               },
               {
                 "name": "UL508A_2022__grounding_and_bonding.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__grounding_and_bonding.md"
+                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__grounding_and_bonding.md",
+                "serve_path": "standards_intelligence/us/ul_508a/UL508A_2022__grounding_and_bonding.md"
               },
               {
                 "name": "UL508A_2022__marking_and_documentation.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__marking_and_documentation.md"
+                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__marking_and_documentation.md",
+                "serve_path": "standards_intelligence/us/ul_508a/UL508A_2022__marking_and_documentation.md"
               },
               {
                 "name": "UL508A_2022__motor_controllers_and_drives.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__motor_controllers_and_drives.md"
+                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__motor_controllers_and_drives.md",
+                "serve_path": "standards_intelligence/us/ul_508a/UL508A_2022__motor_controllers_and_drives.md"
               },
               {
                 "name": "UL508A_2022__overcurrent_protection.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__overcurrent_protection.md"
+                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__overcurrent_protection.md",
+                "serve_path": "standards_intelligence/us/ul_508a/UL508A_2022__overcurrent_protection.md"
               },
               {
                 "name": "UL508A_2022__sccr_short_circuit_current_rating.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__sccr_short_circuit_current_rating.md"
+                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__sccr_short_circuit_current_rating.md",
+                "serve_path": "standards_intelligence/us/ul_508a/UL508A_2022__sccr_short_circuit_current_rating.md"
               },
               {
                 "name": "UL508A_2022__scope_and_application.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__scope_and_application.md"
+                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__scope_and_application.md",
+                "serve_path": "standards_intelligence/us/ul_508a/UL508A_2022__scope_and_application.md"
               },
               {
                 "name": "UL508A_2022__spacing_creepage_clearance.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__spacing_creepage_clearance.md"
+                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__spacing_creepage_clearance.md",
+                "serve_path": "standards_intelligence/us/ul_508a/UL508A_2022__spacing_creepage_clearance.md"
               },
               {
                 "name": "UL508A_2022__transformers_and_power_supplies.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__transformers_and_power_supplies.md"
+                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__transformers_and_power_supplies.md",
+                "serve_path": "standards_intelligence/us/ul_508a/UL508A_2022__transformers_and_power_supplies.md"
               },
               {
                 "name": "UL508A_2022__wiring_methods_and_conductors.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__wiring_methods_and_conductors.md"
+                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_2022__wiring_methods_and_conductors.md",
+                "serve_path": "standards_intelligence/us/ul_508a/UL508A_2022__wiring_methods_and_conductors.md"
               },
               {
                 "name": "UL508A_OVERVIEW.md",
                 "type": "file",
-                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_OVERVIEW.md"
+                "path": "control-standards/rag/standards_intelligence/us/ul_508a/UL508A_OVERVIEW.md",
+                "serve_path": "standards_intelligence/us/ul_508a/UL508A_OVERVIEW.md"
               }
             ]
           }
@@ -1311,67 +1522,80 @@
           {
             "name": "ac_vs_dc_motor_comparison.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/electrical_machines/ac_vs_dc_motor_comparison.md"
+            "path": "control-standards/rag/training_modules/electrical_machines/ac_vs_dc_motor_comparison.md",
+            "serve_path": "training_modules/electrical_machines/ac_vs_dc_motor_comparison.md"
           },
           {
             "name": "brushless_dc_ev_and_drone_motor_comparison.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/electrical_machines/brushless_dc_ev_and_drone_motor_comparison.md"
+            "path": "control-standards/rag/training_modules/electrical_machines/brushless_dc_ev_and_drone_motor_comparison.md",
+            "serve_path": "training_modules/electrical_machines/brushless_dc_ev_and_drone_motor_comparison.md"
           },
           {
             "name": "dc_motor_basics.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/electrical_machines/dc_motor_basics.md"
+            "path": "control-standards/rag/training_modules/electrical_machines/dc_motor_basics.md",
+            "serve_path": "training_modules/electrical_machines/dc_motor_basics.md"
           },
           {
             "name": "induction_motor_basics.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/electrical_machines/induction_motor_basics.md"
+            "path": "control-standards/rag/training_modules/electrical_machines/induction_motor_basics.md",
+            "serve_path": "training_modules/electrical_machines/induction_motor_basics.md"
           },
           {
             "name": "motor_and_vfd_equations_reference.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/electrical_machines/motor_and_vfd_equations_reference.md"
+            "path": "control-standards/rag/training_modules/electrical_machines/motor_and_vfd_equations_reference.md",
+            "serve_path": "training_modules/electrical_machines/motor_and_vfd_equations_reference.md"
           },
           {
             "name": "motor_control_methods_and_operating_regions.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/electrical_machines/motor_control_methods_and_operating_regions.md"
+            "path": "control-standards/rag/training_modules/electrical_machines/motor_control_methods_and_operating_regions.md",
+            "serve_path": "training_modules/electrical_machines/motor_control_methods_and_operating_regions.md"
           },
           {
             "name": "motor_efficiency_power_factor_and_losses.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/electrical_machines/motor_efficiency_power_factor_and_losses.md"
+            "path": "control-standards/rag/training_modules/electrical_machines/motor_efficiency_power_factor_and_losses.md",
+            "serve_path": "training_modules/electrical_machines/motor_efficiency_power_factor_and_losses.md"
           },
           {
             "name": "motor_family_comparison.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/electrical_machines/motor_family_comparison.md"
+            "path": "control-standards/rag/training_modules/electrical_machines/motor_family_comparison.md",
+            "serve_path": "training_modules/electrical_machines/motor_family_comparison.md"
           },
           {
             "name": "motor_nameplates_slip_and_torque.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/electrical_machines/motor_nameplates_slip_and_torque.md"
+            "path": "control-standards/rag/training_modules/electrical_machines/motor_nameplates_slip_and_torque.md",
+            "serve_path": "training_modules/electrical_machines/motor_nameplates_slip_and_torque.md"
           },
           {
             "name": "servo_drive_fundamentals.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/electrical_machines/servo_drive_fundamentals.md"
+            "path": "control-standards/rag/training_modules/electrical_machines/servo_drive_fundamentals.md",
+            "serve_path": "training_modules/electrical_machines/servo_drive_fundamentals.md"
           },
           {
             "name": "servo_feedback_and_inertia_matching.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/electrical_machines/servo_feedback_and_inertia_matching.md"
+            "path": "control-standards/rag/training_modules/electrical_machines/servo_feedback_and_inertia_matching.md",
+            "serve_path": "training_modules/electrical_machines/servo_feedback_and_inertia_matching.md"
           },
           {
             "name": "vfd_and_servo_architecture_diagrams.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/electrical_machines/vfd_and_servo_architecture_diagrams.md"
+            "path": "control-standards/rag/training_modules/electrical_machines/vfd_and_servo_architecture_diagrams.md",
+            "serve_path": "training_modules/electrical_machines/vfd_and_servo_architecture_diagrams.md"
           },
           {
             "name": "vfd_fundamentals.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/electrical_machines/vfd_fundamentals.md"
+            "path": "control-standards/rag/training_modules/electrical_machines/vfd_fundamentals.md",
+            "serve_path": "training_modules/electrical_machines/vfd_fundamentals.md"
           }
         ]
       },
@@ -1382,42 +1606,50 @@
           {
             "name": "conductor_ampacity_and_termination_temperature.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/fundamentals/conductor_ampacity_and_termination_temperature.md"
+            "path": "control-standards/rag/training_modules/fundamentals/conductor_ampacity_and_termination_temperature.md",
+            "serve_path": "training_modules/fundamentals/conductor_ampacity_and_termination_temperature.md"
           },
           {
             "name": "diodes_transistors_and_switching_basics.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/fundamentals/diodes_transistors_and_switching_basics.md"
+            "path": "control-standards/rag/training_modules/fundamentals/diodes_transistors_and_switching_basics.md",
+            "serve_path": "training_modules/fundamentals/diodes_transistors_and_switching_basics.md"
           },
           {
             "name": "electrical_equations_reference.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/fundamentals/electrical_equations_reference.md"
+            "path": "control-standards/rag/training_modules/fundamentals/electrical_equations_reference.md",
+            "serve_path": "training_modules/fundamentals/electrical_equations_reference.md"
           },
           {
             "name": "electrical_quantities_and_circuit_language.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/fundamentals/electrical_quantities_and_circuit_language.md"
+            "path": "control-standards/rag/training_modules/fundamentals/electrical_quantities_and_circuit_language.md",
+            "serve_path": "training_modules/fundamentals/electrical_quantities_and_circuit_language.md"
           },
           {
             "name": "equivalent_circuit_methods.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/fundamentals/equivalent_circuit_methods.md"
+            "path": "control-standards/rag/training_modules/fundamentals/equivalent_circuit_methods.md",
+            "serve_path": "training_modules/fundamentals/equivalent_circuit_methods.md"
           },
           {
             "name": "kirchhoff_laws_and_systematic_analysis.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/fundamentals/kirchhoff_laws_and_systematic_analysis.md"
+            "path": "control-standards/rag/training_modules/fundamentals/kirchhoff_laws_and_systematic_analysis.md",
+            "serve_path": "training_modules/fundamentals/kirchhoff_laws_and_systematic_analysis.md"
           },
           {
             "name": "passive_components_resistors_capacitors.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/fundamentals/passive_components_resistors_capacitors.md"
+            "path": "control-standards/rag/training_modules/fundamentals/passive_components_resistors_capacitors.md",
+            "serve_path": "training_modules/fundamentals/passive_components_resistors_capacitors.md"
           },
           {
             "name": "series_parallel_and_divider_methods.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/fundamentals/series_parallel_and_divider_methods.md"
+            "path": "control-standards/rag/training_modules/fundamentals/series_parallel_and_divider_methods.md",
+            "serve_path": "training_modules/fundamentals/series_parallel_and_divider_methods.md"
           }
         ]
       },
@@ -1428,17 +1660,20 @@
           {
             "name": "motor_and_panel_code_application.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/nec_application/motor_and_panel_code_application.md"
+            "path": "control-standards/rag/training_modules/nec_application/motor_and_panel_code_application.md",
+            "serve_path": "training_modules/nec_application/motor_and_panel_code_application.md"
           },
           {
             "name": "nec_code_reading_fundamentals.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/nec_application/nec_code_reading_fundamentals.md"
+            "path": "control-standards/rag/training_modules/nec_application/nec_code_reading_fundamentals.md",
+            "serve_path": "training_modules/nec_application/nec_code_reading_fundamentals.md"
           },
           {
             "name": "working_space_and_table_navigation.md",
             "type": "file",
-            "path": "control-standards/rag/training_modules/nec_application/working_space_and_table_navigation.md"
+            "path": "control-standards/rag/training_modules/nec_application/working_space_and_table_navigation.md",
+            "serve_path": "training_modules/nec_application/working_space_and_table_navigation.md"
           }
         ]
       }

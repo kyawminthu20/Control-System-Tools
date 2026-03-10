@@ -54,7 +54,8 @@
   <!-- Embed tree data for JS -->
   <script>
     window.RAG_TREE = {{ site.data.rag_tree | jsonify }};
-    window.RAG_BASE_URL = "https://raw.githubusercontent.com/kyawminthu20/Control-System-Tools/master/";
+    // Files are served as static assets from the same origin — no GitHub auth needed.
+    window.RAG_SERVE_BASE = "{{ '/assets/rag-files/' | relative_url }}";
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
