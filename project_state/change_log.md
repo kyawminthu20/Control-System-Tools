@@ -18,6 +18,15 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-10 — Phase 13 COMPLETE — all secondary backlog items done
+
+- `docs/crosswalks/iec61511-iec61508/index.md` — new crosswalk: process SIS (IEC 61511) vs. functional safety foundation (IEC 61508); lifecycle comparison, SIL framework, architecture constraints, prior use, clause cross-reference (~250 lines)
+- `docs/crosswalks/iec60079-nec-500-505/index.md` — new crosswalk: Zone vs. Division hazardous area; classification tables, EPL, gas groups, equipment marking, protection types, Zone/Division selection flow (~260 lines)
+- `docs/crosswalks/index.md` — 2 new rows added
+- `docs/_includes/sidebar.html` — 2 new crosswalk sidebar links
+- All remaining Phase 13 backlog items confirmed complete: industry pages (5), standards graph (IEC 60079/61511/SEMI nodes), glossary (45 terms)
+- Build: clean
+
 ### 2026-03-09 — Training site pages complete (24 modules)
 
 - `docs/training/index.md` — landing page, 24 modules in 3 groups

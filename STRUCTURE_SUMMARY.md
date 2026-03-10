@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-09 20:36:16
+**Last Auto-Updated:** 2026-03-09 20:39:17
 
 ```text
 ├── .claude/
@@ -908,7 +908,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 46242bc7af14bf7af61342f0928754a9f55af3b85e5ed37689bdc43e37538f
 │   │               ├── 0b/
 │   │               │   ├── 23e434b41214de015244201734a4457b8658eaf57d3ffa015a237ba741d88d
-│   │               │   └── 36fd9699ea3c594f2935d5b180504cca916d440e00a16fc4081cc59274562a
+│   │               │   ├── 36fd9699ea3c594f2935d5b180504cca916d440e00a16fc4081cc59274562a
+│   │               │   └── 7a4716831accfb3c6ed7db6f4bd374733d381c5216654f473051e3e62b4245
 │   │               ├── 0c/
 │   │               │   ├── 21a7d7aadd1a042168087ad4dd2323df1ae50a4de93a8da4b920963100b904
 │   │               │   └── b884b6343a61259ab5eacf2fb4394a401d05919cfd0fc5fcdc94957f0dc271
@@ -926,6 +927,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── da3413b3d068d25f0f0f6333d381ba222d1cdbc1405613dcaeeeba2b097f37
 │   │               ├── 12/
 │   │               │   └── 53ee623d4f7b3b5ec4537af00ac2095d43a65f9de7b2adc18f77cccf38bb22
+│   │               ├── 14/
+│   │               │   └── c7c0f3f2433296d036c07adf0f83e0407e081788d9f7c65bfe730106a5f4f4
 │   │               ├── 15/
 │   │               │   └── 20a9fe1914a393702bbf6c979b685d8a752a4008d15bf3a3a2898148d9a521
 │   │               ├── 16/
@@ -967,6 +970,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── e44a450c423c9eb130be0e89f59aeb0f1ed6640b8c00fe1432a47164899edc
 │   │               ├── 28/
 │   │               │   ├── 32477a313a466bb0fe39c91dfeaebe1925eae6b6a662a53115577ef0699cb2
+│   │               │   ├── 5b6f314ca288e8140e3b0815e179f5563a5b6fa4a0e855abe1cff68e9fe95f
 │   │               │   ├── 626866f3fb869decb709fc758290b6138102ae01f812803a9c05bd1f9d4144
 │   │               │   ├── b1f2ee513fb5c930f6e83980c3a9d8e84cc57ed5125ba9d1c06112014b8f53
 │   │               │   └── dd4852dc932337b5b961300ebd0a735a9adf198f740984d8983e8c6aa279a9
@@ -1072,6 +1076,9 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── d7fa4c5a9f6512886109baae864d51b7df7e83c59386d96e1730231d996117
 │   │               ├── 5c/
 │   │               │   └── 89640df2443aa0d8cc29262765c2de8514a348524c3c271900ab45566232cc
+│   │               ├── 5e/
+│   │               │   ├── 4e6869431b397914666f2b29bde912e1e5a98199db701d5f4b288384c7b154
+│   │               │   └── 70a6c2a26430305b33b80781fb68b5d28d0c1e71a4d0fda746172479d0e138
 │   │               ├── 5f/
 │   │               │   ├── 0b833a96ec0aec240d4945019807eaf088d4f47d501e20e79e187b26bd7e79
 │   │               │   └── c0437ae37bc5a23052d7cbafe7881634831bbae9709f11df7bc8310f407d09
@@ -1176,6 +1183,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 54c281d58441cd4e68f7e6f853f27334d19bc43f1eaf6f654287cf165f582a
 │   │               │   └── a1c51ed5afc909b8a8ae5ad84f56ff19bb2ccb320ef92544ad5d87ec4f4318
 │   │               ├── 96/
+│   │               │   ├── 70373548b8fa21531676109ad338263fb0a92ecb19520d1831a8b62897e439
 │   │               │   └── a35491545eb36158a850db0b7d017ba1eafcf1616d72f2588f4757e4ea910f
 │   │               ├── 98/
 │   │               │   └── b154ebeefb18f0d89106cabf20003ebc5ea1045b8c401c014b8a639e24d30b
@@ -1238,6 +1246,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 28d3db6d0c11bed2ccb7065759d8d3f6bbd9428f9cd1eb8ae5d424d3befc20
 │   │               ├── b5/
 │   │               │   └── 962ee97213d04243717791ac01e6d190aff82508812a68cf21bfa3df56b4ca
+│   │               ├── b8/
+│   │               │   └── f65d0e5d7de5d1ba951ae9bd32c722d3a728d14d79046d3e41a0810942a6b2
 │   │               ├── b9/
 │   │               │   ├── 03ac58ab61a396e1ccb8c8ac90f164d0c10280e67126a7c690f61b5107df66
 │   │               │   └── 36e833f0aee9829a7dd35393c778ee816d7d2ec3433e7629c9d2513aa329b3
@@ -1373,6 +1383,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── fc/
 │   │               │   ├── 5cd15a7922e80358a840029fb84cba57a85bff721a4533671cee889d09c67a
 │   │               │   └── 7fd42ac2ea9db79760e7459de6ef1c2141001780d192ab516c5d1e23fe17ba
+│   │               ├── fd/
+│   │               │   └── af8159150bc679d8337ef5a4200d901204d5d436413abf6c200b3cfe5debdd
 │   │               └── fe/
 │   │                   └── aedf95f4ba5c38eabf393a1eb91aa62c4882b18505b62c3ae0481eaba08399
 │   ├── Gemfile
@@ -1686,6 +1698,10 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │               └── working_space_and_table_navigation.md
 │   │   ├── crosswalks/
 │   │   │   ├── compare/
+│   │   │   │   └── index.html
+│   │   │   ├── iec60079-nec-500-505/
+│   │   │   │   └── index.html
+│   │   │   ├── iec61511-iec61508/
 │   │   │   │   └── index.html
 │   │   │   ├── index.html
 │   │   │   ├── nfpa79-iec60204/
@@ -2184,6 +2200,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── compare/
 │   │   │   └── index.md
 │   │   ├── iec60079-nec-500-505/
+│   │   │   └── index.md
 │   │   ├── iec61511-iec61508/
 │   │   │   └── index.md
 │   │   ├── index.md

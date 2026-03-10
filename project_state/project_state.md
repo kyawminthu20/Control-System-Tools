@@ -1,9 +1,9 @@
 # Project State
 
-**Last Updated:** 2026-03-09
+**Last Updated:** 2026-03-10
 **Status:** Active
-**Current Phase:** Phase 13 IN PROGRESS — RAG File Browser + Secondary Backlog
-**Next Phase:** Phase 13 remainder (see backlog below)
+**Current Phase:** Phase 13 COMPLETE — Secondary Backlog
+**Next Phase:** Maintenance / ad hoc additions
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -283,20 +283,25 @@ EV motor files held as WIP. No new parallel layer created.
 - [x] `docs/training/nec-application/` — 3 pages
 - [x] Sidebar: Training section added
 
-### Thin industry pages (7 stubs remaining)
-- [ ] `docs/industries/energy/index.md` — deepen: IEC 61511 (process), IEC 60204-1, NEC, utility NERC CIP if applicable
-- [ ] `docs/industries/food-and-beverage/index.md` — deepen: hygiene-grade enclosures, NFPA 79, wash-down requirements
-- [ ] `docs/industries/medical/index.md` — deepen: IEC 60601-1, ISO 14971; note corpus gap
-- [ ] `docs/industries/nuclear/index.md` — deepen: IEC 61513, IEEE 603; note corpus gap
-- [ ] `docs/industries/commercial/index.md` — deepen: NEC, IBC, building automation scope
+### Thin industry pages — COMPLETE
+- [x] `docs/industries/energy/index.md` — deepened: phase table, selection flow, key decisions, checklist
+- [x] `docs/industries/food-and-beverage/index.md` — deepened: washdown, hygienic design gaps noted, checklist
+- [x] `docs/industries/medical/index.md` — deepened: IEC 60601-1/ISO 14971 gaps noted, corpus status table, checklist
+- [x] `docs/industries/nuclear/index.md` — deepened: IEEE 603/IEC 61513 gaps noted, corpus status table, checklist
+- [x] `docs/industries/commercial/index.md` — deepened: NEC/IBC scope, Class 2 wiring, AHJ submittal, checklist
 
-### Standards graph expansion
-- [ ] Add IEC 60079, IEC 61511, SEMI S2 nodes to `docs/_data/standards_graph.yml` (currently 12 nodes — missing hazardous area and semiconductor families)
+### Standards graph expansion — COMPLETE
+- [x] IEC 60079 node — `docs/_data/standards_graph.yml` (12+ nodes; hazardous area family)
+- [x] IEC 61511 node — functional safety family
+- [x] SEMI S2/S8/S14 node — semiconductor family
+- [x] Edges: IEC 60079 ↔ NEC (Zone via Art. 505), IEC 60079 ↔ IEC 61511 (hazardous-area process protection), SEMI ↔ IEC 60204-1, SEMI ↔ ISO 12100
 
-### Glossary expansion
-- [ ] Add O&G/SEMI/hazardous-area terms: SIF, SRS, LOPA, PFDavg, IPL, EPL, T-code, Ex ia, SECS/GEM, PTI
-- [ ] Current count: 28 terms — target ~45
+### Glossary expansion — COMPLETE
+- [x] Expanded from 28 terms to 45 terms
+- [x] Added O&G/SEMI/hazardous-area terms: SIF, SRS, LOPA, PFDavg, IPL, EPL, T-code, Ex ia, SECS/GEM, PTI
 
-### Crosswalk additions
-- [ ] IEC 61511 ↔ IEC 61508 (application vs. foundation) crosswalk
-- [ ] IEC 60079 ↔ NEC Art. 500/505 (Zone vs. Division) crosswalk
+### Crosswalk additions — COMPLETE
+- [x] `docs/crosswalks/iec61511-iec61508/index.md` — IEC 61511 ↔ IEC 61508 (application vs. foundation); lifecycle comparison, SIL framework, architecture constraints, prior use, clause cross-reference
+- [x] `docs/crosswalks/iec60079-nec-500-505/index.md` — IEC 60079 ↔ NEC Art. 500/505 (Zone vs. Division); classification tables, EPL, gas groups, equipment marking, protection types, installation rules
+- [x] `docs/crosswalks/index.md` — updated with 2 new rows
+- [x] `docs/_includes/sidebar.html` — 2 new crosswalk links added
