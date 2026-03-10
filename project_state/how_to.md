@@ -1,6 +1,6 @@
 # How To
 
-**Last Updated:** 2026-03-06
+**Last Updated:** 2026-03-10
 **Status:** Active
 
 ## Purpose
@@ -120,3 +120,63 @@ Live URL: `https://kyawminthu20.github.io/Control-System-Tools/`
 - CI uses Ruby 3.2 via `ruby/setup-ruby@v1`
 - `baseurl: "/Control-System-Tools"` is set in `docs/_config.yml`
 - `docs/_site/`, `docs/vendor/`, `docs/.jekyll-cache/` are gitignored
+
+---
+
+## Adding New RAG Files
+
+RAG files live in `control-standards/rag/`. After adding or editing files there, run these steps to make them visible in the RAG file browser on the site.
+
+### 1. Add your `.md` file(s)
+
+Place the file anywhere under `control-standards/rag/`, maintaining the existing folder structure.
+
+```
+control-standards/rag/
+  standards_intelligence/us/nec/        ← US standards
+  standards_intelligence/international/ ← International standards
+  training_modules/                     ← Training content
+  design_framework/                     ← Design guides and workflows
+  commissioning_checklists/             ← Checklists
+  meta/                                 ← Status and admin files
+```
+
+### 2. Regenerate the tree and static assets
+
+From the **repo root**:
+
+```bash
+python3 tools/generate_rag_tree.py
+```
+
+This does two things:
+- Copies all `.md` files from `control-standards/rag/` into `docs/assets/rag-files/` (served by GitHub Pages)
+- Rewrites `docs/_data/rag_tree.json` (the file tree baked into the browser page)
+
+### 3. Build locally to verify (optional)
+
+```bash
+cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build
+```
+
+Check that your file appears in `docs/_site/assets/rag-files/` and that `docs/_site/rag-browser/index.html` contains a button for it.
+
+### 4. Stage, commit, and push
+
+```bash
+git add control-standards/rag/<your-file>.md \
+        docs/_data/rag_tree.json \
+        docs/assets/rag-files/
+
+git commit -m "feat(rag): add <description>"
+git push
+```
+
+GitHub Actions will rebuild the site. Once deployed, the file appears in the RAG browser at:
+`https://kyawminthu20.github.io/Control-System-Tools/rag-browser/`
+
+### Notes
+
+- `docs/assets/rag-files/` is a generated mirror of `control-standards/rag/` — never edit files there directly; always edit in `control-standards/rag/` and re-run the generator.
+- `README.md` files inside `control-standards/rag/` are intentionally skipped by the generator.
+- Files with spaces in their names are supported but prefer underscores for consistency.
