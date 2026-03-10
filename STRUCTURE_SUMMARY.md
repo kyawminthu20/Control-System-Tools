@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-09 19:46:41
+**Last Auto-Updated:** 2026-03-09 19:59:17
 
 ```text
 ├── .claude/
@@ -34,6 +34,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   ├── console-2026-03-08T21-19-03-191Z.log
 │   ├── console-2026-03-08T21-19-12-540Z.log
 │   ├── console-2026-03-09T14-33-31-511Z.log
+│   ├── console-2026-03-10T02-49-09-555Z.log
 │   └── page-2026-03-09T14-32-39-211Z.png
 ├── .python-version
 ├── .venv/
@@ -376,9 +377,6 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── promotion_checklist_drafts_to_rag.md
 │   │   └── release_notes.md
 │   ├── rag/
-│   │   ├── MIGRATION_SUMMARY_20260115_221742.md
-│   │   ├── RAG_DIRECTORY_STATUS.md
-│   │   ├── VERSION_OVERVIEW.md
 │   │   ├── commissioning_checklists/
 │   │   │   ├── README.md
 │   │   │   ├── _index.yaml
@@ -437,6 +435,9 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │       ├── US_EU_Machine_Compliance_Wizard.md
 │   │   │       ├── us_eu_delta_report_template.md
 │   │   │       └── us_eu_wizard_rules.yaml
+│   │   ├── meta/
+│   │   │   ├── RAG_DIRECTORY_STATUS.md
+│   │   │   └── VERSION_OVERVIEW.md
 │   │   ├── standards_intelligence/
 │   │   │   ├── README.md
 │   │   │   ├── _glossary.md

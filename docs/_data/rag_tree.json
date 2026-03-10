@@ -1,20 +1,5 @@
 [
   {
-    "name": "MIGRATION_SUMMARY_20260115_221742.md",
-    "type": "file",
-    "path": "control-standards/rag/MIGRATION_SUMMARY_20260115_221742.md"
-  },
-  {
-    "name": "RAG_DIRECTORY_STATUS.md",
-    "type": "file",
-    "path": "control-standards/rag/RAG_DIRECTORY_STATUS.md"
-  },
-  {
-    "name": "VERSION_OVERVIEW.md",
-    "type": "file",
-    "path": "control-standards/rag/VERSION_OVERVIEW.md"
-  },
-  {
     "name": "commissioning_checklists",
     "type": "dir",
     "children": [
@@ -193,6 +178,22 @@
             "path": "control-standards/rag/design_framework/us_eu_compliance_wizard/us_eu_delta_report_template.md"
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "meta",
+    "type": "dir",
+    "children": [
+      {
+        "name": "RAG_DIRECTORY_STATUS.md",
+        "type": "file",
+        "path": "control-standards/rag/meta/RAG_DIRECTORY_STATUS.md"
+      },
+      {
+        "name": "VERSION_OVERVIEW.md",
+        "type": "file",
+        "path": "control-standards/rag/meta/VERSION_OVERVIEW.md"
       }
     ]
   },
