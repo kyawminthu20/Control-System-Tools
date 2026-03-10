@@ -152,7 +152,7 @@ flowchart TD
 | Safety functions present (machine guards, E-stop) | ISO 13849-1 (PL path) or IEC 62061 (SIL path) |
 | Process safety instrumented function | IEC 61511 |
 | Networked / connected control system | IEC 62443 (cybersecurity) |
-| Hazardous area (classified locations) | IEC 60079 family <span class="badge badge--verify">TO VERIFY</span> |
+| Hazardous area (classified locations) | IEC 60079 family <span class="badge badge--complete">Complete</span> |
 | Safety PLC software | IEC 61508-3 (via IEC 62061 or IEC 61511) |
 
 ---
@@ -179,14 +179,14 @@ Many engineers confuse these three overlapping standards. The table below clarif
 | NFPA 79 2024 | Complete |
 | UL 508A 2022 | Complete |
 | IEC 60204-1 2018 | Complete |
-| ISO 12100 2010 | Planned <span class="badge badge--verify">TO VERIFY</span> |
-| ISO 13849-1 2023 | Planned <span class="badge badge--verify">TO VERIFY</span> |
-| IEC 62061 2021 | Planned <span class="badge badge--verify">TO VERIFY</span> |
-| IEC 61508 2010 | Planned <span class="badge badge--verify">TO VERIFY</span> |
-| IEC 61511 2016 | Planned — limited coverage <span class="badge badge--verify">TO VERIFY</span> |
+| ISO 12100 2010 | Complete <span class="badge badge--complete">Complete</span> |
+| ISO 13849-1 2023 | Complete <span class="badge badge--complete">Complete</span> |
+| IEC 62061 2021 | Complete <span class="badge badge--complete">Complete</span> |
+| IEC 61508 2010 | Complete <span class="badge badge--complete">Complete</span> |
+| IEC 61511 2016 | Complete <span class="badge badge--complete">Complete</span> |
 | IEC 62443 | Routing reference only <span class="badge badge--verify">TO VERIFY</span> |
-| IEC 60079 family | Not confirmed in corpus <span class="badge badge--gap">TO VERIFY</span> |
-| SEMI S2/S8/S14 | Not in corpus <span class="badge badge--gap">NOT IN CORPUS</span> |
+| IEC 60079 family | Complete <span class="badge badge--complete">Complete</span> |
+| SEMI S2/S8/S14 | Complete <span class="badge badge--complete">Complete</span> |
 
 ---
 

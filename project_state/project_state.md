@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-03-09
 **Status:** Active
-**Current Phase:** Phase 12 COMPLETE — Offshore / Marine Industry Overlay
-**Next Phase:** Phase 13 — Secondary Backlog (see backlog below)
+**Current Phase:** Phase 13 IN PROGRESS — RAG File Browser + Secondary Backlog
+**Next Phase:** Phase 13 remainder (see backlog below)
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -265,6 +265,16 @@ EV motor files held as WIP. No new parallel layer created.
 - Medical, nuclear, marine class rules — not in corpus (no plan)
 
 ## Phase 13 Backlog (Secondary Backlog)
+
+### RAG File Browser — COMPLETE
+- [x] `tools/generate_rag_tree.py` — walks `control-standards/rag/`, outputs nested JSON
+- [x] `docs/_data/rag_tree.json` — 236 file buttons, 7 top-level entries
+- [x] `docs/_layouts/rag-browser.html` — two-panel layout (tree + content); marked.js + DOMPurify CDN
+- [x] `docs/_includes/rag-tree-nodes.html` — recursive Jekyll include for nested `<details>` tree
+- [x] `docs/rag-browser/index.md` — page at `/rag-browser/`
+- [x] `docs/assets/js/rag-browser.js` — click handler, GitHub raw fetch, DOMPurify sanitization, mermaid re-init
+- [x] `docs/assets/css/main.css` — RAG browser section (tree panel, file content, prose, states)
+- [x] `docs/_includes/sidebar.html` — "RAG Files" link added to Reference section
 
 ### Training site pages — COMPLETE
 - [x] `docs/training/index.md` — landing page, 24 modules, 3 groups

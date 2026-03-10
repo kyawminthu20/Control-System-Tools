@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-09 14:28:33
+**Last Auto-Updated:** 2026-03-09 19:46:41
 
 ```text
 ├── .claude/
@@ -966,6 +966,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── e44a450c423c9eb130be0e89f59aeb0f1ed6640b8c00fe1432a47164899edc
 │   │               ├── 28/
 │   │               │   ├── 32477a313a466bb0fe39c91dfeaebe1925eae6b6a662a53115577ef0699cb2
+│   │               │   ├── 626866f3fb869decb709fc758290b6138102ae01f812803a9c05bd1f9d4144
 │   │               │   ├── b1f2ee513fb5c930f6e83980c3a9d8e84cc57ed5125ba9d1c06112014b8f53
 │   │               │   └── dd4852dc932337b5b961300ebd0a735a9adf198f740984d8983e8c6aa279a9
 │   │               ├── 2a/
@@ -1197,6 +1198,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── ab8a89eecbb75b021354dc570a802d76726d522ee29946a3d5b342db30d77f
 │   │               ├── a2/
 │   │               │   └── 8e2ef91e74d4e0d9af056141b1aa5c6a84d61d339e66103419b15ddf62e9ec
+│   │               ├── a4/
+│   │               │   └── b4c6d625ca850c26e0225567ebce4c0638799f6665a4af6bb55c000958867d
 │   │               ├── a5/
 │   │               │   ├── 94d5cef218e42ffd6252ba7587c9163678a26eee6a72988f3252f6d5352c8b
 │   │               │   └── ce0567a59bbb95a147ad313bdbb5e9a6f80e3b1071ac421f6b3d4183b96d22
@@ -1376,15 +1379,18 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   ├── _config.yml
 │   ├── _data/
 │   │   ├── glossary.yml
+│   │   ├── rag_tree.json
 │   │   └── standards_graph.yml
 │   ├── _includes/
 │   │   ├── context-panel.html
+│   │   ├── rag-tree-nodes.html
 │   │   ├── sidebar.html
 │   │   ├── standards-graph.html
 │   │   ├── topnav.html
 │   │   └── trust-boundary.html
 │   ├── _layouts/
-│   │   └── default.html
+│   │   ├── default.html
+│   │   └── rag-browser.html
 │   ├── _site/
 │   │   ├── about/
 │   │   │   └── index.html
@@ -1396,7 +1402,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── img/
 │   │   │   │   └── favicon.svg
 │   │   │   └── js/
-│   │   │       └── main.js
+│   │   │       ├── main.js
+│   │   │       └── rag-browser.js
 │   │   ├── crosswalks/
 │   │   │   ├── compare/
 │   │   │   │   └── index.html
@@ -1477,8 +1484,11 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-08-theme-switching-design.md
 │   │   │   ├── 2026-03-08-theme-switching-implementation.md
 │   │   │   ├── 2026-03-09-phase12-offshore-marine-overlay.md
+│   │   │   ├── 2026-03-09-rag-browser-design.md
 │   │   │   ├── 2026-03-09-training-site-pages-design.md
 │   │   │   └── 2026-03-09-training-site-pages-plan.md
+│   │   ├── rag-browser/
+│   │   │   └── index.html
 │   │   ├── scenarios/
 │   │   │   ├── global-machine/
 │   │   │   │   └── index.html
@@ -1607,7 +1617,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── img/
 │   │   │   └── favicon.svg
 │   │   └── js/
-│   │       └── main.js
+│   │       ├── main.js
+│   │       └── rag-browser.js
 │   ├── crosswalks/
 │   │   ├── compare/
 │   │   │   └── index.md
@@ -1691,6 +1702,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── 2026-03-09-rag-browser-design.md
 │   │   ├── 2026-03-09-training-site-pages-design.md
 │   │   └── 2026-03-09-training-site-pages-plan.md
+│   ├── rag-browser/
+│   │   └── index.md
 │   ├── scenarios/
 │   │   ├── global-machine/
 │   │   │   └── index.md
@@ -5582,6 +5595,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   ├── README.md
 │   ├── fix_ai_boundaries.py
 │   ├── generate_rag_index.py
+│   ├── generate_rag_tree.py
 │   ├── generate_standards_overview.py
 │   ├── project_automator.py
 │   ├── setup_hooks.sh

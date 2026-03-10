@@ -77,7 +77,6 @@ nodes:
     label: "IEC 60079"
     family: hazardous-area
     url: "/Control-System-Tools/standards/hazardous-area/iec-60079/"
-    planned: true
     x: 550
     y: 320
 
@@ -85,7 +84,6 @@ nodes:
     label: "SEMI S2/S8/S14"
     family: semiconductor
     url: "/Control-System-Tools/standards/semiconductor/semi/"
-    planned: true
     x: 550
     y: 220
 
@@ -155,7 +153,17 @@ edges:
     type: aligns-with
     label: "Zone system via Art. 505"
 
+  - source: iec60079
+    target: iec61511
+    type: pairs-with
+    label: "hazardous-area process protection"
+
   - source: semi
     target: iec60204
     type: aligns-with
     label: "semiconductor equipment"
+
+  - source: semi
+    target: iso12100
+    type: requires
+    label: "equipment risk assessment"

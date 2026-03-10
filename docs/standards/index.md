@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Standards Explorer"
-description: "Browse industrial automation standards by family: US Electrical, International Machinery, Functional Safety."
+description: "Browse industrial automation standards by family: US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, and Semiconductor."
 breadcrumb:
   - name: "Standards"
 repo_path: "control-standards/rag/standards_intelligence/"
@@ -26,6 +26,8 @@ International / CE marking?  → IEC 60204-1 + ISO 12100 + ISO 13849-1
 Safety functions (PL)?       → ISO 13849-1 + IEC 62061
 Safety functions (SIL)?      → IEC 62061 (machinery) or IEC 61511 (process)
 Process SIS?                 → IEC 61511 + IEC 61508
+Hazardous-area / Ex?         → IEC 60079 + NEC Art. 500/504/505
+Semiconductor tool / fab?    → SEMI S2/S8/S14 + IEC 60204-1 + NFPA 79
 Global (US + EU)?            → NFPA 79 + IEC 60204-1 + ISO 13849-1 (design to most restrictive)
 ```
 
@@ -57,11 +59,11 @@ Global (US + EU)?            → NFPA 79 + IEC 60204-1 + ISO 13849-1 (design to 
 
 | Standard | Edition | Scope | Status |
 |----------|---------|-------|--------|
-| [ISO 12100]({{ '/standards/functional-safety/iso-12100/' | relative_url }}) | 2010 | Risk assessment and risk reduction | Planned <span class="badge badge--verify">TO VERIFY</span> |
-| [ISO 13849-1]({{ '/standards/functional-safety/iso-13849-1/' | relative_url }}) | 2023 | Safety of machinery — PL approach | Planned <span class="badge badge--verify">TO VERIFY</span> |
-| [IEC 62061]({{ '/standards/functional-safety/iec-62061/' | relative_url }}) | 2021 | Functional safety — machinery SIL approach | Planned <span class="badge badge--verify">TO VERIFY</span> |
-| [IEC 61508]({{ '/standards/functional-safety/iec-61508/' | relative_url }}) | 2010 | Functional safety of E/E/PE systems | Planned <span class="badge badge--verify">TO VERIFY</span> |
-| [IEC 61511]({{ '/standards/functional-safety/iec-61511/' | relative_url }}) | 2016 | Functional safety — process industry | Planned <span class="badge badge--verify">TO VERIFY</span> |
+| [ISO 12100]({{ '/standards/functional-safety/iso-12100/' | relative_url }}) | 2010 | Risk assessment and risk reduction | <span class="badge badge--complete">Complete</span> |
+| [ISO 13849-1]({{ '/standards/functional-safety/iso-13849-1/' | relative_url }}) | 2023 | Safety of machinery — PL approach | <span class="badge badge--complete">Complete</span> |
+| [IEC 62061]({{ '/standards/functional-safety/iec-62061/' | relative_url }}) | 2021 | Functional safety — machinery SIL approach | <span class="badge badge--complete">Complete</span> |
+| [IEC 61508]({{ '/standards/functional-safety/iec-61508/' | relative_url }}) | 2010 | Functional safety of E/E/PE systems | <span class="badge badge--complete">Complete</span> |
+| [IEC 61511]({{ '/standards/functional-safety/iec-61511/' | relative_url }}) | 2016 | Functional safety — process industry | <span class="badge badge--complete">Complete</span> |
 
 <p><a href="{{ '/standards/functional-safety/' | relative_url }}">View Functional Safety family page &rarr;</a></p>
 
@@ -83,11 +85,17 @@ Global (US + EU)?            → NFPA 79 + IEC 60204-1 + ISO 13849-1 (design to 
 |----------|-----------|-------|--------|
 | [IEC 60079 (6 parts)]({{ '/standards/hazardous-area/iec-60079/' | relative_url }}) | IEC | Explosive atmosphere equipment and installation | <span class="badge badge--complete">Complete</span> |
 
+<p><a href="{{ '/standards/hazardous-area/' | relative_url }}">View Hazardous Area family page &rarr;</a></p>
+
+---
+
 ## Semiconductor Equipment Standards
 
 | Standard | Publisher | Scope | Status |
 |----------|-----------|-------|--------|
 | [SEMI S2 / S8 / S14]({{ '/standards/semiconductor/semi/' | relative_url }}) | SEMI | Semiconductor equipment safety, ergonomics, fire risk | <span class="badge badge--complete">Complete</span> |
+
+<p><a href="{{ '/standards/semiconductor/' | relative_url }}">View Semiconductor family page &rarr;</a></p>
 
 ---
 
@@ -110,5 +118,7 @@ graph TD
     IEC61131[IEC 61131-3] --> IEC62061
     IEC61131 --> IEC61508
     IEC60079[IEC 60079 Family] --> IEC61511
+    SEMI[SEMI S2/S8/S14] --> IEC60204
+    SEMI --> ISO12100
 </pre>
 </div>

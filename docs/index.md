@@ -44,7 +44,7 @@ description: "Navigate industrial automation standards families, lifecycle stage
     <p class="card__desc">Risk assessment and safety function design. PL (Performance Level) path via ISO 13849-1; SIL path via IEC 62061 or IEC 61511 for process.</p>
     <div class="card__path">rag/international/functional_safety/</div>
     <a href="{{ '/standards/functional-safety/' | relative_url }}" class="card__link">View family &rarr;</a>
-    <span class="badge badge--verify">TO VERIFY</span>
+    <span class="badge badge--complete">Complete</span>
   </div>
 
   <div class="card">
@@ -155,10 +155,10 @@ description: "Navigate industrial automation standards families, lifecycle stage
 
 | Industry | US Path | International Path | Safety Method | Special Overlays |
 |----------|---------|-------------------|---------------|------------------|
-| **Semiconductor** | NEC, NFPA 79, UL 508A | IEC 60204-1, ISO 13849-1 | PL or SIL | SEMI S2/S8/S14 <span class="badge badge--gap">NOT IN CORPUS</span> |
+| **Semiconductor** | NEC, NFPA 79, UL 508A | IEC 60204-1, ISO 13849-1 | PL or SIL | SEMI S2/S8/S14 <span class="badge badge--complete">Complete</span> |
 | **Food &amp; Beverage** | NEC, NFPA 79, UL 508A | IEC 60204-1 | PL | Washdown, hygienic design |
 | **Energy** | NEC, NFPA 79 | IEC 60204-1, IEC 62443 | SIL | Outdoor, process safety, cybersecurity |
-| **Petroleum / Oil &amp; Gas** | NEC, NFPA 79 | IEC 61511, IEC 60079 | SIL | Hazardous area <span class="badge badge--verify">TO VERIFY</span> |
+| **Petroleum / Oil &amp; Gas** | NEC, NFPA 79 | IEC 61511, IEC 60079 | SIL | Hazardous area <span class="badge badge--complete">Complete</span> |
 | **Marine** | NEC | IEC 60204-1 | PL / SIL | Marine class rules |
 | **Medical** | NEC, FDA regs | IEC 60204-1, IEC 62304 | SIL | FDA, software lifecycle |
 | **Nuclear** | NEC, IEEE | IEC 60204-1 | SIL | Nuclear QA |
@@ -194,7 +194,7 @@ description: "Navigate industrial automation standards families, lifecycle stage
     <span class="scenario-card__num">Scenario 03</span>
     <span class="scenario-card__title">Process Skid Shutdown System</span>
     <p class="scenario-card__start"><strong>Start with:</strong> IEC 61511 + IEC 61508 (foundation)</p>
-    <p style="font-size:0.78rem;color:var(--color-text-muted);">SIS / ESD system for process industry. IEC 61511 is the application standard; IEC 61508 is the foundation lifecycle standard. <span class="badge badge--verify">LIMITED LOCAL COVERAGE</span></p>
+    <p style="font-size:0.78rem;color:var(--color-text-muted);">SIS / ESD system for process industry. IEC 61511 is the application standard; IEC 61508 is the foundation lifecycle standard. <span class="badge badge--complete">CORPUS COMPLETE</span></p>
     <a href="{{ '/scenarios/process-skid/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
   </div>
 
@@ -210,7 +210,7 @@ description: "Navigate industrial automation standards families, lifecycle stage
     <span class="scenario-card__num">Scenario 05</span>
     <span class="scenario-card__title">Semiconductor Equipment Compliance</span>
     <p class="scenario-card__start"><strong>Start with:</strong> 15-Standard Minimum Compliance Stack</p>
-    <p style="font-size:0.78rem;color:var(--color-text-muted);">Complex compliance stack for semiconductor fab equipment. SEMI S2/S8/S14 required but <span class="badge badge--gap">NOT IN LOCAL CORPUS</span>. See industry overlay for guidance.</p>
+    <p style="font-size:0.78rem;color:var(--color-text-muted);">Complex compliance stack for semiconductor fab equipment. SEMI S2/S8/S14 are now in the local corpus alongside the industry overlay.</p>
     <a href="{{ '/scenarios/semiconductor-equipment/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
   </div>
 </div>
@@ -232,12 +232,16 @@ description: "Navigate industrial automation standards families, lifecycle stage
 ├── international/
 │   ├── machinery/
 │   │   └── iec_60204_1/      ← IEC 60204-1:2018 — 15 clauses
-│   └── functional_safety/
-│       ├── iso_13849_1/      ← ISO 13849-1:2023 [planned]
-│       ├── iso_12100/        ← ISO 12100:2010 [planned]
-│       ├── iec_62061/        ← IEC 62061:2021 [planned]
-│       ├── iec_61508/        ← IEC 61508:2010 [planned]
-│       └── iec_61511/        ← IEC 61511:2016 [planned]
+│   ├── functional_safety/
+│   │   ├── iso_13849_1/      ← ISO 13849-1:2023 [complete]
+│   │   ├── iso_12100/        ← ISO 12100:2010 [complete]
+│   │   ├── iec_62061/        ← IEC 62061:2021 [complete]
+│   │   ├── iec_61508/        ← IEC 61508:2010 [complete]
+│   │   └── iec_61511/        ← IEC 61511:2016 [complete]
+│   ├── hazardous_area/
+│   │   └── iec_60079/        ← IEC 60079 series — 6 parts
+│   └── semiconductor/
+│       └── semi/             ← SEMI S2/S8/S14 — 3 standards
 ├── crosswalks/
 │   └── overlap_matrix/       ← NFPA79↔IEC60204, UL508A/NEC, decision workflow
 ├── reference_models/         ← 7-layer arch, safety arch, 15-std stack, diagrams

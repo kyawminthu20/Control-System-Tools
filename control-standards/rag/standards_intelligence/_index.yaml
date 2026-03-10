@@ -52,45 +52,65 @@ standards:
         folder: "international/functional_safety/iso_13849_1"
         edition: "2023"
         jurisdiction: "Global"
-        elements: "TBD"
+        elements: 6
         element_type: "clauses"
-        status: "planned"
+        status: "complete"
 
       - standard_id: "ISO_12100_2010"
         standard_name: "Risk Assessment and Risk Reduction"
         folder: "international/functional_safety/iso_12100"
         edition: "2010"
         jurisdiction: "Global"
-        elements: "TBD"
+        elements: 5
         element_type: "clauses"
-        status: "planned"
+        status: "complete"
 
       - standard_id: "IEC_62061_2021"
         standard_name: "Functional Safety - Safety Control Systems"
         folder: "international/functional_safety/iec_62061"
         edition: "2021"
         jurisdiction: "Global"
-        elements: "TBD"
+        elements: 4
         element_type: "clauses"
-        status: "planned"
+        status: "complete"
 
       - standard_id: "IEC_61508_2010"
         standard_name: "Functional Safety of Electrical/Electronic Systems"
         folder: "international/functional_safety/iec_61508"
         edition: "2010"
         jurisdiction: "Global"
-        elements: "TBD"
+        elements: 4
         element_type: "parts"
-        status: "planned"
+        status: "complete"
 
       - standard_id: "IEC_61511_2016"
         standard_name: "Functional Safety - Process Industry"
         folder: "international/functional_safety/iec_61511"
         edition: "2016"
         jurisdiction: "Global"
-        elements: "TBD"
+        elements: 4
+        element_type: "documents"
+        status: "complete"
+
+    hazardous_area:
+      - standard_id: "IEC_60079"
+        standard_name: "Explosive Atmospheres"
+        folder: "international/hazardous_area/iec_60079"
+        edition: "Series"
+        jurisdiction: "Global"
+        elements: 6
         element_type: "parts"
-        status: "planned"
+        status: "complete"
+
+    semiconductor:
+      - standard_id: "SEMI_S2_S8_S14"
+        standard_name: "Semiconductor Equipment Safety Guidelines"
+        folder: "international/semiconductor/semi"
+        edition: "S2 / S8 / S14"
+        jurisdiction: "Global semiconductor industry"
+        elements: 3
+        element_type: "standards"
+        status: "complete"
 
 topic_routing:
   grounding_bonding:
@@ -223,6 +243,14 @@ notes: |
     - Use ISO 12100 for risk assessment
     - Use routing/standards_applicability.md for project and market routing
     - Use reference_models/software_safety_and_intrinsic_safety_standards.md for safety PLC software, redundancy, and intrinsic-safety routing
+
+  For hazardous-area projects:
+    - Use IEC 60079 for Ex equipment, area classification, installation, and inspection
+    - Coordinate with NEC hazardous-location articles for US installations
+
+  For semiconductor equipment:
+    - Use SEMI S2 / S8 / S14 with IEC 60204-1, NFPA 79, and ISO 12100
+    - Add IEC 62443 when the tool is networked or remotely supported
 
 changelog:
   - date: "2026-03-05"

@@ -13,7 +13,7 @@ breadcrumb:
   <h1>Standards Relationship Graph</h1>
 </div>
 
-<p>Click any standard to open its reference page. Hover a node to highlight its connections. Hover an edge to see the relationship label. Dashed nodes are planned (not yet in corpus).</p>
+<p>Click any standard to open its reference page. Hover a node to highlight its connections. Hover an edge to see the relationship label. Dashed styling is reserved for planned coverage when present.</p>
 
 {% include standards-graph.html mode="full" container_id="standards-graph-full" %}
 

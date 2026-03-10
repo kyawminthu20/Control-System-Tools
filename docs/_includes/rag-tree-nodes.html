@@ -1,0 +1,20 @@
+{% for node in include.nodes %}
+  {% if node.type == "dir" %}
+  <li class="rag-tree__dir" role="treeitem" aria-expanded="false">
+    <details class="rag-dir-details">
+      <summary class="rag-dir-name">
+        <span class="rag-icon rag-icon--dir">&#9654;</span>{{ node.name }}
+      </summary>
+      <ul class="rag-tree rag-tree--nested" role="group">
+        {% include rag-tree-nodes.html nodes=node.children %}
+      </ul>
+    </details>
+  </li>
+  {% elsif node.type == "file" %}
+  <li class="rag-tree__file" role="treeitem">
+    <button class="rag-file-btn" data-path="{{ node.path }}">
+      <span class="rag-icon rag-icon--file">&#128196;</span>{{ node.name }}
+    </button>
+  </li>
+  {% endif %}
+{% endfor %}

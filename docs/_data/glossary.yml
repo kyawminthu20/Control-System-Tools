@@ -597,3 +597,372 @@
     - PL
     - SIL
     - E-stop
+
+- term: Atmospheres Explosibles
+  acronym: ATEX
+  domain: regulatory
+  definition: >
+    The European regulatory and certification framework for equipment and protective
+    systems used in potentially explosive atmospheres. ATEX markings are commonly
+    seen alongside IEC 60079 concepts such as EPL, gas group, and T-code. For
+    multinational projects, engineers often compare ATEX certification with IECEx
+    acceptance and local NEC hazardous-location rules.
+  standard_pages:
+    - url: /standards/hazardous-area/iec-60079/
+      label: IEC 60079
+  lifecycle_stages:
+    - slug: concept
+      label: Concept
+    - slug: detailed-design
+      label: Detailed Design
+  related_terms:
+    - IECEx
+    - EPL
+    - T-code
+
+- term: Basic Process Control System
+  acronym: BPCS
+  domain: safety
+  definition: >
+    The normal operating control system for a process unit. In IEC 61511 work,
+    the BPCS is separate from the SIS and cannot be credited as an independent
+    protection layer if it is also the initiating cause of the hazardous scenario.
+    Keeping BPCS and SIS boundaries clear is central to defensible LOPA and SIF design.
+  standard_pages:
+    - url: /standards/functional-safety/iec-61511/
+      label: IEC 61511
+  lifecycle_stages:
+    - slug: risk-assessment
+      label: Risk Assessment
+    - slug: safety-architecture
+      label: Safety Architecture
+  related_terms:
+    - SIS
+    - IPL
+    - LOPA
+
+- term: Control Drawing
+  acronym: Control Drawing
+  domain: electrical
+  definition: >
+    A hazardous-area document defining how associated apparatus, field devices,
+    wiring methods, and entity parameters must be connected for an intrinsically
+    safe loop. Control drawings identify permitted cable characteristics, segregation
+    rules, and field termination limits so installers do not defeat the Ex i design.
+  standard_pages:
+    - url: /standards/hazardous-area/iec-60079/
+      label: IEC 60079
+  lifecycle_stages:
+    - slug: detailed-design
+      label: Detailed Design
+    - slug: installation
+      label: Installation
+  related_terms:
+    - Ex ia
+    - EPL
+
+- term: Equipment Protection Level
+  acronym: EPL
+  domain: electrical
+  definition: >
+    The IEC 60079 classification that expresses how much protection equipment
+    provides against ignition in explosive atmospheres. EPL maps equipment to
+    zones, for example Ga to Zone 0, Gb to Zone 1, and Gc to Zone 2. Selecting
+    the correct EPL is one of the first checks in hazardous-area equipment review.
+  standard_pages:
+    - url: /standards/hazardous-area/iec-60079/
+      label: IEC 60079
+  lifecycle_stages:
+    - slug: detailed-design
+      label: Detailed Design
+    - slug: installation
+      label: Installation
+  related_terms:
+    - T-code
+    - Ex ia
+    - ATEX
+    - IECEx
+
+- term: Emergency Shutdown
+  acronym: ESD
+  domain: safety
+  definition: >
+    A process-industry shutdown function that moves equipment or an entire unit
+    to a defined safe state during an abnormal or hazardous condition. ESD is a
+    broader concept than a machinery E-stop and is usually implemented through
+    one or more SIFs within a SIS under IEC 61511.
+  standard_pages:
+    - url: /standards/functional-safety/iec-61511/
+      label: IEC 61511
+  lifecycle_stages:
+    - slug: safety-architecture
+      label: Safety Architecture
+    - slug: commissioning
+      label: Commissioning
+  related_terms:
+    - SIF
+    - SIS
+    - SIL
+
+- term: Intrinsic Safety, Level ia
+  acronym: Ex ia
+  domain: electrical
+  definition: >
+    The highest intrinsic-safety protection level defined in IEC 60079-11 for
+    explosive-gas atmospheres. Ex ia equipment is designed to remain safe with
+    two independent faults and is suitable for Zone 0 gas locations. It is commonly
+    used with barriers or galvanic isolators and documented through control drawings.
+  standard_pages:
+    - url: /standards/hazardous-area/iec-60079/
+      label: IEC 60079
+  lifecycle_stages:
+    - slug: detailed-design
+      label: Detailed Design
+    - slug: installation
+      label: Installation
+  related_terms:
+    - EPL
+    - T-code
+    - Control Drawing
+
+- term: Hazard and Operability Study
+  acronym: HAZOP
+  domain: safety
+  definition: >
+    A structured team-based hazard review used in the process industries to identify
+    deviations, causes, consequences, and safeguards. HAZOP usually precedes LOPA
+    in IEC 61511 projects and provides the hazardous scenarios that must be evaluated
+    for SIF allocation and SIL targets.
+  standard_pages:
+    - url: /standards/functional-safety/iec-61511/
+      label: IEC 61511
+  lifecycle_stages:
+    - slug: concept
+      label: Concept
+    - slug: risk-assessment
+      label: Risk Assessment
+  related_terms:
+    - LOPA
+    - SRS
+    - SIF
+
+- term: IEC System for Certification to Standards Relating to Equipment for Use in Explosive Atmospheres
+  acronym: IECEx
+  domain: regulatory
+  definition: >
+    The international certification system used to demonstrate conformity of
+    equipment and services for explosive atmospheres. IECEx certification is
+    widely paired with IEC 60079 equipment selection and often compared with
+    ATEX certification for projects that cross regional markets.
+  standard_pages:
+    - url: /standards/hazardous-area/iec-60079/
+      label: IEC 60079
+  lifecycle_stages:
+    - slug: detailed-design
+      label: Detailed Design
+    - slug: installation
+      label: Installation
+  related_terms:
+    - ATEX
+    - EPL
+    - T-code
+
+- term: Independent Protection Layer
+  acronym: IPL
+  domain: safety
+  definition: >
+    A safeguard that can prevent a hazardous event from progressing to a consequence
+    and that is independent of the initiating cause and the other credited layers.
+    IPLs are central to LOPA because they define how much risk reduction already
+    exists before a new SIF is assigned.
+  standard_pages:
+    - url: /standards/functional-safety/iec-61511/
+      label: IEC 61511
+  lifecycle_stages:
+    - slug: risk-assessment
+      label: Risk Assessment
+  related_terms:
+    - LOPA
+    - BPCS
+    - SIS
+
+- term: Average Probability of Failure on Demand
+  acronym: PFDavg
+  domain: safety
+  definition: >
+    The low-demand safety integrity metric used in IEC 61511 and IEC 61508 for
+    functions that are demanded infrequently. PFDavg is the correct quantitative
+    basis for process SIS work; it is not interchangeable with PFHd, which is used
+    for high-demand or continuous-demand machinery safety calculations.
+  standard_pages:
+    - url: /standards/functional-safety/iec-61511/
+      label: IEC 61511
+    - url: /standards/functional-safety/iec-61508/
+      label: IEC 61508
+  lifecycle_stages:
+    - slug: safety-architecture
+      label: Safety Architecture
+    - slug: maintenance
+      label: Maintenance
+  related_terms:
+    - SIL
+    - SIF
+    - PTI
+    - PFH
+
+- term: Probability of Dangerous Failure per Hour
+  acronym: PFHd
+  domain: safety
+  definition: >
+    The high-demand or continuous-demand failure-rate metric used in IEC 62061
+    and commonly referenced in ISO 13849-1 comparison tables. PFHd is the rate
+    that subsystem values are summed against for machinery SIL calculations. It
+    contrasts with PFDavg, which is used for low-demand process SIS applications.
+  standard_pages:
+    - url: /standards/functional-safety/iec-62061/
+      label: IEC 62061
+    - url: /standards/functional-safety/iso-13849-1/
+      label: ISO 13849-1
+  lifecycle_stages:
+    - slug: safety-architecture
+      label: Safety Architecture
+    - slug: detailed-design
+      label: Detailed Design
+  related_terms:
+    - PFH
+    - PFDavg
+    - SILCL
+    - SIL
+
+- term: Partial Stroke Test
+  acronym: PST
+  domain: safety
+  definition: >
+    A proof-test method for shutdown valves in which the valve is moved partway
+    toward its trip position to reveal dangerous undetected failures without taking
+    the full process out of service. PST improves diagnostic coverage but does not
+    replace the need for periodic full proof testing.
+  standard_pages:
+    - url: /standards/functional-safety/iec-61511/
+      label: IEC 61511
+  lifecycle_stages:
+    - slug: commissioning
+      label: Commissioning
+    - slug: maintenance
+      label: Maintenance
+  related_terms:
+    - PTI
+    - PFDavg
+    - SIF
+
+- term: Proof Test Interval
+  acronym: PTI
+  domain: safety
+  definition: >
+    The planned maximum time between proof tests of a safety function or subsystem.
+    PTI is a design parameter, not just a maintenance preference, because longer
+    intervals increase accumulated dangerous undetected failures and therefore worsen
+    the achieved PFDavg or PFHd.
+  standard_pages:
+    - url: /standards/functional-safety/iec-61511/
+      label: IEC 61511
+    - url: /standards/functional-safety/iec-62061/
+      label: IEC 62061
+  lifecycle_stages:
+    - slug: safety-architecture
+      label: Safety Architecture
+    - slug: maintenance
+      label: Maintenance
+  related_terms:
+    - PFDavg
+    - PST
+    - SIF
+
+- term: Semiconductor Equipment Communications Standard / Generic Equipment Model
+  acronym: SECS/GEM
+  domain: electrical
+  definition: >
+    The dominant semiconductor-fab host communication framework for equipment status,
+    alarms, recipes, and remote interaction. SECS defines the messaging layer and
+    GEM defines the equipment behavior model. Control engineers usually encounter
+    it when tool interlocks, remote commands, or factory-host integration must be
+    coordinated with equipment safety behavior.
+  standard_pages:
+    - url: /standards/semiconductor/semi/
+      label: SEMI S2/S8/S14
+  lifecycle_stages:
+    - slug: detailed-design
+      label: Detailed Design
+    - slug: commissioning
+      label: Commissioning
+  related_terms:
+    - SEMI
+    - PLC
+
+- term: SIL Claim Limit
+  acronym: SILCL
+  domain: safety
+  definition: >
+    The maximum SIL a subsystem architecture can claim, independent of the numerical
+    PFHd calculation. In IEC 62061, SILCL is determined from architecture, Hardware
+    Fault Tolerance, and Safe Failure Fraction. A subsystem can have a very low PFHd
+    and still be capped by a lower SILCL if its architecture is not adequate.
+  standard_pages:
+    - url: /standards/functional-safety/iec-62061/
+      label: IEC 62061
+    - url: /standards/functional-safety/iec-61508/
+      label: IEC 61508
+  lifecycle_stages:
+    - slug: safety-architecture
+      label: Safety Architecture
+    - slug: detailed-design
+      label: Detailed Design
+  related_terms:
+    - SIL
+    - PFHd
+    - HFT
+    - SFF
+
+- term: Safety Requirements Specification
+  acronym: SRS
+  domain: safety
+  definition: >
+    The formal document that defines what a safety function must do, under what
+    conditions it must act, what safe state it must achieve, and how it will be
+    verified and maintained. In IEC 61511 projects, the SRS is the governing design
+    input for SIS implementation, testing, and modification control.
+  standard_pages:
+    - url: /standards/functional-safety/iec-61511/
+      label: IEC 61511
+  lifecycle_stages:
+    - slug: risk-assessment
+      label: Risk Assessment
+    - slug: safety-architecture
+      label: Safety Architecture
+    - slug: detailed-design
+      label: Detailed Design
+  related_terms:
+    - SIF
+    - SIL
+    - HAZOP
+
+- term: Temperature Class
+  acronym: T-code
+  domain: electrical
+  definition: >
+    The explosive-atmosphere temperature classification that states the maximum
+    surface temperature equipment can reach in service. The selected T-code must
+    stay below the autoignition temperature of the hazardous substance present.
+    T-codes are reviewed alongside EPL, gas group, and certification records.
+  standard_pages:
+    - url: /standards/hazardous-area/iec-60079/
+      label: IEC 60079
+  lifecycle_stages:
+    - slug: detailed-design
+      label: Detailed Design
+    - slug: installation
+      label: Installation
+  related_terms:
+    - EPL
+    - IECEx
+    - ATEX
