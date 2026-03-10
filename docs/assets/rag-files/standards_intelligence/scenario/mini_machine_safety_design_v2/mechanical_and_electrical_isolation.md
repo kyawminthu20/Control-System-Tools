@@ -1,0 +1,46 @@
+<!--
+AI_READ_ACCESS: ALLOWED
+CONTENT_CLASS: RAG_APPROVED
+STATUS: DRAFT
+SCENARIO_ID: MINI_MACHINE_SAFETY_DESIGN_V2
+-->
+
+# Mechanical and Electrical Isolation
+
+## Mechanical shutoff points
+
+| Point                                             | Baseline function                                         | Design intent                                                                                                                                         | Trace                                   |
+| ------------------------------------------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| HV-101 hydraulic pressure block valve             | Isolate HPU from downstream manifold for service          | Lockable manual valve upstream of manifold; detailed valve selection and lockout method NOT FOUND IN LOCAL CORPUS - TO VERIFY                         | [TO VERIFY: ISO 4413]                   |
+| HV-102 and HV-103 actuator branch valves          | Isolate H1 and H2 branches                                | Provide branch isolation before service or component swap; add bleed point downstream                                                                 | [TO VERIFY: ISO 4413]                   |
+| YV-101 hydraulic dump valve                       | Remove stored pressure to tank on trip or service         | Valve state and vent path shall be verified against the hydraulic schematic; detailed hydraulic safety criteria NOT FOUND IN LOCAL CORPUS - TO VERIFY | [TO VERIFY: ISO 4413]                   |
+| BP-101 and BP-102 bleed points                    | Controlled depressurization of trapped hydraulic sections | Bleed to reservoir or approved capture path before maintenance                                                                                        | [TO VERIFY: ISO 4413]                   |
+| CV-A1 and CV-B1 chemical suction isolation valves | Isolate chemical pump suction from tank                   | Lockable manual valves at each day tank                                                                                                               | [TO VERIFY: chemical handling standard] |
+| CV-A2 and CV-B2 chemical discharge block valves   | Isolate discharge lines and prevent unintended transfer   | Manual block plus check valve at each pump discharge                                                                                                  | [TO VERIFY: chemical handling standard] |
+| Spill containment drain or collection point       | Hold and collect released chemical                        | Secondary containment and cleanup connection                                                                                                          | [TO VERIFY: chemical handling standard] |
+
+## Electrical isolation points
+
+| Point                              | Requirement                                                                                                                                              | Verification method                 | Trace                                                                                                                                                                                                                                                                                                                |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Main machine disconnect            | The machine shall have a single primary disconnect with external handle, clear ON/OFF indication, accessible location, and OFF lockability.              | Visual inspection and lockout test  | [LOCAL: us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md#1. Main Disconnect Requirements] [LOCAL: us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md#2. Location and Accessibility] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause05__incoming_supply.md#2. Isolation and Disconnect Rules] |
+| Panel access interlock             | The enclosure door shall be mechanically or electrically interlocked with the disconnect unless an approved qualified-person defeat arrangement is used. | Door-open and power-on test         | [LOCAL: us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md#4. Control Panel Design Rules]                                                                                                                                                                                                                           |
+| Line-side guarding                 | Line-side terminals remaining live with disconnect OFF shall be guarded and warned.                                                                      | Inspection                          | [LOCAL: us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md#4. Control Panel Design Rules] [LOCAL: us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#3. Panel Layout Implications]                                                                                                                   |
+| Local motor or drive repair switch | Motors or remote drives shall have a local isolation method where needed for maintenance visibility and lockout.                                         | Field inspection                    | [LOCAL: us/nec/NEC_2023__Art430__motors_motor_circuits_and_controllers.md#2. VFD considerations (Part X)] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md#1. Motor Protection and Control]                                                                               |
+| E-stop path                        | Emergency stop shall be a supplementary safety measure, highest priority, and not a substitute for full energy isolation.                                | Functional test and training review | [LOCAL: us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#2. Emergency Stop Concepts] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#2. Emergency Stop Concepts]                                                                      |
+| STO path                           | Where drives participate in safety functions, STO shall be the preferred torque-removal path.                                                            | Drive test                          | [LOCAL: us/nfpa79/NFPA79_2024__Ch12__motors_and_associated_equipment.md#2. Drive Protection Considerations] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md#2. Drive Integration]                                                                                        |
+
+## Stored energy discharge requirements
+
+1. Residual electrical energy in capacitive equipment such as VFDs shall discharge to below 60 V within 5 seconds after power removal, or the enclosure shall carry a warning label stating the required wait time. [LOCAL: us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#1. Protective Measures] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md#1. Protective Measures]
+2. Residual-voltage timing shall be verified during FAT or commissioning. [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md#1. Required Tests]
+3. Hydraulic trapped-pressure release sequence, bleed-point sizing, accumulator isolation, and zero-energy verification criteria are NOT FOUND IN LOCAL CORPUS - TO VERIFY. [TO VERIFY: ISO 4413]
+4. Chemical decontamination, flush, purge, and drain verification criteria are NOT FOUND IN LOCAL CORPUS - TO VERIFY. [TO VERIFY: chemical handling standard]
+
+## Verification checklist
+
+- Verify main disconnect handle is accessible and lockable OFF. [LOCAL: us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md#2. Location and Accessibility]
+- Verify panel door interlock blocks opening under power or requires qualified-person defeat. [LOCAL: us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md#4. Control Panel Design Rules]
+- Verify residual voltage falls below threshold or warning label is present. [LOCAL: us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#1. Protective Measures]
+- Verify external-source conductors are marked where local disconnect does not remove power. [LOCAL: us/nfpa79/NFPA79_2024__Ch20__system_integration.md#1. Subsystem Coordination]
+- Verify mechanical isolation points are tagged on the LOTO map; detailed mechanical LOTO acceptance criteria are NOT FOUND IN LOCAL CORPUS - TO VERIFY. [TO VERIFY: ISO 4413] [TO VERIFY: chemical handling standard]

@@ -31,8 +31,9 @@
       escHtml(path) + '</code>: ' + escHtml(msg) + '</p>');
   }
 
-  function renderFile(path) {
-    var url = window.RAG_BASE_URL + encodeURIComponent(path).replace(/%2F/g, '/');
+  function renderFile(path, servePath) {
+    // Fetch from same-origin static asset — works for private repos too.
+    var url = window.RAG_SERVE_BASE + servePath;
     setLoading(path);
 
     fetch(url)
@@ -86,7 +87,7 @@
           el = el.parentElement;
         }
 
-        renderFile(btn.dataset.path);
+        renderFile(btn.dataset.path, btn.dataset.servePath);
       });
     });
   }

@@ -12,7 +12,7 @@
   </li>
   {% elsif node.type == "file" %}
   <li class="rag-tree__file" role="treeitem">
-    <button class="rag-file-btn" data-path="{{ node.path }}">
+    <button class="rag-file-btn" data-path="{{ node.path }}" data-serve-path="{{ node.serve_path }}">
       <span class="rag-icon rag-icon--file">&#128196;</span>{{ node.name }}
     </button>
   </li>
