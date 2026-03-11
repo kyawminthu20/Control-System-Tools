@@ -2,7 +2,7 @@ version: "1.0"
 content_class: "RAG_APPROVED"
 status: "DRAFT"
 module_id: "training_modules"
-last_updated: "2026-03-09"
+last_updated: "2026-03-11"
 
 submodules:
   - name: "fundamentals"
@@ -16,3 +16,7 @@ submodules:
   - name: "nec_application"
     path: "nec_application/"
     description: "Training notes for code navigation and NEC application logic"
+
+  - name: "control_systems"
+    path: "control_systems/"
+    description: "Feedback-control training modules for PID behavior, loop language, and tuning intuition"

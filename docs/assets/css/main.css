@@ -14,6 +14,7 @@
   /* Light theme tokens */
   --color-bg:         #f8f8f6;
   --color-bg-panel:   #f2f2ef;
+  --color-bg-alt:     #f2f2ef;
   --color-bg-code:    #eeecea;
   --color-bg-elevated: #ffffff;
   --color-bg-stripe:  #fafaf8;
@@ -1110,6 +1111,7 @@ tr:nth-child(even) td {
 [data-theme="dark"] {
   --color-bg:            #1a1a1a;
   --color-bg-panel:      #242424;
+  --color-bg-alt:        #242424;
   --color-bg-code:       #2a2a2a;
   --color-bg-elevated:   #252525;
   --color-bg-stripe:     #1f1f1f;
@@ -1416,3 +1418,172 @@ tr:nth-child(even) td {
 /* States */
 .rag-placeholder, .rag-loading { color: var(--color-text-muted); font-style: italic; }
 .rag-error { color: var(--color-danger, #dc2626); }
+
+/* ─── Training curriculum ──────────────────────────────────────────────────── */
+
+/* Verification note */
+.training-verification {
+  background: var(--color-bg-alt);
+  border-left: 3px solid var(--color-accent, #2563eb);
+  border-radius: 0 4px 4px 0;
+  padding: 0.75rem 1rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* Start-here cards */
+.start-here-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 2rem;
+}
+.start-here-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+}
+.start-here-card h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+}
+.start-here-card p {
+  margin: 0 0 0.6rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+.start-here-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.85rem;
+}
+
+/* Learning path cards */
+.learning-paths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 2rem;
+}
+.learning-path-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+}
+.learning-path-card h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+}
+.learning-path-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* Training chips / badges */
+.training-chip {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  margin-right: 0.25rem;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.chip-beginner   { background: #d1fae5; color: #065f46; }
+.chip-intermediate { background: #dbeafe; color: #1e40af; }
+.chip-advanced   { background: #fef3c7; color: #92400e; }
+.chip-concept    { background: #f3f4f6; color: #374151; }
+.chip-reference  { background: #e0e7ff; color: #3730a3; }
+.chip-code       { background: #fce7f3; color: #9d174d; }
+.chip-featured   { background: #fef9c3; color: #713f12; }
+
+[data-theme="dark"] .chip-beginner     { background: #065f46; color: #d1fae5; }
+[data-theme="dark"] .chip-intermediate { background: #1e3a8a; color: #bfdbfe; }
+[data-theme="dark"] .chip-advanced     { background: #78350f; color: #fde68a; }
+[data-theme="dark"] .chip-concept      { background: #374151; color: #e5e7eb; }
+[data-theme="dark"] .chip-reference    { background: #312e81; color: #c7d2fe; }
+[data-theme="dark"] .chip-code         { background: #831843; color: #fbcfe8; }
+[data-theme="dark"] .chip-featured     { background: #713f12; color: #fef08a; }
+
+/* Module table wrapper */
+.training-table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0 2rem;
+}
+.training-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.training-table-wrap th {
+  background: var(--color-bg-alt);
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid var(--color-border);
+  white-space: nowrap;
+}
+.training-table-wrap td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+.training-table-wrap tr:last-child td { border-bottom: none; }
+.training-table-wrap td:first-child { min-width: 200px; }
+.training-table-wrap .td-chips { white-space: nowrap; }
+
+/* Featured row highlight */
+.training-table-wrap tr.featured-row td:first-child {
+  font-weight: 600;
+}
+
+/* Browse-by-topic cards (reuse card-grid pattern with label override) */
+.topic-group-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.25rem;
+}
+
+/* Related standards strip */
+.related-standards-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 2rem;
+  list-style: none;
+  padding: 0;
+}
+.related-standards-list li {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+}
+.related-standards-list li a {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.related-standards-list li span {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 640px) {
+  .start-here-grid,
+  .learning-paths-grid,
+  .related-standards-list {
+    grid-template-columns: 1fr;
+  }
+  .training-table-wrap th.hide-mobile,
+  .training-table-wrap td.hide-mobile {
+    display: none;
+  }
+}

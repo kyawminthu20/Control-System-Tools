@@ -1,0 +1,408 @@
+---
+# Training catalog — Phase 14
+# Source of truth for module metadata, learning paths, and landing-page copy.
+# URLs must stay aligned with actual Jekyll page paths.
+
+intro: >
+  Practical training for industrial controls engineers, panel designers, and field
+  service technicians. All material is derived from the RAG training layer and is
+  intended as a study aid — not a substitute for the cited standards.
+
+verification_note: >
+  This material explains concepts and design patterns. For code compliance,
+  always consult the current edition of the applicable standard and your AHJ.
+  See the trust boundary note at the bottom of this page.
+
+start_here:
+  - audience: "New to industrial controls"
+    description: "Start with circuit language, then Kirchhoff's laws and passive components."
+    entry_modules:
+      - title: "Electrical Quantities and Circuit Language"
+        url: "/training/fundamentals/electrical-quantities/"
+      - title: "Kirchhoff's Laws and Systematic Analysis"
+        url: "/training/fundamentals/kirchhoff-laws/"
+  - audience: "Working with motors and drives"
+    description: "Jump to induction motor basics, then VFD and servo fundamentals."
+    entry_modules:
+      - title: "Induction Motor Basics"
+        url: "/training/electrical-machines/induction-motor-basics/"
+      - title: "VFD Fundamentals"
+        url: "/training/electrical-machines/vfd-fundamentals/"
+  - audience: "Designing control panels or machines"
+    description: "Start with NEC code reading, then motor and panel code application."
+    entry_modules:
+      - title: "NEC Code Reading Fundamentals"
+        url: "/training/nec-application/nec-code-reading/"
+      - title: "Motor and Panel Code Application"
+        url: "/training/nec-application/motor-panel-code-application/"
+
+learning_paths:
+  - name: "Controls Engineering Foundations"
+    slug: "controls-foundations"
+    description: "Build the electrical vocabulary and circuit analysis skills used across all controls work."
+    modules:
+      - url: "/training/fundamentals/electrical-quantities/"
+      - url: "/training/fundamentals/series-parallel-dividers/"
+      - url: "/training/fundamentals/kirchhoff-laws/"
+      - url: "/training/fundamentals/equivalent-circuit-methods/"
+      - url: "/training/fundamentals/passive-components/"
+      - url: "/training/fundamentals/diodes-transistors/"
+      - url: "/training/fundamentals/electrical-equations-reference/"
+  - name: "Motor and Drive Engineering"
+    slug: "motor-drive-engineering"
+    description: "Understand motor types, drive topologies, and control methods for machine and process applications."
+    modules:
+      - url: "/training/electrical-machines/induction-motor-basics/"
+      - url: "/training/electrical-machines/motor-nameplates-slip-torque/"
+      - url: "/training/electrical-machines/motor-family-comparison/"
+      - url: "/training/electrical-machines/vfd-fundamentals/"
+      - url: "/training/electrical-machines/motor-control-methods/"
+      - url: "/training/electrical-machines/servo-drive-fundamentals/"
+      - url: "/training/electrical-machines/servo-feedback-inertia/"
+      - url: "/training/electrical-machines/motor-vfd-equations/"
+  - name: "Industrial Panel Design (NEC Focus)"
+    slug: "panel-design-nec"
+    description: "Apply NEC article routing and sizing logic to control panel and machinery installations."
+    modules:
+      - url: "/training/fundamentals/conductor-ampacity/"
+      - url: "/training/nec-application/nec-code-reading/"
+      - url: "/training/nec-application/working-space-table-navigation/"
+      - url: "/training/nec-application/motor-panel-code-application/"
+  - name: "Troubleshooting and Field Service"
+    slug: "troubleshooting-field"
+    description: "Focus on the applied modules most useful for fault diagnosis, commissioning, and field maintenance."
+    modules:
+      - url: "/training/electrical-machines/induction-motor-basics/"
+      - url: "/training/electrical-machines/motor-nameplates-slip-torque/"
+      - url: "/training/electrical-machines/vfd-fundamentals/"
+      - url: "/training/electrical-machines/vfd-servo-architecture/"
+      - url: "/training/electrical-machines/motor-efficiency-losses/"
+      - url: "/training/fundamentals/conductor-ampacity/"
+
+topic_groups:
+  - key: "fundamentals"
+    label: "Electrical Fundamentals"
+    url: "/training/fundamentals/"
+    description: "Circuit theory, analysis methods, passive components, switching devices, and conductor sizing."
+    module_count: 8
+  - key: "electrical-machines"
+    label: "Motors, Drives, and Motion"
+    url: "/training/electrical-machines/"
+    description: "Induction and DC motors, VFDs, servo drives, motor selection, efficiency, and equations."
+    module_count: 13
+  - key: "nec-application"
+    label: "NEC for Machines and Panels"
+    url: "/training/nec-application/"
+    description: "NEC code reading, table navigation, and article routing for motor and panel work."
+    module_count: 3
+
+related_standards:
+  - title: "NEC (NFPA 70)"
+    url: "/standards/us-electrical/nec/"
+    relevance: "Article 430 motor circuits, Article 409 SCCR, Article 725 control circuits"
+  - title: "UL 508A"
+    url: "/standards/us-electrical/ul-508a/"
+    relevance: "Industrial control panel construction and component ratings"
+  - title: "NFPA 79"
+    url: "/standards/us-electrical/nfpa-79/"
+    relevance: "Electrical equipment for industrial machinery"
+  - title: "IEC 60204-1"
+    url: "/standards/machinery/iec-60204-1/"
+    relevance: "International equivalent to NFPA 79 for machine electrical equipment"
+
+modules:
+  # ── Fundamentals ────────────────────────────────────────────────────────────
+  - title: "Electrical Quantities and Circuit Language"
+    url: "/training/fundamentals/electrical-quantities/"
+    group: "fundamentals"
+    group_label: "Electrical Fundamentals"
+    summary: "Build the shared vocabulary — voltage, current, resistance, power — and learn to read circuit topology before solving anything."
+    level: "Beginner"
+    time: "20 min"
+    focus: "Controls / Panel Design"
+    type: "Concept"
+    prerequisites: []
+    featured: true
+
+  - title: "Series, Parallel, and Divider Methods"
+    url: "/training/fundamentals/series-parallel-dividers/"
+    group: "fundamentals"
+    group_label: "Electrical Fundamentals"
+    summary: "Reduce series and parallel networks and apply voltage and current dividers to find operating points in real circuits."
+    level: "Beginner"
+    time: "25 min"
+    focus: "Controls / Panel Design"
+    type: "Concept + Practice"
+    prerequisites:
+      - "Electrical Quantities and Circuit Language"
+
+  - title: "Kirchhoff's Laws and Systematic Analysis"
+    url: "/training/fundamentals/kirchhoff-laws/"
+    group: "fundamentals"
+    group_label: "Electrical Fundamentals"
+    summary: "Apply KCL and KVL with nodal and loop analysis to solve circuits that cannot be simplified by series/parallel rules alone."
+    level: "Beginner"
+    time: "30 min"
+    focus: "Controls / Panel Design"
+    type: "Concept + Practice"
+    prerequisites:
+      - "Series, Parallel, and Divider Methods"
+    featured: true
+
+  - title: "Equivalent Circuit Methods"
+    url: "/training/fundamentals/equivalent-circuit-methods/"
+    group: "fundamentals"
+    group_label: "Electrical Fundamentals"
+    summary: "Simplify complex networks to Thevenin or Norton equivalents; apply source transformation and superposition for multi-source problems."
+    level: "Intermediate"
+    time: "30 min"
+    focus: "Controls / Panel Design"
+    type: "Concept + Practice"
+    prerequisites:
+      - "Kirchhoff's Laws and Systematic Analysis"
+
+  - title: "Electrical Equations Reference"
+    url: "/training/fundamentals/electrical-equations-reference/"
+    group: "fundamentals"
+    group_label: "Electrical Fundamentals"
+    summary: "Quick-reference sheet for Ohm's law, power, dividers, KCL/KVL, and capacitor/inductor energy — formatted for fast lookup."
+    level: "Beginner"
+    time: "10 min"
+    focus: "Controls / Panel Design"
+    type: "Reference"
+    prerequisites: []
+
+  - title: "Passive Components"
+    url: "/training/fundamentals/passive-components/"
+    group: "fundamentals"
+    group_label: "Electrical Fundamentals"
+    summary: "Understand resistors, capacitors, and inductors — their ratings, stored energy, and behavior in DC and AC circuits."
+    level: "Beginner"
+    time: "20 min"
+    focus: "Controls / Panel Design"
+    type: "Concept"
+    prerequisites:
+      - "Electrical Quantities and Circuit Language"
+
+  - title: "Diodes, Transistors, and Switching Basics"
+    url: "/training/fundamentals/diodes-transistors/"
+    group: "fundamentals"
+    group_label: "Electrical Fundamentals"
+    summary: "Cover diode families, BJT/MOSFET/IGBT switching modes, and flyback diodes — the semiconductor layer under every drive and power supply."
+    level: "Intermediate"
+    time: "25 min"
+    focus: "Controls / Panel Design"
+    type: "Concept"
+    prerequisites:
+      - "Passive Components"
+
+  - title: "Conductor Ampacity and Termination Temperature"
+    url: "/training/fundamentals/conductor-ampacity/"
+    group: "fundamentals"
+    group_label: "Electrical Fundamentals"
+    summary: "Read NEC ampacity tables correctly, apply correction factors, and understand the 60/75°C termination temperature rule."
+    level: "Beginner"
+    time: "20 min"
+    focus: "Panel Design / NEC"
+    type: "Code Application"
+    prerequisites: []
+    featured: true
+
+  # ── Electrical Machines ─────────────────────────────────────────────────────
+  - title: "Induction Motor Basics"
+    url: "/training/electrical-machines/induction-motor-basics/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Understand how the rotating magnetic field produces torque, what slip means, and how speed and torque relate across the motor curve."
+    level: "Beginner"
+    time: "25 min"
+    focus: "Motor / Drive Engineering"
+    type: "Concept"
+    prerequisites: []
+    featured: true
+
+  - title: "DC Motor Basics"
+    url: "/training/electrical-machines/dc-motor-basics/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Learn armature construction, commutation, back-EMF, and the speed control methods that apply to DC drives and servo systems."
+    level: "Beginner"
+    time: "20 min"
+    focus: "Motor / Drive Engineering"
+    type: "Concept"
+    prerequisites: []
+
+  - title: "Motor Nameplates, Slip, and Torque"
+    url: "/training/electrical-machines/motor-nameplates-slip-torque/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Read any motor nameplate, interpret NEMA design codes, and predict torque behavior across the speed–torque curve."
+    level: "Beginner"
+    time: "20 min"
+    focus: "Motor / Drive Engineering"
+    type: "Code Application"
+    prerequisites:
+      - "Induction Motor Basics"
+    featured: true
+
+  - title: "Motor Family Comparison"
+    url: "/training/electrical-machines/motor-family-comparison/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Compare induction, DC, BLDC, PMSM, and stepper motors across torque density, control complexity, and application fit."
+    level: "Intermediate"
+    time: "20 min"
+    focus: "Motor / Drive Engineering"
+    type: "Concept"
+    prerequisites:
+      - "Induction Motor Basics"
+      - "DC Motor Basics"
+
+  - title: "AC vs DC Motor Comparison"
+    url: "/training/electrical-machines/ac-vs-dc-motors/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Decide between AC and DC drives for a given application by comparing speed range, maintenance, efficiency, and control method."
+    level: "Intermediate"
+    time: "15 min"
+    focus: "Motor / Drive Engineering"
+    type: "Concept"
+    prerequisites:
+      - "Induction Motor Basics"
+      - "DC Motor Basics"
+
+  - title: "VFD Fundamentals"
+    url: "/training/electrical-machines/vfd-fundamentals/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Trace power through the rectifier, DC bus, and inverter; understand V/Hz and vector control; learn the parameters that matter most at commissioning."
+    level: "Intermediate"
+    time: "30 min"
+    focus: "Motor / Drive Engineering"
+    type: "Concept + Practice"
+    prerequisites:
+      - "Induction Motor Basics"
+    featured: true
+
+  - title: "Servo Drive Fundamentals"
+    url: "/training/electrical-machines/servo-drive-fundamentals/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Understand the nested current–velocity–position loop structure, encoder feedback types, and gain tuning starting points."
+    level: "Intermediate"
+    time: "25 min"
+    focus: "Motor / Drive Engineering"
+    type: "Concept"
+    prerequisites:
+      - "VFD Fundamentals"
+
+  - title: "VFD and Servo Architecture Diagrams"
+    url: "/training/electrical-machines/vfd-servo-architecture/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Block diagrams for VFD and servo system wiring — use as a visual reference during commissioning and troubleshooting."
+    level: "Beginner"
+    time: "15 min"
+    focus: "Field Service / Commissioning"
+    type: "Reference"
+    prerequisites:
+      - "VFD Fundamentals"
+
+  - title: "BLDC, EV, and Drone Motor Comparison"
+    url: "/training/electrical-machines/bldc-ev-drone-motors/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Compare BLDC and PMSM in industrial, EV, and drone contexts; understand ESC operation and the differences from industrial VFDs."
+    level: "Intermediate"
+    time: "20 min"
+    focus: "Motor / Drive Engineering"
+    type: "Concept"
+    prerequisites:
+      - "Motor Family Comparison"
+
+  - title: "Motor Control Methods and Operating Regions"
+    url: "/training/electrical-machines/motor-control-methods/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Compare V/Hz, FOC, and DTC; understand field weakening and the constant-torque vs. constant-power operating regions."
+    level: "Advanced"
+    time: "30 min"
+    focus: "Motor / Drive Engineering"
+    type: "Concept"
+    prerequisites:
+      - "VFD Fundamentals"
+      - "Servo Drive Fundamentals"
+
+  - title: "Motor Efficiency, Power Factor, and Losses"
+    url: "/training/electrical-machines/motor-efficiency-losses/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Interpret IE efficiency classes, identify the dominant loss mechanisms, and understand when power factor correction is worth adding."
+    level: "Intermediate"
+    time: "20 min"
+    focus: "Motor / Drive Engineering"
+    type: "Concept"
+    prerequisites:
+      - "Induction Motor Basics"
+
+  - title: "Motor and VFD Equations Reference"
+    url: "/training/electrical-machines/motor-vfd-equations/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Quick-reference equations for speed, torque, slip, power, and VFD sizing — formatted for fast lookup during design or commissioning."
+    level: "Intermediate"
+    time: "10 min"
+    focus: "Motor / Drive Engineering"
+    type: "Reference"
+    prerequisites: []
+
+  - title: "Servo Feedback and Inertia Matching"
+    url: "/training/electrical-machines/servo-feedback-inertia/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Choose encoder type for the application, calculate load-to-motor inertia ratio, and understand the stability implications of mismatched inertia."
+    level: "Advanced"
+    time: "25 min"
+    focus: "Motor / Drive Engineering"
+    type: "Concept + Practice"
+    prerequisites:
+      - "Servo Drive Fundamentals"
+
+  # ── NEC Application ─────────────────────────────────────────────────────────
+  - title: "NEC Code Reading Fundamentals"
+    url: "/training/nec-application/nec-code-reading/"
+    group: "nec-application"
+    group_label: "NEC for Machines and Panels"
+    summary: "Learn the code's internal structure, how mandatory vs. permissive language works, and how to follow exception chains without missing requirements."
+    level: "Beginner"
+    time: "20 min"
+    focus: "Panel Design / NEC"
+    type: "Code Application"
+    prerequisites: []
+    featured: true
+
+  - title: "Working Space and Table Navigation"
+    url: "/training/nec-application/working-space-table-navigation/"
+    group: "nec-application"
+    group_label: "NEC for Machines and Panels"
+    summary: "Apply Table 110.26 correctly — read depth, width, and height requirements by condition of maintenance and voltage level."
+    level: "Beginner"
+    time: "15 min"
+    focus: "Panel Design / NEC"
+    type: "Code Application"
+    prerequisites:
+      - "NEC Code Reading Fundamentals"
+
+  - title: "Motor and Panel Code Application"
+    url: "/training/nec-application/motor-panel-code-application/"
+    group: "nec-application"
+    group_label: "NEC for Machines and Panels"
+    summary: "Route motor sizing through Article 430, calculate SCCR under Article 409, and identify Class 1 vs. Class 2 control circuit rules under Article 725."
+    level: "Intermediate"
+    time: "30 min"
+    focus: "Panel Design / NEC"
+    type: "Code Application"
+    prerequisites:
+      - "NEC Code Reading Fundamentals"
+      - "Conductor Ampacity and Termination Temperature"
+    featured: true

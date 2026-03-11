@@ -30,3 +30,6 @@ docs/vendor/
 
 # Worktrees
 .worktrees/
+
+# Playwright MCP debug artifacts (local only)
+.playwright-mcp/

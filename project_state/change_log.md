@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-03-09
+**Last Updated:** 2026-03-11
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,50 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+### 2026-03-10 — Phase 14 complete: Training Curriculum Upgrade
+
+- Created `docs/_data/training_catalog.yml` — shared data model for all 24 modules with level, time, type, focus, prerequisites, featured flag, learning paths, start-here entries, and related standards
+- Added training-specific CSS section to `docs/assets/css/main.css` — verification note, start-here cards, learning-path cards, training chips/badges (beginner/intermediate/advanced/concept/reference/code/featured), module table wrapper, related-standards strip, mobile responsive rules
+- Rewrote `docs/training/index.md` — now a curriculum hub with verification note, start-here audience cards, four learning paths, browse-by-topic cards, data-driven all-modules table with metadata, and a related-standards strip; trust-boundary include retained at bottom
+- Upgraded `docs/training/fundamentals/index.md` — new display label "Electrical Fundamentals", group intro, recommended entry modules, metadata-rich table driven from catalog
+- Upgraded `docs/training/electrical-machines/index.md` — renamed to "Motors, Drives, and Motion", group intro, recommended entry modules, metadata-rich table
+- Upgraded `docs/training/nec-application/index.md` — renamed to "NEC for Machines and Panels", group intro, recommended entry modules, metadata-rich table, note about Phase 16 expansion
+- Updated sidebar labels to match new display names (URLs unchanged)
+- Jekyll build: clean, 0.391 s
+
+### 2026-03-11 — Post-Phase 16 site planning expanded for control-systems and eVTOL content
+
+- Updated `docs/plans/2026-03-10-training-system-integration-preplan.md` to reserve a future `docs/training/control-systems/` route for the new PID/control-loop material
+- Added a candidate scenario/page for a paraphrased public-source Archer vs. Joby eVTOL motor architecture comparison
+- Recorded page rules that future public-source application notes should be paraphrased engineering analysis rather than raw transcript dumps or authoritative standards guidance
+- Updated `project_state/project_state.md` post-Phase 16 target themes without changing the queued Phase 14-16 sequence
+
+### 2026-03-10 — Training system integration pre-plan added
+
+- Added planning-prep note: `docs/plans/2026-03-10-training-system-integration-preplan.md`
+- Captured the current architecture gap between training, standards, lifecycle, scenarios, workflows, field checklists, and reference material
+- Documented a post-Phase 16 candidate breakdown for:
+  - cross-layer knowledge routing
+  - field engineering and reference-library surfacing
+  - safety and machine-architecture training expansion
+  - scenario-driven learning
+- Updated `project_state/project_state.md` with a post-Phase 16 planning candidate reference without changing the current queued Phase 14-16 sequence
+
+### 2026-03-10 — Phase 14 training curriculum planning docs added
+
+- Added design doc: `docs/plans/2026-03-10-phase14-training-curriculum-design.md`
+- Added implementation plan: `docs/plans/2026-03-10-phase14-training-curriculum-implementation.md`
+- Updated `project_state/project_state.md` Phase 14 section to reference the new planning docs
+- Planning direction keeps current URLs stable while redesigning `/training/` around Start Here, Learning Paths, metadata-backed tables, filters, standards links, and a top-of-page verification note
+
+### 2026-03-10 — Training page review converted into queued Phase 14-16 work
+
+- `project_state/project_state.md` — next planned work changed from generic maintenance to `Phase 14 QUEUED — Training Curriculum Upgrade`
+- Recorded that the current `/training/` section is complete but still behaves more like a browsable module index than a guided learning system
+- Added `Phase 14 Scope — Training Curriculum Upgrade` for Start Here entry points, learning paths, audience framing, stronger hierarchy, outcome-focused copy, and a top-of-page verification note
+- Added `Phase 15 Scope — Training Metadata And Module UX` for module chips and metadata fields covering level, time, prerequisites, type, role focus, and optional filtering/sorting
+- Added `Phase 16 Scope — NEC Training Expansion` to grow NEC training from 3 modules to at least 8-10 modules with practical Article 409/430, SCCR, bonding, OCPD, and control-circuit topics
 
 ### 2026-03-10 — Phase 13 COMPLETE — all secondary backlog items done
 
