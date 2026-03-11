@@ -1700,6 +1700,48 @@
         "type": "dir",
         "children": [
           {
+            "name": "article_409_practical_workflow.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/nec_application/article_409_practical_workflow.md",
+            "serve_path": "training_modules/nec_application/article_409_practical_workflow.md"
+          },
+          {
+            "name": "article_430_practical_workflow.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/nec_application/article_430_practical_workflow.md",
+            "serve_path": "training_modules/nec_application/article_430_practical_workflow.md"
+          },
+          {
+            "name": "branch_circuits_vs_feeders_motor_loads.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/nec_application/branch_circuits_vs_feeders_motor_loads.md",
+            "serve_path": "training_modules/nec_application/branch_circuits_vs_feeders_motor_loads.md"
+          },
+          {
+            "name": "class1_class2_remote_control_circuits.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/nec_application/class1_class2_remote_control_circuits.md",
+            "serve_path": "training_modules/nec_application/class1_class2_remote_control_circuits.md"
+          },
+          {
+            "name": "conductor_ocpd_sizing_examples.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/nec_application/conductor_ocpd_sizing_examples.md",
+            "serve_path": "training_modules/nec_application/conductor_ocpd_sizing_examples.md"
+          },
+          {
+            "name": "disconnecting_means_for_machinery.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/nec_application/disconnecting_means_for_machinery.md",
+            "serve_path": "training_modules/nec_application/disconnecting_means_for_machinery.md"
+          },
+          {
+            "name": "grounding_bonding_control_panels.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/nec_application/grounding_bonding_control_panels.md",
+            "serve_path": "training_modules/nec_application/grounding_bonding_control_panels.md"
+          },
+          {
             "name": "motor_and_panel_code_application.md",
             "type": "file",
             "path": "control-standards/rag/training_modules/nec_application/motor_and_panel_code_application.md",
@@ -1710,6 +1752,12 @@
             "type": "file",
             "path": "control-standards/rag/training_modules/nec_application/nec_code_reading_fundamentals.md",
             "serve_path": "training_modules/nec_application/nec_code_reading_fundamentals.md"
+          },
+          {
+            "name": "sccr_workflow.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/nec_application/sccr_workflow.md",
+            "serve_path": "training_modules/nec_application/sccr_workflow.md"
           },
           {
             "name": "working_space_and_table_navigation.md",

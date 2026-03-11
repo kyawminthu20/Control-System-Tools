@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "NEC for Machines and Panels — Training"
-description: "3 modules covering NEC code reading method, table navigation discipline, and article routing for motors and industrial control panels."
+description: "11 modules covering NEC code reading, table navigation, motor circuit sizing, grounding and bonding, SCCR, and article-level routing for Articles 409, 430, and 725."
 breadcrumb:
   - name: "Training"
     url: "/training/"
@@ -11,13 +11,15 @@ breadcrumb:
 <div class="page-header">
   <span class="page-header__label">Training / NEC for Machines and Panels</span>
   <h1>NEC for Machines and Panels</h1>
-  <p>For panel designers, machine builders, and engineers applying NEC to motor circuits and industrial control panels. Covers code structure, table navigation, and article-level routing for Articles 110, 409, 430, and 725. More NEC modules are planned for Phase 16.</p>
+  <p>For panel designers, machine builders, and engineers applying NEC to motor circuits and industrial control panels. 11 modules covering code structure, motor sizing, grounding and bonding, SCCR, Class 1/2/3 circuits, and practical Article 430 and 409 workflows.</p>
 </div>
 
 ### Recommended entry modules
 
 - [NEC Code Reading Fundamentals]({{ '/training/nec-application/nec-code-reading/' | relative_url }}) — start here for code structure and language rules
-- [Motor and Panel Code Application]({{ '/training/nec-application/motor-panel-code-application/' | relative_url }}) — Art 430, Art 409 SCCR, Art 725 control circuits
+- [Branch Circuits vs. Feeders for Motor Loads]({{ '/training/nec-application/branch-circuits-vs-feeders/' | relative_url }}) — 125% conductor rule and feeder formula
+- [Grounding and Bonding for Control Panels]({{ '/training/nec-application/grounding-bonding-panels/' | relative_url }}) — EGC sizing and neutral/ground separation
+- [SCCR Workflow]({{ '/training/nec-application/sccr-workflow/' | relative_url }}) — component method and NEC 409.110 marking
 
 ---
 

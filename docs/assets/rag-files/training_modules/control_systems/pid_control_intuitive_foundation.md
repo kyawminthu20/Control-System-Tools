@@ -82,7 +82,7 @@ PID-style thinking appears across:
 
 The core logic stays recognizable, but the loop architecture and tuning constraints change significantly between those applications.
 
-## 6. Engineering takeaway
+## 6. Navigation guidance
 
 Start with the intuition file if the question is "what is PID doing?".
 

@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-03-11
+**Last Updated:** 2026-03-10
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,36 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+### 2026-03-10 — Phase 16 complete: NEC training expansion — 11-module NEC track
+
+- Expanded NEC application training track from 3 to 11 modules (8 new RAG files + 8 new site pages)
+- New RAG files in `control-standards/rag/training_modules/nec_application/`: branch_circuits_vs_feeders_motor_loads.md, disconnecting_means_for_machinery.md, grounding_bonding_control_panels.md, sccr_workflow.md, conductor_ocpd_sizing_examples.md, class1_class2_remote_control_circuits.md, article_430_practical_workflow.md, article_409_practical_workflow.md
+- All 8 RAG files mirrored to `docs/assets/rag-files/training_modules/nec_application/`
+- `control-standards/rag/training_modules/nec_application/_index.yaml` updated to 11 files
+- `docs/_data/training_catalog.yml`: 8 new module entries added; nec-application topic_group module_count updated to 11; panel-design-nec learning path expanded with 4 new URLs
+- `docs/training/nec-application/index.md`: description updated to 11 modules; recommended entry modules expanded to 4; page header updated
+- `docs/training/nec-application/motor-panel-code-application/index.md`: footer next-link updated to point to branch-circuits-vs-feeders
+- `docs/_data/rag_tree.json` regenerated (249 .md files, 5 top-level entries)
+- Jekyll build: clean (0.529 s)
+
+### 2026-03-10 — Phase 16 partial: four additional NEC site pages (pages 5–8)
+
+- Added `docs/training/nec-application/conductor-ocpd-sizing/index.md` — step-by-step Art 430 sizing: table FLC, 125% conductor, 115%/125% overload, Table 430.52 OCPD, Table 250.122 EGC; full worked examples for 10 HP and 25 HP motors; Art 430.24 feeder formula with three-motor example; quick-reference HP sizing table (1–50 HP at 460/480 V); common mistakes table; won't-start exception explained
+- Added `docs/training/nec-application/class1-class2-circuits/index.md` — Art 725 circuit classification (Class 1/2/3), supply-listing rule, 24 VDC PLC I/O as Class 2, Mermaid classification flowchart, Art 725.136 separation rules (separate duct / barrier), NFPA 79 color coding (blue=24 VDC, red=120 VAC), common mistakes table
+- Added `docs/training/nec-application/article-430-workflow/index.md` — Art 430 Parts routing table (Parts I–X), Art 430.6(A) table-not-nameplate rule, Mermaid motor-circuit question router, standard 5-step sizing sequence (table FLC → conductor → overload → OCPD → disconnect), full worked example for 25 HP 460 V through all 5 steps, won't-start exception procedure, NFPA 79 alignment notes
+- Added `docs/training/nec-application/article-409-workflow/index.md` — Art 409 ICP scope (factory-built assembly), Art 409.20 supply conductor sizing formula (125% largest motor + 100% others + 125% resistance heating), worked example with 25 HP + 10 HP motors, Art 409.110 required markings table (SCCR, FLC, enclosure type), Art 409.22 OCPD sizing, Art 409 vs. UL 508A comparison table (code vs. product standard), ICP (Art 409) vs. MCC (Art 430 Part F) comparison table, pre-shipment inspection checklist
+- All four pages use `layout: training-module`, correct breadcrumbs, prev/next navigation, and Mermaid diagrams where specified
+- Prev/next chain now complete: sccr-workflow → conductor-ocpd-sizing → class1-class2-circuits → article-430-workflow → article-409-workflow (terminus)
+
+### 2026-03-10 — Phase 16 partial: four new NEC site pages
+
+- Added `docs/training/nec-application/branch-circuits-vs-feeders/index.md` — branch circuit vs. feeder boundary, Art 430.22 125% conductor rule, Art 430.24 multi-motor feeder formula, Mermaid circuit flow, nameplate vs. table FLC common mistake
+- Added `docs/training/nec-application/disconnecting-means/index.md` — Art 430.102 in-sight rule (visible + ≤50 ft), permitted disconnect types (HP-rated switch, MCCB, molded-case switch), NFPA 79 §6.2 lockable main disconnect, group disconnect exception Art 430.112, VFD placement rule (input side only), Mermaid VFD flow
+- Added `docs/training/nec-application/grounding-bonding-panels/index.md` — grounding vs. bonding distinction, EGC sizing from Table 250.122 (earth rod is not the fault-current path), EGC sizing reference table (15A–200A), neutral/ground separation at downstream panels, enclosure bonding, VFD grounding notes, Mermaid 4-wire feeder flow
+- Added `docs/training/nec-application/sccr-workflow/index.md` — SCCR definition, NEC 409.110 marking requirement, available fault current concept, UL 508A Supplement SB 4-step component method, current-limiting device raise strategy, Mermaid SB workflow diagram, 5 kA contactor default trap
+- All pages use `layout: training-module`, correct breadcrumb, prev/next navigation, and Mermaid diagrams
+- `training_catalog.yml` entries for these 4 modules still pending
 
 ### 2026-03-10 — Phase 15 complete: Training Module UX
 
