@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-09 20:39:17
+**Last Auto-Updated:** 2026-03-10 21:57:50
 
 ```text
 ├── .claude/
@@ -686,6 +686,15 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── README.md
 │   │   │   ├── _index.yaml
 │   │   │   ├── commissioning/
+│   │   │   ├── control_systems/
+│   │   │   │   ├── README.md
+│   │   │   │   ├── _index.yaml
+│   │   │   │   ├── industrial_control_loop_architectures.md
+│   │   │   │   ├── industrial_pid_implementation.md
+│   │   │   │   ├── pid_control_intuition.md
+│   │   │   │   ├── pid_control_intuitive_foundation.md
+│   │   │   │   ├── pid_drone_control.md
+│   │   │   │   └── pid_heater_control_with_contactor.md
 │   │   │   ├── electrical_machines/
 │   │   │   │   ├── README.md
 │   │   │   │   ├── _index.yaml
@@ -896,6 +905,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 436ee6fecf0265cb92d47b4aa51d12bca647ddd4b9f44d699443a5592035fd
 │   │               ├── 04/
 │   │               │   └── 8ae153d1cc2aef54095eadad06148ac1372da0e9f585dc95e40b643279a3ea
+│   │               ├── 05/
+│   │               │   └── e30a933569bb3be691a61dd9d27d5cb517e9005f7bf22a109eb8a237eab00d
 │   │               ├── 06/
 │   │               │   ├── 368909b6af8c85b1b4b8293d52d4feafba3ed38f31455e36bd188ef79838f2
 │   │               │   └── d3a687ff4b25e2062eb633ed15fbe1736c9f6c4345811632c44f80c9c712bd
@@ -912,6 +923,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 7a4716831accfb3c6ed7db6f4bd374733d381c5216654f473051e3e62b4245
 │   │               ├── 0c/
 │   │               │   ├── 21a7d7aadd1a042168087ad4dd2323df1ae50a4de93a8da4b920963100b904
+│   │               │   ├── a29af28c804d30788fd4d5da9c68dad6599d6bd49d8c113cdfddd9ec3f4368
 │   │               │   └── b884b6343a61259ab5eacf2fb4394a401d05919cfd0fc5fcdc94957f0dc271
 │   │               ├── 0d/
 │   │               │   ├── 0b2dfd9fcde91ec81a829dbc690e60db0c9de83282525b18f277a4434ae4bf
@@ -944,7 +956,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── aaf0b56cbf68854696ee01829ef68ac4a27363e802fc9ad4c8e62c78e93236
 │   │               ├── 1d/
 │   │               │   ├── 250bb7b7aa156123d8f05946de1c67eab85119aa8ee3e2b875f738549d9bd3
-│   │               │   └── 2d81ad64c017c57b66dc14f338656d1a4abd6b680418e2996b0f722be596e6
+│   │               │   ├── 2d81ad64c017c57b66dc14f338656d1a4abd6b680418e2996b0f722be596e6
+│   │               │   └── 6be436ab1af5cf5d54f552fb3fd73cb683bc38b950911cd4635466a7413599
 │   │               ├── 1e/
 │   │               │   └── 66cf06507d7410aa2c21264d3c2affb5b5ef8e49f1ec94db2a1285d47a9225
 │   │               ├── 1f/
@@ -955,6 +968,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 3a6eb88d4d93a5751444e92aa4fb8517a1e06b222112d1218f220efba9316c
 │   │               │   ├── 4ce69dabd8554ca035185834f203c3266a54c0d6eb5c6d9a6967f9e807a2ab
 │   │               │   └── f23f6b6ccf01bad061aa3952538f401e3ad8e2e67cd0bf71b4b9c185419ea7
+│   │               ├── 22/
+│   │               │   └── 4e0ec1752dff287428a122382fc054fd5de5b1c4e3bb6cd2815e64689a2fde
 │   │               ├── 23/
 │   │               │   ├── 10a2e52d8068e80d62b9bcc513338e87235b5f7de581a98baa0c54e1c34895
 │   │               │   └── 7ae4631ab84a0848ee51d4ecb6b14d359e0e4555074581c35f903dfdc94737
@@ -962,7 +977,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── acf13ae9c5b58b350a8a999ace22166b603c017ffb25b9a8da7f76c6d28896
 │   │               ├── 25/
 │   │               │   ├── 8e30e04480a1d85dfbce1ae190a0d36926dbc8e652e2f007f1afdabe1b4bd9
-│   │               │   └── e098db094b039c606a27db71721fdf46955576a0655a9f884500aa95fae9ee
+│   │               │   ├── e098db094b039c606a27db71721fdf46955576a0655a9f884500aa95fae9ee
+│   │               │   └── fa1f3f5cf75e082ef4d40f89bd5c0fb26587111d71301d334746f209afcb57
 │   │               ├── 26/
 │   │               │   ├── 0785d22eb41cc5c77249078677a780cdb9142ae2328e59639d4806b6c1950f
 │   │               │   └── 6ba51b243f37fe105ddab7c6ff7820addde664ee8eb9a0f17f32a0cf078ea8
@@ -1165,6 +1181,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 8a/
 │   │               │   └── 5f7fe2c7b7bcaff10bdd94c629e55da4e16c43d23080b8a72d33bfff77e36e
 │   │               ├── 8c/
+│   │               │   ├── 75366161f0dd12f82f245bb4b17c82cfd6bfa71fff5f1b0514c6416169eac9
 │   │               │   └── 790933e8d3d2256b2638a3d42ce6d34b8986543f7101bf9dc6b9e7d03c47b6
 │   │               ├── 8d/
 │   │               │   ├── 34517b3dd5991cee32673c06bb5238239de74e203aba4fd345a30195c0bfea
@@ -1180,6 +1197,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── b9caa5fd19144b5bd1bba6ec83668f106f81e52903398f269d8cb64f18c1aa
 │   │               │   └── d45446618749d74bb3377b0f68eca3c1f4392f9b094ecf71f6b7c11e47421f
 │   │               ├── 94/
+│   │               │   ├── 1fb96cea93f9e4de6876a74fe5aedc60ca3e14cada21420abc4488aff39c2a
 │   │               │   ├── 54c281d58441cd4e68f7e6f853f27334d19bc43f1eaf6f654287cf165f582a
 │   │               │   └── a1c51ed5afc909b8a8ae5ad84f56ff19bb2ccb320ef92544ad5d87ec4f4318
 │   │               ├── 96/
@@ -1259,6 +1277,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── be/
 │   │               │   └── 316f2201fe24eb666a2f2a7161fa1bfcddf0176b10a22762b438dc7fa5d6e6
 │   │               ├── bf/
+│   │               │   ├── 65d720ecd5a870a551b6e2af2f9ed1545a91a612119f071a4d7145892e8801
 │   │               │   └── 6bc0b2ee31345100572fb539a65f9bbb7ae04b3392d53f663e0c9bed14384d
 │   │               ├── c0/
 │   │               │   └── 3586ddc55002cc48e60716400590fc8bf5a126e0926103a7391860d8be0ac0
@@ -1320,6 +1339,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 2926753f513fd8557263c0003c7618ac35a95d5b8c4acd57ade2cab28e343c
 │   │               │   ├── 460058dd46e923c304cee7010502aba8c4093fd64832454cd7047c0adc7473
 │   │               │   └── 7b73fecef1847299e33ccda85a905e1f60a0edbcef8403c29bc966ee7ac074
+│   │               ├── d9/
+│   │               │   └── c17134a84000a88a365e934007fe5aa356e1cc2ebb4bb99bb601c17ec77179
 │   │               ├── db/
 │   │               │   └── c25cc47c033af87e9e88e49fc3db2da361c878bc8cef3070720fa89ead405c
 │   │               ├── dc/
@@ -1393,7 +1414,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   ├── _data/
 │   │   ├── glossary.yml
 │   │   ├── rag_tree.json
-│   │   └── standards_graph.yml
+│   │   ├── standards_graph.yml
+│   │   └── training_catalog.yml
 │   ├── _includes/
 │   │   ├── context-panel.html
 │   │   ├── rag-tree-nodes.html
@@ -1669,6 +1691,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │       │           ├── UL508A_2022__wiring_methods_and_conductors.md
 │   │   │       │           └── UL508A_OVERVIEW.md
 │   │   │       └── training_modules/
+│   │   │           ├── control_systems/
+│   │   │           │   ├── industrial_control_loop_architectures.md
+│   │   │           │   ├── industrial_pid_implementation.md
+│   │   │           │   ├── pid_control_intuition.md
+│   │   │           │   ├── pid_control_intuitive_foundation.md
+│   │   │           │   ├── pid_drone_control.md
+│   │   │           │   └── pid_heater_control_with_contactor.md
 │   │   │           ├── electrical_machines/
 │   │   │           │   ├── ac_vs_dc_motor_comparison.md
 │   │   │           │   ├── brushless_dc_ev_and_drone_motor_comparison.md
@@ -1782,7 +1811,10 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-09-phase12-offshore-marine-overlay.md
 │   │   │   ├── 2026-03-09-rag-browser-design.md
 │   │   │   ├── 2026-03-09-training-site-pages-design.md
-│   │   │   └── 2026-03-09-training-site-pages-plan.md
+│   │   │   ├── 2026-03-09-training-site-pages-plan.md
+│   │   │   ├── 2026-03-10-phase14-training-curriculum-design.md
+│   │   │   ├── 2026-03-10-phase14-training-curriculum-implementation.md
+│   │   │   └── 2026-03-10-training-system-integration-preplan.md
 │   │   ├── rag-browser/
 │   │   │   └── index.html
 │   │   ├── scenarios/
@@ -2169,6 +2201,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │       │           ├── UL508A_2022__wiring_methods_and_conductors.md
 │   │       │           └── UL508A_OVERVIEW.md
 │   │       └── training_modules/
+│   │           ├── control_systems/
+│   │           │   ├── industrial_control_loop_architectures.md
+│   │           │   ├── industrial_pid_implementation.md
+│   │           │   ├── pid_control_intuition.md
+│   │           │   ├── pid_control_intuitive_foundation.md
+│   │           │   ├── pid_drone_control.md
+│   │           │   └── pid_heater_control_with_contactor.md
 │   │           ├── electrical_machines/
 │   │           │   ├── ac_vs_dc_motor_comparison.md
 │   │           │   ├── brushless_dc_ev_and_drone_motor_comparison.md
@@ -2282,7 +2321,10 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── 2026-03-09-phase12-offshore-marine-overlay.md
 │   │   ├── 2026-03-09-rag-browser-design.md
 │   │   ├── 2026-03-09-training-site-pages-design.md
-│   │   └── 2026-03-09-training-site-pages-plan.md
+│   │   ├── 2026-03-09-training-site-pages-plan.md
+│   │   ├── 2026-03-10-phase14-training-curriculum-design.md
+│   │   ├── 2026-03-10-phase14-training-curriculum-implementation.md
+│   │   └── 2026-03-10-training-system-integration-preplan.md
 │   ├── rag-browser/
 │   │   └── index.md
 │   ├── scenarios/

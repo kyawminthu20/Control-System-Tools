@@ -1,0 +1,13 @@
+version: "1.0"
+content_class: "RAG_APPROVED"
+status: "DRAFT"
+module_id: "control_systems"
+last_updated: "2026-03-11"
+
+files:
+  - "pid_control_intuitive_foundation.md"
+  - "pid_control_intuition.md"
+  - "industrial_pid_implementation.md"
+  - "industrial_control_loop_architectures.md"
+  - "pid_heater_control_with_contactor.md"
+  - "pid_drone_control.md"

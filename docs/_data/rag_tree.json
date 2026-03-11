@@ -1516,6 +1516,48 @@
     "type": "dir",
     "children": [
       {
+        "name": "control_systems",
+        "type": "dir",
+        "children": [
+          {
+            "name": "industrial_control_loop_architectures.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/control_systems/industrial_control_loop_architectures.md",
+            "serve_path": "training_modules/control_systems/industrial_control_loop_architectures.md"
+          },
+          {
+            "name": "industrial_pid_implementation.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/control_systems/industrial_pid_implementation.md",
+            "serve_path": "training_modules/control_systems/industrial_pid_implementation.md"
+          },
+          {
+            "name": "pid_control_intuition.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/control_systems/pid_control_intuition.md",
+            "serve_path": "training_modules/control_systems/pid_control_intuition.md"
+          },
+          {
+            "name": "pid_control_intuitive_foundation.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/control_systems/pid_control_intuitive_foundation.md",
+            "serve_path": "training_modules/control_systems/pid_control_intuitive_foundation.md"
+          },
+          {
+            "name": "pid_drone_control.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/control_systems/pid_drone_control.md",
+            "serve_path": "training_modules/control_systems/pid_drone_control.md"
+          },
+          {
+            "name": "pid_heater_control_with_contactor.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/control_systems/pid_heater_control_with_contactor.md",
+            "serve_path": "training_modules/control_systems/pid_heater_control_with_contactor.md"
+          }
+        ]
+      },
+      {
         "name": "electrical_machines",
         "type": "dir",
         "children": [

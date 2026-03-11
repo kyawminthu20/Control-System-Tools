@@ -11,6 +11,7 @@ This module holds learning-oriented content that explains electrical, controls, 
 Use `training_modules/` for:
 
 - foundational theory
+- feedback-control and PID concepts
 - code-reading and application training
 - machine and motor concept refreshers
 

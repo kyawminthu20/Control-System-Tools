@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Training Modules"
-description: "Electrical fundamentals, motors and drives, and NEC application — 24 self-contained training modules."
+description: "Curriculum for controls engineers, panel designers, and field service technicians — 24 modules covering electrical fundamentals, motors and drives, and NEC application."
 breadcrumb:
   - name: "Training"
 ---
@@ -9,66 +9,116 @@ breadcrumb:
 <div class="page-header">
   <span class="page-header__label">Training</span>
   <h1>Training Modules</h1>
-  <p>24 modules covering electrical fundamentals, motors and drives, and NEC code application. Each module is a self-contained reference derived from the RAG training layer.</p>
+  <p>A practical curriculum for controls engineers, panel designers, and field service technicians. 24 modules organized into three tracks — from circuit fundamentals to motor drives to NEC code application.</p>
 </div>
 
+<div class="training-verification">
+  <strong>Before you start:</strong> {{ site.data.training_catalog.verification_note }}
+</div>
+
+---
+
+## Start Here
+
+Choose the entry point that fits your current work:
+
+<div class="start-here-grid">
+{% for entry in site.data.training_catalog.start_here %}
+  <div class="start-here-card">
+    <h4>{{ entry.audience }}</h4>
+    <p>{{ entry.description }}</p>
+    <ul>
+    {% for mod in entry.entry_modules %}
+      <li><a href="{{ mod.url | relative_url }}">{{ mod.title }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
+</div>
+
+---
+
+## Learning Paths
+
+Structured sequences built from the existing module inventory:
+
+<div class="learning-paths-grid">
+{% for path in site.data.training_catalog.learning_paths %}
+  <div class="learning-path-card">
+    <h4>{{ path.name }}</h4>
+    <p>{{ path.description }}</p>
+  </div>
+{% endfor %}
+</div>
+
+---
+
+## Browse by Topic
+
 <div class="card-grid">
+{% for group in site.data.training_catalog.topic_groups %}
   <div class="card">
-    <h3>Fundamentals</h3>
-    <p>8 modules — circuit theory, passive components, equations, conductor sizing.</p>
-    <a href="{{ '/training/fundamentals/' | relative_url }}">Browse Fundamentals &rarr;</a>
+    <div class="topic-group-label">{{ group.module_count }} modules</div>
+    <h3>{{ group.label }}</h3>
+    <p>{{ group.description }}</p>
+    <a href="{{ group.url | relative_url }}">Browse {{ group.label }} &rarr;</a>
   </div>
-  <div class="card">
-    <h3>Electrical Machines</h3>
-    <p>13 modules — induction and DC motors, VFDs, servo drives, motor selection.</p>
-    <a href="{{ '/training/electrical-machines/' | relative_url }}">Browse Electrical Machines &rarr;</a>
-  </div>
-  <div class="card">
-    <h3>NEC Application</h3>
-    <p>3 modules — code reading, table navigation, motor and panel application.</p>
-    <a href="{{ '/training/nec-application/' | relative_url }}">Browse NEC Application &rarr;</a>
-  </div>
+{% endfor %}
 </div>
 
 ---
 
 ## All Modules
 
-### Fundamentals
+<div class="training-table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th class="hide-mobile">Track</th>
+      <th class="hide-mobile">Level</th>
+      <th class="hide-mobile">Time</th>
+      <th class="hide-mobile">Type</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for mod in site.data.training_catalog.modules %}
+    <tr{% if mod.featured %} class="featured-row"{% endif %}>
+      <td>
+        <a href="{{ mod.url | relative_url }}">{{ mod.title }}</a>
+        {% if mod.featured %}<span class="training-chip chip-featured">Core</span>{% endif %}
+        <br><small style="color:var(--color-text-muted)">{{ mod.summary }}</small>
+      </td>
+      <td class="hide-mobile">{{ mod.group_label }}</td>
+      <td class="td-chips hide-mobile">
+        {% if mod.level == "Beginner" %}<span class="training-chip chip-beginner">{{ mod.level }}</span>
+        {% elsif mod.level == "Intermediate" %}<span class="training-chip chip-intermediate">{{ mod.level }}</span>
+        {% elsif mod.level == "Advanced" %}<span class="training-chip chip-advanced">{{ mod.level }}</span>
+        {% else %}<span class="training-chip chip-concept">{{ mod.level }}</span>{% endif %}
+      </td>
+      <td class="hide-mobile">{{ mod.time }}</td>
+      <td class="hide-mobile">{{ mod.type }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
 
-| Module | Topics |
-|--------|--------|
-| [Electrical Quantities and Circuit Language]({{ '/training/fundamentals/electrical-quantities/' | relative_url }}) | Voltage, current, resistance, power, circuit topology |
-| [Series, Parallel, and Divider Methods]({{ '/training/fundamentals/series-parallel-dividers/' | relative_url }}) | Series/parallel reduction, voltage and current dividers |
-| [Kirchhoff's Laws and Systematic Analysis]({{ '/training/fundamentals/kirchhoff-laws/' | relative_url }}) | KCL, KVL, nodal analysis, loop analysis |
-| [Equivalent Circuit Methods]({{ '/training/fundamentals/equivalent-circuit-methods/' | relative_url }}) | Thevenin, Norton, source transformation, superposition |
-| [Electrical Equations Reference]({{ '/training/fundamentals/electrical-equations-reference/' | relative_url }}) | Ohm's law, power, dividers, KCL/KVL, capacitor energy |
-| [Passive Components]({{ '/training/fundamentals/passive-components/' | relative_url }}) | Resistors, capacitors, ratings, stored energy |
-| [Diodes, Transistors, and Switching Basics]({{ '/training/fundamentals/diodes-transistors/' | relative_url }}) | Diode families, BJT, MOSFET, IGBT, flyback diodes |
-| [Conductor Ampacity and Termination Temperature]({{ '/training/fundamentals/conductor-ampacity/' | relative_url }}) | NEC ampacity, temperature ratings, termination limits |
+---
 
-### Electrical Machines
+## Related Standards
 
-| Module | Topics |
-|--------|--------|
-| [Induction Motor Basics]({{ '/training/electrical-machines/induction-motor-basics/' | relative_url }}) | Stator, rotating field, rotor, slip, torque production |
-| [DC Motor Basics]({{ '/training/electrical-machines/dc-motor-basics/' | relative_url }}) | Armature, commutator, back-EMF, speed control |
-| [Motor Nameplates, Slip, and Torque]({{ '/training/electrical-machines/motor-nameplates-slip-torque/' | relative_url }}) | Nameplate data, NEMA designs, torque curve |
-| [Motor Family Comparison]({{ '/training/electrical-machines/motor-family-comparison/' | relative_url }}) | Induction, DC, BLDC, PMSM, stepper overview |
-| [AC vs DC Motor Comparison]({{ '/training/electrical-machines/ac-vs-dc-motors/' | relative_url }}) | Speed control, maintenance, application selection |
-| [VFD Fundamentals]({{ '/training/electrical-machines/vfd-fundamentals/' | relative_url }}) | Rectifier, DC bus, inverter, V/Hz, vector control |
-| [Servo Drive Fundamentals]({{ '/training/electrical-machines/servo-drive-fundamentals/' | relative_url }}) | Servo loops, encoder feedback, tuning basics |
-| [VFD and Servo Architecture Diagrams]({{ '/training/electrical-machines/vfd-servo-architecture/' | relative_url }}) | System block diagrams, wiring topology |
-| [BLDC, EV, and Drone Motor Comparison]({{ '/training/electrical-machines/bldc-ev-drone-motors/' | relative_url }}) | BLDC vs PMSM, EV traction, drone ESC |
-| [Motor Control Methods and Operating Regions]({{ '/training/electrical-machines/motor-control-methods/' | relative_url }}) | V/Hz, FOC, DTC, field weakening, constant torque/power |
-| [Motor Efficiency, Power Factor, and Losses]({{ '/training/electrical-machines/motor-efficiency-losses/' | relative_url }}) | IE efficiency classes, loss types, power factor correction |
-| [Motor and VFD Equations Reference]({{ '/training/electrical-machines/motor-vfd-equations/' | relative_url }}) | Speed, torque, slip, power, VFD sizing equations |
-| [Servo Feedback and Inertia Matching]({{ '/training/electrical-machines/servo-feedback-inertia/' | relative_url }}) | Encoder types, inertia ratio, stability limits |
+These modules connect directly to the following standards. Follow the links to read article-level detail, crosswalks, and lifecycle context.
 
-### NEC Application
+<ul class="related-standards-list">
+{% for std in site.data.training_catalog.related_standards %}
+  <li>
+    <a href="{{ std.url | relative_url }}">{{ std.title }}</a>
+    <span>{{ std.relevance }}</span>
+  </li>
+{% endfor %}
+</ul>
 
-| Module | Topics |
-|--------|--------|
-| [NEC Code Reading Fundamentals]({{ '/training/nec-application/nec-code-reading/' | relative_url }}) | Code structure, mandatory language, exceptions, tables |
-| [Working Space and Table Navigation]({{ '/training/nec-application/working-space-table-navigation/' | relative_url }}) | Table 110.26, depth/width/height, conditions of maintenance |
-| [Motor and Panel Code Application]({{ '/training/nec-application/motor-panel-code-application/' | relative_url }}) | Art 430 sizing, Art 409 SCCR, Art 725 control circuits |
+---
+
+{% include trust-boundary.html %}

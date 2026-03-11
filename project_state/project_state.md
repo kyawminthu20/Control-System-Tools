@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-03-10
 **Status:** Active
-**Current Phase:** Phase 13 COMPLETE — Secondary Backlog
-**Next Phase:** Maintenance / ad hoc additions
+**Current Phase:** Phase 14 COMPLETE — Training Curriculum Upgrade
+**Next Phase:** Phase 15 QUEUED — Training Metadata and Module UX
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -12,7 +12,7 @@ This file is the source of truth for the current project state, active implement
 
 ## Current Direction
 
-Phase 11 is complete and pushed. The site is live on GitHub Pages. All planned corpus gap-fills are complete. The next phase (Phase 12) targets the Offshore / Marine industry overlay, which requires adding class society standards (DNV, ABS) to the RAG corpus before site pages can be built.
+Phase 13 is complete and the site is live on GitHub Pages. The next work shifts from corpus breadth to training experience depth. The immediate queue is to turn `/training/` from a browsable module index into a guided learning system with clearer entry points, learning paths, module metadata, and stronger NEC application coverage.
 
 The site is a presentation and navigation layer on top of `control-standards/rag/`. Authoritative engineering and standards guidance stays in `control-standards/rag/`. The website never modifies RAG content.
 
@@ -26,6 +26,7 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 - GitHub Actions deployment workflow at `.github/workflows/pages.yml`
 - Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 11 lifecycle stages + safety wiring, 8 scenarios, 3 crosswalks, 9 industry overlays (2 fully deepened), glossary (28 terms), software stack, about page
 - Interactive standards graph: 12 nodes, 14 edges (does not yet include IEC 60079, IEC 61511, SEMI)
+- Training section exists: 24 modules across 3 groups, but the landing page still behaves more like a browseable index than a guided curriculum
 - Root `main.py` remains a placeholder (not the site)
 
 ## Source Of Truth By Topic
@@ -305,3 +306,78 @@ EV motor files held as WIP. No new parallel layer created.
 - [x] `docs/crosswalks/iec60079-nec-500-505/index.md` — IEC 60079 ↔ NEC Art. 500/505 (Zone vs. Division); classification tables, EPL, gas groups, equipment marking, protection types, installation rules
 - [x] `docs/crosswalks/index.md` — updated with 2 new rows
 - [x] `docs/_includes/sidebar.html` — 2 new crosswalk links added
+
+## Phase 14 Scope — Training Curriculum Upgrade — COMPLETE
+
+**Driver:** Training page review on 2026-03-10 found that `/training/` is structurally sound but still reads as a raw index instead of a learning system.
+Plan: `docs/plans/2026-03-10-phase14-training-curriculum-implementation.md`
+Design: `docs/plans/2026-03-10-phase14-training-curriculum-design.md`
+
+### Landing page reframing
+- [x] `docs/training/index.md` — replaced generic intro with learner-oriented copy; verification note; Start Here audience cards; learning paths; browse-by-topic cards; data-driven all-modules table with metadata chips; related standards strip; trust-boundary include retained
+- [x] `docs/_data/training_catalog.yml` — shared data model for all 24 modules (level, time, type, focus, prerequisites, featured flag, learning paths, start-here, related standards)
+
+### Learning structure
+- [x] Four named learning paths: Controls Engineering Foundations, Motor and Drive Engineering, Industrial Panel Design (NEC Focus), Troubleshooting and Field Service
+- [x] Three browse tracks renamed: Electrical Fundamentals, Motors, Drives, and Motion, NEC for Machines and Panels
+- [x] All module summaries rewritten as outcome-focused descriptions in the catalog
+
+### Information hierarchy
+- [x] All Modules table replaces flat list — metadata columns (track, level, time, type); featured/core rows visually distinguished; mobile columns hidden via `.hide-mobile`
+- [x] Training CSS section added to `docs/assets/css/main.css` — training chips, start-here cards, learning-path cards, related-standards strip, responsive rules
+- [x] Group pages upgraded with group intro, recommended entry modules, and catalog-driven metadata tables
+- [x] Sidebar labels updated to match display names (URLs unchanged)
+- [x] Jekyll build: clean, 0.391 s
+
+## Phase 15 Scope — Training Metadata And Module UX — QUEUED
+
+**Goal:** Make the training catalog scannable by difficulty, effort, prerequisite knowledge, and job context.
+
+### Metadata model
+- [x] `docs/_data/training_catalog.yml` exists with level, time, type, focus, prerequisites, featured flag for all 24 modules (completed in Phase 14)
+- [ ] Classify modules with additional status markers such as Code-heavy, Field-useful, Design-critical if needed
+- [ ] Normalize per-module related-standards blocks on individual module pages
+
+### Page/application work
+- [ ] Surface metadata chips on the training landing page, group pages, and individual module pages
+- [ ] Add expected outcomes to module summaries so users know what they will be able to do after finishing each module
+- [ ] Normalize all module blurbs to practical, outcome-based wording
+- [ ] If complexity stays reasonable in Jekyll, add filtering or sorting by level, type, and job focus
+- [ ] Acceptance target: users should be able to choose a module without opening multiple pages just to discover difficulty or prerequisites
+
+## Phase 16 Scope — NEC Training Expansion — QUEUED
+
+**Goal:** Rebalance the training catalog so NEC application is not limited to only three modules.
+
+### Canonical RAG additions
+- [ ] Expand `control-standards/rag/training_modules/nec_application/` from 3 modules to at least 8-10 modules before corresponding site pages are considered complete
+- [ ] Add training modules for branch circuits vs. feeders for motor loads
+- [ ] Add training modules for disconnecting means for machinery
+- [ ] Add training modules for grounding and bonding basics for control panels
+- [ ] Add training modules for SCCR workflow for industrial control panels
+- [ ] Add training modules for conductor and OCPD sizing worked examples
+- [ ] Add training modules for Class 1 / Class 2 / remote-control circuits
+- [ ] Add training modules for practical Article 430 workflow
+- [ ] Add training modules for practical Article 409 workflow
+
+### Site follow-through
+- [ ] Publish matching site pages under `docs/training/nec-application/`
+- [ ] Rebalance the `/training/` landing page so NEC work is visibly represented alongside fundamentals and machines
+- [ ] Cross-link new NEC modules into standards and crosswalk pages where useful
+- [ ] Acceptance target: the NEC track should support practical machine and panel design work, not only code-navigation basics
+
+## Post-Phase 16 Planning Candidate — Training System Integration
+
+Planning note: `docs/plans/2026-03-10-training-system-integration-preplan.md`
+
+Not queued yet. This is a preparation note for the phase after the current training roadmap.
+
+Target themes:
+
+- connect Training -> Standards -> Application layers
+- publish a new control-systems training route on the site once the current training roadmap is finished
+- decide where advanced public-source engineering pages belong, starting with PID/drone material and a paraphrased Archer-vs-Joby eVTOL motor comparison
+- decide whether workflows become a first-class site section or remain distributed through lifecycle/scenario/training routes
+- surface field engineering and commissioning checklists as a site destination
+- build a reference-library route for equations, machine architecture, and quick-reference content
+- add safety and machine-architecture training once the current curriculum and NEC phases are complete
