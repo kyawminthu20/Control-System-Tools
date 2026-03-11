@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+{% assign module_meta = site.data.training_catalog.modules | where: "url", page.url | first %}
+
+<div class="page-header">
+  <span class="page-header__label">Training{% if module_meta %} — {{ module_meta.group_label }}{% endif %}</span>
+  <h1>{{ page.title }}</h1>
+</div>
+
+{% if module_meta %}
+<div class="module-meta-bar">
+  {% if module_meta.level == "Beginner" %}<span class="training-chip chip-beginner">{{ module_meta.level }}</span>
+  {% elsif module_meta.level == "Intermediate" %}<span class="training-chip chip-intermediate">{{ module_meta.level }}</span>
+  {% elsif module_meta.level == "Advanced" %}<span class="training-chip chip-advanced">{{ module_meta.level }}</span>{% endif %}
+  <span class="module-meta-item"><strong>Time:</strong> {{ module_meta.time }}</span>
+  <span class="module-meta-item"><strong>Type:</strong> {{ module_meta.type }}</span>
+  <span class="module-meta-item"><strong>Focus:</strong> {{ module_meta.focus }}</span>
+  {% if module_meta.featured %}<span class="training-chip chip-featured">Core</span>{% endif %}
+</div>
+
+<div class="module-outcome">
+  <strong>After this module:</strong> {{ module_meta.summary }}
+</div>
+
+{% if module_meta.prerequisites and module_meta.prerequisites.size > 0 %}
+<div class="module-prereqs">
+  <strong>Prerequisites:</strong>
+  {% for prereq in module_meta.prerequisites %}
+    <span class="module-prereq-item">{{ prereq }}</span>{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+</div>
+{% endif %}
+{% endif %}
+
+{{ content }}

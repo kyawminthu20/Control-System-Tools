@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "Motor Nameplates, Slip, and Torque"
 description: "This module turns common motor-training concepts into a practical review note for selection and troubleshooting."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Electrical Machines"
+  - name: "Motors, Drives, and Motion"
     url: "/training/electrical-machines/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/motor_nameplates_slip_and_torque.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Electrical Machines</span>
-  <h1>Motor Nameplates, Slip, and Torque</h1>
-</div>
 
 ## Purpose
 
@@ -98,6 +93,6 @@ Real motor review must also consider:
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/electrical-machines/dc-motor-basics/' | relative_url }}">&larr; DC Motor Basics</a>
-  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Electrical Machines</a>
+  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Motors, Drives, and Motion</a>
   <a href="{{ '/training/electrical-machines/motor-family-comparison/' | relative_url }}">Motor Family Comparison &rarr;</a>
 </div>

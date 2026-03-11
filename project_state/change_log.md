@@ -18,6 +18,13 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-10 — Phase 15 complete: Training Module UX
+
+- Created `docs/_layouts/training-module.html` — dedicated layout that looks up module metadata from `training_catalog.yml` by `page.url` and renders level chip, time, type, focus, Core badge, outcome sentence, and prerequisites before page content
+- Added CSS: `.module-meta-bar`, `.module-outcome`, `.module-prereqs` to `main.css`
+- Batch-updated all 24 module pages: layout changed to `training-module`, hardcoded page-header div removed, breadcrumb labels updated to new display names (Electrical Fundamentals, Motors Drives and Motion, NEC for Machines and Panels)
+- Jekyll build: clean, 0.535 s
+
 ### 2026-03-10 — Phase 14 complete: Training Curriculum Upgrade
 
 - Created `docs/_data/training_catalog.yml` — shared data model for all 24 modules with level, time, type, focus, prerequisites, featured flag, learning paths, start-here entries, and related standards

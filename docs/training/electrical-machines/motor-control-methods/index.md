@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "Motor Control Methods and Operating Regions"
 description: "This module explains the main motor-control methods discussed in industrial drives and servo systems, including field weakening and regeneration."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Electrical Machines"
+  - name: "Motors, Drives, and Motion"
     url: "/training/electrical-machines/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/motor_control_methods_and_operating_regions.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Electrical Machines</span>
-  <h1>Motor Control Methods and Operating Regions</h1>
-</div>
 
 ## Purpose
 
@@ -118,6 +113,6 @@ The control method changes:
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/electrical-machines/bldc-ev-drone-motors/' | relative_url }}">&larr; BLDC, EV, and Drone Motors</a>
-  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Electrical Machines</a>
+  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Motors, Drives, and Motion</a>
   <a href="{{ '/training/electrical-machines/motor-efficiency-losses/' | relative_url }}">Motor Efficiency and Losses &rarr;</a>
 </div>

@@ -1,11 +1,11 @@
 ---
-layout: default
+layout: training-module
 title: "Motor and Panel Code Application"
 description: "A routing guide for common industrial-control NEC questions spanning Article 430, 409, 725, and 250."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "NEC Application"
+  - name: "NEC for Machines and Panels"
     url: "/training/nec-application/"
 repo_path: "control-standards/rag/training_modules/nec_application/motor_and_panel_code_application.md"
 related_standards:
@@ -14,11 +14,6 @@ related_standards:
   - name: "NFPA 79"
     url: "/standards/us-electrical/nfpa-79/"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — NEC Application</span>
-  <h1>Motor and Panel Code Application</h1>
-</div>
 
 ## Purpose
 
@@ -117,6 +112,6 @@ The discipline is:
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/nec-application/working-space-table-navigation/' | relative_url }}">&larr; Working Space and Table Navigation</a>
-  <a href="{{ '/training/nec-application/' | relative_url }}">↑ NEC Application</a>
+  <a href="{{ '/training/nec-application/' | relative_url }}">↑ NEC for Machines and Panels</a>
   <span></span>
 </div>

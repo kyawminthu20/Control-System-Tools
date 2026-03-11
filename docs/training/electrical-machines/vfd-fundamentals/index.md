@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "VFD Fundamentals"
 description: "This module explains what a VFD does, how it is built internally, and what practical issues matter when connecting a drive to a real motor system."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Electrical Machines"
+  - name: "Motors, Drives, and Motion"
     url: "/training/electrical-machines/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/vfd_fundamentals.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Electrical Machines</span>
-  <h1>VFD Fundamentals</h1>
-</div>
 
 ## Purpose
 
@@ -154,6 +149,6 @@ In practice, the drive changes:
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/electrical-machines/ac-vs-dc-motors/' | relative_url }}">&larr; AC vs DC Motors</a>
-  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Electrical Machines</a>
+  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Motors, Drives, and Motion</a>
   <a href="{{ '/training/electrical-machines/servo-drive-fundamentals/' | relative_url }}">Servo Drive Fundamentals &rarr;</a>
 </div>

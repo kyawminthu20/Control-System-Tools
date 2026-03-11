@@ -1,11 +1,11 @@
 ---
-layout: default
+layout: training-module
 title: "NEC Code Reading Fundamentals"
 description: "A repeatable method for locating answers in the NEC — from stating the problem clearly to routing through the index and reading the full rule."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "NEC Application"
+  - name: "NEC for Machines and Panels"
     url: "/training/nec-application/"
 repo_path: "control-standards/rag/training_modules/nec_application/nec_code_reading_fundamentals.md"
 related_standards:
@@ -14,11 +14,6 @@ related_standards:
   - name: "NFPA 79"
     url: "/standards/us-electrical/nfpa-79/"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — NEC Application</span>
-  <h1>NEC Code Reading Fundamentals</h1>
-</div>
 
 ## Purpose
 
@@ -94,6 +89,6 @@ It is about:
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <span></span>
-  <a href="{{ '/training/nec-application/' | relative_url }}">↑ NEC Application</a>
+  <a href="{{ '/training/nec-application/' | relative_url }}">↑ NEC for Machines and Panels</a>
   <a href="{{ '/training/nec-application/working-space-table-navigation/' | relative_url }}">Working Space and Table Navigation &rarr;</a>
 </div>

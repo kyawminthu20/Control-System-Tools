@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "Equivalent Circuit Methods"
 description: "This module explains how to replace a complicated section of a circuit with a simpler equivalent form that behaves the same way at the terminals of interest."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Fundamentals"
+  - name: "Electrical Fundamentals"
     url: "/training/fundamentals/"
 repo_path: "control-standards/rag/training_modules/fundamentals/equivalent_circuit_methods.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Fundamentals</span>
-  <h1>Equivalent Circuit Methods</h1>
-</div>
 
 ## Purpose
 
@@ -83,6 +78,6 @@ These methods do not change the terminal behavior you care about. They change th
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/fundamentals/kirchhoff-laws/' | relative_url }}">&larr; Kirchhoff's Laws and Systematic Analysis</a>
-  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Fundamentals</a>
+  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Electrical Fundamentals</a>
   <a href="{{ '/training/fundamentals/electrical-equations-reference/' | relative_url }}">Electrical Equations Reference &rarr;</a>
 </div>

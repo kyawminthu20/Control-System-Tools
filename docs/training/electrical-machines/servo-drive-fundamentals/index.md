@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "Servo Drive Fundamentals"
 description: "This module explains the basic control structure of servo systems and the practical ideas that matter when precise motion is required."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Electrical Machines"
+  - name: "Motors, Drives, and Motion"
     url: "/training/electrical-machines/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/servo_drive_fundamentals.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Electrical Machines</span>
-  <h1>Servo Drive Fundamentals</h1>
-</div>
 
 ## Purpose
 
@@ -126,6 +121,6 @@ They are motion-control systems that combine:
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/electrical-machines/vfd-fundamentals/' | relative_url }}">&larr; VFD Fundamentals</a>
-  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Electrical Machines</a>
+  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Motors, Drives, and Motion</a>
   <a href="{{ '/training/electrical-machines/vfd-servo-architecture/' | relative_url }}">VFD and Servo Architecture &rarr;</a>
 </div>

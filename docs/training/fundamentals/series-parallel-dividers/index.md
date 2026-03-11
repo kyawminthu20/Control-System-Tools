@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "Series, Parallel, and Divider Methods"
 description: "This module covers the first simplification patterns most engineers and technicians should recognize before moving to more formal analysis methods."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Fundamentals"
+  - name: "Electrical Fundamentals"
     url: "/training/fundamentals/"
 repo_path: "control-standards/rag/training_modules/fundamentals/series_parallel_and_divider_methods.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Fundamentals</span>
-  <h1>Series, Parallel, and Divider Methods</h1>
-</div>
 
 ## Purpose
 
@@ -96,6 +91,6 @@ Only move to KCL, KVL, or equivalent-circuit methods when the topology cannot be
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/fundamentals/electrical-quantities/' | relative_url }}">&larr; Electrical Quantities and Circuit Language</a>
-  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Fundamentals</a>
+  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Electrical Fundamentals</a>
   <a href="{{ '/training/fundamentals/kirchhoff-laws/' | relative_url }}">Kirchhoff's Laws and Systematic Analysis &rarr;</a>
 </div>
