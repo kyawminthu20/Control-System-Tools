@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "BLDC, EV, and Drone Motors"
 description: "This module compares BLDC systems, EV traction motors, and drone propulsion motors, which are often discussed together but are not optimized for the same design goals."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Electrical Machines"
+  - name: "Motors, Drives, and Motion"
     url: "/training/electrical-machines/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/brushless_dc_ev_and_drone_motor_comparison.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Electrical Machines</span>
-  <h1>BLDC, EV, and Drone Motors</h1>
-</div>
 
 ## Purpose
 
@@ -176,6 +171,6 @@ Engineers should focus on:
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/electrical-machines/vfd-servo-architecture/' | relative_url }}">&larr; VFD and Servo Architecture</a>
-  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Electrical Machines</a>
+  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Motors, Drives, and Motion</a>
   <a href="{{ '/training/electrical-machines/motor-control-methods/' | relative_url }}">Motor Control Methods &rarr;</a>
 </div>

@@ -1,11 +1,11 @@
 ---
-layout: default
+layout: training-module
 title: "Working Space and Table Navigation"
 description: "How to read NEC tables and condition statements correctly — using working-space requirements as the training example."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "NEC Application"
+  - name: "NEC for Machines and Panels"
     url: "/training/nec-application/"
 repo_path: "control-standards/rag/training_modules/nec_application/working_space_and_table_navigation.md"
 related_standards:
@@ -14,11 +14,6 @@ related_standards:
   - name: "NFPA 79"
     url: "/standards/us-electrical/nfpa-79/"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — NEC Application</span>
-  <h1>Working Space and Table Navigation</h1>
-</div>
 
 ## Purpose
 
@@ -93,6 +88,6 @@ Getting those three things right before reading the number is the discipline tha
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/nec-application/nec-code-reading/' | relative_url }}">&larr; NEC Code Reading Fundamentals</a>
-  <a href="{{ '/training/nec-application/' | relative_url }}">↑ NEC Application</a>
+  <a href="{{ '/training/nec-application/' | relative_url }}">↑ NEC for Machines and Panels</a>
   <a href="{{ '/training/nec-application/motor-panel-code-application/' | relative_url }}">Motor and Panel Code Application &rarr;</a>
 </div>

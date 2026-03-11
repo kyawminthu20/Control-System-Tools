@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "DC Motor Basics"
 description: "This module explains the main construction and current path of a classical industrial DC motor."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Electrical Machines"
+  - name: "Motors, Drives, and Motion"
     url: "/training/electrical-machines/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/dc_motor_basics.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Electrical Machines</span>
-  <h1>DC Motor Basics</h1>
-</div>
 
 ## Purpose
 
@@ -73,6 +68,6 @@ These standards govern application, protection, and integration, not the full in
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/electrical-machines/induction-motor-basics/' | relative_url }}">&larr; Induction Motor Basics</a>
-  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Electrical Machines</a>
+  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Motors, Drives, and Motion</a>
   <a href="{{ '/training/electrical-machines/motor-nameplates-slip-torque/' | relative_url }}">Motor Nameplates, Slip, and Torque &rarr;</a>
 </div>

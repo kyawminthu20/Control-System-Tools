@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "Conductor Ampacity and Termination Temperature"
 description: "This module explains why conductor sizing is not just a table lookup — it requires ampacity correction, bundling adjustment, and terminal temperature checks."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Fundamentals"
+  - name: "Electrical Fundamentals"
     url: "/training/fundamentals/"
 repo_path: "control-standards/rag/training_modules/fundamentals/conductor_ampacity_and_termination_temperature.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Fundamentals</span>
-  <h1>Conductor Ampacity and Termination Temperature</h1>
-</div>
 
 ## Purpose
 
@@ -109,6 +104,6 @@ If any one of those steps is skipped, the design can fail review or overheat in 
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/fundamentals/diodes-transistors/' | relative_url }}">&larr; Diodes, Transistors, and Switching Basics</a>
-  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Fundamentals</a>
+  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Electrical Fundamentals</a>
   <span></span>
 </div>

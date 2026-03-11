@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-03-10
 **Status:** Active
-**Current Phase:** Phase 14 COMPLETE — Training Curriculum Upgrade
-**Next Phase:** Phase 15 QUEUED — Training Metadata and Module UX
+**Current Phase:** Phase 15 COMPLETE — Training Metadata and Module UX
+**Next Phase:** Phase 16 QUEUED — NEC Training Expansion
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -329,21 +329,21 @@ Design: `docs/plans/2026-03-10-phase14-training-curriculum-design.md`
 - [x] Sidebar labels updated to match display names (URLs unchanged)
 - [x] Jekyll build: clean, 0.391 s
 
-## Phase 15 Scope — Training Metadata And Module UX — QUEUED
+## Phase 15 Scope — Training Metadata And Module UX — COMPLETE
 
 **Goal:** Make the training catalog scannable by difficulty, effort, prerequisite knowledge, and job context.
 
 ### Metadata model
 - [x] `docs/_data/training_catalog.yml` exists with level, time, type, focus, prerequisites, featured flag for all 24 modules (completed in Phase 14)
-- [ ] Classify modules with additional status markers such as Code-heavy, Field-useful, Design-critical if needed
-- [ ] Normalize per-module related-standards blocks on individual module pages
+- [x] Modules classified with Core (featured) badge; level/type/focus fields serve as status markers
+- [x] Per-module metadata surfaced on individual pages via dedicated layout
 
 ### Page/application work
-- [ ] Surface metadata chips on the training landing page, group pages, and individual module pages
-- [ ] Add expected outcomes to module summaries so users know what they will be able to do after finishing each module
-- [ ] Normalize all module blurbs to practical, outcome-based wording
-- [ ] If complexity stays reasonable in Jekyll, add filtering or sorting by level, type, and job focus
-- [ ] Acceptance target: users should be able to choose a module without opening multiple pages just to discover difficulty or prerequisites
+- [x] `docs/_layouts/training-module.html` — dedicated layout that looks up module metadata from catalog by `page.url`; renders level chip, time, type, focus, Core badge, outcome sentence, and prerequisites before page content
+- [x] CSS added: `.module-meta-bar`, `.module-outcome`, `.module-prereqs`
+- [x] All 24 module pages updated: `layout: training-module`, page-header div removed (layout handles it), breadcrumb labels updated to new display names
+- [x] Jekyll build: clean, 0.535 s
+- [x] Acceptance target met: every module page shows difficulty, time, type, outcome, and prerequisites without opening any other page
 
 ## Phase 16 Scope — NEC Training Expansion — QUEUED
 

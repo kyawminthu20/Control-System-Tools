@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "Passive Components: Resistors and Capacitors"
 description: "This module explains the basic practical behavior of two common passive components used throughout electrical and control work."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Fundamentals"
+  - name: "Electrical Fundamentals"
     url: "/training/fundamentals/"
 repo_path: "control-standards/rag/training_modules/fundamentals/passive_components_resistors_capacitors.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Fundamentals</span>
-  <h1>Passive Components: Resistors and Capacitors</h1>
-</div>
 
 ## Purpose
 
@@ -87,6 +82,6 @@ For both parts, value alone is not enough. Always check:
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/fundamentals/electrical-equations-reference/' | relative_url }}">&larr; Electrical Equations Reference</a>
-  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Fundamentals</a>
+  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Electrical Fundamentals</a>
   <a href="{{ '/training/fundamentals/diodes-transistors/' | relative_url }}">Diodes, Transistors, and Switching Basics &rarr;</a>
 </div>

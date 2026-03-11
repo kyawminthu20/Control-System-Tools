@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "VFD and Servo Architecture"
 description: "This module compares the internal architecture of a VFD system and a servo-drive system so the reader can see why the two are related but not interchangeable."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Electrical Machines"
+  - name: "Motors, Drives, and Motion"
     url: "/training/electrical-machines/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/vfd_and_servo_architecture_diagrams.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Electrical Machines</span>
-  <h1>VFD and Servo Architecture</h1>
-</div>
 
 ## Purpose
 
@@ -160,6 +155,6 @@ A servo system depends strongly on the quality and configuration of:
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/electrical-machines/servo-drive-fundamentals/' | relative_url }}">&larr; Servo Drive Fundamentals</a>
-  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Electrical Machines</a>
+  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Motors, Drives, and Motion</a>
   <a href="{{ '/training/electrical-machines/bldc-ev-drone-motors/' | relative_url }}">BLDC, EV, and Drone Motors &rarr;</a>
 </div>

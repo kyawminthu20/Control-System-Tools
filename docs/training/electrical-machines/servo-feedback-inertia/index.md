@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "Servo Feedback and Inertia Matching"
 description: "This module explains two practical servo concepts that strongly affect stability and motion quality: feedback devices and inertia matching."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Electrical Machines"
+  - name: "Motors, Drives, and Motion"
     url: "/training/electrical-machines/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/servo_feedback_and_inertia_matching.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Electrical Machines</span>
-  <h1>Servo Feedback and Inertia Matching</h1>
-</div>
 
 ## Purpose
 
@@ -84,6 +79,6 @@ Many "servo tuning" problems are not just tuning problems. They may be caused by
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/electrical-machines/motor-vfd-equations/' | relative_url }}">&larr; Motor and VFD Equations Reference</a>
-  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Electrical Machines</a>
+  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Motors, Drives, and Motion</a>
   <span></span>
 </div>

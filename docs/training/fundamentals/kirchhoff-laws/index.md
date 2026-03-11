@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "Kirchhoff's Laws and Systematic Analysis"
 description: "This module explains the two bookkeeping laws that make complex circuit solving systematic rather than guess-based."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Fundamentals"
+  - name: "Electrical Fundamentals"
     url: "/training/fundamentals/"
 repo_path: "control-standards/rag/training_modules/fundamentals/kirchhoff_laws_and_systematic_analysis.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Fundamentals</span>
-  <h1>Kirchhoff's Laws and Systematic Analysis</h1>
-</div>
 
 ## Purpose
 
@@ -77,6 +72,6 @@ The method is less important than using one method consistently and carefully.
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/fundamentals/series-parallel-dividers/' | relative_url }}">&larr; Series, Parallel, and Divider Methods</a>
-  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Fundamentals</a>
+  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Electrical Fundamentals</a>
   <a href="{{ '/training/fundamentals/equivalent-circuit-methods/' | relative_url }}">Equivalent Circuit Methods &rarr;</a>
 </div>

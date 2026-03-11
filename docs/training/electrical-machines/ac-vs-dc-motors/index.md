@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "AC vs DC Motors"
 description: "This module compares AC and DC motor concepts at a practical engineering level so the reader can reason about supply type, commutation method, maintenance burden, and control architecture."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Electrical Machines"
+  - name: "Motors, Drives, and Motion"
     url: "/training/electrical-machines/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/ac_vs_dc_motor_comparison.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Electrical Machines</span>
-  <h1>AC vs DC Motors</h1>
-</div>
 
 ## Purpose
 
@@ -150,6 +145,6 @@ The real system includes:
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/electrical-machines/motor-family-comparison/' | relative_url }}">&larr; Motor Family Comparison</a>
-  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Electrical Machines</a>
+  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Motors, Drives, and Motion</a>
   <a href="{{ '/training/electrical-machines/vfd-fundamentals/' | relative_url }}">VFD Fundamentals &rarr;</a>
 </div>

@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "Diodes, Transistors, and Switching Basics"
 description: "This module gives a practical introduction to one-way devices and basic semiconductor switching elements."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Fundamentals"
+  - name: "Electrical Fundamentals"
     url: "/training/fundamentals/"
 repo_path: "control-standards/rag/training_modules/fundamentals/diodes_transistors_and_switching_basics.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Fundamentals</span>
-  <h1>Diodes, Transistors, and Switching Basics</h1>
-</div>
 
 ## Purpose
 
@@ -81,6 +76,6 @@ These devices are easy to simplify too much. Use datasheets and application cont
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/fundamentals/passive-components/' | relative_url }}">&larr; Passive Components</a>
-  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Fundamentals</a>
+  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Electrical Fundamentals</a>
   <a href="{{ '/training/fundamentals/conductor-ampacity/' | relative_url }}">Conductor Ampacity and Termination Temperature &rarr;</a>
 </div>

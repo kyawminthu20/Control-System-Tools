@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "Induction Motor Basics"
 description: "This module explains the basic operating chain of a three-phase induction motor in plain engineering language."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Electrical Machines"
+  - name: "Motors, Drives, and Motion"
     url: "/training/electrical-machines/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/induction_motor_basics.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Electrical Machines</span>
-  <h1>Induction Motor Basics</h1>
-</div>
 
 ## Purpose
 
@@ -79,6 +74,6 @@ Use this mental model when you need to reason about:
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <span></span>
-  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Electrical Machines</a>
+  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Motors, Drives, and Motion</a>
   <a href="{{ '/training/electrical-machines/dc-motor-basics/' | relative_url }}">DC Motor Basics &rarr;</a>
 </div>

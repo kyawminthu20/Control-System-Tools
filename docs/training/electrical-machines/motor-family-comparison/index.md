@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "Motor Family Comparison"
 description: "This module introduces the major motor families used in industrial automation so the reader can distinguish the motor type before choosing a drive, control method, or protection strategy."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Electrical Machines"
+  - name: "Motors, Drives, and Motion"
     url: "/training/electrical-machines/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/motor_family_comparison.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Electrical Machines</span>
-  <h1>Motor Family Comparison</h1>
-</div>
 
 ## Purpose
 
@@ -144,6 +139,6 @@ Their thermal assumptions, packaging goals, and duty expectations are often very
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/electrical-machines/motor-nameplates-slip-torque/' | relative_url }}">&larr; Motor Nameplates, Slip, and Torque</a>
-  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Electrical Machines</a>
+  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Motors, Drives, and Motion</a>
   <a href="{{ '/training/electrical-machines/ac-vs-dc-motors/' | relative_url }}">AC vs DC Motors &rarr;</a>
 </div>

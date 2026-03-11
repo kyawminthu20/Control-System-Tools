@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "Electrical Equations Reference"
 description: "A compact reference card for the most-used relationships from the fundamentals training set."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Fundamentals"
+  - name: "Electrical Fundamentals"
     url: "/training/fundamentals/"
 repo_path: "control-standards/rag/training_modules/fundamentals/electrical_equations_reference.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Fundamentals</span>
-  <h1>Electrical Equations Reference</h1>
-</div>
 
 ## Purpose
 
@@ -78,6 +73,6 @@ For two resistors:
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/fundamentals/equivalent-circuit-methods/' | relative_url }}">&larr; Equivalent Circuit Methods</a>
-  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Fundamentals</a>
+  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Electrical Fundamentals</a>
   <a href="{{ '/training/fundamentals/passive-components/' | relative_url }}">Passive Components &rarr;</a>
 </div>

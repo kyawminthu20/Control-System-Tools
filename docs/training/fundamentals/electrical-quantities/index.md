@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "Electrical Quantities and Circuit Language"
 description: "This module establishes the core vocabulary used in electrical analysis and practical control-panel reasoning."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Fundamentals"
+  - name: "Electrical Fundamentals"
     url: "/training/fundamentals/"
 repo_path: "control-standards/rag/training_modules/fundamentals/electrical_quantities_and_circuit_language.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Fundamentals</span>
-  <h1>Electrical Quantities and Circuit Language</h1>
-</div>
 
 ## Purpose
 
@@ -82,6 +77,6 @@ That step prevents many avoidable calculation mistakes.
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <span></span>
-  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Fundamentals</a>
+  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Electrical Fundamentals</a>
   <a href="{{ '/training/fundamentals/series-parallel-dividers/' | relative_url }}">Series, Parallel, and Divider Methods &rarr;</a>
 </div>

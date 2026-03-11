@@ -1,19 +1,14 @@
 ---
-layout: default
+layout: training-module
 title: "Motor and VFD Equations Reference"
 description: "This module collects the most useful motor and VFD equations into one reference note for training and first-pass engineering review."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Electrical Machines"
+  - name: "Motors, Drives, and Motion"
     url: "/training/electrical-machines/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/motor_and_vfd_equations_reference.md"
 ---
-
-<div class="page-header">
-  <span class="page-header__label">Training — Electrical Machines</span>
-  <h1>Motor and VFD Equations Reference</h1>
-</div>
 
 ## Purpose
 
@@ -107,6 +102,6 @@ First-pass rule:
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/electrical-machines/motor-efficiency-losses/' | relative_url }}">&larr; Motor Efficiency, Power Factor, and Losses</a>
-  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Electrical Machines</a>
+  <a href="{{ '/training/electrical-machines/' | relative_url }}">↑ Motors, Drives, and Motion</a>
   <a href="{{ '/training/electrical-machines/servo-feedback-inertia/' | relative_url }}">Servo Feedback and Inertia Matching &rarr;</a>
 </div>
