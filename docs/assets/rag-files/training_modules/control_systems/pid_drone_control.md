@@ -44,15 +44,15 @@ In most drones, stability is achieved through **fast cascade feedback loops** ru
 
 A drone must regulate several variables at the same time.
 
-| Controlled state | Meaning |
-| --- | --- |
-| Roll | left-right tilt |
-| Pitch | forward-back tilt |
-| Yaw | rotation around the vertical axis |
-| Altitude | vertical position |
-| Vertical speed | climb or descent rate |
-| Horizontal velocity | speed over ground |
-| Position | horizontal location |
+| Controlled state    | Meaning                           |
+| ------------------- | --------------------------------- |
+| Roll                | left-right tilt                   |
+| Pitch               | forward-back tilt                 |
+| Yaw                 | rotation around the vertical axis |
+| Altitude            | vertical position                 |
+| Vertical speed      | climb or descent rate             |
+| Horizontal velocity | speed over ground                 |
+| Position            | horizontal location               |
 
 The most critical inner stabilization loops are:
 
@@ -68,13 +68,13 @@ A flight controller depends heavily on an **IMU (Inertial Measurement Unit)**.
 
 Typical sensors include:
 
-| Sensor | Main use |
-| --- | --- |
-| Gyroscope | angular velocity |
-| Accelerometer | acceleration and gravity reference |
-| Magnetometer | heading reference |
-| Barometer | altitude estimate |
-| GPS | position and ground velocity |
+| Sensor                | Main use                                    |
+| --------------------- | ------------------------------------------- |
+| Gyroscope             | angular velocity                            |
+| Accelerometer         | acceleration and gravity reference          |
+| Magnetometer          | heading reference                           |
+| Barometer             | altitude estimate                           |
+| GPS                   | position and ground velocity                |
 | Range sensor or lidar | low-altitude height control on some systems |
 
 The **gyroscope is usually the most critical stabilization sensor** because the inner rate loop depends on accurate angular-rate measurement.
@@ -443,14 +443,14 @@ This means a drone can feel completely different between modes even though the s
 
 Common tuning symptoms in drone control include:
 
-| Symptom | Likely issue |
-| --- | --- |
-| fast oscillation | too much P or too much D noise sensitivity |
-| slow bounce or wobble | too much I or poor outer-loop tuning |
-| drift under steady disturbance | too little I |
-| mushy feel | too little P or too much filtering |
-| sharp overshoot at stop | not enough damping or too much P |
-| hot motors at hover | noisy D path, excessive oscillation, or overdriven filters/gains |
+| Symptom                        | Likely issue                                                     |
+| ------------------------------ | ---------------------------------------------------------------- |
+| fast oscillation               | too much P or too much D noise sensitivity                       |
+| slow bounce or wobble          | too much I or poor outer-loop tuning                             |
+| drift under steady disturbance | too little I                                                     |
+| mushy feel                     | too little P or too much filtering                               |
+| sharp overshoot at stop        | not enough damping or too much P                                 |
+| hot motors at hover            | noisy D path, excessive oscillation, or overdriven filters/gains |
 
 These are heuristics, not guaranteed diagnoses, but they are useful starting points.
 

@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-03-10
 **Status:** Active
-**Current Phase:** Phase 15 COMPLETE — Training Metadata and Module UX
-**Next Phase:** Phase 16 QUEUED — NEC Training Expansion
+**Current Phase:** Phase 16 COMPLETE — NEC Training Expansion
+**Next Phase:** Phase 17 QUEUED — Training System Integration (see preplan)
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -345,26 +345,29 @@ Design: `docs/plans/2026-03-10-phase14-training-curriculum-design.md`
 - [x] Jekyll build: clean, 0.535 s
 - [x] Acceptance target met: every module page shows difficulty, time, type, outcome, and prerequisites without opening any other page
 
-## Phase 16 Scope — NEC Training Expansion — QUEUED
+## Phase 16 Scope — NEC Training Expansion — COMPLETE
 
 **Goal:** Rebalance the training catalog so NEC application is not limited to only three modules.
 
 ### Canonical RAG additions
-- [ ] Expand `control-standards/rag/training_modules/nec_application/` from 3 modules to at least 8-10 modules before corresponding site pages are considered complete
-- [ ] Add training modules for branch circuits vs. feeders for motor loads
-- [ ] Add training modules for disconnecting means for machinery
-- [ ] Add training modules for grounding and bonding basics for control panels
-- [ ] Add training modules for SCCR workflow for industrial control panels
-- [ ] Add training modules for conductor and OCPD sizing worked examples
-- [ ] Add training modules for Class 1 / Class 2 / remote-control circuits
-- [ ] Add training modules for practical Article 430 workflow
-- [ ] Add training modules for practical Article 409 workflow
+- [x] Expand `control-standards/rag/training_modules/nec_application/` from 3 to 11 modules
+- [x] branch_circuits_vs_feeders_motor_loads.md
+- [x] disconnecting_means_for_machinery.md
+- [x] grounding_bonding_control_panels.md
+- [x] sccr_workflow.md
+- [x] conductor_ocpd_sizing_examples.md
+- [x] class1_class2_remote_control_circuits.md
+- [x] article_430_practical_workflow.md
+- [x] article_409_practical_workflow.md
 
 ### Site follow-through
-- [ ] Publish matching site pages under `docs/training/nec-application/`
-- [ ] Rebalance the `/training/` landing page so NEC work is visibly represented alongside fundamentals and machines
-- [ ] Cross-link new NEC modules into standards and crosswalk pages where useful
-- [ ] Acceptance target: the NEC track should support practical machine and panel design work, not only code-navigation basics
+- [x] 8 new site pages under `docs/training/nec-application/`
+- [x] `docs/_data/training_catalog.yml` — 8 new entries, module_count updated to 11, panel-design-nec path expanded
+- [x] NEC group index page: description updated to 11 modules, recommended entry modules updated
+- [x] Footer nav chain complete across all 11 NEC modules
+- [x] `docs/_data/rag_tree.json` regenerated (249 files)
+- [x] Jekyll build: clean (0.529 s)
+- [x] Acceptance target met: NEC track covers practical machine and panel design work end-to-end
 
 ## Post-Phase 16 Planning Candidate — Training System Integration
 

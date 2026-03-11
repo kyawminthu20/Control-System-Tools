@@ -113,5 +113,5 @@ The discipline is:
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
   <a href="{{ '/training/nec-application/working-space-table-navigation/' | relative_url }}">&larr; Working Space and Table Navigation</a>
   <a href="{{ '/training/nec-application/' | relative_url }}">↑ NEC for Machines and Panels</a>
-  <span></span>
+  <a href="{{ '/training/nec-application/branch-circuits-vs-feeders/' | relative_url }}">Branch Circuits vs. Feeders &rarr;</a>
 </div>

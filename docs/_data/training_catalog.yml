@@ -68,6 +68,10 @@ learning_paths:
       - url: "/training/nec-application/nec-code-reading/"
       - url: "/training/nec-application/working-space-table-navigation/"
       - url: "/training/nec-application/motor-panel-code-application/"
+      - url: "/training/nec-application/branch-circuits-vs-feeders/"
+      - url: "/training/nec-application/grounding-bonding-panels/"
+      - url: "/training/nec-application/sccr-workflow/"
+      - url: "/training/nec-application/conductor-ocpd-sizing/"
   - name: "Troubleshooting and Field Service"
     slug: "troubleshooting-field"
     description: "Focus on the applied modules most useful for fault diagnosis, commissioning, and field maintenance."
@@ -94,7 +98,7 @@ topic_groups:
     label: "NEC for Machines and Panels"
     url: "/training/nec-application/"
     description: "NEC code reading, table navigation, and article routing for motor and panel work."
-    module_count: 3
+    module_count: 11
 
 related_standards:
   - title: "NEC (NFPA 70)"
@@ -406,3 +410,108 @@ modules:
       - "NEC Code Reading Fundamentals"
       - "Conductor Ampacity and Termination Temperature"
     featured: true
+
+  - title: "Branch Circuits vs. Feeders for Motor Loads"
+    url: "/training/nec-application/branch-circuits-vs-feeders/"
+    group: "nec-application"
+    group_label: "NEC for Machines and Panels"
+    summary: "Understand where a branch circuit ends and a feeder begins, and why motor loads require the 125% conductor multiplier from Article 430."
+    level: "Beginner"
+    time: "20 min"
+    focus: "Panel Design / NEC"
+    type: "Code Application"
+    prerequisites:
+      - "NEC Code Reading Fundamentals"
+    featured: true
+
+  - title: "Disconnecting Means for Machinery"
+    url: "/training/nec-application/disconnecting-means/"
+    group: "nec-application"
+    group_label: "NEC for Machines and Panels"
+    summary: "Apply Art 430.102 in-sight rules, select permitted disconnect types, and understand how VFD installations change disconnect placement."
+    level: "Beginner"
+    time: "20 min"
+    focus: "Panel Design / NEC"
+    type: "Code Application"
+    prerequisites:
+      - "NEC Code Reading Fundamentals"
+
+  - title: "Grounding and Bonding for Control Panels"
+    url: "/training/nec-application/grounding-bonding-panels/"
+    group: "nec-application"
+    group_label: "NEC for Machines and Panels"
+    summary: "Distinguish grounding from bonding, size the EGC from Table 250.122, and keep the neutral and ground buses correctly separated in downstream panels."
+    level: "Beginner"
+    time: "25 min"
+    focus: "Panel Design / NEC"
+    type: "Code Application"
+    prerequisites:
+      - "NEC Code Reading Fundamentals"
+    featured: true
+
+  - title: "SCCR Workflow for Industrial Control Panels"
+    url: "/training/nec-application/sccr-workflow/"
+    group: "nec-application"
+    group_label: "NEC for Machines and Panels"
+    summary: "Follow the UL 508A component method to determine panel SCCR, understand why NEC 409.110 requires the marking, and use current-limiting devices to raise a low-rated panel."
+    level: "Intermediate"
+    time: "30 min"
+    focus: "Panel Design / NEC"
+    type: "Code Application"
+    prerequisites:
+      - "NEC Code Reading Fundamentals"
+      - "Motor and Panel Code Application"
+    featured: true
+
+  - title: "Conductor and OCPD Sizing Worked Examples"
+    url: "/training/nec-application/conductor-ocpd-sizing/"
+    group: "nec-application"
+    group_label: "NEC for Machines and Panels"
+    summary: "Work through the four-step NEC motor sizing sequence — conductor, overload, OCPD, EGC — with complete examples for 10 HP and 25 HP motors and a feeder serving three motors."
+    level: "Intermediate"
+    time: "30 min"
+    focus: "Panel Design / NEC"
+    type: "Code Application"
+    prerequisites:
+      - "NEC Code Reading Fundamentals"
+      - "Conductor Ampacity and Termination Temperature"
+    featured: true
+
+  - title: "Class 1, Class 2, and Remote-Control Circuits"
+    url: "/training/nec-application/class1-class2-circuits/"
+    group: "nec-application"
+    group_label: "NEC for Machines and Panels"
+    summary: "Classify control circuits using Art 725, understand why the power supply listing determines Class 2 status, and apply separation rules to 24 VDC PLC wiring in machine panels."
+    level: "Intermediate"
+    time: "25 min"
+    focus: "Panel Design / NEC"
+    type: "Code Application"
+    prerequisites:
+      - "NEC Code Reading Fundamentals"
+
+  - title: "Practical Article 430 Workflow"
+    url: "/training/nec-application/article-430-workflow/"
+    group: "nec-application"
+    group_label: "NEC for Machines and Panels"
+    summary: "Navigate Art 430's internal structure by Part, apply the table-not-nameplate rule, and size conductors, overload, OCPD, and disconnect in the correct sequence."
+    level: "Intermediate"
+    time: "30 min"
+    focus: "Panel Design / NEC"
+    type: "Code Application"
+    prerequisites:
+      - "NEC Code Reading Fundamentals"
+      - "Branch Circuits vs. Feeders for Motor Loads"
+    featured: true
+
+  - title: "Practical Article 409 Workflow"
+    url: "/training/nec-application/article-409-workflow/"
+    group: "nec-application"
+    group_label: "NEC for Machines and Panels"
+    summary: "Apply Art 409 to industrial control panels — size supply conductors, verify required markings, understand the UL 508A relationship, and use the pre-shipment inspection checklist."
+    level: "Intermediate"
+    time: "25 min"
+    focus: "Panel Design / NEC"
+    type: "Code Application"
+    prerequisites:
+      - "Motor and Panel Code Application"
+      - "SCCR Workflow for Industrial Control Panels"
