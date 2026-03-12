@@ -5,6 +5,7 @@ module_id: "control_systems"
 last_updated: "2026-03-11"
 
 files:
+  - "control_theory_overview.md"
   - "pid_control_intuitive_foundation.md"
   - "pid_control_intuition.md"
   - "industrial_pid_implementation.md"
