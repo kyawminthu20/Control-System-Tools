@@ -82,6 +82,21 @@ learning_paths:
       - url: "/training/electrical-machines/vfd-servo-architecture/"
       - url: "/training/electrical-machines/motor-efficiency-losses/"
       - url: "/training/fundamentals/conductor-ampacity/"
+  - name: "Machine Lifecycle Engineering"
+    slug: "machine-lifecycle"
+    description: "Follow a machine from concept through commissioning and maintenance. Routes concept → design → safety → commissioning → troubleshooting using existing modules and linked workflows."
+    modules:
+      - url: "/training/fundamentals/electrical-quantities/"
+      - url: "/training/fundamentals/conductor-ampacity/"
+      - url: "/training/nec-application/nec-code-reading/"
+      - url: "/training/nec-application/motor-panel-code-application/"
+      - url: "/training/nec-application/article-430-workflow/"
+      - url: "/training/nec-application/article-409-workflow/"
+      - url: "/training/nec-application/sccr-workflow/"
+      - url: "/training/electrical-machines/induction-motor-basics/"
+      - url: "/training/electrical-machines/motor-nameplates-slip-torque/"
+      - url: "/training/electrical-machines/vfd-fundamentals/"
+      - url: "/training/electrical-machines/vfd-servo-architecture/"
 
 topic_groups:
   - key: "fundamentals"
@@ -127,6 +142,9 @@ modules:
     type: "Concept"
     prerequisites: []
     featured: true
+    related_workflows:
+      - title: "Electrical Review Workflow"
+        url: "/workflows/electrical-review/"
 
   - title: "Series, Parallel, and Divider Methods"
     url: "/training/fundamentals/series-parallel-dividers/"
@@ -139,6 +157,9 @@ modules:
     type: "Concept + Practice"
     prerequisites:
       - "Electrical Quantities and Circuit Language"
+    related_workflows:
+      - title: "Electrical Review Workflow"
+        url: "/workflows/electrical-review/"
 
   - title: "Kirchhoff's Laws and Systematic Analysis"
     url: "/training/fundamentals/kirchhoff-laws/"
@@ -224,6 +245,11 @@ modules:
     type: "Concept"
     prerequisites: []
     featured: true
+    related_workflows:
+      - title: "Motor Selection Workflow"
+        url: "/workflows/motor-selection/"
+      - title: "Motor Troubleshooting Decision Tree"
+        url: "/workflows/motor-troubleshooting/"
 
   - title: "DC Motor Basics"
     url: "/training/electrical-machines/dc-motor-basics/"
@@ -247,6 +273,9 @@ modules:
     type: "Code Application"
     prerequisites:
       - "Induction Motor Basics"
+    related_workflows:
+      - title: "Motor Selection Workflow"
+        url: "/workflows/motor-selection/"
     featured: true
 
   - title: "Motor Family Comparison"
@@ -287,6 +316,11 @@ modules:
     prerequisites:
       - "Induction Motor Basics"
     featured: true
+    related_workflows:
+      - title: "VFD Commissioning Workflow"
+        url: "/workflows/vfd-commissioning/"
+      - title: "Motor Troubleshooting Decision Tree"
+        url: "/workflows/motor-troubleshooting/"
 
   - title: "Servo Drive Fundamentals"
     url: "/training/electrical-machines/servo-drive-fundamentals/"
@@ -299,6 +333,11 @@ modules:
     type: "Concept"
     prerequisites:
       - "VFD Fundamentals"
+    related_workflows:
+      - title: "Servo Commissioning Workflow"
+        url: "/workflows/servo-commissioning/"
+      - title: "Motor Troubleshooting Decision Tree"
+        url: "/workflows/motor-troubleshooting/"
 
   - title: "VFD and Servo Architecture Diagrams"
     url: "/training/electrical-machines/vfd-servo-architecture/"
@@ -311,6 +350,11 @@ modules:
     type: "Reference"
     prerequisites:
       - "VFD Fundamentals"
+    related_workflows:
+      - title: "VFD Commissioning Workflow"
+        url: "/workflows/vfd-commissioning/"
+      - title: "Servo Commissioning Workflow"
+        url: "/workflows/servo-commissioning/"
 
   - title: "BLDC, EV, and Drone Motor Comparison"
     url: "/training/electrical-machines/bldc-ev-drone-motors/"
@@ -502,6 +546,9 @@ modules:
       - "NEC Code Reading Fundamentals"
       - "Branch Circuits vs. Feeders for Motor Loads"
     featured: true
+    related_workflows:
+      - title: "Motor Selection Workflow"
+        url: "/workflows/motor-selection/"
 
   - title: "Practical Article 409 Workflow"
     url: "/training/nec-application/article-409-workflow/"

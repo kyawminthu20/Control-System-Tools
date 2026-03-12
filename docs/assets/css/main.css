@@ -1631,3 +1631,122 @@ tr:nth-child(even) td {
 .module-prereq-item {
   margin-left: 0.25rem;
 }
+
+/* =====================================================================
+   Workflows section
+   ===================================================================== */
+
+.workflow-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.workflow-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  background: var(--color-bg);
+  transition: border-color 0.15s;
+}
+
+.workflow-card:hover {
+  border-color: var(--color-accent, #2563eb);
+}
+
+.workflow-card-header {
+  margin-bottom: 0.6rem;
+}
+
+.workflow-card h3 {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.workflow-card p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 0 0 0.75rem;
+}
+
+.workflow-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.18rem 0.5rem;
+  border-radius: 3px;
+  margin-bottom: 0.25rem;
+}
+
+.workflow-badge.motor {
+  background: #dbeafe;
+  color: #1e40af;
+}
+[data-theme="dark"] .workflow-badge.motor {
+  background: #1e3a5f;
+  color: #93c5fd;
+}
+
+.workflow-badge.drive {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+[data-theme="dark"] .workflow-badge.drive {
+  background: #3b1f6e;
+  color: #c4b5fd;
+}
+
+.workflow-badge.electrical {
+  background: #fef9c3;
+  color: #713f12;
+}
+[data-theme="dark"] .workflow-badge.electrical {
+  background: #422006;
+  color: #fde68a;
+}
+
+.workflow-meta {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.wf-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.45rem;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  color: var(--color-text-muted);
+}
+
+/* Related workflows block on training module pages */
+.related-workflows {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--color-bg-alt);
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+}
+
+.related-workflows h4 {
+  margin: 0 0 0.6rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+.related-workflows ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.875rem;
+}
+
+.related-workflows li {
+  margin-bottom: 0.25rem;
+}
