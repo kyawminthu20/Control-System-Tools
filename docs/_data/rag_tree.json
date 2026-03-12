@@ -1520,6 +1520,12 @@
         "type": "dir",
         "children": [
           {
+            "name": "control_theory_overview.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/control_systems/control_theory_overview.md",
+            "serve_path": "training_modules/control_systems/control_theory_overview.md"
+          },
+          {
             "name": "industrial_control_loop_architectures.md",
             "type": "file",
             "path": "control-standards/rag/training_modules/control_systems/industrial_control_loop_architectures.md",

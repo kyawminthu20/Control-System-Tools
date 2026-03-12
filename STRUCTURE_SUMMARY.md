@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-11 21:38:48
+**Last Auto-Updated:** 2026-03-11 21:55:56
 
 ```text
 ├── .claude/
@@ -689,6 +689,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── control_systems/
 │   │   │   │   ├── README.md
 │   │   │   │   ├── _index.yaml
+│   │   │   │   ├── control_theory_overview.md
 │   │   │   │   ├── industrial_control_loop_architectures.md
 │   │   │   │   ├── industrial_pid_implementation.md
 │   │   │   │   ├── pid_control_intuition.md
@@ -804,6 +805,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       │   ├── 2026 NEC Changes.md
 │       │   ├── README.md
 │       │   ├── conductor_protection_and_ampacity_transcript_summary.md
+│       │   ├── conrol theory.md
 │       │   ├── diagrams/
 │       │   ├── electrical exam prep.md
 │       │   ├── equipment_grounding_conductor_topics/
@@ -872,6 +874,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       │   ├── scratch_notes/
 │       │   │   └── simple_safety_system_design.md
 │       │   ├── types of equipment ground conductors.md
+│       │   ├── types of grounding.md
 │       │   └── voltage_drop_topics/
 │       │       ├── README.md
 │       │       ├── voltage_drop_energy_code_and_specifications.md
@@ -1818,6 +1821,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │       │           └── UL508A_OVERVIEW.md
 │   │   │       └── training_modules/
 │   │   │           ├── control_systems/
+│   │   │           │   ├── control_theory_overview.md
 │   │   │           │   ├── industrial_control_loop_architectures.md
 │   │   │           │   ├── industrial_pid_implementation.md
 │   │   │           │   ├── pid_control_intuition.md
@@ -1951,7 +1955,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-10-phase15-training-module-ux.md
 │   │   │   ├── 2026-03-10-phase16-nec-training-expansion.md
 │   │   │   ├── 2026-03-10-training-system-integration-preplan.md
-│   │   │   └── 2026-03-11-phase17-cross-layer-routing.md
+│   │   │   ├── 2026-03-11-phase17-cross-layer-routing.md
+│   │   │   └── 2026-03-11-phase18-control-systems-training.md
 │   │   ├── rag-browser/
 │   │   │   └── index.html
 │   │   ├── scenarios/
@@ -2367,6 +2372,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │       │           └── UL508A_OVERVIEW.md
 │   │       └── training_modules/
 │   │           ├── control_systems/
+│   │           │   ├── control_theory_overview.md
 │   │           │   ├── industrial_control_loop_architectures.md
 │   │           │   ├── industrial_pid_implementation.md
 │   │           │   ├── pid_control_intuition.md
@@ -2500,7 +2506,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── 2026-03-10-phase15-training-module-ux.md
 │   │   ├── 2026-03-10-phase16-nec-training-expansion.md
 │   │   ├── 2026-03-10-training-system-integration-preplan.md
-│   │   └── 2026-03-11-phase17-cross-layer-routing.md
+│   │   ├── 2026-03-11-phase17-cross-layer-routing.md
+│   │   └── 2026-03-11-phase18-control-systems-training.md
 │   ├── rag-browser/
 │   │   └── index.md
 │   ├── scenarios/
