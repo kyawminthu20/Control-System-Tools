@@ -79,6 +79,20 @@ Each module should link to:
 | PID Heater Control | Intermediate | 20 min | Applied |
 | PID Drone Control | Advanced | 20 min | Applied |
 
+## Fundamentals group addition — IEC Earthing Systems
+
+RAG file promoted: `control-standards/rag/training_modules/fundamentals/earthing_systems_iec.md`
+Registered in: `training_modules/fundamentals/_index.yaml` (9 files total)
+
+### Site page to add alongside fundamentals group
+- `docs/training/fundamentals/earthing-systems-iec/index.md` — IEC Earthing System Types
+- Layout: `training-module`
+- Level: Beginner | Time: 20 min | Type: Concept | Focus: Controls / Panel Design
+- Prerequisites: Electrical Quantities and Circuit Language
+- Related workflows: Electrical Review Workflow
+- Cross-link to existing NEC grounding module (`/training/nec-application/grounding-bonding-control-panels/`) as international counterpart
+- training_catalog.yml: add module entry; update fundamentals module_count from 8 → 9
+
 ## Out of scope for this phase
 
 - Control Systems workflow pages (Phase 19)
