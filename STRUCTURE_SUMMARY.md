@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-11 21:55:56
+**Last Auto-Updated:** 2026-03-11 22:01:37
 
 ```text
 ├── .claude/
@@ -717,6 +717,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   ├── _index.yaml
 │   │   │   │   ├── conductor_ampacity_and_termination_temperature.md
 │   │   │   │   ├── diodes_transistors_and_switching_basics.md
+│   │   │   │   ├── earthing_systems_iec.md
 │   │   │   │   ├── electrical_equations_reference.md
 │   │   │   │   ├── electrical_quantities_and_circuit_language.md
 │   │   │   │   ├── equivalent_circuit_methods.md
@@ -1845,6 +1846,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │           ├── fundamentals/
 │   │   │           │   ├── conductor_ampacity_and_termination_temperature.md
 │   │   │           │   ├── diodes_transistors_and_switching_basics.md
+│   │   │           │   ├── earthing_systems_iec.md
 │   │   │           │   ├── electrical_equations_reference.md
 │   │   │           │   ├── electrical_quantities_and_circuit_language.md
 │   │   │           │   ├── equivalent_circuit_methods.md
@@ -2396,6 +2398,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │           ├── fundamentals/
 │   │           │   ├── conductor_ampacity_and_termination_temperature.md
 │   │           │   ├── diodes_transistors_and_switching_basics.md
+│   │           │   ├── earthing_systems_iec.md
 │   │           │   ├── electrical_equations_reference.md
 │   │           │   ├── electrical_quantities_and_circuit_language.md
 │   │           │   ├── equivalent_circuit_methods.md

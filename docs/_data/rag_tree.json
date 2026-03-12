@@ -1664,6 +1664,12 @@
             "serve_path": "training_modules/fundamentals/diodes_transistors_and_switching_basics.md"
           },
           {
+            "name": "earthing_systems_iec.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/fundamentals/earthing_systems_iec.md",
+            "serve_path": "training_modules/fundamentals/earthing_systems_iec.md"
+          },
+          {
             "name": "electrical_equations_reference.md",
             "type": "file",
             "path": "control-standards/rag/training_modules/fundamentals/electrical_equations_reference.md",
