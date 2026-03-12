@@ -662,3 +662,13 @@ Design doc: `docs/plans/2026-03-08-electrical-intelligence-integration-design.md
 
 - Older migration and generation details remain available elsewhere in the repository as historical context.
 - This file should stay focused on the active project and current implementation effort.
+
+## 2026-03-11 — Phase 17: Cross-Layer Knowledge Routing
+
+- Added `/workflows/` as first-class site section (Option A decision)
+- 5 workflow pages: Motor Selection, Motor Troubleshooting, VFD Commissioning, Servo Commissioning, Electrical Review
+- Extended training_catalog.yml: `related_workflows` field on 7 modules; Machine Lifecycle learning path added
+- training-module.html layout updated to render Related Workflows block
+- Sidebar Workflows section added (5 direct links)
+- Workflow CSS: card grid, badges, wf-tags, related-workflows block
+- Jekyll build: clean, 0.583 s, 107 pages

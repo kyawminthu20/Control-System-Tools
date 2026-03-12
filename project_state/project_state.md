@@ -1,9 +1,9 @@
 # Project State
 
-**Last Updated:** 2026-03-10
+**Last Updated:** 2026-03-11
 **Status:** Active
-**Current Phase:** Phase 16 COMPLETE — NEC Training Expansion
-**Next Phase:** Phase 17 QUEUED — Training System Integration (see preplan)
+**Current Phase:** Phase 17 COMPLETE — Cross-Layer Knowledge Routing
+**Next Phase:** Phase 18 QUEUED — Field Engineering and Reference Library
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -369,18 +369,40 @@ Design: `docs/plans/2026-03-10-phase14-training-curriculum-design.md`
 - [x] Jekyll build: clean (0.529 s)
 - [x] Acceptance target met: NEC track covers practical machine and panel design work end-to-end
 
-## Post-Phase 16 Planning Candidate — Training System Integration
+## Phase 17 Scope — Cross-Layer Knowledge Routing — COMPLETE
 
-Planning note: `docs/plans/2026-03-10-training-system-integration-preplan.md`
+**Plan:** `docs/plans/2026-03-11-phase17-cross-layer-routing.md`
+**Decision:** Workflows as first-class `/workflows/` site section (Option A)
 
-Not queued yet. This is a preparation note for the phase after the current training roadmap.
+### `/workflows/` section
+- [x] `docs/workflows/index.md` — landing page with workflow cards by category
+- [x] `docs/workflows/motor-selection/index.md` — Motor Selection Workflow
+- [x] `docs/workflows/motor-troubleshooting/index.md` — Motor Troubleshooting Decision Tree
+- [x] `docs/workflows/vfd-commissioning/index.md` — VFD Commissioning Workflow
+- [x] `docs/workflows/servo-commissioning/index.md` — Servo Commissioning Workflow
+- [x] `docs/workflows/electrical-review/index.md` — Electrical Review Workflow
 
-Target themes:
+### Cross-layer data model
+- [x] `docs/_data/training_catalog.yml` — `related_workflows` field added to 7 modules; Machine Lifecycle learning path added
+- [x] `docs/_layouts/training-module.html` — Related Workflows block rendered on module pages
 
-- connect Training -> Standards -> Application layers
-- publish a new control-systems training route on the site once the current training roadmap is finished
-- decide where advanced public-source engineering pages belong, starting with PID/drone material and a paraphrased Archer-vs-Joby eVTOL motor comparison
-- decide whether workflows become a first-class site section or remain distributed through lifecycle/scenario/training routes
-- surface field engineering and commissioning checklists as a site destination
-- build a reference-library route for equations, machine architecture, and quick-reference content
-- add safety and machine-architecture training once the current curriculum and NEC phases are complete
+### Navigation
+- [x] `docs/_includes/sidebar.html` — Workflows section added (5 workflow links)
+- [x] `docs/assets/css/main.css` — Workflow card grid, badges, wf-tags, related-workflows block CSS
+
+### Build
+- [x] Jekyll build: clean, 0.583 s, 107 pages
+
+## Phase 18 Backlog — Field Engineering and Reference Library
+
+**Canonical content ready to surface:**
+- `commissioning_checklists/checklists/` — 6 field-facing checklists
+- `design_framework/motor_systems/motor_selection_comparison_matrix.md`
+- `standards_intelligence/reference_models/7-Layer Industrial Machine Architecture Model.md`
+- `standards_intelligence/reference_models/Universal Machine Safety Architecture.md`
+- `standards_intelligence/reference_models/15-Standard Minimum Compliance Stack.md`
+
+**Target outcomes:**
+- `/field-engineering/` or `/commissioning/` section with checklist pages
+- `/reference/` section for equations, machine architecture, quick-reference content
+- Control Systems training track (needs new RAG corpus for PID/control-loop content)

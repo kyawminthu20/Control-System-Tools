@@ -32,6 +32,17 @@ layout: default
   {% endfor %}
 </div>
 {% endif %}
+
+{% if module_meta.related_workflows and module_meta.related_workflows.size > 0 %}
+<div class="related-workflows">
+  <h4>Related Workflows</h4>
+  <ul>
+    {% for wf in module_meta.related_workflows %}
+    <li><a href="{{ wf.url | relative_url }}">{{ wf.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
 {% endif %}
 
 {{ content }}
