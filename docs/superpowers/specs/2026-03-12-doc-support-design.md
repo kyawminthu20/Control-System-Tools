@@ -143,9 +143,11 @@ def scan_sources(source_root: Path) -> list[Path]:
     )
 ```
 
-**`build_record`** — add `.doc` branch inside the `try` block:
+**`build_record`** — restructure the existing `if/else` into `if/elif/else` inside the `try` block. The `.doc` branch must be inserted as a true `elif` between the PDF branch and the existing DOCX `else` — **not** as a standalone `if`:
 
 ```python
+if path.suffix.lower() == ".pdf":
+    # ... existing PDF branch (unchanged) ...
 elif path.suffix.lower() == ".doc":
     target_dir = work_output_path(source_root, "converted", path, ".docx").parent
     converted = convert_doc_to_docx(path, target_dir)
@@ -172,9 +174,11 @@ elif path.suffix.lower() == ".doc":
         record["quality_score"] = "low"
         record["manual_review"] = "yes"
         record["notes"] = "LibreOffice not available or .doc conversion failed."
+else:
+    # ... existing DOCX branch (unchanged) ...
 ```
 
-Also add `converted_docx_path` and `convert_doc_to_docx` to the imports from `common`.
+Add `convert_doc_to_docx` and `converted_docx_path` to the imports from `common` alongside the existing imports.
 
 ---
 
