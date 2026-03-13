@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-03-10
+**Last Updated:** 2026-03-13
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,14 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+### 2026-03-13 — Project-state backlog reconciled after Phase 17
+
+- Updated `project_state/project_state.md` to reflect the actual post-Phase-17 site state: 107-page clean build, 45-term glossary, 9 scenarios, 6 crosswalk pages, 32 surfaced training modules, 5 workflow pages, and standards graph coverage that already includes IEC 60079, IEC 61511, and SEMI
+- Clarified `Next Phase` as `Phase 18 QUEUED — Field Engineering, Reference Library, and Control Systems Training`
+- Replaced the stale note that Control Systems training needs new RAG corpus; canonical `training_modules/control_systems/` content already exists, so the remaining work is site surfacing and navigation
+- Marked the old GitHub Pages deployment notes as completed and converted the old Phase 3 backlog note into historical carryover status
+- Added direct references in `project_state/project_state.md` to the Phase 18 control-systems plan and the field/reference pre-plan
 
 ### 2026-03-10 — Phase 16 complete: NEC training expansion — 11-module NEC track
 
