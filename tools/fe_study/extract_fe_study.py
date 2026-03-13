@@ -93,21 +93,19 @@ def extract_pdf(record: dict, source_path: Path) -> list[str]:
     """Extract PDF text if a local extractor is available, else stage a review placeholder."""
     notes: list[str] = []
     record["last_processed_at"] = utc_now_iso()
-    pages, extractor, errors = extract_pdf_pages(source_path)
+    diag: list[str] = []
+    pages, extractor = extract_pdf_pages(source_path, diagnostics=diag)
+    if diag:
+        notes.extend(diag)
 
     if extractor and any(page.strip() for page in pages):
-        if errors:
-            notes.extend(errors)
         notes.append(f"Extracted with {extractor}")
         total_chars = sum(len(page) for page in pages)
         record["text_layer_present"] = "yes"
         record["status"] = "cleaned"
         record["quality_score"] = "high" if total_chars >= 4000 else "medium"
         record["manual_review"] = "no"
-        if errors:
-            record["notes"] = f"PDF text extracted locally using {extractor}; earlier extractors failed and were logged."
-        else:
-            record["notes"] = f"PDF text extracted locally using {extractor}."
+        record["notes"] = f"PDF text extracted locally using {extractor}."
         raw_text = build_raw_text_from_pages(pages)
         write_text_file(resolve_path_ref(record["raw_output_path"]), raw_text)
         write_text_file(
@@ -116,7 +114,6 @@ def extract_pdf(record: dict, source_path: Path) -> list[str]:
         )
         return notes
 
-    notes.extend(errors)
     notes.append("No local PDF text extractor produced usable text.")
     notes.append("Install pypdf, PyPDF2, PyMuPDF, or pdftotext, or run an OCR workflow.")
     record["status"] = "needs_review"

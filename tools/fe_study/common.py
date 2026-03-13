@@ -308,34 +308,42 @@ def optional_pdf_extractors() -> list[str]:
     return available
 
 
-def extract_pdf_pages(path: Path) -> tuple[list[str], str | None, list[str]]:
-    """Try the available PDF text extractors and return page text plus diagnostics."""
+def extract_pdf_pages(
+    path: Path,
+    diagnostics: list[str] | None = None,
+) -> tuple[list[str], str | None]:
+    """Try the available PDF text extractors and return page text if successful.
+
+    If *diagnostics* is provided, failed extractor attempts append a message to it.
+    """
     extractors = optional_pdf_extractors()
-    errors: list[str] = []
     if "pypdf" in extractors:
         try:
             from pypdf import PdfReader  # type: ignore
 
             reader = PdfReader(str(path))
-            return [(page.extract_text() or "").strip() for page in reader.pages], "pypdf", errors
+            return [(page.extract_text() or "").strip() for page in reader.pages], "pypdf"
         except Exception as exc:
-            errors.append(f"pypdf failed: {type(exc).__name__}: {exc}")
+            if diagnostics is not None:
+                diagnostics.append(f"pypdf failed: {exc}")
     if "PyPDF2" in extractors:
         try:
             from PyPDF2 import PdfReader  # type: ignore
 
             reader = PdfReader(str(path))
-            return [(page.extract_text() or "").strip() for page in reader.pages], "PyPDF2", errors
+            return [(page.extract_text() or "").strip() for page in reader.pages], "PyPDF2"
         except Exception as exc:
-            errors.append(f"PyPDF2 failed: {type(exc).__name__}: {exc}")
+            if diagnostics is not None:
+                diagnostics.append(f"PyPDF2 failed: {exc}")
     if "pymupdf" in extractors:
         try:
             import fitz  # type: ignore
 
             doc = fitz.open(str(path))
-            return [doc[idx].get_text("text").strip() for idx in range(doc.page_count)], "pymupdf", errors
+            return [doc[idx].get_text("text").strip() for idx in range(doc.page_count)], "pymupdf"
         except Exception as exc:
-            errors.append(f"pymupdf failed: {type(exc).__name__}: {exc}")
+            if diagnostics is not None:
+                diagnostics.append(f"pymupdf failed: {exc}")
     if "pdftotext" in extractors:
         proc = subprocess.run(
             ["pdftotext", str(path), "-"],
@@ -345,21 +353,15 @@ def extract_pdf_pages(path: Path) -> tuple[list[str], str | None, list[str]]:
         )
         if proc.returncode == 0 and proc.stdout.strip():
             pages = [page.strip() for page in proc.stdout.split("\f") if page.strip()]
-            return pages, "pdftotext", errors
-        stderr = proc.stderr.strip()
-        if proc.returncode != 0:
-            details = stderr or "non-zero exit status"
-            errors.append(f"pdftotext failed: {details}")
-        else:
-            errors.append("pdftotext returned no usable text.")
-    if not extractors:
-        errors.append("No supported PDF extractors are installed.")
-    return [], None, errors
+            return pages, "pdftotext"
+        if diagnostics is not None and proc.returncode != 0:
+            diagnostics.append(f"pdftotext failed (exit {proc.returncode}): {proc.stderr.strip()}")
+    return [], None
 
 
 def detect_pdf_text_layer(path: Path) -> str:
     """Return yes/no/unknown for PDF text layer availability."""
-    pages, extractor, _ = extract_pdf_pages(path)
+    pages, extractor = extract_pdf_pages(path)
     if not extractor:
         return "unknown"
     sample = "".join(page for page in pages[:3] if page).strip()
