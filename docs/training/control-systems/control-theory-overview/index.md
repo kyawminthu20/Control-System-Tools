@@ -21,7 +21,7 @@ Use this module as a map of the control-engineering workflow before going deeper
 
 A PID loop is only one layer of a real control system. This module explains what surrounds it: sensors, filters, references, actuator limits, and verification.
 
-## What is control theory
+## What is control theory?
 
 Control theory is the toolset used to make systems follow intended behavior.
 

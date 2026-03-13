@@ -340,7 +340,10 @@ def extract_pdf_pages(
             import fitz  # type: ignore
 
             doc = fitz.open(str(path))
-            return [doc[idx].get_text("text").strip() for idx in range(doc.page_count)], "pymupdf"
+            try:
+                return [doc[idx].get_text("text").strip() for idx in range(doc.page_count)], "pymupdf"
+            finally:
+                doc.close()
         except Exception as exc:
             if diagnostics is not None:
                 diagnostics.append(f"pymupdf failed: {exc}")

@@ -13,7 +13,7 @@ import re
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STRUCTURE_FILE = os.path.join(PROJECT_ROOT, "STRUCTURE_SUMMARY.md")
 
-IGNORE_DIRS = {'.git', '__pycache__', '.DS_Store', '.idea', 'venv', 'node_modules'}
+IGNORE_DIRS = {'.git', '__pycache__', '.DS_Store', '.idea', 'venv', 'node_modules', 'planning'}
 IGNORE_FILES = {'.DS_Store'}
 
 def generate_tree(dir_path, prefix=""):
