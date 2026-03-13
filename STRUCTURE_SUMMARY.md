@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-13 06:27:58
+**Last Auto-Updated:** 2026-03-13 06:34:00
 
 ```text
 ├── .claude/
@@ -36,6 +36,15 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   ├── console-2026-03-09T14-33-31-511Z.log
 │   ├── console-2026-03-10T02-49-09-555Z.log
 │   └── page-2026-03-09T14-32-39-211Z.png
+├── .pytest_cache/
+│   ├── .gitignore
+│   ├── CACHEDIR.TAG
+│   ├── README.md
+│   └── v/
+│       └── cache/
+│           ├── lastfailed
+│           ├── nodeids
+│           └── stepwise
 ├── .python-version
 ├── .venv/
 │   ├── .gitignore
@@ -6739,6 +6748,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   └── project_state.md
 ├── pyproject.toml
 ├── rag -> control-standards/rag
+├── tests/
+│   ├── __init__.py
+│   └── tools/
+│       ├── __init__.py
+│       └── fe_study/
+│           ├── __init__.py
+│           └── test_common.py
 ├── tools/
 │   ├── README.md
 │   ├── fe_study/

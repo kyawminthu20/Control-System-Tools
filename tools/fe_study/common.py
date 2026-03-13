@@ -27,6 +27,7 @@ WORK_DIRS = {
     "chunks": "_chunks",
     "summaries": "_summaries",
     "samples": "_samples",
+    "converted": "_converted",
 }
 
 MANIFEST_FIELDS = [
