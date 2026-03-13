@@ -35,3 +35,6 @@ docs/vendor/
 .playwright-mcp/
 
 planning/FE_Study/
+
+# pytest
+.pytest_cache/
