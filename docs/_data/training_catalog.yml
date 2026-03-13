@@ -35,6 +35,13 @@ start_here:
         url: "/training/nec-application/nec-code-reading/"
       - title: "Motor and Panel Code Application"
         url: "/training/nec-application/motor-panel-code-application/"
+  - audience: "Learning control theory and PID"
+    description: "Start with the control theory overview, then move through PID intuition and industrial implementation."
+    entry_modules:
+      - title: "Control Theory Overview"
+        url: "/training/control-systems/control-theory-overview/"
+      - title: "PID Control — Intuitive Foundation"
+        url: "/training/control-systems/pid-foundation/"
 
 learning_paths:
   - name: "Controls Engineering Foundations"
@@ -97,13 +104,24 @@ learning_paths:
       - url: "/training/electrical-machines/motor-nameplates-slip-torque/"
       - url: "/training/electrical-machines/vfd-fundamentals/"
       - url: "/training/electrical-machines/vfd-servo-architecture/"
+  - name: "Control Systems Engineering"
+    slug: "control-systems-engineering"
+    description: "Build a control-theory foundation and apply it through PID intuition, industrial PLC implementation, and applied heater and motion-control examples."
+    modules:
+      - url: "/training/control-systems/control-theory-overview/"
+      - url: "/training/control-systems/pid-foundation/"
+      - url: "/training/control-systems/pid-intuition/"
+      - url: "/training/control-systems/industrial-pid/"
+      - url: "/training/control-systems/control-loop-architectures/"
+      - url: "/training/control-systems/pid-heater-control/"
+      - url: "/training/control-systems/pid-drone-control/"
 
 topic_groups:
   - key: "fundamentals"
     label: "Electrical Fundamentals"
     url: "/training/fundamentals/"
-    description: "Circuit theory, analysis methods, passive components, switching devices, and conductor sizing."
-    module_count: 8
+    description: "Circuit theory, analysis methods, passive components, switching devices, conductor sizing, and IEC earthing systems."
+    module_count: 9
   - key: "electrical-machines"
     label: "Motors, Drives, and Motion"
     url: "/training/electrical-machines/"
@@ -114,6 +132,11 @@ topic_groups:
     url: "/training/nec-application/"
     description: "NEC code reading, table navigation, and article routing for motor and panel work."
     module_count: 11
+  - key: "control-systems"
+    label: "Control Systems"
+    url: "/training/control-systems/"
+    description: "Control theory, PID intuition, industrial PLC implementation, loop architectures, and applied heater and motion-control examples."
+    module_count: 7
 
 related_standards:
   - title: "NEC (NFPA 70)"
@@ -232,6 +255,22 @@ modules:
     type: "Code Application"
     prerequisites: []
     featured: true
+
+  - title: "IEC Earthing System Types"
+    url: "/training/fundamentals/earthing-systems-iec/"
+    group: "fundamentals"
+    group_label: "Electrical Fundamentals"
+    summary: "Understand how TN-C, TT, TN-C-S, TN-S, and IT earthing systems affect fault-current path, protective-device selection, and touch-voltage risk in machine and panel design."
+    level: "Beginner"
+    time: "20 min"
+    focus: "Controls / Panel Design"
+    type: "Concept"
+    prerequisites:
+      - "Electrical Quantities and Circuit Language"
+    featured: false
+    related_workflows:
+      - title: "Electrical Review Workflow"
+        url: "/workflows/electrical-review/"
 
   # ── Electrical Machines ─────────────────────────────────────────────────────
   - title: "Induction Motor Basics"
@@ -562,3 +601,100 @@ modules:
     prerequisites:
       - "Motor and Panel Code Application"
       - "SCCR Workflow for Industrial Control Panels"
+
+  # ── Control Systems ──────────────────────────────────────────────────────────
+  - title: "Control Theory Overview"
+    url: "/training/control-systems/control-theory-overview/"
+    group: "control-systems"
+    group_label: "Control Systems"
+    summary: "A map of the control-engineering workflow — plant, feedback vs. feedforward, controller families, state estimation, and verification — before going deeper into PID."
+    level: "Beginner"
+    time: "20 min"
+    focus: "Controls / Process"
+    type: "Concept"
+    prerequisites: []
+    featured: true
+
+  - title: "PID Control — Intuitive Foundation"
+    url: "/training/control-systems/pid-foundation/"
+    group: "control-systems"
+    group_label: "Control Systems"
+    summary: "Entry point for the PID modules — what P, I, and D each do, recommended reading order, and application areas across temperature, pressure, flow, and motion."
+    level: "Beginner"
+    time: "20 min"
+    focus: "Controls / Process"
+    type: "Concept"
+    prerequisites:
+      - "Control Theory Overview"
+    featured: true
+
+  - title: "PID Intuition — P, I, and D in Practice"
+    url: "/training/control-systems/pid-intuition/"
+    group: "control-systems"
+    group_label: "Control Systems"
+    summary: "Plain-language explanation of proportional, integral, and derivative action — why P-only leaves steady-state error, how integral removes it, and how derivative adds damping."
+    level: "Beginner"
+    time: "25 min"
+    focus: "Controls / Process"
+    type: "Concept"
+    prerequisites:
+      - "PID Control — Intuitive Foundation"
+    featured: true
+
+  - title: "Industrial PID Implementation"
+    url: "/training/control-systems/industrial-pid/"
+    group: "control-systems"
+    group_label: "Control Systems"
+    summary: "How PID appears in real industrial control systems — SP/PV/CV terminology, bias, output limits, anti-windup, and Rockwell PIDE and Siemens PID_Compact conventions."
+    level: "Intermediate"
+    time: "30 min"
+    focus: "Controls / PLC"
+    type: "Code Application"
+    prerequisites:
+      - "PID Intuition — P, I, and D in Practice"
+    featured: true
+
+  - title: "Industrial Control Loop Architectures"
+    url: "/training/control-systems/control-loop-architectures/"
+    group: "control-systems"
+    group_label: "Control Systems"
+    summary: "Why most industrial loops are PI not PID, VFD speed-loop structure, servo cascade control, and comparison of process-loop types by controller choice."
+    level: "Intermediate"
+    time: "25 min"
+    focus: "Controls / Process"
+    type: "Concept"
+    prerequisites:
+      - "Industrial PID Implementation"
+    featured: false
+    related_workflows:
+      - title: "Electrical Review Workflow"
+        url: "/workflows/electrical-review/"
+
+  - title: "PID Heater Control with Contactor"
+    url: "/training/control-systems/pid-heater-control/"
+    group: "control-systems"
+    group_label: "Control Systems"
+    summary: "Practical heater-control design splitting PI temperature control from time-proportioning output scheduling — minimum on/off time, state machine, and safety interlocks."
+    level: "Intermediate"
+    time: "20 min"
+    focus: "Controls / Applied"
+    type: "Applied"
+    prerequisites:
+      - "Industrial PID Implementation"
+    featured: false
+    related_workflows:
+      - title: "Electrical Review Workflow"
+        url: "/workflows/electrical-review/"
+
+  - title: "PID in Drone and Motion Control"
+    url: "/training/control-systems/pid-drone-control/"
+    group: "control-systems"
+    group_label: "Control Systems"
+    summary: "How fast cascade PID loops stabilize a quadcopter — nested rate, attitude, altitude, and position loops, motor mixing, and parallels to industrial servo cascade control."
+    level: "Advanced"
+    time: "20 min"
+    focus: "Controls / Motion"
+    type: "Applied"
+    prerequisites:
+      - "Industrial Control Loop Architectures"
+    featured: false

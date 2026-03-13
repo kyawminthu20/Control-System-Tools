@@ -1,9 +1,9 @@
 # Project State
 
-**Last Updated:** 2026-03-11
+**Last Updated:** 2026-03-13
 **Status:** Active
-**Current Phase:** Phase 17 COMPLETE — Cross-Layer Knowledge Routing
-**Next Phase:** Phase 18 QUEUED — Field Engineering and Reference Library
+**Current Phase:** Phase 18 Track A COMPLETE — Control Systems Training Surfacing
+**Next Phase:** Phase 18 Track B/C QUEUED — Field Engineering and Reference Library Surfacing
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -12,21 +12,22 @@ This file is the source of truth for the current project state, active implement
 
 ## Current Direction
 
-Phase 13 is complete and the site is live on GitHub Pages. The next work shifts from corpus breadth to training experience depth. The immediate queue is to turn `/training/` from a browsable module index into a guided learning system with clearer entry points, learning paths, module metadata, and stronger NEC application coverage.
+Phase 17 is complete and the site is live on GitHub Pages. The next work shifts from cross-layer routing into surfacing canonical content that already exists in the RAG but is not yet a first-class site destination: Control Systems training, field engineering checklists, and reference-library material.
 
 The site is a presentation and navigation layer on top of `control-standards/rag/`. Authoritative engineering and standards guidance stays in `control-standards/rag/`. The website never modifies RAG content.
 
 ## Current Reality
 
 - Jekyll site deployed on GitHub Pages — `https://kyawminthu20.github.io/Control-System-Tools/`
-- Jekyll build: ~60 pages, clean build (0.27 s locally)
+- Last validated Jekyll build: 116 pages, clean build (0.629 s locally)
 - Three-panel layout (sidebar 240px + main content + context panel 220px)
 - Mermaid.js CDN integration for all diagrams; Cytoscape.js 3.28.1 for interactive standards graph
 - Google Analytics tag installed sitewide in `docs/_layouts/default.html` using measurement ID `G-RPL3G47EFZ`
 - GitHub Actions deployment workflow at `.github/workflows/pages.yml`
-- Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 11 lifecycle stages + safety wiring, 8 scenarios, 3 crosswalks, 9 industry overlays (2 fully deepened), glossary (28 terms), software stack, about page
-- Interactive standards graph: 12 nodes, 14 edges (does not yet include IEC 60079, IEC 61511, SEMI)
-- Training section exists: 24 modules across 3 groups, but the landing page still behaves more like a browseable index than a guided curriculum
+- Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 12 lifecycle pages including safety wiring, 9 scenarios, 6 crosswalk pages, 9 industry overlays, glossary (45 terms), training (40 surfaced modules across 4 groups), workflows (5 pages), software stack, and about / trust boundary
+- Interactive standards graph: 12 nodes, 16 edges, including IEC 60079, IEC 61511, and SEMI
+- Training groups: Electrical Fundamentals (9 modules), Motors/Drives (13), NEC (11), Control Systems (7)
+- Field checklists and reference models exist in the canonical RAG but are not yet exposed as dedicated top-level site sections
 - Root `main.py` remains a placeholder (not the site)
 
 ## Source Of Truth By Topic
@@ -35,6 +36,8 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 - Project-level change history: `project_state/change_log.md`
 - Runtime, tooling, and deployment requirements: `project_state/environment.md`
 - Setup, run, validation, and deployment steps: `project_state/how_to.md`
+- Phase 18 control-systems site plan: `docs/plans/2026-03-11-phase18-control-systems-training.md`
+- Field/reference expansion pre-plan: `docs/plans/2026-03-10-training-system-integration-preplan.md`
 - Authoritative standards content: `control-standards/rag/`
 - Site source: `docs/`
 
@@ -55,13 +58,9 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 - [x] About / trust boundary page
 - [x] GitHub Actions pages.yml workflow
 
-## Phase 1 — SHIPPED (pending push + Pages enable)
+## Phase 1 — SHIPPED
 
-All Phase 1 code is committed.
-
-1. Push: `git push`
-2. Enable GitHub Pages: Settings → Pages → Source: GitHub Actions
-3. Verify: `https://kyawminthu20.github.io/Control-System-Tools/`
+Phase 1 is pushed, deployed, and live on GitHub Pages.
 
 ## Phase 2 Scope — COMPLETED
 
@@ -73,13 +72,13 @@ Design: `docs/plans/2026-03-05-phase2-design.md`
 - [x] Task 3: lunr.js CDN + `search.json` data file
 - [x] Task 4: Topnav search input + inline dropdown
 - [x] Task 5: Crosswalk comparison selector page (`/crosswalks/compare/`)
-- [ ] Task 6: Push + enable GitHub Pages (manual step)
+- [x] Task 6: GitHub Pages enabled and site verified
 
-## Phase 3 Backlog (after Phase 2 ships)
+## Phase 3 Backlog (historical carryover)
 
-- Interactive standards graph
-- Remaining functional-safety detail pages (when corpus is confirmed complete)
-- SEMI S2/S8/S14 standard pages (not yet in corpus)
+- Interactive standards graph — completed in Phase 9
+- Functional-safety detail coverage — completed where corpus exists; future additions remain corpus-dependent
+- SEMI S2/S8/S14 standard pages — completed in Phase 10
 
 ## Phase 4 Scope — COMPLETED
 
@@ -393,7 +392,31 @@ Design: `docs/plans/2026-03-10-phase14-training-curriculum-design.md`
 ### Build
 - [x] Jekyll build: clean, 0.583 s, 107 pages
 
-## Phase 18 Backlog — Field Engineering and Reference Library
+## Phase 18 Track A — Control Systems Training Surfacing — COMPLETE
+
+**Plan:** `docs/plans/2026-03-11-phase18-control-systems-training.md`
+
+### Control Systems group (7 modules)
+- [x] `docs/training/control-systems/index.md` — group landing page
+- [x] `docs/training/control-systems/control-theory-overview/index.md`
+- [x] `docs/training/control-systems/pid-foundation/index.md`
+- [x] `docs/training/control-systems/pid-intuition/index.md`
+- [x] `docs/training/control-systems/industrial-pid/index.md`
+- [x] `docs/training/control-systems/control-loop-architectures/index.md`
+- [x] `docs/training/control-systems/pid-heater-control/index.md`
+- [x] `docs/training/control-systems/pid-drone-control/index.md`
+
+### Fundamentals group addition — IEC Earthing Systems
+- [x] `docs/training/fundamentals/earthing-systems-iec/index.md` — IEC Earthing System Types (TN-C, TT, TN-C-S, TN-S, IT)
+
+### Data model and navigation
+- [x] `docs/_data/training_catalog.yml` — control-systems topic group, 7 module entries, Control Systems Engineering learning path, start-here audience card, fundamentals count 8→9, earthing module entry
+- [x] `docs/_includes/sidebar.html` — Control Systems link added under Training section
+
+### Build
+- [x] Jekyll build: clean, 0.629 s, 116 pages
+
+## Phase 18 Backlog — Field Engineering, Reference Library, and Control Systems Training
 
 **Canonical content ready to surface:**
 - `commissioning_checklists/checklists/` — 6 field-facing checklists
@@ -401,8 +424,31 @@ Design: `docs/plans/2026-03-10-phase14-training-curriculum-design.md`
 - `standards_intelligence/reference_models/7-Layer Industrial Machine Architecture Model.md`
 - `standards_intelligence/reference_models/Universal Machine Safety Architecture.md`
 - `standards_intelligence/reference_models/15-Standard Minimum Compliance Stack.md`
+- `training_modules/control_systems/` — 7 control-theory and PID training files
+- `training_modules/fundamentals/earthing_systems_iec.md`
 
-**Target outcomes:**
+### Track A — Control Systems training surfacing
+
+**Plan:** `docs/plans/2026-03-11-phase18-control-systems-training.md`
+
+- `/training/control-systems/` group landing page
+- 7 site module pages mapped to the existing control-systems RAG corpus
+- `docs/_data/training_catalog.yml` updates: new `control-systems` topic group, 7 module entries, learning path, and start-here route
+- Sidebar update: Control Systems link under Training
+- `/training/fundamentals/earthing-systems-iec/` page plus fundamentals catalog/count update
+
+### Track B — Field Engineering / Commissioning surfacing
+
 - `/field-engineering/` or `/commissioning/` section with checklist pages
-- `/reference/` section for equations, machine architecture, quick-reference content
-- Control Systems training track (needs new RAG corpus for PID/control-loop content)
+- Publish selected commissioning checklists from canonical RAG as site pages
+- Link checklist pages back into lifecycle, workflow, and training routes where appropriate
+
+### Track C — Reference library surfacing
+
+- `/reference/` section for equations, machine architecture, and quick-reference content
+- Surface machine architecture and compliance-stack reference models already present in canonical RAG
+- Consolidate fast-lookup material that is currently distributed across training and standards pages
+
+### Key clarification
+
+- Control Systems RAG corpus already exists; Phase 18 work is site surfacing and navigation, not new PID/control-loop source-file creation

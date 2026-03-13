@@ -33,3 +33,5 @@ docs/vendor/
 
 # Playwright MCP debug artifacts (local only)
 .playwright-mcp/
+
+planning/FE_Study/
