@@ -98,18 +98,22 @@ def convert_doc_to_docx(path: Path, target_dir: Path) -> Path | None:
     if not shutil.which("soffice"):
         return None
     target_dir.mkdir(parents=True, exist_ok=True)
-    proc = subprocess.run(
-        [
-            "soffice",
-            "--headless",
-            "--convert-to", "docx",
-            "--outdir", str(target_dir),
-            str(path),
-        ],
-        capture_output=True,
-        text=True,
-        check=False,
-    )
+    try:
+        proc = subprocess.run(
+            [
+                "soffice",
+                "--headless",
+                "--convert-to", "docx",
+                "--outdir", str(target_dir),
+                str(path),
+            ],
+            capture_output=True,
+            text=True,
+            check=False,
+            timeout=60,
+        )
+    except subprocess.TimeoutExpired:
+        return None
     if proc.returncode != 0:
         return None
     converted = target_dir / (path.stem + ".docx")
@@ -190,11 +194,11 @@ Add `convert_doc_to_docx` and `converted_docx_path` to the imports from `common`
 if record["extension"] == ".docx":
     notes = extract_docx(record, source_path, export_media=not args.no_export_media)
 elif record["extension"] == ".doc":
-    converted = converted_docx_path(source_root, source_path)
+    converted: Path | None = converted_docx_path(source_root, source_path)
     if not converted.exists():
         # Re-convert on demand if cache is missing
         converted = convert_doc_to_docx(source_path, converted.parent)
-    if converted and converted.exists():
+    if converted is not None and converted.exists():
         notes = extract_docx(record, converted, export_media=not args.no_export_media)
     else:
         record["status"] = "needs_review"
