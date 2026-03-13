@@ -192,8 +192,11 @@ def page_count_for_pdf(path: Path) -> int:
 
 def _docx_document_xml(path: Path) -> str:
     """Read and return the raw WordprocessingML XML from a DOCX archive."""
-    with zipfile.ZipFile(path) as archive:
-        return archive.read("word/document.xml").decode("utf-8", errors="ignore")
+    try:
+        with zipfile.ZipFile(path) as archive:
+            return archive.read("word/document.xml").decode("utf-8", errors="ignore")
+    except (KeyError, zipfile.BadZipFile) as exc:
+        raise ValueError(f"Invalid or corrupted DOCX file: {path}") from exc
 
 
 def _extract_pages_from_root(root: ET.Element) -> list[str]:
