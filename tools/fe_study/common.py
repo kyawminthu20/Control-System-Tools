@@ -196,9 +196,8 @@ def _docx_document_xml(path: Path) -> str:
         return archive.read("word/document.xml").decode("utf-8", errors="ignore")
 
 
-def _extract_pages_from_xml(xml: str) -> list[str]:
-    """Parse already-read WordprocessingML XML into rendered page strings."""
-    root = ET.fromstring(xml)
+def _extract_pages_from_root(root: ET.Element) -> list[str]:
+    """Parse a WordprocessingML document root into rendered page strings."""
     pages: list[list[str]] = [[]]
     page_index = 0
 
@@ -235,6 +234,11 @@ def _extract_pages_from_xml(xml: str) -> list[str]:
     ]
 
 
+def _extract_pages_from_xml(xml: str) -> list[str]:
+    """Extract rendered pages from a WordprocessingML XML string."""
+    return _extract_pages_from_root(ET.fromstring(xml))
+
+
 def extract_docx_pages(path: Path) -> list[str]:
     """Extract text from a DOCX file while preserving rendered page breaks."""
     return _extract_pages_from_xml(_docx_document_xml(path))
@@ -251,7 +255,7 @@ def profile_docx(path: Path) -> DocxProfile:
         )
     root = ET.fromstring(xml)
     text_chars = sum(len(node.text or "") for node in root.findall(".//w:t", DOCX_NS))
-    pages = _extract_pages_from_xml(xml)
+    pages = _extract_pages_from_root(root)  # reuses already-parsed root
     page_count_est = len(pages) if pages else max(xml.count("lastRenderedPageBreak") + 1, 1)
     return DocxProfile(
         page_count_est=page_count_est,
