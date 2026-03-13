@@ -1,24 +1,24 @@
 ---
 layout: default
-title: "Electrical Fundamentals — Training"
-description: "9 modules covering electrical quantities, circuit analysis methods, passive components, switching devices, conductor sizing, and IEC earthing systems."
+title: "Control Systems — Training"
+description: "7 modules covering control theory, PID intuition, industrial PLC implementation, loop architectures, and applied examples."
 breadcrumb:
   - name: "Training"
     url: "/training/"
-  - name: "Electrical Fundamentals"
+  - name: "Control Systems"
 ---
 
 <div class="page-header">
-  <span class="page-header__label">Training / Electrical Fundamentals</span>
-  <h1>Electrical Fundamentals</h1>
-  <p>For engineers and technicians building the circuit vocabulary and analysis skills required across all controls, panel design, and machine work. Includes circuit theory, passive components, conductor sizing, and IEC earthing systems.</p>
+  <span class="page-header__label">Training / Control Systems</span>
+  <h1>Control Systems</h1>
+  <p>For engineers who work with feedback control loops, PLC PID blocks, VFDs, servo drives, or any process that must follow a setpoint. Covers control theory concepts through industrial implementation and applied design examples.</p>
 </div>
 
 ### Recommended entry modules
 
-- [Electrical Quantities and Circuit Language]({{ '/training/fundamentals/electrical-quantities/' | relative_url }}) — vocabulary and circuit topology
-- [Kirchhoff's Laws and Systematic Analysis]({{ '/training/fundamentals/kirchhoff-laws/' | relative_url }}) — systematic analysis for real circuits
-- [Conductor Ampacity and Termination Temperature]({{ '/training/fundamentals/conductor-ampacity/' | relative_url }}) — NEC table reading and sizing rules
+- [Control Theory Overview]({{ '/training/control-systems/control-theory-overview/' | relative_url }}) — the full control-engineering workflow before going deep on PID
+- [PID Control — Intuitive Foundation]({{ '/training/control-systems/pid-foundation/' | relative_url }}) — PID as a reading guide and concept map
+- [PID Intuition — P, I, and D in Practice]({{ '/training/control-systems/pid-intuition/' | relative_url }}) — build intuition for each term without heavy math
 
 ---
 
@@ -33,8 +33,8 @@ breadcrumb:
     </tr>
   </thead>
   <tbody>
-  {% assign fundamentals = site.data.training_catalog.modules | where: "group", "fundamentals" %}
-  {% for mod in fundamentals %}
+  {% assign cs_modules = site.data.training_catalog.modules | where: "group", "control-systems" %}
+  {% for mod in cs_modules %}
     <tr{% if mod.featured %} class="featured-row"{% endif %}>
       <td>
         <a href="{{ mod.url | relative_url }}">{{ mod.title }}</a>
