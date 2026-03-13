@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-13 06:34:00
+**Last Auto-Updated:** 2026-03-13 06:34:16
 
 ```text
 ├── .claude/
@@ -2888,7 +2888,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-12-fe-study-bugfixes.md
 │   │   │   └── 2026-03-13-doc-support.md
 │   │   └── specs/
-│   │       └── 2026-03-12-doc-support-design.md
+│   │       ├── 2026-03-12-doc-support-design.md
+│   │       └── 2026-03-13-field-engineering-design.md
 │   ├── training/
 │   │   ├── control-systems/
 │   │   │   ├── control-loop-architectures/
