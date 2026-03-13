@@ -18,6 +18,15 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-13 — Phase 18 Track A: Control Systems training surfaced (9 new pages)
+
+- Added `/training/control-systems/` group landing page and 7 module pages: Control Theory Overview, PID Foundation, PID Intuition, Industrial PID Implementation, Control Loop Architectures, PID Heater Control, PID Drone Control
+- Added `/training/fundamentals/earthing-systems-iec/` page covering IEC TN-C/TT/TN-C-S/TN-S/IT earthing systems with comparison table
+- Updated `docs/_data/training_catalog.yml`: control-systems topic group (7 modules), Control Systems Engineering learning path, start-here audience entry, fundamentals count 8→9, earthing module entry
+- Updated sidebar: Control Systems link added under Training section
+- Fundamentals group index updated: description and module count 8→9
+- Jekyll build: clean, 116 pages (up from 107)
+
 ### 2026-03-13 — Project-state backlog reconciled after Phase 17
 
 - Updated `project_state/project_state.md` to reflect the actual post-Phase-17 site state: 107-page clean build, 45-term glossary, 9 scenarios, 6 crosswalk pages, 32 surfaced training modules, 5 workflow pages, and standards graph coverage that already includes IEC 60079, IEC 61511, and SEMI
