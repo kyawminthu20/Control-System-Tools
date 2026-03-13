@@ -19,7 +19,7 @@ This module explains PID control in plain engineering language without relying o
 A basic feedback loop has a few parts:
 
 - **plant**: the system being controlled
-- **actuated signal**: the input sent into the plant
+- **actuator signal**: the input sent into the plant
 - **controlled variable**: the plant output being measured
 - **command / setpoint / reference**: the desired output value
 - **feedback**: the measured output returned to the controller

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Control Systems — Training"
-description: "7 modules covering control theory, PID intuition, industrial PLC implementation, loop architectures, and applied examples."
+description: "Modules covering control theory, PID intuition, industrial PLC implementation, loop architectures, and applied examples."
 breadcrumb:
   - name: "Training"
     url: "/training/"
