@@ -18,6 +18,13 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-13 — FE Study Tools: `.doc` File Support
+- feat(fe_study): `.doc` file support — LibreOffice headless conversion, `howto_doc` family (P2 priority), cached under `_converted/`
+- Conversion: LibreOffice headless (`soffice --headless --convert-to docx`), cached in `_converted/`
+- Covers all `.doc` files under `planning/FE_Study/How to/`
+- Filtered: `~$*.doc` temp/lock files excluded from scanning
+- Full test suite: 15/15 PASS
+
 ### 2026-03-13 — Phase 18 Track B: Field Engineering Section
 
 - Added `/field-engineering/` site section with 7 pages (landing + 6 commissioning checklists)
