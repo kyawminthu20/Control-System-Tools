@@ -1,0 +1,107 @@
+- title: "Pre-Power Panel and Incoming Supply Check"
+  url: "/field-engineering/pre-power-panel/"
+  slug: "pre-power-panel"
+  use_context: "Before first energization of a control panel, machine electrical system, or incoming supply connection."
+  repo_path: "control-standards/rag/commissioning_checklists/checklists/pre_power_panel_and_incoming_supply_check.md"
+  related_training:
+    - title: "Conductor Ampacity and Termination Temperature"
+      url: "/training/fundamentals/conductor-ampacity/"
+    - title: "NEC Code Reading Fundamentals"
+      url: "/training/nec-application/nec-code-reading/"
+    - title: "Practical Article 409 Workflow"
+      url: "/training/nec-application/article-409-workflow/"
+  related_workflows:
+    - title: "Electrical Review Workflow"
+      url: "/workflows/electrical-review/"
+  related_lifecycle:
+    - title: "Detailed Design"
+      url: "/lifecycle/detailed-design/"
+    - title: "Commissioning"
+      url: "/lifecycle/commissioning/"
+
+- title: "Basic Circuit Polarity and Power Checks"
+  url: "/field-engineering/basic-circuit-polarity/"
+  slug: "basic-circuit-polarity"
+  use_context: "Before first energization of a simple low-voltage circuit or interface branch."
+  repo_path: "control-standards/rag/commissioning_checklists/checklists/basic_circuit_polarity_and_power_checks.md"
+  related_training:
+    - title: "Electrical Quantities and Circuit Language"
+      url: "/training/fundamentals/electrical-quantities/"
+    - title: "Kirchhoff's Laws and Systematic Analysis"
+      url: "/training/fundamentals/kirchhoff-laws/"
+  related_workflows:
+    - title: "Electrical Review Workflow"
+      url: "/workflows/electrical-review/"
+  related_lifecycle:
+    - title: "Commissioning"
+      url: "/lifecycle/commissioning/"
+
+- title: "Capacitor Discharge Awareness Check"
+  url: "/field-engineering/capacitor-discharge/"
+  slug: "capacitor-discharge"
+  use_context: "Whenever power electronics, DC buses, filters, or other energy-storage components may retain charge after power removal."
+  repo_path: "control-standards/rag/commissioning_checklists/checklists/capacitor_discharge_awareness_check.md"
+  related_training:
+    - title: "VFD Fundamentals"
+      url: "/training/electrical-machines/vfd-fundamentals/"
+    - title: "VFD and Servo Drive Architecture"
+      url: "/training/electrical-machines/vfd-servo-architecture/"
+  related_workflows:
+    - title: "VFD Commissioning Workflow"
+      url: "/workflows/vfd-commissioning/"
+  related_lifecycle:
+    - title: "Commissioning"
+      url: "/lifecycle/commissioning/"
+
+- title: "Motor Nameplate and Overload Setting"
+  url: "/field-engineering/motor-nameplate-overload/"
+  slug: "motor-nameplate-overload"
+  use_context: "Before energizing a motor branch or releasing a machine for initial run."
+  repo_path: "control-standards/rag/commissioning_checklists/checklists/motor_nameplate_and_overload_setting.md"
+  related_training:
+    - title: "Motor Nameplates, Slip, and Torque"
+      url: "/training/electrical-machines/motor-nameplates-slip-torque/"
+    - title: "Practical Article 430 Workflow"
+      url: "/training/nec-application/article-430-workflow/"
+  related_workflows:
+    - title: "Motor Selection Workflow"
+      url: "/workflows/motor-selection/"
+  related_lifecycle:
+    - title: "Commissioning"
+      url: "/lifecycle/commissioning/"
+
+- title: "Motor Rotation and Overload Verification"
+  url: "/field-engineering/motor-rotation-verification/"
+  slug: "motor-rotation-verification"
+  use_context: "During first powered motor check or post-maintenance motor reconnection."
+  repo_path: "control-standards/rag/commissioning_checklists/checklists/motor_rotation_and_overload_verification.md"
+  related_training:
+    - title: "Induction Motor Basics"
+      url: "/training/electrical-machines/induction-motor-basics/"
+    - title: "Motor Nameplates, Slip, and Torque"
+      url: "/training/electrical-machines/motor-nameplates-slip-torque/"
+  related_workflows:
+    - title: "Motor Troubleshooting Decision Tree"
+      url: "/workflows/motor-troubleshooting/"
+  related_lifecycle:
+    - title: "Commissioning"
+      url: "/lifecycle/commissioning/"
+
+- title: "Drive Commissioning"
+  url: "/field-engineering/drive-commissioning/"
+  slug: "drive-commissioning"
+  use_context: "During first power-up and early verification of a motor-drive system."
+  repo_path: "control-standards/rag/commissioning_checklists/checklists/drive_commissioning.md"
+  related_training:
+    - title: "VFD Fundamentals"
+      url: "/training/electrical-machines/vfd-fundamentals/"
+    - title: "Servo Drive Fundamentals"
+      url: "/training/electrical-machines/servo-drive-fundamentals/"
+  related_workflows:
+    - title: "VFD Commissioning Workflow"
+      url: "/workflows/vfd-commissioning/"
+    - title: "Servo Commissioning Workflow"
+      url: "/workflows/servo-commissioning/"
+  related_lifecycle:
+    - title: "Commissioning"
+      url: "/lifecycle/commissioning/"
