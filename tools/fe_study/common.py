@@ -224,6 +224,11 @@ def convert_doc_to_docx(path: Path, target_dir: Path) -> Path | None:
     return converted if converted.exists() else None
 
 
+def converted_docx_path(source_root: Path, source_path: Path) -> Path:
+    """Return the expected cached .docx path for a .doc source file."""
+    return work_output_path(source_root, "converted", source_path, ".docx")
+
+
 def _docx_document_xml(path: Path) -> str:
     """Read and return the raw WordprocessingML XML from a DOCX archive."""
     try:
