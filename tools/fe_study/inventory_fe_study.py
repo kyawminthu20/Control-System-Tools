@@ -47,7 +47,7 @@ def scan_sources(source_root: Path) -> list[Path]:
     )
 
 
-def build_record(source_root: Path, path: Path, existing: dict | None) -> dict:
+def build_record(source_root: Path, path: Path, existing: dict | None = None) -> dict:
     """Build or refresh a manifest row for a single source file."""
     family = infer_family(path)
     priority = infer_priority(family)
@@ -89,6 +89,33 @@ def build_record(source_root: Path, path: Path, existing: dict | None) -> dict:
             else:
                 record["extract_mode"] = "pdf_text_then_ocr"
                 record["ocr_required"] = "unknown"
+        elif path.suffix.lower() == ".doc":
+            target_dir = work_output_path(source_root, "converted", path, ".docx").parent
+            converted = convert_doc_to_docx(path, target_dir)
+            if converted and converted.exists():
+                profile = profile_docx(converted)
+                record["page_count_est"] = str(profile.page_count_est)
+                record["docx_text_chars"] = str(profile.text_chars)
+                record["docx_image_count"] = str(profile.image_count)
+                record["text_layer_present"] = "n/a"
+                if profile.image_count and profile.text_chars < 500:
+                    record["extract_mode"] = "docx_image_ocr"
+                    record["ocr_required"] = "yes"
+                else:
+                    record["extract_mode"] = "docx_text"
+                    record["ocr_required"] = "no"
+            else:
+                record["page_count_est"] = "0"
+                record["docx_text_chars"] = "0"
+                record["docx_image_count"] = "0"
+                record["text_layer_present"] = "n/a"
+                record["extract_mode"] = "needs_review"
+                record["ocr_required"] = "unknown"
+                record["status"] = "needs_review"
+                record["quality_score"] = "low"
+                record["manual_review"] = "yes"
+                record["notes"] = "LibreOffice not available or .doc conversion failed."
+
         else:
             profile = profile_docx(path)
             record["page_count_est"] = str(profile.page_count_est)
