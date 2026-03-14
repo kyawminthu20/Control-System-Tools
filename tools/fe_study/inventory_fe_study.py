@@ -14,6 +14,8 @@ if str(PROJECT_ROOT) not in sys.path:
 from tools.fe_study.common import (
     DEFAULT_SOURCE_ROOT,
     MANIFEST_FIELDS,
+    convert_doc_to_docx,
+    converted_docx_path,
     detect_pdf_text_layer,
     ensure_workdirs,
     infer_family,
@@ -34,12 +36,13 @@ from tools.fe_study.common import (
 
 def scan_sources(source_root: Path) -> list[Path]:
     """Find all PDF and DOCX sources below the FE automation folder."""
-    ignore_dirs = {"_inventory", "_logs", "_extracted", "_chunks", "_summaries", "_samples"}
+    ignore_dirs = {"_inventory", "_logs", "_extracted", "_chunks", "_summaries", "_samples", "_converted"}
     return sorted(
         path
         for path in source_root.rglob("*")
         if path.is_file()
-        and path.suffix.lower() in {".pdf", ".docx"}
+        and path.suffix.lower() in {".pdf", ".docx", ".doc"}
+        and not path.name.startswith("~$")
         and not any(part in ignore_dirs for part in path.relative_to(source_root).parts)
     )
 
