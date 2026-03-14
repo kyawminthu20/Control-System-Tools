@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-13 20:45:18
+**Last Auto-Updated:** 2026-03-13 20:45:50
 
 ```text
 ├── .claude/
@@ -1842,6 +1842,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   └── trust-boundary.html
 │   ├── _layouts/
 │   │   ├── default.html
+│   │   ├── field-checklist.html
 │   │   ├── rag-browser.html
 │   │   └── training-module.html
 │   ├── _site/
