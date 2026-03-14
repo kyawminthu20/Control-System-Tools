@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-13 20:49:21
+**Last Auto-Updated:** 2026-03-13 20:52:24
 
 ```text
 ├── .claude/
@@ -1196,6 +1196,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 0d/
 │   │               │   ├── 0b2dfd9fcde91ec81a829dbc690e60db0c9de83282525b18f277a4434ae4bf
 │   │               │   ├── 13eb23d2173fd50fd78814a4c2f7f2c1ad049673f217c51511484eeef6f394
+│   │               │   ├── 7a2b779118c9ad2579aea67af3c5911e4fe21a4e2c2d5e500df81db50bcc3f
 │   │               │   ├── a6f65922f6e117f784b372bf390c599e40d300c4c48b9b71cc5fc2abb0f263
 │   │               │   └── d6645068b4a94d3ab97587546cabb9ec4fbee5782921b346e4c6357088dfa3
 │   │               ├── 0f/
@@ -1230,7 +1231,9 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── c9c2e2b613b0ca805fdc61b65e919d70e6431fe615b8805a5f5e87baf989d8
 │   │               │   └── d3316f7c16039a4102c5a6253e8e9b67d37db908b0678995a7bf4a813b9221
 │   │               ├── 19/
-│   │               │   └── 11b453a7b71283880d3624077780fe48aaefd82f638d5870794abfb325baef
+│   │               │   ├── 11b453a7b71283880d3624077780fe48aaefd82f638d5870794abfb325baef
+│   │               │   ├── 830317083b72244c744954ea64c129c8ae5c86a047fc7d55e2252276f1fb92
+│   │               │   └── 9dbea333b349b2a64d71f9643314febadb768dcf473768c37fb66df58d4527
 │   │               ├── 1b/
 │   │               │   └── aaf0b56cbf68854696ee01829ef68ac4a27363e802fc9ad4c8e62c78e93236
 │   │               ├── 1d/
@@ -1298,7 +1301,10 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 6bdc2f7bbcb20dc3cf3bf234ad5d144258857a6a06b3651e484f328d84f387
 │   │               │   ├── b95d3c72b1293a7ca1aa200291cf6491cce8b27ca46349cb20ae2df406a431
 │   │               │   └── f71006d652ee55f235e9f005fc6620afcbbf683f2e8332e81378e5d2ae4975
+│   │               ├── 34/
+│   │               │   └── 086a68851a781a7bda77227a33de3529ad06aecd4587a6edde00a6abea5814
 │   │               ├── 36/
+│   │               │   ├── 2fb545818ed256bd696d2ae5e4f1d27de89f914edcfb179b818eda8e1b7705
 │   │               │   ├── 7a9714db36c9661b038a09467862e21fe9d2f651758bc790fbb7976018cdd6
 │   │               │   └── d582097a42b157b16a059c76c099e57f145550bc3b1266e8823f4c06a7146b
 │   │               ├── 37/
@@ -1328,7 +1334,9 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 1e1f43b06cff00e9bd8b3b778c436c9b173dd2e46a7b5b78de0d6ce1697269
 │   │               │   └── 491f2324282db8d41f0167d9241d7c2bb0c494806e124d0531010654a59e7f
 │   │               ├── 3f/
+│   │               │   ├── 1149e29a7b70cb4ce3f203d3a5b78712595471d5c50d91f3e206a942b25f71
 │   │               │   ├── 5d4376bd1dd2c767b71e4f4fb9917a2921af35d9b913ab5564e69a43ed2faf
+│   │               │   ├── 5d843145228916427baf994327ef54fc2141fadb5efc332a3be14a9f8441ce
 │   │               │   └── 9f62b0f0f284c54dcbddb4df38b373beb333b63d9ccb16356688fcbc553962
 │   │               ├── 41/
 │   │               │   └── bff9bf0ce39020837ac05a2c8fc916f4f2f40e51ee12a160bf0267e56dbf3d
@@ -1360,7 +1368,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── c13b24eb0a0019b4f4fff2f237b36c8ed17e43d7e7663945b8791a99fa65d1
 │   │               ├── 4d/
 │   │               │   ├── 375658a3dee103e24a7a4bc7f92754e1a7e981bade529055cb96a01c852b8a
-│   │               │   └── b8b58d02d7843550d6ad60a54ee453b56301f4858fa670c97095dd332c9d32
+│   │               │   ├── b8b58d02d7843550d6ad60a54ee453b56301f4858fa670c97095dd332c9d32
+│   │               │   └── dc33c3f6f064776f3deadf6ee072c2e6cda51cccb0774fe538c74f9a6c2ce6
 │   │               ├── 4e/
 │   │               │   ├── 469c2281456ea6b8c3574a8de06961878eeb16282aabec232f3e7cdaa20e7c
 │   │               │   ├── 5e0cbf77f93e18242398cc5ab3198abbaa18b586f4039b873f03fcde7c57ef
@@ -1479,6 +1488,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 9eba5a7f8bc750731ea4839af7b431fa954e7be32bcf43e1420218230f61a0
 │   │               ├── 78/
 │   │               │   ├── 260c5e2493d53e1cc9a05b56d01391e6281374e159dd0c1d615536db98aec0
+│   │               │   ├── 51e885a060b47c0e50cffebf73062f72f462c32e7fb0986f7f38a4a10c856d
 │   │               │   └── 9c0a33a7ef2814d2a1ee3d386ffa519dbb166402a4aa7ae54d05b34da87f37
 │   │               ├── 7a/
 │   │               │   ├── 057d9014c25f4b76198a8779e97d958c5f1386f164f8aa91e8b3fae6abd568
@@ -1491,13 +1501,17 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 2e79cfb468d7892fdc441bd7e8d57c69b5f00fafc78c2c32b1fc819969d048
 │   │               │   ├── 4141881a2e73d857a5e0a2ee06128726e369fd041a403e0691e7f2c692362b
 │   │               │   └── d161554b00053a66cc4e235679014b5fe8d7ad1d23de69ade797d62549f548
+│   │               ├── 7d/
+│   │               │   └── 640c28c0705b033a4b16fe740a04e23463bd457462b16aaed9daaf177dd471
 │   │               ├── 7e/
 │   │               │   ├── 1dbc1110aecfe097d8f86fe19410161e74d12a58a0ea1fef8809ad81124306
 │   │               │   └── 2a21f09ccc214270180cffd6a802fcb5da79f6d0afe4ec97ad7f33fbe6c14b
 │   │               ├── 7f/
 │   │               │   ├── 53770c6fc9a4b6368b5d8693ad59fe612232f13dcf1b8358180f510bc97ee9
+│   │               │   ├── 7027e12aa06680a90f1a77627930d1bbb6b99fae0c7268b599dc7497b59264
 │   │               │   ├── 717bbdd539c963b4d3792cc2557b18946dc22fb46ae6adfe9d24b02f15fed7
-│   │               │   └── 780be62ae66559f2958cae201152a8de57515d9563b58041cdc0b1fc0b2e02
+│   │               │   ├── 780be62ae66559f2958cae201152a8de57515d9563b58041cdc0b1fc0b2e02
+│   │               │   └── e2d8e61ed89e8fbeb993247d2e993b4823a1037d42e8405e5fcbf0ccfce6d4
 │   │               ├── 80/
 │   │               │   ├── 31baa810f279e4f74cb0dab2cdbf6ec38ef47ef934c85ace493d061f614298
 │   │               │   ├── 639ce32914a864d197f56260546116e128c936d797a9b73bd6020c8b52232d
@@ -1520,6 +1534,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 86/
 │   │               │   ├── 9a6a5a81f672108dfffada926867d557e9682a58665200d2e885730cc5346c
 │   │               │   └── f079e0bd8b9038c3095e1cf9b88e6b02c49850f44220dea21ef1b21af3ff73
+│   │               ├── 88/
+│   │               │   └── 5e351ca3285ead12e042590b6b17cddea7ad39f89e110193509a4552ac6c71
 │   │               ├── 89/
 │   │               │   └── fa749315cb6dcab88442c32da3cfb29bb56d8a48d9c812e938de6f9bc9f4d6
 │   │               ├── 8a/
@@ -1546,7 +1562,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── b9caa5fd19144b5bd1bba6ec83668f106f81e52903398f269d8cb64f18c1aa
 │   │               │   └── d45446618749d74bb3377b0f68eca3c1f4392f9b094ecf71f6b7c11e47421f
 │   │               ├── 93/
-│   │               │   └── bb233e11bc2c0ee283a50df81625bd96310a463a6272519bb2d17dc9ec8249
+│   │               │   ├── bb233e11bc2c0ee283a50df81625bd96310a463a6272519bb2d17dc9ec8249
+│   │               │   └── e5fa072965f32738d7767877cb20b6279ac7f2555c37f1be3b552c85d35455
 │   │               ├── 94/
 │   │               │   ├── 1fb96cea93f9e4de6876a74fe5aedc60ca3e14cada21420abc4488aff39c2a
 │   │               │   ├── 54c281d58441cd4e68f7e6f853f27334d19bc43f1eaf6f654287cf165f582a
@@ -1583,11 +1600,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 3bdfb1cd3e5236a4a20b33b00b729ee81d3865bee5bd0f1211010827d87df3
 │   │               ├── a1/
 │   │               │   ├── 34d32eb0310385cb512029719285ff593d4f1e73199db60afe326ae7ff16b9
+│   │               │   ├── 633bc37c5c2af18441ad8edd0709c9703282b6175111c15aa528a12558360f
 │   │               │   ├── 8be9e521dc3643b9cd9f175fc1d6ca4f29060d87c2b32e9f5a3a46fdd1f6e5
 │   │               │   └── ab8a89eecbb75b021354dc570a802d76726d522ee29946a3d5b342db30d77f
 │   │               ├── a2/
 │   │               │   ├── 2fb0f1aa03d1dc417bd06f071b0527cc1bf6801f29ffb391320e95f34e373e
-│   │               │   └── 8e2ef91e74d4e0d9af056141b1aa5c6a84d61d339e66103419b15ddf62e9ec
+│   │               │   ├── 8e2ef91e74d4e0d9af056141b1aa5c6a84d61d339e66103419b15ddf62e9ec
+│   │               │   └── f1a550f4aaa3403d4c76d634e36f971106732575b443ca5a94c13d0e3a3c17
 │   │               ├── a4/
 │   │               │   ├── b4c6d625ca850c26e0225567ebce4c0638799f6665a4af6bb55c000958867d
 │   │               │   └── c48f9eea773cfa7b5217d4e72b9e7b339c0675ecca8a4d8dc7bb9aabf545ea
@@ -1634,6 +1653,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── e5bca22395754bc7201e96b2b02289851cce6945b939836f8b35506f65dc1e
 │   │               ├── b3/
 │   │               │   └── 28d3db6d0c11bed2ccb7065759d8d3f6bbd9428f9cd1eb8ae5d424d3befc20
+│   │               ├── b4/
+│   │               │   └── 9d4b8050e207fc3da10561630d43cdd5f6b4fdaf85f0423fb8a58f20e41f29
 │   │               ├── b5/
 │   │               │   └── 962ee97213d04243717791ac01e6d190aff82508812a68cf21bfa3df56b4ca
 │   │               ├── b7/
@@ -1643,7 +1664,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── f65d0e5d7de5d1ba951ae9bd32c722d3a728d14d79046d3e41a0810942a6b2
 │   │               ├── b9/
 │   │               │   ├── 03ac58ab61a396e1ccb8c8ac90f164d0c10280e67126a7c690f61b5107df66
-│   │               │   └── 36e833f0aee9829a7dd35393c778ee816d7d2ec3433e7629c9d2513aa329b3
+│   │               │   ├── 36e833f0aee9829a7dd35393c778ee816d7d2ec3433e7629c9d2513aa329b3
+│   │               │   └── b24bc855dd4b03049f3665ea7aa1d564a96b800f572251734b58b9d0d97451
 │   │               ├── ba/
 │   │               │   └── 6cd50ddae97a845ddae5075537d032675523c7cace31d2e5b9ade9625a856a
 │   │               ├── bb/
@@ -1719,7 +1741,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── a8c2b9ea4985ced64d31ffc36334c694b69aa86742cb11255111fc6c36df17
 │   │               ├── d3/
 │   │               │   ├── 74f462f2e961eb74c5ee4308c5ec20b01af02d6a41ea7c4d6770c64cb92729
-│   │               │   └── 7d7c3f2450e4cc06c78ae44aea15a83296b89f721e11f9da8ab9586e1ab823
+│   │               │   ├── 7d7c3f2450e4cc06c78ae44aea15a83296b89f721e11f9da8ab9586e1ab823
+│   │               │   └── a338e0c4d9ac6358543cf4a87c49672f9ebbf2738a215e7662826e1e38c446
 │   │               ├── d5/
 │   │               │   └── bd3094d0ad18bb35e581c2994241c11383381cd4bd274ec339b250c609ea6c
 │   │               ├── d6/
@@ -1745,7 +1768,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── b4b01dfbf24b39d2ba359117133e02f3dbbc51ac1be23f4921ab97d4a0590e
 │   │               │   └── fea998fe1fd8b380872a1aece45a0dc84ea6c2a026018414e86ea08222b1b1
 │   │               ├── de/
-│   │               │   └── 0f6f7fd4d93802ba6e70313d22711de86a943962686cd55ffbdc6a8ba3c2b2
+│   │               │   ├── 0f6f7fd4d93802ba6e70313d22711de86a943962686cd55ffbdc6a8ba3c2b2
+│   │               │   └── a955960dbc5181167151665d3e830e75e182aa1fef649ce5dad2a1d9902ec1
 │   │               ├── df/
 │   │               │   ├── b4f236aae87abb1af2c130f9a4ff24d8c53a3013f1eebd24fa995c591a47ae
 │   │               │   ├── ec92bcae9c2f53c49835dd78fa7e9e7c044dd1ef756421bd8233b8c15fa9f2
@@ -1768,7 +1792,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 16138d238889389c9620a7c4ae16b03a1248297ebc502939444e3e953c9149
 │   │               │   └── 4d3484396d913125c7a386ae59d7ef7bcc69ecf0afcbda0b1fd80e80aa2db2
 │   │               ├── e7/
-│   │               │   └── 71c382aa34051b00868eff65d922b969dc3bb7b1eaae356637abf78f9be551
+│   │               │   ├── 71c382aa34051b00868eff65d922b969dc3bb7b1eaae356637abf78f9be551
+│   │               │   └── b6f769d82755c23796d1feaf48b792bf193a9a87ec0d01bcee2f895a767418
 │   │               ├── e8/
 │   │               │   └── cd2b80809d08cf17aa2578e03457589071f49e71bbd0a32053b375ff846d91
 │   │               ├── e9/
@@ -1798,7 +1823,9 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 0c1b0b2b49a84b9eb009e72831e908a624eb4a2294acc0b60a87e128c01ae3
 │   │               │   └── b168a44843930852194a72f9a154ef5aeb96f96c03c00923257e26d27dcfaa
 │   │               ├── f5/
-│   │               │   └── 4a0a4603bf0196ccba25bbd61af4fec2f076342936e6ec71d6678bb4e01404
+│   │               │   ├── 05f9e59bcbcbefe728741dbe56c5a63e0ecaccaab13bd0110de46777999698
+│   │               │   ├── 4a0a4603bf0196ccba25bbd61af4fec2f076342936e6ec71d6678bb4e01404
+│   │               │   └── a233c0d68ebb396d40d965960388e3352d65058121cc7cf334d98e3c49d8a6
 │   │               ├── f6/
 │   │               │   └── 5cd8a0bbb88a838309164c51364f7a4aade6eb52086ca1c3c73c4de227ad93
 │   │               ├── f7/
@@ -1820,6 +1847,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 5cd15a7922e80358a840029fb84cba57a85bff721a4533671cee889d09c67a
 │   │               │   └── 7fd42ac2ea9db79760e7459de6ef1c2141001780d192ab516c5d1e23fe17ba
 │   │               ├── fd/
+│   │               │   ├── 45420ed5d0ee9bdc229ae5394a95d074082406b908e17afe4dd45effd68abe
 │   │               │   ├── 527170967d14120cac36196685f0f75623c060496026a0c89cc63e987a6a63
 │   │               │   └── af8159150bc679d8337ef5a4200d901204d5d436413abf6c200b3cfe5debdd
 │   │               └── fe/
@@ -2168,6 +2196,20 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   └── index.html
 │   │   │   └── ul508a-nec-nfpa79/
 │   │   │       └── index.html
+│   │   ├── field-engineering/
+│   │   │   ├── basic-circuit-polarity/
+│   │   │   │   └── index.html
+│   │   │   ├── capacitor-discharge/
+│   │   │   │   └── index.html
+│   │   │   ├── drive-commissioning/
+│   │   │   │   └── index.html
+│   │   │   ├── index.html
+│   │   │   ├── motor-nameplate-overload/
+│   │   │   │   └── index.html
+│   │   │   ├── motor-rotation-verification/
+│   │   │   │   └── index.html
+│   │   │   └── pre-power-panel/
+│   │   │       └── index.html
 │   │   ├── glossary/
 │   │   │   └── index.html
 │   │   ├── index.html
@@ -2247,7 +2289,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-10-phase16-nec-training-expansion.md
 │   │   │   ├── 2026-03-10-training-system-integration-preplan.md
 │   │   │   ├── 2026-03-11-phase17-cross-layer-routing.md
-│   │   │   └── 2026-03-11-phase18-control-systems-training.md
+│   │   │   ├── 2026-03-11-phase18-control-systems-training.md
+│   │   │   └── 2026-03-13-phase19-engineering-workflow-navigation.md
 │   │   ├── rag-browser/
 │   │   │   └── index.html
 │   │   ├── scenarios/
@@ -2313,8 +2356,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │       └── ul-508a/
 │   │   │           └── index.html
 │   │   ├── superpowers/
-│   │   │   └── plans/
-│   │   │       └── 2026-03-12-fe-study-bugfixes.md
+│   │   │   ├── plans/
+│   │   │   │   ├── 2026-03-12-fe-study-bugfixes.md
+│   │   │   │   ├── 2026-03-13-doc-support.md
+│   │   │   │   └── 2026-03-13-field-engineering.md
+│   │   │   └── specs/
+│   │   │       ├── 2026-03-12-doc-support-design.md
+│   │   │       └── 2026-03-13-field-engineering-design.md
 │   │   ├── training/
 │   │   │   ├── control-systems/
 │   │   │   │   ├── control-loop-architectures/
@@ -2742,7 +2790,19 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   └── ul508a-nec-nfpa79/
 │   │       └── index.md
 │   ├── field-engineering/
-│   │   └── index.md
+│   │   ├── basic-circuit-polarity/
+│   │   │   └── index.md
+│   │   ├── capacitor-discharge/
+│   │   │   └── index.md
+│   │   ├── drive-commissioning/
+│   │   │   └── index.md
+│   │   ├── index.md
+│   │   ├── motor-nameplate-overload/
+│   │   │   └── index.md
+│   │   ├── motor-rotation-verification/
+│   │   │   └── index.md
+│   │   └── pre-power-panel/
+│   │       └── index.md
 │   ├── glossary/
 │   │   └── index.md
 │   ├── index.md
@@ -2822,7 +2882,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── 2026-03-10-phase16-nec-training-expansion.md
 │   │   ├── 2026-03-10-training-system-integration-preplan.md
 │   │   ├── 2026-03-11-phase17-cross-layer-routing.md
-│   │   └── 2026-03-11-phase18-control-systems-training.md
+│   │   ├── 2026-03-11-phase18-control-systems-training.md
+│   │   └── 2026-03-13-phase19-engineering-workflow-navigation.md
 │   ├── rag-browser/
 │   │   └── index.md
 │   ├── scenarios/
