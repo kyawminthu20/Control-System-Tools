@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-03-13
 **Status:** Active
-**Current Phase:** Phase 18 Track A COMPLETE — Control Systems Training Surfacing
-**Next Phase:** Phase 18 Track B/C QUEUED — Field Engineering and Reference Library Surfacing
+**Current Phase:** Phase 18 Track B COMPLETE — Field Engineering Section
+**Next Phase:** Phase 18 Track C QUEUED — Reference Library Surfacing
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -19,12 +19,12 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 ## Current Reality
 
 - Jekyll site deployed on GitHub Pages — `https://kyawminthu20.github.io/Control-System-Tools/`
-- Last validated Jekyll build: 116 pages, clean build (0.629 s locally)
+- Last validated Jekyll build: 123 pages, clean build
 - Three-panel layout (sidebar 240px + main content + context panel 220px)
 - Mermaid.js CDN integration for all diagrams; Cytoscape.js 3.28.1 for interactive standards graph
 - Google Analytics tag installed sitewide in `docs/_layouts/default.html` using measurement ID `G-RPL3G47EFZ`
 - GitHub Actions deployment workflow at `.github/workflows/pages.yml`
-- Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 12 lifecycle pages including safety wiring, 9 scenarios, 6 crosswalk pages, 9 industry overlays, glossary (45 terms), training (40 surfaced modules across 4 groups), workflows (5 pages), software stack, and about / trust boundary
+- Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 12 lifecycle pages including safety wiring, 9 scenarios, 6 crosswalk pages, 9 industry overlays, glossary (45 terms), training (40 surfaced modules across 4 groups), workflows (5 pages), field engineering (7 pages: landing + 6 commissioning checklists), software stack, and about / trust boundary
 - Interactive standards graph: 12 nodes, 16 edges, including IEC 60079, IEC 61511, and SEMI
 - Training groups: Electrical Fundamentals (9 modules), Motors/Drives (13), NEC (11), Control Systems (7)
 - Field checklists and reference models exist in the canonical RAG but are not yet exposed as dedicated top-level site sections
@@ -38,6 +38,7 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 - Setup, run, validation, and deployment steps: `project_state/how_to.md`
 - Phase 18 control-systems site plan: `docs/plans/2026-03-11-phase18-control-systems-training.md`
 - Field/reference expansion pre-plan: `docs/plans/2026-03-10-training-system-integration-preplan.md`
+- Phase 19 engineering-workflow navigation plan: `docs/plans/2026-03-13-phase19-engineering-workflow-navigation.md`
 - Authoritative standards content: `control-standards/rag/`
 - Site source: `docs/`
 
@@ -416,6 +417,17 @@ Design: `docs/plans/2026-03-10-phase14-training-curriculum-design.md`
 ### Build
 - [x] Jekyll build: clean, 0.629 s, 116 pages
 
+## Phase 18 Track B — Field Engineering Section — COMPLETE
+
+- [x] `docs/_data/field_checklists.yml` — flat YAML catalog (6 entries)
+- [x] `docs/_layouts/field-checklist.html` — new layout with Liquid data lookup, cross-links, back link
+- [x] CSS additions to `docs/assets/css/main.css` — `.checklist-body`, `.field-checklist__cross-links`, print rules
+- [x] `docs/field-engineering/index.md` — landing page with workflow-card-grid
+- [x] 6 checklist pages under `docs/field-engineering/`
+- [x] Sidebar: Field Engineering section added
+- [x] Reverse links: `related_checklists` in 11 training modules + "Related Checklists" sections in 5 workflow pages
+- [x] Jekyll build: clean, 123 pages
+
 ## Phase 18 Backlog — Field Engineering, Reference Library, and Control Systems Training
 
 **Canonical content ready to surface:**
@@ -452,3 +464,15 @@ Design: `docs/plans/2026-03-10-phase14-training-curriculum-design.md`
 ### Key clarification
 
 - Control Systems RAG corpus already exists; Phase 18 work is site surfacing and navigation, not new PID/control-loop source-file creation
+
+## Phase 19 Queue — Engineering Workflow Navigation Refactor
+
+**Plan:** `docs/plans/2026-03-13-phase19-engineering-workflow-navigation.md`
+
+- Queue position: starts after Phase 18 Track C is complete
+- Preserve all current URLs during the first navigation refactor pass
+- Replace the hardcoded sidebar with a data-driven model backed by `docs/_data/navigation.yml`
+- Add `/engineering-workflow/` as the workflow-first hub for lifecycle, workflows, and field checklists
+- Add `/reference/` as the fast-lookup hub for glossary, software stack, RAG browser, crosswalk entry points, and future equations / architecture references
+- Demote Scenarios, Crosswalks, and Workflows from top-level sidebar peers into the new grouped navigation model
+- Keep Standards, Training, and Industries as top-level sections in the Phase 19 information architecture
