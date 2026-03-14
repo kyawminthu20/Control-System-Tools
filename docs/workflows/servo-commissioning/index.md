@@ -111,3 +111,7 @@ If mechanical issues appear (resonance, backlash, compliance), resolve them mech
 | [Motor Selection Workflow]({{ '/workflows/motor-selection/' | relative_url }}) | Review original selection basis |
 
 {% include trust-boundary.html %}
+
+## Related Checklists
+
+- [Drive Commissioning]({{ '/field-engineering/drive-commissioning/' | relative_url }})

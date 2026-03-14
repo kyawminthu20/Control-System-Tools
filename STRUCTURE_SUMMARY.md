@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-13 20:58:09
+**Last Auto-Updated:** 2026-03-13 20:58:44
 
 ```text
 ├── .claude/
@@ -6821,7 +6821,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │       ├── __init__.py
 │       └── fe_study/
 │           ├── __init__.py
-│           └── test_common.py
+│           ├── test_common.py
+│           └── test_inventory_fe_study.py
 ├── tools/
 │   ├── README.md
 │   ├── fe_study/

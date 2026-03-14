@@ -112,3 +112,7 @@ Work through in order:
 | [Servo Commissioning Workflow]({{ '/workflows/servo-commissioning/' | relative_url }}) | Re-run servo axis steps for instability faults |
 
 {% include trust-boundary.html %}
+
+## Related Checklists
+
+- [Motor Rotation and Overload Verification]({{ '/field-engineering/motor-rotation-verification/' | relative_url }})

@@ -104,3 +104,7 @@ Before finalizing the design, confirm the path for:
 | [IEC 60204-1](/standards/machinery/iec-60204-1/) | International machine electrical equipment (§12) |
 
 {% include trust-boundary.html %}
+
+## Related Checklists
+
+- [Motor Nameplate and Overload Setting]({{ '/field-engineering/motor-nameplate-overload/' | relative_url }})
