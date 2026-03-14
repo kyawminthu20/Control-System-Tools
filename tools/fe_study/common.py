@@ -153,6 +153,8 @@ def infer_family(path: Path) -> str:
         return "cheat_sheet_pdf"
     if name.startswith(("LX", "bx")) and path.suffix.lower() == ".pdf":
         return "vendor_pdf"
+    if path.suffix.lower() == ".doc":
+        return "howto_doc"
     return "other"
 
 
@@ -160,7 +162,7 @@ def infer_priority(family: str) -> str:
     """Assign a coarse priority to each family."""
     if family in {"handbook_pdf", "practice_exam_pdf", "study_guide_pdf", "cheat_sheet_pdf"}:
         return "P1"
-    if family in {"amatrol_pdf", "other"}:
+    if family in {"amatrol_pdf", "other", "howto_doc"}:
         return "P2"
     if family == "module_docx":
         return "P3"
