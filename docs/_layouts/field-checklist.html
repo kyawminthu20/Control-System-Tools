@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+{% assign checklist = site.data.field_checklists | where: "url", page.url | first %}
+
+<div class="page-header">
+  <span class="page-header__label">Field Engineering</span>
+  <h1>{{ page.title }}</h1>
+  {% if checklist %}
+  <div class="checklist-use-context">
+    <strong>When to use:</strong> {{ checklist.use_context }}
+  </div>
+  {% endif %}
+</div>
+
+<div class="checklist-body">
+{{ content }}
+</div>
+
+{% if checklist %}
+<div class="field-checklist__cross-links">
+  {% if checklist.related_training and checklist.related_training.size > 0 %}
+  <div class="cross-links-group">
+    <h4>Related Training</h4>
+    <ul>
+      {% for item in checklist.related_training %}
+      <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if checklist.related_workflows and checklist.related_workflows.size > 0 %}
+  <div class="cross-links-group">
+    <h4>Related Workflows</h4>
+    <ul>
+      {% for item in checklist.related_workflows %}
+      <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if checklist.related_lifecycle and checklist.related_lifecycle.size > 0 %}
+  <div class="cross-links-group">
+    <h4>Related Lifecycle Stages</h4>
+    <ul>
+      {% for item in checklist.related_lifecycle %}
+      <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div>
+{% endif %}
+
+<div class="field-checklist__back-link">
+  <a href="{{ '/field-engineering/' | relative_url }}">&larr; All Field Engineering Checklists</a>
+</div>
