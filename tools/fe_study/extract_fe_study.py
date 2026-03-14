@@ -13,6 +13,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from tools.fe_study.common import (
     DEFAULT_SOURCE_ROOT,
+    converted_docx_path,
     ensure_workdirs,
     export_docx_media,
     extract_pdf_pages,
@@ -179,6 +180,14 @@ def main() -> None:
 
         if record["extension"] == ".docx":
             notes = extract_docx(record, source_path, export_media=not args.no_export_media)
+        elif record["extension"] == ".doc":
+            docx_path = converted_docx_path(source_root, source_path)
+            if docx_path.exists():
+                notes = extract_docx(record, docx_path, export_media=not args.no_export_media)
+            else:
+                record["status"] = "needs_review"
+                record["notes"] = ".doc conversion not found; run inventory first."
+                notes = ["doc_not_converted"]
         else:
             notes = extract_pdf(record, source_path)
         log_lines.append(f"{record['source_id']}: {record['status']} ({'; '.join(notes)})")
