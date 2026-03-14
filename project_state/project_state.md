@@ -1,6 +1,6 @@
 # Project State
 
-**Last Updated:** 2026-03-13
+**Last Updated:** 2026-03-14
 **Status:** Active
 **Current Phase:** Phase 18 Track B COMPLETE — Field Engineering Section
 **Next Phase:** Phase 18 Track C QUEUED — Reference Library Surfacing
@@ -24,7 +24,7 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 - Mermaid.js CDN integration for all diagrams; Cytoscape.js 3.28.1 for interactive standards graph
 - Google Analytics tag installed sitewide in `docs/_layouts/default.html` using measurement ID `G-RPL3G47EFZ`
 - GitHub Actions deployment workflow at `.github/workflows/pages.yml`
-- Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 12 lifecycle pages including safety wiring, 9 scenarios, 6 crosswalk pages, 9 industry overlays, glossary (45 terms), training (40 surfaced modules across 4 groups), workflows (5 pages), field engineering (7 pages: landing + 6 commissioning checklists), software stack, and about / trust boundary
+- Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 12 lifecycle pages including safety wiring, 9 scenarios, 6 crosswalk pages, 9 industry overlays, glossary (45 terms), training (41 surfaced modules across 4 groups), workflows (5 pages), field engineering (7 pages: landing + 6 commissioning checklists), software stack, and about / trust boundary
 - Interactive standards graph: 12 nodes, 16 edges, including IEC 60079, IEC 61511, and SEMI
 - Training groups: Electrical Fundamentals (9 modules), Motors/Drives (13), NEC (11), Control Systems (7)
 - Field checklists now surfaced under `/field-engineering/` (Phase 18 Track B); reference models exist in canonical RAG but not yet exposed as dedicated site section (queued for Track C)
