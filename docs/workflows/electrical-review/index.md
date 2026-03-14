@@ -143,3 +143,8 @@ Escalate to nodal, loop, Thévenin, or Norton methods if:
 | [VFD Commissioning Workflow]({{ '/workflows/vfd-commissioning/' | relative_url }}) | Electrical pre-checks before drive power-up |
 
 {% include trust-boundary.html %}
+
+## Related Checklists
+
+- [Pre-Power Panel and Incoming Supply Check]({{ '/field-engineering/pre-power-panel/' | relative_url }})
+- [Basic Circuit Polarity and Power Checks]({{ '/field-engineering/basic-circuit-polarity/' | relative_url }})

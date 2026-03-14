@@ -119,3 +119,8 @@ Document and retain:
 | [IEC 60204-1](/standards/machinery/iec-60204-1/) | Machine electrical commissioning and verification |
 
 {% include trust-boundary.html %}
+
+## Related Checklists
+
+- [Capacitor Discharge Awareness Check]({{ '/field-engineering/capacitor-discharge/' | relative_url }})
+- [Drive Commissioning]({{ '/field-engineering/drive-commissioning/' | relative_url }})
