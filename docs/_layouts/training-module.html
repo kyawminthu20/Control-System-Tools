@@ -43,6 +43,16 @@ layout: default
   </ul>
 </div>
 {% endif %}
+{% if module_meta.related_checklists and module_meta.related_checklists.size > 0 %}
+<div class="related-checklists">
+  <h4>Related Checklists</h4>
+  <ul>
+    {% for item in module_meta.related_checklists %}
+    <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
 {% endif %}
 
 {{ content }}
