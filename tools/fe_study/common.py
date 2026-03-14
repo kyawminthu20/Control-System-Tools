@@ -193,6 +193,37 @@ def page_count_for_pdf(path: Path) -> int:
     return int(match.group(1)) if match else 0
 
 
+def convert_doc_to_docx(path: Path, target_dir: Path) -> Path | None:
+    """Convert a legacy .doc file to .docx using LibreOffice headless.
+
+    Returns the path to the converted .docx, or None if conversion fails or
+    LibreOffice is not installed.
+    """
+    if not shutil.which("soffice"):
+        return None
+    target_dir.mkdir(parents=True, exist_ok=True)
+    try:
+        proc = subprocess.run(
+            [
+                "soffice",
+                "--headless",
+                "--convert-to", "docx",
+                "--outdir", str(target_dir),
+                str(path),
+            ],
+            capture_output=True,
+            text=True,
+            check=False,
+            timeout=60,
+        )
+    except subprocess.TimeoutExpired:
+        return None
+    if proc.returncode != 0:
+        return None
+    converted = target_dir / (path.stem + ".docx")
+    return converted if converted.exists() else None
+
+
 def _docx_document_xml(path: Path) -> str:
     """Read and return the raw WordprocessingML XML from a DOCX archive."""
     try:
