@@ -30,6 +30,21 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 - Field checklists now surfaced under `/field-engineering/` (Phase 18 Track B); reference models exist in canonical RAG but not yet exposed as dedicated site section (queued for Track C)
 - Root `main.py` remains a placeholder (not the site)
 
+## Tools — FE Study Automation
+
+**FE Study Pipeline** (`tools/fe_study/`)
+
+The FE study tools automate content extraction and inventory from the `planning/FE_Study/` directory. The pipeline scans, extracts, and catalogs How-To and training documents.
+
+### `.doc` File Support (P2 Priority)
+
+- **Conversion:** LibreOffice headless (`soffice --headless --convert-to docx`) for `.doc` → `.docx` conversion
+- **Caching:** Converted files cached under `planning/FE_Study/How to/_converted/` for reuse
+- **Family/Priority:** `howto_doc` family, P2 (important but not urgent)
+- **Scope:** All `.doc` files under `planning/FE_Study/How to/`
+- **Filtering:** Temporary/lock files (`~$*.doc`) automatically excluded from scanning
+- **Status:** Implemented and tested (15/15 tests PASS; scan, extract, and build_record branches functional)
+
 ## Source Of Truth By Topic
 
 - Current phase, status, and next implementation items: `project_state/project_state.md`
