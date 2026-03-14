@@ -18,6 +18,12 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-13 — Phase 19 engineering-workflow navigation refactor queued
+
+- Added plan doc: `docs/plans/2026-03-13-phase19-engineering-workflow-navigation.md`
+- Queued Phase 19 in `project_state/project_state.md` as the next navigation refactor after Phase 18 Track C
+- Recorded that the first refactor pass will keep current URLs stable, add workflow/reference hub pages, and move the sidebar toward a data-driven model
+
 ### 2026-03-13 — Phase 18 Track A: Control Systems training surfaced (9 new pages)
 
 - Added `/training/control-systems/` group landing page and 7 module pages: Control Theory Overview, PID Foundation, PID Intuition, Industrial PID Implementation, Control Loop Architectures, PID Heater Control, PID Drone Control
