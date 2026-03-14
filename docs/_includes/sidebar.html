@@ -118,4 +118,17 @@
       <li><a href="{{ '/workflows/electrical-review/' | relative_url }}" class="sub">Electrical Review</a></li>
     </ul>
   </details>
+
+  <details class="sidebar__section">
+    <summary>Field Engineering</summary>
+    <ul class="sidebar__links">
+      <li><a href="{{ '/field-engineering/' | relative_url }}"{% if page.url == '/field-engineering/' %} class="active"{% endif %}>All Checklists</a></li>
+      <li><a href="{{ '/field-engineering/pre-power-panel/' | relative_url }}" class="sub{% if page.url contains 'pre-power-panel' %} active{% endif %}">Pre-Power Panel</a></li>
+      <li><a href="{{ '/field-engineering/basic-circuit-polarity/' | relative_url }}" class="sub{% if page.url contains 'basic-circuit-polarity' %} active{% endif %}">Circuit Polarity</a></li>
+      <li><a href="{{ '/field-engineering/capacitor-discharge/' | relative_url }}" class="sub{% if page.url contains 'capacitor-discharge' %} active{% endif %}">Capacitor Discharge</a></li>
+      <li><a href="{{ '/field-engineering/motor-nameplate-overload/' | relative_url }}" class="sub{% if page.url contains 'motor-nameplate-overload' %} active{% endif %}">Motor Nameplate</a></li>
+      <li><a href="{{ '/field-engineering/motor-rotation-verification/' | relative_url }}" class="sub{% if page.url contains 'motor-rotation-verification' %} active{% endif %}">Motor Rotation</a></li>
+      <li><a href="{{ '/field-engineering/drive-commissioning/' | relative_url }}" class="sub{% if page.url contains 'drive-commissioning' %} active{% endif %}">Drive Commissioning</a></li>
+    </ul>
+  </details>
 </nav>
