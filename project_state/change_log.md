@@ -18,6 +18,17 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-03-13 — Phase 18 Track B: Field Engineering Section
+
+- Added `/field-engineering/` site section with 7 pages (landing + 6 commissioning checklists)
+- New `field-checklist` layout with Liquid data lookup from `field_checklists.yml`, "When to use" box, cross-links block, and print-optimized view
+- Created `docs/_data/field_checklists.yml` flat YAML catalog driving all checklist metadata
+- CSS additions: `.checklist-body` (☐ pseudo-element), `.field-checklist__cross-links`, `.cross-links-group`, print hiding rules
+- Reverse links: `related_checklists` key added to 11 training module entries in `training_catalog.yml`; `training-module.html` updated to render them
+- Reverse links: "Related Checklists" sections appended to 5 workflow pages
+- Sidebar: Field Engineering section with 7 links and active state logic
+- Jekyll build: clean, 123 pages
+
 ### 2026-03-13 — Phase 19 engineering-workflow navigation refactor queued
 
 - Added plan doc: `docs/plans/2026-03-13-phase19-engineering-workflow-navigation.md`
