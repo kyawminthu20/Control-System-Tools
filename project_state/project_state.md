@@ -27,7 +27,7 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 - Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 12 lifecycle pages including safety wiring, 9 scenarios, 6 crosswalk pages, 9 industry overlays, glossary (45 terms), training (40 surfaced modules across 4 groups), workflows (5 pages), field engineering (7 pages: landing + 6 commissioning checklists), software stack, and about / trust boundary
 - Interactive standards graph: 12 nodes, 16 edges, including IEC 60079, IEC 61511, and SEMI
 - Training groups: Electrical Fundamentals (9 modules), Motors/Drives (13), NEC (11), Control Systems (7)
-- Field checklists and reference models exist in the canonical RAG but are not yet exposed as dedicated top-level site sections
+- Field checklists now surfaced under `/field-engineering/` (Phase 18 Track B); reference models exist in canonical RAG but not yet exposed as dedicated site section (queued for Track C)
 - Root `main.py` remains a placeholder (not the site)
 
 ## Source Of Truth By Topic

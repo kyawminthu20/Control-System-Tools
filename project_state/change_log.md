@@ -18,7 +18,7 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
-## 2026-03-13 — Phase 18 Track B: Field Engineering Section
+### 2026-03-13 — Phase 18 Track B: Field Engineering Section
 
 - Added `/field-engineering/` site section with 7 pages (landing + 6 commissioning checklists)
 - New `field-checklist` layout with Liquid data lookup from `field_checklists.yml`, "When to use" box, cross-links block, and print-optimized view

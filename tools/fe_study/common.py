@@ -288,13 +288,16 @@ def extract_docx_pages(path: Path) -> list[str]:
 
 def profile_docx(path: Path) -> DocxProfile:
     """Estimate page count and content profile for a DOCX source."""
-    with zipfile.ZipFile(path) as archive:
-        xml = archive.read("word/document.xml").decode("utf-8", errors="ignore")
-        image_count = sum(
-            1
-            for member in archive.namelist()
-            if member.startswith("word/media/") and not member.endswith("/")
-        )
+    try:
+        with zipfile.ZipFile(path) as archive:
+            xml = archive.read("word/document.xml").decode("utf-8", errors="ignore")
+            image_count = sum(
+                1
+                for member in archive.namelist()
+                if member.startswith("word/media/") and not member.endswith("/")
+            )
+    except (KeyError, zipfile.BadZipFile) as exc:
+        raise ValueError(f"Invalid or corrupted DOCX file: {path}") from exc
     root = ET.fromstring(xml)
     text_chars = sum(len(node.text or "") for node in root.findall(".//w:t", DOCX_NS))
     pages = _extract_pages_from_root(root)  # reuses already-parsed root
