@@ -15,7 +15,6 @@ from tools.fe_study.common import (
     DEFAULT_SOURCE_ROOT,
     MANIFEST_FIELDS,
     convert_doc_to_docx,
-    converted_docx_path,
     detect_pdf_text_layer,
     ensure_workdirs,
     infer_family,
@@ -98,6 +97,10 @@ def build_record(source_root: Path, path: Path, existing: dict | None = None) ->
                 record["docx_text_chars"] = str(profile.text_chars)
                 record["docx_image_count"] = str(profile.image_count)
                 record["text_layer_present"] = "n/a"
+                record["notes"] = ""
+                record["status"] = ""
+                record["quality_score"] = ""
+                record["manual_review"] = ""
                 if profile.image_count and profile.text_chars < 500:
                     record["extract_mode"] = "docx_image_ocr"
                     record["ocr_required"] = "yes"
