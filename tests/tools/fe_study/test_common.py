@@ -64,3 +64,11 @@ def test_convert_doc_to_docx_success(tmp_path, monkeypatch):
     )
     result = convert_doc_to_docx(tmp_path / "fake.doc", out_dir)
     assert result == docx_path
+
+
+def test_converted_docx_path(tmp_path):
+    from tools.fe_study.common import converted_docx_path
+    source_root = tmp_path / "FE_Study"
+    source_path = source_root / "How to" / "PLC Guide.doc"
+    result = converted_docx_path(source_root, source_path)
+    assert result == source_root / "_converted" / "How to" / "PLC Guide.docx"
