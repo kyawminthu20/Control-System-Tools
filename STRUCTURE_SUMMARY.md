@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-14 23:07:19
+**Last Auto-Updated:** 2026-03-14 23:11:04
 
 ```text
 ├── .claude/
@@ -2335,7 +2335,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── b745bdefe9bf4c824c0256ef7001b816fad13e7a1a3638905d6b49beb805f3
 │   │               │   └── e29522cf127b4191ab9e20e23e19a6918a7d0f8af782aa7f405cb51a9d3da9
 │   │               ├── 03/
-│   │               │   └── 436ee6fecf0265cb92d47b4aa51d12bca647ddd4b9f44d699443a5592035fd
+│   │               │   ├── 436ee6fecf0265cb92d47b4aa51d12bca647ddd4b9f44d699443a5592035fd
+│   │               │   └── 85d58d8e81429a93fa2e5375d181b93e320a3b4bb8166de581315acc06b0b6
 │   │               ├── 04/
 │   │               │   └── 8ae153d1cc2aef54095eadad06148ac1372da0e9f585dc95e40b643279a3ea
 │   │               ├── 05/
@@ -2360,6 +2361,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 7a4716831accfb3c6ed7db6f4bd374733d381c5216654f473051e3e62b4245
 │   │               ├── 0c/
 │   │               │   ├── 21a7d7aadd1a042168087ad4dd2323df1ae50a4de93a8da4b920963100b904
+│   │               │   ├── 3a39ada4f92016c85f3bc042503886310c14593114c91a9c68d423d530942b
 │   │               │   ├── a29af28c804d30788fd4d5da9c68dad6599d6bd49d8c113cdfddd9ec3f4368
 │   │               │   └── b884b6343a61259ab5eacf2fb4394a401d05919cfd0fc5fcdc94957f0dc271
 │   │               ├── 0d/
@@ -2418,6 +2420,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 2d81ad64c017c57b66dc14f338656d1a4abd6b680418e2996b0f722be596e6
 │   │               │   └── 6be436ab1af5cf5d54f552fb3fd73cb683bc38b950911cd4635466a7413599
 │   │               ├── 1e/
+│   │               │   ├── 48a3689b1851c7e900cf8573cba53b7c3812c36935d0403c3ead0b5ecb3fa1
 │   │               │   ├── 66cf06507d7410aa2c21264d3c2affb5b5ef8e49f1ec94db2a1285d47a9225
 │   │               │   └── a40bb730a09e050e0d130b83f90af7ccf9cb5f12db8907a1f17f734cbb89cc
 │   │               ├── 1f/
@@ -3008,6 +3011,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── cd2b80809d08cf17aa2578e03457589071f49e71bbd0a32053b375ff846d91
 │   │               ├── e9/
 │   │               │   ├── 2c762ee67e5c599d533c1f0abc210d41a8270c2c85b178c08642755fcbf5f7
+│   │               │   ├── ce90c2051f34bd54fb944dc57d0682e7973bb52370b1e13840b53ddc91baf7
 │   │               │   └── f2ade5075d3887096811dee42eba2fc278372544291fd0931322986bcf724e
 │   │               ├── ea/
 │   │               │   └── df3dfe34d237e72b57a6f65a765e995f6d280ae9df43d31475c6ddd56ab30c
@@ -3422,6 +3426,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   └── index.html
 │   │   │   └── ul508a-nec-nfpa79/
 │   │   │       └── index.html
+│   │   ├── engineering-workflow/
+│   │   │   └── index.html
 │   │   ├── field-engineering/
 │   │   │   └── index.html
 │   │   ├── glossary/
@@ -4033,6 +4039,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   └── index.md
 │   │   └── ul508a-nec-nfpa79/
 │   │       └── index.md
+│   ├── engineering-workflow/
+│   │   └── index.md
 │   ├── field-engineering/
 │   │   └── index.md
 │   ├── glossary/
