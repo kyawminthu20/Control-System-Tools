@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-14 23:02:09
+**Last Auto-Updated:** 2026-03-14 23:06:49
 
 ```text
 ├── .claude/
@@ -3069,6 +3069,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   ├── _data/
 │   │   ├── field_checklists.yml
 │   │   ├── glossary.yml
+│   │   ├── navigation.yml
 │   │   ├── rag_tree.json
 │   │   ├── standards_graph.yml
 │   │   └── training_catalog.yml
