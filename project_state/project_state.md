@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-03-14
 **Status:** Active
-**Current Phase:** Phase 18 Track C COMPLETE — Reference Section + Commissioning Templates Redesign
-**Next Phase:** Phase 19 QUEUED — Engineering Workflow Navigation Refactor
+**Current Phase:** Phase 19 COMPLETE — Engineering Workflow Navigation Refactor
+**Next Phase:** Phase 20 TBD
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -19,8 +19,8 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 ## Current Reality
 
 - Jekyll site deployed on GitHub Pages — `https://kyawminthu20.github.io/Control-System-Tools/`
-- Last validated Jekyll build: 129 pages, clean build
-- Three-panel layout (sidebar 240px + main content + context panel 220px)
+- Last validated Jekyll build: 132 pages, clean build
+- Three-panel layout (sidebar 240px + main content + context panel 220px); sidebar data-driven from `docs/_data/navigation.yml` with 5 top-level groups (Engineering Workflow, Standards, Training, Industries, Reference)
 - Mermaid.js CDN integration for all diagrams; Cytoscape.js 3.28.1 for interactive standards graph
 - Google Analytics tag installed sitewide in `docs/_layouts/default.html` using measurement ID `G-RPL3G47EFZ`
 - GitHub Actions deployment workflow at `.github/workflows/pages.yml`
@@ -500,6 +500,17 @@ Design: `docs/plans/2026-03-10-phase14-training-curriculum-design.md`
 ### Key clarification
 
 - Control Systems RAG corpus already exists; Phase 18 work is site surfacing and navigation, not new PID/control-loop source-file creation
+
+## Phase 19 Scope — Engineering Workflow Navigation Refactor — COMPLETED
+
+**Plan:** `docs/plans/2026-03-13-phase19-engineering-workflow-navigation.md`
+
+- [x] Created `docs/_data/navigation.yml` — 5-group sidebar data model (Engineering Workflow, Standards, Training, Industries, Reference)
+- [x] Refactored `docs/_includes/sidebar.html` from 135-line hardcoded HTML to ~60-line data-driven Liquid renderer
+- [x] Added `/engineering-workflow/` hub page with 5 task-grouped sections (Design & Architecture, Select & Size, Commission & Verify, Troubleshoot, Scenarios)
+- [x] Expanded `/reference/` landing page with Quick Reference section (Glossary, Crosswalks, Software Stack, RAG File Browser)
+- [x] Demoted Scenarios, Crosswalks, and Workflows from top-level sidebar into Engineering Workflow and Reference hub groups
+- [x] Jekyll build: clean, 132 pages
 
 ## Phase 19 Queue — Engineering Workflow Navigation Refactor
 
