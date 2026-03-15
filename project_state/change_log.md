@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-03-13
+**Last Updated:** 2026-03-14
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,15 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+### 2026-03-14 — Phase 19: Engineering Workflow Navigation Refactor
+
+- Created `docs/_data/navigation.yml` — 5-group sidebar data model (Engineering Workflow, Standards, Training, Industries, Reference)
+- Refactored `docs/_includes/sidebar.html` from 135-line hardcoded HTML to ~60-line data-driven Liquid renderer
+- Added `/engineering-workflow/` hub page with 5 task-grouped sections (Design & Architecture, Select & Size, Commission & Verify, Troubleshoot, Scenarios)
+- Expanded `/reference/` landing page with Quick Reference section (Glossary, Crosswalks, Software Stack, RAG File Browser)
+- Demoted Scenarios, Crosswalks, and Workflows from top-level sidebar into Engineering Workflow and Reference hub groups
+- Jekyll build: clean, 132 pages
 
 ### 2026-03-14 — Phase 18 Track C: Reference Section + Commissioning Templates Redesign
 
