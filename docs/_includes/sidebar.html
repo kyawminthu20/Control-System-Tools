@@ -1,147 +1,57 @@
 <nav class="sidebar" id="sidebar">
-  <details class="sidebar__section">
-    <summary>Standards</summary>
-    <ul class="sidebar__links">
-      <li><a href="{{ '/standards/' | relative_url }}">All Standards</a></li>
-      <li><a href="{{ '/standards/us-electrical/' | relative_url }}" class="sub">US Electrical</a></li>
-      <li><a href="{{ '/standards/us-electrical/nec/' | relative_url }}" class="sub" style="padding-left:2.75rem">NEC (NFPA 70)</a></li>
-      <li><a href="{{ '/standards/us-electrical/nfpa-79/' | relative_url }}" class="sub" style="padding-left:2.75rem">NFPA 79</a></li>
-      <li><a href="{{ '/standards/us-electrical/ul-508a/' | relative_url }}" class="sub" style="padding-left:2.75rem">UL 508A</a></li>
-      <li><a href="{{ '/standards/machinery/' | relative_url }}" class="sub">International Machinery</a></li>
-      <li><a href="{{ '/standards/machinery/iec-60204-1/' | relative_url }}" class="sub" style="padding-left:2.75rem">IEC 60204-1</a></li>
-      <li><a href="{{ '/standards/functional-safety/' | relative_url }}" class="sub">Functional Safety</a></li>
-      <li><a href="{{ '/standards/functional-safety/iso-12100/' | relative_url }}" class="sub" style="padding-left:2.75rem">ISO 12100</a></li>
-      <li><a href="{{ '/standards/functional-safety/iso-13849-1/' | relative_url }}" class="sub" style="padding-left:2.75rem">ISO 13849-1</a></li>
-      <li><a href="{{ '/standards/functional-safety/iec-62061/' | relative_url }}" class="sub" style="padding-left:2.75rem">IEC 62061</a></li>
-      <li><a href="{{ '/standards/functional-safety/iec-61508/' | relative_url }}" class="sub" style="padding-left:2.75rem">IEC 61508</a></li>
-      <li><a href="{{ '/standards/functional-safety/iec-61511/' | relative_url }}" class="sub" style="padding-left:2.75rem">IEC 61511</a></li>
-      <li><a href="{{ '/standards/cybersecurity/' | relative_url }}" class="sub">Cybersecurity</a></li>
-      <li><a href="{{ '/standards/cybersecurity/iec-62443/' | relative_url }}" class="sub" style="padding-left:2.75rem">IEC 62443</a></li>
-      <li><a href="{{ '/standards/hazardous-area/' | relative_url }}" class="sub">Hazardous Area</a></li>
-      <li><a href="{{ '/standards/hazardous-area/iec-60079/' | relative_url }}" class="sub" style="padding-left:2.75rem">IEC 60079</a></li>
-      <li><a href="{{ '/standards/semiconductor/' | relative_url }}" class="sub">Semiconductor</a></li>
-      <li><a href="{{ '/standards/semiconductor/semi/' | relative_url }}" class="sub" style="padding-left:2.75rem">SEMI S2/S8/S14</a></li>
-      <li><a href="{{ '/standards/graph/' | relative_url }}" {% if page.url contains '/standards/graph/' %}class="active"{% endif %}>Relationship Graph</a></li>
-    </ul>
-  </details>
+  {% for section in site.data.navigation %}
+    {% assign in_section = false %}
+    {% if section.match_prefixes %}
+      {% for prefix in section.match_prefixes %}
+        {% if page.url contains prefix %}{% assign in_section = true %}{% endif %}
+      {% endfor %}
+    {% else %}
+      {% if page.url contains section.url %}{% assign in_section = true %}{% endif %}
+    {% endif %}
 
-  <details class="sidebar__section">
-    <summary>Lifecycle</summary>
-    <ul class="sidebar__links">
-      <li><a href="{{ '/lifecycle/' | relative_url }}">Lifecycle Overview</a></li>
-      <li><a href="{{ '/lifecycle/concept/' | relative_url }}" class="sub">1. Concept</a></li>
-      <li><a href="{{ '/lifecycle/standards-selection/' | relative_url }}" class="sub">2. Standards Selection</a></li>
-      <li><a href="{{ '/lifecycle/risk-assessment/' | relative_url }}" class="sub">3. Risk Assessment</a></li>
-      <li><a href="{{ '/lifecycle/safety-architecture/' | relative_url }}" class="sub">4. Safety Architecture</a></li>
-      <li><a href="{{ '/lifecycle/detailed-design/' | relative_url }}" class="sub">5. Detailed Design</a></li>
-      <li><a href="{{ '/lifecycle/draft-documentation/' | relative_url }}" class="sub">6. Draft Documentation</a></li>
-      <li><a href="{{ '/lifecycle/build/' | relative_url }}" class="sub">7. Build</a></li>
-      <li><a href="{{ '/lifecycle/installation/' | relative_url }}" class="sub">8. Installation</a></li>
-      <li><a href="{{ '/lifecycle/pre-commissioning/' | relative_url }}" class="sub">9. Pre-Commissioning</a></li>
-      <li><a href="{{ '/lifecycle/commissioning/' | relative_url }}" class="sub">10. Commissioning</a></li>
-      <li><a href="{{ '/lifecycle/maintenance/' | relative_url }}" class="sub">11. Maintenance</a></li>
-    </ul>
-  </details>
+    <details class="sidebar__section"{% if section.always_open or in_section %} open{% endif %}>
+      <summary>{{ section.label }}</summary>
+      <ul class="sidebar__links">
+        <li>
+          <a href="{{ section.url | relative_url }}"{% if page.url == section.url %} class="active"{% endif %}>{{ section.label }}</a>
+        </li>
 
-  <details class="sidebar__section">
-    <summary>Industries</summary>
-    <ul class="sidebar__links">
-      <li><a href="{{ '/industries/' | relative_url }}">Industry Matrix</a></li>
-      <li><a href="{{ '/industries/semiconductor/' | relative_url }}" class="sub">Semiconductor</a></li>
-      <li><a href="{{ '/industries/food-and-beverage/' | relative_url }}" class="sub">Food &amp; Beverage</a></li>
-      <li><a href="{{ '/industries/energy/' | relative_url }}" class="sub">Energy</a></li>
-      <li><a href="{{ '/industries/petroleum/' | relative_url }}" class="sub">Petroleum / Oil &amp; Gas</a></li>
-      <li><a href="{{ '/industries/marine/' | relative_url }}" class="sub">Marine</a></li>
-      <li><a href="{{ '/industries/medical/' | relative_url }}" class="sub">Medical</a></li>
-      <li><a href="{{ '/industries/nuclear/' | relative_url }}" class="sub">Nuclear</a></li>
-      <li><a href="{{ '/industries/offshore/' | relative_url }}" class="sub">Offshore</a></li>
-      <li><a href="{{ '/industries/commercial/' | relative_url }}" class="sub">Commercial</a></li>
-    </ul>
-  </details>
+        {% for child in section.children %}
+          {% if child.group_label %}
+            <li class="sidebar__group-label">{{ child.label }}</li>
+          {% else %}
+            {% assign child_has_active_gc = false %}
+            {% if child.children %}
+              {% for grandchild in child.children %}
+                {% if page.url contains grandchild.url %}{% assign child_has_active_gc = true %}{% endif %}
+              {% endfor %}
+            {% endif %}
 
-  <details class="sidebar__section">
-    <summary>Scenarios</summary>
-    <ul class="sidebar__links">
-      <li><a href="{{ '/scenarios/' | relative_url }}">All Scenarios</a></li>
-      <li><a href="{{ '/scenarios/us-industrial-control-panel/' | relative_url }}" class="sub">US Control Panel</a></li>
-      <li><a href="{{ '/scenarios/global-machine/' | relative_url }}" class="sub">Global Machine</a></li>
-      <li><a href="{{ '/scenarios/process-skid/' | relative_url }}" class="sub">Process Skid</a></li>
-      <li><a href="{{ '/scenarios/networked-safety-plc/' | relative_url }}" class="sub">Networked Safety PLC</a></li>
-      <li><a href="{{ '/scenarios/semiconductor-equipment/' | relative_url }}" class="sub">Semiconductor Equip.</a></li>
-      <li><a href="{{ '/scenarios/oil-gas-process-skid/' | relative_url }}" class="sub">O&amp;G Process Skid</a></li>
-      <li><a href="{{ '/scenarios/semiconductor-fab-tool/' | relative_url }}" class="sub">Semiconductor Fab Tool</a></li>
-      <li><a href="{{ '/scenarios/offshore-platform-control/' | relative_url }}" class="sub">Offshore Platform</a></li>
-    </ul>
-  </details>
+            {% assign child_active = false %}
+            {% if child.children %}
+              {% if page.url contains child.url and child_has_active_gc == false %}{% assign child_active = true %}{% endif %}
+            {% else %}
+              {% if page.url == child.url %}{% assign child_active = true %}{% endif %}
+            {% endif %}
 
-  <details class="sidebar__section">
-    <summary>Crosswalks</summary>
-    <ul class="sidebar__links">
-      <li><a href="{{ '/crosswalks/' | relative_url }}">All Crosswalks</a></li>
-      <li><a href="{{ '/crosswalks/nfpa79-iec60204/' | relative_url }}" class="sub">NFPA 79 ↔ IEC 60204-1</a></li>
-      <li><a href="{{ '/crosswalks/ul508a-nec-nfpa79/' | relative_url }}" class="sub">UL 508A / NEC / NFPA 79</a></li>
-      <li><a href="{{ '/crosswalks/standards-decision-workflow/' | relative_url }}" class="sub">Decision Workflow</a></li>
-      <li><a href="{{ '/crosswalks/iec61511-iec61508/' | relative_url }}" class="sub">IEC 61511 ↔ IEC 61508</a></li>
-      <li><a href="{{ '/crosswalks/iec60079-nec-500-505/' | relative_url }}" class="sub">IEC 60079 ↔ NEC 500/505</a></li>
-    </ul>
-  </details>
+            <li>
+              <a href="{{ child.url | relative_url }}" class="sub{% if child_active %} active{% endif %}">{{ child.label }}</a>
+            </li>
 
-  <details class="sidebar__section">
-    <summary>Reference Models</summary>
-    <ul class="sidebar__links">
-      <li><a href="{{ '/reference/' | relative_url }}">All Reference Models</a></li>
-      <li class="sidebar__group-label">Architecture</li>
-      <li><a href="{{ '/reference/architecture/machine-architecture-model/' | relative_url }}" class="sub">Machine Architecture</a></li>
-      <li><a href="{{ '/reference/architecture/machine-safety-architecture/' | relative_url }}" class="sub">Safety Architecture</a></li>
-      <li><a href="{{ '/reference/architecture/compliance-stack/' | relative_url }}" class="sub">Compliance Stack</a></li>
-      <li class="sidebar__group-label">Motor Systems</li>
-      <li><a href="{{ '/reference/motor-systems/motor-selection-matrix/' | relative_url }}" class="sub">Motor Selection Matrix</a></li>
-    </ul>
-  </details>
+            {% if child.children %}
+              {% for grandchild in child.children %}
+                {% assign gc_active = false %}
+                {% if page.url contains grandchild.url %}{% assign gc_active = true %}{% endif %}
+                <li>
+                  <a href="{{ grandchild.url | relative_url }}" class="sub{% if gc_active %} active{% endif %}" style="padding-left:2.75rem">{{ grandchild.label }}</a>
+                </li>
+              {% endfor %}
+            {% endif %}
 
-  <details class="sidebar__section">
-    <summary>Reference</summary>
-    <ul class="sidebar__links">
-      <li><a href="{{ '/software-stack/' | relative_url }}">Software Stack</a></li>
-      <li><a href="{{ '/glossary/' | relative_url }}">Glossary</a></li>
-      <li><a href="{{ '/rag-browser/' | relative_url }}">RAG Files</a></li>
-      <li><a href="{{ '/about/' | relative_url }}">About / Trust Boundary</a></li>
-    </ul>
-  </details>
+          {% endif %}
+        {% endfor %}
 
-  <details class="sidebar__section">
-    <summary>Training</summary>
-    <ul class="sidebar__links">
-      <li><a href="{{ '/training/' | relative_url }}">All Modules</a></li>
-      <li><a href="{{ '/training/fundamentals/' | relative_url }}" class="sub">Electrical Fundamentals</a></li>
-      <li><a href="{{ '/training/electrical-machines/' | relative_url }}" class="sub">Motors, Drives, and Motion</a></li>
-      <li><a href="{{ '/training/nec-application/' | relative_url }}" class="sub">NEC for Machines and Panels</a></li>
-      <li><a href="{{ '/training/control-systems/' | relative_url }}" class="sub">Control Systems</a></li>
-    </ul>
-  </details>
-
-  <details class="sidebar__section">
-    <summary>Workflows</summary>
-    <ul class="sidebar__links">
-      <li><a href="{{ '/workflows/' | relative_url }}">All Workflows</a></li>
-      <li><a href="{{ '/workflows/motor-selection/' | relative_url }}" class="sub">Motor Selection</a></li>
-      <li><a href="{{ '/workflows/motor-troubleshooting/' | relative_url }}" class="sub">Motor Troubleshooting</a></li>
-      <li><a href="{{ '/workflows/vfd-commissioning/' | relative_url }}" class="sub">VFD Commissioning</a></li>
-      <li><a href="{{ '/workflows/servo-commissioning/' | relative_url }}" class="sub">Servo Commissioning</a></li>
-      <li><a href="{{ '/workflows/electrical-review/' | relative_url }}" class="sub">Electrical Review</a></li>
-    </ul>
-  </details>
-
-  <details class="sidebar__section">
-    <summary>Commissioning Templates</summary>
-    <ul class="sidebar__links">
-      <li><a href="{{ '/commissioning-templates/' | relative_url }}"{% if page.url == '/commissioning-templates/' %} class="active"{% endif %}>All Templates</a></li>
-      <li><a href="{{ '/commissioning-templates/pre-power-panel/' | relative_url }}" class="sub{% if page.url contains 'commissioning-templates' and page.url contains 'pre-power-panel' %} active{% endif %}">Pre-Power Panel</a></li>
-      <li><a href="{{ '/commissioning-templates/basic-circuit-polarity/' | relative_url }}" class="sub{% if page.url contains 'commissioning-templates' and page.url contains 'basic-circuit-polarity' %} active{% endif %}">Circuit Polarity</a></li>
-      <li><a href="{{ '/commissioning-templates/capacitor-discharge/' | relative_url }}" class="sub{% if page.url contains 'commissioning-templates' and page.url contains 'capacitor-discharge' %} active{% endif %}">Capacitor Discharge</a></li>
-      <li><a href="{{ '/commissioning-templates/motor-nameplate-overload/' | relative_url }}" class="sub{% if page.url contains 'commissioning-templates' and page.url contains 'motor-nameplate-overload' %} active{% endif %}">Motor Nameplate</a></li>
-      <li><a href="{{ '/commissioning-templates/motor-rotation-verification/' | relative_url }}" class="sub{% if page.url contains 'commissioning-templates' and page.url contains 'motor-rotation-verification' %} active{% endif %}">Motor Rotation</a></li>
-      <li><a href="{{ '/commissioning-templates/drive-commissioning/' | relative_url }}" class="sub{% if page.url contains 'commissioning-templates' and page.url contains 'drive-commissioning' %} active{% endif %}">Drive Commissioning</a></li>
-    </ul>
-  </details>
+      </ul>
+    </details>
+  {% endfor %}
 </nav>
