@@ -115,8 +115,6 @@
     - "/crosswalks/"
     - "/about/"
   children:
-    - label: "Reference Models"
-      url: "/reference/"
     - label: "Glossary"
       url: "/glossary/"
     - label: "Crosswalks"
