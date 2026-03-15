@@ -36,6 +36,26 @@ breadcrumb:
   </div>
 </div>
 
+<h2>Quick Reference</h2>
+<div class="workflow-card-grid">
+  <div class="workflow-card">
+    <h3><a href="{{ '/glossary/' | relative_url }}">Glossary</a></h3>
+    <p>45 cross-linked terms across Safety, Electrical, Standards Bodies, and Regulatory domains.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/crosswalks/' | relative_url }}">Crosswalks</a></h3>
+    <p>Side-by-side standard comparisons: NFPA 79 ↔ IEC 60204-1, IEC 61511 ↔ IEC 61508, IEC 60079 ↔ NEC 500/505, and more.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/software-stack/' | relative_url }}">Software Stack</a></h3>
+    <p>Site technology stack, Jekyll configuration, and deployment notes.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/rag-browser/' | relative_url }}">RAG File Browser</a></h3>
+    <p>Browse all canonical RAG source files directly — standards, training modules, design frameworks, and commissioning checklists.</p>
+  </div>
+</div>
+
 <div style="margin-top:2rem; font-size:0.9rem; color:var(--color-text-muted);">
 These reference models are derived from the canonical RAG corpus at <code>control-standards/rag/</code>. They are design aids, not authoritative standards documents. Always verify against the applicable standard and OEM documentation.
 </div>
