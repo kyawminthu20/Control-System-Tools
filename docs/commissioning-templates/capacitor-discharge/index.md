@@ -3,8 +3,8 @@ layout: field-checklist
 title: "Capacitor Discharge Awareness Check"
 description: "Checklist for safely verifying discharge before working near power electronics, DC buses, or energy-storage components."
 breadcrumb:
-  - name: "Field Engineering"
-    url: "/field-engineering/"
+  - name: "Commissioning Templates"
+    url: "/commissioning-templates/"
 repo_path: "control-standards/rag/commissioning_checklists/checklists/capacitor_discharge_awareness_check.md"
 ---
 

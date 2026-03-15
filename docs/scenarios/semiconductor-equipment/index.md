@@ -110,3 +110,7 @@ rag/scenario/mini_machine_safety_design_v2/industry_overlays/semiconductor.md
 ```
 
 <a href="{{ '/industries/semiconductor/' | relative_url }}" class="card__link">View Semiconductor industry overlay &rarr;</a>
+
+## Related References
+
+- [7-Layer Machine Architecture Model]({{ '/reference/architecture/machine-architecture-model/' | relative_url }}) — layer-by-layer breakdown with applicable standards per layer

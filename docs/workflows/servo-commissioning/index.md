@@ -114,4 +114,4 @@ If mechanical issues appear (resonance, backlash, compliance), resolve them mech
 
 ## Related Checklists
 
-- [Drive Commissioning]({{ '/field-engineering/drive-commissioning/' | relative_url }})
+- [Drive Commissioning]({{ '/commissioning-templates/drive-commissioning/' | relative_url }})

@@ -107,4 +107,8 @@ Before finalizing the design, confirm the path for:
 
 ## Related Checklists
 
-- [Motor Nameplate and Overload Setting]({{ '/field-engineering/motor-nameplate-overload/' | relative_url }})
+- [Motor Nameplate and Overload Setting]({{ '/commissioning-templates/motor-nameplate-overload/' | relative_url }})
+
+## Related References
+
+- [Motor Selection Comparison Matrix]({{ '/reference/motor-systems/motor-selection-matrix/' | relative_url }}) — decision flowchart and system-family comparison table

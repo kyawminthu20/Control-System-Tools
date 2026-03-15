@@ -3,8 +3,8 @@ layout: field-checklist
 title: "Motor Nameplate and Overload Setting"
 description: "Checklist for verifying motor nameplate data and overload device setting before energizing a motor branch."
 breadcrumb:
-  - name: "Field Engineering"
-    url: "/field-engineering/"
+  - name: "Commissioning Templates"
+    url: "/commissioning-templates/"
 repo_path: "control-standards/rag/commissioning_checklists/checklists/motor_nameplate_and_overload_setting.md"
 ---
 

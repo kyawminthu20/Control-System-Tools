@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-14 06:31:58
+**Last Auto-Updated:** 2026-03-14 21:26:52
 
 ```text
 ├── .claude/
@@ -311,6 +311,1174 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               └── WHEEL
 │   └── pyvenv.cfg
 ├── .worktrees/
+│   └── phase-19-nav-refactor/
+│       ├── .claude/
+│       │   ├── agents/
+│       │   │   ├── rag-reviewer.md
+│       │   │   └── standards-lookup.md
+│       │   ├── settings.json
+│       │   └── skills/
+│       │       ├── explain-code/
+│       │       │   └── SKILL.md
+│       │       ├── new-rag-module/
+│       │       │   └── SKILL.md
+│       │       ├── promote-draft/
+│       │       │   └── SKILL.md
+│       │       └── validate-rag/
+│       │           └── SKILL.md
+│       ├── .github/
+│       │   └── workflows/
+│       │       └── pages.yml
+│       ├── .gitignore
+│       ├── .mcp.json
+│       ├── .python-version
+│       ├── AGENTS.md
+│       ├── CLAUDE.md
+│       ├── PROJECT_STARTUP_CONTEXT.md
+│       ├── README.md
+│       ├── STRUCTURE_SUMMARY.md
+│       ├── control-standards/
+│       │   ├── .gitignore
+│       │   ├── QUICK_START.md
+│       │   ├── README.md
+│       │   ├── STRUCTURE_SUMMARY.md
+│       │   ├── exports/
+│       │   │   ├── README.md
+│       │   │   └── legacy_root/
+│       │   │       └── README.md
+│       │   ├── governance/
+│       │   │   ├── README.md
+│       │   │   ├── decision_log.md
+│       │   │   ├── design_change_policy.md
+│       │   │   ├── promotion_checklist_drafts_to_rag.md
+│       │   │   └── release_notes.md
+│       │   ├── rag/
+│       │   │   ├── commissioning_checklists/
+│       │   │   │   ├── README.md
+│       │   │   │   ├── _index.yaml
+│       │   │   │   └── checklists/
+│       │   │   │       ├── README.md
+│       │   │   │       ├── _index.yaml
+│       │   │   │       ├── basic_circuit_polarity_and_power_checks.md
+│       │   │   │       ├── capacitor_discharge_awareness_check.md
+│       │   │   │       ├── drive_commissioning.md
+│       │   │   │       ├── motor_nameplate_and_overload_setting.md
+│       │   │   │       ├── motor_rotation_and_overload_verification.md
+│       │   │   │       └── pre_power_panel_and_incoming_supply_check.md
+│       │   │   ├── design_framework/
+│       │   │   │   ├── README.md
+│       │   │   │   ├── _index.yaml
+│       │   │   │   ├── constraints/
+│       │   │   │   │   └── grounding_bonding_rules.yaml
+│       │   │   │   ├── design_guides/
+│       │   │   │   │   └── 02_power_distribution_guide.md
+│       │   │   │   ├── electrical_review/
+│       │   │   │   │   ├── README.md
+│       │   │   │   │   ├── _index.yaml
+│       │   │   │   │   ├── basic_resistive_network_review.md
+│       │   │   │   │   ├── component_selection_basics.md
+│       │   │   │   │   ├── ohms_law_and_power_check_workflow.md
+│       │   │   │   │   └── simple_signal_and_interface_circuit_notes.md
+│       │   │   │   ├── motor_systems/
+│       │   │   │   │   ├── README.md
+│       │   │   │   │   ├── _index.yaml
+│       │   │   │   │   ├── industrial_vs_ev_vs_drone_motor_drive_standards_matrix.md
+│       │   │   │   │   ├── integrated_drive_failure_modes_and_tradeoffs.md
+│       │   │   │   │   ├── integrated_drive_serviceability_and_field_replacement_review.md
+│       │   │   │   │   ├── integrated_motor_drive_architecture_comparison.md
+│       │   │   │   │   ├── motor_cable_and_protection_review.md
+│       │   │   │   │   ├── motor_mounted_drive_thermal_and_emc_design_notes.md
+│       │   │   │   │   ├── motor_nameplate_review_checklist.md
+│       │   │   │   │   ├── motor_selection_comparison_matrix.md
+│       │   │   │   │   ├── motor_selection_workflow.md
+│       │   │   │   │   ├── motor_symptom_troubleshooting_patterns.md
+│       │   │   │   │   ├── motor_troubleshooting_decision_tree.md
+│       │   │   │   │   ├── servo_commissioning_workflow.md
+│       │   │   │   │   ├── star_delta_and_supply_matching_notes.md
+│       │   │   │   │   ├── vfd_commissioning_workflow.md
+│       │   │   │   │   └── vfd_motor_integration_review.md
+│       │   │   │   └── us_eu_compliance_wizard/
+│       │   │   │       ├── README.md
+│       │   │   │       ├── US_EU_Machine_Compliance_Wizard.md
+│       │   │   │       ├── us_eu_delta_report_template.md
+│       │   │   │       └── us_eu_wizard_rules.yaml
+│       │   │   ├── meta/
+│       │   │   │   ├── RAG_DIRECTORY_STATUS.md
+│       │   │   │   └── VERSION_OVERVIEW.md
+│       │   │   ├── standards_intelligence/
+│       │   │   │   ├── README.md
+│       │   │   │   ├── _glossary.md
+│       │   │   │   ├── _index.yaml
+│       │   │   │   ├── _standards_map.md
+│       │   │   │   ├── crosswalks/
+│       │   │   │   │   ├── overlap_matrix/
+│       │   │   │   │   │   ├── _index.yaml
+│       │   │   │   │   │   ├── file_structure.md
+│       │   │   │   │   │   ├── nfpa79_iec60204_overlap.md
+│       │   │   │   │   │   ├── standards_decision_workflow.md
+│       │   │   │   │   │   ├── standards_overlap.md
+│       │   │   │   │   │   └── ul508a_nec_nfpa79_overlap.md
+│       │   │   │   │   └── overlap_notes/
+│       │   │   │   │       ├── GENERATION_STATUS.md
+│       │   │   │   │       ├── _index.yaml
+│       │   │   │   │       ├── file_structure.md
+│       │   │   │   │       ├── overlap__motors_drives.md
+│       │   │   │   │       ├── overlap__sccr.md
+│       │   │   │   │       └── overlap_nfpa79_iec60204__motors_drives.md
+│       │   │   │   ├── file_structure.md
+│       │   │   │   ├── international/
+│       │   │   │   │   ├── cybersecurity/
+│       │   │   │   │   │   └── iec_62443/
+│       │   │   │   │   │       ├── IEC62443_2_1__security_management.md
+│       │   │   │   │   │       ├── IEC62443_3_3__system_security_requirements.md
+│       │   │   │   │   │       ├── IEC62443_4_2__component_requirements.md
+│       │   │   │   │   │       ├── IEC62443_lifecycle.md
+│       │   │   │   │   │       └── _index.yaml
+│       │   │   │   │   ├── functional_safety/
+│       │   │   │   │   │   ├── iec_61508/
+│       │   │   │   │   │   │   ├── IEC61508_2010__Clause07__safety_lifecycle.md
+│       │   │   │   │   │   │   ├── IEC61508_2010__Part1__framework.md
+│       │   │   │   │   │   │   ├── IEC61508_2010__Part2__hardware.md
+│       │   │   │   │   │   │   ├── IEC61508_2010__Part3__software.md
+│       │   │   │   │   │   │   └── _index.yaml
+│       │   │   │   │   │   ├── iec_61511/
+│       │   │   │   │   │   │   ├── IEC61511_2016__Clause08__sil_determination.md
+│       │   │   │   │   │   │   ├── IEC61511_2016__Clause10__sis_design.md
+│       │   │   │   │   │   │   ├── IEC61511_2016__Clause16__operation_maintenance.md
+│       │   │   │   │   │   │   ├── IEC61511_2016__Part1__framework.md
+│       │   │   │   │   │   │   └── _index.yaml
+│       │   │   │   │   │   ├── iec_62061/
+│       │   │   │   │   │   │   ├── IEC62061_2021__AnnexA__silcl_tables.md
+│       │   │   │   │   │   │   ├── IEC62061_2021__Clause04__scope_context.md
+│       │   │   │   │   │   │   ├── IEC62061_2021__Clause06__srecs_design.md
+│       │   │   │   │   │   │   ├── IEC62061_2021__Clause07__subsystem_design.md
+│       │   │   │   │   │   │   └── _index.yaml
+│       │   │   │   │   │   ├── iso_12100/
+│       │   │   │   │   │   │   ├── ISO12100_2010__AnnexA__hazard_list.md
+│       │   │   │   │   │   │   ├── ISO12100_2010__Clause04__risk_assessment_principles.md
+│       │   │   │   │   │   │   ├── ISO12100_2010__Clause05__risk_estimation.md
+│       │   │   │   │   │   │   ├── ISO12100_2010__Clause06__risk_evaluation.md
+│       │   │   │   │   │   │   ├── ISO12100_2010__Clause07__risk_reduction.md
+│       │   │   │   │   │   │   └── _index.yaml
+│       │   │   │   │   │   └── iso_13849_1/
+│       │   │   │   │   │       ├── ISO13849_2023__AnnexA__risk_assessment.md
+│       │   │   │   │   │       ├── ISO13849_2023__AnnexF__ccf.md
+│       │   │   │   │   │       ├── ISO13849_2023__Clause04__design_strategy.md
+│       │   │   │   │   │       ├── ISO13849_2023__Clause05__srp_cs.md
+│       │   │   │   │   │       ├── ISO13849_2023__Clause06__categories.md
+│       │   │   │   │   │       ├── ISO13849_2023__Clause07__validation.md
+│       │   │   │   │   │       └── _index.yaml
+│       │   │   │   │   ├── hazardous_area/
+│       │   │   │   │   │   └── iec_60079/
+│       │   │   │   │   │       ├── IEC60079_0__general_requirements.md
+│       │   │   │   │   │       ├── IEC60079_10_1__area_classification_gas.md
+│       │   │   │   │   │       ├── IEC60079_11__intrinsically_safe_Ex_i.md
+│       │   │   │   │   │       ├── IEC60079_14__installation_design.md
+│       │   │   │   │   │       ├── IEC60079_17__inspection_maintenance.md
+│       │   │   │   │   │       ├── IEC60079_1__flameproof_Ex_d.md
+│       │   │   │   │   │       └── _index.yaml
+│       │   │   │   │   ├── machinery/
+│       │   │   │   │   │   └── iec_60204_1/
+│       │   │   │   │   │       ├── GENERATION_SUMMARY.md
+│       │   │   │   │   │       ├── IEC60204_1_2018__Clause01__scope.md
+│       │   │   │   │   │       ├── IEC60204_1_2018__Clause02__normative_references.md
+│       │   │   │   │   │       ├── IEC60204_1_2018__Clause03__terms_and_definitions.md
+│       │   │   │   │   │       ├── IEC60204_1_2018__Clause04__general_requirements.md
+│       │   │   │   │   │       ├── IEC60204_1_2018__Clause05__incoming_supply.md
+│       │   │   │   │   │       ├── IEC60204_1_2018__Clause06__protection_against_electric_shock.md
+│       │   │   │   │   │       ├── IEC60204_1_2018__Clause07__protection_of_equipment.md
+│       │   │   │   │   │       ├── IEC60204_1_2018__Clause08__equipotential_bonding.md
+│       │   │   │   │   │       ├── IEC60204_1_2018__Clause09__control_circuits_and_functions.md
+│       │   │   │   │   │       ├── IEC60204_1_2018__Clause10__operator_interface.md
+│       │   │   │   │   │       ├── IEC60204_1_2018__Clause11__control_equipment.md
+│       │   │   │   │   │       ├── IEC60204_1_2018__Clause12__motors_and_drives.md
+│       │   │   │   │   │       ├── IEC60204_1_2018__Clause13__accessories_and_lighting.md
+│       │   │   │   │   │       ├── IEC60204_1_2018__Clause14__marking_and_documentation.md
+│       │   │   │   │   │       ├── IEC60204_1_2018__Clause15__verification.md
+│       │   │   │   │   │       ├── IEC60204_OVERVIEW.md
+│       │   │   │   │   │       ├── README.md
+│       │   │   │   │   │       └── _index.yaml
+│       │   │   │   │   ├── offshore/
+│       │   │   │   │   │   ├── ABS_offshore_electrical_control.md
+│       │   │   │   │   │   ├── DNV_OS_D201__electrical_installations.md
+│       │   │   │   │   │   └── _index.yaml
+│       │   │   │   │   └── semiconductor/
+│       │   │   │   │       └── semi/
+│       │   │   │   │           ├── SEMI_S14__fire_risk_assessment.md
+│       │   │   │   │           ├── SEMI_S2__equipment_safety.md
+│       │   │   │   │           ├── SEMI_S8__ergonomics.md
+│       │   │   │   │           └── _index.yaml
+│       │   │   │   ├── library_admin/
+│       │   │   │   │   ├── COMPLETE_STANDARDS_PORTFOLIO.md
+│       │   │   │   │   ├── README.md
+│       │   │   │   │   ├── STANDARDS_COMPLETION_STATUS.md
+│       │   │   │   │   ├── STANDARDS_MODULES_SUMMARY.md
+│       │   │   │   │   └── STANDARDS_PURCHASE_TRACKER.md
+│       │   │   │   ├── reference_models/
+│       │   │   │   │   ├── 15-Standard Minimum Compliance Stack.md
+│       │   │   │   │   ├── 7-Layer Industrial Machine Architecture Model.md
+│       │   │   │   │   ├── README.md
+│       │   │   │   │   ├── Software_Safety_and_Intrinsic_Safety_Standards.md
+│       │   │   │   │   ├── Universal Machine Safety Architecture.md
+│       │   │   │   │   └── standards_atlas_diagrams_reference.md
+│       │   │   │   ├── routing/
+│       │   │   │   │   ├── README.md
+│       │   │   │   │   └── standards_applicability.md
+│       │   │   │   ├── scenario/
+│       │   │   │   │   ├── cnc_machine_safety_design/
+│       │   │   │   │   │   ├── README.md
+│       │   │   │   │   │   ├── control_architecture_and_network.md
+│       │   │   │   │   │   ├── hazards_and_risk_assessment.md
+│       │   │   │   │   │   ├── mechanical_and_electrical_isolation.md
+│       │   │   │   │   │   ├── requirements.yaml
+│       │   │   │   │   │   ├── safety_functions_register.md
+│       │   │   │   │   │   ├── safety_integrity_and_sil_strategy.md
+│       │   │   │   │   │   ├── standards_applicability_matrix.md
+│       │   │   │   │   │   ├── system_description.md
+│       │   │   │   │   │   ├── ul_nec_design_requirements.md
+│       │   │   │   │   │   └── verification_and_validation_plan.md
+│       │   │   │   │   ├── mini_machine_safety_design/
+│       │   │   │   │   │   ├── README.md
+│       │   │   │   │   │   ├── control_architecture_and_network.md
+│       │   │   │   │   │   ├── hazards_and_risk_assessment.md
+│       │   │   │   │   │   ├── industry_overlays/
+│       │   │   │   │   │   │   ├── commercial.md
+│       │   │   │   │   │   │   ├── energy.md
+│       │   │   │   │   │   │   ├── food_and_beverage.md
+│       │   │   │   │   │   │   ├── marine.md
+│       │   │   │   │   │   │   ├── medical.md
+│       │   │   │   │   │   │   ├── nuclear.md
+│       │   │   │   │   │   │   ├── offshore.md
+│       │   │   │   │   │   │   ├── petroleum.md
+│       │   │   │   │   │   │   └── semiconductor.md
+│       │   │   │   │   │   ├── mechanical_and_electrical_isolation.md
+│       │   │   │   │   │   ├── requirements.yaml
+│       │   │   │   │   │   ├── safety_functions_register.md
+│       │   │   │   │   │   ├── safety_integrity_and_sil_strategy.md
+│       │   │   │   │   │   ├── standards_applicability_matrix.md
+│       │   │   │   │   │   ├── system_description.md
+│       │   │   │   │   │   ├── ul_nec_design_requirements.md
+│       │   │   │   │   │   └── verification_and_validation_plan.md
+│       │   │   │   │   └── mini_machine_safety_design_v2/
+│       │   │   │   │       ├── README.md
+│       │   │   │   │       ├── control_architecture_and_network.md
+│       │   │   │   │       ├── hazards_and_risk_assessment.md
+│       │   │   │   │       ├── industry_overlays/
+│       │   │   │   │       │   ├── commercial.md
+│       │   │   │   │       │   ├── energy.md
+│       │   │   │   │       │   ├── food_and_beverage.md
+│       │   │   │   │       │   ├── marine.md
+│       │   │   │   │       │   ├── medical.md
+│       │   │   │   │       │   ├── nuclear.md
+│       │   │   │   │       │   ├── offshore.md
+│       │   │   │   │       │   ├── petroleum.md
+│       │   │   │   │       │   └── semiconductor.md
+│       │   │   │   │       ├── mechanical_and_electrical_isolation.md
+│       │   │   │   │       ├── requirements.yaml
+│       │   │   │   │       ├── safety_functions_register.md
+│       │   │   │   │       ├── safety_integrity_and_sil_strategy.md
+│       │   │   │   │       ├── standards_applicability_matrix.md
+│       │   │   │   │       ├── system_description.md
+│       │   │   │   │       ├── ul_nec_design_requirements.md
+│       │   │   │   │       └── verification_and_validation_plan.md
+│       │   │   │   └── us/
+│       │   │   │       ├── nec/
+│       │   │   │       │   ├── GENERATION_SUMMARY.md
+│       │   │   │       │   ├── NEC_2023__Art090__scope_and_purpose.md
+│       │   │   │       │   ├── NEC_2023__Art100__definitions.md
+│       │   │   │       │   ├── NEC_2023__Art110__requirements_for_electrical_installations.md
+│       │   │   │       │   ├── NEC_2023__Art215__feeders.md
+│       │   │   │       │   ├── NEC_2023__Art230__services.md
+│       │   │   │       │   ├── NEC_2023__Art240__overcurrent_protection.md
+│       │   │   │       │   ├── NEC_2023__Art250_4__purposes_of_grounding_and_bonding.md
+│       │   │   │       │   ├── NEC_2023__Art250__grounding_and_bonding.md
+│       │   │   │       │   ├── NEC_2023__Art300__general_wiring_methods.md
+│       │   │   │       │   ├── NEC_2023__Art310__conductors_for_general_wiring.md
+│       │   │   │       │   ├── NEC_2023__Art408__switchboards_switchgear_and_panelboards.md
+│       │   │   │       │   ├── NEC_2023__Art409__industrial_control_panels.md
+│       │   │   │       │   ├── NEC_2023__Art430__motors_motor_circuits_and_controllers.md
+│       │   │   │       │   ├── NEC_2023__Art500__hazardous_locations_general.md
+│       │   │   │       │   ├── NEC_2023__Art504__intrinsically_safe_systems.md
+│       │   │   │       │   ├── NEC_2023__Art505__zone_0_1_2_gas_vapors.md
+│       │   │   │       │   ├── NEC_2023__Art670__industrial_machinery.md
+│       │   │   │       │   ├── NEC_2023__Art700_702__emergency_standby_systems.md
+│       │   │   │       │   ├── NEC_2023__Art725__class_1_2_3_control_circuits.md
+│       │   │   │       │   ├── NEC_COMPLETION_STATUS.md
+│       │   │   │       │   ├── NEC_OVERVIEW.md
+│       │   │   │       │   ├── README.md
+│       │   │   │       │   └── _index.yaml
+│       │   │   │       ├── nfpa79/
+│       │   │   │       │   ├── GENERATION_SUMMARY.md
+│       │   │   │       │   ├── NFPA79_2024__Ch01__administration.md
+│       │   │   │       │   ├── NFPA79_2024__Ch02__definitions.md
+│       │   │   │       │   ├── NFPA79_2024__Ch03__general_requirements.md
+│       │   │   │       │   ├── NFPA79_2024__Ch04__general_conditions_of_installation.md
+│       │   │   │       │   ├── NFPA79_2024__Ch05__disconnecting_means.md
+│       │   │   │       │   ├── NFPA79_2024__Ch06__overcurrent_protection.md
+│       │   │   │       │   ├── NFPA79_2024__Ch07__protection_against_electric_shock.md
+│       │   │   │       │   ├── NFPA79_2024__Ch08__grounding_and_bonding.md
+│       │   │   │       │   ├── NFPA79_2024__Ch09__control_circuits_and_control_functions.md
+│       │   │   │       │   ├── NFPA79_2024__Ch10__operator_interface_devices.md
+│       │   │   │       │   ├── NFPA79_2024__Ch11__control_equipment.md
+│       │   │   │       │   ├── NFPA79_2024__Ch12__motors_and_associated_equipment.md
+│       │   │   │       │   ├── NFPA79_2024__Ch13__appliances_and_accessories.md
+│       │   │   │       │   ├── NFPA79_2024__Ch14__lighting.md
+│       │   │   │       │   ├── NFPA79_2024__Ch15__transformers_and_power_supplies.md
+│       │   │   │       │   ├── NFPA79_2024__Ch16__wiring_methods.md
+│       │   │   │       │   ├── NFPA79_2024__Ch17__cables_and_flexible_cords.md
+│       │   │   │       │   ├── NFPA79_2024__Ch18__terminal_blocks_and_connectors.md
+│       │   │   │       │   ├── NFPA79_2024__Ch19__marking_and_documentation.md
+│       │   │   │       │   ├── NFPA79_2024__Ch20__system_integration.md
+│       │   │   │       │   ├── NFPA_OVERVIEW.md
+│       │   │   │       │   ├── README.md
+│       │   │   │       │   └── _index.yaml
+│       │   │   │       └── ul_508a/
+│       │   │   │           ├── GENERATION_SUMMARY.md
+│       │   │   │           ├── README.md
+│       │   │   │           ├── UL508A_2022__control_circuits_and_devices.md
+│       │   │   │           ├── UL508A_2022__enclosures_and_environmental_ratings.md
+│       │   │   │           ├── UL508A_2022__general_construction_requirements.md
+│       │   │   │           ├── UL508A_2022__grounding_and_bonding.md
+│       │   │   │           ├── UL508A_2022__marking_and_documentation.md
+│       │   │   │           ├── UL508A_2022__motor_controllers_and_drives.md
+│       │   │   │           ├── UL508A_2022__overcurrent_protection.md
+│       │   │   │           ├── UL508A_2022__sccr_short_circuit_current_rating.md
+│       │   │   │           ├── UL508A_2022__scope_and_application.md
+│       │   │   │           ├── UL508A_2022__spacing_creepage_clearance.md
+│       │   │   │           ├── UL508A_2022__transformers_and_power_supplies.md
+│       │   │   │           ├── UL508A_2022__wiring_methods_and_conductors.md
+│       │   │   │           ├── UL508A_OVERVIEW.md
+│       │   │   │           └── _index.yaml
+│       │   │   ├── training_modules/
+│       │   │   │   ├── README.md
+│       │   │   │   ├── _index.yaml
+│       │   │   │   ├── control_systems/
+│       │   │   │   │   ├── README.md
+│       │   │   │   │   ├── _index.yaml
+│       │   │   │   │   ├── control_theory_overview.md
+│       │   │   │   │   ├── industrial_control_loop_architectures.md
+│       │   │   │   │   ├── industrial_pid_implementation.md
+│       │   │   │   │   ├── pid_control_intuition.md
+│       │   │   │   │   ├── pid_control_intuitive_foundation.md
+│       │   │   │   │   ├── pid_drone_control.md
+│       │   │   │   │   └── pid_heater_control_with_contactor.md
+│       │   │   │   ├── electrical_machines/
+│       │   │   │   │   ├── README.md
+│       │   │   │   │   ├── _index.yaml
+│       │   │   │   │   ├── ac_vs_dc_motor_comparison.md
+│       │   │   │   │   ├── brushless_dc_ev_and_drone_motor_comparison.md
+│       │   │   │   │   ├── dc_motor_basics.md
+│       │   │   │   │   ├── induction_motor_basics.md
+│       │   │   │   │   ├── motor_and_vfd_equations_reference.md
+│       │   │   │   │   ├── motor_control_methods_and_operating_regions.md
+│       │   │   │   │   ├── motor_efficiency_power_factor_and_losses.md
+│       │   │   │   │   ├── motor_family_comparison.md
+│       │   │   │   │   ├── motor_nameplates_slip_and_torque.md
+│       │   │   │   │   ├── servo_drive_fundamentals.md
+│       │   │   │   │   ├── servo_feedback_and_inertia_matching.md
+│       │   │   │   │   ├── vfd_and_servo_architecture_diagrams.md
+│       │   │   │   │   └── vfd_fundamentals.md
+│       │   │   │   ├── fundamentals/
+│       │   │   │   │   ├── README.md
+│       │   │   │   │   ├── _index.yaml
+│       │   │   │   │   ├── conductor_ampacity_and_termination_temperature.md
+│       │   │   │   │   ├── diodes_transistors_and_switching_basics.md
+│       │   │   │   │   ├── earthing_systems_iec.md
+│       │   │   │   │   ├── electrical_equations_reference.md
+│       │   │   │   │   ├── electrical_quantities_and_circuit_language.md
+│       │   │   │   │   ├── equivalent_circuit_methods.md
+│       │   │   │   │   ├── kirchhoff_laws_and_systematic_analysis.md
+│       │   │   │   │   ├── passive_components_resistors_capacitors.md
+│       │   │   │   │   └── series_parallel_and_divider_methods.md
+│       │   │   │   └── nec_application/
+│       │   │   │       ├── README.md
+│       │   │   │       ├── _index.yaml
+│       │   │   │       ├── article_409_practical_workflow.md
+│       │   │   │       ├── article_430_practical_workflow.md
+│       │   │   │       ├── branch_circuits_vs_feeders_motor_loads.md
+│       │   │   │       ├── class1_class2_remote_control_circuits.md
+│       │   │   │       ├── conductor_ocpd_sizing_examples.md
+│       │   │   │       ├── disconnecting_means_for_machinery.md
+│       │   │   │       ├── grounding_bonding_control_panels.md
+│       │   │   │       ├── motor_and_panel_code_application.md
+│       │   │   │       ├── nec_code_reading_fundamentals.md
+│       │   │   │       ├── sccr_workflow.md
+│       │   │   │       └── working_space_and_table_navigation.md
+│       │   │   └── troubleshooting_engine/
+│       │   │       └── decision_trees.yaml
+│       │   ├── templates/
+│       │   │   ├── README.md
+│       │   │   ├── checklists/
+│       │   │   │   └── checklist_template.md
+│       │   │   ├── design_guides/
+│       │   │   │   └── design_guide_template.md
+│       │   │   ├── md_headers/
+│       │   │   │   ├── archived_header.md
+│       │   │   │   ├── draft_only_header.md
+│       │   │   │   └── rag_approved_header.md
+│       │   │   ├── reports/
+│       │   │   │   └── report_template.md
+│       │   │   └── work_notes/
+│       │   │       └── work_note_template.md
+│       │   ├── tools/
+│       │   │   ├── audit_tool/
+│       │   │   │   └── README.md
+│       │   │   ├── business_metrics_profit_engine/
+│       │   │   │   └── README.md
+│       │   │   ├── design_package_generator/
+│       │   │   │   └── README.md
+│       │   │   ├── ip_library_licensing/
+│       │   │   │   └── README.md
+│       │   │   ├── knowledge_platform/
+│       │   │   │   └── README.md
+│       │   │   ├── retainer_support_engine/
+│       │   │   │   └── README.md
+│       │   │   └── ul508a_panel_automation/
+│       │   │       └── README.md
+│       │   └── work/
+│       │       ├── README.md
+│       │       ├── design/
+│       │       │   ├── 2026 NEC Changes.md
+│       │       │   ├── README.md
+│       │       │   ├── conductor_protection_and_ampacity_transcript_summary.md
+│       │       │   ├── control theory.md
+│       │       │   ├── electrical exam prep.md
+│       │       │   ├── equipment_grounding_conductor_topics/
+│       │       │   │   ├── README.md
+│       │       │   │   ├── egc_cable_methods_ac_and_mc.md
+│       │       │   │   ├── egc_definition_and_effective_fault_path.md
+│       │       │   │   ├── egc_other_listed_systems.md
+│       │       │   │   ├── egc_sizing_and_250_122_notes.md
+│       │       │   │   └── egc_wire_and_raceway_methods.md
+│       │       │   ├── mermaid_diagrams_to_reference.md
+│       │       │   ├── mini_machine_safety_design_v2_project_status.md
+│       │       │   ├── nec_2026_changes_topics/
+│       │       │   │   ├── 2026_nec_codewide_editorial_and_90_3_changes.md
+│       │       │   │   ├── 2026_nec_limited_energy_restructure.md
+│       │       │   │   ├── 2026_nec_medium_voltage_restructure.md
+│       │       │   │   ├── 2026_nec_new_and_relocated_articles.md
+│       │       │   │   ├── 2026_nec_overview_and_2029_transition.md
+│       │       │   │   └── README.md
+│       │       │   ├── nec_210_4_multiwire_branch_circuits_transcript_summary.md
+│       │       │   ├── nec_update.md
+│       │       │   ├── project_implementation_gaps/
+│       │       │   │   ├── 20260308_status.md
+│       │       │   │   ├── electrical and practical circuit analysis.md
+│       │       │   │   ├── electrical_and_practical_circuit_analysis_topics/
+│       │       │   │   │   ├── INTEGRATION_PLAN.md
+│       │       │   │   │   ├── README.md
+│       │       │   │   │   ├── circuit_analysis_overview_and_linear_elements.md
+│       │       │   │   │   ├── equivalent_circuit_methods_topics/
+│       │       │   │   │   │   ├── README.md
+│       │       │   │   │   │   ├── norton_equivalent_method.md
+│       │       │   │   │   │   ├── source_transformation_basics.md
+│       │       │   │   │   │   ├── superposition_theorem_notes.md
+│       │       │   │   │   │   └── thevenin_equivalent_method.md
+│       │       │   │   │   ├── kcl_and_nodal_analysis.md
+│       │       │   │   │   ├── kvl_and_loop_analysis.md
+│       │       │   │   │   ├── practical_components_diodes_and_transistors.md
+│       │       │   │   │   ├── practical_components_resistors_and_capacitors.md
+│       │       │   │   │   ├── practical_ohms_law_power_and_resistor_color_code.md
+│       │       │   │   │   ├── series_parallel_and_divider_methods.md
+│       │       │   │   │   └── source_transformation_and_equivalent_methods.md
+│       │       │   │   ├── importance of electrical safety in control panels.md
+│       │       │   │   ├── motors.md
+│       │       │   │   ├── motors_topics/
+│       │       │   │   │   ├── INTEGRATION_PLAN.md
+│       │       │   │   │   ├── README.md
+│       │       │   │   │   ├── dc_motor_armature_winding_and_torque_production.md
+│       │       │   │   │   ├── dc_motor_commutator_brushes_and_power_path.md
+│       │       │   │   │   ├── dc_motor_magnetism_stator_and_mechanical_structure.md
+│       │       │   │   │   ├── ev_motor_powertrain_configurations.md
+│       │       │   │   │   ├── ev_motor_types_overview.md
+│       │       │   │   │   ├── induction_motor_components_induction_and_slip.md
+│       │       │   │   │   ├── induction_motor_construction_and_rotating_field.md
+│       │       │   │   │   ├── induction_motor_nameplate_and_enclosures.md
+│       │       │   │   │   ├── induction_motor_poles_torque_curves_and_nema_designs.md
+│       │       │   │   │   └── induction_motor_terminal_connections_and_star_delta.md
+│       │       │   │   ├── nec_exam_prep_topics/
+│       │       │   │   │   ├── INTEGRATION_PLAN.md
+│       │       │   │   │   ├── README.md
+│       │       │   │   │   ├── electrical_exam_math_ohms_law_and_power.md
+│       │       │   │   │   ├── nec_code_reading_and_index_method.md
+│       │       │   │   │   ├── nec_table_reading_and_working_space_example.md
+│       │       │   │   │   └── residential_load_calculation_notes.md
+│       │       │   │   └── temp links.md
+│       │       │   ├── residential_nec_top_articles_transcript_summary.md
+│       │       │   ├── scratch_notes/
+│       │       │   │   └── simple_safety_system_design.md
+│       │       │   ├── types of equipment ground conductors.md
+│       │       │   ├── types of grounding.md
+│       │       │   └── voltage_drop_topics/
+│       │       │       ├── README.md
+│       │       │       ├── voltage_drop_energy_code_and_specifications.md
+│       │       │       ├── voltage_drop_fire_pump_notes.md
+│       │       │       ├── voltage_drop_general_basis.md
+│       │       │       └── voltage_drop_recommended_feeder_and_branch_guidance.md
+│       │       └── general/
+│       │           ├── 00_inbox_notes.md
+│       │           └── README.md
+│       ├── data/
+│       │   └── README.md
+│       ├── docs/
+│       │   ├── .bundle/
+│       │   │   └── config
+│       │   ├── Gemfile
+│       │   ├── Gemfile.lock
+│       │   ├── _config.yml
+│       │   ├── _data/
+│       │   │   ├── field_checklists.yml
+│       │   │   ├── glossary.yml
+│       │   │   ├── navigation.yml
+│       │   │   ├── rag_tree.json
+│       │   │   ├── standards_graph.yml
+│       │   │   └── training_catalog.yml
+│       │   ├── _includes/
+│       │   │   ├── context-panel.html
+│       │   │   ├── rag-tree-nodes.html
+│       │   │   ├── sidebar.html
+│       │   │   ├── standards-graph.html
+│       │   │   ├── topnav.html
+│       │   │   └── trust-boundary.html
+│       │   ├── _layouts/
+│       │   │   ├── default.html
+│       │   │   ├── field-checklist.html
+│       │   │   ├── rag-browser.html
+│       │   │   └── training-module.html
+│       │   ├── about/
+│       │   │   └── index.md
+│       │   ├── assets/
+│       │   │   ├── css/
+│       │   │   │   └── main.css
+│       │   │   ├── data/
+│       │   │   │   └── search.json
+│       │   │   ├── img/
+│       │   │   │   └── favicon.svg
+│       │   │   ├── js/
+│       │   │   │   ├── main.js
+│       │   │   │   └── rag-browser.js
+│       │   │   └── rag-files/
+│       │   │       ├── commissioning_checklists/
+│       │   │       │   └── checklists/
+│       │   │       │       ├── basic_circuit_polarity_and_power_checks.md
+│       │   │       │       ├── capacitor_discharge_awareness_check.md
+│       │   │       │       ├── drive_commissioning.md
+│       │   │       │       ├── motor_nameplate_and_overload_setting.md
+│       │   │       │       ├── motor_rotation_and_overload_verification.md
+│       │   │       │       └── pre_power_panel_and_incoming_supply_check.md
+│       │   │       ├── design_framework/
+│       │   │       │   ├── design_guides/
+│       │   │       │   │   └── 02_power_distribution_guide.md
+│       │   │       │   ├── electrical_review/
+│       │   │       │   │   ├── basic_resistive_network_review.md
+│       │   │       │   │   ├── component_selection_basics.md
+│       │   │       │   │   ├── ohms_law_and_power_check_workflow.md
+│       │   │       │   │   └── simple_signal_and_interface_circuit_notes.md
+│       │   │       │   ├── motor_systems/
+│       │   │       │   │   ├── industrial_vs_ev_vs_drone_motor_drive_standards_matrix.md
+│       │   │       │   │   ├── integrated_drive_failure_modes_and_tradeoffs.md
+│       │   │       │   │   ├── integrated_drive_serviceability_and_field_replacement_review.md
+│       │   │       │   │   ├── integrated_motor_drive_architecture_comparison.md
+│       │   │       │   │   ├── motor_cable_and_protection_review.md
+│       │   │       │   │   ├── motor_mounted_drive_thermal_and_emc_design_notes.md
+│       │   │       │   │   ├── motor_nameplate_review_checklist.md
+│       │   │       │   │   ├── motor_selection_comparison_matrix.md
+│       │   │       │   │   ├── motor_selection_workflow.md
+│       │   │       │   │   ├── motor_symptom_troubleshooting_patterns.md
+│       │   │       │   │   ├── motor_troubleshooting_decision_tree.md
+│       │   │       │   │   ├── servo_commissioning_workflow.md
+│       │   │       │   │   ├── star_delta_and_supply_matching_notes.md
+│       │   │       │   │   ├── vfd_commissioning_workflow.md
+│       │   │       │   │   └── vfd_motor_integration_review.md
+│       │   │       │   └── us_eu_compliance_wizard/
+│       │   │       │       ├── US_EU_Machine_Compliance_Wizard.md
+│       │   │       │       └── us_eu_delta_report_template.md
+│       │   │       ├── meta/
+│       │   │       │   ├── RAG_DIRECTORY_STATUS.md
+│       │   │       │   └── VERSION_OVERVIEW.md
+│       │   │       ├── standards_intelligence/
+│       │   │       │   ├── _glossary.md
+│       │   │       │   ├── _standards_map.md
+│       │   │       │   ├── crosswalks/
+│       │   │       │   │   ├── overlap_matrix/
+│       │   │       │   │   │   ├── file_structure.md
+│       │   │       │   │   │   ├── nfpa79_iec60204_overlap.md
+│       │   │       │   │   │   ├── standards_decision_workflow.md
+│       │   │       │   │   │   ├── standards_overlap.md
+│       │   │       │   │   │   └── ul508a_nec_nfpa79_overlap.md
+│       │   │       │   │   └── overlap_notes/
+│       │   │       │   │       ├── GENERATION_STATUS.md
+│       │   │       │   │       ├── file_structure.md
+│       │   │       │   │       ├── overlap__motors_drives.md
+│       │   │       │   │       ├── overlap__sccr.md
+│       │   │       │   │       └── overlap_nfpa79_iec60204__motors_drives.md
+│       │   │       │   ├── file_structure.md
+│       │   │       │   ├── international/
+│       │   │       │   │   ├── cybersecurity/
+│       │   │       │   │   │   └── iec_62443/
+│       │   │       │   │   │       ├── IEC62443_2_1__security_management.md
+│       │   │       │   │   │       ├── IEC62443_3_3__system_security_requirements.md
+│       │   │       │   │   │       ├── IEC62443_4_2__component_requirements.md
+│       │   │       │   │   │       └── IEC62443_lifecycle.md
+│       │   │       │   │   ├── functional_safety/
+│       │   │       │   │   │   ├── iec_61508/
+│       │   │       │   │   │   │   ├── IEC61508_2010__Clause07__safety_lifecycle.md
+│       │   │       │   │   │   │   ├── IEC61508_2010__Part1__framework.md
+│       │   │       │   │   │   │   ├── IEC61508_2010__Part2__hardware.md
+│       │   │       │   │   │   │   └── IEC61508_2010__Part3__software.md
+│       │   │       │   │   │   ├── iec_61511/
+│       │   │       │   │   │   │   ├── IEC61511_2016__Clause08__sil_determination.md
+│       │   │       │   │   │   │   ├── IEC61511_2016__Clause10__sis_design.md
+│       │   │       │   │   │   │   ├── IEC61511_2016__Clause16__operation_maintenance.md
+│       │   │       │   │   │   │   └── IEC61511_2016__Part1__framework.md
+│       │   │       │   │   │   ├── iec_62061/
+│       │   │       │   │   │   │   ├── IEC62061_2021__AnnexA__silcl_tables.md
+│       │   │       │   │   │   │   ├── IEC62061_2021__Clause04__scope_context.md
+│       │   │       │   │   │   │   ├── IEC62061_2021__Clause06__srecs_design.md
+│       │   │       │   │   │   │   └── IEC62061_2021__Clause07__subsystem_design.md
+│       │   │       │   │   │   ├── iso_12100/
+│       │   │       │   │   │   │   ├── ISO12100_2010__AnnexA__hazard_list.md
+│       │   │       │   │   │   │   ├── ISO12100_2010__Clause04__risk_assessment_principles.md
+│       │   │       │   │   │   │   ├── ISO12100_2010__Clause05__risk_estimation.md
+│       │   │       │   │   │   │   ├── ISO12100_2010__Clause06__risk_evaluation.md
+│       │   │       │   │   │   │   └── ISO12100_2010__Clause07__risk_reduction.md
+│       │   │       │   │   │   └── iso_13849_1/
+│       │   │       │   │   │       ├── ISO13849_2023__AnnexA__risk_assessment.md
+│       │   │       │   │   │       ├── ISO13849_2023__AnnexF__ccf.md
+│       │   │       │   │   │       ├── ISO13849_2023__Clause04__design_strategy.md
+│       │   │       │   │   │       ├── ISO13849_2023__Clause05__srp_cs.md
+│       │   │       │   │   │       ├── ISO13849_2023__Clause06__categories.md
+│       │   │       │   │   │       └── ISO13849_2023__Clause07__validation.md
+│       │   │       │   │   ├── hazardous_area/
+│       │   │       │   │   │   └── iec_60079/
+│       │   │       │   │   │       ├── IEC60079_0__general_requirements.md
+│       │   │       │   │   │       ├── IEC60079_10_1__area_classification_gas.md
+│       │   │       │   │   │       ├── IEC60079_11__intrinsically_safe_Ex_i.md
+│       │   │       │   │   │       ├── IEC60079_14__installation_design.md
+│       │   │       │   │   │       ├── IEC60079_17__inspection_maintenance.md
+│       │   │       │   │   │       └── IEC60079_1__flameproof_Ex_d.md
+│       │   │       │   │   ├── machinery/
+│       │   │       │   │   │   └── iec_60204_1/
+│       │   │       │   │   │       ├── GENERATION_SUMMARY.md
+│       │   │       │   │   │       ├── IEC60204_1_2018__Clause01__scope.md
+│       │   │       │   │   │       ├── IEC60204_1_2018__Clause02__normative_references.md
+│       │   │       │   │   │       ├── IEC60204_1_2018__Clause03__terms_and_definitions.md
+│       │   │       │   │   │       ├── IEC60204_1_2018__Clause04__general_requirements.md
+│       │   │       │   │   │       ├── IEC60204_1_2018__Clause05__incoming_supply.md
+│       │   │       │   │   │       ├── IEC60204_1_2018__Clause06__protection_against_electric_shock.md
+│       │   │       │   │   │       ├── IEC60204_1_2018__Clause07__protection_of_equipment.md
+│       │   │       │   │   │       ├── IEC60204_1_2018__Clause08__equipotential_bonding.md
+│       │   │       │   │   │       ├── IEC60204_1_2018__Clause09__control_circuits_and_functions.md
+│       │   │       │   │   │       ├── IEC60204_1_2018__Clause10__operator_interface.md
+│       │   │       │   │   │       ├── IEC60204_1_2018__Clause11__control_equipment.md
+│       │   │       │   │   │       ├── IEC60204_1_2018__Clause12__motors_and_drives.md
+│       │   │       │   │   │       ├── IEC60204_1_2018__Clause13__accessories_and_lighting.md
+│       │   │       │   │   │       ├── IEC60204_1_2018__Clause14__marking_and_documentation.md
+│       │   │       │   │   │       ├── IEC60204_1_2018__Clause15__verification.md
+│       │   │       │   │   │       └── IEC60204_OVERVIEW.md
+│       │   │       │   │   ├── offshore/
+│       │   │       │   │   │   ├── ABS_offshore_electrical_control.md
+│       │   │       │   │   │   └── DNV_OS_D201__electrical_installations.md
+│       │   │       │   │   └── semiconductor/
+│       │   │       │   │       └── semi/
+│       │   │       │   │           ├── SEMI_S14__fire_risk_assessment.md
+│       │   │       │   │           ├── SEMI_S2__equipment_safety.md
+│       │   │       │   │           └── SEMI_S8__ergonomics.md
+│       │   │       │   ├── library_admin/
+│       │   │       │   │   ├── COMPLETE_STANDARDS_PORTFOLIO.md
+│       │   │       │   │   ├── STANDARDS_COMPLETION_STATUS.md
+│       │   │       │   │   ├── STANDARDS_MODULES_SUMMARY.md
+│       │   │       │   │   └── STANDARDS_PURCHASE_TRACKER.md
+│       │   │       │   ├── reference_models/
+│       │   │       │   │   ├── 15-Standard Minimum Compliance Stack.md
+│       │   │       │   │   ├── 7-Layer Industrial Machine Architecture Model.md
+│       │   │       │   │   ├── Software_Safety_and_Intrinsic_Safety_Standards.md
+│       │   │       │   │   ├── Universal Machine Safety Architecture.md
+│       │   │       │   │   └── standards_atlas_diagrams_reference.md
+│       │   │       │   ├── routing/
+│       │   │       │   │   └── standards_applicability.md
+│       │   │       │   ├── scenario/
+│       │   │       │   │   ├── cnc_machine_safety_design/
+│       │   │       │   │   │   ├── control_architecture_and_network.md
+│       │   │       │   │   │   ├── hazards_and_risk_assessment.md
+│       │   │       │   │   │   ├── mechanical_and_electrical_isolation.md
+│       │   │       │   │   │   ├── safety_functions_register.md
+│       │   │       │   │   │   ├── safety_integrity_and_sil_strategy.md
+│       │   │       │   │   │   ├── standards_applicability_matrix.md
+│       │   │       │   │   │   ├── system_description.md
+│       │   │       │   │   │   ├── ul_nec_design_requirements.md
+│       │   │       │   │   │   └── verification_and_validation_plan.md
+│       │   │       │   │   ├── mini_machine_safety_design/
+│       │   │       │   │   │   ├── control_architecture_and_network.md
+│       │   │       │   │   │   ├── hazards_and_risk_assessment.md
+│       │   │       │   │   │   ├── industry_overlays/
+│       │   │       │   │   │   │   ├── commercial.md
+│       │   │       │   │   │   │   ├── energy.md
+│       │   │       │   │   │   │   ├── food_and_beverage.md
+│       │   │       │   │   │   │   ├── marine.md
+│       │   │       │   │   │   │   ├── medical.md
+│       │   │       │   │   │   │   ├── nuclear.md
+│       │   │       │   │   │   │   ├── offshore.md
+│       │   │       │   │   │   │   ├── petroleum.md
+│       │   │       │   │   │   │   └── semiconductor.md
+│       │   │       │   │   │   ├── mechanical_and_electrical_isolation.md
+│       │   │       │   │   │   ├── safety_functions_register.md
+│       │   │       │   │   │   ├── safety_integrity_and_sil_strategy.md
+│       │   │       │   │   │   ├── standards_applicability_matrix.md
+│       │   │       │   │   │   ├── system_description.md
+│       │   │       │   │   │   ├── ul_nec_design_requirements.md
+│       │   │       │   │   │   └── verification_and_validation_plan.md
+│       │   │       │   │   └── mini_machine_safety_design_v2/
+│       │   │       │   │       ├── control_architecture_and_network.md
+│       │   │       │   │       ├── hazards_and_risk_assessment.md
+│       │   │       │   │       ├── industry_overlays/
+│       │   │       │   │       │   ├── commercial.md
+│       │   │       │   │       │   ├── energy.md
+│       │   │       │   │       │   ├── food_and_beverage.md
+│       │   │       │   │       │   ├── marine.md
+│       │   │       │   │       │   ├── medical.md
+│       │   │       │   │       │   ├── nuclear.md
+│       │   │       │   │       │   ├── offshore.md
+│       │   │       │   │       │   ├── petroleum.md
+│       │   │       │   │       │   └── semiconductor.md
+│       │   │       │   │       ├── mechanical_and_electrical_isolation.md
+│       │   │       │   │       ├── safety_functions_register.md
+│       │   │       │   │       ├── safety_integrity_and_sil_strategy.md
+│       │   │       │   │       ├── standards_applicability_matrix.md
+│       │   │       │   │       ├── system_description.md
+│       │   │       │   │       ├── ul_nec_design_requirements.md
+│       │   │       │   │       └── verification_and_validation_plan.md
+│       │   │       │   └── us/
+│       │   │       │       ├── nec/
+│       │   │       │       │   ├── GENERATION_SUMMARY.md
+│       │   │       │       │   ├── NEC_2023__Art090__scope_and_purpose.md
+│       │   │       │       │   ├── NEC_2023__Art100__definitions.md
+│       │   │       │       │   ├── NEC_2023__Art110__requirements_for_electrical_installations.md
+│       │   │       │       │   ├── NEC_2023__Art215__feeders.md
+│       │   │       │       │   ├── NEC_2023__Art230__services.md
+│       │   │       │       │   ├── NEC_2023__Art240__overcurrent_protection.md
+│       │   │       │       │   ├── NEC_2023__Art250_4__purposes_of_grounding_and_bonding.md
+│       │   │       │       │   ├── NEC_2023__Art250__grounding_and_bonding.md
+│       │   │       │       │   ├── NEC_2023__Art300__general_wiring_methods.md
+│       │   │       │       │   ├── NEC_2023__Art310__conductors_for_general_wiring.md
+│       │   │       │       │   ├── NEC_2023__Art408__switchboards_switchgear_and_panelboards.md
+│       │   │       │       │   ├── NEC_2023__Art409__industrial_control_panels.md
+│       │   │       │       │   ├── NEC_2023__Art430__motors_motor_circuits_and_controllers.md
+│       │   │       │       │   ├── NEC_2023__Art500__hazardous_locations_general.md
+│       │   │       │       │   ├── NEC_2023__Art504__intrinsically_safe_systems.md
+│       │   │       │       │   ├── NEC_2023__Art505__zone_0_1_2_gas_vapors.md
+│       │   │       │       │   ├── NEC_2023__Art670__industrial_machinery.md
+│       │   │       │       │   ├── NEC_2023__Art700_702__emergency_standby_systems.md
+│       │   │       │       │   ├── NEC_2023__Art725__class_1_2_3_control_circuits.md
+│       │   │       │       │   ├── NEC_COMPLETION_STATUS.md
+│       │   │       │       │   └── NEC_OVERVIEW.md
+│       │   │       │       ├── nfpa79/
+│       │   │       │       │   ├── GENERATION_SUMMARY.md
+│       │   │       │       │   ├── NFPA79_2024__Ch01__administration.md
+│       │   │       │       │   ├── NFPA79_2024__Ch02__definitions.md
+│       │   │       │       │   ├── NFPA79_2024__Ch03__general_requirements.md
+│       │   │       │       │   ├── NFPA79_2024__Ch04__general_conditions_of_installation.md
+│       │   │       │       │   ├── NFPA79_2024__Ch05__disconnecting_means.md
+│       │   │       │       │   ├── NFPA79_2024__Ch06__overcurrent_protection.md
+│       │   │       │       │   ├── NFPA79_2024__Ch07__protection_against_electric_shock.md
+│       │   │       │       │   ├── NFPA79_2024__Ch08__grounding_and_bonding.md
+│       │   │       │       │   ├── NFPA79_2024__Ch09__control_circuits_and_control_functions.md
+│       │   │       │       │   ├── NFPA79_2024__Ch10__operator_interface_devices.md
+│       │   │       │       │   ├── NFPA79_2024__Ch11__control_equipment.md
+│       │   │       │       │   ├── NFPA79_2024__Ch12__motors_and_associated_equipment.md
+│       │   │       │       │   ├── NFPA79_2024__Ch13__appliances_and_accessories.md
+│       │   │       │       │   ├── NFPA79_2024__Ch14__lighting.md
+│       │   │       │       │   ├── NFPA79_2024__Ch15__transformers_and_power_supplies.md
+│       │   │       │       │   ├── NFPA79_2024__Ch16__wiring_methods.md
+│       │   │       │       │   ├── NFPA79_2024__Ch17__cables_and_flexible_cords.md
+│       │   │       │       │   ├── NFPA79_2024__Ch18__terminal_blocks_and_connectors.md
+│       │   │       │       │   ├── NFPA79_2024__Ch19__marking_and_documentation.md
+│       │   │       │       │   ├── NFPA79_2024__Ch20__system_integration.md
+│       │   │       │       │   └── NFPA_OVERVIEW.md
+│       │   │       │       └── ul_508a/
+│       │   │       │           ├── GENERATION_SUMMARY.md
+│       │   │       │           ├── UL508A_2022__control_circuits_and_devices.md
+│       │   │       │           ├── UL508A_2022__enclosures_and_environmental_ratings.md
+│       │   │       │           ├── UL508A_2022__general_construction_requirements.md
+│       │   │       │           ├── UL508A_2022__grounding_and_bonding.md
+│       │   │       │           ├── UL508A_2022__marking_and_documentation.md
+│       │   │       │           ├── UL508A_2022__motor_controllers_and_drives.md
+│       │   │       │           ├── UL508A_2022__overcurrent_protection.md
+│       │   │       │           ├── UL508A_2022__sccr_short_circuit_current_rating.md
+│       │   │       │           ├── UL508A_2022__scope_and_application.md
+│       │   │       │           ├── UL508A_2022__spacing_creepage_clearance.md
+│       │   │       │           ├── UL508A_2022__transformers_and_power_supplies.md
+│       │   │       │           ├── UL508A_2022__wiring_methods_and_conductors.md
+│       │   │       │           └── UL508A_OVERVIEW.md
+│       │   │       └── training_modules/
+│       │   │           ├── control_systems/
+│       │   │           │   ├── control_theory_overview.md
+│       │   │           │   ├── industrial_control_loop_architectures.md
+│       │   │           │   ├── industrial_pid_implementation.md
+│       │   │           │   ├── pid_control_intuition.md
+│       │   │           │   ├── pid_control_intuitive_foundation.md
+│       │   │           │   ├── pid_drone_control.md
+│       │   │           │   └── pid_heater_control_with_contactor.md
+│       │   │           ├── electrical_machines/
+│       │   │           │   ├── ac_vs_dc_motor_comparison.md
+│       │   │           │   ├── brushless_dc_ev_and_drone_motor_comparison.md
+│       │   │           │   ├── dc_motor_basics.md
+│       │   │           │   ├── induction_motor_basics.md
+│       │   │           │   ├── motor_and_vfd_equations_reference.md
+│       │   │           │   ├── motor_control_methods_and_operating_regions.md
+│       │   │           │   ├── motor_efficiency_power_factor_and_losses.md
+│       │   │           │   ├── motor_family_comparison.md
+│       │   │           │   ├── motor_nameplates_slip_and_torque.md
+│       │   │           │   ├── servo_drive_fundamentals.md
+│       │   │           │   ├── servo_feedback_and_inertia_matching.md
+│       │   │           │   ├── vfd_and_servo_architecture_diagrams.md
+│       │   │           │   └── vfd_fundamentals.md
+│       │   │           ├── fundamentals/
+│       │   │           │   ├── conductor_ampacity_and_termination_temperature.md
+│       │   │           │   ├── diodes_transistors_and_switching_basics.md
+│       │   │           │   ├── earthing_systems_iec.md
+│       │   │           │   ├── electrical_equations_reference.md
+│       │   │           │   ├── electrical_quantities_and_circuit_language.md
+│       │   │           │   ├── equivalent_circuit_methods.md
+│       │   │           │   ├── kirchhoff_laws_and_systematic_analysis.md
+│       │   │           │   ├── passive_components_resistors_capacitors.md
+│       │   │           │   └── series_parallel_and_divider_methods.md
+│       │   │           └── nec_application/
+│       │   │               ├── article_409_practical_workflow.md
+│       │   │               ├── article_430_practical_workflow.md
+│       │   │               ├── branch_circuits_vs_feeders_motor_loads.md
+│       │   │               ├── class1_class2_remote_control_circuits.md
+│       │   │               ├── conductor_ocpd_sizing_examples.md
+│       │   │               ├── disconnecting_means_for_machinery.md
+│       │   │               ├── grounding_bonding_control_panels.md
+│       │   │               ├── motor_and_panel_code_application.md
+│       │   │               ├── nec_code_reading_fundamentals.md
+│       │   │               ├── sccr_workflow.md
+│       │   │               └── working_space_and_table_navigation.md
+│       │   ├── crosswalks/
+│       │   │   ├── compare/
+│       │   │   │   └── index.md
+│       │   │   ├── iec60079-nec-500-505/
+│       │   │   │   └── index.md
+│       │   │   ├── iec61511-iec61508/
+│       │   │   │   └── index.md
+│       │   │   ├── index.md
+│       │   │   ├── nfpa79-iec60204/
+│       │   │   │   └── index.md
+│       │   │   ├── standards-decision-workflow/
+│       │   │   │   └── index.md
+│       │   │   └── ul508a-nec-nfpa79/
+│       │   │       └── index.md
+│       │   ├── engineering-workflow/
+│       │   │   └── index.md
+│       │   ├── field-engineering/
+│       │   │   ├── basic-circuit-polarity/
+│       │   │   │   └── index.md
+│       │   │   ├── capacitor-discharge/
+│       │   │   │   └── index.md
+│       │   │   ├── drive-commissioning/
+│       │   │   │   └── index.md
+│       │   │   ├── index.md
+│       │   │   ├── motor-nameplate-overload/
+│       │   │   │   └── index.md
+│       │   │   ├── motor-rotation-verification/
+│       │   │   │   └── index.md
+│       │   │   └── pre-power-panel/
+│       │   │       └── index.md
+│       │   ├── glossary/
+│       │   │   └── index.md
+│       │   ├── index.md
+│       │   ├── industries/
+│       │   │   ├── commercial/
+│       │   │   │   └── index.md
+│       │   │   ├── energy/
+│       │   │   │   └── index.md
+│       │   │   ├── food-and-beverage/
+│       │   │   │   └── index.md
+│       │   │   ├── index.md
+│       │   │   ├── marine/
+│       │   │   │   └── index.md
+│       │   │   ├── medical/
+│       │   │   │   └── index.md
+│       │   │   ├── nuclear/
+│       │   │   │   └── index.md
+│       │   │   ├── offshore/
+│       │   │   │   └── index.md
+│       │   │   ├── petroleum/
+│       │   │   │   └── index.md
+│       │   │   └── semiconductor/
+│       │   │       └── index.md
+│       │   ├── lifecycle/
+│       │   │   ├── build/
+│       │   │   │   └── index.md
+│       │   │   ├── commissioning/
+│       │   │   │   └── index.md
+│       │   │   ├── concept/
+│       │   │   │   └── index.md
+│       │   │   ├── detailed-design/
+│       │   │   │   └── index.md
+│       │   │   ├── draft-documentation/
+│       │   │   │   └── index.md
+│       │   │   ├── index.md
+│       │   │   ├── installation/
+│       │   │   │   └── index.md
+│       │   │   ├── maintenance/
+│       │   │   │   └── index.md
+│       │   │   ├── pre-commissioning/
+│       │   │   │   └── index.md
+│       │   │   ├── risk-assessment/
+│       │   │   │   └── index.md
+│       │   │   ├── safety-architecture/
+│       │   │   │   └── index.md
+│       │   │   ├── safety-wiring/
+│       │   │   │   └── index.md
+│       │   │   └── standards-selection/
+│       │   │       └── index.md
+│       │   ├── plans/
+│       │   │   ├── 2026-03-05-phase2-design.md
+│       │   │   ├── 2026-03-05-phase2-implementation.md
+│       │   │   ├── 2026-03-06-phase3-functional-safety-design.md
+│       │   │   ├── 2026-03-06-phase3-implementation.md
+│       │   │   ├── 2026-03-08-corpus-gap-fill-design.md
+│       │   │   ├── 2026-03-08-decision-workflow-enhancements.md
+│       │   │   ├── 2026-03-08-electrical-intelligence-integration-design.md
+│       │   │   ├── 2026-03-08-electrical-intelligence-integration-plan.md
+│       │   │   ├── 2026-03-08-glossary-design.md
+│       │   │   ├── 2026-03-08-glossary-implementation.md
+│       │   │   ├── 2026-03-08-nec-missing-articles.md
+│       │   │   ├── 2026-03-08-nec-page-update.md
+│       │   │   ├── 2026-03-08-phase10-corpus-gap-fill.md
+│       │   │   ├── 2026-03-08-phase11-industry-overlay-depth-design.md
+│       │   │   ├── 2026-03-08-phase11-industry-overlay-depth.md
+│       │   │   ├── 2026-03-08-phase9-standards-graph.md
+│       │   │   ├── 2026-03-08-standards-graph-design.md
+│       │   │   ├── 2026-03-08-theme-switching-design.md
+│       │   │   ├── 2026-03-08-theme-switching-implementation.md
+│       │   │   ├── 2026-03-09-phase12-offshore-marine-overlay.md
+│       │   │   ├── 2026-03-09-rag-browser-design.md
+│       │   │   ├── 2026-03-09-training-site-pages-design.md
+│       │   │   ├── 2026-03-09-training-site-pages-plan.md
+│       │   │   ├── 2026-03-10-phase14-training-curriculum-design.md
+│       │   │   ├── 2026-03-10-phase14-training-curriculum-implementation.md
+│       │   │   ├── 2026-03-10-phase15-training-module-ux.md
+│       │   │   ├── 2026-03-10-phase16-nec-training-expansion.md
+│       │   │   ├── 2026-03-10-training-system-integration-preplan.md
+│       │   │   ├── 2026-03-11-phase17-cross-layer-routing.md
+│       │   │   ├── 2026-03-11-phase18-control-systems-training.md
+│       │   │   └── 2026-03-13-phase19-engineering-workflow-navigation.md
+│       │   ├── rag-browser/
+│       │   │   └── index.md
+│       │   ├── reference/
+│       │   ├── scenarios/
+│       │   │   ├── global-machine/
+│       │   │   │   └── index.md
+│       │   │   ├── index.md
+│       │   │   ├── machine-safety-implementation/
+│       │   │   │   └── index.md
+│       │   │   ├── networked-safety-plc/
+│       │   │   │   └── index.md
+│       │   │   ├── offshore-platform-control/
+│       │   │   │   └── index.md
+│       │   │   ├── oil-gas-process-skid/
+│       │   │   │   └── index.md
+│       │   │   ├── process-skid/
+│       │   │   │   └── index.md
+│       │   │   ├── semiconductor-equipment/
+│       │   │   │   └── index.md
+│       │   │   ├── semiconductor-fab-tool/
+│       │   │   │   └── index.md
+│       │   │   └── us-industrial-control-panel/
+│       │   │       └── index.md
+│       │   ├── software-stack/
+│       │   │   └── index.md
+│       │   ├── standards/
+│       │   │   ├── cybersecurity/
+│       │   │   │   ├── iec-62443/
+│       │   │   │   │   └── index.md
+│       │   │   │   └── index.md
+│       │   │   ├── functional-safety/
+│       │   │   │   ├── iec-61508/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── iec-61511/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── iec-62061/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── index.md
+│       │   │   │   ├── iso-12100/
+│       │   │   │   │   └── index.md
+│       │   │   │   └── iso-13849-1/
+│       │   │   │       └── index.md
+│       │   │   ├── graph/
+│       │   │   │   └── index.md
+│       │   │   ├── hazardous-area/
+│       │   │   │   ├── iec-60079/
+│       │   │   │   │   └── index.md
+│       │   │   │   └── index.md
+│       │   │   ├── index.md
+│       │   │   ├── machinery/
+│       │   │   │   ├── iec-60204-1/
+│       │   │   │   │   └── index.md
+│       │   │   │   └── index.md
+│       │   │   ├── semiconductor/
+│       │   │   │   ├── index.md
+│       │   │   │   └── semi/
+│       │   │   │       └── index.md
+│       │   │   └── us-electrical/
+│       │   │       ├── index.md
+│       │   │       ├── nec/
+│       │   │       │   └── index.md
+│       │   │       ├── nfpa-79/
+│       │   │       │   └── index.md
+│       │   │       └── ul-508a/
+│       │   │           └── index.md
+│       │   ├── superpowers/
+│       │   │   ├── plans/
+│       │   │   │   ├── 2026-03-12-fe-study-bugfixes.md
+│       │   │   │   ├── 2026-03-13-doc-support.md
+│       │   │   │   └── 2026-03-13-field-engineering.md
+│       │   │   └── specs/
+│       │   │       ├── 2026-03-12-doc-support-design.md
+│       │   │       ├── 2026-03-13-field-engineering-design.md
+│       │   │       └── 2026-03-14-reference-section-commissioning-templates-design.md
+│       │   ├── training/
+│       │   │   ├── control-systems/
+│       │   │   │   ├── control-loop-architectures/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── control-theory-overview/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── index.md
+│       │   │   │   ├── industrial-pid/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── pid-drone-control/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── pid-foundation/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── pid-heater-control/
+│       │   │   │   │   └── index.md
+│       │   │   │   └── pid-intuition/
+│       │   │   │       └── index.md
+│       │   │   ├── electrical-machines/
+│       │   │   │   ├── ac-vs-dc-motors/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── bldc-ev-drone-motors/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── dc-motor-basics/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── index.md
+│       │   │   │   ├── induction-motor-basics/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── motor-control-methods/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── motor-efficiency-losses/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── motor-family-comparison/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── motor-nameplates-slip-torque/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── motor-vfd-equations/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── servo-drive-fundamentals/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── servo-feedback-inertia/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── vfd-fundamentals/
+│       │   │   │   │   └── index.md
+│       │   │   │   └── vfd-servo-architecture/
+│       │   │   │       └── index.md
+│       │   │   ├── fundamentals/
+│       │   │   │   ├── conductor-ampacity/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── diodes-transistors/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── earthing-systems-iec/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── electrical-equations-reference/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── electrical-quantities/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── equivalent-circuit-methods/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── index.md
+│       │   │   │   ├── kirchhoff-laws/
+│       │   │   │   │   └── index.md
+│       │   │   │   ├── passive-components/
+│       │   │   │   │   └── index.md
+│       │   │   │   └── series-parallel-dividers/
+│       │   │   │       └── index.md
+│       │   │   ├── index.md
+│       │   │   └── nec-application/
+│       │   │       ├── article-409-workflow/
+│       │   │       │   └── index.md
+│       │   │       ├── article-430-workflow/
+│       │   │       │   └── index.md
+│       │   │       ├── branch-circuits-vs-feeders/
+│       │   │       │   └── index.md
+│       │   │       ├── class1-class2-circuits/
+│       │   │       │   └── index.md
+│       │   │       ├── conductor-ocpd-sizing/
+│       │   │       │   └── index.md
+│       │   │       ├── disconnecting-means/
+│       │   │       │   └── index.md
+│       │   │       ├── grounding-bonding-panels/
+│       │   │       │   └── index.md
+│       │   │       ├── index.md
+│       │   │       ├── motor-panel-code-application/
+│       │   │       │   └── index.md
+│       │   │       ├── nec-code-reading/
+│       │   │       │   └── index.md
+│       │   │       ├── sccr-workflow/
+│       │   │       │   └── index.md
+│       │   │       └── working-space-table-navigation/
+│       │   │           └── index.md
+│       │   └── workflows/
+│       │       ├── electrical-review/
+│       │       │   └── index.md
+│       │       ├── index.md
+│       │       ├── motor-selection/
+│       │       │   └── index.md
+│       │       ├── motor-troubleshooting/
+│       │       │   └── index.md
+│       │       ├── servo-commissioning/
+│       │       │   └── index.md
+│       │       └── vfd-commissioning/
+│       │           └── index.md
+│       ├── lifecycle-build-page.png
+│       ├── main.py
+│       ├── project_state/
+│       │   ├── change_log.md
+│       │   ├── environment.md
+│       │   ├── how_to.md
+│       │   └── project_state.md
+│       ├── pyproject.toml
+│       ├── rag -> control-standards/rag
+│       ├── tests/
+│       │   ├── __init__.py
+│       │   └── tools/
+│       │       ├── __init__.py
+│       │       └── fe_study/
+│       │           ├── __init__.py
+│       │           ├── test_common.py
+│       │           ├── test_extract_fe_study.py
+│       │           └── test_inventory_fe_study.py
+│       ├── tools/
+│       │   ├── README.md
+│       │   ├── fe_study/
+│       │   │   ├── README.md
+│       │   │   ├── __init__.py
+│       │   │   ├── common.py
+│       │   │   ├── extract_fe_study.py
+│       │   │   ├── inventory_fe_study.py
+│       │   │   ├── quality_check_fe_study.py
+│       │   │   └── summarize_fe_study.py
+│       │   ├── fix_ai_boundaries.py
+│       │   ├── generate_rag_index.py
+│       │   ├── generate_rag_tree.py
+│       │   ├── generate_standards_overview.py
+│       │   ├── project_automator.py
+│       │   ├── setup_hooks.sh
+│       │   ├── validate_ai_boundaries.py
+│       │   └── validate_reorg.sh
+│       └── uv.lock
 ├── AGENTS.md
 ├── CLAUDE.md
 ├── PROJECT_STARTUP_CONTEXT.md
@@ -1176,7 +2344,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 368909b6af8c85b1b4b8293d52d4feafba3ed38f31455e36bd188ef79838f2
 │   │               │   └── d3a687ff4b25e2062eb633ed15fbe1736c9f6c4345811632c44f80c9c712bd
 │   │               ├── 07/
-│   │               │   └── 76b9e4c446f05649bf57c11e9818f9054d577a03aea6aae9270fd3f9a5a44e
+│   │               │   ├── 76b9e4c446f05649bf57c11e9818f9054d577a03aea6aae9270fd3f9a5a44e
+│   │               │   └── adda04e9080f67eea12efbddbcb3d7f76c877fd50e902f5f83da4ac384f044
 │   │               ├── 08/
 │   │               │   ├── 4ce4c9fe25a2e3a4783c96c116b5041352ed067bc5c830467b332afcbe86fa
 │   │               │   └── cb215652a3ec3a6b7c85b5d2946ec0dd877fb6c4a83a80c02ebb66aef23c78
@@ -1201,7 +2370,9 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── d6645068b4a94d3ab97587546cabb9ec4fbee5782921b346e4c6357088dfa3
 │   │               ├── 0f/
 │   │               │   ├── 260c0f2220909dd3e4dd4990c35bacc6ec27c2c18b194b8205187fb96a4ecf
-│   │               │   └── 5293790685d198f5e3c499d4946e60f45ec443a49787d3eca6637dd8f1132a
+│   │               │   ├── 5293790685d198f5e3c499d4946e60f45ec443a49787d3eca6637dd8f1132a
+│   │               │   ├── 5a8256ba0de2191ae6c903cf187a28af4fcc99b6b308c52aca6823299ccac6
+│   │               │   └── f175237f59a9b1496dea69ff7e8a19965f28d2520c7319d41f59553b0fd015
 │   │               ├── 10/
 │   │               │   ├── a0872e84bdec77674c9b5550f33b8913daa1ef35666d88df8345d560547eae
 │   │               │   ├── ab67672986a248e3d174b9f20697adaa90523305d1d8ce4b84685ab48db068
@@ -1212,10 +2383,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── a6ece5ae82774b1de93c5d24ef5a51d1a2d3cbcba5774f341fe4b5e4f255d2
 │   │               ├── 12/
 │   │               │   ├── 435287ccfaed7e9a6bc7ccb0aabe5054cc35c7d1dc6c004201dcedecbf8471
-│   │               │   └── 53ee623d4f7b3b5ec4537af00ac2095d43a65f9de7b2adc18f77cccf38bb22
+│   │               │   ├── 53ee623d4f7b3b5ec4537af00ac2095d43a65f9de7b2adc18f77cccf38bb22
+│   │               │   └── 6a727c4516c3680a89601de7e19fb924b1a5bdc1fe7fb81540dbefcd4b7e86
 │   │               ├── 13/
-│   │               │   └── 9de8fd38fc8eb4dfe1dff19ec5bf3057994c3cc72c787a96c281876dcffe57
+│   │               │   ├── 9de8fd38fc8eb4dfe1dff19ec5bf3057994c3cc72c787a96c281876dcffe57
+│   │               │   └── eea4c3e5d334d693826e333328812e5374926e0fbec6f6c325d8ed9604d1f0
 │   │               ├── 14/
+│   │               │   ├── 5c49ddd4ba343f9549b684618c6712d20b73eb8c689543f3a345383bf3a7d1
 │   │               │   ├── c7c0f3f2433296d036c07adf0f83e0407e081788d9f7c65bfe730106a5f4f4
 │   │               │   └── f9e341abc6ac38e9cc6a8298046f954fbf6d02f49d3e2ffec9399fc2e95f8e
 │   │               ├── 15/
@@ -1237,6 +2411,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 9dbea333b349b2a64d71f9643314febadb768dcf473768c37fb66df58d4527
 │   │               ├── 1b/
 │   │               │   └── aaf0b56cbf68854696ee01829ef68ac4a27363e802fc9ad4c8e62c78e93236
+│   │               ├── 1c/
+│   │               │   └── 1fe9887c2c3a802b03f157b23d6073851131deac81b5bfbcb46c078956d368
 │   │               ├── 1d/
 │   │               │   ├── 250bb7b7aa156123d8f05946de1c67eab85119aa8ee3e2b875f738549d9bd3
 │   │               │   ├── 2d81ad64c017c57b66dc14f338656d1a4abd6b680418e2996b0f722be596e6
@@ -1271,6 +2447,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 28/
 │   │               │   ├── 1f998d632da1bca1a8bd27590aed57af5d3fd88370073449467da47b809e99
 │   │               │   ├── 32477a313a466bb0fe39c91dfeaebe1925eae6b6a662a53115577ef0699cb2
+│   │               │   ├── 5940302569d03691cadf449d9182e85b0031bc6f448fc4d477a3124f78f73f
 │   │               │   ├── 5b6f314ca288e8140e3b0815e179f5563a5b6fa4a0e855abe1cff68e9fe95f
 │   │               │   ├── 626866f3fb869decb709fc758290b6138102ae01f812803a9c05bd1f9d4144
 │   │               │   ├── b1f2ee513fb5c930f6e83980c3a9d8e84cc57ed5125ba9d1c06112014b8f53
@@ -1280,10 +2457,12 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── aa3f7d45023ddf87b1d0d05b61b38d7d58d66e3010aa79f6a2986399295f5d
 │   │               │   └── aafba3bfdbb57933a12300e21feab6c83cfb4e57334fb6f70b4d8ae1ba973a
 │   │               ├── 2b/
+│   │               │   ├── 06ecf0ad580e2fe993f9648cc4bd91a2461f0cb74a8a38a139fbc2f833a386
 │   │               │   ├── 1df1b19b5a468913e187313dcf8e21bd90e54fcb0a75b86d6f7f87bf86f888
 │   │               │   └── 4168245053a9927df540d1a9bdfc140b6859cc1e2be299779e134136a7a893
 │   │               ├── 2c/
 │   │               │   ├── 27700d3c2ee76229c957b35e06dd6e5e6fdb26ff850aa638c3f34daaf6e680
+│   │               │   ├── 3c9c485b36a39846dbbf1963f318b90e7ca3aa951832c0abfe029751592f51
 │   │               │   └── 9bcd808985cdaa49537e875c91e0ee76020f2c82514987d576738005773fb5
 │   │               ├── 2d/
 │   │               │   ├── d2aa9c6b18d70106e2dc99bb9588df36a49fe8052a89972a452387ef102970
@@ -1298,6 +2477,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── fbb18d342f33b43ec53dfb8d634427cf3b5a7bea04173b3dd4ad48025e7f45
 │   │               ├── 31/
 │   │               │   └── dc4b6eda03f83f13fff24585427aaab3d137a586173926a0d1ab717c6363e5
+│   │               ├── 32/
+│   │               │   └── 169fcfb4fda480b28401397fde19cbd9e5ff87f555df850bcb13a2d1aaf6b4
 │   │               ├── 33/
 │   │               │   ├── 6bdc2f7bbcb20dc3cf3bf234ad5d144258857a6a06b3651e484f328d84f387
 │   │               │   ├── b95d3c72b1293a7ca1aa200291cf6491cce8b27ca46349cb20ae2df406a431
@@ -1339,6 +2520,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 5d4376bd1dd2c767b71e4f4fb9917a2921af35d9b913ab5564e69a43ed2faf
 │   │               │   ├── 5d843145228916427baf994327ef54fc2141fadb5efc332a3be14a9f8441ce
 │   │               │   └── 9f62b0f0f284c54dcbddb4df38b373beb333b63d9ccb16356688fcbc553962
+│   │               ├── 40/
+│   │               │   └── 244a6d21bbf726760ce4b03466b8a1b68c528300338cf73c3171e846cf28c0
 │   │               ├── 41/
 │   │               │   └── bff9bf0ce39020837ac05a2c8fc916f4f2f40e51ee12a160bf0267e56dbf3d
 │   │               ├── 42/
@@ -1355,11 +2538,14 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 43af26f019985dacb31332d853a94ee70317e9259720eb391df4780a42d2a9
 │   │               ├── 46/
 │   │               │   ├── 0e220a9f544e3ec34d4d5f0ca2dfca7e3fece1942f96b528591387911c0117
-│   │               │   └── 413ef1ba0849a0eb4a7f9e5cd178b839214371654031f490a09ff17d250c42
+│   │               │   ├── 413ef1ba0849a0eb4a7f9e5cd178b839214371654031f490a09ff17d250c42
+│   │               │   └── df773fd5c6fdbfac094f9f2509f676c9a43a743f70d9956168e08ca09d0ada
 │   │               ├── 47/
+│   │               │   ├── 5cd35ac41d5d1044d139a77696f62523036ea181097292b2e5a7ea60d8064c
 │   │               │   ├── 90af54d537c0ca9a0aa39406218ca0c22bc236278ba9bbcf1a50cad2d9086f
 │   │               │   └── ddd171ad2a3dba58cf9aececd7a55e96aca2797debf8e69af3da846ec0ad49
 │   │               ├── 48/
+│   │               │   ├── 711ded23f4d44a83ff66b4c8df126dce4846f218a679579a37c07e4b02f7df
 │   │               │   ├── eaf50a3fd41c4a645e8800cec9b3e7bc4f409c81d9b84ae41289c5b3a6423a
 │   │               │   └── ed0004ccf9059e380a5c6e39defdd629ec0f6ca7e07f16db7f61c7595af7a8
 │   │               ├── 4a/
@@ -1420,6 +2606,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 5e/
 │   │               │   ├── 15d8c6f76fd4ebd90817632e7634445dd0994bc82a4b326cd5fb0ca0e89264
 │   │               │   ├── 4e6869431b397914666f2b29bde912e1e5a98199db701d5f4b288384c7b154
+│   │               │   ├── 619d06c5c8bb5b5a02ab90137b2e929833c519d06253c997a89e0e62985ef9
 │   │               │   └── 70a6c2a26430305b33b80781fb68b5d28d0c1e71a4d0fda746172479d0e138
 │   │               ├── 5f/
 │   │               │   ├── 0b833a96ec0aec240d4945019807eaf088d4f47d501e20e79e187b26bd7e79
@@ -1428,7 +2615,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── e5949e03b0d5b2d4d37a661c1d9cbad4698b0e7361e80bdd1fb416c0d777ef
 │   │               ├── 61/
 │   │               │   ├── 2ba654c9ad14d10888fe33ddd6500579f33f6d464c9c802e617bbdceb59470
-│   │               │   └── 7b86ae8a2522fbb9fcd927669f2caa9520a0f64edc4bcd5d4f4d9d9662884e
+│   │               │   ├── 7b86ae8a2522fbb9fcd927669f2caa9520a0f64edc4bcd5d4f4d9d9662884e
+│   │               │   └── de4eff5cf53688173ab22458f361af6f6186e4ca4b0eff75f3f55847eab51f
 │   │               ├── 62/
 │   │               │   ├── 42e79bc00d179327f6ae74e6217120a6f190ec00dad15adb22ad618b4a0483
 │   │               │   └── 748608abb104477f31d3551f6481fb4c63d3dc0e025b05ac364b30ff831b06
@@ -1478,7 +2666,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── ceb13fd79a594294d73a17d599411f34d2410abf8c489e5b75cc36b1ecd445
 │   │               ├── 73/
 │   │               │   ├── 32ea057b36bdf4341c6e27ffec6c3cca83069e1dba97837412eaa7e9a88afa
-│   │               │   └── 35ba9f8cf9173eff2e3a5263dd9212aab4feb976c4998d2ce8b2f156fd4e20
+│   │               │   ├── 35ba9f8cf9173eff2e3a5263dd9212aab4feb976c4998d2ce8b2f156fd4e20
+│   │               │   └── be088e88e1a4e24f1193a5dd0ec3b4bff9c1a2130da3c3e386c676cb4d1d67
 │   │               ├── 74/
 │   │               │   └── 072c932b1beaf3435a17ce929d8f5cc2bd66480a42a33809a14fbeea0ea0cc
 │   │               ├── 75/
@@ -1492,7 +2681,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 78/
 │   │               │   ├── 260c5e2493d53e1cc9a05b56d01391e6281374e159dd0c1d615536db98aec0
 │   │               │   ├── 51e885a060b47c0e50cffebf73062f72f462c32e7fb0986f7f38a4a10c856d
-│   │               │   └── 9c0a33a7ef2814d2a1ee3d386ffa519dbb166402a4aa7ae54d05b34da87f37
+│   │               │   ├── 9c0a33a7ef2814d2a1ee3d386ffa519dbb166402a4aa7ae54d05b34da87f37
+│   │               │   └── d72f211d7e8242c019669ee9e950525f3d103ecaecb388006f9468eda3bfce
 │   │               ├── 7a/
 │   │               │   ├── 057d9014c25f4b76198a8779e97d958c5f1386f164f8aa91e8b3fae6abd568
 │   │               │   ├── 646f34f165d7863c70687015ac6416fc81e119cf8f867cf906d1a568711b04
@@ -1573,6 +2763,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 54c281d58441cd4e68f7e6f853f27334d19bc43f1eaf6f654287cf165f582a
 │   │               │   ├── a1c51ed5afc909b8a8ae5ad84f56ff19bb2ccb320ef92544ad5d87ec4f4318
 │   │               │   └── b500a557b849d4c2351f2bdad0b278443afc136578add3dac23dad20f1c909
+│   │               ├── 95/
+│   │               │   └── 2157769a5cf041b4b4160baff199aca772a943443d75a0ebc8cf970d098ec7
 │   │               ├── 96/
 │   │               │   ├── 1552b77abf7c171167c78e370c1b403869756e788ec52c1be9fdbff7b2908a
 │   │               │   ├── 548cd7978f6d736e237787cf88afa86207b1212fb7edce91414caf17932807
@@ -1610,6 +2802,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── a2/
 │   │               │   ├── 2fb0f1aa03d1dc417bd06f071b0527cc1bf6801f29ffb391320e95f34e373e
 │   │               │   ├── 8e2ef91e74d4e0d9af056141b1aa5c6a84d61d339e66103419b15ddf62e9ec
+│   │               │   ├── b5b04839f2871d9e7fba964420ab2d8ecb5a621f563ff0f0f2aac69f04b38c
+│   │               │   ├── de30270327b4720fa912c0c5835ee4a494851c404902f557063c7c6f87e6cb
 │   │               │   └── f1a550f4aaa3403d4c76d634e36f971106732575b443ca5a94c13d0e3a3c17
 │   │               ├── a4/
 │   │               │   ├── b4c6d625ca850c26e0225567ebce4c0638799f6665a4af6bb55c000958867d
@@ -1621,13 +2815,15 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── ce0567a59bbb95a147ad313bdbb5e9a6f80e3b1071ac421f6b3d4183b96d22
 │   │               ├── a6/
 │   │               │   ├── 53538fe99ac7aa8c2784e88c9d92b750598971c2a7eed80d2e3124535862f8
+│   │               │   ├── aa48554c535aede630a881f7192ce9e95db5ef23951641aa4756255e8a09dd
 │   │               │   └── ea9eca2f0fd8b821ed941651a07f433957b83e4deed7e7231cf6f689d8ccf4
 │   │               ├── a7/
 │   │               │   ├── 3f96d849ce9d605cf862ad34599f0797b1920c1d3e2fc4c887cb59c33b8a65
 │   │               │   └── a1686235e700798f611e91717196640383636363ec80d768c330cc6d8fe63f
 │   │               ├── a8/
 │   │               │   ├── 45f31917b9b20c7dd5165672407aab2c4bb9db263ad60fad7eb9c11b2b708c
-│   │               │   └── cc23ddb51c0e74be6674354c198d3d03ecfcee7d23d30baf5ba29bb0cd66f6
+│   │               │   ├── cc23ddb51c0e74be6674354c198d3d03ecfcee7d23d30baf5ba29bb0cd66f6
+│   │               │   └── ed6f8a66e01c0d3d2015e8dd6d231ed6dd0ecb940df18212d0653114aac4c9
 │   │               ├── aa/
 │   │               │   ├── 88fc8319588ea0f2312b01b1f5fb484a888842de2f6e68222778ff9b476b86
 │   │               │   ├── a0e30c6839aad6c40e9c9b20774f284767a710b28fc48c0f23c51d8fef870f
@@ -1636,6 +2832,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── ab/
 │   │               │   ├── 33b54f032203b8633e2fdde0f9857f0350e262a479cd0e9050d467a519b21b
 │   │               │   ├── bb62bdd2991c0e0ae466c64f16527e36fbc886947b58a4d474ac03c39936b7
+│   │               │   ├── c096fde5c0e7519fcb17be19bb3c86cf6b3c8079896129a98aa010da7c13a1
 │   │               │   └── e3ba6a6eb8d3e08d7afc2a15dc0e5900c298ebdf084f9b42235b7ba3f18801
 │   │               ├── ac/
 │   │               │   ├── 5d094960622fc5122d5539cbd569d8485816130a28dbbcc5b5756b95dda412
@@ -1652,6 +2849,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 6256294f70ed48ffa165c187a26ee5e602e840d8b27bed0e6747f77a49a431
 │   │               │   └── 7ed0960ff7c9b981fcd39b1462ed865d9c88f9c9f9544d71d8f90727fc26ec
 │   │               ├── b1/
+│   │               │   ├── 5e85f8317026c4c8fd9dd5a796a01defe46c6db350d7e87c7c9f8ed44efe9b
 │   │               │   └── 862fbfc67a832597de78bc9a0fcc57660ff2366c2922ad0a209c4222b4e34c
 │   │               ├── b2/
 │   │               │   └── e5bca22395754bc7201e96b2b02289851cce6945b939836f8b35506f65dc1e
@@ -1721,9 +2919,12 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── ca/
 │   │               │   └── 14ebbed9e097e62b5bde018598738bf2e80f069b094b9e699872e7c357404f
 │   │               ├── cb/
-│   │               │   └── 2747846fce151666135aebce8a8af85eb1eea8cdbde7f7e7ea77f795066b00
+│   │               │   ├── 2747846fce151666135aebce8a8af85eb1eea8cdbde7f7e7ea77f795066b00
+│   │               │   ├── cfdb47266f87707944aaaf87a8dc65d1bef287c103906a72e569d898fa290a
+│   │               │   └── ed25237d7f7171e724523fc6fd0f70df22bfad69b264149117aa8356936332
 │   │               ├── cc/
-│   │               │   └── cca6c3bfd574eb97bcbac50bcd9a577ae1f9ef049eee6ad1ca713bcf09be0a
+│   │               │   ├── cca6c3bfd574eb97bcbac50bcd9a577ae1f9ef049eee6ad1ca713bcf09be0a
+│   │               │   └── fc43bd7f53cf442c4a213d44d83cf4bb48642d2e0eddd75b84fa02ee74ff4e
 │   │               ├── cd/
 │   │               │   ├── 2755f57f370fa80ebbd08c755b23defe581bdaf21250da0728bc34e6d27587
 │   │               │   ├── dbdb42226d3b3d711b52f649688ab7aa0fb3f57159d7db698296d1a0142485
@@ -1760,12 +2961,14 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── d8/
 │   │               │   ├── 2926753f513fd8557263c0003c7618ac35a95d5b8c4acd57ade2cab28e343c
 │   │               │   ├── 460058dd46e923c304cee7010502aba8c4093fd64832454cd7047c0adc7473
-│   │               │   └── 7b73fecef1847299e33ccda85a905e1f60a0edbcef8403c29bc966ee7ac074
+│   │               │   ├── 7b73fecef1847299e33ccda85a905e1f60a0edbcef8403c29bc966ee7ac074
+│   │               │   └── f175350649049d225a294fe5600ee57d2b4b525922a16ec2d998fe960c0f3e
 │   │               ├── d9/
 │   │               │   ├── c17134a84000a88a365e934007fe5aa356e1cc2ebb4bb99bb601c17ec77179
 │   │               │   └── d29ddcf7532786a17bd26fce1a2531c5ee4b81363470a4244c18d19b3c243b
 │   │               ├── da/
-│   │               │   └── 594a2b0a1c08489fff2d2af0e9646dad2aa2bad57149166add1d7608cecd7b
+│   │               │   ├── 594a2b0a1c08489fff2d2af0e9646dad2aa2bad57149166add1d7608cecd7b
+│   │               │   └── 9b6e9297bd8a1639b1fe969ffb27871e756c7c47cdaa8b1bd8d3170e3f4369
 │   │               ├── db/
 │   │               │   ├── c25cc47c033af87e9e88e49fc3db2da361c878bc8cef3070720fa89ead405c
 │   │               │   └── c9e5789df580b06aac19260276d2fcd79cfe1445a8d656af202f98343535f3
@@ -1801,6 +3004,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 71c382aa34051b00868eff65d922b969dc3bb7b1eaae356637abf78f9be551
 │   │               │   └── b6f769d82755c23796d1feaf48b792bf193a9a87ec0d01bcee2f895a767418
 │   │               ├── e8/
+│   │               │   ├── 5ffcf7b887834d43c47f95dd38f4ddfdd9e16c8b6443d6e18b567bf3ba67da
 │   │               │   └── cd2b80809d08cf17aa2578e03457589071f49e71bbd0a32053b375ff846d91
 │   │               ├── e9/
 │   │               │   ├── 2c762ee67e5c599d533c1f0abc210d41a8270c2c85b178c08642755fcbf5f7
@@ -1827,7 +3031,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── 48a81c51e97671fae488a6b4296eece2c592cb3e97fcf690b7b7fb05c693bc
 │   │               ├── f3/
 │   │               │   ├── 0c1b0b2b49a84b9eb009e72831e908a624eb4a2294acc0b60a87e128c01ae3
-│   │               │   └── b168a44843930852194a72f9a154ef5aeb96f96c03c00923257e26d27dcfaa
+│   │               │   ├── b168a44843930852194a72f9a154ef5aeb96f96c03c00923257e26d27dcfaa
+│   │               │   └── fb33e621d3dca3b6434263fca47a9bed398a8333f18b65e5d1eb96378a87f5
 │   │               ├── f5/
 │   │               │   ├── 05f9e59bcbcbefe728741dbe56c5a63e0ecaccaab13bd0110de46777999698
 │   │               │   ├── 4a0a4603bf0196ccba25bbd61af4fec2f076342936e6ec71d6678bb4e01404
@@ -2188,6 +3393,20 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │               ├── nec_code_reading_fundamentals.md
 │   │   │               ├── sccr_workflow.md
 │   │   │               └── working_space_and_table_navigation.md
+│   │   ├── commissioning-templates/
+│   │   │   ├── basic-circuit-polarity/
+│   │   │   │   └── index.html
+│   │   │   ├── capacitor-discharge/
+│   │   │   │   └── index.html
+│   │   │   ├── drive-commissioning/
+│   │   │   │   └── index.html
+│   │   │   ├── index.html
+│   │   │   ├── motor-nameplate-overload/
+│   │   │   │   └── index.html
+│   │   │   ├── motor-rotation-verification/
+│   │   │   │   └── index.html
+│   │   │   └── pre-power-panel/
+│   │   │       └── index.html
 │   │   ├── crosswalks/
 │   │   │   ├── compare/
 │   │   │   │   └── index.html
@@ -2203,19 +3422,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   └── ul508a-nec-nfpa79/
 │   │   │       └── index.html
 │   │   ├── field-engineering/
-│   │   │   ├── basic-circuit-polarity/
-│   │   │   │   └── index.html
-│   │   │   ├── capacitor-discharge/
-│   │   │   │   └── index.html
-│   │   │   ├── drive-commissioning/
-│   │   │   │   └── index.html
-│   │   │   ├── index.html
-│   │   │   ├── motor-nameplate-overload/
-│   │   │   │   └── index.html
-│   │   │   ├── motor-rotation-verification/
-│   │   │   │   └── index.html
-│   │   │   └── pre-power-panel/
-│   │   │       └── index.html
+│   │   │   └── index.html
 │   │   ├── glossary/
 │   │   │   └── index.html
 │   │   ├── index.html
@@ -2299,6 +3506,20 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   └── 2026-03-13-phase19-engineering-workflow-navigation.md
 │   │   ├── rag-browser/
 │   │   │   └── index.html
+│   │   ├── reference/
+│   │   │   ├── architecture/
+│   │   │   │   ├── compliance-stack/
+│   │   │   │   │   └── index.html
+│   │   │   │   ├── index.html
+│   │   │   │   ├── machine-architecture-model/
+│   │   │   │   │   └── index.html
+│   │   │   │   └── machine-safety-architecture/
+│   │   │   │       └── index.html
+│   │   │   ├── index.html
+│   │   │   └── motor-systems/
+│   │   │       ├── index.html
+│   │   │       └── motor-selection-matrix/
+│   │   │           └── index.html
 │   │   ├── scenarios/
 │   │   │   ├── global-machine/
 │   │   │   │   └── index.html
@@ -2368,7 +3589,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   └── 2026-03-13-field-engineering.md
 │   │   │   └── specs/
 │   │   │       ├── 2026-03-12-doc-support-design.md
-│   │   │       └── 2026-03-13-field-engineering-design.md
+│   │   │       ├── 2026-03-13-field-engineering-design.md
+│   │   │       └── 2026-03-14-reference-section-commissioning-templates-design.md
 │   │   ├── training/
 │   │   │   ├── control-systems/
 │   │   │   │   ├── control-loop-architectures/
@@ -2781,6 +4003,20 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── nec_code_reading_fundamentals.md
 │   │               ├── sccr_workflow.md
 │   │               └── working_space_and_table_navigation.md
+│   ├── commissioning-templates/
+│   │   ├── basic-circuit-polarity/
+│   │   │   └── index.md
+│   │   ├── capacitor-discharge/
+│   │   │   └── index.md
+│   │   ├── drive-commissioning/
+│   │   │   └── index.md
+│   │   ├── index.md
+│   │   ├── motor-nameplate-overload/
+│   │   │   └── index.md
+│   │   ├── motor-rotation-verification/
+│   │   │   └── index.md
+│   │   └── pre-power-panel/
+│   │       └── index.md
 │   ├── crosswalks/
 │   │   ├── compare/
 │   │   │   └── index.md
@@ -2796,19 +4032,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   └── ul508a-nec-nfpa79/
 │   │       └── index.md
 │   ├── field-engineering/
-│   │   ├── basic-circuit-polarity/
-│   │   │   └── index.md
-│   │   ├── capacitor-discharge/
-│   │   │   └── index.md
-│   │   ├── drive-commissioning/
-│   │   │   └── index.md
-│   │   ├── index.md
-│   │   ├── motor-nameplate-overload/
-│   │   │   └── index.md
-│   │   ├── motor-rotation-verification/
-│   │   │   └── index.md
-│   │   └── pre-power-panel/
-│   │       └── index.md
+│   │   └── index.md
 │   ├── glossary/
 │   │   └── index.md
 │   ├── index.md
@@ -2892,6 +4116,20 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   └── 2026-03-13-phase19-engineering-workflow-navigation.md
 │   ├── rag-browser/
 │   │   └── index.md
+│   ├── reference/
+│   │   ├── architecture/
+│   │   │   ├── compliance-stack/
+│   │   │   │   └── index.md
+│   │   │   ├── index.md
+│   │   │   ├── machine-architecture-model/
+│   │   │   │   └── index.md
+│   │   │   └── machine-safety-architecture/
+│   │   │       └── index.md
+│   │   ├── index.md
+│   │   └── motor-systems/
+│   │       ├── index.md
+│   │       └── motor-selection-matrix/
+│   │           └── index.md
 │   ├── scenarios/
 │   │   ├── global-machine/
 │   │   │   └── index.md
