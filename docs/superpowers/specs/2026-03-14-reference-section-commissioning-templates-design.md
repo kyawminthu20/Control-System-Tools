@@ -51,31 +51,48 @@ Two parallel deliverables:
 - Content faithfully translated from RAG source (headers, tables, Mermaid diagrams preserved)
 - Mermaid flowchart present in motor-selection-matrix — render via existing Mermaid CDN integration
 - Each page footer: trust-boundary note referencing RAG source file path
-- Breadcrumb: `Reference > [sub-group] > [page title]`
+- Breadcrumb: use front matter `breadcrumb:` array matching existing site pattern:
+  ```yaml
+  breadcrumb:
+    - name: "Reference"
+      url: "/reference/"
+    - name: "Architecture"
+      url: "/reference/architecture/"
+    - name: "Machine Architecture Model"
+  ```
 
 ### 2.5 Sidebar
 
-Extend existing Reference `<details>` block:
+The existing `Reference` `<details>` block (lines 89–97 of `sidebar.html`) contains Software Stack, Glossary, RAG Files, and About — meta-site pages. **Do not modify that block.**
 
-```
-Reference
-  Software Stack              (existing)
-  — Architecture —
-  Machine Architecture        (new, sub)
-  Safety Architecture         (new, sub)
-  Compliance Stack            (new, sub)
-  — Motor Systems —
-  Motor Selection Matrix      (new, sub)
+Add a **new** `<details>` block labeled **"Reference Models"** immediately before the existing Reference block:
+
+```html
+<details class="sidebar__section">
+  <summary>Reference Models</summary>
+  <ul class="sidebar__links">
+    <li><a href="{{ '/reference/' | relative_url }}">All Reference Models</a></li>
+    <li class="sidebar__group-label">Architecture</li>
+    <li><a href="{{ '/reference/architecture/machine-architecture-model/' | relative_url }}" class="sub">Machine Architecture</a></li>
+    <li><a href="{{ '/reference/architecture/machine-safety-architecture/' | relative_url }}" class="sub">Safety Architecture</a></li>
+    <li><a href="{{ '/reference/architecture/compliance-stack/' | relative_url }}" class="sub">Compliance Stack</a></li>
+    <li class="sidebar__group-label">Motor Systems</li>
+    <li><a href="{{ '/reference/motor-systems/motor-selection-matrix/' | relative_url }}" class="sub">Motor Selection Matrix</a></li>
+  </ul>
+</details>
 ```
 
-Section dividers rendered as non-linked `<li class="sidebar__group-label">` items.
+`sidebar__group-label` items are non-linked labels. Add CSS rule:
+```css
+.sidebar__group-label { font-size: 0.7rem; text-transform: uppercase; color: var(--color-text-muted); padding: 0.4rem 1rem 0.1rem; letter-spacing: 0.05em; }
+```
 
 ### 2.6 Cross-links
 
-- Motor Selection Matrix ← linked from `/workflows/motor-selection/` (Related References section)
-- Motor Selection Matrix ← linked from training modules: `motor-selection-comparison-matrix` catalog entry
-- Machine Architecture Model ← linked from `/scenarios/semiconductor-equipment/` (Related References)
-- Compliance Stack ← linked from `/industries/semiconductor/` (Related References)
+- Motor Selection Matrix ← add "Related References" section to `/workflows/motor-selection/index.md`
+- Machine Architecture Model ← add "Related References" link to `/scenarios/semiconductor-equipment/index.md`
+- Compliance Stack ← add "Related References" link to `/industries/semiconductor/index.md`
+- Training catalog cross-link for motor-selection-matrix: **deferred** — no matching training module page exists; add as a future catalog entry note only
 
 ---
 
@@ -93,7 +110,10 @@ Section dividers rendered as non-linked `<li class="sidebar__group-label">` item
 | `/field-engineering/motor-rotation-verification/` | `/commissioning-templates/motor-rotation-verification/` |
 | `/field-engineering/drive-commissioning/` | `/commissioning-templates/drive-commissioning/` |
 
-Old `/field-engineering/` URL — redirect page using `<meta http-equiv="refresh" content="0; url=...">`.
+Create redirect page at `docs/field-engineering/index.md` (replace existing) using:
+```html
+<meta http-equiv="refresh" content="0; url={{ '/commissioning-templates/' | relative_url }}">
+```
 
 ### 3.2 Data Model Update
 
@@ -101,71 +121,129 @@ Old `/field-engineering/` URL — redirect page using `<meta http-equiv="refresh
 
 ### 3.3 Template Header Block
 
-Rendered above checklist body on every checklist page. CSS grid, no JS.
-
-```
-┌──────────────────────────────────────────────────────┐
-│  Project: ___________________  Date: ______________   │
-│  Equipment: _________________  Technician: _________  │
-│  Location: __________________  Reviewed by: ________  │
-└──────────────────────────────────────────────────────┘
-```
-
-HTML structure:
+Rendered above checklist body on every checklist page. CSS grid, no JS required.
 
 ```html
 <div class="template-header">
-  <div class="template-header__field"><span>Project</span><span class="template-header__line"></span></div>
-  <div class="template-header__field"><span>Date</span><span class="template-header__line"></span></div>
-  <!-- ... -->
+  <div class="template-header__field"><span class="template-header__label">Project</span><span class="template-header__line"></span></div>
+  <div class="template-header__field"><span class="template-header__label">Date</span><span class="template-header__line"></span></div>
+  <div class="template-header__field"><span class="template-header__label">Equipment</span><span class="template-header__line"></span></div>
+  <div class="template-header__field"><span class="template-header__label">Technician</span><span class="template-header__line"></span></div>
+  <div class="template-header__field"><span class="template-header__label">Location</span><span class="template-header__line"></span></div>
+  <div class="template-header__field"><span class="template-header__label">Reviewed by</span><span class="template-header__line"></span></div>
 </div>
 ```
 
-### 3.4 Checkbox Items
+### 3.4 Checkbox Items — Rendering Mechanism
 
-Each checklist item rendered as:
+Checklist source `.md` files author items as plain Markdown list items (`- Item text`), which Jekyll renders as `<ul><li>` HTML. The `field-checklist.html` layout renders these via `{{ content }}`.
+
+**Mechanism: DOM transformation via inline JavaScript.** After page content loads, a small script finds all `li` elements inside `.checklist-body` and wraps them with `<label class="checklist-item"><input type="checkbox"> …</label>`. No Markdown changes required.
+
+Script (injected at bottom of `field-checklist.html` layout, after `{{ content }}`):
 
 ```html
-<label class="checklist-item">
-  <input type="checkbox"> Item text
-</label>
+<script>
+  document.querySelectorAll('.checklist-body li').forEach(function(li) {
+    var cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.className = 'checklist-item__checkbox';
+    li.insertBefore(cb, li.firstChild);
+    li.classList.add('checklist-item');
+  });
+</script>
 ```
 
-- Checkbox state functional in browser (not persisted — print use case)
-- `@media print`: checkboxes rendered as `□` via `appearance: none; border: 1px solid #000; width: 12px; height: 12px`
+Checkbox state is not persisted — print/field use only.
 
-### 3.5 Layout Changes
+### 3.5 Layout Changes (`docs/_layouts/field-checklist.html`)
 
-Update `docs/_layouts/field-checklist.html`:
-1. Inject `.template-header` block before checklist content
-2. Wrap checklist items in `.checklist-item` labels with checkboxes
-3. Retain existing cross-links block at bottom
+Update in this order:
 
-### 3.6 CSS Additions
+1. Change hardcoded `<span class="page-header__label">Field Engineering</span>` to `<span class="page-header__label">Commissioning Templates</span>`
+2. Inject `.template-header` block immediately before `<div class="checklist-body">{{ content }}</div>`
+3. Add checkbox DOM transformation script after `{{ content }}`
+4. Retain existing cross-links block at bottom
+5. Update back-link href from `/field-engineering/` to `/commissioning-templates/`
 
-New rules in `docs/assets/css/main.css`:
-- `.template-header` — 2-column CSS grid, border, padding, print-friendly
-- `.template-header__field` — flex row with label + underline fill
-- `.template-header__line` — `flex: 1; border-bottom: 1px solid`
-- `.checklist-item` — block display, padding, checkbox alignment
-- `@media print` — checkbox square rendering, hide interactive chrome
+### 3.6 CSS Additions (`docs/assets/css/main.css`)
 
-### 3.7 Sidebar Rename
+```css
+/* Template header */
+.template-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.template-header__field {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+.template-header__label {
+  font-size: 0.8rem;
+  white-space: nowrap;
+  color: var(--color-text-muted);
+}
+.template-header__line {
+  flex: 1;
+  border-bottom: 1px solid var(--color-border);
+  min-width: 60px;
+}
 
-Change label from "Field Engineering" to "Commissioning Templates" in `docs/_includes/sidebar.html`. Update all `href` values from `/field-engineering/…` to `/commissioning-templates/…`.
+/* Checklist items */
+.checklist-body li.checklist-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0.2rem 0;
+}
+.checklist-body ul { padding-left: 0; }
+
+/* Print */
+@media print {
+  .checklist-item__checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #000;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+}
+```
+
+### 3.7 Sidebar Rename (`docs/_includes/sidebar.html`)
+
+- Change `<summary>Field Engineering</summary>` → `<summary>Commissioning Templates</summary>`
+- Update all 7 `href` values from `/field-engineering/…` to `/commissioning-templates/…`
+- Update all `page.url contains` active-class checks from `'field-engineering'` to `'commissioning-templates'`
 
 ### 3.8 Inbound Link Updates
 
-All pages that link to `/field-engineering/` must be updated:
-- Training module pages with `related_checklists` cross-links (11 modules)
-- Workflow pages with "Related Checklists" sections (5 pages)
-- `field-checklist.html` layout back-link
+**`docs/_data/training_catalog.yml`** — 13 URL strings across 11 modules reference `/field-engineering/` in their `related_checklists` field. Update all 13 to `/commissioning-templates/`.
+
+**Workflow pages** — 5 pages under `docs/workflows/` contain hardcoded "Related Checklists" links to `/field-engineering/` URLs. Update each href to `/commissioning-templates/`.
+
+**`docs/_layouts/field-checklist.html`** — back-link href (addressed in Section 3.5).
 
 ---
 
 ## 4. Build Target
 
-Clean Jekyll build. Expected page count: ~132 pages (123 existing + 5 new reference pages + 6 moved commissioning pages replacing field-engineering + 1 redirect = net +6).
+Clean Jekyll build. Expected page count: **~129 pages**
+
+- Baseline: 123 pages
+- New reference pages: +5 (1 landing + 4 content pages)
+- Field-engineering redirect page: +1
+- Commissioning-templates pages: net 0 (7 existing pages moved, not added)
+- **Total: 129**
 
 ---
 
@@ -176,3 +254,4 @@ Clean Jekyll build. Expected page count: ~132 pages (123 existing + 5 new refere
 - No persistent checkbox state (localStorage) — print/field use only
 - No PDF export
 - No equations page (Phase 19 scope)
+- No `motor-selection-comparison-matrix` training catalog entry (deferred)

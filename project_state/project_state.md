@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-03-14
 **Status:** Active
-**Current Phase:** Phase 18 Track B COMPLETE — Field Engineering Section
-**Next Phase:** Phase 18 Track C QUEUED — Reference Library Surfacing
+**Current Phase:** Phase 18 Track C COMPLETE — Reference Section + Commissioning Templates Redesign
+**Next Phase:** Phase 19 QUEUED — Engineering Workflow Navigation Refactor
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -19,7 +19,7 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 ## Current Reality
 
 - Jekyll site deployed on GitHub Pages — `https://kyawminthu20.github.io/Control-System-Tools/`
-- Last validated Jekyll build: 123 pages, clean build
+- Last validated Jekyll build: 129 pages, clean build
 - Three-panel layout (sidebar 240px + main content + context panel 220px)
 - Mermaid.js CDN integration for all diagrams; Cytoscape.js 3.28.1 for interactive standards graph
 - Google Analytics tag installed sitewide in `docs/_layouts/default.html` using measurement ID `G-RPL3G47EFZ`
@@ -27,7 +27,8 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 - Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 12 lifecycle pages including safety wiring, 9 scenarios, 6 crosswalk pages, 9 industry overlays, glossary (45 terms), training (41 surfaced modules across 4 groups), workflows (5 pages), field engineering (7 pages: landing + 6 commissioning checklists), software stack, and about / trust boundary
 - Interactive standards graph: 12 nodes, 16 edges, including IEC 60079, IEC 61511, and SEMI
 - Training groups: Electrical Fundamentals (9 modules), Motors/Drives (13), NEC (11), Control Systems (7)
-- Field checklists now surfaced under `/field-engineering/` (Phase 18 Track B); reference models exist in canonical RAG but not yet exposed as dedicated site section (queued for Track C)
+- Commissioning checklists at `/commissioning-templates/` (Phase 18 Track B+C): 7 pages with template header fill-in block, checkbox UI, cross-links; `/field-engineering/` redirects to new URL
+- Reference models at `/reference/` (Phase 18 Track C): 5 pages covering machine architecture, safety architecture, compliance stack, and motor selection matrix; sidebar "Reference Models" block added
 - Root `main.py` remains a placeholder (not the site)
 
 ## Tools — FE Study Automation
@@ -442,6 +443,26 @@ Design: `docs/plans/2026-03-10-phase14-training-curriculum-design.md`
 - [x] Sidebar: Field Engineering section added
 - [x] Reverse links: `related_checklists` in 11 training modules + "Related Checklists" sections in 5 workflow pages
 - [x] Jekyll build: clean, 123 pages
+
+## Phase 18 Track C — Reference Section + Commissioning Templates Redesign — COMPLETE
+
+**Design spec:** `docs/superpowers/specs/2026-03-14-reference-section-commissioning-templates-design.md`
+
+- [x] `/reference/` landing page (2 card groups: Architecture, Motor Systems)
+- [x] `/reference/architecture/machine-architecture-model/` — 7-Layer model from RAG
+- [x] `/reference/architecture/machine-safety-architecture/` — Universal safety architecture template
+- [x] `/reference/architecture/compliance-stack/` — 15-Standard minimum compliance stack
+- [x] `/reference/motor-systems/motor-selection-matrix/` — Motor selection flowchart + matrix
+- [x] Sidebar "Reference Models" block with `.sidebar__group-label` sub-groups
+- [x] `.sidebar__group-label` CSS added to `main.css`
+- [x] `/field-engineering/` → `/commissioning-templates/` rename: 7 pages moved, redirect at old index
+- [x] `field-checklist.html` layout: label updated, template header block, checkbox DOM script, back-link updated
+- [x] CSS: `.template-header`, `.checklist-item`, print checkbox styles
+- [x] `field_checklists.yml`: all 6 URL entries updated
+- [x] `training_catalog.yml`: 13 URL references updated across 11 modules
+- [x] 5 workflow pages: all `/field-engineering/` hrefs updated
+- [x] Cross-links: motor-selection workflow → motor-selection-matrix; semiconductor-equipment scenario → machine-architecture-model; semiconductor industry → compliance-stack
+- [x] Jekyll build: clean, 129 pages
 
 ## Phase 18 Backlog — Field Engineering, Reference Library, and Control Systems Training
 

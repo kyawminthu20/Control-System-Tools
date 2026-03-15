@@ -3,8 +3,8 @@ layout: field-checklist
 title: "Basic Circuit Polarity and Power Checks"
 description: "Checklist for first energization of a simple low-voltage circuit or interface branch."
 breadcrumb:
-  - name: "Field Engineering"
-    url: "/field-engineering/"
+  - name: "Commissioning Templates"
+    url: "/commissioning-templates/"
 repo_path: "control-standards/rag/commissioning_checklists/checklists/basic_circuit_polarity_and_power_checks.md"
 ---
 

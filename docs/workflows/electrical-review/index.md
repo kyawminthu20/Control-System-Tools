@@ -146,5 +146,5 @@ Escalate to nodal, loop, Thévenin, or Norton methods if:
 
 ## Related Checklists
 
-- [Pre-Power Panel and Incoming Supply Check]({{ '/field-engineering/pre-power-panel/' | relative_url }})
-- [Basic Circuit Polarity and Power Checks]({{ '/field-engineering/basic-circuit-polarity/' | relative_url }})
+- [Pre-Power Panel and Incoming Supply Check]({{ '/commissioning-templates/pre-power-panel/' | relative_url }})
+- [Basic Circuit Polarity and Power Checks]({{ '/commissioning-templates/basic-circuit-polarity/' | relative_url }})

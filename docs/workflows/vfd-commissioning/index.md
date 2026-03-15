@@ -122,5 +122,5 @@ Document and retain:
 
 ## Related Checklists
 
-- [Capacitor Discharge Awareness Check]({{ '/field-engineering/capacitor-discharge/' | relative_url }})
-- [Drive Commissioning]({{ '/field-engineering/drive-commissioning/' | relative_url }})
+- [Capacitor Discharge Awareness Check]({{ '/commissioning-templates/capacitor-discharge/' | relative_url }})
+- [Drive Commissioning]({{ '/commissioning-templates/drive-commissioning/' | relative_url }})

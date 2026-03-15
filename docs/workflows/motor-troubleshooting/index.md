@@ -115,4 +115,4 @@ Work through in order:
 
 ## Related Checklists
 
-- [Motor Rotation and Overload Verification]({{ '/field-engineering/motor-rotation-verification/' | relative_url }})
+- [Motor Rotation and Overload Verification]({{ '/commissioning-templates/motor-rotation-verification/' | relative_url }})

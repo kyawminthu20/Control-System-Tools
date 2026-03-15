@@ -5,7 +5,7 @@ layout: default
 {% assign checklist = site.data.field_checklists | where: "url", page.url | first %}
 
 <div class="page-header">
-  <span class="page-header__label">Field Engineering</span>
+  <span class="page-header__label">Commissioning Templates</span>
   <h1>{{ page.title }}</h1>
   {% if checklist %}
   <div class="checklist-use-context">
@@ -14,9 +14,28 @@ layout: default
   {% endif %}
 </div>
 
+<div class="template-header">
+  <div class="template-header__field"><span class="template-header__label">Project</span><span class="template-header__line"></span></div>
+  <div class="template-header__field"><span class="template-header__label">Date</span><span class="template-header__line"></span></div>
+  <div class="template-header__field"><span class="template-header__label">Equipment</span><span class="template-header__line"></span></div>
+  <div class="template-header__field"><span class="template-header__label">Technician</span><span class="template-header__line"></span></div>
+  <div class="template-header__field"><span class="template-header__label">Location</span><span class="template-header__line"></span></div>
+  <div class="template-header__field"><span class="template-header__label">Reviewed by</span><span class="template-header__line"></span></div>
+</div>
+
 <div class="checklist-body">
 {{ content }}
 </div>
+
+<script>
+  document.querySelectorAll('.checklist-body li').forEach(function(li) {
+    var cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.className = 'checklist-item__checkbox';
+    li.insertBefore(cb, li.firstChild);
+    li.classList.add('checklist-item');
+  });
+</script>
 
 {% if checklist %}
 <div class="field-checklist__cross-links">
@@ -56,5 +75,5 @@ layout: default
 {% endif %}
 
 <div class="field-checklist__back-link">
-  <a href="{{ '/field-engineering/' | relative_url }}">&larr; All Field Engineering Checklists</a>
+  <a href="{{ '/commissioning-templates/' | relative_url }}">&larr; All Commissioning Templates</a>
 </div>

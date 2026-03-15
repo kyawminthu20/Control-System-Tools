@@ -18,6 +18,17 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-14 — Phase 18 Track C: Reference Section + Commissioning Templates Redesign
+
+- Added `/reference/` section: landing page + 4 content pages (machine architecture model, machine safety architecture, compliance stack, motor selection matrix)
+- Added new "Reference Models" sidebar block with Architecture and Motor Systems sub-groups + `.sidebar__group-label` CSS
+- Renamed `/field-engineering/` → `/commissioning-templates/`: 7 pages moved, old sub-pages removed, redirect at `/field-engineering/`
+- Updated `field-checklist.html` layout: label renamed to "Commissioning Templates", template header block (6-field fill-in grid), checkbox DOM transformation script, back-link updated
+- CSS additions: `.template-header`, `.checklist-item`, `.sidebar__group-label`, print checkbox styles
+- URL updates: `field_checklists.yml` (6 entries), `training_catalog.yml` (13 URLs across 11 modules), 5 workflow pages
+- Cross-links added: motor-selection workflow → motor-selection-matrix; semiconductor-equipment scenario → machine-architecture-model; semiconductor industry → compliance-stack
+- Jekyll build: clean, 0.446 s, **129 pages** (matches spec target)
+
 ### 2026-03-13 — FE Study Tools: `.doc` File Support
 - feat(fe_study): `.doc` file support — LibreOffice headless conversion, `howto_doc` family (P2 priority), cached under `_converted/`
 - Conversion: LibreOffice headless (`soffice --headless --convert-to docx`), cached in `_converted/`

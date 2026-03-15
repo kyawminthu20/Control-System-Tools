@@ -3,8 +3,8 @@ layout: field-checklist
 title: "Pre-Power Panel and Incoming Supply Check"
 description: "Checklist for first energization of a control panel, machine electrical system, or incoming supply connection."
 breadcrumb:
-  - name: "Field Engineering"
-    url: "/field-engineering/"
+  - name: "Commissioning Templates"
+    url: "/commissioning-templates/"
 repo_path: "control-standards/rag/commissioning_checklists/checklists/pre_power_panel_and_incoming_supply_check.md"
 ---
 

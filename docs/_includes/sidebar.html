@@ -87,6 +87,19 @@
   </details>
 
   <details class="sidebar__section">
+    <summary>Reference Models</summary>
+    <ul class="sidebar__links">
+      <li><a href="{{ '/reference/' | relative_url }}">All Reference Models</a></li>
+      <li class="sidebar__group-label">Architecture</li>
+      <li><a href="{{ '/reference/architecture/machine-architecture-model/' | relative_url }}" class="sub">Machine Architecture</a></li>
+      <li><a href="{{ '/reference/architecture/machine-safety-architecture/' | relative_url }}" class="sub">Safety Architecture</a></li>
+      <li><a href="{{ '/reference/architecture/compliance-stack/' | relative_url }}" class="sub">Compliance Stack</a></li>
+      <li class="sidebar__group-label">Motor Systems</li>
+      <li><a href="{{ '/reference/motor-systems/motor-selection-matrix/' | relative_url }}" class="sub">Motor Selection Matrix</a></li>
+    </ul>
+  </details>
+
+  <details class="sidebar__section">
     <summary>Reference</summary>
     <ul class="sidebar__links">
       <li><a href="{{ '/software-stack/' | relative_url }}">Software Stack</a></li>
@@ -120,15 +133,15 @@
   </details>
 
   <details class="sidebar__section">
-    <summary>Field Engineering</summary>
+    <summary>Commissioning Templates</summary>
     <ul class="sidebar__links">
-      <li><a href="{{ '/field-engineering/' | relative_url }}"{% if page.url == '/field-engineering/' %} class="active"{% endif %}>All Checklists</a></li>
-      <li><a href="{{ '/field-engineering/pre-power-panel/' | relative_url }}" class="sub{% if page.url contains 'pre-power-panel' %} active{% endif %}">Pre-Power Panel</a></li>
-      <li><a href="{{ '/field-engineering/basic-circuit-polarity/' | relative_url }}" class="sub{% if page.url contains 'basic-circuit-polarity' %} active{% endif %}">Circuit Polarity</a></li>
-      <li><a href="{{ '/field-engineering/capacitor-discharge/' | relative_url }}" class="sub{% if page.url contains 'capacitor-discharge' %} active{% endif %}">Capacitor Discharge</a></li>
-      <li><a href="{{ '/field-engineering/motor-nameplate-overload/' | relative_url }}" class="sub{% if page.url contains 'motor-nameplate-overload' %} active{% endif %}">Motor Nameplate</a></li>
-      <li><a href="{{ '/field-engineering/motor-rotation-verification/' | relative_url }}" class="sub{% if page.url contains 'motor-rotation-verification' %} active{% endif %}">Motor Rotation</a></li>
-      <li><a href="{{ '/field-engineering/drive-commissioning/' | relative_url }}" class="sub{% if page.url contains 'drive-commissioning' %} active{% endif %}">Drive Commissioning</a></li>
+      <li><a href="{{ '/commissioning-templates/' | relative_url }}"{% if page.url == '/commissioning-templates/' %} class="active"{% endif %}>All Templates</a></li>
+      <li><a href="{{ '/commissioning-templates/pre-power-panel/' | relative_url }}" class="sub{% if page.url contains 'commissioning-templates' and page.url contains 'pre-power-panel' %} active{% endif %}">Pre-Power Panel</a></li>
+      <li><a href="{{ '/commissioning-templates/basic-circuit-polarity/' | relative_url }}" class="sub{% if page.url contains 'commissioning-templates' and page.url contains 'basic-circuit-polarity' %} active{% endif %}">Circuit Polarity</a></li>
+      <li><a href="{{ '/commissioning-templates/capacitor-discharge/' | relative_url }}" class="sub{% if page.url contains 'commissioning-templates' and page.url contains 'capacitor-discharge' %} active{% endif %}">Capacitor Discharge</a></li>
+      <li><a href="{{ '/commissioning-templates/motor-nameplate-overload/' | relative_url }}" class="sub{% if page.url contains 'commissioning-templates' and page.url contains 'motor-nameplate-overload' %} active{% endif %}">Motor Nameplate</a></li>
+      <li><a href="{{ '/commissioning-templates/motor-rotation-verification/' | relative_url }}" class="sub{% if page.url contains 'commissioning-templates' and page.url contains 'motor-rotation-verification' %} active{% endif %}">Motor Rotation</a></li>
+      <li><a href="{{ '/commissioning-templates/drive-commissioning/' | relative_url }}" class="sub{% if page.url contains 'commissioning-templates' and page.url contains 'drive-commissioning' %} active{% endif %}">Drive Commissioning</a></li>
     </ul>
   </details>
 </nav>
