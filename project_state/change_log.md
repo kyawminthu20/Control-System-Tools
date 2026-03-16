@@ -18,6 +18,19 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+### 2026-03-15 — Phase 20 changed to software safety routing work
+
+- Updated `project_state/project_state.md` so the next tracked phase is now `Phase 20 QUEUED — Software Safety, Traceability, and Cybersecurity Routing`
+- Added a Phase 20 queue section sourced from `planning/safety_software_stack.md`
+- Replaced the previous Phase 20 scenario-driven learning candidate as the active next-phase entry in project state
+
+### 2026-03-15 — Software stack reference flow rebuilt from planning + RAG
+
+- Rewrote `control-standards/rag/standards_intelligence/reference_models/Software_Safety_and_Intrinsic_Safety_Standards.md` into a tighter reference flow: scope boundary, quick answers, routing, traceability/logging, redundancy, worked E-stop example, cybersecurity, wiring, intrinsic safety, and implementation deliverables
+- Merged high-value practical content from `planning/safety_software_stack.md` into the canonical RAG source without pulling the planning file itself into the site or RAG browser
+- Updated `docs/software-stack/index.md` to match the new flow and remove the older IEC 61131-3 presentation that was less aligned with the practical question the page is answering
+- Jekyll build: clean after rewrite; AI boundary validator still reports pre-existing unrelated violations elsewhere in the RAG corpus
+
 ### 2026-03-14 — Project state reconciled after Phase 19 completion
 
 - Updated `project_state/project_state.md` to reflect that Phases 18 and 19 are fully complete with no active implementation backlog remaining from those tracks
