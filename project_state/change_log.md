@@ -18,6 +18,12 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-03-15 — Phase 20: Software Safety Stack Deepening
+
+- Updated RAG source `Software_Safety_and_Intrinsic_Safety_Standards.md`: IEC 61131-3 edition note updated to 2025; Normal PLC / Safety PLC / SIS comparison table added; E-stop section fully replaced with canonical tag names (SI_ESTOP_CH1, ESTOP_HEALTHY, SAFETY_ENABLE), 7-rung pseudocode, I/O list, sequence of operation, documentation and logging checklists; Rockwell GuardLogix and Siemens S7-1500F vendor patterns added
+- Updated `/software-stack/` site page: edition note updated; comparison table section added; E-stop section replaced with expanded content including Mermaid wiring/architecture flowchart and state machine diagram; vendor patterns in `<details>` expandable blocks
+- No new pages; no navigation changes; build remains clean at 132 pages
+
 ### 2026-03-15 — Phase 20 changed to software safety routing work
 
 - Updated `project_state/project_state.md` so the next tracked phase is now `Phase 20 QUEUED — Software Safety, Traceability, and Cybersecurity Routing`
