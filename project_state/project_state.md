@@ -1,9 +1,9 @@
 # Project State
 
-**Last Updated:** 2026-03-14
+**Last Updated:** 2026-03-15
 **Status:** Active
-**Current Phase:** Phase 19 COMPLETE — Engineering Workflow Navigation Refactor
-**Next Phase:** Phase 20 TBD
+**Current Phase:** Phase 20 COMPLETE — Software Safety Stack Deepening
+**Next Phase:** Phase 21 QUEUED — TBD
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -12,7 +12,7 @@ This file is the source of truth for the current project state, active implement
 
 ## Current Direction
 
-Phase 17 is complete and the site is live on GitHub Pages. The next work shifts from cross-layer routing into surfacing canonical content that already exists in the RAG but is not yet a first-class site destination: Control Systems training, field engineering checklists, and reference-library material.
+Phase 19 is complete and the workflow-first navigation model is now live on the site. The next planned work shifts to the software-stack reference path: clarify the boundary between PLC language standards and safety lifecycle standards, improve practical guidance for traceability and logging, and make the software safety routing material easier to use from both the canonical RAG and the site.
 
 The site is a presentation and navigation layer on top of `control-standards/rag/`. Authoritative engineering and standards guidance stays in `control-standards/rag/`. The website never modifies RAG content.
 
@@ -24,7 +24,7 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 - Mermaid.js CDN integration for all diagrams; Cytoscape.js 3.28.1 for interactive standards graph
 - Google Analytics tag installed sitewide in `docs/_layouts/default.html` using measurement ID `G-RPL3G47EFZ`
 - GitHub Actions deployment workflow at `.github/workflows/pages.yml`
-- Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 12 lifecycle pages including safety wiring, 9 scenarios, 6 crosswalk pages, 9 industry overlays, glossary (45 terms), training (41 surfaced modules across 4 groups), workflows (5 pages), field engineering (7 pages: landing + 6 commissioning checklists), software stack, and about / trust boundary
+- Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 12 lifecycle pages including safety wiring, 9 scenarios, 6 crosswalk pages, 9 industry overlays, glossary (45 terms), training (41 surfaced modules across 4 groups), workflows (5 pages), commissioning templates (7 pages), software stack, and about / trust boundary
 - Interactive standards graph: 12 nodes, 16 edges, including IEC 60079, IEC 61511, and SEMI
 - Training groups: Electrical Fundamentals (9 modules), Motors/Drives (13), NEC (11), Control Systems (7)
 - Commissioning checklists at `/commissioning-templates/` (Phase 18 Track B+C): 7 pages with template header fill-in block, checkbox UI, cross-links; `/field-engineering/` redirects to new URL
@@ -52,8 +52,9 @@ The FE study tools automate content extraction and inventory from the `planning/
 - Project-level change history: `project_state/change_log.md`
 - Runtime, tooling, and deployment requirements: `project_state/environment.md`
 - Setup, run, validation, and deployment steps: `project_state/how_to.md`
+- Phase 20 software safety routing source: `planning/safety_software_stack.md`
 - Phase 18 control-systems site plan: `docs/plans/2026-03-11-phase18-control-systems-training.md`
-- Field/reference expansion pre-plan: `docs/plans/2026-03-10-training-system-integration-preplan.md`
+- Cross-layer integration pre-plan and Phase 20 candidates: `docs/plans/2026-03-10-training-system-integration-preplan.md`
 - Phase 19 engineering-workflow navigation plan: `docs/plans/2026-03-13-phase19-engineering-workflow-navigation.md`
 - Authoritative standards content: `control-standards/rag/`
 - Site source: `docs/`
@@ -464,43 +465,6 @@ Design: `docs/plans/2026-03-10-phase14-training-curriculum-design.md`
 - [x] Cross-links: motor-selection workflow → motor-selection-matrix; semiconductor-equipment scenario → machine-architecture-model; semiconductor industry → compliance-stack
 - [x] Jekyll build: clean, 129 pages
 
-## Phase 18 Backlog — Field Engineering, Reference Library, and Control Systems Training
-
-**Canonical content ready to surface:**
-- `commissioning_checklists/checklists/` — 6 field-facing checklists
-- `design_framework/motor_systems/motor_selection_comparison_matrix.md`
-- `standards_intelligence/reference_models/7-Layer Industrial Machine Architecture Model.md`
-- `standards_intelligence/reference_models/Universal Machine Safety Architecture.md`
-- `standards_intelligence/reference_models/15-Standard Minimum Compliance Stack.md`
-- `training_modules/control_systems/` — 7 control-theory and PID training files
-- `training_modules/fundamentals/earthing_systems_iec.md`
-
-### Track A — Control Systems training surfacing
-
-**Plan:** `docs/plans/2026-03-11-phase18-control-systems-training.md`
-
-- `/training/control-systems/` group landing page
-- 7 site module pages mapped to the existing control-systems RAG corpus
-- `docs/_data/training_catalog.yml` updates: new `control-systems` topic group, 7 module entries, learning path, and start-here route
-- Sidebar update: Control Systems link under Training
-- `/training/fundamentals/earthing-systems-iec/` page plus fundamentals catalog/count update
-
-### Track B — Field Engineering / Commissioning surfacing
-
-- `/field-engineering/` or `/commissioning/` section with checklist pages
-- Publish selected commissioning checklists from canonical RAG as site pages
-- Link checklist pages back into lifecycle, workflow, and training routes where appropriate
-
-### Track C — Reference library surfacing
-
-- `/reference/` section for equations, machine architecture, and quick-reference content
-- Surface machine architecture and compliance-stack reference models already present in canonical RAG
-- Consolidate fast-lookup material that is currently distributed across training and standards pages
-
-### Key clarification
-
-- Control Systems RAG corpus already exists; Phase 18 work is site surfacing and navigation, not new PID/control-loop source-file creation
-
 ## Phase 19 Scope — Engineering Workflow Navigation Refactor — COMPLETED
 
 **Plan:** `docs/plans/2026-03-13-phase19-engineering-workflow-navigation.md`
@@ -512,14 +476,10 @@ Design: `docs/plans/2026-03-10-phase14-training-curriculum-design.md`
 - [x] Demoted Scenarios, Crosswalks, and Workflows from top-level sidebar into Engineering Workflow and Reference hub groups
 - [x] Jekyll build: clean, 132 pages
 
-## Phase 19 Queue — Engineering Workflow Navigation Refactor
+## Phase 20 Scope — Software Safety Stack Deepening — COMPLETE
 
-**Plan:** `docs/plans/2026-03-13-phase19-engineering-workflow-navigation.md`
+**Sources:** `planning/safety_software_stack.md`, `docs/superpowers/specs/2026-03-15-software-safety-stack-phase20-design.md`
 
-- Queue position: starts after Phase 18 Track C is complete
-- Preserve all current URLs during the first navigation refactor pass
-- Replace the hardcoded sidebar with a data-driven model backed by `docs/_data/navigation.yml`
-- Add `/engineering-workflow/` as the workflow-first hub for lifecycle, workflows, and field checklists
-- Add `/reference/` as the fast-lookup hub for glossary, software stack, RAG browser, crosswalk entry points, and future equations / architecture references
-- Demote Scenarios, Crosswalks, and Workflows from top-level sidebar peers into the new grouped navigation model
-- Keep Standards, Training, and Industries as top-level sections in the Phase 19 information architecture
+- [x] RAG corpus updated: IEC 61131-3:2025 edition note; Normal PLC vs Safety PLC vs SIS comparison table; expanded E-stop section with canonical tag names, I/O list, 7-rung pseudocode, sequence of operation, documentation checklist, logging checklist; Rockwell GuardLogix and Siemens S7-1500F vendor patterns
+- [x] `/software-stack/` site page updated: edition note, comparison table section, expanded E-stop with Mermaid wiring/architecture and state machine diagrams, vendor-specific `<details>` blocks
+- [x] Jekyll build: clean, 132 pages
