@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-14 23:54:39
+**Last Auto-Updated:** 2026-03-15 22:42:16
 
 ```text
 ├── .claude/
@@ -2446,6 +2446,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 0785d22eb41cc5c77249078677a780cdb9142ae2328e59639d4806b6c1950f
 │   │               │   └── 6ba51b243f37fe105ddab7c6ff7820addde664ee8eb9a0f17f32a0cf078ea8
 │   │               ├── 27/
+│   │               │   ├── 75a176afb9f66f122242f8ec5de0b10351bf63648e031c7e5e6913b730c217
 │   │               │   └── e44a450c423c9eb130be0e89f59aeb0f1ed6640b8c00fe1432a47164899edc
 │   │               ├── 28/
 │   │               │   ├── 1f998d632da1bca1a8bd27590aed57af5d3fd88370073449467da47b809e99
@@ -2618,6 +2619,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── e5949e03b0d5b2d4d37a661c1d9cbad4698b0e7361e80bdd1fb416c0d777ef
 │   │               ├── 61/
 │   │               │   ├── 2ba654c9ad14d10888fe33ddd6500579f33f6d464c9c802e617bbdceb59470
+│   │               │   ├── 4656be7f72414643e18e7201e39583900f8007f9b2f972f8e9d4ddcde26078
 │   │               │   ├── 7b86ae8a2522fbb9fcd927669f2caa9520a0f64edc4bcd5d4f4d9d9662884e
 │   │               │   └── de4eff5cf53688173ab22458f361af6f6186e4ca4b0eff75f3f55847eab51f
 │   │               ├── 62/
@@ -4211,7 +4213,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   └── specs/
 │   │       ├── 2026-03-12-doc-support-design.md
 │   │       ├── 2026-03-13-field-engineering-design.md
-│   │       └── 2026-03-14-reference-section-commissioning-templates-design.md
+│   │       ├── 2026-03-14-reference-section-commissioning-templates-design.md
+│   │       └── 2026-03-15-software-safety-stack-phase20-design.md
 │   ├── training/
 │   │   ├── control-systems/
 │   │   │   ├── control-loop-architectures/
