@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-15 23:40:06
+**Last Auto-Updated:** 2026-03-15 23:44:55
 
 ```text
 ├── .claude/
@@ -2814,6 +2814,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── b4c6d625ca850c26e0225567ebce4c0638799f6665a4af6bb55c000958867d
 │   │               │   └── c48f9eea773cfa7b5217d4e72b9e7b339c0675ecca8a4d8dc7bb9aabf545ea
 │   │               ├── a5/
+│   │               │   ├── 1636d0206ab1b1bc92fe6d9ed4fd656be4f37791b8ac939e1bd722c4ee7da1
 │   │               │   ├── 4ff6e5bca970d172f9662a2da3fd0e7ed2128c61b21e11ab392cf3d9609bbc
 │   │               │   ├── 94d5cef218e42ffd6252ba7587c9163678a26eee6a72988f3252f6d5352c8b
 │   │               │   ├── a05f1a9e381dfc1db1572709008dfcfcbdff8330167a126885d5b081953ac7
@@ -3596,11 +3597,13 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   ├── 2026-03-12-fe-study-bugfixes.md
 │   │   │   │   ├── 2026-03-13-doc-support.md
 │   │   │   │   ├── 2026-03-13-field-engineering.md
-│   │   │   │   └── 2026-03-14-phase19-navigation-refactor.md
+│   │   │   │   ├── 2026-03-14-phase19-navigation-refactor.md
+│   │   │   │   └── 2026-03-15-phase20-software-safety-stack.md
 │   │   │   └── specs/
 │   │   │       ├── 2026-03-12-doc-support-design.md
 │   │   │       ├── 2026-03-13-field-engineering-design.md
-│   │   │       └── 2026-03-14-reference-section-commissioning-templates-design.md
+│   │   │       ├── 2026-03-14-reference-section-commissioning-templates-design.md
+│   │   │       └── 2026-03-15-software-safety-stack-phase20-design.md
 │   │   ├── training/
 │   │   │   ├── control-systems/
 │   │   │   │   ├── control-loop-architectures/
