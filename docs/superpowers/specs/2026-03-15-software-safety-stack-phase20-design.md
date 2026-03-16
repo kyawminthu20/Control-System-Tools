@@ -2,7 +2,7 @@
 
 **Date:** 2026-03-15
 **Phase:** 20
-**Status:** Approved (revised after spec review)
+**Status:** Approved (revised v3 after second spec review)
 
 ---
 
@@ -21,6 +21,8 @@ Two files change:
 
 No new pages. No navigation changes. No CSS changes.
 
+**Source reference:** `planning/safety_software_stack.md` (absolute path: `/Users/kyawminthu/Dev/Control System Tools/planning/safety_software_stack.md`) — read-only reference material; do not modify this file.
+
 ---
 
 ## Architecture
@@ -31,23 +33,24 @@ The existing page structure is preserved. Content is appended or extended in-pla
 
 ## Tag Naming Convention
 
-Two layers of tags exist in the E-stop example. Implementers must keep them distinct:
+Two layers of tags exist in the E-stop example. Implementers must keep them distinct and consistent throughout all new content:
 
 **Internal safety PLC tags** (used inside rung logic):
 - `ESTOP_HEALTHY` — true when both E-stop channels are closed and healthy
-- `FEEDBACK_OK` — true when both contactor feedbacks indicate correct state
-- `RESET_VALID` — true on valid rising-edge manual reset
-- `SAFETY_ENABLE` — the main safety-enable latch (true = safe to run)
-- `CHANNEL_FAULT` — internal fault flag for channel discrepancy
+- `FEEDBACK_OK` — true when both contactor feedbacks indicate the correct state
+- `RESET_VALID` — true on rising edge of manual reset PB when conditions are met; used as the input to the safety-enable latch
+- `SAFETY_ENABLE` — the main safety-enable latch (true = safe to run); set by a valid RESET_VALID pulse, cleared by E-stop or any fault
+- `CHANNEL_FAULT` — internal safety PLC flag for channel discrepancy (also exported to standard PLC under the same name — see note below)
 
-**Standard PLC / HMI exported status tags** (read-only, derived from safety PLC status outputs):
-- `ESTOP_ACTIVE` — true when E-stop is pressed (inverse of ESTOP_HEALTHY)
-- `SAFETY_OK` — mirrors SAFETY_ENABLE, exported to standard PLC
+**Standard PLC / HMI exported status tags** (read-only, published from safety PLC to standard PLC):
+- `ESTOP_ACTIVE` — true when E-stop is active (inverse of ESTOP_HEALTHY)
+- `SAFETY_OK` — mirrors SAFETY_ENABLE; true when safe to run
 - `RESET_REQUIRED` — true when a manual reset is needed before restart
 - `FEEDBACK_FAULT` — true when feedback check fails (inverse of FEEDBACK_OK)
-- `MOTOR_RUN_CMD`, `MOTOR_RUNNING` — standard PLC motor control tags (not safety-owned)
+- `CHANNEL_FAULT` — same name as the internal safety PLC flag; the safety PLC exports its internal CHANNEL_FAULT bit to the standard PLC under the same name. This is intentional and common in safety system design. An implementer should not create a second tag with a different name.
+- `MOTOR_RUN_CMD`, `MOTOR_RUNNING` — standard PLC motor command and status (not safety-owned)
 
-The sequence of operation section uses internal safety PLC tag names where describing what happens inside the safety logic.
+**Note on RESET_VALID vs RESET_LATCH:** Rung 5 uses RESET_VALID as the enabling condition. There is no separate RESET_LATCH tag. RESET_VALID is produced by Rung 4 and acts as the one-shot reset pulse that sets SAFETY_ENABLE (which then self-seals via normal rung evaluation as long as ESTOP_HEALTHY, FEEDBACK_OK, and no CHANNEL_FAULT remain true). The latch behavior is implicit in the rung evaluation, not a separate latch coil.
 
 ---
 
@@ -57,7 +60,7 @@ File: `control-standards/rag/standards_intelligence/reference_models/Software_Sa
 
 ### 1. IEC 61131-3 Edition Note
 
-In the "PLC Language Standard vs Safety Claim Standard" section, find this exact sentence:
+Find this exact sentence in the "PLC Language Standard vs Safety Claim Standard" section:
 
 > Verify the applicable edition and the vendor platform actually in use. Language availability and deprecated features can differ between older materials, current editions, and installed controller ecosystems.
 
@@ -67,7 +70,7 @@ Replace it with:
 
 ### 2. Normal PLC / Safety PLC / SIS Comparison Table
 
-Append as a new section after the "PLC Language Standard vs Safety Claim Standard" section:
+Append as a new `## Normal PLC vs Safety PLC vs SIS` section after the "PLC Language Standard vs Safety Claim Standard" section:
 
 ```markdown
 ## Normal PLC vs Safety PLC vs SIS
@@ -86,12 +89,14 @@ Append as a new section after the "PLC Language Standard vs Safety Claim Standar
 
 ### 3. Detailed E-Stop Section
 
-Append as a new section after the comparison table. This is the full E-stop reference block for the RAG corpus. It includes all content from sections 3–8 below.
+Append as a new `## Worked E-Stop: I/O List, Logic, and Documentation` section after the comparison table:
 
-**3a. I/O List**
+**3a. I/O List** — use this exact content:
 
 ```markdown
-## Worked E-Stop: I/O List
+## Worked E-Stop: I/O List, Logic, and Documentation
+
+### I/O List
 
 **Safety inputs:**
 - `SI_ESTOP_CH1`: E-stop channel 1, NC
@@ -105,66 +110,66 @@ Append as a new section after the comparison table. This is the full E-stop refe
 - `SO_K2`: safety output to contactor K2 coil
 
 **Standard PLC / HMI read-only status tags (exported from safety PLC):**
-- `ESTOP_ACTIVE` — true when E-stop is active (inverse of internal ESTOP_HEALTHY)
+- `ESTOP_ACTIVE` — true when E-stop is active (inverse of ESTOP_HEALTHY)
 - `SAFETY_OK` — mirrors internal SAFETY_ENABLE; true when safe to run
 - `RESET_REQUIRED` — true when a manual reset is needed
 - `FEEDBACK_FAULT` — true when contactor feedback is incorrect
-- `CHANNEL_FAULT` — true when channel discrepancy is detected
+- `CHANNEL_FAULT` — safety PLC internal flag, also exported to standard PLC under the same name
 - `MOTOR_RUN_CMD`, `MOTOR_RUNNING` — standard PLC motor command and status
 ```
 
-**3b. Safety logic rung intent (generic pseudocode — 7 rungs)**
+**3b. Safety logic rung intent (generic pseudocode — 7 rungs)** — use this exact content inside a fenced code block:
 
-The RAG section includes all 7 rungs:
-
-```
+```text
 Rung 1: ESTOP_HEALTHY := SI_ESTOP_CH1 AND SI_ESTOP_CH2
 Rung 2: CHANNEL_FAULT := (SI_ESTOP_CH1 XOR SI_ESTOP_CH2) for longer than discrepancy time
 Rung 3: FEEDBACK_OK   := SI_K1_FB AND SI_K2_FB
 Rung 4: RESET_VALID   := RisingEdge(SI_RESET_PB) AND ESTOP_HEALTHY AND NOT CHANNEL_FAULT AND FEEDBACK_OK
-Rung 5: SAFETY_ENABLE := ESTOP_HEALTHY AND NOT CHANNEL_FAULT AND FEEDBACK_OK AND RESET_LATCH
+Rung 5: SAFETY_ENABLE := ESTOP_HEALTHY AND NOT CHANNEL_FAULT AND FEEDBACK_OK AND RESET_VALID
 Rung 6: SO_K1 := SAFETY_ENABLE; SO_K2 := SAFETY_ENABLE
-Rung 7: STATUS bits := ESTOP_ACTIVE, SAFETY_OK, RESET_REQUIRED, FEEDBACK_FAULT, CHANNEL_FAULT
+Rung 7: ESTOP_ACTIVE := NOT ESTOP_HEALTHY; SAFETY_OK := SAFETY_ENABLE;
+         RESET_REQUIRED := NOT SAFETY_ENABLE; FEEDBACK_FAULT := NOT FEEDBACK_OK
 ```
 
-Note on Rung 2: in a real safety project, discrepancy detection is typically a certified safety function block, not hand-built timer logic.
+Note on Rung 2: discrepancy detection in a real safety project is typically a certified safety function block, not hand-built timer logic.
 
-**3c. Sequence of Operation**
+**3c. Sequence of Operation** — use this exact content:
 
 ```markdown
+### Sequence of Operation
+
 **Normal start:**
-1. E-stop released; both NC channels closed and healthy (ESTOP_HEALTHY = true).
-2. Both contactor feedbacks indicate de-energized / ready state (FEEDBACK_OK = true).
-3. Operator presses Reset.
-4. Safety PLC validates channels and feedback; RESET_LATCH sets; SAFETY_ENABLE goes true.
-5. SO_K1 and SO_K2 energize; standard PLC may now start the motor.
+1. E-stop released; both NC channels closed (ESTOP_HEALTHY = true; FEEDBACK_OK = true).
+2. Operator presses Reset; RESET_VALID goes true for one scan.
+3. SAFETY_ENABLE sets; SO_K1 and SO_K2 energize; SAFETY_OK exported to standard PLC.
+4. Standard PLC may now start the motor if normal run conditions are met.
 
 **E-stop pressed:**
-1. One action opens both NC channels.
-2. ESTOP_HEALTHY drops immediately.
-3. SAFETY_ENABLE clears; SO_K1 and SO_K2 de-energize.
-4. Contactors open and remove power to the motor.
-5. HMI logs E-stop event (ESTOP_ACTIVE = true, SAFETY_OK = false, RESET_REQUIRED = true).
+1. One action opens both NC channels; ESTOP_HEALTHY drops immediately.
+2. SAFETY_ENABLE clears; SO_K1 and SO_K2 de-energize.
+3. Contactors open and remove power to the motor.
+4. Exported status: ESTOP_ACTIVE = true, SAFETY_OK = false, RESET_REQUIRED = true.
+5. HMI logs E-stop event and shows reset required.
 
 **After E-stop release:**
-1. Channels return healthy (ESTOP_HEALTHY = true).
-2. Safety outputs remain off — no auto-restart.
+1. Channels return healthy; ESTOP_HEALTHY = true.
+2. Safety outputs remain off — no auto-restart; SAFETY_ENABLE remains false.
 3. Manual reset is still required; RESET_REQUIRED remains true.
-4. If feedback is wrong or channels disagree, reset is rejected.
+4. If feedback is wrong or channels still disagree, reset is rejected.
 
 **Welded contactor fault:**
-1. Stop is demanded.
-2. One contactor fails to open; SI_K1_FB or SI_K2_FB does not indicate de-energized state.
-3. FEEDBACK_OK goes false; FEEDBACK_FAULT = true.
-4. Reset is blocked and fault is logged.
+1. Stop is demanded; one contactor fails to open.
+2. SI_K1_FB or SI_K2_FB does not indicate de-energized state; FEEDBACK_OK = false.
+3. Exported status: FEEDBACK_FAULT = true; reset is blocked and fault is logged.
 ```
 
-**3d. Documentation Checklist**
+**3d. Documentation Checklist** — use this exact content:
 
 ```markdown
-**Documentation required for this E-stop:**
+### Documentation Required
+
 - Hazard and risk assessment result, including required PLr or SIL
-- Safety function statement: "Pressing E-stop removes motor torque within X ms"
+- Safety function statement (e.g., "Pressing E-stop removes motor torque within X ms")
 - Safe state definition
 - Reset philosophy: manual reset, no automatic restart
 - Wiring and I/O mapping for both channels, feedbacks, and outputs
@@ -175,15 +180,15 @@ Note on Rung 2: in a real safety project, discrepancy detection is typically a c
 - Change control: version, who approved, what changed, retest evidence
 ```
 
-**3e. Logging Checklist**
+**3e. Logging Checklist** — use this exact content:
 
 ```markdown
+### Logging Requirements
+
 **Log these events:**
 - E-stop pressed and E-stop cleared
 - Reset attempted; reset accepted or rejected
-- Safety fault codes (channel fault, feedback fault, module fault)
-- Channel discrepancy / cross-fault
-- Contactor feedback mismatch
+- Safety fault codes (CHANNEL_FAULT, FEEDBACK_FAULT, module fault)
 - Safety program download, online edit, controller mode change
 - Bypass, inhibit, force, or maintenance override attempts
 - User login and security-relevant events when networked (per IEC 62443-3-3, IEC 62443-4-1, IEC 62443-4-2)
@@ -196,9 +201,9 @@ Note on Rung 2: in a real safety project, discrepancy detection is typically a c
 
 ### 4. Rockwell GuardLogix Vendor Pattern
 
-Append as a new subsection under the E-stop section:
+Append as a `### Rockwell GuardLogix` subsection. Use this exact Markdown (all pseudocode blocks must be wrapped in triple-backtick fences):
 
-```markdown
+````markdown
 ### Rockwell GuardLogix
 
 > **Note:** Instruction names and operands are vendor-specific. Verify against the applicable Studio 5000 Logix Designer documentation for the installed platform version.
@@ -213,30 +218,36 @@ Append as a new subsection under the E-stop section:
 
 **Rung structure (pseudocode):**
 
+```text
 Rung 1: ESTOP(ESTOP_E1, ResetType:=1, ChannelA:=EStop_A, ChannelB:=EStop_B,
                CircuitReset:=PB_Reset, FaultReset:=PB_FaultReset)
+
 Rung 2: OSF(PB_Reset, PB_Reset_OSF)
+
 Rung 3: CROUT(CROUT_M1, Actuate:=ESTOP_E1.O1, Feedback1:=K1_FB, Feedback2:=K2_FB,
               InputStatus:=SafeIn_CombinedStatus, OutputStatus:=SafeOut_CombinedStatus,
               Reset:=PB_Reset_OSF)
-Rung 4: SO_K1 := CROUT_M1.O1; SO_K2 := CROUT_M1.O2
+
+Rung 4: SO_K1 := CROUT_M1.O1
+         SO_K2 := CROUT_M1.O2
+```
 
 **What to log:**
-- ESTOP_E1.FP (fault present), ESTOP_E1.II (input invalid), ESTOP_E1.CRHO (cross-reset hold-off)
-- CROUT_M1.FP (fault present), CROUT_M1.FaultCode
+- `ESTOP_E1.FP` (fault present), `ESTOP_E1.II` (input invalid), `ESTOP_E1.CRHO` (cross-reset hold-off)
+- `CROUT_M1.FP` (fault present), `CROUT_M1.FaultCode`
 - Safety signature, download, and change events from controller audit trail
 
 **Official references:**
 - ESTOP instruction: Studio 5000 Logix Designer safety instructions reference
 - CROUT instruction: Studio 5000 Logix Designer safety instructions reference
 - GuardLogix 5580 and Compact GuardLogix 5380 safety reference manual
-```
+````
 
 ### 5. Siemens S7-1500F / ET200SP Vendor Pattern
 
-Append as a new subsection:
+Append as a `### Siemens S7-1500F / ET200SP` subsection. Use this exact Markdown (all pseudocode blocks must be wrapped in triple-backtick fences):
 
-```markdown
+````markdown
 ### Siemens S7-1500F / ET200SP
 
 > **Note:** Instruction names and operands are vendor-specific. Verify against the applicable TIA Portal F-library and S7-1500F safety programming manual for the installed firmware and hardware version.
@@ -251,6 +262,7 @@ Append as a new subsection:
 
 **F-program network structure (pseudocode):**
 
+```text
 Network 1 — GlobalEstop : ESTOP1
   E_STOP  := fdiEstopGlobal
   ACK_NEC := TRUE
@@ -268,11 +280,12 @@ Network 3 — FbK2 : FDBACK
 
 Network 4 — AckGlobal : ACK_GL
   ACK_GLOB := DataToSafety.Acknowledge
+```
 
 **What to log:**
-- GlobalEstop.ACK_REQ, GlobalEstop.DIAG
-- FbK1.ERROR, FbK1.ACK_REQ, FbK1.DIAG
-- FbK2.ERROR, FbK2.ACK_REQ, FbK2.DIAG
+- `GlobalEstop.ACK_REQ`, `GlobalEstop.DIAG`
+- `FbK1.ERROR`, `FbK1.ACK_REQ`, `FbK1.DIAG`
+- `FbK2.ERROR`, `FbK2.ACK_REQ`, `FbK2.DIAG`
 - F-I/O passivation and reintegration events
 - Safety compile, download, signature, and mode change events
 
@@ -280,7 +293,7 @@ Network 4 — AckGlobal : ACK_GL
 - ESTOP1, FDBACK, ACK_GL: S7-1500F safety programming manual (Siemens Industry Online Support)
 - Feedback monitoring application example: support article 21331098
 - Safety programming guideline: support article 109750255
-```
+````
 
 ---
 
@@ -298,21 +311,37 @@ Replace with:
 
 ### Change 2: Add Normal PLC / Safety PLC / SIS comparison table
 
-Insert a new `## Normal PLC vs Safety PLC vs SIS` section after the existing `## PLC Language Standard vs Safety Claim Standard` section (`---` separator) and before `## What Traceability and Logging Mean in Practice`.
-
-Section content: the same 8-row comparison table from RAG section 2 above.
+Insert a new `## Normal PLC vs Safety PLC vs SIS` section between the `---` separator that follows `## PLC Language Standard vs Safety Claim Standard` and the `## What Traceability and Logging Mean in Practice` heading. Use the same table content as RAG section 2.
 
 ### Change 3: Expand Worked E-Stop section
 
-Replace the existing `## Worked E-Stop Pattern` section entirely. The new section contains:
+Replace the **entire** existing `## Worked E-Stop Pattern` section (from the `## Worked E-Stop Pattern` heading through the closing `---` separator) with the following content:
 
-**3a. Architecture bullet list** — unchanged from existing page (keep the 6-bullet list starting "E-stop PB with two NC channels …")
+**3a. Architecture bullet list** — keep the existing 6-bullet list unchanged:
+```
+- `E-stop PB` with two NC channels
+- `Safety PLC` or `safety relay` checks channel health, discrepancy time, and faults
+- `K1` and `K2` contactors remove power to the motor
+- `K1_FB` and `K2_FB` auxiliary contacts feed back into the safety logic
+- `Reset PB` is separate and manual
+- standard PLC or HMI reads status but does not own the safety function
+```
 
-**3b. Simplified rung pseudocode** — keep the existing 6-rung pseudocode block as-is on the site page (Rungs 1–6 only; the site page does not need Rung 7 status-bit assignment since those are in the documentation/logging checklists). The RAG file gets all 7 rungs.
+**3b. Updated rung pseudocode** — replace the existing 6-rung block with the 7-rung block using canonical tag names. The existing rungs use legacy names (CH_A_OK, SAFE_ENABLE, etc.) that differ from the new I/O list and sequence of operation. Update them to match the canonical names from the Tag Naming Convention. Use this exact content in a fenced code block:
 
-**3c. I/O list** — add the I/O list (safety inputs, safety outputs, standard PLC status tags) from RAG section 3a above.
+```text
+Rung 1: ESTOP_HEALTHY := SI_ESTOP_CH1 AND SI_ESTOP_CH2
+Rung 2: CHANNEL_FAULT := (SI_ESTOP_CH1 XOR SI_ESTOP_CH2) for longer than discrepancy time
+Rung 3: FEEDBACK_OK   := SI_K1_FB AND SI_K2_FB
+Rung 4: RESET_VALID   := RisingEdge(SI_RESET_PB) AND ESTOP_HEALTHY AND NOT CHANNEL_FAULT AND FEEDBACK_OK
+Rung 5: SAFETY_ENABLE := ESTOP_HEALTHY AND NOT CHANNEL_FAULT AND FEEDBACK_OK AND RESET_VALID
+Rung 6: SO_K1 := SAFETY_ENABLE; SO_K2 := SAFETY_ENABLE
+Rung 7: export ESTOP_ACTIVE, SAFETY_OK, RESET_REQUIRED, FEEDBACK_FAULT, CHANNEL_FAULT
+```
 
-**3d. Wiring/architecture Mermaid diagram** — insert a `flowchart LR` diagram. Use this exact source:
+**3c. I/O list** — add after the rung pseudocode. Use the I/O list from RAG section 3a.
+
+**3d. Wiring/architecture Mermaid diagram** — add after the I/O list. Wrap in `<div class="mermaid-wrap"><pre class="mermaid">` tags (matching the existing page's Mermaid wrapper pattern). Use this exact Mermaid source:
 
 ```
 flowchart LR
@@ -355,7 +384,7 @@ flowchart LR
   PLC -. "display / log" .-> HMI
 ```
 
-**3e. State diagram** — insert a `stateDiagram-v2` diagram. Use this exact source:
+**3e. State diagram** — add after the wiring diagram. Use the same Mermaid wrapper. Use this exact Mermaid source:
 
 ```
 stateDiagram-v2
@@ -372,35 +401,35 @@ stateDiagram-v2
   Faulted --> SafeStopped : E-stop still active
 ```
 
-**3f. Sequence of operation** — the 4 scenarios from RAG section 3c (normal start, E-stop pressed, after release, welded contactor fault) as compact numbered lists.
+**3f. Sequence of operation** — add after the state diagram. Use the 4 scenarios from RAG section 3c.
 
-**3g. Documentation checklist** — the bullet list from RAG section 3d.
+**3g. Documentation checklist** — add after sequence. Use the content from RAG section 3d.
 
-**3h. Logging checklist** — the two-part list (log / do not log) from RAG section 3e.
+**3h. Logging checklist** — add after documentation checklist. Use the content from RAG section 3e.
 
 ### Change 4: Add vendor-specific patterns
 
-Append a new `### Vendor-Specific Patterns` subsection at the end of the Worked E-Stop section, using two `<details>` expandable blocks:
+Append a new `### Vendor-Specific Patterns` subsection at the end of the Worked E-Stop section, before the closing `---` separator. Use this exact HTML/Markdown structure:
 
 ```html
+### Vendor-Specific Patterns
+
 <details>
 <summary>Rockwell GuardLogix</summary>
 
-[content from RAG section 4 — tags, rung pseudocode, what to log, official references]
+[copy exact content of RAG section 4, including the trust-boundary note, tag list, rung pseudocode in triple-backtick fences, logging list, and official references]
 
 </details>
 
 <details>
 <summary>Siemens S7-1500F / ET200SP</summary>
 
-[content from RAG section 5 — tags, F-program pseudocode, what to log, official references]
+[copy exact content of RAG section 5, including the trust-boundary note, tag list, F-program pseudocode in triple-backtick fences, logging list, and official references]
 
 </details>
 ```
 
-Both blocks must include the vendor trust-boundary note at the top (from RAG sections 4 and 5 respectively).
-
-Note on Jekyll/Kramdown: add a blank line after each `</summary>` tag so Markdown inside the `<details>` block renders correctly.
+**Jekyll/Kramdown note:** Add a blank line after each `</summary>` tag so the Markdown body inside the `<details>` block renders correctly (Kramdown requires a blank line before Markdown content inside HTML blocks).
 
 ---
 
@@ -409,20 +438,17 @@ Note on Jekyll/Kramdown: add a blank line after each `</summary>` tag so Markdow
 - No copyrighted standards text is reproduced
 - Vendor instruction names are stated as they appear in official public documentation (referenced by document title, not reproduced in full)
 - All SIL/PL claims remain explicitly deferred to the published standards
-- The page retains its existing trust-boundary note (footer)
+- The page retains its existing trust-boundary note (footer include)
 
 ---
 
 ## Acceptance Targets
 
-- RAG file updated: comparison table, full E-stop reference block (I/O, 7 rungs, sequence, doc checklist, log checklist), Rockwell and Siemens vendor patterns, edition note updated
-- Site page answers "when is ladder logic safety-related?", "what must be traceable?", "what should be logged?" without navigating away
-- Normal PLC / Safety PLC / SIS comparison table visible without expanding any `<details>` block
-- Vendor-specific patterns behind `<details>` blocks — do not dominate the page
-- Both Mermaid diagrams render correctly in Jekyll build
-- Jekyll build remains clean; page count unchanged (no new pages)
+- RAG file updated: edition note, comparison table, full E-stop reference block (7-rung pseudocode with canonical tag names, I/O list, sequence with both internal and exported tag layers labeled, documentation checklist, logging checklist), Rockwell and Siemens vendor patterns with code-fenced pseudocode
+- Site page: edition note updated; comparison table visible without expanding any `<details>` block; rung pseudocode uses canonical tag names consistent with the I/O list and sequence of operation; both Mermaid diagrams render correctly; vendor patterns behind `<details>` blocks
+- Jekyll build clean; page count unchanged (no new pages)
 - All existing cross-links remain intact
-- Internal tag naming is consistent throughout site page content (internal safety PLC tags vs exported status tags do not use conflicting names for the same concept)
+- Internal tag naming consistent throughout: ESTOP_HEALTHY / FEEDBACK_OK / RESET_VALID / SAFETY_ENABLE used for safety PLC internal signals; ESTOP_ACTIVE / SAFETY_OK / RESET_REQUIRED / FEEDBACK_FAULT used for exported HMI status signals; CHANNEL_FAULT used in both layers under the same name (intentional, documented)
 
 ---
 
@@ -430,7 +456,5 @@ Note on Jekyll/Kramdown: add a blank line after each `</summary>` tag so Markdow
 
 | File | Action |
 |---|---|
-| `control-standards/rag/standards_intelligence/reference_models/Software_Safety_and_Intrinsic_Safety_Standards.md` | Modify — edition note update, append comparison table, append full E-stop reference block with I/O list / sequence / checklists / vendor patterns |
-| `docs/software-stack/index.md` | Modify — edition note update, add comparison table section, expand E-stop section with Mermaid diagrams and vendor `<details>` blocks |
-
-**Source reference for implementation:** `planning/safety_software_stack.md` (absolute path: `/Users/kyawminthu/Dev/Control System Tools/planning/safety_software_stack.md`) — use as reference material, not a file to modify.
+| `control-standards/rag/standards_intelligence/reference_models/Software_Safety_and_Intrinsic_Safety_Standards.md` | Modify — edition note update; append comparison table; append E-stop section (7 rungs, I/O list, sequence, doc checklist, log checklist, vendor patterns) |
+| `docs/software-stack/index.md` | Modify — edition note update; insert comparison table section; replace E-stop section (updated rungs with canonical tags, I/O list, Mermaid diagrams, sequence, checklists, vendor `<details>` blocks) |
