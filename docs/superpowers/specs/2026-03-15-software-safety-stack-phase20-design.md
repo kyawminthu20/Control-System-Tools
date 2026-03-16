@@ -409,27 +409,103 @@ stateDiagram-v2
 
 ### Change 4: Add vendor-specific patterns
 
-Append a new `### Vendor-Specific Patterns` subsection at the end of the Worked E-Stop section, before the closing `---` separator. Use this exact HTML/Markdown structure:
+Append a new `### Vendor-Specific Patterns` subsection at the end of the Worked E-Stop section, before the closing `---` separator. Use this exact Markdown (blank line after each `</summary>` is required for Kramdown to render the body as Markdown):
 
-```html
+```
 ### Vendor-Specific Patterns
 
 <details>
 <summary>Rockwell GuardLogix</summary>
 
-[copy exact content of RAG section 4, including the trust-boundary note, tag list, rung pseudocode in triple-backtick fences, logging list, and official references]
+> **Note:** Instruction names and operands are vendor-specific. Verify against the applicable Studio 5000 Logix Designer documentation for the installed platform version.
+
+**Typical safety tags:**
+- `EStop_A`, `EStop_B` — E-stop dual-channel inputs
+- `PB_Reset`, `PB_FaultReset` — reset pushbuttons
+- `K1_FB`, `K2_FB` — contactor feedback inputs
+- `SafeIn_CombinedStatus`, `SafeOut_CombinedStatus` — Guard I/O health status
+- `ESTOP_E1` — ESTOP instruction backing tag
+- `CROUT_M1` — CROUT instruction backing tag
+
+**Rung structure (pseudocode):**
+
+` ` `text
+Rung 1: ESTOP(ESTOP_E1, ResetType:=1, ChannelA:=EStop_A, ChannelB:=EStop_B,
+               CircuitReset:=PB_Reset, FaultReset:=PB_FaultReset)
+
+Rung 2: OSF(PB_Reset, PB_Reset_OSF)
+
+Rung 3: CROUT(CROUT_M1, Actuate:=ESTOP_E1.O1, Feedback1:=K1_FB, Feedback2:=K2_FB,
+              InputStatus:=SafeIn_CombinedStatus, OutputStatus:=SafeOut_CombinedStatus,
+              Reset:=PB_Reset_OSF)
+
+Rung 4: SO_K1 := CROUT_M1.O1
+         SO_K2 := CROUT_M1.O2
+` ` `
+
+**What to log:**
+- `ESTOP_E1.FP` (fault present), `ESTOP_E1.II` (input invalid), `ESTOP_E1.CRHO` (cross-reset hold-off)
+- `CROUT_M1.FP` (fault present), `CROUT_M1.FaultCode`
+- Safety signature, download, and change events from controller audit trail
+
+**Official references:**
+- ESTOP instruction: Studio 5000 Logix Designer safety instructions reference
+- CROUT instruction: Studio 5000 Logix Designer safety instructions reference
+- GuardLogix 5580 and Compact GuardLogix 5380 safety reference manual
 
 </details>
 
 <details>
 <summary>Siemens S7-1500F / ET200SP</summary>
 
-[copy exact content of RAG section 5, including the trust-boundary note, tag list, F-program pseudocode in triple-backtick fences, logging list, and official references]
+> **Note:** Instruction names and operands are vendor-specific. Verify against the applicable TIA Portal F-library and S7-1500F safety programming manual for the installed firmware and hardware version.
+
+**Typical safety tags:**
+- `fdiEstopGlobal` — F-DI dual-channel evaluated E-stop signal (discrepancy check done in F-DI module)
+- `DataToSafety.Acknowledge` — standard-to-safety acknowledge crossing
+- `DataFromSafety.EstopAckReq` — safety-to-standard acknowledge-request crossing
+- `fdiK1Fb`, `fdiK2Fb` — contactor feedback inputs
+- `qSafetyK1`, `qSafetyK2` — safety output signals to contactors
+- `qSafetyK1_VS`, `qSafetyK2_VS` — F-DO value status bits
+
+**F-program network structure (pseudocode):**
+
+` ` `text
+Network 1 — GlobalEstop : ESTOP1
+  E_STOP  := fdiEstopGlobal
+  ACK_NEC := TRUE
+  ACK     := DataToSafety.Acknowledge
+
+Network 2 — FbK1 : FDBACK
+  ON := GlobalEstop.Q; FEEDBACK := fdiK1Fb; QBAD_FIO := qSafetyK1_VS
+  ACK_NEC := TRUE; ACK := DataToSafety.Acknowledge; FDB_TIME := T#500ms
+  Q := qSafetyK1
+
+Network 3 — FbK2 : FDBACK
+  ON := GlobalEstop.Q; FEEDBACK := fdiK2Fb; QBAD_FIO := qSafetyK2_VS
+  ACK_NEC := TRUE; ACK := DataToSafety.Acknowledge; FDB_TIME := T#500ms
+  Q := qSafetyK2
+
+Network 4 — AckGlobal : ACK_GL
+  ACK_GLOB := DataToSafety.Acknowledge
+` ` `
+
+**What to log:**
+- `GlobalEstop.ACK_REQ`, `GlobalEstop.DIAG`
+- `FbK1.ERROR`, `FbK1.ACK_REQ`, `FbK1.DIAG`
+- `FbK2.ERROR`, `FbK2.ACK_REQ`, `FbK2.DIAG`
+- F-I/O passivation and reintegration events
+- Safety compile, download, signature, and mode change events
+
+**Official references:**
+- ESTOP1, FDBACK, ACK_GL: S7-1500F safety programming manual (Siemens Industry Online Support)
+- Feedback monitoring application example: support article 21331098
+- Safety programming guideline: support article 109750255
 
 </details>
 ```
 
-**Jekyll/Kramdown note:** Add a blank line after each `</summary>` tag so the Markdown body inside the `<details>` block renders correctly (Kramdown requires a blank line before Markdown content inside HTML blocks).
+**Note on code fence rendering:** In the site page file, the ` ` `text` ` ` sequences above must use actual triple-backtick fences (no spaces between backticks). The spaces are present in this spec only to prevent rendering the fences as code fences in the spec document itself.
 
 ---
 
