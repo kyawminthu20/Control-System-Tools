@@ -18,7 +18,6 @@
 
 - label: "Standards"
   url: "/standards/"
-  always_open: true
   match_prefixes:
     - "/standards/"
   children:
