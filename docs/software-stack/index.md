@@ -281,21 +281,19 @@ stateDiagram-v2
 
 <details>
 <summary>Rockwell GuardLogix</summary>
-
-> **Note:** Instruction names and operands are vendor-specific. Verify against the applicable Studio 5000 Logix Designer documentation for the installed platform version.
-
-**Typical safety tags:**
-- `EStop_A`, `EStop_B` — E-stop dual-channel inputs
-- `PB_Reset`, `PB_FaultReset` — reset pushbuttons
-- `K1_FB`, `K2_FB` — contactor feedback inputs
-- `SafeIn_CombinedStatus`, `SafeOut_CombinedStatus` — Guard I/O health status
-- `ESTOP_E1` — ESTOP instruction backing tag
-- `CROUT_M1` — CROUT instruction backing tag
-
-**Rung structure (pseudocode):**
-
-```text
-Rung 1: ESTOP(ESTOP_E1, ResetType:=1, ChannelA:=EStop_A, ChannelB:=EStop_B,
+<div style="padding:0.5rem 0 0.5rem 1rem">
+<blockquote><p><strong>Note:</strong> Instruction names and operands are vendor-specific. Verify against the applicable Studio 5000 Logix Designer documentation for the installed platform version.</p></blockquote>
+<p><strong>Typical safety tags:</strong></p>
+<ul>
+<li><code>EStop_A</code>, <code>EStop_B</code> — E-stop dual-channel inputs</li>
+<li><code>PB_Reset</code>, <code>PB_FaultReset</code> — reset pushbuttons</li>
+<li><code>K1_FB</code>, <code>K2_FB</code> — contactor feedback inputs</li>
+<li><code>SafeIn_CombinedStatus</code>, <code>SafeOut_CombinedStatus</code> — Guard I/O health status</li>
+<li><code>ESTOP_E1</code> — ESTOP instruction backing tag</li>
+<li><code>CROUT_M1</code> — CROUT instruction backing tag</li>
+</ul>
+<p><strong>Rung structure (pseudocode):</strong></p>
+<pre><code>Rung 1: ESTOP(ESTOP_E1, ResetType:=1, ChannelA:=EStop_A, ChannelB:=EStop_B,
                CircuitReset:=PB_Reset, FaultReset:=PB_FaultReset)
 
 Rung 2: OSF(PB_Reset, PB_Reset_OSF)
@@ -305,33 +303,30 @@ Rung 3: CROUT(CROUT_M1, Actuate:=ESTOP_E1.O1, Feedback1:=K1_FB, Feedback2:=K2_FB
               Reset:=PB_Reset_OSF)
 
 Rung 4: SO_K1 := CROUT_M1.O1
-         SO_K2 := CROUT_M1.O2
-```
-
-**What to log:** `ESTOP_E1.FP`, `ESTOP_E1.II`, `ESTOP_E1.CRHO` — `CROUT_M1.FP`, `CROUT_M1.FaultCode` — safety signature/download/change events
-
-**Official references:**
-- ESTOP and CROUT instructions: Studio 5000 Logix Designer safety instructions reference
-- GuardLogix 5580 and Compact GuardLogix 5380 safety reference manual
-
+         SO_K2 := CROUT_M1.O2</code></pre>
+<p><strong>What to log:</strong> <code>ESTOP_E1.FP</code>, <code>ESTOP_E1.II</code>, <code>ESTOP_E1.CRHO</code> — <code>CROUT_M1.FP</code>, <code>CROUT_M1.FaultCode</code> — safety signature/download/change events</p>
+<p><strong>Official references:</strong></p>
+<ul>
+<li>ESTOP and CROUT instructions: Studio 5000 Logix Designer safety instructions reference</li>
+<li>GuardLogix 5580 and Compact GuardLogix 5380 safety reference manual</li>
+</ul>
+</div>
 </details>
 
 <details>
 <summary>Siemens S7-1500F / ET200SP</summary>
-
-> **Note:** Instruction names and operands are vendor-specific. Verify against the applicable TIA Portal F-library and S7-1500F safety programming manual for the installed firmware and hardware version.
-
-**Typical safety tags:**
-- `fdiEstopGlobal` — F-DI dual-channel evaluated E-stop signal
-- `DataToSafety.Acknowledge` — standard-to-safety acknowledge crossing
-- `fdiK1Fb`, `fdiK2Fb` — contactor feedback inputs
-- `qSafetyK1`, `qSafetyK2` — safety outputs to contactors
-- `qSafetyK1_VS`, `qSafetyK2_VS` — F-DO value status bits
-
-**F-program network structure (pseudocode):**
-
-```text
-Network 1 — GlobalEstop : ESTOP1
+<div style="padding:0.5rem 0 0.5rem 1rem">
+<blockquote><p><strong>Note:</strong> Instruction names and operands are vendor-specific. Verify against the applicable TIA Portal F-library and S7-1500F safety programming manual for the installed firmware and hardware version.</p></blockquote>
+<p><strong>Typical safety tags:</strong></p>
+<ul>
+<li><code>fdiEstopGlobal</code> — F-DI dual-channel evaluated E-stop signal</li>
+<li><code>DataToSafety.Acknowledge</code> — standard-to-safety acknowledge crossing</li>
+<li><code>fdiK1Fb</code>, <code>fdiK2Fb</code> — contactor feedback inputs</li>
+<li><code>qSafetyK1</code>, <code>qSafetyK2</code> — safety outputs to contactors</li>
+<li><code>qSafetyK1_VS</code>, <code>qSafetyK2_VS</code> — F-DO value status bits</li>
+</ul>
+<p><strong>F-program network structure (pseudocode):</strong></p>
+<pre><code>Network 1 — GlobalEstop : ESTOP1
   E_STOP := fdiEstopGlobal; ACK_NEC := TRUE; ACK := DataToSafety.Acknowledge
 
 Network 2 — FbK1 : FDBACK
@@ -343,16 +338,15 @@ Network 3 — FbK2 : FDBACK
   ACK_NEC := TRUE; ACK := DataToSafety.Acknowledge; FDB_TIME := T#500ms; Q := qSafetyK2
 
 Network 4 — AckGlobal : ACK_GL
-  ACK_GLOB := DataToSafety.Acknowledge
-```
-
-**What to log:** `GlobalEstop.ACK_REQ/DIAG` — `FbK1/FbK2.ERROR/ACK_REQ/DIAG` — F-I/O passivation/reintegration — safety compile/download/signature/mode change
-
-**Official references:**
-- ESTOP1, FDBACK, ACK_GL: S7-1500F safety programming manual (Siemens Industry Online Support)
-- Feedback monitoring application: support article 21331098
-- Safety programming guideline: support article 109750255
-
+  ACK_GLOB := DataToSafety.Acknowledge</code></pre>
+<p><strong>What to log:</strong> <code>GlobalEstop.ACK_REQ/DIAG</code> — <code>FbK1/FbK2.ERROR/ACK_REQ/DIAG</code> — F-I/O passivation/reintegration — safety compile/download/signature/mode change</p>
+<p><strong>Official references:</strong></p>
+<ul>
+<li>ESTOP1, FDBACK, ACK_GL: S7-1500F safety programming manual (Siemens Industry Online Support)</li>
+<li>Feedback monitoring application: support article 21331098</li>
+<li>Safety programming guideline: support article 109750255</li>
+</ul>
+</div>
 </details>
 
 ---
