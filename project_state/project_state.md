@@ -1,9 +1,9 @@
 # Project State
 
-**Last Updated:** 2026-03-15
+**Last Updated:** 2026-03-22
 **Status:** Active
 **Current Phase:** Phase 20 COMPLETE — Software Safety Stack Deepening
-**Next Phase:** Phase 21 QUEUED — TBD
+**Next Phase:** Phase 21 COMPLETE — Lifecycle Stage Page Expansion
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -12,7 +12,7 @@ This file is the source of truth for the current project state, active implement
 
 ## Current Direction
 
-Phase 19 is complete and the workflow-first navigation model is now live on the site. The next planned work shifts to the software-stack reference path: clarify the boundary between PLC language standards and safety lifecycle standards, improve practical guidance for traceability and logging, and make the software safety routing material easier to use from both the canonical RAG and the site.
+Phases 19 and 20 are complete. All 13 lifecycle stage pages (Stages 1–11 plus Safety Requirements Spec and Management of Change) are now comprehensive engineering references with detailed guidance, not thin stubs. The lifecycle pages serve as the primary navigation hub for all phases of system development, from initial concept through maintenance.
 
 The site is a presentation and navigation layer on top of `control-standards/rag/`. Authoritative engineering and standards guidance stays in `control-standards/rag/`. The website never modifies RAG content.
 
@@ -24,7 +24,7 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 - Mermaid.js CDN integration for all diagrams; Cytoscape.js 3.28.1 for interactive standards graph
 - Google Analytics tag installed sitewide in `docs/_layouts/default.html` using measurement ID `G-RPL3G47EFZ`
 - GitHub Actions deployment workflow at `.github/workflows/pages.yml`
-- Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 12 lifecycle pages including safety wiring, 9 scenarios, 6 crosswalk pages, 9 industry overlays, glossary (45 terms), training (41 surfaced modules across 4 groups), workflows (5 pages), commissioning templates (7 pages), software stack, and about / trust boundary
+- Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 13 lifecycle stage pages (all comprehensive references), 9 scenarios, 6 crosswalk pages, 9 industry overlays, glossary (45 terms), training (41 surfaced modules across 4 groups), workflows (5 pages), commissioning templates (7 pages), software stack, reference models (4 pages), and about / trust boundary
 - Interactive standards graph: 12 nodes, 16 edges, including IEC 60079, IEC 61511, and SEMI
 - Training groups: Electrical Fundamentals (9 modules), Motors/Drives (13), NEC (11), Control Systems (7)
 - Commissioning checklists at `/commissioning-templates/` (Phase 18 Track B+C): 7 pages with template header fill-in block, checkbox UI, cross-links; `/field-engineering/` redirects to new URL
@@ -483,3 +483,37 @@ Design: `docs/plans/2026-03-10-phase14-training-curriculum-design.md`
 - [x] RAG corpus updated: IEC 61131-3:2025 edition note; Normal PLC vs Safety PLC vs SIS comparison table; expanded E-stop section with canonical tag names, I/O list, 7-rung pseudocode, sequence of operation, documentation checklist, logging checklist; Rockwell GuardLogix and Siemens S7-1500F vendor patterns
 - [x] `/software-stack/` site page updated: edition note, comparison table section, expanded E-stop with Mermaid wiring/architecture and state machine diagrams, vendor-specific `<details>` blocks
 - [x] Jekyll build: clean, 132 pages
+
+## Phase 21 Scope — Lifecycle Stage Page Expansion — COMPLETE
+
+**Objective:** Transform all lifecycle stage pages from thin stubs into comprehensive engineering references with detailed guidance, decision criteria, cross-links, and practical examples.
+
+### Pages Expanded (Existing → Full)
+- [x] `docs/lifecycle/index.md` — lifecycle overview with introduction section and 13-stage table
+- [x] `docs/lifecycle/concept/index.md` — Stage 01 (42 lines → ~300 lines)
+- [x] `docs/lifecycle/standards-selection/index.md` — Stage 02 (59 lines → ~500 lines)
+- [x] `docs/lifecycle/risk-assessment/index.md` — Stage 03 (62 lines → ~600 lines)
+- [x] `docs/lifecycle/safety-architecture/index.md` — Stage 04 (67 lines → ~770 lines)
+- [x] `docs/lifecycle/detailed-design/index.md` — Stage 05 (58 lines → ~680 lines)
+- [x] `docs/lifecycle/draft-documentation/index.md` — Stage 06 (41 lines → ~580 lines)
+- [x] `docs/lifecycle/build/index.md` — Stage 07 (74 lines → ~760 lines)
+- [x] `docs/lifecycle/installation/index.md` — Stage 08 (46 lines → ~580 lines)
+- [x] `docs/lifecycle/pre-commissioning/index.md` — Stage 09 (46 lines → ~800 lines)
+- [x] `docs/lifecycle/commissioning/index.md` — Stage 10 (60 lines → ~1000 lines)
+- [x] `docs/lifecycle/maintenance/index.md` — Stage 11 (57 lines → ~1000 lines)
+
+### Pages Created (New)
+- [x] `docs/lifecycle/safety-requirements-spec/index.md` — Stage 3.5 (new)
+- [x] `docs/lifecycle/management-of-change/index.md` — Stage 12 (new)
+
+### Content Pattern (All Pages)
+Each expanded lifecycle stage page includes:
+- Purpose and scope summary
+- Key decisions and decision criteria
+- Related standards and standards guidance
+- Practical guidance with checklists or step-by-step instructions
+- Cross-links to related training modules, workflows, and reference material
+- See Also links to adjacent lifecycle stages
+
+### Build
+- [x] Jekyll build: clean, 132 pages (no change from Phase 20)
