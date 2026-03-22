@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-03-14
+**Last Updated:** 2026-03-22
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,15 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-03-22 — Phase 21: Lifecycle Stage Page Expansion
+
+- Expanded all 12 lifecycle stage pages (Stages 01–11 plus Safety Wiring) from thin stubs (41–74 lines) to comprehensive engineering references (580–1000+ lines)
+- Created 2 new pages: Stage 3.5 (Safety Requirements Specification) and Stage 12 (Management of Change)
+- Updated `docs/lifecycle/index.md` with expanded introduction section and 13-stage table (all stages now comprehensive)
+- All lifecycle pages now follow consistent content pattern: purpose/scope, key decisions, related standards, practical guidance, checklists, cross-links to training/workflows/reference material
+- No new pages added beyond the 2 planned new stages; lifecycle section maintains stable URL structure
+- Jekyll build: clean, 132 pages (no change in page count from Phase 20)
 
 ## 2026-03-15 — Phase 20: Software Safety Stack Deepening
 
