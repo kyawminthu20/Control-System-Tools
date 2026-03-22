@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-03-21 22:38:43
+**Last Auto-Updated:** 2026-03-21 22:42:02
 
 ```text
 ├── .claude/
@@ -4094,6 +4094,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   ├── risk-assessment/
 │   │   │   └── index.md
 │   │   ├── safety-architecture/
+│   │   │   └── index.md
+│   │   ├── safety-requirements-spec/
 │   │   │   └── index.md
 │   │   ├── safety-wiring/
 │   │   │   └── index.md
