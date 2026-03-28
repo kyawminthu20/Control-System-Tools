@@ -135,8 +135,8 @@ topic_groups:
   - key: "control-systems"
     label: "Control Systems"
     url: "/training/control-systems/"
-    description: "Control theory, PID intuition, industrial PLC implementation, loop architectures, and applied heater and motion-control examples."
-    module_count: 7
+    description: "Control theory, PID intuition, industrial PLC implementation, loop architectures, applied heater and motion-control examples, state machines, interlocks, and servo commissioning."
+    module_count: 14
 
 related_standards:
   - title: "NEC (NFPA 70)"
@@ -734,4 +734,91 @@ modules:
     type: "Applied"
     prerequisites:
       - "Industrial Control Loop Architectures"
+    featured: false
+
+  - title: "Machine State Model"
+    url: "/training/control-systems/machine-state-model/"
+    group: "control-systems"
+    group_label: "Control Systems"
+    summary: "How to design structured control logic using finite state machines — states, transitions, entry conditions, and fault handling for deterministic machine behavior."
+    level: "Intermediate"
+    time: "25 min"
+    focus: "Controls / Logic"
+    type: "Concept"
+    prerequisites: []
+    featured: false
+
+  - title: "Interlocks, Permissives & Safety Trips"
+    url: "/training/control-systems/interlocks-permissives-safety-trips/"
+    group: "control-systems"
+    group_label: "Control Systems"
+    summary: "Three distinct layers of protective logic — permissives prevent start, interlocks maintain operation, safety trips override everything — and why they must be kept separate."
+    level: "Intermediate"
+    time: "20 min"
+    focus: "Controls / Safety"
+    type: "Concept"
+    prerequisites: []
+    featured: false
+
+  - title: "Async Faults in Distributed Systems"
+    url: "/training/control-systems/async-faults-distributed-systems/"
+    group: "control-systems"
+    group_label: "Control Systems"
+    summary: "Detection, classification, and response for faults that arrive out of sequence across multi-device control architectures — PLCs, drives, safety controllers, and networked I/O."
+    level: "Advanced"
+    time: "25 min"
+    focus: "Controls / Architecture"
+    type: "Concept"
+    prerequisites:
+      - "Machine State Model"
+    featured: false
+
+  - title: "Deterministic vs Non-Deterministic Control"
+    url: "/training/control-systems/deterministic-nondeterministic-control/"
+    group: "control-systems"
+    group_label: "Control Systems"
+    summary: "Why real-time control requires deterministic timing, how PLC scan cycles and fieldbus protocols provide it, and how to separate time-critical control from monitoring and analytics layers."
+    level: "Intermediate"
+    time: "20 min"
+    focus: "Controls / Architecture"
+    type: "Concept"
+    prerequisites: []
+    featured: false
+
+  - title: "Servo Tuning Strategy"
+    url: "/training/control-systems/servo-tuning/"
+    group: "control-systems"
+    group_label: "Control Systems"
+    summary: "Loop-by-loop servo commissioning from mechanical validation through current, velocity, and position loop tuning — including resonance detection, notch filters, and feedforward."
+    level: "Advanced"
+    time: "25 min"
+    focus: "Controls / Motion"
+    type: "Technique"
+    prerequisites:
+      - "Control Loop Architectures"
+    featured: false
+
+  - title: "Vibration and Resonance in Control Systems"
+    url: "/training/control-systems/vibration-resonance/"
+    group: "control-systems"
+    group_label: "Control Systems"
+    summary: "Physical causes of vibration and resonance in controlled mechanical systems, detection methods including FFT, and the mechanical and control strategies used to mitigate them."
+    level: "Intermediate"
+    time: "20 min"
+    focus: "Controls / Motion"
+    type: "Concept"
+    prerequisites: []
+    featured: false
+
+  - title: "Multi-Axis Coordination"
+    url: "/training/control-systems/multi-axis-coordination/"
+    group: "control-systems"
+    group_label: "Control Systems"
+    summary: "How coordinated motion controllers synchronize multiple axes — master-slave coupling, electronic gearing, interpolation modes, and the architecture decisions that determine accuracy and safety."
+    level: "Advanced"
+    time: "25 min"
+    focus: "Controls / Motion"
+    type: "Concept"
+    prerequisites:
+      - "Servo Tuning Strategy"
     featured: false

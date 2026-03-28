@@ -18,6 +18,20 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-03-27 — Control Systems Training Expansion (7 new modules)
+
+- Added 7 training modules to `docs/training/control-systems/` from `planning/phase_27march26/` content:
+  - Machine State Model (FSM types, state design, fault handling)
+  - Interlocks, Permissives & Safety Trips (definitions, logic separation, bypass design)
+  - Async Faults in Distributed Systems (detection, classification, response, recovery)
+  - Deterministic vs Non-Deterministic Control (real-time requirements, architecture separation)
+  - Servo Tuning Strategy (loop-by-loop workflow, resonance detection, notch filters, feedforward)
+  - Vibration and Resonance (causes, detection, mechanical and control mitigation)
+  - Multi-Axis Coordination (master-slave, electronic gearing, interpolation, gantry)
+- Updated `_data/training_catalog.yml`: 7 module entries added, module_count 7 → 14, description updated
+- Jekyll build: clean
+- `planning/phase_27march26/things_to_fix.md` (lifecycle improvements) deferred — separate task
+
 ## 2026-03-22 — Phase 21: Lifecycle Stage Page Expansion
 
 - Expanded all 12 lifecycle stage pages (Stages 01–11 plus Safety Wiring) from thin stubs (41–74 lines) to comprehensive engineering references (580–1000+ lines)
