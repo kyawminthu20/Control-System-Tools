@@ -1,6 +1,6 @@
 # Project State
 
-**Last Updated:** 2026-03-22
+**Last Updated:** 2026-03-27
 **Status:** Active
 **Current Phase:** Phase 20 COMPLETE — Software Safety Stack Deepening
 **Next Phase:** Phase 21 COMPLETE — Lifecycle Stage Page Expansion
@@ -26,7 +26,7 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 - GitHub Actions deployment workflow at `.github/workflows/pages.yml`
 - Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 13 lifecycle stage pages (all comprehensive references), 9 scenarios, 6 crosswalk pages, 9 industry overlays, glossary (45 terms), training (41 surfaced modules across 4 groups), workflows (5 pages), commissioning templates (7 pages), software stack, reference models (4 pages), and about / trust boundary
 - Interactive standards graph: 12 nodes, 16 edges, including IEC 60079, IEC 61511, and SEMI
-- Training groups: Electrical Fundamentals (9 modules), Motors/Drives (13), NEC (11), Control Systems (7)
+- Training groups: Electrical Fundamentals (9 modules), Motors/Drives (13), NEC (11), Control Systems (14)
 - Commissioning checklists at `/commissioning-templates/` (Phase 18 Track B+C): 7 pages with template header fill-in block, checkbox UI, cross-links; `/field-engineering/` redirects to new URL
 - Reference models at `/reference/` (Phase 18 Track C): 5 pages covering machine architecture, safety architecture, compliance stack, and motor selection matrix; sidebar "Reference Models" block added
 - Root `main.py` remains a placeholder (not the site)
