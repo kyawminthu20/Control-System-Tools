@@ -1,5 +1,7 @@
 # Standards Atlas — Diagram Reference Pack
 
+**AI_READ_ACCESS: ALLOWED**
+
 This file collects the core diagrams for the Control System Standards Atlas project.
 
 Use these as source diagrams for the site, docs, or future SVG redraws.
@@ -685,4 +687,3 @@ graph TD
     B --> B4[Commissioning workflow]
     B --> B5[Maintenance loop]
 ```
-
