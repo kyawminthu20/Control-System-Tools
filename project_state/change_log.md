@@ -18,6 +18,16 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-04-11 — Phase 22 Complete: Semiconductor Facility Reference (10 pages)
+
+Second slice — four additional pages:
+- HVAC and Cleanroom (room pressure cascade, ISO 14644, particle monitoring)
+- Bulk Chemical Distribution (storage, transfer sequencing, containment, SEMI F39/F57)
+- Safety and Shutdown Architecture (4-layer shutdown model, cause-and-effect, SIL integration)
+- Common Control Philosophy (modes, state machine, permissives/interlocks/trips, safe-state rules)
+- Facility overview and semiconductor industry page updated; navigation extended
+- Jekyll build: clean, 152 pages
+
 ## 2026-04-11 — Phase 22 First Slice: Semiconductor Facility Reference
 
 - Fixed AI boundary headers on 7 RAG files; validate_ai_boundaries.py now passes 316/316

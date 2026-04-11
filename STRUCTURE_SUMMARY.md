@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-04-11 07:39:41
+**Last Auto-Updated:** 2026-04-11 07:45:16
 
 ```text
 ├── .claude/
@@ -2422,7 +2422,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 1e/
 │   │               │   ├── 48a3689b1851c7e900cf8573cba53b7c3812c36935d0403c3ead0b5ecb3fa1
 │   │               │   ├── 66cf06507d7410aa2c21264d3c2affb5b5ef8e49f1ec94db2a1285d47a9225
-│   │               │   └── a40bb730a09e050e0d130b83f90af7ccf9cb5f12db8907a1f17f734cbb89cc
+│   │               │   ├── a40bb730a09e050e0d130b83f90af7ccf9cb5f12db8907a1f17f734cbb89cc
+│   │               │   └── e76252f7f7c3677aa8032f04364ca17e1939fe0c23f3eba350f9d913033b7d
 │   │               ├── 1f/
 │   │               │   └── ecc2fdd009c57f77739f4c8efd3c82c2034598daaf82b6d7e8989bd75f696d
 │   │               ├── 21/
@@ -2433,7 +2434,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 10a2e52d8068e80d62b9bcc513338e87235b5f7de581a98baa0c54e1c34895
 │   │               │   └── 7ae4631ab84a0848ee51d4ecb6b14d359e0e4555074581c35f903dfdc94737
 │   │               ├── 24/
-│   │               │   └── acf13ae9c5b58b350a8a999ace22166b603c017ffb25b9a8da7f76c6d28896
+│   │               │   ├── acf13ae9c5b58b350a8a999ace22166b603c017ffb25b9a8da7f76c6d28896
+│   │               │   └── edb242d867d57ac61d78eaa8b7f0e26c1362a226de47c5b1008405cd2117d6
 │   │               ├── 25/
 │   │               │   ├── 5cbfca59e5fe6e714f7c7d1e2fee372056e8b02ec0f015aa69adf87fc9a3f3
 │   │               │   ├── 8e30e04480a1d85dfbce1ae190a0d36926dbc8e652e2f007f1afdabe1b4bd9
@@ -2501,7 +2503,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 0b48fc82605fe676f17415632e8cbd4fb2a2108041b657de120996fe62bf1a
 │   │               │   └── f5a1dd8004e8bb494626da30050a44f8ce5cd3532ce34a2b1f8881414bc49b
 │   │               ├── 3d/
-│   │               │   └── f4d444ee0040c89311c2d73c3326794e46176bf3eb9d6c6a849a664aa51167
+│   │               │   ├── f4d444ee0040c89311c2d73c3326794e46176bf3eb9d6c6a849a664aa51167
+│   │               │   └── fb4be7eb8ca78a4b849b62ba4911baf3f1635b82549bf0df8c6fd72799abfe
 │   │               ├── 3e/
 │   │               │   ├── 1e1f43b06cff00e9bd8b3b778c436c9b173dd2e46a7b5b78de0d6ce1697269
 │   │               │   ├── 491f2324282db8d41f0167d9241d7c2bb0c494806e124d0531010654a59e7f
@@ -2528,7 +2531,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── 48/
 │   │               │   ├── 711ded23f4d44a83ff66b4c8df126dce4846f218a679579a37c07e4b02f7df
 │   │               │   ├── eaf50a3fd41c4a645e8800cec9b3e7bc4f409c81d9b84ae41289c5b3a6423a
-│   │               │   └── ed0004ccf9059e380a5c6e39defdd629ec0f6ca7e07f16db7f61c7595af7a8
+│   │               │   ├── ed0004ccf9059e380a5c6e39defdd629ec0f6ca7e07f16db7f61c7595af7a8
+│   │               │   └── efeab150b284c85e4fc00a1e5a96e918fb74a14e18cef6f3fb8a409127a1e1
 │   │               ├── 4a/
 │   │               │   ├── 67fb88704aac3c2bd6bb8c5d17208f2ca69ea25dc191269f9dc1761a8a5049
 │   │               │   └── bcfa516046cce0b54e4f47f520b353d8d65a48d64ca324b0abc08121635e92
@@ -2561,6 +2565,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── cf8f0c070d169fb3fef827c700769e2a12bed680a6cbc8ee95fecb9494a91c
 │   │               ├── 54/
 │   │               │   └── b1cee77d814a013a49ea5812b9ba5f72686c8390a7f653da473595396c31de
+│   │               ├── 55/
+│   │               │   └── 6c562ba8b8aa76e703a7029188edefca6d536d72688a9d6b7aee2c06fbf527
 │   │               ├── 56/
 │   │               │   └── cee6eb2ecfd36fe8bf42ad458c420366d182b14444c83225acf77adcc38c11
 │   │               ├── 57/
@@ -2579,8 +2585,10 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   └── d7fa4c5a9f6512886109baae864d51b7df7e83c59386d96e1730231d996117
 │   │               ├── 5c/
 │   │               │   ├── 89640df2443aa0d8cc29262765c2de8514a348524c3c271900ab45566232cc
-│   │               │   └── cdb18abe60328a96f7a98b464b9bb2574e3ca7331c6fb80eb22e19c580bfd4
+│   │               │   ├── cdb18abe60328a96f7a98b464b9bb2574e3ca7331c6fb80eb22e19c580bfd4
+│   │               │   └── d7fc4959305430745f5ed3534b06dd721a74632b616047ebcd1a07d67d17a5
 │   │               ├── 5d/
+│   │               │   ├── 0789ecd9045f31da1715b883c61d6bbbeb4fc5b983d4091588d7edce429fc9
 │   │               │   └── c5c9d9b62f7fc4bdd8f3206f7c30c0e07057aff5aa652d0df26dc53fa9cdec
 │   │               ├── 5e/
 │   │               │   ├── 4e6869431b397914666f2b29bde912e1e5a98199db701d5f4b288384c7b154
@@ -2772,6 +2780,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── a6/
 │   │               │   ├── 53538fe99ac7aa8c2784e88c9d92b750598971c2a7eed80d2e3124535862f8
 │   │               │   ├── aa48554c535aede630a881f7192ce9e95db5ef23951641aa4756255e8a09dd
+│   │               │   ├── c854957225d3db55f54fdb940986da035643315225dcaeaa7bd886a9a0b042
 │   │               │   └── ea9eca2f0fd8b821ed941651a07f433957b83e4deed7e7231cf6f689d8ccf4
 │   │               ├── a7/
 │   │               │   ├── 3f96d849ce9d605cf862ad34599f0797b1920c1d3e2fc4c887cb59c33b8a65
@@ -2810,11 +2819,14 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               ├── b2/
 │   │               │   └── e5bca22395754bc7201e96b2b02289851cce6945b939836f8b35506f65dc1e
 │   │               ├── b3/
-│   │               │   └── 28d3db6d0c11bed2ccb7065759d8d3f6bbd9428f9cd1eb8ae5d424d3befc20
+│   │               │   ├── 28d3db6d0c11bed2ccb7065759d8d3f6bbd9428f9cd1eb8ae5d424d3befc20
+│   │               │   └── 2e91870e7fc06f71cbcd0f5d01adfa5c97f9b918010403c59ada91097e061a
 │   │               ├── b4/
 │   │               │   └── 9d4b8050e207fc3da10561630d43cdd5f6b4fdaf85f0423fb8a58f20e41f29
 │   │               ├── b5/
 │   │               │   └── 962ee97213d04243717791ac01e6d190aff82508812a68cf21bfa3df56b4ca
+│   │               ├── b6/
+│   │               │   └── 29a1f5443ef3c95546f1d5ac0af5bb2e293900cb9e6aa7b0916cd1d00e5780
 │   │               ├── b7/
 │   │               │   └── f9051511b52b858877c30e7f1f7780086d2b191419c957581ba72443d071d1
 │   │               ├── b8/
@@ -2837,13 +2849,15 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── 95676f875dbe1ed653aa3270940d5093114ed4c507112aa643f2dee829be14
 │   │               │   └── d21474221fb80bbc58a462fadc38218f33ffdf2014402acc53301d3e5f7d65
 │   │               ├── bf/
+│   │               │   ├── 0386dbedfe7ec8677664d564b9cb953804e901af82f9df6413b5ee0f3e7a74
 │   │               │   ├── 65d720ecd5a870a551b6e2af2f9ed1545a91a612119f071a4d7145892e8801
 │   │               │   ├── 6bc0b2ee31345100572fb539a65f9bbb7ae04b3392d53f663e0c9bed14384d
 │   │               │   └── d07b602ef853a54e29acc2fe17bd6b8308bb1e6848b7ca146c5fad1432431d
 │   │               ├── c1/
 │   │               │   └── 8e3fce589275c09a49f1a4cc7677ad37b290a8c78dbe1646be80feb378da27
 │   │               ├── c2/
-│   │               │   └── a59d3cec722642525d9639514c6f4fd24c0292d5668a14c5a7c36bee5cbbb7
+│   │               │   ├── a59d3cec722642525d9639514c6f4fd24c0292d5668a14c5a7c36bee5cbbb7
+│   │               │   └── f0bde65540068b225bee9daff2571ba7705273b4e4e031db34b01fafaacb97
 │   │               ├── c3/
 │   │               │   └── 10195511914fa4ee2be29d017309cf6860ad2442004b75baaa2c66f23d7a63
 │   │               ├── c4/
@@ -2856,7 +2870,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │               │   ├── c3da26f95bb86eb05aeb70cfd28850446cb9d2577313e1ebd7eaeb879bc270
 │   │               │   └── d5e20a5f7b3fca081d0e9fefda3ed37bceb84e645a9d71e24adc07baece46b
 │   │               ├── ca/
-│   │               │   └── 14ebbed9e097e62b5bde018598738bf2e80f069b094b9e699872e7c357404f
+│   │               │   ├── 14ebbed9e097e62b5bde018598738bf2e80f069b094b9e699872e7c357404f
+│   │               │   └── 239969b62a2fcca75b33ef39916facae28865072df9e9d6cd3804e42acb906
 │   │               ├── cb/
 │   │               │   ├── 2747846fce151666135aebce8a8af85eb1eea8cdbde7f7e7ea77f795066b00
 │   │               │   ├── cfdb47266f87707944aaaf87a8dc65d1bef287c103906a72e569d898fa290a
@@ -2992,6 +3007,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │                   ├── 16240c479439aeb448a11e06d8d6c63e95859523d2a5d7673926dc32eed4b9
 │   │                   ├── 45420ed5d0ee9bdc229ae5394a95d074082406b908e17afe4dd45effd68abe
 │   │                   ├── 527170967d14120cac36196685f0f75623c060496026a0c89cc63e987a6a63
+│   │                   ├── 97c85c0328dee2e695e52e6999b5e829104c01a8abbbccdea6575bcfc13f37
 │   │                   └── af8159150bc679d8337ef5a4200d901204d5d436413abf6c200b3cfe5debdd
 │   ├── Gemfile
 │   ├── Gemfile.lock
@@ -3379,12 +3395,20 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   │   └── index.html
 │   │   │   └── semiconductor/
 │   │   │       ├── facility/
+│   │   │       │   ├── bulk-chemical/
+│   │   │       │   │   └── index.html
 │   │   │       │   ├── bulk-specialty-gas/
+│   │   │       │   │   └── index.html
+│   │   │       │   ├── control-philosophy/
 │   │   │       │   │   └── index.html
 │   │   │       │   ├── exhaust-abatement/
 │   │   │       │   │   └── index.html
+│   │   │       │   ├── hvac-cleanroom/
+│   │   │       │   │   └── index.html
 │   │   │       │   ├── index.html
 │   │   │       │   ├── instrumentation/
+│   │   │       │   │   └── index.html
+│   │   │       │   ├── safety-shutdown/
 │   │   │       │   │   └── index.html
 │   │   │       │   ├── tool-facility-interface/
 │   │   │       │   │   └── index.html
@@ -4026,12 +4050,20 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   └── index.md
 │   │   └── semiconductor/
 │   │       ├── facility/
+│   │       │   ├── bulk-chemical/
+│   │       │   │   └── index.md
 │   │       │   ├── bulk-specialty-gas/
+│   │       │   │   └── index.md
+│   │       │   ├── control-philosophy/
 │   │       │   │   └── index.md
 │   │       │   ├── exhaust-abatement/
 │   │       │   │   └── index.md
+│   │       │   ├── hvac-cleanroom/
+│   │       │   │   └── index.md
 │   │       │   ├── index.md
 │   │       │   ├── instrumentation/
+│   │       │   │   └── index.md
+│   │       │   ├── safety-shutdown/
 │   │       │   │   └── index.md
 │   │       │   ├── tool-facility-interface/
 │   │       │   │   └── index.md
