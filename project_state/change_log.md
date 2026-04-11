@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-03-22
+**Last Updated:** 2026-04-11
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,22 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-11 — Phase 22 First Slice: Semiconductor Facility Reference
+
+- Fixed AI boundary headers on 7 RAG files; validate_ai_boundaries.py now passes 316/316
+- Committed `planning/semi_facility/` staging area to git
+- Promoted 10 staging files to `control-standards/rag/design_framework/semiconductor_facility/` with proper headers and `_index.yaml`
+- Built 6 new Jekyll pages under `docs/industries/semiconductor/facility/`:
+  - Facility overview + standards selection flowchart
+  - Bulk Specialty Gas Systems
+  - UPW and Wastewater Systems
+  - Exhaust and Abatement Systems
+  - Tool-Facility Interface
+  - Instrumentation Reference (full use matrix by system)
+- Added Semiconductor Facility sub-tree to `docs/_data/navigation.yml`
+- Cross-linked from existing semiconductor industry page
+- Jekyll build: clean, 148 pages (up from 142)
 
 ## 2026-03-27 — Control Systems Training Expansion (7 new modules)
 

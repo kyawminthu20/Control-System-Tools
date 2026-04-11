@@ -87,6 +87,20 @@
   children:
     - label: "Semiconductor"
       url: "/industries/semiconductor/"
+      children:
+        - label: "Facility Reference"
+          url: "/industries/semiconductor/facility/"
+          children:
+            - label: "Bulk Specialty Gas"
+              url: "/industries/semiconductor/facility/bulk-specialty-gas/"
+            - label: "UPW and Wastewater"
+              url: "/industries/semiconductor/facility/upw-wastewater/"
+            - label: "Exhaust and Abatement"
+              url: "/industries/semiconductor/facility/exhaust-abatement/"
+            - label: "Tool-Facility Interface"
+              url: "/industries/semiconductor/facility/tool-facility-interface/"
+            - label: "Instrumentation"
+              url: "/industries/semiconductor/facility/instrumentation/"
     - label: "Food &amp; Beverage"
       url: "/industries/food-and-beverage/"
     - label: "Energy"
