@@ -1,9 +1,9 @@
 # Project State
 
-**Last Updated:** 2026-03-27
+**Last Updated:** 2026-04-11
 **Status:** Active
-**Current Phase:** Phase 20 COMPLETE — Software Safety Stack Deepening
-**Next Phase:** Phase 21 COMPLETE — Lifecycle Stage Page Expansion
+**Current Phase:** Phase 22 IN PROGRESS — Semiconductor Facility Reference (First Slice)
+**Next Phase:** Phase 22 Continuation — HVAC/Cleanroom, Bulk Chemical, Safety/Shutdown Architecture pages
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -12,14 +12,16 @@ This file is the source of truth for the current project state, active implement
 
 ## Current Direction
 
-Phases 19 and 20 are complete. All 13 lifecycle stage pages (Stages 1–11 plus Safety Requirements Spec and Management of Change) are now comprehensive engineering references with detailed guidance, not thin stubs. The lifecycle pages serve as the primary navigation hub for all phases of system development, from initial concept through maintenance.
+Phases 19–21 are complete. Phase 22 (Semiconductor Facility Reference) first slice is implemented. The facility reference section covers gas systems, UPW and wastewater, exhaust and abatement, tool-facility interfaces, and instrumentation — promoted from planning/semi_facility/ staging area into the RAG corpus and Jekyll site.
+
+All 13 lifecycle stage pages (Stages 1–11 plus Safety Requirements Spec and Management of Change) are now comprehensive engineering references. The lifecycle pages serve as the primary navigation hub for all phases of system development, from initial concept through maintenance.
 
 The site is a presentation and navigation layer on top of `control-standards/rag/`. Authoritative engineering and standards guidance stays in `control-standards/rag/`. The website never modifies RAG content.
 
 ## Current Reality
 
 - Jekyll site deployed on GitHub Pages — `https://kyawminthu20.github.io/Control-System-Tools/`
-- Last validated Jekyll build: 132 pages, clean build
+- Last validated Jekyll build: 148 HTML files, clean build (verified 2026-04-11; Phase 22 first slice added 6 pages)
 - Three-panel layout (sidebar 240px + main content + context panel 220px); sidebar data-driven from `docs/_data/navigation.yml` with 5 top-level groups (Engineering Workflow, Standards, Training, Industries, Reference)
 - Mermaid.js CDN integration for all diagrams; Cytoscape.js 3.28.1 for interactive standards graph
 - Google Analytics tag installed sitewide in `docs/_layouts/default.html` using measurement ID `G-RPL3G47EFZ`
@@ -517,3 +519,149 @@ Each expanded lifecycle stage page includes:
 
 ### Build
 - [x] Jekyll build: clean, 132 pages (no change from Phase 20)
+
+## Phase 22 State — Semiconductor Facility Reference (In Progress)
+
+**Last verified:** 2026-04-11
+
+### Step 0 — Hygiene — COMPLETE
+- [x] AI_READ_ACCESS headers fixed on 7 RAG files (IEC 62443 + reference models)
+- [x] `validate_ai_boundaries.py` passes 305/305 (now 316/316 after RAG promotion)
+- [x] `validate_reorg.sh all` passes 49/50 (archive check is pre-existing known gap)
+- [x] `planning/semi_facility/` committed as draft (was untracked)
+
+### Step 1 — Promote System and Instrumentation Notes into RAG — COMPLETE
+- [x] Created `control-standards/rag/design_framework/semiconductor_facility/` with `_index.yaml`
+- [x] 10 files promoted from staging with updated headers (AI_READ_ACCESS: ALLOWED, CONTENT_CLASS: DERIVED_REFERENCE):
+  - `bulk_specialty_gas.md`
+  - `bulk_chemical_distribution.md`
+  - `upw_and_wastewater.md`
+  - `exhaust_abatement_vacuum.md`
+  - `hvac_and_cleanroom.md`
+  - `safety_and_shutdown.md`
+  - `tool_facility_interface.md`
+  - `common_control_philosophy.md`
+  - `instrumentation_use_matrix.md`
+  - `instrumentation_selection.md`
+
+### Step 2 — Build Jekyll Section (First Slice) — COMPLETE
+- [x] `docs/industries/semiconductor/facility/index.md` — overview + standards selection flowchart + cross-cutting design threads
+- [x] `docs/industries/semiconductor/facility/bulk-specialty-gas/index.md`
+- [x] `docs/industries/semiconductor/facility/upw-wastewater/index.md`
+- [x] `docs/industries/semiconductor/facility/exhaust-abatement/index.md`
+- [x] `docs/industries/semiconductor/facility/tool-facility-interface/index.md`
+- [x] `docs/industries/semiconductor/facility/instrumentation/index.md`
+
+### Step 3 — Wire Navigation and Cross-Links — COMPLETE
+- [x] `docs/_data/navigation.yml` — Semiconductor Facility sub-tree added under Industries > Semiconductor
+- [x] `docs/industries/semiconductor/index.md` — Semiconductor Facility Reference table added at bottom
+- [x] Jekyll build: clean, **148 pages**
+
+### Remaining (Phase 22 Continuation)
+- [ ] HVAC and cleanroom page — from `hvac_and_cleanroom.md` RAG
+- [ ] Bulk chemical distribution page — from `bulk_chemical_distribution.md` RAG
+- [ ] Safety and shutdown architecture page — from `safety_and_shutdown.md` RAG
+- [ ] Common control philosophy page — from `common_control_philosophy.md` RAG
+
+**Original planning context:**
+
+### Baseline Reality
+
+- Jekyll site and GitHub Pages deploy are real and working: `docs/_config.yml` + `.github/workflows/pages.yml`
+- Actual build output: **142 HTML files** (earlier entries said 132 — corrected)
+- Existing semiconductor coverage is **equipment-focused**, not facility-focused:
+  - `docs/industries/semiconductor/index.md`
+  - `docs/standards/semiconductor/index.md`
+  - `docs/scenarios/semiconductor-fab-tool/index.md`
+- `planning/semi_facility/` is draft-only and currently untracked in git, but is **much more complete than it looks** — see Staging Inventory below
+
+### Staging Inventory (`planning/semi_facility/`)
+
+The staging area already covers `build_sequence.md` Phase 1 (governance, systems map, standards gap map) and Phase 2 (normalized utility system notes). It is effectively at Phase 3 territory. The bottleneck is **promotion and presentation**, not content creation.
+
+**systems/** — 7 normalized system notes (~80 lines each):
+- `bulk_specialty_gas_systems.md`
+- `bulk_chemical_distribution_and_wet_process.md`
+- `upw_and_wastewater_systems.md`
+- `exhaust_abatement_and_vacuum.md`
+- `hvac_and_cleanroom_environment.md`
+- `safety_and_shutdown_architecture.md`
+- `tool_facility_interface.md`
+- `common_control_philosophy.md`
+
+**instrumentation/** — 6 files including site-ready reference material:
+- `semiconductor_facility_instrumentation_use_matrix.md` (153 lines)
+- `manufacturer_product_family_comparison.md` (151 lines)
+- `selection_principles.md`, `measurement_and_alarm_strategy.md`, `device_family_map.md`
+
+**standards/** — structured selection flowchart, plain-language family explanations, full candidate table (`candidate_standards_map.md`)
+
+**sources/** — 30+ sources registered with trust labels and next-action notes (`public_source_register.md`)
+
+Total: ~1,434 lines across 15 substantive files.
+
+### Repo Hygiene Issues (fast fixes, do first)
+
+- `python3 tools/validate_ai_boundaries.py` fails on **7 RAG files** missing `AI_READ_ACCESS`: all 4 IEC 62443 files + `IEC62443_lifecycle.md` + `15-Standard Minimum Compliance Stack.md`. Mechanical header fix, ~15 minutes.
+- `bash tools/validate_reorg.sh all` shows 48/50 — both failures are downstream of the AI boundary script. Once the 7 files are fixed, validator passes cleanly.
+
+### Approach
+
+Implement the semiconductor facility reference **inside the existing Jekyll site**, not a separate repo.
+
+- Treat it as a **facility-side utilities and interface library**, distinct from the current equipment-oriented SEMI content
+- Root the Jekyll section at `/industries/semiconductor/facility/` — existing semiconductor overlay stays the entry point
+- Promote system and instrumentation notes → `control-standards/rag/design_framework/semiconductor_facility/`
+- Promote standards family notes → `control-standards/rag/standards_intelligence/international/semiconductor/semi_facility/`
+- Add nav entry under existing Industries > Semiconductor block in `docs/_data/navigation.yml`
+
+### Implementation Order
+
+**Step 0 — Hygiene (15 min)**
+- Add `AI_READ_ACCESS: ALLOWED` header to the 7 failing RAG files
+- Commit `planning/semi_facility/` as draft (untracked, needs to be in git)
+- Verify `validate_reorg.sh all` passes 50/50
+
+**Step 1 — Promote system and instrumentation notes into RAG**
+
+Target directory: `control-standards/rag/design_framework/semiconductor_facility/`
+
+| Staging file | RAG target |
+|---|---|
+| `systems/bulk_specialty_gas_systems.md` | `bulk_specialty_gas.md` |
+| `systems/bulk_chemical_distribution_and_wet_process.md` | `bulk_chemical_distribution.md` |
+| `systems/upw_and_wastewater_systems.md` | `upw_and_wastewater.md` |
+| `systems/exhaust_abatement_and_vacuum.md` | `exhaust_abatement_vacuum.md` |
+| `systems/hvac_and_cleanroom_environment.md` | `hvac_and_cleanroom.md` |
+| `systems/safety_and_shutdown_architecture.md` | `safety_and_shutdown.md` |
+| `systems/tool_facility_interface.md` | `tool_facility_interface.md` |
+| `systems/common_control_philosophy.md` | `common_control_philosophy.md` |
+| `instrumentation/semiconductor_facility_instrumentation_use_matrix.md` | `instrumentation_use_matrix.md` |
+| `instrumentation/selection_principles.md` | `instrumentation_selection.md` |
+
+Add `AI_READ_ACCESS: ALLOWED` + `CONTENT_CLASS: DERIVED_REFERENCE` on each file at promotion. Do not restructure — content is clean.
+
+**Step 2 — Build the Jekyll section (first slice)**
+
+Pages to build, in order:
+1. `docs/industries/semiconductor/facility/index.md` — overview + standards stack (use selection flowchart from `candidate_standards_map.md`)
+2. `docs/industries/semiconductor/facility/bulk-specialty-gas/` — from promoted RAG
+3. `docs/industries/semiconductor/facility/upw-wastewater/` — from promoted RAG
+4. `docs/industries/semiconductor/facility/exhaust-abatement/` — from promoted RAG
+5. `docs/industries/semiconductor/facility/tool-facility-interface/` — from promoted RAG
+6. `docs/industries/semiconductor/facility/instrumentation/` — use matrix is essentially site-ready
+
+Second slice (after first slice ships): HVAC, chemicals, safety/shutdown architecture.
+
+**Step 3 — Wire navigation and crosslinks**
+- Add `Semiconductor Facility` entry under Industries > Semiconductor in `navigation.yml`
+- Cross-link from `docs/industries/semiconductor/index.md` into facility section
+- Add See Also links on existing SEMI S2/S8/S14, IEC 61511, NFPA 79, NEC pages where relevant
+
+### Source Files for Phase 22
+
+- `planning/semi_facility/README.md` — corpus overview and promotion rules
+- `planning/semi_facility/standards/candidate_standards_map.md` — standards targets and selection flowchart
+- `planning/semi_facility/roadmap/build_sequence.md` — original 4-phase build order (Phase 1+2 already done)
+- `planning/semi_facility/systems/facility_systems_map.md` — system scope boundaries
+- `planning/semi_facility/sources/public_source_register.md` — source governance (30+ sources registered)
