@@ -29,10 +29,12 @@ Semiconductor fabs run multiple interdependent utility systems. Each system has 
 | [Bulk Specialty Gas](bulk-specialty-gas/) | Gas storage, rooms, cabinets, VMBs, purge panels, tool interface points |
 | [UPW and Wastewater](upw-wastewater/) | Ultrapure water generation, distribution, reclaim, and drain segregation |
 | [Exhaust and Abatement](exhaust-abatement/) | Process exhaust, toxic/corrosive capture, abatement support, vacuum |
-| [Tool-Facility Interface](tool-facility-interface/) | Handshake signals, boundary definition, permit-to-run logic |
+| [HVAC and Cleanroom](hvac-cleanroom/) | Room pressure cascade, FFU systems, temperature/humidity, particle monitoring |
+| [Bulk Chemical Distribution](bulk-chemical/) | Bulk storage, transfer skids, blend systems, containment, drain segregation |
+| [Safety and Shutdown Architecture](safety-shutdown/) | Shutdown layers, gas/leak detection integration, cause-and-effect design |
+| [Common Control Philosophy](control-philosophy/) | Modes, states, permissives, interlocks, trips, and shutdown ownership |
+| [Tool-Facility Interface](tool-facility-interface/) | Handshake signals, battery limit definition, permit-to-run logic |
 | [Instrumentation](instrumentation/) | Device selection by system, compliance lens, and manufacturer families |
-
-Second-slice content (HVAC and cleanroom, bulk chemical distribution, safety/shutdown architecture) planned for Phase 22 continuation.
 
 ---
 
