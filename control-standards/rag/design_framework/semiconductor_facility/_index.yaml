@@ -56,3 +56,10 @@ files:
     file: instrumentation_selection.md
     title: Instrumentation Selection Principles
     summary: Selection criteria for facility instrumentation — process conditions, safety class, material compatibility
+
+  - file: device_family_library.md
+    description: "Device family groupings by function and typical fab utility usage"
+  - file: vendor_families.md
+    description: "Manufacturer product family comparison by measurement class"
+  - file: alarm_and_measurement_strategy.md
+    description: "Alarm philosophy, utility measurement windows, and alarm class definitions"
