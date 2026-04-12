@@ -34,37 +34,37 @@ These are engineering planning ranges only. They are not standards limits and th
 
 ## Typical engineering windows
 
-## Liquid utility pressure
+### Liquid utility pressure
 
 - UPW distribution and chemical transfer often sit in low-to-moderate pressure service.
 - Use normal operating windows that stay comfortably inside the calibrated span.
 - Add alarms early enough to protect seals, tubing, and downstream tools before reaching relief or trip territory.
 
-## Gas utility pressure
+### Gas utility pressure
 
 - Separate source-storage pressure from cabinet, panel, and process-line pressure.
 - For regulated gas service, the normal operating band is usually narrow compared with upstream supply.
 - Use pressure proof together with valve status and flow expectations, not as a stand-alone truth source.
 
-## Temperature
+### Temperature
 
 - Tight control is common for water quality, chemical stability, and room environment.
 - Chemical compatibility and density effects may change with temperature even when the process appears tolerant.
 - For cleanroom air, stability and trend behavior often matter more than wide-range capability.
 
-## Flow
+### Flow
 
 - Continuous flow signals often support both control and equipment-protection logic.
 - Use separate low-flow alarm and no-flow trip behavior where dry running or loss of utility can damage equipment.
 - For gas systems, standardized units and gas calibration basis must be documented.
 
-## Low-range pressure and room differential pressure
+### Low-range pressure and room differential pressure
 
 - Very low differential pressure measurements are easily corrupted by placement, drafts, door motion, and tubing errors.
 - Pair room differential pressure strategy with door policy and airflow balance assumptions.
 - Record whether the signal is for room classification, process protection, or comfort monitoring.
 
-## Quality analyzers
+### Quality analyzers
 
 - Resistivity, conductivity, TOC, pH, ORP, and particle signals need sample-system discipline.
 - Alarm thresholds should reflect actionability and analyzer response time.

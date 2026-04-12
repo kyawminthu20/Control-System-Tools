@@ -150,3 +150,4 @@ flowchart TD
 - INFICON: [PCG55x](https://www.inficon.com/en/products/vacuum-gauge-and-controller/pcg55x), [Stripe CDG100Dhs](https://www.inficon.com/en/products/vacuum-gauge-and-controller/stripe-cdg100dhs)
 - Pfeiffer: [CenterLine CNR release](https://www.pfeiffer-vacuum.com/us/en/company/news-media/pfeiffer-vacuum-fab-solutions-introduces-the-centerline-cnr-series.html)
 - TSI: [AeroTrak+ A100](https://tsi.com/discover-tsi/latest-news/2023/new-tsi-aerotrak-plus-portable-particle-counter-a100-series-now-available), [AeroTrak 9001 CPC](https://tsi.com/discover-tsi/latest-news/2017/tsi-introduces-the-aerotrak-9001-cleanroom-condensation-particle-counter)
+- **Veolia Water Technologies / Sievers** — Sievers M-Series TOC analyzers product page: https://www.veoliawatertechnologies.com/en/products/sievers-m-series-toc-analyzers (accessed for general product family context only)
