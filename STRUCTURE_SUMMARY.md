@@ -4,7 +4,7 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-04-11 07:47:50
+**Last Auto-Updated:** 2026-04-11 20:37:32
 
 ```text
 ├── .claude/
@@ -1851,16 +1851,19 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── safety_architecture/
 │   │   │   ├── semiconductor_facility/
 │   │   │   │   ├── _index.yaml
+│   │   │   │   ├── alarm_and_measurement_strategy.md
 │   │   │   │   ├── bulk_chemical_distribution.md
 │   │   │   │   ├── bulk_specialty_gas.md
 │   │   │   │   ├── common_control_philosophy.md
+│   │   │   │   ├── device_family_library.md
 │   │   │   │   ├── exhaust_abatement_vacuum.md
 │   │   │   │   ├── hvac_and_cleanroom.md
 │   │   │   │   ├── instrumentation_selection.md
 │   │   │   │   ├── instrumentation_use_matrix.md
 │   │   │   │   ├── safety_and_shutdown.md
 │   │   │   │   ├── tool_facility_interface.md
-│   │   │   │   └── upw_and_wastewater.md
+│   │   │   │   ├── upw_and_wastewater.md
+│   │   │   │   └── vendor_families.md
 │   │   │   └── us_eu_compliance_wizard/
 │   │   │       ├── README.md
 │   │   │       ├── US_EU_Machine_Compliance_Wizard.md
@@ -4217,7 +4220,8 @@ Use this file as a tree reference for the whole workspace. The primary narrative
 │   │   │   ├── 2026-03-13-field-engineering.md
 │   │   │   ├── 2026-03-14-phase19-navigation-refactor.md
 │   │   │   ├── 2026-03-15-phase20-software-safety-stack.md
-│   │   │   └── 2026-03-21-lifecycle-page-expansion.md
+│   │   │   ├── 2026-03-21-lifecycle-page-expansion.md
+│   │   │   └── 2026-04-11-phase23-facility-build-phases-3-4.md
 │   │   └── specs/
 │   │       ├── 2026-03-12-doc-support-design.md
 │   │       ├── 2026-03-13-field-engineering-design.md
