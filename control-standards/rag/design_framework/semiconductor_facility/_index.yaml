@@ -63,3 +63,5 @@ files:
     description: "Manufacturer product family comparison by measurement class"
   - file: alarm_and_measurement_strategy.md
     description: "Alarm philosophy, utility measurement windows, and alarm class definitions"
+  - file: commissioning_reference.md
+    description: "Commissioning and startup reference for semiconductor facility utility systems"

@@ -35,6 +35,8 @@ Semiconductor fabs run multiple interdependent utility systems. Each system has 
 | [Common Control Philosophy](control-philosophy/) | Modes, states, permissives, interlocks, trips, and shutdown ownership |
 | [Tool-Facility Interface](tool-facility-interface/) | Handshake signals, battery limit definition, permit-to-run logic |
 | [Instrumentation](instrumentation/) | Device selection by system, compliance lens, and manufacturer families |
+| [Commissioning Reference](commissioning/) | Phase-by-phase commissioning framework, readiness criteria, and documentation minimums |
+| [System and Standards Crosswalks](crosswalks/) | System-to-system dependencies and standards-to-systems mapping |
 
 ---
 
