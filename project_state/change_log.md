@@ -18,6 +18,24 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-04-12 — Phase 23 Complete: Semiconductor Facility Build Phases 3 & 4
+
+**Type:** Content / Standards Reference
+**Status:** Complete
+
+- Promoted 3 instrumentation staging files to RAG corpus (`device_family_library.md`, `vendor_families.md`, `alarm_and_measurement_strategy.md`)
+- Authored new `commissioning_reference.md` RAG file; updated `_index.yaml` with 4 new entries
+- Built 5 new Jekyll pages:
+  - `/instrumentation/device-families/` — device family library grouped by function
+  - `/instrumentation/vendor-families/` — manufacturer comparison by measurement class (pressure, flow, UPW, MFCs, gas detection, level, vacuum, cleanroom)
+  - `/instrumentation/alarm-strategy/` — alarm philosophy, measurement windows, alarm classes, safe-state design
+  - `/commissioning/` — phase-based commissioning framework with readiness criteria and system-specific notes
+  - `/crosswalks/` — system-to-system dependency map and standards-to-systems crosswalk
+- Added "In This Section" navigation block to instrumentation landing page
+- Updated `navigation.yml` (instrumentation sub-pages + Commissioning + System Crosswalks under facility)
+- Updated facility `index.md` scope table
+- Jekyll build: clean, 157 pages
+
 ## 2026-04-11 — Phase 22 Complete: Semiconductor Facility Reference (10 pages)
 
 Second slice — four additional pages:

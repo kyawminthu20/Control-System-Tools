@@ -145,6 +145,16 @@ flowchart TD
 
 ---
 
+## In This Section
+
+| Page | What it covers |
+|------|---------------|
+| [Device Family Library](device-families/) | Device families grouped by function — typical service, main concerns, failure modes |
+| [Vendor Families](vendor-families/) | Manufacturer comparison by measurement class: pressure, flow, UPW, MFCs, gas detection, level, vacuum |
+| [Alarm and Measurement Strategy](alarm-strategy/) | Alarm philosophy, utility measurement windows, alarm classes, safe-state design |
+
+---
+
 ## See Also
 
 - [Bulk Specialty Gas Systems](/industries/semiconductor/facility/bulk-specialty-gas/) — gas instrumentation in context
