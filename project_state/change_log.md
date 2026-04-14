@@ -18,6 +18,19 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-04-13 — Phase 24 Task 1 complete: IEC earthing systems visual upgrades
+
+**Type:** Content / Training Enhancement
+**Status:** Complete
+
+- Added visual summary flowchart (fault return path decision tree) after the IEC letter-code tables
+- Added compact Mermaid topology diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT)
+- Added per-system blockquote callout cards (fault return / protection / main risk)
+- Added "Machine designer takeaway" bold paragraph after each system's callout
+- Replaced the existing 5-column comparison table with an expanded version including "Typical clearing method" column and bold System names
+- Added "Selection logic — what are you optimizing for?" flowchart section before "The practical questions to ask"
+- Jekyll build remains clean (no errors or warnings)
+
 ## 2026-04-12 — Phase 24 planning seeded with earthing-systems visual upgrade
 
 **Type:** Project Direction

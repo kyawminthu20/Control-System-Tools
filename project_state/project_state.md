@@ -1,9 +1,9 @@
 # Project State
 
-**Last Updated:** 2026-04-12
+**Last Updated:** 2026-04-13
 **Status:** Active
-**Current Phase:** Phase 23 COMPLETE — Semiconductor Facility Build Phases 3 & 4
-**Next Phase:** Phase 24 PLANNING — Training Visual Upgrades
+**Current Phase:** Phase 24 IN PROGRESS — Training Visual Upgrades (Task 1 complete)
+**Next Phase:** Phase 24 Task 2 — visual aids for Semiconductor Fab Tool scenario page
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -18,7 +18,7 @@ All 13 lifecycle stage pages (Stages 1–11 plus Safety Requirements Spec and Ma
 
 The site is a presentation and navigation layer on top of `control-standards/rag/`. Authoritative engineering and standards guidance stays in `control-standards/rag/`. The website never modifies RAG content.
 
-Phase 24 planning is now seeded with a visual-upgrade pass for existing training pages, starting with the IEC earthing systems module.
+Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 ## Current Reality
 
