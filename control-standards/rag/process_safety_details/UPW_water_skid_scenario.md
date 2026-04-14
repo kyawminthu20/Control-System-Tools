@@ -1110,3 +1110,700 @@ The strongest next deliverable would be one of these:
 4. a **semiconductor facility version** with bulk chemical distribution, reclaim, and drain interfaces
 
 I recommend doing **#2 and #3 next**, because that turns this from concept into controls-engineering structure.
+
+Good. I’ll extend it into the next practical layer: a **cause-and-effect matrix**, a **control architecture**, and a **more implementation-oriented control narrative**.
+
+---
+
+# 28. UPW Cause-and-Effect Matrix
+
+This is the part that turns concept into an actual controls package.
+
+## 28.1 Legend
+
+* **A** = Alarm only
+* **C** = Control action by BPCS
+* **T** = Trip by SIS
+* **MS** = Machine safety action
+* **L** = Latched
+* **R** = Manual reset required
+
+---
+
+## 28.2 Cause-and-effect table
+
+| Cause / Condition                        | Detection Device(s)  | BPCS Action                                     | SIS Action                                     | Machine Safety Action     | Latch / Reset          |
+| ---------------------------------------- | -------------------- | ----------------------------------------------- | ---------------------------------------------- | ------------------------- | ---------------------- |
+| Tank high level                          | LT-101, LSH-101      | Alarm, close LCV-101, operator alert            | None                                           | None                      | No latch               |
+| Tank high-high level                     | LSHH-101A, LSHH-101B | Display trip status                             | Close SDV-101, stop feed pump                  | None                      | Latched, manual reset  |
+| Tank low-low level                       | LSL-101              | Stop recirc pump by permissive, alarm           | Optional SIF if risk requires                  | None                      | Usually latched        |
+| Pump suction low                         | PT-201 / PSL-201     | Alarm, stop affected pump                       | Optional SIF if dry-run is critical            | None                      | Manual reset preferred |
+| Pump discharge high-high                 | PT-202 / PSHH-202    | Alarm, reduce speed, open recycle if configured | Trip pump, isolate discharge if required       | None                      | Latched                |
+| Recirculation flow low                   | FT-301 / FSL-301     | Alarm, auto-start standby pump                  | Optional                                       | None                      | Depends on philosophy  |
+| Filter DP high                           | DPIT-601             | Alarm, maintenance request                      | None                                           | None                      | No latch               |
+| Resistivity out of spec                  | AIT-501              | Alarm, divert / block distribution              | Optional isolation if product risk is critical | None                      | Usually operator reset |
+| Leak detected in skid bund               | LD-701               | Alarm, stop nonessential equipment              | Stop feed source, isolate skid                 | None                      | Latched                |
+| E-stop pressed                           | ES-001               | PLC receives status only                        | None unless specifically cross-linked          | STO / safe motor shutdown | Latched                |
+| Guard door open                          | GS-001               | PLC receives status only                        | None                                           | STO / safe access state   | Latched or maintained  |
+| Loss of air to fail-close valve actuator | PSL-AIR-101          | Alarm                                           | Depending on design, valve fails closed        | None                      | Depends                |
+| Safety PLC fault                         | SIS diagnostics      | Alarm to HMI/SCADA                              | Drive outputs to defined safe state            | None                      | Manual intervention    |
+
+---
+
+# 29. Minimum recommended SIF set for a UPW skid
+
+For a basic but defensible design, I would define these as candidate SIFs for risk review.
+
+## SIF-001 — Tank High-High Level Shutdown
+
+**Purpose:** prevent overflow
+**Action:** close feed SDV, stop feed pump
+
+## SIF-002 — Pump Discharge Overpressure Shutdown
+
+**Purpose:** protect piping / skid from damaging overpressure
+**Action:** stop pump, close discharge isolation or open relief/recycle path depending design
+
+## SIF-003 — Skid Leak / Bund High Level Isolation
+
+**Purpose:** stop feeding water into a leaking skid area
+**Action:** isolate source, stop pumps, alarm
+
+## SIF-004 — Critical Quality Isolation
+
+**Purpose:** prevent bad UPW from reaching process tools if a critical contamination condition is detected
+**Action:** divert return, isolate supply header, alarm
+
+Not every UPW skid will need all four as formal IEC 61511 SIFs. That depends on the risk study. The standard logic still applies: define the hazard, determine whether a SIF is needed, then calculate whether the design achieves the required performance.  
+
+---
+
+# 30. Recommended control architecture
+
+Now let’s structure the system the way a controls engineer would actually draw it.
+
+## 30.1 Architecture overview
+
+```mermaid
+flowchart TB
+    subgraph F[Field Layer]
+        LT101[LT-101 Level Tx]
+        LSHH1[LSHH-101A]
+        LSHH2[LSHH-101B]
+        PT201[PT-201 Suction Pressure]
+        PT202[PT-202 Discharge Pressure]
+        FT301[FT-301 Flow]
+        AIT501[AIT-501 Resistivity]
+        LD701[LD-701 Leak Detector]
+        SDV101[SDV-101 Shutdown Valve]
+        LCV101[LCV-101 Control Valve]
+        P101A[P-101A Pump]
+        P101B[P-101B Pump]
+    end
+
+    subgraph BPCS[Basic Process Control]
+        PLC[Main PLC]
+        RIO[Remote I/O]
+        VFD[VFDs / Motor Control]
+        HMI[Local HMI]
+        SCADA[SCADA / Historian]
+    end
+
+    subgraph SIS[Safety Instrumented System]
+        S_PLC[Safety PLC / SIS Solver]
+        S_IO[Safety I/O]
+        ANN[Trip Annunciator]
+        RESET[Reset Station / Key Switch]
+    end
+
+    subgraph MS[Machine Safety]
+        ESTOP[E-Stops]
+        GS[Guard Switches]
+        SR[Safety Relay / Safety PLC]
+        STO[STO / Safe Power Removal]
+    end
+
+    LT101 --> RIO --> PLC
+    PT201 --> RIO
+    PT202 --> RIO
+    FT301 --> RIO
+    AIT501 --> RIO
+    PLC --> VFD
+    PLC --> LCV101
+    PLC --> HMI
+    PLC --> SCADA
+
+    LSHH1 --> S_IO --> S_PLC
+    LSHH2 --> S_IO
+    LD701 --> S_IO
+    S_PLC --> SDV101
+    S_PLC --> VFD
+    S_PLC --> ANN
+    RESET --> S_PLC
+    S_PLC --> PLC
+
+    ESTOP --> SR
+    GS --> SR
+    SR --> STO
+```
+
+---
+
+## 30.2 Separation rule
+
+A clean design rule is:
+
+### BPCS path
+
+* modulates
+* optimizes
+* alarms
+* sequences
+* logs
+
+### SIS path
+
+* detects dangerous process condition
+* trips to safe state
+* latches
+* requires reset
+* does not rely on HMI or normal PLC scan for primary protection
+
+### Machine safety path
+
+* protects people
+* hard stops hazardous motion/energy
+* should remain valid even if process control software is wrong
+
+That separation is exactly the principle behind IEC 61511 process SIS versus machinery safety frameworks. 
+
+---
+
+# 31. Component selection by function
+
+## 31.1 Sensors for BPCS
+
+These are for continuous control and monitoring.
+
+### Tank / vessel
+
+* guided-wave radar level transmitter or hygienic pressure level transmitter
+* high level switch
+* low-low level switch
+
+### Pump hydraulic protection
+
+* suction pressure transmitter
+* discharge pressure transmitter
+* magnetic flowmeter or ultrasonic flowmeter
+* differential pressure across filter
+
+### Quality
+
+* resistivity analyzer
+* TOC analyzer
+* temperature transmitter
+* optional dissolved oxygen / silica / particle monitor
+
+### Utilities
+
+* pneumatic supply low pressure switch
+* cabinet temperature switch
+* leak detector in skid bund
+
+---
+
+## 31.2 Sensors for SIS
+
+These should be chosen for independence and functional reliability.
+
+### For SIF-001 Tank High-High
+
+* 2 independent point level switches
+* mounted at verified trip elevation
+* separate wiring to safety I/O
+* separate calibration / proof test procedure
+
+### For SIF-002 Overpressure
+
+* 1 or 2 pressure switches/transmitters depending risk and voting
+* hard trip setpoint independent from normal pressure control loop
+
+### For SIF-003 Leak isolation
+
+* leak rope or point leak sensor in bund/sump
+* optional sump high-high switch
+
+### For critical quality isolation
+
+* this one is harder, because some analyzers are slow and not always appropriate as a primary SIS initiating device
+* often better handled by quality interlock / reject logic unless risk study clearly pushes it into formal SIS territory
+
+---
+
+## 31.3 Final elements
+
+This is where most SIF designs become weak in practice.
+
+The uploaded standard summary correctly notes that **final elements often dominate PFDavg** and are hard to test. 
+
+For UPW SIFs, final elements typically include:
+
+* fail-close feed isolation valve
+* pump trip contact / run permit removal
+* motor starter de-energization
+* recycle/divert valve
+* branch isolation valve
+
+### Good final element design rules
+
+* fail-safe position must match hazard
+* position feedback should be monitored
+* actuator loss-of-air behavior must be known
+* proof test must be possible without heroic shutdown effort
+* trip path should not depend on nonessential network messaging
+
+---
+
+# 32. Example I/O list
+
+## 32.1 BPCS I/O
+
+| Tag        | Description                  | Type  | PLC Use                      |
+| ---------- | ---------------------------- | ----- | ---------------------------- |
+| LT-101     | Tank level transmitter       | AI    | PID control                  |
+| PT-201     | Pump suction pressure        | AI    | permissive / alarm           |
+| PT-202     | Pump discharge pressure      | AI    | control / alarm              |
+| FT-301     | Recirc flow                  | AI    | monitoring / low flow action |
+| AIT-501    | Resistivity                  | AI    | quality alarm                |
+| DPIT-601   | Filter differential pressure | AI    | maintenance alarm            |
+| LCV-101    | Inlet control valve          | AO/DO | level control                |
+| P-101A_RUN | Pump A run cmd               | DO    | sequencing                   |
+| P-101B_RUN | Pump B run cmd               | DO    | sequencing                   |
+
+## 32.2 SIS I/O
+
+| Tag            | Description                   | Type | SIS Use                |
+| -------------- | ----------------------------- | ---- | ---------------------- |
+| LSHH-101A      | Tank HH switch A              | DI   | SIF-001                |
+| LSHH-101B      | Tank HH switch B              | DI   | SIF-001                |
+| LD-701         | Leak detector                 | DI   | SIF-003                |
+| PSHH-202       | Discharge overpressure switch | DI   | SIF-002                |
+| SDV-101_TRIP   | Feed SDV trip output          | DO   | de-energize to close   |
+| FEED_PUMP_TRIP | Feed pump trip                | DO   | remove run permit      |
+| SIF_RESET      | Reset pb/key                  | DI   | reset logic            |
+| SIF_BYPASS     | Bypass key status             | DI   | maintenance management |
+
+## 32.3 Machine safety I/O
+
+| Tag    | Description  | Type      | Safety Use        |
+| ------ | ------------ | --------- | ----------------- |
+| ES-001 | E-stop loop  | Safety DI | personnel stop    |
+| GS-001 | Guard switch | Safety DI | access protection |
+| STO-A  | Pump A STO   | Safety DO | safe torque off   |
+| STO-B  | Pump B STO   | Safety DO | safe torque off   |
+
+---
+
+# 33. Detailed control narrative
+
+## 33.1 Normal sequence
+
+### Startup
+
+1. Verify no active SIS trip
+2. Verify machine safety chain healthy
+3. Verify tank level above minimum
+4. Open required manual block valves
+5. Start duty pump
+6. Ramp VFD to maintain recirculation pressure
+7. Enable inlet level control
+8. Begin trending and alarm monitoring
+
+### Normal operation
+
+* LT-101 controls LCV-101 to maintain tank level
+* PT-202 and FT-301 supervise pump performance
+* standby pump auto-starts on duty pump fault
+* AIT-501 resistivity alarms if quality degrades
+* DPIT-601 alarms for filter fouling
+
+---
+
+## 33.2 Abnormal non-SIS logic
+
+### Tank high
+
+If LT-101 > High Alarm:
+
+* alarm operator
+* drive LCV-101 toward closed
+* hold feed permissive false if level continues rising
+* log event
+
+### Low flow
+
+If FT-301 < Low Flow for 5 seconds:
+
+* alarm
+* attempt standby pump start
+* stop failed duty pump
+* maintain service if possible
+
+### Quality degraded
+
+If resistivity out of range:
+
+* alarm
+* optionally divert return or isolate supply branch by process interlock
+* require operator acknowledgement
+
+---
+
+## 33.3 SIS logic narrative
+
+## SIF-001 Tank High-High Shutdown
+
+### Initiating condition
+
+Either or both LSHH switches reach trip state, according to selected voting
+
+### Action
+
+* de-energize SDV-101
+* remove feed pump run permit
+* latch trip bit
+* annunciate horn/beacon
+* send trip status to PLC/HMI/SCADA
+* inhibit auto-restart
+
+### Reset conditions
+
+* both switches normal
+* SDV feedback confirms capable state
+* no active bypass
+* operator reset performed
+* optional supervisor authorization if site requires
+
+---
+
+## SIF-002 Discharge Overpressure
+
+### Initiating condition
+
+PSHH-202 active beyond debounce delay
+
+### Action
+
+* stop affected pump
+* close or hold discharge valve as defined
+* open recycle if that is the safer hydraulic relief path
+* latch trip
+* annunciate cause
+
+### Notes
+
+Do not design conflicting actions. For example, stopping pump and simultaneously forcing a hydraulic configuration that spikes trapped pressure is poor design. The cause/effect must reflect real piping behavior.
+
+---
+
+## SIF-003 Leak Isolation
+
+### Initiating condition
+
+Leak detector or sump high-high switch active
+
+### Action
+
+* isolate feed
+* stop nonessential pumps
+* alarm locally and to SCADA
+* latch until inspected and reset
+
+---
+
+# 34. Voting examples
+
+## 34.1 Tank HH voting
+
+### Option 1 — 1oo2
+
+Trip if either LSHH-101A or LSHH-101B trips.
+
+**Advantages**
+
+* stronger protection against missed trip
+* simple
+
+**Disadvantages**
+
+* more nuisance trips
+
+### Option 2 — 2oo2
+
+Trip only if both switches trip.
+
+**Advantages**
+
+* fewer nuisance trips
+
+**Disadvantages**
+
+* weaker tolerance against hidden failure or calibration error
+
+For a UPW overflow scenario, choice depends on:
+
+* consequence of overflow
+* cost of nuisance shutdown
+* switch reliability
+* testing discipline
+* required risk reduction
+
+---
+
+## 34.2 Pump overpressure voting
+
+Often this is simpler:
+
+* one independent hard trip switch
+* one pressure transmitter for monitoring/alarm
+* relief path as passive layer if applicable
+
+This can be more practical than overcomplicated voting on a modest utility skid.
+
+---
+
+# 35. Operator graphics structure
+
+You asked for layers of visualization, so here is how I would build the HMI.
+
+## 35.1 Screen A — Process overview
+
+Shows:
+
+* tank with animated level
+* pump A/B status
+* header pressure
+* flow
+* resistivity
+* key valve positions
+* alarm banner
+
+## 35.2 Screen B — Safety overview
+
+Shows:
+
+* SIS healthy/faulted
+* each SIF as a box: Healthy / Bypassed / Tripped / Faulted
+* trip cause
+* reset permissive
+* proof test mode status
+
+## 35.3 Screen C — Machine safety overview
+
+Shows:
+
+* E-stop healthy
+* guard circuit healthy
+* STO active/inactive
+* maintenance access status
+
+## 35.4 Screen D — Cause/effect screen
+
+Shows one SIF at a time:
+
+```mermaid
+flowchart LR
+    I1[LSHH-101A] --> V[Voting]
+    I2[LSHH-101B] --> V
+    V --> T[SIF-001 Trip Latch]
+    T --> O1[SDV-101 Close]
+    T --> O2[Feed Pump Trip]
+    T --> O3[Alarm / Event Log]
+    T --> R[Reset Permissive]
+```
+
+## 35.5 Screen E — Maintenance / proof test
+
+Shows:
+
+* last proof test date
+* next due date
+* bypass status
+* stroke test results
+* failure history
+
+That matters because proof testing is what maintains the claimed protective performance over time. 
+
+---
+
+# 36. Recommended alarm and trip philosophy
+
+Do not mix alarms and trips casually.
+
+## Alarm
+
+“Initiate operator attention.”
+
+Examples:
+
+* filter DP high
+* resistivity drifting low
+* pump current high
+* tank level high
+
+## Trip
+
+“Automatic protective action required.”
+
+Examples:
+
+* tank high-high
+* leak detected
+* discharge overpressure
+* dry run condition if hazard warrants
+
+## Machine safety event
+
+“Personnel protection function activated.”
+
+Examples:
+
+* E-stop
+* guard opened
+* STO active
+
+On the HMI, use separate visual categories for these three. Otherwise operators will treat everything as just another alarm.
+
+---
+
+# 37. Practical panel and network structure
+
+## 37.1 Panels
+
+A clean setup is:
+
+* **CP-01 Main Control Panel**
+
+  * main PLC
+  * standard I/O
+  * managed industrial Ethernet
+  * HMI / SCADA gateway
+
+* **SP-01 Safety / SIS Panel**
+
+  * safety PLC / safety relay system
+  * segregated power
+  * trip relays
+  * annunciator
+  * reset/bypass controls
+
+* **MCC/VFD section**
+
+  * pump drives
+  * STO terminals
+  * contactors where required
+
+## 37.2 Networks
+
+* BPCS on standard control Ethernet
+* SIS should not depend on the general SCADA network for its primary trip action
+* SCADA can read status from SIS through defined interface
+* avoid designs where the SIF exists only as a software tag over Ethernet
+
+---
+
+# 38. One-page design philosophy
+
+Here is the short design philosophy statement.
+
+## UPW Control and Safety Philosophy
+
+The UPW skid shall use a layered protection architecture consisting of:
+
+1. a Basic Process Control System for normal operation and optimization,
+2. a separate process safety layer for defined hazardous process conditions,
+3. a separate machine safety layer for personnel protection.
+
+The BPCS shall perform continuous control of tank level, recirculation pressure, flow, and water quality monitoring. The SIS shall provide independent automatic trips for selected hazardous scenarios such as tank overfill, skid leak, and pump overpressure. Machine safety functions such as emergency stop and access interlocks shall remain independent and shall not be replaced by process PLC logic.
+
+That is the right conceptual foundation.
+
+---
+
+# 39. What usually goes wrong in the field
+
+These are the weak points.
+
+## Bad pattern 1
+
+Using one level transmitter for both PID control and formal SIF trip with no real independence.
+
+## Bad pattern 2
+
+Using HMI or SCADA scripting as part of the primary trip action.
+
+## Bad pattern 3
+
+No valve position feedback on the shutdown valve.
+
+## Bad pattern 4
+
+No clear reset policy, so operators keep cycling trips blindly.
+
+## Bad pattern 5
+
+No proof test planning, so the “SIS” exists only on paper.
+
+## Bad pattern 6
+
+Confusing machine E-stop architecture with process SIS architecture.
+
+The uploaded IEC 61511 summary explicitly warns against mixing domains and against treating the design basis casually.  
+
+---
+
+# 40. Next engineering deliverables
+
+The strongest next items are:
+
+## A. SRS sheet for each SIF
+
+For each SIF:
+
+* tag
+* hazard
+* initiating causes
+* trip condition
+* voting
+* safe state
+* final elements
+* reset method
+* proof test interval
+* bypass rules
+
+## B. Full I/O marshalling table
+
+* terminal numbers
+* card/channel
+* signal type
+* fail state
+* cable type
+* JB location
+
+## C. P&ID annotation layer
+
+* mark BPCS instruments
+* mark SIS instruments
+* mark machine safety points
+* mark final elements and safe state
+
+## D. PLC state logic
+
+* AUTO / MANUAL / MAINT / TEST / TRIP / RESET states
+* interlocks
+* sequence table
+
+The next best move is **A + C** because that turns this into a real engineering package.
+
+I can write the next section as a **formal SIF/SRS datasheet pack for SIF-001 through SIF-003**.
