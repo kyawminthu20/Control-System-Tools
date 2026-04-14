@@ -57,6 +57,18 @@ industries:
 
 ---
 
+## Design Workflow Overview
+
+```mermaid
+flowchart LR
+    A[Phase 1<br/>Risk Assessment<br/>and Safety Architecture]
+    B[Phase 2<br/>Electrical Design]
+    C[Phase 3<br/>Ergonomics and<br/>Documentation]
+    D[Phase 4<br/>Fab Qualification]
+
+    A --> B --> C --> D
+```
+
 ## Design Workflow
 
 ### Phase 1 — Risk Assessment and Safety Architecture
@@ -177,6 +189,44 @@ graph TD
 
 ---
 
+## Process Start Permissive Flow
+
+```mermaid
+flowchart TD
+    A[Start Request] --> B{Exhaust flow confirmed?}
+    B -->|No| X1[Block start]
+    B -->|Yes| C{Gas detector clear?}
+    C -->|No| X1
+    C -->|Yes| D{Doors and panels closed?}
+    D -->|No| X1
+    D -->|Yes| E{HV and RF interlock healthy?}
+    E -->|No| X1
+    E -->|Yes| F{Manual safety reset complete?}
+    F -->|No| X1
+    F -->|Yes| G[Enable gas path and RF permit]
+    G --> H[Recipe start allowed]
+```
+
+## Fault Trip Sequence
+
+```mermaid
+flowchart TD
+    F[Fault Detected] --> T{Fault Type}
+    T -->|Gas alarm| S[Safety PLC]
+    T -->|Exhaust low| S
+    T -->|Door open| S
+    T -->|E-stop| S
+
+    S --> V[Close NC gas valves]
+    S --> R[Disable RF and HV]
+    S --> M[Stop wafer handling motion]
+    S --> A[Alarm and event log]
+
+    A --> Q{Safe conditions restored<br/>and manual reset complete?}
+    Q -->|No| L[Remain latched safe]
+    Q -->|Yes| N[Return to standby]
+```
+
 ## Key Engineering Decisions
 
 **Capacitor discharge: 5-second rule vs. interlock approach (SEMI S2):**
@@ -185,8 +235,37 @@ The 5-second discharge is cleanest — use a bleed resistor across the capacitor
 **RF interlock vs. RF generator software disable:**
 RF must be disabled by a hardwired interlock before any panel opens — not by the recipe software. The generator must have a hardware enable input that the safety relay drives. Recipe-level RF off is insufficient for personnel protection.
 
+### HV Access Interlock Flow
+
+```mermaid
+flowchart TD
+    A[Access request] --> B[Hardwire RF and HV isolation]
+    B --> C{Capacitor voltage below safe threshold?}
+    C -->|No| D[Keep panel interlocked closed]
+    D --> E[Show discharge indicator]
+    E --> C
+    C -->|Yes| F[Permit panel opening]
+```
+
 **Clean agent suppression in the tool enclosure:**
 If the SEMI S14 fire risk assessment determines suppression is required, use FM-200 or Novec 1230 (water is prohibited in cleanrooms). The suppression system must interface with the facility fire alarm — actuation must trigger a facility alarm even if the agent was discharged locally.
+
+### Cybersecurity Zone Diagram
+
+```mermaid
+flowchart LR
+    FH[Fab Host Network]
+    FW[Firewall or Conduit Boundary]
+    TC[Tool Controller]
+    SP[Safety PLC]
+    MP[Maintenance Port]
+    RD[Remote Diagnostics]
+
+    FH --> FW --> TC
+    TC --- SP
+    MP --> TC
+    RD --> FW
+```
 
 ---
 
