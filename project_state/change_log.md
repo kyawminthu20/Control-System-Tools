@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-11
+**Last Updated:** 2026-04-12
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,16 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-12 — Phase 24 planning seeded with earthing-systems visual upgrade
+
+**Type:** Project Direction
+**Status:** Planned
+
+- Updated `project_state/project_state.md` so the next tracked phase is `Phase 24 PLANNING — Training Visual Upgrades`
+- Queued a visual enhancement pass for `docs/training/fundamentals/earthing-systems-iec/index.md`
+- Recorded `planning/ground_earth_visual.md` as the implementation note for the earthing-systems page upgrade
+- Captured the expected scope: overview fault-path visual, five compact system diagrams, decision tree, comparison table cleanup, and short per-system callout cards
 
 ## 2026-04-12 — Phase 23 Complete: Semiconductor Facility Build Phases 3 & 4
 
