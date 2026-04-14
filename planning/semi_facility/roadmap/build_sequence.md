@@ -39,6 +39,7 @@ Build the semiconductor facility library in a way that produces usable reference
 - add commissioning, startup, and maintenance references
 - add tool and facility interface notes
 - add crosswalks between systems, instruments, and standards families
+- add scenario-specific tool visual packages for workflow, permissives, trips, and access interlocks, starting with [Semiconductor Fab Tool Visual Aid Reference](../semiconductor_fab_tool_visual_aids.md)
 
 ## Definition of done for one topic
 

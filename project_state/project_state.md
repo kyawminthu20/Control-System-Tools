@@ -3,7 +3,7 @@
 **Last Updated:** 2026-04-12
 **Status:** Active
 **Current Phase:** Phase 23 COMPLETE — Semiconductor Facility Build Phases 3 & 4
-**Next Phase:** Phase 24 PLANNING — TBD
+**Next Phase:** Phase 24 PLANNING — Training Visual Upgrades
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -17,6 +17,8 @@ Phases 19–22 are complete. Phase 23 (Semiconductor Facility Build Phases 3 & 4
 All 13 lifecycle stage pages (Stages 1–11 plus Safety Requirements Spec and Management of Change) are now comprehensive engineering references. The lifecycle pages serve as the primary navigation hub for all phases of system development, from initial concept through maintenance.
 
 The site is a presentation and navigation layer on top of `control-standards/rag/`. Authoritative engineering and standards guidance stays in `control-standards/rag/`. The website never modifies RAG content.
+
+Phase 24 planning is now seeded with a visual-upgrade pass for existing training pages, starting with the IEC earthing systems module.
 
 ## Current Reality
 
@@ -669,3 +671,26 @@ Second slice (after first slice ships): HVAC, chemicals, safety/shutdown archite
 - `planning/semi_facility/roadmap/build_sequence.md` — original 4-phase build order (Phase 1+2 already done)
 - `planning/semi_facility/systems/facility_systems_map.md` — system scope boundaries
 - `planning/semi_facility/sources/public_source_register.md` — source governance (30+ sources registered)
+
+## Phase 24 Planning — Training Visual Upgrades
+
+**Status:** Planned
+**Initial implementation note:** `planning/ground_earth_visual.md`
+
+### Queued work
+
+- [ ] `docs/training/fundamentals/earthing-systems-iec/index.md` — add the visual upgrade package from `planning/ground_earth_visual.md`
+
+### Intended implementation scope
+
+- add an overview visual for fault-return behavior across TN, TT, and IT families
+- add compact per-system diagrams for `TN-C`, `TT`, `TN-C-S`, `TN-S`, and `IT`
+- add a decision-tree visual before the practical question section
+- replace the dense comparison block with a clearer markdown matrix
+- add short callout cards under each system for fault return, protection method, and main design risk
+
+### Constraints
+
+- keep the existing URL and page structure stable
+- use the current Mermaid integration already present on the site
+- treat this as a site-page enhancement; no RAG rewrite is required unless the page content later diverges from the canonical training note
