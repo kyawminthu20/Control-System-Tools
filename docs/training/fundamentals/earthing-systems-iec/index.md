@@ -46,6 +46,22 @@ The IEC earthing classification uses two or three letters:
 | `C` | Neutral and protective-earth functions **combined** in one conductor (PEN conductor) |
 | `S` | Neutral and protective-earth functions **separate** conductors |
 
+## Visual summary — what changes between systems?
+
+```mermaid
+flowchart LR
+    F[Earth fault on exposed metal] --> P[Protection must detect it]
+    P --> Q{Return path type}
+
+    Q -->|Low-impedance metallic path| TN[TN-C / TN-C-S / TN-S]
+    Q -->|Soil / electrode path| TT[TT]
+    Q -->|Source isolated / impedance-earthed| IT[IT]
+
+    TN --> TNA[High fault current<br/>OCPD usually effective]
+    TT --> TTB[Fault current may be low<br/>RCD/RCCB usually critical]
+    IT --> ITA[First fault may not trip<br/>IMD required]
+```
+
 ## TN-C
 
 Source neutral earthed. Exposed parts connected to a combined PEN conductor (neutral = PE).
@@ -58,6 +74,20 @@ Source neutral earthed. Exposed parts connected to a combined PEN conductor (neu
 **Key risk:** A break in the upstream PEN conductor can elevate all bonded metalwork (motor frames, machine casings, panel enclosures) to a dangerous voltage.
 
 **Typical context:** Distribution network sections; not recommended inside buildings or industrial facilities.
+
+```mermaid
+flowchart LR
+    E[Source earth electrode] --- S[Transformer<br/>neutral earthed]
+    S --> PEN[PEN conductor]
+    PEN --> L[Load / panel / machine]
+    L --> M[Exposed metal bonded to PEN]
+```
+
+> **Fault return:** Metallic PEN
+> **Protection:** Overcurrent device
+> **Main risk:** Broken PEN can energize bonded metalwork
+
+**Machine designer takeaway:** Avoid assuming TN-C is acceptable inside machine internals; PEN dependency creates a severe metalwork-voltage failure mode.
 
 ## TT
 
@@ -72,6 +102,21 @@ Source neutral earthed. Exposed parts connected to a **local** earth electrode i
 
 **Typical context:** Rural areas, standalone buildings where a utility earth conductor is not extended to the installation.
 
+```mermaid
+flowchart LR
+    S[Transformer<br/>neutral earthed] --> L[Supply conductors]
+    L --> P[Panel / machine]
+    P --> E1[Local earth electrode]
+    S --> E2[Source earth electrode]
+    E1 -. soil return path .- E2
+```
+
+> **Fault return:** Through soil / electrodes
+> **Protection:** RCD / RCCB usually essential
+> **Main risk:** High loop impedance may limit fault current
+
+**Machine designer takeaway:** Do not assume breaker-only protection is enough; TT designs usually need RCD strategy and verified earth-electrode performance.
+
 ## TN-C-S (PME)
 
 Neutral and PE combined for part of the supply path (PEN), then separated at a defined split point inside the installation. Also known as Protective Multiple Earthing (PME).
@@ -84,6 +129,22 @@ Neutral and PE combined for part of the supply path (PEN), then separated at a d
 **Remaining risk:** An upstream PEN break before the split point can still elevate metalwork to dangerous voltage — the same failure mode as TN-C, but only upstream of the separation point.
 
 **Typical context:** Urban residential supplies; the utility brings a PEN conductor and neutral/PE are split at the consumer unit or service entrance.
+
+```mermaid
+flowchart LR
+    S[Transformer<br/>neutral earthed] --> PEN[PEN]
+    PEN --> X[Service split point]
+    X --> N[Neutral]
+    X --> PE[Protective earth]
+    N --> L[Load]
+    PE --> L
+```
+
+> **Fault return:** Metallic path after PE/N split
+> **Protection:** Overcurrent device
+> **Main risk:** Upstream PEN failure still matters
+
+**Machine designer takeaway:** Treat the service split point as a critical design boundary; upstream PEN issues still affect downstream exposed metalwork.
 
 ## TN-S
 
@@ -100,6 +161,21 @@ Neutral and protective earth are separate conductors from the transformer onward
 
 **Typical context:** Large industrial plants, hospitals, data centers, high-reliability installations.
 
+```mermaid
+flowchart LR
+    E[Source earth electrode] --- S[Transformer]
+    S --> N[Neutral]
+    S --> PE[Dedicated PE]
+    N --> L[Load / machine]
+    PE --> L
+```
+
+> **Fault return:** Dedicated metallic PE
+> **Protection:** Overcurrent device
+> **Main risk:** None distinct — touch-voltage exposure is lowest of the TN types
+
+**Machine designer takeaway:** TN-S is usually the cleanest arrangement for industrial machines where predictable PE behavior and EMC matter.
+
 ## IT
 
 Source isolated from earth or connected through high impedance. Exposed parts are earthed locally.
@@ -114,15 +190,49 @@ Source isolated from earth or connected through high impedance. Exposed parts ar
 
 **Typical context:** Hospitals (operating theatres), mines, critical process industries where loss of supply is more dangerous than a first earth fault.
 
+```mermaid
+flowchart LR
+    S[Isolated source<br/>or impedance-earthed source] --> L[Load / machine]
+    L --> PE[Local earth / bonded metal]
+    S -. monitors insulation .- IMD[Insulation Monitoring Device]
+    IMD -. .- PE
+```
+
+> **Fault return:** No solid earth-return path on first fault
+> **Protection:** IMD first, then fault-clearing action on second fault
+> **Main risk:** First fault must be acted on promptly
+
+**Machine designer takeaway:** IT is not "safer by default"; it is safer only when the IMD alarm is monitored and the first fault is handled quickly and consistently.
+
 ## Practical comparison
 
-| System | Fault-return path | Clearing method | Main risk | Typical context |
+| System | Fault-return path | Typical clearing method | Main risk | Typical context |
 |---|---|---|---|---|
-| TN-C | Metallic PEN | Overcurrent device | PEN break energizes metalwork | Distribution, older workshops |
-| TT | Soil to source neutral | RCCB essential | High loop impedance; soil/electrode dependent | Rural installations |
-| TN-C-S | Metallic PE after split | Overcurrent device | Upstream PEN break still possible | Urban residential, PME supply |
-| TN-S | Dedicated metallic PE | Overcurrent device | Higher conductor cost | Industrial, hospital, data centre |
-| IT | Isolated / impedance source | IMD + overcurrent on second fault | First fault undetected without IMD | Hospital theatres, mines |
+| **TN-C** | Metallic PEN | Overcurrent device | PEN break can energize metalwork | Distribution, older workshops |
+| **TT** | Soil / local electrode back to source | RCD / RCCB usually essential | High loop impedance; electrode dependent | Rural or standalone installations |
+| **TN-C-S** | Metallic PE after split point | Overcurrent device | Upstream PEN break still possible | Urban residential, PME supply |
+| **TN-S** | Dedicated metallic PE | Overcurrent device | None distinct — lowest touch-voltage of TN types | Industrial, hospital, data centre |
+| **IT** | Isolated / impedance-earthed source | IMD on first fault; protective clearing on second fault | First fault can persist if ignored | Hospital theatres, mines, critical process |
+
+## Selection logic — what are you optimizing for?
+
+```mermaid
+flowchart TD
+    A[Start with the installation earthing arrangement] --> B{Is the fault-return path metallic and low impedance?}
+
+    B -->|Yes| C{Are PE and neutral separate throughout?}
+    C -->|Yes| TNS[TN-S]
+    C -->|No, combined somewhere| TNCS[TN-C or TN-C-S]
+
+    B -->|No| D{Does the installation rely on local earth electrodes?}
+    D -->|Yes| TT[TT]
+    D -->|No, source isolated / impedance-earthed| IT[IT]
+
+    TT --> TTN[Expect strong dependence on RCD / RCCB performance]
+    IT --> ITN[Expect insulation monitoring and fast response to first-fault alarm]
+    TNS --> TNSN[Best PE separation and EMC behavior]
+    TNCS --> TNCSN[Check PEN dependency and split-point location carefully]
+```
 
 ## The practical questions to ask
 

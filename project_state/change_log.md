@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-03-22
+**Last Updated:** 2026-04-13
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,89 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-13 — Phase 24 COMPLETE: Training visual upgrades
+
+**Type:** Content / Training Enhancement
+**Status:** Complete
+
+### Task 2 — Semiconductor Fab Tool scenario page visual aids
+
+- Added `## Design Workflow Overview` flowchart (LR, 4-phase) after the Standard Stack table
+- Added `## Process Start Permissive Flow` flowchart (5-permissive gate chain: exhaust, gas detector, doors, HV/RF, manual reset → gas/RF enable)
+- Added `## Fault Trip Sequence` flowchart (4 fault types → Safety PLC → close NC valves + disable RF/HV + stop motion + alarm → latch → manual reset → standby)
+- Added `### HV Access Interlock Flow` inside Key Engineering Decisions (discharge loop with polling)
+- Added `### Cybersecurity Zone Diagram` inside Key Engineering Decisions (fab host → firewall → tool controller; Safety PLC shown as hardwired-only, not network-reachable)
+- Jekyll build: clean
+
+---
+
+## 2026-04-13 — Phase 24 Task 1 complete: IEC earthing systems visual upgrades
+
+**Type:** Content / Training Enhancement
+**Status:** Complete
+
+- Added visual summary flowchart (fault return path decision tree) after the IEC letter-code tables
+- Added compact Mermaid topology diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT)
+- Added per-system blockquote callout cards (fault return / protection / main risk)
+- Added "Machine designer takeaway" bold paragraph after each system's callout
+- Replaced the existing 5-column comparison table with an expanded version including "Typical clearing method" column and bold System names
+- Added "Selection logic — what are you optimizing for?" flowchart section before "The practical questions to ask"
+- Jekyll build remains clean (no errors or warnings)
+
+## 2026-04-12 — Phase 24 planning seeded with earthing-systems visual upgrade
+
+**Type:** Project Direction
+**Status:** Planned
+
+- Updated `project_state/project_state.md` so the next tracked phase is `Phase 24 PLANNING — Training Visual Upgrades`
+- Queued a visual enhancement pass for `docs/training/fundamentals/earthing-systems-iec/index.md`
+- Recorded `planning/ground_earth_visual.md` as the implementation note for the earthing-systems page upgrade
+- Captured the expected scope: overview fault-path visual, five compact system diagrams, decision tree, comparison table cleanup, and short per-system callout cards
+
+## 2026-04-12 — Phase 23 Complete: Semiconductor Facility Build Phases 3 & 4
+
+**Type:** Content / Standards Reference
+**Status:** Complete
+
+- Promoted 3 instrumentation staging files to RAG corpus (`device_family_library.md`, `vendor_families.md`, `alarm_and_measurement_strategy.md`)
+- Authored new `commissioning_reference.md` RAG file; updated `_index.yaml` with 4 new entries
+- Built 5 new Jekyll pages:
+  - `/instrumentation/device-families/` — device family library grouped by function
+  - `/instrumentation/vendor-families/` — manufacturer comparison by measurement class (pressure, flow, UPW, MFCs, gas detection, level, vacuum, cleanroom)
+  - `/instrumentation/alarm-strategy/` — alarm philosophy, measurement windows, alarm classes, safe-state design
+  - `/commissioning/` — phase-based commissioning framework with readiness criteria and system-specific notes
+  - `/crosswalks/` — system-to-system dependency map and standards-to-systems crosswalk
+- Added "In This Section" navigation block to instrumentation landing page
+- Updated `navigation.yml` (instrumentation sub-pages + Commissioning + System Crosswalks under facility)
+- Updated facility `index.md` scope table
+- Jekyll build: clean, 157 pages
+
+## 2026-04-11 — Phase 22 Complete: Semiconductor Facility Reference (10 pages)
+
+Second slice — four additional pages:
+- HVAC and Cleanroom (room pressure cascade, ISO 14644, particle monitoring)
+- Bulk Chemical Distribution (storage, transfer sequencing, containment, SEMI F39/F57)
+- Safety and Shutdown Architecture (4-layer shutdown model, cause-and-effect, SIL integration)
+- Common Control Philosophy (modes, state machine, permissives/interlocks/trips, safe-state rules)
+- Facility overview and semiconductor industry page updated; navigation extended
+- Jekyll build: clean, 152 pages
+
+## 2026-04-11 — Phase 22 First Slice: Semiconductor Facility Reference
+
+- Fixed AI boundary headers on 7 RAG files; validate_ai_boundaries.py now passes 316/316
+- Committed `planning/semi_facility/` staging area to git
+- Promoted 10 staging files to `control-standards/rag/design_framework/semiconductor_facility/` with proper headers and `_index.yaml`
+- Built 6 new Jekyll pages under `docs/industries/semiconductor/facility/`:
+  - Facility overview + standards selection flowchart
+  - Bulk Specialty Gas Systems
+  - UPW and Wastewater Systems
+  - Exhaust and Abatement Systems
+  - Tool-Facility Interface
+  - Instrumentation Reference (full use matrix by system)
+- Added Semiconductor Facility sub-tree to `docs/_data/navigation.yml`
+- Cross-linked from existing semiconductor industry page
+- Jekyll build: clean, 148 pages (up from 142)
 
 ## 2026-03-27 — Control Systems Training Expansion (7 new modules)
 

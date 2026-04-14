@@ -1,0 +1,67 @@
+section: semiconductor_facility
+description: >
+  Semiconductor facility utility systems and instrumentation reference.
+  Covers facility-side infrastructure that interfaces with process tools.
+  Promoted from planning/semi_facility/ staging area (Phase 22).
+content_class: DERIVED_REFERENCE
+ai_read_access: ALLOWED
+
+files:
+  - id: semi-facility-bulk-gas
+    file: bulk_specialty_gas.md
+    title: Bulk Specialty Gas Systems
+    summary: Facility-side gas infrastructure — storage, gas rooms, cabinets, VMBs, purge panels, tool interface points
+
+  - id: semi-facility-bulk-chemical
+    file: bulk_chemical_distribution.md
+    title: Bulk Chemical Distribution and Wet Process
+    summary: Chemical bulk storage, distribution piping, wet bench supply, waste collection, and compatibility notes
+
+  - id: semi-facility-upw
+    file: upw_and_wastewater.md
+    title: UPW and Wastewater Systems
+    summary: Ultrapure water generation, polishing, distribution, and wastewater treatment streams
+
+  - id: semi-facility-exhaust
+    file: exhaust_abatement_vacuum.md
+    title: Exhaust, Abatement, and Vacuum Systems
+    summary: Process exhaust routing, abatement units, rough and high-vacuum rough pumping systems
+
+  - id: semi-facility-hvac
+    file: hvac_and_cleanroom.md
+    title: HVAC and Cleanroom Environment
+    summary: Cleanroom HVAC, FFU arrays, make-up air, temperature/humidity control, and subfloor air management
+
+  - id: semi-facility-safety-shutdown
+    file: safety_and_shutdown.md
+    title: Safety and Shutdown Architecture
+    summary: Facility-side safety interlocks, EMS, gas detection, area monitors, emergency shutdown sequences
+
+  - id: semi-facility-tfi
+    file: tool_facility_interface.md
+    title: Tool-Facility Interface (TFI)
+    summary: Connection points between semiconductor process tools and facility utilities — mechanical, electrical, controls
+
+  - id: semi-facility-control-philosophy
+    file: common_control_philosophy.md
+    title: Common Control Philosophy
+    summary: Shared control philosophy across facility utility systems — modes, states, interlocks, alarm philosophy
+
+  - id: semi-facility-instrumentation-matrix
+    file: instrumentation_use_matrix.md
+    title: Instrumentation Use Matrix
+    summary: Which instrument types are used in which facility systems — organized by measurement parameter
+
+  - id: semi-facility-instrumentation-selection
+    file: instrumentation_selection.md
+    title: Instrumentation Selection Principles
+    summary: Selection criteria for facility instrumentation — process conditions, safety class, material compatibility
+
+  - file: device_family_library.md
+    description: "Device family groupings by function and typical fab utility usage"
+  - file: vendor_families.md
+    description: "Manufacturer product family comparison by measurement class"
+  - file: alarm_and_measurement_strategy.md
+    description: "Alarm philosophy, utility measurement windows, and alarm class definitions"
+  - file: commissioning_reference.md
+    description: "Commissioning and startup reference for semiconductor facility utility systems"
