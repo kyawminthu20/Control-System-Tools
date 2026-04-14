@@ -1,3 +1,5 @@
+**AI_READ_ACCESS: ALLOWED**
+
 Semiconductor equipment builders such as ASML and Applied Materials do not rely on a single machine-safety standard. Instead they maintain an internal **minimum compliance stack**.
 
 The goal is to ensure a tool can be installed in **US, EU, and Asian fabs** without redesign. The list below represents a realistic **baseline stack** used for high-value semiconductor tools.

@@ -1,5 +1,7 @@
 # Standards Atlas — Diagram Reference Pack
 
+**AI_READ_ACCESS: ALLOWED**
+
 This file collects the core diagrams for the Control System Standards Atlas project.
 
 Use these as source diagrams for the site, docs, or future SVG redraws.
@@ -40,26 +42,26 @@ graph TD
 
 ```mermaid
 graph LR
-    A[Home] --> B[/standards]
-    A --> C[/lifecycle]
-    A --> D[/industries]
-    A --> E[/scenarios]
-    A --> F[/software-stack]
-    A --> G[/crosswalks]
+    A[Home] --> B["/standards"]
+    A --> C["/lifecycle"]
+    A --> D["/industries"]
+    A --> E["/scenarios"]
+    A --> F["/software-stack"]
+    A --> G["/crosswalks"]
 
-    B --> B1[/standards/machinery]
-    B --> B2[/standards/process-safety]
-    B --> B3[/standards/electrical]
-    B --> B4[/standards/cybersecurity]
-    B --> B5[/standards/software]
-    B --> B6[/standards/industry-specific]
+    B --> B1["/standards/machinery"]
+    B --> B2["/standards/process-safety"]
+    B --> B3["/standards/electrical"]
+    B --> B4["/standards/cybersecurity"]
+    B --> B5["/standards/software"]
+    B --> B6["/standards/industry-specific"]
 
-    D --> D1[/industries/semiconductor]
-    D --> D2[/industries/food-and-beverage]
-    D --> D3[/industries/oil-and-gas]
-    D --> D4[/industries/marine]
-    D --> D5[/industries/medical]
-    D --> D6[/industries/nuclear]
+    D --> D1["/industries/semiconductor"]
+    D --> D2["/industries/food-and-beverage"]
+    D --> D3["/industries/oil-and-gas"]
+    D --> D4["/industries/marine"]
+    D --> D5["/industries/medical"]
+    D --> D6["/industries/nuclear"]
 ```
 
 ---
@@ -685,4 +687,3 @@ graph TD
     B --> B4[Commissioning workflow]
     B --> B5[Maintenance loop]
 ```
-

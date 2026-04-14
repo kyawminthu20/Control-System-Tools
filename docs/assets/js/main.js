@@ -1,5 +1,47 @@
 // Control System Standards Atlas — Main JS
 
+// Render Mermaid fenced code blocks on normal site pages
+(function () {
+  if (!window.mermaid) return;
+
+  function convertFencedMermaid() {
+    var converted = [];
+
+    document.querySelectorAll('code.language-mermaid').forEach(function (code) {
+      var pre = code.parentElement;
+      if (!pre) return;
+
+      // Skip blocks that already live inside a Mermaid container.
+      if (pre.classList.contains('mermaid') || pre.closest('.mermaid-wrap')) return;
+
+      var wrap = document.createElement('div');
+      wrap.className = 'mermaid-wrap';
+
+      var div = document.createElement('div');
+      div.className = 'mermaid';
+      div.textContent = code.textContent;
+
+      wrap.appendChild(div);
+      pre.replaceWith(wrap);
+      converted.push(div);
+    });
+
+    if (!converted.length) return;
+
+    try {
+      window.mermaid.init(undefined, converted);
+    } catch (err) {
+      console.error('Mermaid render failed on converted fenced blocks:', err);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', convertFencedMermaid);
+  } else {
+    convertFencedMermaid();
+  }
+})();
+
 // Sidebar mobile toggle
 (function () {
   var toggle = document.getElementById('sidebar-toggle');

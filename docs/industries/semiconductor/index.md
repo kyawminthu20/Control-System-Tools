@@ -131,4 +131,23 @@ S2 requires that safety interlocks be independent of the process control system 
 
 - [15-Standard Minimum Compliance Stack]({{ '/reference/architecture/compliance-stack/' | relative_url }}) — full compliance baseline for semiconductor equipment
 
+---
+
+## Semiconductor Facility Reference
+
+This page covers **equipment**-oriented standards (S2/S8/S14, IEC 60204-1). The companion Facility Reference section covers the building and utility layer that tools depend on:
+
+| Section | Coverage |
+|---------|----------|
+| [Facility Overview]({{ '/industries/semiconductor/facility/' | relative_url }}) | Standards stack, cross-cutting design threads |
+| [Bulk Specialty Gas]({{ '/industries/semiconductor/facility/bulk-specialty-gas/' | relative_url }}) | Gas storage, cabinets, VMBs, purge panels |
+| [UPW and Wastewater]({{ '/industries/semiconductor/facility/upw-wastewater/' | relative_url }}) | UPW generation, distribution, reclaim, drain segregation |
+| [Exhaust and Abatement]({{ '/industries/semiconductor/facility/exhaust-abatement/' | relative_url }}) | Process exhaust, abatement utilities, vacuum |
+| [HVAC and Cleanroom]({{ '/industries/semiconductor/facility/hvac-cleanroom/' | relative_url }}) | Room pressure cascade, FFU systems, temperature/humidity, particle monitoring |
+| [Bulk Chemical Distribution]({{ '/industries/semiconductor/facility/bulk-chemical/' | relative_url }}) | Bulk storage, transfer skids, blend systems, containment, drain segregation |
+| [Safety and Shutdown Architecture]({{ '/industries/semiconductor/facility/safety-shutdown/' | relative_url }}) | Shutdown layers, gas/leak detection integration, cause-and-effect design |
+| [Common Control Philosophy]({{ '/industries/semiconductor/facility/control-philosophy/' | relative_url }}) | Modes, states, permissives, interlocks, trips, and shutdown ownership |
+| [Tool-Facility Interface]({{ '/industries/semiconductor/facility/tool-facility-interface/' | relative_url }}) | Handshake signals, permit-to-run, battery limit definitions |
+| [Instrumentation]({{ '/industries/semiconductor/facility/instrumentation/' | relative_url }}) | Device selection matrix by system and compliance lens |
+
 <a href="{{ '/industries/' | relative_url }}" class="card__link">&larr; Industry matrix</a>

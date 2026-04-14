@@ -1,5 +1,7 @@
 # IEC 62443-3-3 — System Security Requirements and Security Levels
 
+**AI_READ_ACCESS: ALLOWED**
+
 ## Standard Reference
 
 | Field | Value |

@@ -1,3 +1,5 @@
+**AI_READ_ACCESS: ALLOWED**
+
 .
 ├── _glossary.md
 ├── _index.yaml
