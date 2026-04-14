@@ -220,7 +220,9 @@ flowchart TD
     S --> V[Close NC gas valves]
     S --> R[Disable RF and HV]
     S --> M[Stop wafer handling motion]
-    S --> A[Alarm and event log]
+    V --> A[Alarm and event log]
+    R --> A
+    M --> A
 
     A --> Q{Safe conditions restored<br/>and manual reset complete?}
     Q -->|No| L[Remain latched safe]
@@ -243,7 +245,7 @@ flowchart TD
     B --> C{Capacitor voltage below safe threshold?}
     C -->|No| D[Keep panel interlocked closed]
     D --> E[Show discharge indicator]
-    E --> C
+    E -->|wait for bleed-down| C
     C -->|Yes| F[Permit panel opening]
 ```
 
@@ -262,7 +264,7 @@ flowchart LR
     RD[Remote Diagnostics]
 
     FH --> FW --> TC
-    TC --- SP
+    TC -. hardwired only .- SP
     MP --> TC
     RD --> FW
 ```
