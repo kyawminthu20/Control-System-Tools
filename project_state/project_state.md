@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-04-13
 **Status:** Active
-**Current Phase:** Phase 24 IN PROGRESS — Training Visual Upgrades (Task 1 complete)
-**Next Phase:** Phase 24 Task 2 — visual aids for Semiconductor Fab Tool scenario page
+**Current Phase:** Phase 24 COMPLETE — Training Visual Upgrades
+**Next Phase:** Phase 25 PLANNING — TBD
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -672,25 +672,27 @@ Second slice (after first slice ships): HVAC, chemicals, safety/shutdown archite
 - `planning/semi_facility/systems/facility_systems_map.md` — system scope boundaries
 - `planning/semi_facility/sources/public_source_register.md` — source governance (30+ sources registered)
 
-## Phase 24 Planning — Training Visual Upgrades
+## Phase 24 — Training Visual Upgrades — COMPLETE
 
-**Status:** Planned
-**Initial implementation note:** `planning/ground_earth_visual.md`
+**Status:** Complete (2026-04-13)
+**Branch:** `feat/phase24-training-visual-upgrades`
 
-### Queued work
+### Completed work
 
-- [ ] `docs/training/fundamentals/earthing-systems-iec/index.md` — add the visual upgrade package from `planning/ground_earth_visual.md`
+- [x] `docs/training/fundamentals/earthing-systems-iec/index.md` — visual upgrade package from `planning/ground_earth_visual.md`
+  - Overview fault-return flowchart after IEC letter-code tables
+  - Compact topology diagrams for TN-C, TT, TN-C-S, TN-S, IT
+  - Per-system blockquote callout cards (fault return / protection / main risk)
+  - Machine designer takeaway line under each system
+  - Expanded practical comparison table (5 columns, bold System names)
+  - Selection logic decision tree before practical questions section
 
-### Intended implementation scope
+- [x] `docs/scenarios/semiconductor-fab-tool/index.md` — visual aids from `planning/semi_facility/semiconductor_fab_tool_visual_aids.md`
+  - Design Workflow Overview (4-phase LR flowchart)
+  - Process Start Permissive Flow (5-permissive gate chain)
+  - Fault Trip Sequence (fail-safe de-energize + latch + manual reset)
+  - HV Access Interlock Flow (capacitor discharge polling loop)
+  - Cybersecurity Zone Diagram (fab host → firewall → tool controller; Safety PLC hardwired-only)
 
-- add an overview visual for fault-return behavior across TN, TT, and IT families
-- add compact per-system diagrams for `TN-C`, `TT`, `TN-C-S`, `TN-S`, and `IT`
-- add a decision-tree visual before the practical question section
-- replace the dense comparison block with a clearer markdown matrix
-- add short callout cards under each system for fault return, protection method, and main design risk
-
-### Constraints
-
-- keep the existing URL and page structure stable
-- use the current Mermaid integration already present on the site
-- treat this as a site-page enhancement; no RAG rewrite is required unless the page content later diverges from the canonical training note
+### Build
+- Jekyll build: clean (no errors), 157 pages

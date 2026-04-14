@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-12
+**Last Updated:** 2026-04-13
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,22 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-13 — Phase 24 COMPLETE: Training visual upgrades
+
+**Type:** Content / Training Enhancement
+**Status:** Complete
+
+### Task 2 — Semiconductor Fab Tool scenario page visual aids
+
+- Added `## Design Workflow Overview` flowchart (LR, 4-phase) after the Standard Stack table
+- Added `## Process Start Permissive Flow` flowchart (5-permissive gate chain: exhaust, gas detector, doors, HV/RF, manual reset → gas/RF enable)
+- Added `## Fault Trip Sequence` flowchart (4 fault types → Safety PLC → close NC valves + disable RF/HV + stop motion + alarm → latch → manual reset → standby)
+- Added `### HV Access Interlock Flow` inside Key Engineering Decisions (discharge loop with polling)
+- Added `### Cybersecurity Zone Diagram` inside Key Engineering Decisions (fab host → firewall → tool controller; Safety PLC shown as hardwired-only, not network-reachable)
+- Jekyll build: clean
+
+---
 
 ## 2026-04-13 — Phase 24 Task 1 complete: IEC earthing systems visual upgrades
 
