@@ -35,6 +35,7 @@ The goal is to centralize facility systems, controls, instrumentation, safety, a
 - `taxonomy/`: system map and document taxonomy.
 - `standards/`: candidate standards and code families to catalog.
 - `systems/`: normalized system-level engineering notes.
+- `chemicals/`: chemical-specific hazards, compatibility, interlocks, shutdown behavior, and failure-mode notes.
 - `sources/`: public-source register and note templates.
 - `manuals/`: catalog and summary notes for instrumentation manuals.
 - `instrumentation/`: device families, selection logic, and range or alarm guidance.
@@ -47,6 +48,7 @@ The goal is to centralize facility systems, controls, instrumentation, safety, a
 - Vendor and product-family comparison: [Manufacturer and Product Family Comparison](instrumentation/manufacturer_product_family_comparison.md)
 - Standards explainer with flowcharts: [Standards README](standards/README.md)
 - Semiconductor-facility standards landscape: [Standards Landscape](standards/semiconductor_facility_standards_landscape.md)
+- Chemical-specific expansion plan: [Chemical-Specific Buildout Plan](roadmap/chemical_specific_buildout_plan.md)
 
 ## Local standards anchors already in this repo
 

@@ -20,6 +20,8 @@ breadcrumb:
 
 This page covers facility-side gas infrastructure that feeds semiconductor tools and process areas. It addresses the supply and control path from the bulk source to the tool interface — not the internal process-tool gas box design.
 
+For the cabinet-level sequence, interlock, purge, and shutdown package, use the dedicated [Gas Cabinet Reference](/industries/semiconductor/facility/gas-cabinet/).
+
 ---
 
 ## Scope
@@ -131,6 +133,7 @@ See the [Instrumentation Reference](/industries/semiconductor/facility/instrumen
 
 ## See Also
 
+- [Gas Cabinet Reference](/industries/semiconductor/facility/gas-cabinet/) — full cabinet architecture, purge, interlock, and shutdown visual set
 - [Exhaust and Abatement Systems](/industries/semiconductor/facility/exhaust-abatement/) — exhaust proof and abatement dependencies
 - [Tool-Facility Interface](/industries/semiconductor/facility/tool-facility-interface/) — permit-to-run and handshake signals
 - [Instrumentation Reference](/industries/semiconductor/facility/instrumentation/) — device selection matrix

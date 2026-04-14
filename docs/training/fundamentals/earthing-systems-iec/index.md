@@ -195,7 +195,7 @@ flowchart LR
     S[Isolated source<br/>or impedance-earthed source] --> L[Load / machine]
     L --> PE[Local earth / bonded metal]
     S -. monitors insulation .- IMD[Insulation Monitoring Device]
-    IMD -. .- PE
+    IMD -. insulation reference .- PE
 ```
 
 > **Fault return:** No solid earth-return path on first fault

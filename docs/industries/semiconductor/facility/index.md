@@ -27,6 +27,7 @@ Semiconductor fabs run multiple interdependent utility systems. Each system has 
 | System | Description |
 |--------|-------------|
 | [Bulk Specialty Gas](bulk-specialty-gas/) | Gas storage, rooms, cabinets, VMBs, purge panels, tool interface points |
+| [Gas Cabinet Reference](gas-cabinet/) | Cabinet-level architecture, purge sequence, interlocks, trips, alarm philosophy, and tool handshake |
 | [UPW and Wastewater](upw-wastewater/) | Ultrapure water generation, distribution, reclaim, and drain segregation |
 | [Exhaust and Abatement](exhaust-abatement/) | Process exhaust, toxic/corrosive capture, abatement support, vacuum |
 | [HVAC and Cleanroom](hvac-cleanroom/) | Room pressure cascade, FFU systems, temperature/humidity, particle monitoring |

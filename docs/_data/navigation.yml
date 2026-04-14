@@ -93,6 +93,8 @@
           children:
             - label: "Bulk Specialty Gas"
               url: "/industries/semiconductor/facility/bulk-specialty-gas/"
+            - label: "Gas Cabinet"
+              url: "/industries/semiconductor/facility/gas-cabinet/"
             - label: "UPW and Wastewater"
               url: "/industries/semiconductor/facility/upw-wastewater/"
             - label: "Exhaust and Abatement"

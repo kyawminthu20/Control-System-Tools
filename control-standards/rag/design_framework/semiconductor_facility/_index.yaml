@@ -12,6 +12,11 @@ files:
     title: Bulk Specialty Gas Systems
     summary: Facility-side gas infrastructure — storage, gas rooms, cabinets, VMBs, purge panels, tool interface points
 
+  - id: semi-facility-gas-cabinet
+    file: gas_cabinet_control_safety_and_interlocks.md
+    title: Semiconductor Gas Cabinet — Control, Safety, and Interlock Architecture
+    summary: Cabinet-level gas reference covering architecture, purge sequence, valve proving, hazardous shutdown, alarm philosophy, and tool handshake
+
   - id: semi-facility-bulk-chemical
     file: bulk_chemical_distribution.md
     title: Bulk Chemical Distribution and Wet Process
@@ -56,6 +61,11 @@ files:
     file: instrumentation_selection.md
     title: Instrumentation Selection Principles
     summary: Selection criteria for facility instrumentation — process conditions, safety class, material compatibility
+
+  - id: semi-facility-hf-reference
+    file: hf_control_safety_and_instrumentation.md
+    title: Hydrofluoric Acid (HF) — Control, Safety, and Instrumentation
+    summary: Chemical-specific HF reference covering materials, instrumentation implications, shutdown ownership, and failure modes for facility-side liquid chemical systems
 
   - file: device_family_library.md
     description: "Device family groupings by function and typical fab utility usage"

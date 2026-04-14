@@ -14,5 +14,6 @@ Use `training_modules/` for:
 - feedback-control and PID concepts
 - code-reading and application training
 - machine and motor concept refreshers
+- semiconductor-facility learning notes that simplify the design-framework layer
 
 Do not use this module as the final compliance authority. Route compliance decisions back to `../standards_intelligence/`.
