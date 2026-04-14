@@ -77,7 +77,8 @@ Source neutral earthed. Exposed parts connected to a combined PEN conductor (neu
 
 ```mermaid
 flowchart LR
-    S[Transformer<br/>neutral earthed] --> PEN[PEN conductor]
+    E[Source earth electrode] --- S[Transformer<br/>neutral earthed]
+    S --> PEN[PEN conductor]
     PEN --> L[Load / panel / machine]
     L --> M[Exposed metal bonded to PEN]
 ```
@@ -162,7 +163,8 @@ Neutral and protective earth are separate conductors from the transformer onward
 
 ```mermaid
 flowchart LR
-    S[Transformer] --> N[Neutral]
+    E[Source earth electrode] --- S[Transformer]
+    S --> N[Neutral]
     S --> PE[Dedicated PE]
     N --> L[Load / machine]
     PE --> L
@@ -170,7 +172,7 @@ flowchart LR
 
 > **Fault return:** Dedicated metallic PE
 > **Protection:** Overcurrent device
-> **Main risk:** Higher installation cost, but cleaner PE arrangement
+> **Main risk:** None distinct — touch-voltage exposure is lowest of the TN types
 
 **Machine designer takeaway:** TN-S is usually the cleanest arrangement for industrial machines where predictable PE behavior and EMC matter.
 
@@ -192,7 +194,8 @@ Source isolated from earth or connected through high impedance. Exposed parts ar
 flowchart LR
     S[Isolated source<br/>or impedance-earthed source] --> L[Load / machine]
     L --> PE[Local earth / bonded metal]
-    L --> IMD[Insulation Monitoring Device]
+    S -. monitors insulation .- IMD[Insulation Monitoring Device]
+    IMD --> PE
 ```
 
 > **Fault return:** No solid earth-return path on first fault
