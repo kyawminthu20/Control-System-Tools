@@ -195,7 +195,7 @@ flowchart LR
     S[Isolated source<br/>or impedance-earthed source] --> L[Load / machine]
     L --> PE[Local earth / bonded metal]
     S -. monitors insulation .- IMD[Insulation Monitoring Device]
-    IMD --> PE
+    IMD -. .- PE
 ```
 
 > **Fault return:** No solid earth-return path on first fault
@@ -211,7 +211,7 @@ flowchart LR
 | **TN-C** | Metallic PEN | Overcurrent device | PEN break can energize metalwork | Distribution, older workshops |
 | **TT** | Soil / local electrode back to source | RCD / RCCB usually essential | High loop impedance; electrode dependent | Rural or standalone installations |
 | **TN-C-S** | Metallic PE after split point | Overcurrent device | Upstream PEN break still possible | Urban residential, PME supply |
-| **TN-S** | Dedicated metallic PE | Overcurrent device | Higher conductor cost | Industrial, hospital, data centre |
+| **TN-S** | Dedicated metallic PE | Overcurrent device | None distinct — lowest touch-voltage of TN types | Industrial, hospital, data centre |
 | **IT** | Isolated / impedance-earthed source | IMD on first fault; protective clearing on second fault | First fault can persist if ignored | Hospital theatres, mines, critical process |
 
 ## Selection logic — what are you optimizing for?
