@@ -1,0 +1,50 @@
+# control-standards/rag/design_framework/water_wastewater/_index.yaml
+section: water_wastewater
+description: >
+  Municipal drinking water treatment and industrial wastewater treatment reference.
+  Covers intake, filtration, chemical dosing, distribution SCADA, equalization,
+  biological treatment, discharge compliance, and instrumentation.
+  Authored for Phase 25.
+content_class: DERIVED_REFERENCE
+ai_read_access: ALLOWED
+
+files:
+  - id: ww-overview
+    file: overview_and_standards.md
+    title: Water/Wastewater Overview and Standards Stack
+    summary: Industry overview, standards selection flowchart, and applicability matrix for municipal and industrial water systems
+
+  - id: ww-intake-pumping
+    file: intake_and_pumping.md
+    title: Intake and Raw Water Pumping
+    summary: Pump station control architecture, start permissives, VFD control, and level-based sequencing
+
+  - id: ww-filtration
+    file: filtration_and_clarification.md
+    title: Filtration and Clarification
+    summary: Filter run/backwash state machine, turbidity-driven control, coagulation and flocculation
+
+  - id: ww-chemical-dosing
+    file: chemical_dosing.md
+    title: Chemical Dosing Systems
+    summary: Flow-paced chlorination, coagulant dosing, pH correction, OT shutdown interlocks, chemical feed interlock chain
+
+  - id: ww-distribution-scada
+    file: distribution_scada_telemetry.md
+    title: Distribution SCADA and Telemetry
+    summary: SCADA zone architecture, RTU/PLC telemetry, IEC 62443 security zones, communication failure fallback
+
+  - id: ww-equalization
+    file: equalization_and_neutralization.md
+    title: Equalization and Neutralization
+    summary: Influent equalization basin level control, pH neutralization PID loop, industrial wastewater conditioning
+
+  - id: ww-treatment-discharge
+    file: treatment_and_discharge.md
+    title: Treatment and Discharge Compliance
+    summary: Biological treatment train, secondary clarification, effluent disinfection, permit limit trip logic, EPA CWA compliance
+
+  - id: ww-instrumentation
+    file: instrumentation_reference.md
+    title: Instrumentation Reference
+    summary: Analyzer loop architecture, instrument selection by measurement type, HART/4-20mA wiring, calibration requirements
