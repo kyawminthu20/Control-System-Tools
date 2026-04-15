@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-04-14
 **Status:** Active
-**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batch 1 of 9 complete)
-**Next Phase:** Phase 26 Batch 2 — Fundamentals group migration (Task 5)
+**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batches 1–4 complete)
+**Next Phase:** Phase 26 Batch 5 — Verification group migration (Task 8)
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,18 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+Phase 26 Batch 4 (Task 7) is complete:
+- Implementation group (23 pages) migrated to `/implementation/`: commissioning-templates (7), scenarios (10), servo-commissioning, vfd-commissioning, lifecycle-build, lifecycle-pre-commissioning, lifecycle-installation, lifecycle-commissioning
+- `redirect_from:` with both bare and `/index.html` variants added to all 23 moved files
+- Internal cross-links inside moved pages updated to new `/implementation/...` paths
+- Empty source directories removed; Jekyll build clean
+
+Phase 26 Batch 3 (Task 6) is complete:
+- Design group migrated to `/design/`; all redirects in place
+
+Phase 26 Batch 2 (Task 5) is complete:
+- Fundamentals/training group migrated to `/fundamentals/`; all redirects in place
 
 Phase 26 Batch 1 (Tasks 1–4) is complete:
 - `jekyll-redirect-from` plugin installed and verified (Gemfile, Gemfile.lock, _config.yml updated; gem 0.16.0 installed)

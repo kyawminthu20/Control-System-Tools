@@ -18,6 +18,23 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-04-14 — Phase 26 Batch 4: Implementation Group Migration (Task 7)
+
+**Type:** Refactor / Navigation Restructure
+**Status:** Complete
+
+- Migrated 23 pages to `docs/implementation/`:
+  - `commissioning-templates/` (landing + 6 sub-pages) → `implementation/commissioning-templates/`
+  - `scenarios/` (landing + 9 sub-pages) → `implementation/scenarios/`
+  - `workflows/servo-commissioning/` → `implementation/servo-commissioning/`
+  - `workflows/vfd-commissioning/` → `implementation/vfd-commissioning/`
+  - `lifecycle/build/`, `lifecycle/pre-commissioning/`, `lifecycle/installation/`, `lifecycle/commissioning/` → `implementation/lifecycle-{name}/`
+- `redirect_from:` (bare + `/index.html`) added to all 23 files preserving old URLs
+- Internal cross-links inside moved pages updated to new `/implementation/...` paths
+- Empty source directories removed
+- Jekyll build: clean
+- Commit: f64372e
+
 ## 2026-04-14 — Phase 26 Batch 1: Foundation (Tasks 1–4)
 
 **Type:** Tooling / Infrastructure
