@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-13
+**Last Updated:** 2026-04-15
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,13 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-15 — Stripped third-party attribution from bundled Python bootcamp
+
+- Removed Pierian Data attribution markdown cells from 346 notebooks under `planning/Python/Complete-Python-3-Bootcamp-master/` and `planning/Python/Training/Complete-Python-3-Bootcamp-master/`
+- Deleted `Pierian_Data_Logo.png` (2 copies)
+- Stripped attribution lines from bootcamp READMEs and scrubbed example file-path strings inside code cells
+- Notebooks themselves retained
 
 ## 2026-04-13 — Phase 24 COMPLETE: Training visual upgrades
 
