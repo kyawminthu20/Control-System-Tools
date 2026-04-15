@@ -6,8 +6,11 @@ breadcrumb:
   - name: "Reference Models"
     url: "/reference/"
   - name: "Motor Systems"
-    url: "/reference/motor-systems/"
+    url: "/design/motor-selection/"
   - name: "Motor Selection Matrix"
+redirect_from:
+  - /design/motor-selection/motor-selection-matrix/
+  - /design/motor-selection/motor-selection-matrix/index.html
 ---
 
 <div class="page-header">
@@ -104,7 +107,7 @@ Review at least the following:
 
 ## Related References
 
-- [Motor Selection Workflow]({{ '/workflows/motor-selection/' | relative_url }}) — step-by-step selection process
+- [Motor Selection Workflow]({{ '/design/workflows/motor-selection/' | relative_url }}) — step-by-step selection process
 
 ---
 

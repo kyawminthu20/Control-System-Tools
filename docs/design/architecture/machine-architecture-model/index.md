@@ -6,8 +6,11 @@ breadcrumb:
   - name: "Reference Models"
     url: "/reference/"
   - name: "Architecture"
-    url: "/reference/architecture/"
+    url: "/design/architecture/"
   - name: "Machine Architecture Model"
+redirect_from:
+  - /design/architecture/machine-architecture-model/
+  - /design/architecture/machine-architecture-model/index.html
 ---
 
 <div class="page-header">

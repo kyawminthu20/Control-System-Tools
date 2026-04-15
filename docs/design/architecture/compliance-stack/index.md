@@ -6,8 +6,11 @@ breadcrumb:
   - name: "Reference Models"
     url: "/reference/"
   - name: "Architecture"
-    url: "/reference/architecture/"
+    url: "/design/architecture/"
   - name: "Compliance Stack"
+redirect_from:
+  - /design/architecture/compliance-stack/
+  - /design/architecture/compliance-stack/index.html
 ---
 
 <div class="page-header">

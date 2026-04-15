@@ -2,6 +2,9 @@
 layout: default
 title: Engineering Workflows
 description: Structured workflows for motor selection, drive commissioning, troubleshooting, and electrical review.
+redirect_from:
+  - /design/workflows/
+  - /workflows/index.html
 ---
 
 <div class="page-header">
@@ -20,7 +23,7 @@ description: Structured workflows for motor selection, drive commissioning, trou
   <div class="workflow-card">
     <div class="workflow-card-header">
       <span class="workflow-badge motor">Motor Systems</span>
-      <h3><a href="{{ '/workflows/motor-selection/' | relative_url }}">Motor Selection Workflow</a></h3>
+      <h3><a href="{{ '/design/workflows/motor-selection/' | relative_url }}">Motor Selection Workflow</a></h3>
     </div>
     <p>First-pass motor selection from load definition through protection and integration review. Covers supply architecture, environment, nameplate, and drive compatibility.</p>
     <div class="workflow-meta">
@@ -74,7 +77,7 @@ description: Structured workflows for motor selection, drive commissioning, trou
   <div class="workflow-card">
     <div class="workflow-card-header">
       <span class="workflow-badge electrical">Electrical</span>
-      <h3><a href="{{ '/workflows/electrical-review/' | relative_url }}">Electrical Review Workflow</a></h3>
+      <h3><a href="{{ '/design/workflows/electrical-review/' | relative_url }}">Electrical Review Workflow</a></h3>
     </div>
     <p>Fast design-review and bench-troubleshooting workflows for resistive circuits: Ohm's law checks, network topology, voltage divider loading, power margin, and component sanity.</p>
     <div class="workflow-meta">

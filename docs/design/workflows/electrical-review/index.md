@@ -2,10 +2,13 @@
 layout: default
 title: Electrical Review Workflow
 description: Fast design-review and bench-troubleshooting workflows for resistive circuits and basic electrical checks.
+redirect_from:
+  - /design/workflows/electrical-review/
+  - /design/workflows/electrical-review/index.html
 ---
 
 <div class="page-header">
-  <div class="breadcrumb"><a href="{{ '/workflows/' | relative_url }}">Workflows</a> › Electrical</div>
+  <div class="breadcrumb"><a href="{{ '/design/workflows/' | relative_url }}">Workflows</a> › Electrical</div>
   <h1>Electrical Review Workflow</h1>
   <p class="page-subtitle">Fast design-review and bench-troubleshooting workflows for resistive circuits: Ohm's law checks, network topology, voltage divider loading, power margin, and component sanity.</p>
   <div class="workflow-meta" style="margin-top:0.75rem;">
@@ -139,7 +142,7 @@ Escalate to nodal, loop, Thévenin, or Norton methods if:
 
 | Workflow | When to use |
 |---|---|
-| [Motor Selection Workflow]({{ '/workflows/motor-selection/' | relative_url }}) | When resistive checks arise in a motor-circuit design |
+| [Motor Selection Workflow]({{ '/design/workflows/motor-selection/' | relative_url }}) | When resistive checks arise in a motor-circuit design |
 | [VFD Commissioning Workflow]({{ '/workflows/vfd-commissioning/' | relative_url }}) | Electrical pre-checks before drive power-up |
 
 {% include trust-boundary.html %}

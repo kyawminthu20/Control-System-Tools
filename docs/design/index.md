@@ -4,6 +4,9 @@ title: "Engineering Workflow"
 description: "Workflow-first navigation for machine and panel design: lifecycle stages, engineering workflows, commissioning templates, and scenarios."
 breadcrumb:
   - name: "Engineering Workflow"
+redirect_from:
+  - /design/
+  - /design/index.html
 ---
 
 <div class="page-header">
@@ -33,11 +36,11 @@ breadcrumb:
 
 <div class="workflow-card-grid">
   <div class="workflow-card">
-    <h3><a href="{{ '/workflows/motor-selection/' | relative_url }}">Motor Selection</a></h3>
+    <h3><a href="{{ '/design/workflows/motor-selection/' | relative_url }}">Motor Selection</a></h3>
     <p>Decision framework for motor-system family selection across induction, servo, BLDC, and stepper platforms.</p>
   </div>
   <div class="workflow-card">
-    <h3><a href="{{ '/workflows/electrical-review/' | relative_url }}">Electrical Review</a></h3>
+    <h3><a href="{{ '/design/workflows/electrical-review/' | relative_url }}">Electrical Review</a></h3>
     <p>Systematic electrical design review: conductor sizing, protection coordination, grounding, and panel checklist.</p>
   </div>
 </div>

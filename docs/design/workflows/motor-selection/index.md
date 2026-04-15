@@ -2,10 +2,13 @@
 layout: default
 title: Motor Selection Workflow
 description: First-pass motor selection from load definition through protection and integration review.
+redirect_from:
+  - /design/workflows/motor-selection/
+  - /design/workflows/motor-selection/index.html
 ---
 
 <div class="page-header">
-  <div class="breadcrumb"><a href="{{ '/workflows/' | relative_url }}">Workflows</a> › Motor Systems</div>
+  <div class="breadcrumb"><a href="{{ '/design/workflows/' | relative_url }}">Workflows</a> › Motor Systems</div>
   <h1>Motor Selection Workflow</h1>
   <p class="page-subtitle">Structure first-pass motor selection before detailed protective-device and drive coordination work begins.</p>
   <div class="workflow-meta" style="margin-top:0.75rem;">
@@ -111,4 +114,4 @@ Before finalizing the design, confirm the path for:
 
 ## Related References
 
-- [Motor Selection Comparison Matrix]({{ '/reference/motor-systems/motor-selection-matrix/' | relative_url }}) — decision flowchart and system-family comparison table
+- [Motor Selection Comparison Matrix]({{ '/design/motor-selection/motor-selection-matrix/' | relative_url }}) — decision flowchart and system-family comparison table

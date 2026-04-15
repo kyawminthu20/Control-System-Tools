@@ -6,6 +6,9 @@ breadcrumb:
   - name: "Reference Models"
     url: "/reference/"
   - name: "Motor Systems"
+redirect_from:
+  - /design/motor-selection/
+  - /design/motor-selection/index.html
 ---
 
 <div class="page-header">
@@ -15,7 +18,7 @@ breadcrumb:
 
 <div class="workflow-card-grid">
   <div class="workflow-card">
-    <h3><a href="{{ '/reference/motor-systems/motor-selection-matrix/' | relative_url }}">Motor Selection Comparison Matrix</a></h3>
+    <h3><a href="{{ '/design/motor-selection/motor-selection-matrix/' | relative_url }}">Motor Selection Comparison Matrix</a></h3>
     <p>Decision flowchart and comparison matrix for motor-system family selection: induction, servo, BLDC, stepper, and traction platforms with application mapping.</p>
   </div>
 </div>
