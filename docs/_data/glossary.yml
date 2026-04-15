@@ -98,7 +98,7 @@
     a risk assessment per ISO 12100 and functional safety evaluation per ISO 13849-1
     or IEC 62061. CE marking is mandatory for placing machinery on the EU market.
   standard_pages:
-    - url: /standards/machinery/iso-12100/
+    - url: /standards/functional-safety/iso-12100/
       label: ISO 12100
     - url: /standards/functional-safety/iso-13849-1/
       label: ISO 13849-1

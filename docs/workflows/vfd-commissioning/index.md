@@ -101,7 +101,7 @@ Document and retain:
 | [VFD Fundamentals]({{ '/training/electrical-machines/vfd-fundamentals/' | relative_url }}) | Drive topology, control modes, and protection |
 | [Motor Nameplates, Slip, and Torque]({{ '/training/electrical-machines/motor-nameplates-slip-torque/' | relative_url }}) | Reading and using nameplate data |
 | [Motor Control Methods]({{ '/training/electrical-machines/motor-control-methods/' | relative_url }}) | V/Hz vs. vector vs. closed-loop control |
-| [Grounding and Bonding for Control Panels]({{ '/training/nec-application/grounding-bonding-control-panels/' | relative_url }}) | Panel-level grounding and bonding checks |
+| [Grounding and Bonding for Control Panels]({{ '/training/nec-application/grounding-bonding-panels/' | relative_url }}) | Panel-level grounding and bonding checks |
 
 ## Related workflows
 

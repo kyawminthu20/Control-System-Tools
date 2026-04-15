@@ -101,4 +101,4 @@ Examples: `LT-101` Level Transmitter loop 101 · `AT-301` Analyzer Transmitter l
 - [Chemical Dosing](../chemical-dosing/) — Cl₂ analyzer application
 - [Filtration & Clarification](../filtration-clarification/) — turbidimeter application
 - [Treatment & Discharge](../treatment-discharge/) — DO and TSS analyzer application
-- [Lifecycle Stage 3 — P&ID Development](/lifecycle/stage-03/)
+- [Lifecycle — Detailed Design](/lifecycle/detailed-design/)

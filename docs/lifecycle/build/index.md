@@ -13,8 +13,6 @@ related_standards:
     url: "/standards/us-electrical/nfpa-79/"
   - name: "IEC 62061"
     url: "/standards/functional-safety/iec-62061/"
-  - name: "IEC 61131-3"
-    url: "/standards/plc-programming/iec-61131-3/"
 ---
 
 <div class="page-header">

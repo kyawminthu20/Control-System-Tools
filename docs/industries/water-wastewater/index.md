@@ -81,6 +81,6 @@ flowchart LR
 ## Related Pages
 
 - [IEC 61511 — Functional Safety](/standards/functional-safety/iec-61511/)
-- [Lifecycle Stage 4 — Detailed Design](/lifecycle/stage-04/)
-- [Lifecycle Stage 6 — Commissioning](/lifecycle/stage-06/)
+- [Lifecycle — Detailed Design](/lifecycle/detailed-design/)
+- [Lifecycle — Commissioning](/lifecycle/commissioning/)
 - [Petroleum / Oil & Gas](/industries/petroleum/) — similar SIS approach

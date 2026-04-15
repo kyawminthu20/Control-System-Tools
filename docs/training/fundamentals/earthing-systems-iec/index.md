@@ -253,7 +253,7 @@ When assessing or designing for any earthing system:
 
 ## See also
 
-The US counterpart to this topic is the [NEC Grounding and Bonding module]({{ '/training/nec-application/grounding-bonding-control-panels/' | relative_url }}), which covers Art. 250 grounding using NEC terminology and classification.
+The US counterpart to this topic is the [NEC Grounding and Bonding module]({{ '/training/nec-application/grounding-bonding-panels/' | relative_url }}), which covers Art. 250 grounding using NEC terminology and classification.
 
 ---
 

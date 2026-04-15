@@ -85,7 +85,7 @@ Before finalizing the design, confirm the path for:
 | [Motor Nameplates, Slip, and Torque]({{ '/training/electrical-machines/motor-nameplates-slip-torque/' | relative_url }}) | Nameplate reading and torque curves |
 | [Motor Family Comparison]({{ '/training/electrical-machines/motor-family-comparison/' | relative_url }}) | AC, DC, servo, stepper comparison |
 | [VFD Fundamentals]({{ '/training/electrical-machines/vfd-fundamentals/' | relative_url }}) | Drive-driven motor selection considerations |
-| [Branch Circuits vs. Feeders for Motor Loads]({{ '/training/nec-application/branch-circuits-feeders-motor-loads/' | relative_url }}) | NEC conductor and OCPD sizing |
+| [Branch Circuits vs. Feeders]({{ '/training/nec-application/branch-circuits-vs-feeders/' | relative_url }}) | NEC conductor and OCPD sizing |
 | [Art. 430 Practical Workflow]({{ '/training/nec-application/article-430-workflow/' | relative_url }}) | NEC motor code application |
 
 ## Related workflows
@@ -100,7 +100,7 @@ Before finalizing the design, confirm the path for:
 | Standard | Relevance |
 |---|---|
 | [NEC Art. 430](/standards/us-electrical/nec/) | Motor circuit conductors, protection, disconnecting means |
-| [NFPA 79](/standards/us-electrical/nfpa79/) | Machine motor requirements (Chapter 12) |
+| [NFPA 79](/standards/us-electrical/nfpa-79/) | Machine motor requirements (Chapter 12) |
 | [IEC 60204-1](/standards/machinery/iec-60204-1/) | International machine electrical equipment (§12) |
 
 {% include trust-boundary.html %}

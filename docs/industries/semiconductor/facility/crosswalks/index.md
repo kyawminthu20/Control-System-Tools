@@ -109,11 +109,11 @@ flowchart TD
 | SEMI S2/S8/S14 | Full standards page | [SEMI Standards](/standards/semiconductor/semi/) |
 | IEC 61511 | Full standards page | [Functional Safety — IEC 61511](/standards/functional-safety/iec-61511/) |
 | IEC 61508 | Full standards page | [Functional Safety — IEC 61508](/standards/functional-safety/iec-61508/) |
-| ISO 13849-1 | Full standards page | [Functional Safety — ISO 13849-1](/standards/functional-safety/iso-13849/) |
+| ISO 13849-1 | Full standards page | [Functional Safety — ISO 13849-1](/standards/functional-safety/iso-13849-1/) |
 | IEC 62061 | Full standards page | [Functional Safety — IEC 62061](/standards/functional-safety/iec-62061/) |
 | IEC 62443 | Full standards page | [Cybersecurity — IEC 62443](/standards/cybersecurity/iec-62443/) |
-| IEC 60204-1 | Full standards page | [Machinery — IEC 60204-1](/standards/machinery/iec-60204/) |
-| NFPA 79 | Full standards page | [Machinery — NFPA 79](/standards/machinery/nfpa-79/) |
+| IEC 60204-1 | Full standards page | [Machinery — IEC 60204-1](/standards/machinery/iec-60204-1/) |
+| NFPA 79 | Full standards page | [Electrical — NFPA 79](/standards/us-electrical/nfpa-79/) |
 | ISO 14644 | Referenced, not a full corpus page | Facility section only |
 | SEMI F-series (F13, F14, F39, F57, etc.) | Referenced, not individual corpus pages | Facility section only |
 | NFPA 55 / NFPA 318 | Referenced, not corpus pages | Facility section only |
