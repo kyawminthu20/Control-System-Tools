@@ -47,3 +47,46 @@ Instrument selection guide for water and wastewater treatment systems. Covers me
 ## 2. Loop Architecture — 4-20mA + HART
 
 Standard loop for all process transmitters:
+
+```
+Transmitter → 2-wire loop (4-20mA) → Barrier/isolator → AI card (PLC)
+HART signal → Multiplexed over same 2-wire pair → Asset management system
+```
+
+**Intrinsically safe barriers** required where instruments are in NFPA 820 classified areas (biological treatment, digester areas). Use Zener barriers (passive) or galvanic isolators (active) — active preferred for HART passthrough.
+
+**HART benefits in water/WW:**
+- Remote calibration verification without disconnecting loop
+- Device status and diagnostics to asset management (e.g., Emerson AMS, ABB Ability)
+- Secondary variables (e.g., uncompensated flow, process temperature from same flowmeter)
+
+## 3. Material Compatibility
+
+| Process Stream | Wetted Material | Avoid |
+|---|---|---|
+| Potable water | 316 SS, PTFE, NSF-61 certified elastomers | Lead, unlined cast iron |
+| Chlorine solution (NaOCl) | CPVC, PVDF, Hastelloy C276 | 304 SS, carbon steel (corrodes rapidly) |
+| Alum / PAC solution | CPVC, rubber-lined | 316 SS (pitting in high chloride + acid) |
+| Caustic (NaOH) | 316 SS, HDPE, CPVC | Aluminum, zinc |
+| H₂SO₄ (dilute, < 50%) | HDPE, FRP, rubber-lined | Stainless steel |
+| Activated sludge / slurry | Rubber-lined, PTFE-lined mag | Bare 316 SS (erosion) |
+| Digester gas (CH₄/CO₂/H₂S) | 316 SS, Hastelloy | Carbon steel (H₂S corrosion) |
+
+## 4. Calibration Requirements
+
+| Instrument | Calibration Frequency | Method | Regulatory Driver |
+|---|---|---|---|
+| pH analyzer | Daily zero/span verification; 2-point calibration weekly | pH 4.0 and 7.0 buffers | State drinking water regs |
+| Turbidity analyzer | Daily verification; Formazin calibration monthly | Calibration standard | EPA SWTR |
+| Cl₂ residual analyzer | Daily grab sample comparison | Hach method or equivalent | EPA SWTR |
+| Flow meter (mag) | Annual bench calibration or loop validation | Portable ultrasonic check | Regulatory metering |
+| DO analyzer | Daily membrane check; calibration against air saturation | 100% air saturation method | Good practice |
+
+## 5. Instrument Tagging Convention — ISA-5.1
+
+Follow ISA-5.1 tagging:
+- First letter: measured variable (L=Level, F=Flow, A=Analyzer, P=Pressure, T=Temperature)
+- Second letter: modifier or readout (T=Transmitter, C=Controller, I=Indicator, S=Switch)
+- Loop number: sequential by process area
+
+Examples: `LT-101` (Level Transmitter, loop 101), `AT-301` (Analyzer Transmitter, loop 301), `FIC-201` (Flow Indicating Controller, loop 201)
