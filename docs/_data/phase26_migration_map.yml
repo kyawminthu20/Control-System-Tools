@@ -1,0 +1,119 @@
+# Phase 26 URL migration map — authoritative old→new URL registry.
+# Each entry:
+#   old:  site-root-relative OLD URL (with trailing slash)
+#   new:  site-root-relative NEW URL (with trailing slash)
+#   from: old source path under docs/ (without docs/ prefix, without index.md)
+#   to:   new source path under docs/ (without docs/ prefix, without index.md)
+#
+# Groups are processed in order: fundamentals, design, implementation, verification, tools, training_trim.
+
+fundamentals:
+  # Electrical fundamentals
+  - { old: /training/fundamentals/,                          new: /fundamentals/electrical/,                          from: training/fundamentals,                          to: fundamentals/electrical }
+  - { old: /training/fundamentals/conductor-ampacity/,       new: /fundamentals/electrical/conductor-ampacity/,       from: training/fundamentals/conductor-ampacity,       to: fundamentals/electrical/conductor-ampacity }
+  - { old: /training/fundamentals/diodes-transistors/,       new: /fundamentals/electrical/diodes-transistors/,       from: training/fundamentals/diodes-transistors,       to: fundamentals/electrical/diodes-transistors }
+  - { old: /training/fundamentals/earthing-systems-iec/,     new: /fundamentals/electrical/earthing-systems-iec/,     from: training/fundamentals/earthing-systems-iec,     to: fundamentals/electrical/earthing-systems-iec }
+  - { old: /training/fundamentals/electrical-equations-reference/, new: /fundamentals/electrical/electrical-equations-reference/, from: training/fundamentals/electrical-equations-reference, to: fundamentals/electrical/electrical-equations-reference }
+  - { old: /training/fundamentals/electrical-quantities/,    new: /fundamentals/electrical/electrical-quantities/,    from: training/fundamentals/electrical-quantities,    to: fundamentals/electrical/electrical-quantities }
+  - { old: /training/fundamentals/equivalent-circuit-methods/, new: /fundamentals/electrical/equivalent-circuit-methods/, from: training/fundamentals/equivalent-circuit-methods, to: fundamentals/electrical/equivalent-circuit-methods }
+  - { old: /training/fundamentals/kirchhoff-laws/,           new: /fundamentals/electrical/kirchhoff-laws/,           from: training/fundamentals/kirchhoff-laws,           to: fundamentals/electrical/kirchhoff-laws }
+  - { old: /training/fundamentals/passive-components/,       new: /fundamentals/electrical/passive-components/,       from: training/fundamentals/passive-components,       to: fundamentals/electrical/passive-components }
+  - { old: /training/fundamentals/series-parallel-dividers/, new: /fundamentals/electrical/series-parallel-dividers/, from: training/fundamentals/series-parallel-dividers, to: fundamentals/electrical/series-parallel-dividers }
+  # Control fundamentals
+  - { old: /training/control-systems/,                       new: /fundamentals/control/,                             from: training/control-systems,                       to: fundamentals/control }
+  - { old: /training/control-systems/async-faults-distributed-systems/, new: /fundamentals/control/async-faults-distributed-systems/, from: training/control-systems/async-faults-distributed-systems, to: fundamentals/control/async-faults-distributed-systems }
+  - { old: /training/control-systems/control-loop-architectures/,       new: /fundamentals/control/control-loop-architectures/,       from: training/control-systems/control-loop-architectures,       to: fundamentals/control/control-loop-architectures }
+  - { old: /training/control-systems/control-theory-overview/,          new: /fundamentals/control/control-theory-overview/,          from: training/control-systems/control-theory-overview,          to: fundamentals/control/control-theory-overview }
+  - { old: /training/control-systems/deterministic-nondeterministic-control/, new: /fundamentals/control/deterministic-nondeterministic-control/, from: training/control-systems/deterministic-nondeterministic-control, to: fundamentals/control/deterministic-nondeterministic-control }
+  - { old: /training/control-systems/industrial-pid/,                   new: /fundamentals/control/industrial-pid/,                   from: training/control-systems/industrial-pid,                   to: fundamentals/control/industrial-pid }
+  - { old: /training/control-systems/interlocks-permissives-safety-trips/, new: /fundamentals/control/interlocks-permissives-safety-trips/, from: training/control-systems/interlocks-permissives-safety-trips, to: fundamentals/control/interlocks-permissives-safety-trips }
+  - { old: /training/control-systems/machine-state-model/,              new: /fundamentals/control/machine-state-model/,              from: training/control-systems/machine-state-model,              to: fundamentals/control/machine-state-model }
+  - { old: /training/control-systems/multi-axis-coordination/,          new: /fundamentals/control/multi-axis-coordination/,          from: training/control-systems/multi-axis-coordination,          to: fundamentals/control/multi-axis-coordination }
+  - { old: /training/control-systems/pid-drone-control/,                new: /fundamentals/control/pid-drone-control/,                from: training/control-systems/pid-drone-control,                from_alt: null, to: fundamentals/control/pid-drone-control }
+  - { old: /training/control-systems/pid-foundation/,                   new: /fundamentals/control/pid-foundation/,                   from: training/control-systems/pid-foundation,                   to: fundamentals/control/pid-foundation }
+  - { old: /training/control-systems/pid-heater-control/,               new: /fundamentals/control/pid-heater-control/,               from: training/control-systems/pid-heater-control,               to: fundamentals/control/pid-heater-control }
+  - { old: /training/control-systems/pid-intuition/,                    new: /fundamentals/control/pid-intuition/,                    from: training/control-systems/pid-intuition,                    to: fundamentals/control/pid-intuition }
+  - { old: /training/control-systems/servo-tuning/,                     new: /fundamentals/control/servo-tuning/,                     from: training/control-systems/servo-tuning,                     to: fundamentals/control/servo-tuning }
+  - { old: /training/control-systems/vibration-resonance/,              new: /fundamentals/control/vibration-resonance/,              from: training/control-systems/vibration-resonance,              to: fundamentals/control/vibration-resonance }
+  # Motor & drive fundamentals
+  - { old: /training/electrical-machines/,                   new: /fundamentals/motors/,                              from: training/electrical-machines,                   to: fundamentals/motors }
+  - { old: /training/electrical-machines/ac-vs-dc-motors/,   new: /fundamentals/motors/ac-vs-dc-motors/,              from: training/electrical-machines/ac-vs-dc-motors,   to: fundamentals/motors/ac-vs-dc-motors }
+  - { old: /training/electrical-machines/bldc-ev-drone-motors/, new: /fundamentals/motors/bldc-ev-drone-motors/,      from: training/electrical-machines/bldc-ev-drone-motors, to: fundamentals/motors/bldc-ev-drone-motors }
+  - { old: /training/electrical-machines/dc-motor-basics/,   new: /fundamentals/motors/dc-motor-basics/,              from: training/electrical-machines/dc-motor-basics,   to: fundamentals/motors/dc-motor-basics }
+  - { old: /training/electrical-machines/induction-motor-basics/, new: /fundamentals/motors/induction-motor-basics/, from: training/electrical-machines/induction-motor-basics, to: fundamentals/motors/induction-motor-basics }
+  - { old: /training/electrical-machines/motor-control-methods/,  new: /fundamentals/motors/motor-control-methods/,  from: training/electrical-machines/motor-control-methods,  to: fundamentals/motors/motor-control-methods }
+  - { old: /training/electrical-machines/motor-efficiency-losses/, new: /fundamentals/motors/motor-efficiency-losses/, from: training/electrical-machines/motor-efficiency-losses, to: fundamentals/motors/motor-efficiency-losses }
+  - { old: /training/electrical-machines/motor-family-comparison/, new: /fundamentals/motors/motor-family-comparison/, from: training/electrical-machines/motor-family-comparison, to: fundamentals/motors/motor-family-comparison }
+  - { old: /training/electrical-machines/motor-nameplates-slip-torque/, new: /fundamentals/motors/motor-nameplates-slip-torque/, from: training/electrical-machines/motor-nameplates-slip-torque, to: fundamentals/motors/motor-nameplates-slip-torque }
+  - { old: /training/electrical-machines/motor-vfd-equations/, new: /fundamentals/motors/motor-vfd-equations/,        from: training/electrical-machines/motor-vfd-equations, to: fundamentals/motors/motor-vfd-equations }
+  - { old: /training/electrical-machines/servo-drive-fundamentals/, new: /fundamentals/motors/servo-drive-fundamentals/, from: training/electrical-machines/servo-drive-fundamentals, to: fundamentals/motors/servo-drive-fundamentals }
+  - { old: /training/electrical-machines/servo-feedback-inertia/, new: /fundamentals/motors/servo-feedback-inertia/,    from: training/electrical-machines/servo-feedback-inertia, to: fundamentals/motors/servo-feedback-inertia }
+  - { old: /training/electrical-machines/vfd-fundamentals/,  new: /fundamentals/motors/vfd-fundamentals/,             from: training/electrical-machines/vfd-fundamentals,  to: fundamentals/motors/vfd-fundamentals }
+  - { old: /training/electrical-machines/vfd-servo-architecture/, new: /fundamentals/motors/vfd-servo-architecture/, from: training/electrical-machines/vfd-servo-architecture, to: fundamentals/motors/vfd-servo-architecture }
+
+design:
+  - { old: /engineering-workflow/,                           new: /design/,                                           from: engineering-workflow,                           to: design }
+  - { old: /reference/architecture/,                         new: /design/architecture/,                              from: reference/architecture,                         to: design/architecture }
+  - { old: /reference/architecture/compliance-stack/,        new: /design/architecture/compliance-stack/,             from: reference/architecture/compliance-stack,        to: design/architecture/compliance-stack }
+  - { old: /reference/architecture/machine-architecture-model/, new: /design/architecture/machine-architecture-model/, from: reference/architecture/machine-architecture-model, to: design/architecture/machine-architecture-model }
+  - { old: /reference/architecture/machine-safety-architecture/, new: /design/architecture/machine-safety-architecture/, from: reference/architecture/machine-safety-architecture, to: design/architecture/machine-safety-architecture }
+  - { old: /reference/motor-systems/,                        new: /design/motor-selection/,                           from: reference/motor-systems,                        to: design/motor-selection }
+  - { old: /reference/motor-systems/motor-selection-matrix/, new: /design/motor-selection/motor-selection-matrix/,    from: reference/motor-systems/motor-selection-matrix, to: design/motor-selection/motor-selection-matrix }
+  - { old: /software-stack/,                                 new: /design/software-stack/,                            from: software-stack,                                 to: design/software-stack }
+  - { old: /workflows/,                                      new: /design/workflows/,                                 from: workflows,                                      to: design/workflows }
+  - { old: /workflows/electrical-review/,                    new: /design/workflows/electrical-review/,               from: workflows/electrical-review,                    to: design/workflows/electrical-review }
+  - { old: /workflows/motor-selection/,                      new: /design/workflows/motor-selection/,                 from: workflows/motor-selection,                      to: design/workflows/motor-selection }
+
+implementation:
+  - { old: /commissioning-templates/,                        new: /implementation/commissioning-templates/,           from: commissioning-templates,                        to: implementation/commissioning-templates }
+  - { old: /commissioning-templates/basic-circuit-polarity/, new: /implementation/commissioning-templates/basic-circuit-polarity/, from: commissioning-templates/basic-circuit-polarity, to: implementation/commissioning-templates/basic-circuit-polarity }
+  - { old: /commissioning-templates/capacitor-discharge/,    new: /implementation/commissioning-templates/capacitor-discharge/,    from: commissioning-templates/capacitor-discharge,    to: implementation/commissioning-templates/capacitor-discharge }
+  - { old: /commissioning-templates/drive-commissioning/,    new: /implementation/commissioning-templates/drive-commissioning/,    from: commissioning-templates/drive-commissioning,    to: implementation/commissioning-templates/drive-commissioning }
+  - { old: /commissioning-templates/motor-nameplate-overload/, new: /implementation/commissioning-templates/motor-nameplate-overload/, from: commissioning-templates/motor-nameplate-overload, to: implementation/commissioning-templates/motor-nameplate-overload }
+  - { old: /commissioning-templates/motor-rotation-verification/, new: /implementation/commissioning-templates/motor-rotation-verification/, from: commissioning-templates/motor-rotation-verification, to: implementation/commissioning-templates/motor-rotation-verification }
+  - { old: /commissioning-templates/pre-power-panel/,        new: /implementation/commissioning-templates/pre-power-panel/,        from: commissioning-templates/pre-power-panel,        to: implementation/commissioning-templates/pre-power-panel }
+  - { old: /scenarios/,                                      new: /implementation/scenarios/,                         from: scenarios,                                      to: implementation/scenarios }
+  - { old: /scenarios/global-machine/,                       new: /implementation/scenarios/global-machine/,          from: scenarios/global-machine,                       to: implementation/scenarios/global-machine }
+  - { old: /scenarios/machine-safety-implementation/,        new: /implementation/scenarios/machine-safety-implementation/, from: scenarios/machine-safety-implementation, to: implementation/scenarios/machine-safety-implementation }
+  - { old: /scenarios/networked-safety-plc/,                 new: /implementation/scenarios/networked-safety-plc/,    from: scenarios/networked-safety-plc,                 to: implementation/scenarios/networked-safety-plc }
+  - { old: /scenarios/offshore-platform-control/,            new: /implementation/scenarios/offshore-platform-control/, from: scenarios/offshore-platform-control,            to: implementation/scenarios/offshore-platform-control }
+  - { old: /scenarios/oil-gas-process-skid/,                 new: /implementation/scenarios/oil-gas-process-skid/,    from: scenarios/oil-gas-process-skid,                 to: implementation/scenarios/oil-gas-process-skid }
+  - { old: /scenarios/process-skid/,                         new: /implementation/scenarios/process-skid/,            from: scenarios/process-skid,                         to: implementation/scenarios/process-skid }
+  - { old: /scenarios/semiconductor-equipment/,              new: /implementation/scenarios/semiconductor-equipment/, from: scenarios/semiconductor-equipment,              to: implementation/scenarios/semiconductor-equipment }
+  - { old: /scenarios/semiconductor-fab-tool/,               new: /implementation/scenarios/semiconductor-fab-tool/,  from: scenarios/semiconductor-fab-tool,               to: implementation/scenarios/semiconductor-fab-tool }
+  - { old: /scenarios/us-industrial-control-panel/,          new: /implementation/scenarios/us-industrial-control-panel/, from: scenarios/us-industrial-control-panel,          to: implementation/scenarios/us-industrial-control-panel }
+  - { old: /workflows/servo-commissioning/,                  new: /implementation/servo-commissioning/,               from: workflows/servo-commissioning,                  to: implementation/servo-commissioning }
+  - { old: /workflows/vfd-commissioning/,                    new: /implementation/vfd-commissioning/,                 from: workflows/vfd-commissioning,                    to: implementation/vfd-commissioning }
+  - { old: /lifecycle/build/,                                new: /implementation/lifecycle-build/,                   from: lifecycle/build,                                to: implementation/lifecycle-build }
+  - { old: /lifecycle/pre-commissioning/,                    new: /implementation/lifecycle-pre-commissioning/,       from: lifecycle/pre-commissioning,                    to: implementation/lifecycle-pre-commissioning }
+  - { old: /lifecycle/installation/,                         new: /implementation/lifecycle-installation/,            from: lifecycle/installation,                         to: implementation/lifecycle-installation }
+  - { old: /lifecycle/commissioning/,                        new: /implementation/lifecycle-commissioning/,           from: lifecycle/commissioning,                        to: implementation/lifecycle-commissioning }
+
+verification:
+  - { old: /lifecycle/,                                      new: /verification/lifecycle/,                           from: lifecycle,                                      to: verification/lifecycle }
+  - { old: /lifecycle/concept/,                              new: /verification/lifecycle/concept/,                   from: lifecycle/concept,                              to: verification/lifecycle/concept }
+  - { old: /lifecycle/standards-selection/,                  new: /verification/lifecycle/standards-selection/,       from: lifecycle/standards-selection,                  to: verification/lifecycle/standards-selection }
+  - { old: /lifecycle/risk-assessment/,                      new: /verification/risk-assessment/,                     from: lifecycle/risk-assessment,                      to: verification/risk-assessment }
+  - { old: /lifecycle/safety-requirements-spec/,             new: /verification/safety-requirements-spec/,            from: lifecycle/safety-requirements-spec,             to: verification/safety-requirements-spec }
+  - { old: /lifecycle/safety-architecture/,                  new: /verification/safety-architecture/,                 from: lifecycle/safety-architecture,                  to: verification/safety-architecture }
+  - { old: /lifecycle/detailed-design/,                      new: /verification/lifecycle/detailed-design/,           from: lifecycle/detailed-design,                      to: verification/lifecycle/detailed-design }
+  - { old: /lifecycle/draft-documentation/,                  new: /verification/lifecycle/draft-documentation/,       from: lifecycle/draft-documentation,                  to: verification/lifecycle/draft-documentation }
+  - { old: /lifecycle/maintenance/,                          new: /verification/maintenance/,                         from: lifecycle/maintenance,                          to: verification/maintenance }
+  - { old: /lifecycle/management-of-change/,                 new: /verification/management-of-change/,                from: lifecycle/management-of-change,                 to: verification/management-of-change }
+  - { old: /lifecycle/safety-wiring/,                        new: /verification/safety-wiring/,                       from: lifecycle/safety-wiring,                        to: verification/safety-wiring }
+
+tools:
+  - { old: /rag-browser/,                                    new: /tools/rag-browser/,                                from: rag-browser,                                    to: tools/rag-browser }
+  - { old: /glossary/,                                       new: /tools/glossary/,                                   from: glossary,                                       to: tools/glossary }
+  - { old: /crosswalks/,                                     new: /tools/crosswalks/,                                 from: crosswalks,                                     to: tools/crosswalks }
+  - { old: /crosswalks/compare/,                             new: /tools/crosswalks/compare/,                         from: crosswalks/compare,                             to: tools/crosswalks/compare }
+  - { old: /crosswalks/iec60079-nec-500-505/,                new: /tools/crosswalks/iec60079-nec-500-505/,            from: crosswalks/iec60079-nec-500-505,                to: tools/crosswalks/iec60079-nec-500-505 }
+  - { old: /crosswalks/iec61511-iec61508/,                   new: /tools/crosswalks/iec61511-iec61508/,               from: crosswalks/iec61511-iec61508,                   to: tools/crosswalks/iec61511-iec61508 }
+  - { old: /crosswalks/nfpa79-iec60204/,                     new: /tools/crosswalks/nfpa79-iec60204/,                 from: crosswalks/nfpa79-iec60204,                     to: tools/crosswalks/nfpa79-iec60204 }
+  - { old: /crosswalks/standards-decision-workflow/,         new: /tools/crosswalks/standards-decision-workflow/,     from: crosswalks/standards-decision-workflow,         to: tools/crosswalks/standards-decision-workflow }
+  - { old: /crosswalks/ul508a-nec-nfpa79/,                   new: /tools/crosswalks/ul508a-nec-nfpa79/,               from: crosswalks/ul508a-nec-nfpa79,                   to: tools/crosswalks/ul508a-nec-nfpa79 }
+  - { old: /reference/,                                      new: /tools/reference-hub/,                              from: reference,                                      to: tools/reference-hub }
+
+training_trim:
+  # Only /training/nec-application/ stays under /training/. Top-level /training/index.md is rewritten to a learning-paths landing page.
+  - { old: /training/nec-application/,                       new: /training/nec-application/,                         from: training/nec-application,                       to: training/nec-application, note: "no move — keep in place" }
