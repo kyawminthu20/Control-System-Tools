@@ -18,6 +18,25 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-04-14 — Phase 25 COMPLETE: Water/Wastewater Multi-Page Section
+
+**Type:** Content / Industry Reference
+**Status:** Complete
+
+- Added 8 RAG files to `control-standards/rag/design_framework/water_wastewater/` with `_index.yaml`
+- Added 8 Jekyll pages under `docs/industries/water-wastewater/`:
+  - Overview + standards selection flowchart
+  - Intake & Raw Water Pumping (pump station architecture, start permissive chain)
+  - Filtration & Clarification (filter state machine, turbidity bypass logic)
+  - Chemical Dosing (flow-paced Cl₂, OT shutdown, chemical feed interlock)
+  - Distribution SCADA (zone architecture, IEC 62443 security zones, fallback logic)
+  - Equalization & Neutralization (EQ basin state machine, pH neutralization loop)
+  - Treatment & Discharge (treatment train flow, permit limit trip logic)
+  - Instrumentation Reference (analyzer loop, instrument selection decision tree)
+- Added Water/Wastewater navigation entry to `docs/_data/navigation.yml`
+- ~20 Mermaid diagrams total; covers IEC 61511, IEC 62443, ISA-18.2, EPA SDWA/CWA, AWWA, NFPA 820
+- Jekyll build: clean, ~166 pages
+
 ## 2026-04-13 — Phase 24 COMPLETE: Training visual upgrades
 
 **Type:** Content / Training Enhancement

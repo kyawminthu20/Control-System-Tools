@@ -1,9 +1,9 @@
 # Project State
 
-**Last Updated:** 2026-04-13
+**Last Updated:** 2026-04-14
 **Status:** Active
-**Current Phase:** Phase 24 COMPLETE — Training Visual Upgrades
-**Next Phase:** Phase 25 PLANNING — TBD
+**Current Phase:** Phase 25 COMPLETE — Water/Wastewater Multi-Page Section
+**Next Phase:** Phase 26 PLANNING — TBD
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -20,10 +20,12 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
+Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
 ## Current Reality
 
 - Jekyll site deployed on GitHub Pages — `https://kyawminthu20.github.io/Control-System-Tools/`
-- Last validated Jekyll build: 157 HTML files, clean build (verified 2026-04-12; Phase 23 complete — 15 facility pages total: 10 from Phase 22 + 5 new)
+- Last validated Jekyll build: 166 HTML files, clean build (verified 2026-04-14; Phase 25 complete — 8 water/wastewater pages added)
 - Three-panel layout (sidebar 240px + main content + context panel 220px); sidebar data-driven from `docs/_data/navigation.yml` with 5 top-level groups (Engineering Workflow, Standards, Training, Industries, Reference)
 - Mermaid.js CDN integration for all diagrams; Cytoscape.js 3.28.1 for interactive standards graph
 - Google Analytics tag installed sitewide in `docs/_layouts/default.html` using measurement ID `G-RPL3G47EFZ`
