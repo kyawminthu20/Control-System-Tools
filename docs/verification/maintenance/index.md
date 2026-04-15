@@ -2,9 +2,12 @@
 layout: default
 title: "Lifecycle Stage 11 — Maintenance and Lifecycle Support"
 description: "Proof testing at defined intervals, preventive maintenance, bypass management, and MOC — sustaining safety integrity across the full operational life."
+redirect_from:
+  - /lifecycle/maintenance/
+  - /lifecycle/maintenance/index.html
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "11. Maintenance"
 related_standards:
   - name: "ISO 13849-1"
@@ -1016,6 +1019,6 @@ Maintenance activity required
 ---
 
 <div class="nav-links">
-  <a href="{{ '/lifecycle/commissioning/' | relative_url }}" class="card__link">&larr; Stage 10: Commissioning and Validation</a>
-  <a href="{{ '/lifecycle/management-of-change/' | relative_url }}" class="card__link">Stage 12: Management of Change &rarr;</a>
+  <a href="{{ '/implementation/lifecycle-commissioning/' | relative_url }}" class="card__link">&larr; Stage 10: Commissioning and Validation</a>
+  <a href="{{ '/verification/management-of-change/' | relative_url }}" class="card__link">Stage 12: Management of Change &rarr;</a>
 </div>

@@ -14,8 +14,8 @@
   <div class="context-panel__section">
     <div class="context-panel__title">Lifecycle Stage</div>
     <ul>
-      {% for stage in page.lifecycle_stage %}
-      <li><a href="{{ '/lifecycle/' | relative_url }}{{ stage.slug }}/">{{ stage.name }}</a></li>
+      {% for stage in page.lifecycle_stage %}{% assign stage_url = site.data.lifecycle_stage_urls[stage.slug] %}
+      <li><a href="{{ stage_url | relative_url }}">{{ stage.name }}</a></li>
       {% endfor %}
     </ul>
   </div>

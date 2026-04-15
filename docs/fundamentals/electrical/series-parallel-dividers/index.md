@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/series_parallel_and_divider_methods.md"
 redirect_from:
-  - /fundamentals/electrical/series-parallel-dividers/
-  - /fundamentals/electrical/series-parallel-dividers/index.html
+  - /training/fundamentals/series-parallel-dividers/
+  - /training/fundamentals/series-parallel-dividers/index.html
 
 ---
 

@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/control/"
 repo_path: "control-standards/rag/training_modules/control_systems/pid_drone_control.md"
 redirect_from:
-  - /fundamentals/control/pid-drone-control/
-  - /fundamentals/control/pid-drone-control/index.html
+  - /training/control-systems/pid-drone-control/
+  - /training/control-systems/pid-drone-control/index.html
 
 ---
 

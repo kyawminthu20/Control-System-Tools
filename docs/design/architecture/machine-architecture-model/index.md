@@ -9,8 +9,8 @@ breadcrumb:
     url: "/design/architecture/"
   - name: "Machine Architecture Model"
 redirect_from:
-  - /design/architecture/machine-architecture-model/
-  - /design/architecture/machine-architecture-model/index.html
+  - /reference/architecture/machine-architecture-model/
+  - /reference/architecture/machine-architecture-model/index.html
 ---
 
 <div class="page-header">

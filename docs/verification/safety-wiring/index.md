@@ -2,9 +2,12 @@
 layout: default
 title: "Lifecycle — Safety Wiring Practices"
 description: "Practical safety wiring reference: 24 VDC rationale, NC contact logic, wire gauge, color coding, termination, and dual-channel input specification."
+redirect_from:
+  - /lifecycle/safety-wiring/
+  - /lifecycle/safety-wiring/index.html
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "Safety Wiring"
 related_standards:
   - name: "NFPA 79"
@@ -236,6 +239,6 @@ Reference specification for a standard hardwired 24 VDC safety input on an indus
 
 ## See Also
 
-- [Safety Architecture — Lifecycle Stage 4]({{ '/lifecycle/safety-architecture/' | relative_url }})
-- [Detailed Design — Lifecycle Stage 5]({{ '/lifecycle/detailed-design/' | relative_url }})
+- [Safety Architecture — Lifecycle Stage 4]({{ '/verification/safety-architecture/' | relative_url }})
+- [Detailed Design — Lifecycle Stage 5]({{ '/verification/lifecycle/detailed-design/' | relative_url }})
 - [Scenario 06 — Practical Machine Safety Implementation]({{ '/scenarios/machine-safety-implementation/' | relative_url }})

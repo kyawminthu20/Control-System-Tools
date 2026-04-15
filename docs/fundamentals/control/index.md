@@ -7,8 +7,8 @@ breadcrumb:
     url: "/training/"
   - name: "Control Systems"
 redirect_from:
-  - /fundamentals/control/
-  - /fundamentals/control/index.html
+  - /training/control-systems/
+  - /training/control-systems/index.html
 
 ---
 

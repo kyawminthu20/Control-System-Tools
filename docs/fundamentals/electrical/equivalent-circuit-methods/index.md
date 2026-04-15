@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/equivalent_circuit_methods.md"
 redirect_from:
-  - /fundamentals/electrical/equivalent-circuit-methods/
-  - /fundamentals/electrical/equivalent-circuit-methods/index.html
+  - /training/fundamentals/equivalent-circuit-methods/
+  - /training/fundamentals/equivalent-circuit-methods/index.html
 
 ---
 

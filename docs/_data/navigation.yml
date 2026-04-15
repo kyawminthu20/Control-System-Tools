@@ -2,13 +2,13 @@
   url: "/engineering-workflow/"
   match_prefixes:
     - "/engineering-workflow/"
-    - "/lifecycle/"
+    - "/verification/lifecycle/"
     - "/workflows/"
     - "/commissioning-templates/"
     - "/scenarios/"
   children:
     - label: "Lifecycle"
-      url: "/lifecycle/"
+      url: "/verification/lifecycle/"
     - label: "Workflows"
       url: "/workflows/"
     - label: "Commissioning Templates"

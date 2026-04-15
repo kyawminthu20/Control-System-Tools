@@ -2,9 +2,12 @@
 layout: default
 title: "Lifecycle Stage 1 — Concept"
 description: "Define machine limits, intended use, foreseeable misuse, and applicable markets before risk assessment begins."
+redirect_from:
+  - /lifecycle/concept/
+  - /lifecycle/concept/index.html
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "1. Concept"
 related_standards:
   - name: "ISO 12100"
@@ -293,4 +296,4 @@ This stage is complete when **all** of the following are true:
 
 ---
 
-← [Lifecycle Overview]({{ '/lifecycle/' | relative_url }}) | → [Stage 2: Standards Selection]({{ '/lifecycle/standards-selection/' | relative_url }})
+← [Lifecycle Overview]({{ '/verification/lifecycle/' | relative_url }}) | → [Stage 2: Standards Selection]({{ '/verification/lifecycle/standards-selection/' | relative_url }})

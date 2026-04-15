@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-13
+**Last Updated:** 2026-04-15
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,16 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-15 — Phase 26 Batch 5: Verification Group Migration + Redirect Backfill (Task 8)
+
+- Verification group migration complete: 11 pages moved from `/lifecycle/...` to either `/verification/lifecycle/...` (5 analysis/design stages), `/verification/...` top-level (6 verification-gate stages), with correct `redirect_from:` on each moved file
+- Internal cross-links rewritten across 35 source files (includes, data files, glossary, industry pages, implementation/lifecycle-*, design hub)
+- `docs/_data/lifecycle_stage_urls.yml` added — slug-to-URL lookup consumed by `_includes/context-panel.html` and `docs/glossary/index.md` to resolve stage URLs now that stages are split across three top-level groups
+- Empty `docs/lifecycle/` tree removed
+- **Redirect audit:** discovered Batches 1–4 had written `redirect_from:` entries pointing at the NEW URL (self-redirect, useless) instead of the OLD URL. Corrected 41 files via script driven by the authoritative `phase26_migration_map.yml`; 7 additional files (the 5 group hub pages plus `pid-drone-control` and `motor-selection`) fixed manually
+- Internal link check: 0 broken (baseline before this session was 768 broken, masked because prior batches had never built + validated against the plugin-generated redirect stubs)
+- Jekyll build: clean, 249 HTML files
 
 ## 2026-04-14 — Phase 26 Batch 4: Implementation Group Migration (Task 7)
 

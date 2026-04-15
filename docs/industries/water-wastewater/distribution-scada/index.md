@@ -127,4 +127,4 @@ flowchart TD
 
 - [IEC 62443 — Cybersecurity](/standards/cybersecurity/iec-62443/)
 - [Chemical Dosing](../chemical-dosing/) — OT trip wired to safety layer, not SCADA
-- [Lifecycle — Detailed Design](/lifecycle/detailed-design/)
+- [Lifecycle — Detailed Design](/verification/lifecycle/detailed-design/)

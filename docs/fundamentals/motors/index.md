@@ -7,8 +7,8 @@ breadcrumb:
     url: "/training/"
   - name: "Motors, Drives, and Motion"
 redirect_from:
-  - /fundamentals/motors/
-  - /fundamentals/motors/index.html
+  - /training/electrical-machines/
+  - /training/electrical-machines/index.html
 
 ---
 

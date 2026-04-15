@@ -96,7 +96,7 @@ redirect_from:
 |---|---|
 | [Training](/training/) | Concept-level background for these workflows |
 | [Standards](/standards/) | Code requirements that govern workflow outcomes |
-| [Lifecycle](/lifecycle/) | Stage-oriented engineering process context |
+| [Lifecycle](/verification/lifecycle/) | Stage-oriented engineering process context |
 | [Scenarios](/scenarios/) | Applied project examples using these workflows |
 
 {% include trust-boundary.html %}

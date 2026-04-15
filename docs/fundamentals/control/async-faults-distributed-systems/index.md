@@ -13,8 +13,8 @@ related_standards:
   - name: "IEC 61511"
     url: "/standards/functional-safety/iec-61511/"
 redirect_from:
-  - /fundamentals/control/async-faults-distributed-systems/
-  - /fundamentals/control/async-faults-distributed-systems/index.html
+  - /training/control-systems/async-faults-distributed-systems/
+  - /training/control-systems/async-faults-distributed-systems/index.html
 
 ---
 

@@ -4,7 +4,7 @@ title: "Lifecycle Stage 7 — Control System Build and Software Implementation"
 description: "Panel fabrication, safety PLC programming, pre-shipment functional test, and program backup — with build records for every safety-rated component."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "7. Build"
 related_standards:
   - name: "UL 508A"
@@ -772,4 +772,4 @@ This stage is complete when **all** of the following are true:
 
 ---
 
-← [Stage 6: Draft Documentation]({{ '/lifecycle/draft-documentation/' | relative_url }}) | [Stage 8: Installation]({{ '/implementation/lifecycle-installation/' | relative_url }}) →
+← [Stage 6: Draft Documentation]({{ '/verification/lifecycle/draft-documentation/' | relative_url }}) | [Stage 8: Installation]({{ '/implementation/lifecycle-installation/' | relative_url }}) →

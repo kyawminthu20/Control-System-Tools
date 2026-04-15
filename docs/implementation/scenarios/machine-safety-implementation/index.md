@@ -201,7 +201,7 @@ For a hydraulic + chemical dosing machine:
 
 ## Step 8 — Safety Wiring Practices
 
-Refer to the [Safety Wiring Practices]({{ '/lifecycle/safety-wiring/' | relative_url }}) lifecycle page for detailed wiring guidance.
+Refer to the [Safety Wiring Practices]({{ '/verification/safety-wiring/' | relative_url }}) lifecycle page for detailed wiring guidance.
 
 Key principles:
 - 24 VDC for all safety control circuits (SELV — IEC 61140)
@@ -268,7 +268,7 @@ Validation is required by both ISO 13849-1 (Clause 10) and IEC 62061 (Clause 8).
 
 ## See Also
 
-- [Safety Architecture — Lifecycle Stage 4]({{ '/lifecycle/safety-architecture/' | relative_url }})
-- [Safety Wiring Practices — Lifecycle Stage]({{ '/lifecycle/safety-wiring/' | relative_url }})
+- [Safety Architecture — Lifecycle Stage 4]({{ '/verification/safety-architecture/' | relative_url }})
+- [Safety Wiring Practices — Lifecycle Stage]({{ '/verification/safety-wiring/' | relative_url }})
 - [ISO 13849-1 Standard Reference]({{ '/standards/functional-safety/iso-13849-1/' | relative_url }})
 - [IEC 62061 Standard Reference]({{ '/standards/functional-safety/iec-62061/' | relative_url }})

@@ -2,9 +2,12 @@
 layout: default
 title: "Lifecycle Stage 4 — Safety Architecture Definition"
 description: "Decompose safety functions into subsystems, select category/architecture, calculate PL or SIL, and verify response time budgets."
+redirect_from:
+  - /lifecycle/safety-architecture/
+  - /lifecycle/safety-architecture/index.html
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "4. Safety Architecture"
 related_standards:
   - name: "ISO 13849-1"
@@ -764,4 +767,4 @@ This stage is complete when **all** of the following are true:
 
 ---
 
-← [Safety Requirements Specification]({{ '/lifecycle/safety-requirements-spec/' | relative_url }}) | [Detailed Design]({{ '/lifecycle/detailed-design/' | relative_url }}) →
+← [Safety Requirements Specification]({{ '/verification/safety-requirements-spec/' | relative_url }}) | [Detailed Design]({{ '/verification/lifecycle/detailed-design/' | relative_url }}) →

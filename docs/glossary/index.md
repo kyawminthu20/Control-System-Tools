@@ -52,7 +52,7 @@ last_reviewed: "2026-03-08"
     {% endif %}
     {% if entry.lifecycle_stages.size > 0 %}
     <dt>Lifecycle</dt>
-    <dd>{% for stage in entry.lifecycle_stages %}<a href="{{ '/lifecycle/' | append: stage.slug | append: '/' | relative_url }}">{{ stage.label }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</dd>
+    <dd>{% for stage in entry.lifecycle_stages %}{% assign stage_url = site.data.lifecycle_stage_urls[stage.slug] %}<a href="{{ stage_url | relative_url }}">{{ stage.label }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</dd>
     {% endif %}
     {% if entry.related_terms.size > 0 %}
     <dt>See also</dt>

@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/control/"
 related_standards: []
 redirect_from:
-  - /fundamentals/control/multi-axis-coordination/
-  - /fundamentals/control/multi-axis-coordination/index.html
+  - /training/control-systems/multi-axis-coordination/
+  - /training/control-systems/multi-axis-coordination/index.html
 
 ---
 

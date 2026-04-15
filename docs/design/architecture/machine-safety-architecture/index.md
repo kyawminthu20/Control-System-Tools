@@ -9,8 +9,8 @@ breadcrumb:
     url: "/design/architecture/"
   - name: "Machine Safety Architecture"
 redirect_from:
-  - /design/architecture/machine-safety-architecture/
-  - /design/architecture/machine-safety-architecture/index.html
+  - /reference/architecture/machine-safety-architecture/
+  - /reference/architecture/machine-safety-architecture/index.html
 ---
 
 <div class="page-header">

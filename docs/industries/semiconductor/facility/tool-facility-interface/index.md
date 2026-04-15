@@ -135,5 +135,5 @@ These standards matter when the facility system participates in recipe handshake
 - [Exhaust and Abatement Systems](/industries/semiconductor/facility/exhaust-abatement/) — exhaust prove as a permit-to-run input
 - [UPW and Wastewater Systems](/industries/semiconductor/facility/upw-wastewater/) — water utility handshake and quality alarm classification
 - [SEMI S2/S8/S14](/standards/semiconductor/semi/) — equipment safety requirements that shape the interface
-- [Safety Architecture (Lifecycle Stage 04)](/lifecycle/safety-architecture/) — designing safety functions at facility-tool boundaries
-- [Pre-Commissioning (Lifecycle Stage 09)](/lifecycle/pre-commissioning/) — interface verification before live utility connection
+- [Safety Architecture (Lifecycle Stage 04)](/verification/safety-architecture/) — designing safety functions at facility-tool boundaries
+- [Pre-Commissioning (Lifecycle Stage 09)](/implementation/lifecycle-pre-commissioning/) — interface verification before live utility connection

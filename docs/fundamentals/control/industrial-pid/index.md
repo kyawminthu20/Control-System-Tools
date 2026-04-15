@@ -14,8 +14,8 @@ related_standards:
   - name: "IEC 62443"
     url: "/standards/cybersecurity/iec-62443/"
 redirect_from:
-  - /fundamentals/control/industrial-pid/
-  - /fundamentals/control/industrial-pid/index.html
+  - /training/control-systems/industrial-pid/
+  - /training/control-systems/industrial-pid/index.html
 
 ---
 

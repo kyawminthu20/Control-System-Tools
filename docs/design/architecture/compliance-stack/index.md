@@ -9,8 +9,8 @@ breadcrumb:
     url: "/design/architecture/"
   - name: "Compliance Stack"
 redirect_from:
-  - /design/architecture/compliance-stack/
-  - /design/architecture/compliance-stack/index.html
+  - /reference/architecture/compliance-stack/
+  - /reference/architecture/compliance-stack/index.html
 ---
 
 <div class="page-header">

@@ -14,8 +14,8 @@ related_standards:
   - name: "NFPA 79"
     url: "/standards/us-electrical/nfpa-79/"
 redirect_from:
-  - /fundamentals/control/pid-heater-control/
-  - /fundamentals/control/pid-heater-control/index.html
+  - /training/control-systems/pid-heater-control/
+  - /training/control-systems/pid-heater-control/index.html
 
 ---
 

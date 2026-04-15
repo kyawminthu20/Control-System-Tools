@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/motor_family_comparison.md"
 redirect_from:
-  - /fundamentals/motors/motor-family-comparison/
-  - /fundamentals/motors/motor-family-comparison/index.html
+  - /training/electrical-machines/motor-family-comparison/
+  - /training/electrical-machines/motor-family-comparison/index.html
 
 ---
 

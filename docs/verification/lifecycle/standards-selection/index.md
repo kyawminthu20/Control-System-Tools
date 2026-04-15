@@ -2,9 +2,12 @@
 layout: default
 title: "Lifecycle Stage 2 — Standards Selection"
 description: "Identify all applicable standards, resolve type-A/B/C hierarchy, and determine the PL or SIL pathway before detailed design begins."
+redirect_from:
+  - /lifecycle/standards-selection/
+  - /lifecycle/standards-selection/index.html
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "2. Standards Selection"
 related_standards:
   - name: "ISO 12100"
@@ -470,6 +473,6 @@ For reference only — these are **approximate** equivalences, not exact convers
 ---
 
 <nav class="lifecycle-nav">
-  <a href="{{ '/lifecycle/concept/' | relative_url }}" class="lifecycle-nav__prev">← Previous: Stage 1 — Concept</a>
-  <a href="{{ '/lifecycle/risk-assessment/' | relative_url }}" class="lifecycle-nav__next">Next: Stage 3 — Risk Assessment →</a>
+  <a href="{{ '/verification/lifecycle/concept/' | relative_url }}" class="lifecycle-nav__prev">← Previous: Stage 1 — Concept</a>
+  <a href="{{ '/verification/risk-assessment/' | relative_url }}" class="lifecycle-nav__next">Next: Stage 3 — Risk Assessment →</a>
 </nav>

@@ -12,8 +12,8 @@ related_standards:
   - name: "IEC 61511"
     url: "/standards/functional-safety/iec-61511/"
 redirect_from:
-  - /fundamentals/control/pid-foundation/
-  - /fundamentals/control/pid-foundation/index.html
+  - /training/control-systems/pid-foundation/
+  - /training/control-systems/pid-foundation/index.html
 
 ---
 

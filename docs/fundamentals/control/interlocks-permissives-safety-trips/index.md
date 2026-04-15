@@ -15,8 +15,8 @@ related_standards:
   - name: "IEC 61511"
     url: "/standards/functional-safety/iec-61511/"
 redirect_from:
-  - /fundamentals/control/interlocks-permissives-safety-trips/
-  - /fundamentals/control/interlocks-permissives-safety-trips/index.html
+  - /training/control-systems/interlocks-permissives-safety-trips/
+  - /training/control-systems/interlocks-permissives-safety-trips/index.html
 
 ---
 

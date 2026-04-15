@@ -3,8 +3,8 @@ layout: default
 title: Motor Selection Workflow
 description: First-pass motor selection from load definition through protection and integration review.
 redirect_from:
-  - /design/workflows/motor-selection/
-  - /design/workflows/motor-selection/index.html
+  - /workflows/motor-selection/
+  - /workflows/motor-selection/index.html
 ---
 
 <div class="page-header">

@@ -7,8 +7,8 @@ breadcrumb:
     url: "/reference/"
   - name: "Motor Systems"
 redirect_from:
-  - /design/motor-selection/
-  - /design/motor-selection/index.html
+  - /reference/motor-systems/
+  - /reference/motor-systems/index.html
 ---
 
 <div class="page-header">

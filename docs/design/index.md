@@ -5,8 +5,8 @@ description: "Workflow-first navigation for machine and panel design: lifecycle 
 breadcrumb:
   - name: "Engineering Workflow"
 redirect_from:
-  - /design/
-  - /design/index.html
+  - /engineering-workflow/
+  - /engineering-workflow/index.html
 ---
 
 <div class="page-header">
@@ -19,15 +19,15 @@ redirect_from:
 
 <div class="workflow-card-grid">
   <div class="workflow-card">
-    <h3><a href="{{ '/lifecycle/' | relative_url }}">Machine Lifecycle</a></h3>
+    <h3><a href="{{ '/verification/lifecycle/' | relative_url }}">Machine Lifecycle</a></h3>
     <p>11-stage structured progression from concept through maintenance, with standards and decision gates at each step.</p>
   </div>
   <div class="workflow-card">
-    <h3><a href="{{ '/lifecycle/safety-architecture/' | relative_url }}">Safety Architecture</a></h3>
+    <h3><a href="{{ '/verification/safety-architecture/' | relative_url }}">Safety Architecture</a></h3>
     <p>Functional layer separation, E-stop chain design, SIL/PL selection, and safety architecture constraints.</p>
   </div>
   <div class="workflow-card">
-    <h3><a href="{{ '/lifecycle/detailed-design/' | relative_url }}">Detailed Design</a></h3>
+    <h3><a href="{{ '/verification/lifecycle/detailed-design/' | relative_url }}">Detailed Design</a></h3>
     <p>Electrical design stage: schematics, IO lists, panel layout, conductor sizing, and protection coordination.</p>
   </div>
 </div>

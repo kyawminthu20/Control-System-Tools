@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/electrical_quantities_and_circuit_language.md"
 redirect_from:
-  - /fundamentals/electrical/electrical-quantities/
-  - /fundamentals/electrical/electrical-quantities/index.html
+  - /training/fundamentals/electrical-quantities/
+  - /training/fundamentals/electrical-quantities/index.html
 
 ---
 

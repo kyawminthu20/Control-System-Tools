@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/vfd_and_servo_architecture_diagrams.md"
 redirect_from:
-  - /fundamentals/motors/vfd-servo-architecture/
-  - /fundamentals/motors/vfd-servo-architecture/index.html
+  - /training/electrical-machines/vfd-servo-architecture/
+  - /training/electrical-machines/vfd-servo-architecture/index.html
 
 ---
 

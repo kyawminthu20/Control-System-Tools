@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/brushless_dc_ev_and_drone_motor_comparison.md"
 redirect_from:
-  - /fundamentals/motors/bldc-ev-drone-motors/
-  - /fundamentals/motors/bldc-ev-drone-motors/index.html
+  - /training/electrical-machines/bldc-ev-drone-motors/
+  - /training/electrical-machines/bldc-ev-drone-motors/index.html
 
 ---
 

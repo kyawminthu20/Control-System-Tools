@@ -4,7 +4,7 @@ title: "Lifecycle Stage 8 — Installation"
 description: "Field installation of control panels and safety devices — NEC/NFPA 79 wiring, cable segregation, grounding continuity, and installation record."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "8. Installation"
 related_standards:
   - name: "NFPA 79"

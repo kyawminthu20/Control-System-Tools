@@ -7,8 +7,8 @@ breadcrumb:
     url: "/training/"
   - name: "Electrical Fundamentals"
 redirect_from:
-  - /fundamentals/electrical/
-  - /fundamentals/electrical/index.html
+  - /training/fundamentals/
+  - /training/fundamentals/index.html
 
 ---
 

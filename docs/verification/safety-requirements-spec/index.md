@@ -2,9 +2,12 @@
 layout: default
 title: "Lifecycle Stage 3.5 — Safety Requirements Specification"
 description: "The SRS is the contract between risk assessment and architecture — every safety function defined with required PL/SIL, inputs, outputs, and response time."
+redirect_from:
+  - /lifecycle/safety-requirements-spec/
+  - /lifecycle/safety-requirements-spec/index.html
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "3.5. Safety Requirements Spec"
 related_standards:
   - name: "IEC 62061"
@@ -224,4 +227,4 @@ This stage is complete when **all** of the following are true:
 
 ---
 
-← [Stage 3: Risk Assessment]({{ '/lifecycle/risk-assessment/' | relative_url }}) | → [Stage 4: Safety Architecture]({{ '/lifecycle/safety-architecture/' | relative_url }})
+← [Stage 3: Risk Assessment]({{ '/verification/risk-assessment/' | relative_url }}) | → [Stage 4: Safety Architecture]({{ '/verification/safety-architecture/' | relative_url }})

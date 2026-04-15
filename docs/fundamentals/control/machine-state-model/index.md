@@ -11,8 +11,8 @@ related_standards:
   - name: "IEC 61131-3 (PLC Programming)"
     url: "/standards/"
 redirect_from:
-  - /fundamentals/control/machine-state-model/
-  - /fundamentals/control/machine-state-model/index.html
+  - /training/control-systems/machine-state-model/
+  - /training/control-systems/machine-state-model/index.html
 
 ---
 

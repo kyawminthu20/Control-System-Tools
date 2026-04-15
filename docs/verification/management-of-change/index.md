@@ -2,9 +2,12 @@
 layout: default
 title: "Lifecycle Stage 12 — Management of Change"
 description: "Structured re-entry into the safety lifecycle for any modification to a safety function, component, or program — the most commonly failed audit point."
+redirect_from:
+  - /lifecycle/management-of-change/
+  - /lifecycle/management-of-change/index.html
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "12. Management of Change"
 related_standards:
   - name: "IEC 61511-1"
@@ -144,7 +147,7 @@ Ongoing Operations ◄══════════ Stage 12: Management of Cha
                                 (loops back to any prior stage)
 ```
 
-Previous stage: [Stage 11 — Maintenance and Lifecycle Support](/lifecycle/maintenance/) | Up: [Lifecycle Overview](/lifecycle/)
+Previous stage: [Stage 11 — Maintenance and Lifecycle Support](/verification/maintenance/) | Up: [Lifecycle Overview](/verification/lifecycle/)
 
 ## 11. Templates and Tools
 

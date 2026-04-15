@@ -12,7 +12,7 @@ description: "Navigate industrial automation standards families, lifecycle stage
     lifecycle stages, crosswalks, and repository sources without opening PDFs.
   </p>
   <a href="{{ '/standards/' | relative_url }}" class="hero__cta">Explore Standards &rarr;</a>
-  <a href="{{ '/lifecycle/' | relative_url }}" class="hero__cta hero__cta--secondary">View Lifecycle &rarr;</a>
+  <a href="{{ '/verification/lifecycle/' | relative_url }}" class="hero__cta hero__cta--secondary">View Lifecycle &rarr;</a>
 </div>
 
 ---
@@ -80,57 +80,57 @@ description: "Navigate industrial automation standards families, lifecycle stage
 <span class="section-label">11 stages — click any stage to see which standards apply</span>
 
 <div class="lifecycle-ribbon">
-  <a href="{{ '/lifecycle/concept/' | relative_url }}" class="lifecycle-stage">
+  <a href="{{ '/verification/lifecycle/concept/' | relative_url }}" class="lifecycle-stage">
     <span class="lifecycle-stage__num">01</span>
     <span class="lifecycle-stage__name">Concept</span>
     <span class="lifecycle-stage__std">ISO 12100</span>
   </a>
-  <a href="{{ '/lifecycle/standards-selection/' | relative_url }}" class="lifecycle-stage">
+  <a href="{{ '/verification/lifecycle/standards-selection/' | relative_url }}" class="lifecycle-stage">
     <span class="lifecycle-stage__num">02</span>
     <span class="lifecycle-stage__name">Standards Selection</span>
     <span class="lifecycle-stage__std">_standards_map</span>
   </a>
-  <a href="{{ '/lifecycle/risk-assessment/' | relative_url }}" class="lifecycle-stage">
+  <a href="{{ '/verification/risk-assessment/' | relative_url }}" class="lifecycle-stage">
     <span class="lifecycle-stage__num">03</span>
     <span class="lifecycle-stage__name">Risk Assessment</span>
     <span class="lifecycle-stage__std">ISO 12100 · 61511</span>
   </a>
-  <a href="{{ '/lifecycle/safety-architecture/' | relative_url }}" class="lifecycle-stage">
+  <a href="{{ '/verification/safety-architecture/' | relative_url }}" class="lifecycle-stage">
     <span class="lifecycle-stage__num">04</span>
     <span class="lifecycle-stage__name">Safety Architecture</span>
     <span class="lifecycle-stage__std">13849 · 62061</span>
   </a>
-  <a href="{{ '/lifecycle/detailed-design/' | relative_url }}" class="lifecycle-stage">
+  <a href="{{ '/verification/lifecycle/detailed-design/' | relative_url }}" class="lifecycle-stage">
     <span class="lifecycle-stage__num">05</span>
     <span class="lifecycle-stage__name">Detailed Design</span>
     <span class="lifecycle-stage__std">NFPA 79 · UL 508A</span>
   </a>
-  <a href="{{ '/lifecycle/draft-documentation/' | relative_url }}" class="lifecycle-stage">
+  <a href="{{ '/verification/lifecycle/draft-documentation/' | relative_url }}" class="lifecycle-stage">
     <span class="lifecycle-stage__num">06</span>
     <span class="lifecycle-stage__name">Documentation</span>
     <span class="lifecycle-stage__std">All applicable</span>
   </a>
-  <a href="{{ '/lifecycle/build/' | relative_url }}" class="lifecycle-stage">
+  <a href="{{ '/implementation/lifecycle-build/' | relative_url }}" class="lifecycle-stage">
     <span class="lifecycle-stage__num">07</span>
     <span class="lifecycle-stage__name">Build</span>
     <span class="lifecycle-stage__std">UL 508A · NFPA 79</span>
   </a>
-  <a href="{{ '/lifecycle/installation/' | relative_url }}" class="lifecycle-stage">
+  <a href="{{ '/implementation/lifecycle-installation/' | relative_url }}" class="lifecycle-stage">
     <span class="lifecycle-stage__num">08</span>
     <span class="lifecycle-stage__name">Installation</span>
     <span class="lifecycle-stage__std">NEC · NFPA 79</span>
   </a>
-  <a href="{{ '/lifecycle/pre-commissioning/' | relative_url }}" class="lifecycle-stage">
+  <a href="{{ '/implementation/lifecycle-pre-commissioning/' | relative_url }}" class="lifecycle-stage">
     <span class="lifecycle-stage__num">09</span>
     <span class="lifecycle-stage__name">Pre-Commissioning</span>
     <span class="lifecycle-stage__std">13849 Annex K</span>
   </a>
-  <a href="{{ '/lifecycle/commissioning/' | relative_url }}" class="lifecycle-stage">
+  <a href="{{ '/implementation/lifecycle-commissioning/' | relative_url }}" class="lifecycle-stage">
     <span class="lifecycle-stage__num">10</span>
     <span class="lifecycle-stage__name">Commissioning</span>
     <span class="lifecycle-stage__std">FAT / SAT / V&amp;V</span>
   </a>
-  <a href="{{ '/lifecycle/maintenance/' | relative_url }}" class="lifecycle-stage">
+  <a href="{{ '/verification/maintenance/' | relative_url }}" class="lifecycle-stage">
     <span class="lifecycle-stage__num">11</span>
     <span class="lifecycle-stage__name">Maintenance</span>
     <span class="lifecycle-stage__std">13849 §10</span>

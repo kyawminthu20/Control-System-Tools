@@ -15,9 +15,9 @@
       url: "/workflows/electrical-review/"
   related_lifecycle:
     - title: "Detailed Design"
-      url: "/lifecycle/detailed-design/"
+      url: "/verification/lifecycle/detailed-design/"
     - title: "Commissioning"
-      url: "/lifecycle/commissioning/"
+      url: "/implementation/lifecycle-commissioning/"
 
 - title: "Basic Circuit Polarity and Power Checks"
   url: "/commissioning-templates/basic-circuit-polarity/"
@@ -34,7 +34,7 @@
       url: "/workflows/electrical-review/"
   related_lifecycle:
     - title: "Commissioning"
-      url: "/lifecycle/commissioning/"
+      url: "/implementation/lifecycle-commissioning/"
 
 - title: "Capacitor Discharge Awareness Check"
   url: "/commissioning-templates/capacitor-discharge/"
@@ -51,7 +51,7 @@
       url: "/workflows/vfd-commissioning/"
   related_lifecycle:
     - title: "Commissioning"
-      url: "/lifecycle/commissioning/"
+      url: "/implementation/lifecycle-commissioning/"
 
 - title: "Motor Nameplate and Overload Setting"
   url: "/commissioning-templates/motor-nameplate-overload/"
@@ -68,7 +68,7 @@
       url: "/workflows/motor-selection/"
   related_lifecycle:
     - title: "Commissioning"
-      url: "/lifecycle/commissioning/"
+      url: "/implementation/lifecycle-commissioning/"
 
 - title: "Motor Rotation and Overload Verification"
   url: "/commissioning-templates/motor-rotation-verification/"
@@ -85,7 +85,7 @@
       url: "/workflows/motor-troubleshooting/"
   related_lifecycle:
     - title: "Commissioning"
-      url: "/lifecycle/commissioning/"
+      url: "/implementation/lifecycle-commissioning/"
 
 - title: "Drive Commissioning"
   url: "/commissioning-templates/drive-commissioning/"
@@ -104,4 +104,4 @@
       url: "/workflows/servo-commissioning/"
   related_lifecycle:
     - title: "Commissioning"
-      url: "/lifecycle/commissioning/"
+      url: "/implementation/lifecycle-commissioning/"

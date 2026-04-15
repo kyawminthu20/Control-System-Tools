@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/servo_feedback_and_inertia_matching.md"
 redirect_from:
-  - /fundamentals/motors/servo-feedback-inertia/
-  - /fundamentals/motors/servo-feedback-inertia/index.html
+  - /training/electrical-machines/servo-feedback-inertia/
+  - /training/electrical-machines/servo-feedback-inertia/index.html
 
 ---
 

@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/induction_motor_basics.md"
 redirect_from:
-  - /fundamentals/motors/induction-motor-basics/
-  - /fundamentals/motors/induction-motor-basics/index.html
+  - /training/electrical-machines/induction-motor-basics/
+  - /training/electrical-machines/induction-motor-basics/index.html
 
 ---
 

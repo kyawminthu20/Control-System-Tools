@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/motor_control_methods_and_operating_regions.md"
 redirect_from:
-  - /fundamentals/motors/motor-control-methods/
-  - /fundamentals/motors/motor-control-methods/index.html
+  - /training/electrical-machines/motor-control-methods/
+  - /training/electrical-machines/motor-control-methods/index.html
 
 ---
 

@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/motor_nameplates_slip_and_torque.md"
 redirect_from:
-  - /fundamentals/motors/motor-nameplates-slip-torque/
-  - /fundamentals/motors/motor-nameplates-slip-torque/index.html
+  - /training/electrical-machines/motor-nameplates-slip-torque/
+  - /training/electrical-machines/motor-nameplates-slip-torque/index.html
 
 ---
 

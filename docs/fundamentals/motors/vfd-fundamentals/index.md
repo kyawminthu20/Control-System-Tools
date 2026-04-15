@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/vfd_fundamentals.md"
 redirect_from:
-  - /fundamentals/motors/vfd-fundamentals/
-  - /fundamentals/motors/vfd-fundamentals/index.html
+  - /training/electrical-machines/vfd-fundamentals/
+  - /training/electrical-machines/vfd-fundamentals/index.html
 
 ---
 

@@ -2,9 +2,12 @@
 layout: default
 title: "Lifecycle Stage 3 — Risk Assessment"
 description: "Systematic hazard identification and risk estimation — the critical gate where PLr or SIL targets are assigned to each safety function."
+redirect_from:
+  - /lifecycle/risk-assessment/
+  - /lifecycle/risk-assessment/index.html
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "3. Risk Assessment"
 related_standards:
   - name: "ISO 12100"
@@ -603,4 +606,4 @@ Risk assessment is not a single event. It is revisited when:
 
 ---
 
-[← Standards Selection]({{ '/lifecycle/standards-selection/' | relative_url }}) | [Safety Requirements Specification →]({{ '/lifecycle/safety-requirements-spec/' | relative_url }})
+[← Standards Selection]({{ '/verification/lifecycle/standards-selection/' | relative_url }}) | [Safety Requirements Specification →]({{ '/verification/safety-requirements-spec/' | relative_url }})

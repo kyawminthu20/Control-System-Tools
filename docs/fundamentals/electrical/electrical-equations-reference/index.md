@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/electrical_equations_reference.md"
 redirect_from:
-  - /fundamentals/electrical/electrical-equations-reference/
-  - /fundamentals/electrical/electrical-equations-reference/index.html
+  - /training/fundamentals/electrical-equations-reference/
+  - /training/fundamentals/electrical-equations-reference/index.html
 
 ---
 

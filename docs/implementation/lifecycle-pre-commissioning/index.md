@@ -4,7 +4,7 @@ title: "Lifecycle Stage 9 — Pre-Commissioning and Calibration"
 description: "Systematic verification of wiring, I/O, calibration, and safety function response before process startup — establishes proof test baselines."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "9. Pre-Commissioning"
 related_standards:
   - name: "ISO 13849-1"

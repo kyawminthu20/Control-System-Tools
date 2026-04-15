@@ -13,8 +13,8 @@ related_standards:
   - name: "IEC 61511"
     url: "/standards/functional-safety/iec-61511/"
 redirect_from:
-  - /design/software-stack/
-  - /design/software-stack/index.html
+  - /software-stack/
+  - /software-stack/index.html
 ---
 
 <div class="page-header">
@@ -379,5 +379,5 @@ These detailed rules are **not confirmed in the local corpus**. Verify against t
 - [IEC 62443 detail page]({{ '/standards/cybersecurity/iec-62443/' | relative_url }})
 - [7-Layer Machine Architecture Model]({{ '/design/architecture/machine-architecture-model/' | relative_url }})
 - [Universal Machine Safety Architecture]({{ '/design/architecture/machine-safety-architecture/' | relative_url }})
-- [Safety Wiring]({{ '/lifecycle/safety-wiring/' | relative_url }})
+- [Safety Wiring]({{ '/verification/safety-wiring/' | relative_url }})
 - [Networked Safety PLC scenario]({{ '/scenarios/networked-safety-plc/' | relative_url }})

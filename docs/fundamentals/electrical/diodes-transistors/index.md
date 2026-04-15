@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/diodes_transistors_and_switching_basics.md"
 redirect_from:
-  - /fundamentals/electrical/diodes-transistors/
-  - /fundamentals/electrical/diodes-transistors/index.html
+  - /training/fundamentals/diodes-transistors/
+  - /training/fundamentals/diodes-transistors/index.html
 
 ---
 

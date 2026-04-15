@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/motor_efficiency_power_factor_and_losses.md"
 redirect_from:
-  - /fundamentals/motors/motor-efficiency-losses/
-  - /fundamentals/motors/motor-efficiency-losses/index.html
+  - /training/electrical-machines/motor-efficiency-losses/
+  - /training/electrical-machines/motor-efficiency-losses/index.html
 
 ---
 

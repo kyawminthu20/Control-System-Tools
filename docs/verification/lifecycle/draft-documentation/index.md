@@ -2,9 +2,12 @@
 layout: default
 title: "Lifecycle Stage 6 — Draft Design Documentation"
 description: "Compile engineering outputs into formal document packages for the build team, commissioning team, and regulatory record."
+redirect_from:
+  - /lifecycle/draft-documentation/
+  - /lifecycle/draft-documentation/index.html
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "6. Draft Documentation"
 related_standards:
   - name: "IEC 62061"
@@ -593,4 +596,4 @@ This stage is complete when **all** of the following are true:
 
 ## Navigation
 
-← Previous: [Detailed Design]({{ '/lifecycle/detailed-design/' | relative_url }}) | Next: [Build]({{ '/lifecycle/build/' | relative_url }}) →
+← Previous: [Detailed Design]({{ '/verification/lifecycle/detailed-design/' | relative_url }}) | Next: [Build]({{ '/implementation/lifecycle-build/' | relative_url }}) →

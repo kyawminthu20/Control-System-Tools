@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/kirchhoff_laws_and_systematic_analysis.md"
 redirect_from:
-  - /fundamentals/electrical/kirchhoff-laws/
-  - /fundamentals/electrical/kirchhoff-laws/index.html
+  - /training/fundamentals/kirchhoff-laws/
+  - /training/fundamentals/kirchhoff-laws/index.html
 
 ---
 

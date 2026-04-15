@@ -2,9 +2,12 @@
 layout: default
 title: "Lifecycle Stage 5 — Detailed Design and Part Sizing"
 description: "Circuit design, wire sizing, SCCR, grounding, label requirements, BOM, and verification plan — governed by NFPA 79, UL 508A, and NEC."
+redirect_from:
+  - /lifecycle/detailed-design/
+  - /lifecycle/detailed-design/index.html
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "5. Detailed Design"
 related_standards:
   - name: "NFPA 79"
@@ -706,6 +709,6 @@ This stage is complete when **all** of the following are true:
 ---
 
 <nav class="lifecycle-nav">
-  <a href="{{ '/lifecycle/safety-architecture/' | relative_url }}" class="lifecycle-nav__prev">← Stage 4: Safety Architecture</a>
-  <a href="{{ '/lifecycle/draft-documentation/' | relative_url }}" class="lifecycle-nav__next">Stage 6: Draft Documentation →</a>
+  <a href="{{ '/verification/safety-architecture/' | relative_url }}" class="lifecycle-nav__prev">← Stage 4: Safety Architecture</a>
+  <a href="{{ '/verification/lifecycle/draft-documentation/' | relative_url }}" class="lifecycle-nav__next">Stage 6: Draft Documentation →</a>
 </nav>

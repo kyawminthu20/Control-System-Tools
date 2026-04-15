@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/motor_and_vfd_equations_reference.md"
 redirect_from:
-  - /fundamentals/motors/motor-vfd-equations/
-  - /fundamentals/motors/motor-vfd-equations/index.html
+  - /training/electrical-machines/motor-vfd-equations/
+  - /training/electrical-machines/motor-vfd-equations/index.html
 
 ---
 

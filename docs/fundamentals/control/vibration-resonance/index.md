@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/control/"
 related_standards: []
 redirect_from:
-  - /fundamentals/control/vibration-resonance/
-  - /fundamentals/control/vibration-resonance/index.html
+  - /training/control-systems/vibration-resonance/
+  - /training/control-systems/vibration-resonance/index.html
 
 ---
 

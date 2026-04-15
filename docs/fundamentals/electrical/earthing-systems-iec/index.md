@@ -14,8 +14,8 @@ related_standards:
   - name: "NEC (NFPA 70)"
     url: "/standards/us-electrical/nec/"
 redirect_from:
-  - /fundamentals/electrical/earthing-systems-iec/
-  - /fundamentals/electrical/earthing-systems-iec/index.html
+  - /training/fundamentals/earthing-systems-iec/
+  - /training/fundamentals/earthing-systems-iec/index.html
 
 ---
 

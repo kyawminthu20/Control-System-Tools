@@ -175,6 +175,6 @@ When a detection input participates in Layer 3 or Layer 4 shutdown, the instrume
 - [Exhaust and Abatement Systems](/industries/semiconductor/facility/exhaust-abatement/) — exhaust loss as a shutdown input
 - [Tool-Facility Interface](/industries/semiconductor/facility/tool-facility-interface/) — Layer 2/3 shutdown signals at the facility-tool boundary
 - [Common Control Philosophy](/industries/semiconductor/facility/control-philosophy/) — how shutdown layers integrate with modes and sequences
-- [Safety Architecture (Lifecycle Stage 04)](/lifecycle/safety-architecture/) — functional safety design methodology
+- [Safety Architecture (Lifecycle Stage 04)](/verification/safety-architecture/) — functional safety design methodology
 - [IEC 61511 — SIS Lifecycle](/standards/functional-safety/iec-61511/) — formal process safety lifecycle
 - [IEC 61508 — Functional Safety](/standards/functional-safety/iec-61508/) — safety integrity requirements for devices

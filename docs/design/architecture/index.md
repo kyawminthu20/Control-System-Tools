@@ -7,8 +7,8 @@ breadcrumb:
     url: "/reference/"
   - name: "Architecture"
 redirect_from:
-  - /design/architecture/
-  - /design/architecture/index.html
+  - /reference/architecture/
+  - /reference/architecture/index.html
 ---
 
 <div class="page-header">

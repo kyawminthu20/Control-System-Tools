@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/control/"
 repo_path: "control-standards/rag/training_modules/control_systems/pid_control_intuition.md"
 redirect_from:
-  - /fundamentals/control/pid-intuition/
-  - /fundamentals/control/pid-intuition/index.html
+  - /training/control-systems/pid-intuition/
+  - /training/control-systems/pid-intuition/index.html
 
 ---
 

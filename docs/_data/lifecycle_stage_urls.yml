@@ -1,0 +1,19 @@
+# Lifecycle stage slug → canonical URL (post-Phase-26 migration).
+# Stages are split across three top-level groups:
+#   /verification/lifecycle/…     — analysis/design stages
+#   /verification/…               — stages that are fundamentally verification gates
+#   /implementation/lifecycle-…   — build/install/commissioning stages
+concept:                  /verification/lifecycle/concept/
+standards-selection:      /verification/lifecycle/standards-selection/
+risk-assessment:          /verification/risk-assessment/
+safety-requirements-spec: /verification/safety-requirements-spec/
+safety-architecture:      /verification/safety-architecture/
+detailed-design:          /verification/lifecycle/detailed-design/
+draft-documentation:      /verification/lifecycle/draft-documentation/
+safety-wiring:            /verification/safety-wiring/
+build:                    /implementation/lifecycle-build/
+pre-commissioning:        /implementation/lifecycle-pre-commissioning/
+installation:             /implementation/lifecycle-installation/
+commissioning:            /implementation/lifecycle-commissioning/
+maintenance:              /verification/maintenance/
+management-of-change:     /verification/management-of-change/

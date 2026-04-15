@@ -12,8 +12,8 @@ related_standards:
   - name: "IEC 61511"
     url: "/standards/functional-safety/iec-61511/"
 redirect_from:
-  - /fundamentals/control/control-loop-architectures/
-  - /fundamentals/control/control-loop-architectures/index.html
+  - /training/control-systems/control-loop-architectures/
+  - /training/control-systems/control-loop-architectures/index.html
 
 ---
 

@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/servo_drive_fundamentals.md"
 redirect_from:
-  - /fundamentals/motors/servo-drive-fundamentals/
-  - /fundamentals/motors/servo-drive-fundamentals/index.html
+  - /training/electrical-machines/servo-drive-fundamentals/
+  - /training/electrical-machines/servo-drive-fundamentals/index.html
 
 ---
 

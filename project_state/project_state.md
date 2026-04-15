@@ -1,9 +1,9 @@
 # Project State
 
-**Last Updated:** 2026-04-14
+**Last Updated:** 2026-04-15
 **Status:** Active
-**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batches 1–4 complete)
-**Next Phase:** Phase 26 Batch 5 — Verification group migration (Task 8)
+**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batches 1–5 complete)
+**Next Phase:** Phase 26 Batch 6 — Tools group migration (rag-browser, glossary, crosswalks, reference-hub)
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,16 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+Phase 26 Batch 5 (Task 8) is complete:
+- Verification group migrated: 5 pages under `/verification/lifecycle/` (index, concept, standards-selection, detailed-design, draft-documentation) and 6 top-level verification pages (`/verification/risk-assessment/`, `safety-requirements-spec/`, `safety-architecture/`, `maintenance/`, `management-of-change/`, `safety-wiring/`)
+- Correct `redirect_from:` with bare + `/index.html` variants added to all 11 moved files
+- Internal cross-links across 35 source files updated to point at new verification/implementation URLs (glossary, data files, includes, industries, water-wastewater, semiconductor facility, implementation/lifecycle-*, design hub)
+- New data file `docs/_data/lifecycle_stage_urls.yml` maps lifecycle-stage slugs to their correct URLs (split across `/verification/lifecycle/`, `/verification/`, `/implementation/`); `docs/_includes/context-panel.html` and `docs/glossary/index.md` now use the lookup instead of a hardcoded prefix
+- Empty `docs/lifecycle/` tree removed
+- **Redirect audit and backfill for Batches 1–4:** discovered that Batches 1–4 had written `redirect_from:` entries pointing at the NEW URL (self-redirect) instead of the OLD URL. A script walked the migration map and corrected 41 files; the 5 hub pages (`/engineering-workflow/`, `/software-stack/`, `/training/fundamentals/`, `/training/electrical-machines/`, `/training/control-systems/`) and 2 stragglers (`pid-drone-control`, `motor-selection`) were fixed manually
+- Link check went from 768 broken links (pre-batch-5 baseline) → 0 broken links (249 site files scanned, exit 0)
+- Jekyll build: clean, 249 HTML files
 
 Phase 26 Batch 4 (Task 7) is complete:
 - Implementation group (23 pages) migrated to `/implementation/`: commissioning-templates (7), scenarios (10), servo-commissioning, vfd-commissioning, lifecycle-build, lifecycle-pre-commissioning, lifecycle-installation, lifecycle-commissioning

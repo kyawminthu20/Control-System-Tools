@@ -9,8 +9,8 @@ breadcrumb:
     url: "/design/motor-selection/"
   - name: "Motor Selection Matrix"
 redirect_from:
-  - /design/motor-selection/motor-selection-matrix/
-  - /design/motor-selection/motor-selection-matrix/index.html
+  - /reference/motor-systems/motor-selection-matrix/
+  - /reference/motor-systems/motor-selection-matrix/index.html
 ---
 
 <div class="page-header">

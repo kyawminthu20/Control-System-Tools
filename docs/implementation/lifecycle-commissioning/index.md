@@ -4,7 +4,7 @@ title: "Lifecycle Stage 10 — Commissioning and Validation"
 description: "FAT, SAT, safety function validation, and final PL/SIL verification — the stage where design intent is formally demonstrated on the physical system."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "10. Commissioning"
 related_standards:
   - name: "ISO 13849-1"
@@ -1072,4 +1072,4 @@ The V&V report closes the traceability chain that runs through the entire lifecy
 
 ## Navigation
 
-← [Stage 9: Pre-Commissioning]({{ '/implementation/lifecycle-pre-commissioning/' | relative_url }}) | [Stage 11: Maintenance]({{ '/lifecycle/maintenance/' | relative_url }}) →
+← [Stage 9: Pre-Commissioning]({{ '/implementation/lifecycle-pre-commissioning/' | relative_url }}) | [Stage 11: Maintenance]({{ '/verification/maintenance/' | relative_url }}) →

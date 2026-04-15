@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/control/"
 related_standards: []
 redirect_from:
-  - /fundamentals/control/servo-tuning/
-  - /fundamentals/control/servo-tuning/index.html
+  - /training/control-systems/servo-tuning/
+  - /training/control-systems/servo-tuning/index.html
 
 ---
 

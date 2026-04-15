@@ -11,8 +11,8 @@ related_standards:
   - name: "IEC 61131-3 (PLC Programming)"
     url: "/standards/"
 redirect_from:
-  - /fundamentals/control/deterministic-nondeterministic-control/
-  - /fundamentals/control/deterministic-nondeterministic-control/index.html
+  - /training/control-systems/deterministic-nondeterministic-control/
+  - /training/control-systems/deterministic-nondeterministic-control/index.html
 
 ---
 

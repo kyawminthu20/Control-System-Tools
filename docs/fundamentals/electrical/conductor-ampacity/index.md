@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/conductor_ampacity_and_termination_temperature.md"
 redirect_from:
-  - /fundamentals/electrical/conductor-ampacity/
-  - /fundamentals/electrical/conductor-ampacity/index.html
+  - /training/fundamentals/conductor-ampacity/
+  - /training/fundamentals/conductor-ampacity/index.html
 
 ---
 

@@ -104,5 +104,5 @@ These considerations apply across all facility utility systems:
 - [IEC 61511 — Functional Safety: SIS](/standards/functional-safety/iec-61511/) — process safety lifecycle
 - [IEC 61508 — Functional Safety](/standards/functional-safety/iec-61508/) — safety integrity and lifecycle
 - [Software Stack](/software-stack/) — PLC, DCS, SIS software choices
-- [Safety Architecture (Lifecycle Stage 04)](/lifecycle/safety-architecture/) — safety function design methodology
+- [Safety Architecture (Lifecycle Stage 04)](/verification/safety-architecture/) — safety function design methodology
 - [Commissioning Templates](/commissioning-templates/) — field validation checklists

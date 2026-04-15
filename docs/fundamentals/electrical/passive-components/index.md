@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/passive_components_resistors_capacitors.md"
 redirect_from:
-  - /fundamentals/electrical/passive-components/
-  - /fundamentals/electrical/passive-components/index.html
+  - /training/fundamentals/passive-components/
+  - /training/fundamentals/passive-components/index.html
 
 ---
 

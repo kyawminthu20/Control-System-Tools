@@ -9,8 +9,8 @@ breadcrumb:
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/ac_vs_dc_motor_comparison.md"
 redirect_from:
-  - /fundamentals/motors/ac-vs-dc-motors/
-  - /fundamentals/motors/ac-vs-dc-motors/index.html
+  - /training/electrical-machines/ac-vs-dc-motors/
+  - /training/electrical-machines/ac-vs-dc-motors/index.html
 
 ---
 
