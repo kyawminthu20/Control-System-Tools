@@ -18,6 +18,23 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-04-14 — Phase 26 Batch 1: Foundation (Tasks 1–4)
+
+**Type:** Tooling / Infrastructure
+**Status:** Complete
+
+- Installed `jekyll-redirect-from` 0.16.0 plugin (Gemfile + _config.yml + Gemfile.lock)
+- Created `tools/check_internal_links.py` — stdlib-only internal link checker (walks `_site/`, exits 0 clean / 1 broken)
+- Baseline audit fixed 16 pre-existing broken links across 11 source files:
+  - `docs/_data/glossary.yml`: `standards/machinery/iso-12100/` → `standards/functional-safety/iso-12100/`
+  - `docs/industries/semiconductor/facility/crosswalks/index.md`: fixed iso-13849, iec-60204, and nfpa-79 paths
+  - `docs/industries/water-wastewater/{index,distribution-scada,instrumentation,intake-pumping,treatment-discharge}/index.md`: replaced non-existent `lifecycle/stage-XX` links with real lifecycle pages
+  - `docs/lifecycle/build/index.md`: removed non-existent `standards/plc-programming/iec-61131-3/` front matter entry
+  - `docs/training/fundamentals/earthing-systems-iec/index.md` and `docs/workflows/vfd-commissioning/index.md`: `grounding-bonding-control-panels` → `grounding-bonding-panels`
+  - `docs/workflows/motor-selection/index.md`: `branch-circuits-feeders-motor-loads` → `branch-circuits-vs-feeders`; `nfpa79` → `nfpa-79`
+- Created `docs/_data/phase26_migration_map.yml` — authoritative old→new URL registry for all 6 migration groups
+- Jekyll build clean: 166 files, zero errors, zero broken internal links
+
 ## 2026-04-14 — Phase 25 COMPLETE: Water/Wastewater Multi-Page Section
 
 **Type:** Content / Industry Reference

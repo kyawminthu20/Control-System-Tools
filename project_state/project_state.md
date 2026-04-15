@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-04-14
 **Status:** Active
-**Current Phase:** Phase 25 COMPLETE — Water/Wastewater Multi-Page Section
-**Next Phase:** Phase 26 PLANNING — TBD
+**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batch 1 of 9 complete)
+**Next Phase:** Phase 26 Batch 2 — Fundamentals group migration (Task 5)
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,12 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+Phase 26 Batch 1 (Tasks 1–4) is complete:
+- `jekyll-redirect-from` plugin installed and verified (Gemfile, Gemfile.lock, _config.yml updated; gem 0.16.0 installed)
+- `tools/check_internal_links.py` created (stdlib-only internal link checker, exits 0 clean / 1 broken)
+- Baseline audit: 16 broken links found across 11 source files; all 16 resolved (wrong paths in glossary.yml, semiconductor crosswalks, water-wastewater pages, lifecycle/build, training, and workflow pages); checker now exits 0 on 166 files
+- `docs/_data/phase26_migration_map.yml` created — authoritative old→new URL registry for all 6 migration groups (fundamentals, design, implementation, verification, tools, training_trim)
 
 ## Current Reality
 
