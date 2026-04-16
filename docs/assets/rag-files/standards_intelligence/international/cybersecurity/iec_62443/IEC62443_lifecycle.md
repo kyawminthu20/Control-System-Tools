@@ -1,5 +1,7 @@
 # IEC 62443 — IACS Security Lifecycle
 
+**AI_READ_ACCESS: ALLOWED**
+
 ## Overview
 
 The IEC 62443 series defines a security lifecycle for Industrial Automation and Control Systems (IACS). Like the functional safety lifecycle (IEC 61511, IEC 62061), the security lifecycle is not a one-time activity — it is a continuous process of assessment, implementation, and maintenance that runs in parallel with the operational life of the system.

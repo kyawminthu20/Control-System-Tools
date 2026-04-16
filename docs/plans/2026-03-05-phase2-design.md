@@ -51,7 +51,7 @@ Phase 2 adds interactivity and discoverability to the Phase 1 Jekyll site. Split
 
 ### Crosswalk Comparison Selector
 
-**New page:** `docs/crosswalks/compare/index.md`
+**New page:** `docs/tools/crosswalks/compare/index.md`
 
 **UI:**
 - Two `<select>` dropdowns listing all 9 standards (NEC, NFPA 79, UL 508A, IEC 60204-1, ISO 12100, ISO 13849-1, IEC 62061, IEC 61508, IEC 61511)
@@ -73,7 +73,7 @@ Phase 2 adds interactivity and discoverability to the Phase 1 Jekyll site. Split
 | `docs/assets/js/main.js` | 1 + 2 | Add lightbox logic, search logic |
 | `docs/_layouts/default.html` | 2 | Add lunr.js CDN script tag |
 | `docs/assets/data/search.json` | 2 | New — Jekyll Liquid search index |
-| `docs/crosswalks/compare/index.md` | 2 | New — comparison selector page |
+| `docs/tools/crosswalks/compare/index.md` | 2 | New — comparison selector page |
 
 ---
 

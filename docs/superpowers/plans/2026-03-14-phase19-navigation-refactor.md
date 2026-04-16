@@ -18,7 +18,7 @@
 |---|---|---|
 | Create | `docs/_data/navigation.yml` | Full 5-group sidebar hierarchy — sections, children, grandchildren, match rules |
 | Create | `docs/engineering-workflow/index.md` | Workflow-first hub: lifecycle, workflows, commissioning templates, scenarios |
-| Modify | `docs/reference/index.md` | Add Quick Reference section: glossary, crosswalks, software stack, RAG browser |
+| Modify | `docs/tools/reference-hub/index.md` | Add Quick Reference section: glossary, crosswalks, software stack, RAG browser |
 | Modify | `docs/_includes/sidebar.html` | Replace ~135 lines of hardcoded HTML with data-driven Liquid renderer (~45 lines) |
 
 ---
@@ -305,11 +305,11 @@ cd "/Users/kyawminthu/Dev/Control System Tools" && git add docs/engineering-work
 ### Task 3: Expand reference landing page
 
 **Files:**
-- Modify: `docs/reference/index.md`
+- Modify: `docs/tools/reference-hub/index.md`
 
 The existing landing has two card-grid sections (Architecture Models, Motor Systems). Add a third section for quick-lookup content.
 
-- [ ] **Step 1: Read `docs/reference/index.md`** to locate the closing trust-boundary note at the bottom.
+- [ ] **Step 1: Read `docs/tools/reference-hub/index.md`** to locate the closing trust-boundary note at the bottom.
 
 - [ ] **Step 2: Insert Quick Reference section** immediately before the closing trust-boundary `<div>`:
 
@@ -346,7 +346,7 @@ Expected: clean build, `132`
 - [ ] **Step 4: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools" && git add docs/reference/index.md && git commit -m "feat(reference): add Quick Reference section to landing page"
+cd "/Users/kyawminthu/Dev/Control System Tools" && git add docs/tools/reference-hub/index.md && git commit -m "feat(reference): add Quick Reference section to landing page"
 ```
 
 ---

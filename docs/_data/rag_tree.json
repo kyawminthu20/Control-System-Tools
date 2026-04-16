@@ -190,6 +190,108 @@
         ]
       },
       {
+        "name": "semiconductor_facility",
+        "type": "dir",
+        "children": [
+          {
+            "name": "alarm_and_measurement_strategy.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/semiconductor_facility/alarm_and_measurement_strategy.md",
+            "serve_path": "design_framework/semiconductor_facility/alarm_and_measurement_strategy.md"
+          },
+          {
+            "name": "bulk_chemical_distribution.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/semiconductor_facility/bulk_chemical_distribution.md",
+            "serve_path": "design_framework/semiconductor_facility/bulk_chemical_distribution.md"
+          },
+          {
+            "name": "bulk_specialty_gas.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/semiconductor_facility/bulk_specialty_gas.md",
+            "serve_path": "design_framework/semiconductor_facility/bulk_specialty_gas.md"
+          },
+          {
+            "name": "commissioning_reference.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/semiconductor_facility/commissioning_reference.md",
+            "serve_path": "design_framework/semiconductor_facility/commissioning_reference.md"
+          },
+          {
+            "name": "common_control_philosophy.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/semiconductor_facility/common_control_philosophy.md",
+            "serve_path": "design_framework/semiconductor_facility/common_control_philosophy.md"
+          },
+          {
+            "name": "device_family_library.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/semiconductor_facility/device_family_library.md",
+            "serve_path": "design_framework/semiconductor_facility/device_family_library.md"
+          },
+          {
+            "name": "exhaust_abatement_vacuum.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/semiconductor_facility/exhaust_abatement_vacuum.md",
+            "serve_path": "design_framework/semiconductor_facility/exhaust_abatement_vacuum.md"
+          },
+          {
+            "name": "gas_cabinet_control_safety_and_interlocks.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/semiconductor_facility/gas_cabinet_control_safety_and_interlocks.md",
+            "serve_path": "design_framework/semiconductor_facility/gas_cabinet_control_safety_and_interlocks.md"
+          },
+          {
+            "name": "hf_control_safety_and_instrumentation.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/semiconductor_facility/hf_control_safety_and_instrumentation.md",
+            "serve_path": "design_framework/semiconductor_facility/hf_control_safety_and_instrumentation.md"
+          },
+          {
+            "name": "hvac_and_cleanroom.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/semiconductor_facility/hvac_and_cleanroom.md",
+            "serve_path": "design_framework/semiconductor_facility/hvac_and_cleanroom.md"
+          },
+          {
+            "name": "instrumentation_selection.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/semiconductor_facility/instrumentation_selection.md",
+            "serve_path": "design_framework/semiconductor_facility/instrumentation_selection.md"
+          },
+          {
+            "name": "instrumentation_use_matrix.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/semiconductor_facility/instrumentation_use_matrix.md",
+            "serve_path": "design_framework/semiconductor_facility/instrumentation_use_matrix.md"
+          },
+          {
+            "name": "safety_and_shutdown.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/semiconductor_facility/safety_and_shutdown.md",
+            "serve_path": "design_framework/semiconductor_facility/safety_and_shutdown.md"
+          },
+          {
+            "name": "tool_facility_interface.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/semiconductor_facility/tool_facility_interface.md",
+            "serve_path": "design_framework/semiconductor_facility/tool_facility_interface.md"
+          },
+          {
+            "name": "upw_and_wastewater.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/semiconductor_facility/upw_and_wastewater.md",
+            "serve_path": "design_framework/semiconductor_facility/upw_and_wastewater.md"
+          },
+          {
+            "name": "vendor_families.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/semiconductor_facility/vendor_families.md",
+            "serve_path": "design_framework/semiconductor_facility/vendor_families.md"
+          }
+        ]
+      },
+      {
         "name": "us_eu_compliance_wizard",
         "type": "dir",
         "children": [
@@ -204,6 +306,60 @@
             "type": "file",
             "path": "control-standards/rag/design_framework/us_eu_compliance_wizard/us_eu_delta_report_template.md",
             "serve_path": "design_framework/us_eu_compliance_wizard/us_eu_delta_report_template.md"
+          }
+        ]
+      },
+      {
+        "name": "water_wastewater",
+        "type": "dir",
+        "children": [
+          {
+            "name": "chemical_dosing.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/water_wastewater/chemical_dosing.md",
+            "serve_path": "design_framework/water_wastewater/chemical_dosing.md"
+          },
+          {
+            "name": "distribution_scada_telemetry.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/water_wastewater/distribution_scada_telemetry.md",
+            "serve_path": "design_framework/water_wastewater/distribution_scada_telemetry.md"
+          },
+          {
+            "name": "equalization_and_neutralization.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/water_wastewater/equalization_and_neutralization.md",
+            "serve_path": "design_framework/water_wastewater/equalization_and_neutralization.md"
+          },
+          {
+            "name": "filtration_and_clarification.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/water_wastewater/filtration_and_clarification.md",
+            "serve_path": "design_framework/water_wastewater/filtration_and_clarification.md"
+          },
+          {
+            "name": "instrumentation_reference.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/water_wastewater/instrumentation_reference.md",
+            "serve_path": "design_framework/water_wastewater/instrumentation_reference.md"
+          },
+          {
+            "name": "intake_and_pumping.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/water_wastewater/intake_and_pumping.md",
+            "serve_path": "design_framework/water_wastewater/intake_and_pumping.md"
+          },
+          {
+            "name": "overview_and_standards.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/water_wastewater/overview_and_standards.md",
+            "serve_path": "design_framework/water_wastewater/overview_and_standards.md"
+          },
+          {
+            "name": "treatment_and_discharge.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/water_wastewater/treatment_and_discharge.md",
+            "serve_path": "design_framework/water_wastewater/treatment_and_discharge.md"
           }
         ]
       }
@@ -224,6 +380,24 @@
         "type": "file",
         "path": "control-standards/rag/meta/VERSION_OVERVIEW.md",
         "serve_path": "meta/VERSION_OVERVIEW.md"
+      }
+    ]
+  },
+  {
+    "name": "process_safety_details",
+    "type": "dir",
+    "children": [
+      {
+        "name": "IEC61511.md",
+        "type": "file",
+        "path": "control-standards/rag/process_safety_details/IEC61511.md",
+        "serve_path": "process_safety_details/IEC61511.md"
+      },
+      {
+        "name": "UPW_water_skid_scenario.md",
+        "type": "file",
+        "path": "control-standards/rag/process_safety_details/UPW_water_skid_scenario.md",
+        "serve_path": "process_safety_details/UPW_water_skid_scenario.md"
       }
     ]
   },
@@ -1776,6 +1950,18 @@
             "type": "file",
             "path": "control-standards/rag/training_modules/nec_application/working_space_and_table_navigation.md",
             "serve_path": "training_modules/nec_application/working_space_and_table_navigation.md"
+          }
+        ]
+      },
+      {
+        "name": "semiconductor_facility",
+        "type": "dir",
+        "children": [
+          {
+            "name": "hf_handling_controls_materials_and_shutdowns.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/semiconductor_facility/hf_handling_controls_materials_and_shutdowns.md",
+            "serve_path": "training_modules/semiconductor_facility/hf_handling_controls_materials_and_shutdowns.md"
           }
         ]
       }

@@ -84,7 +84,7 @@ CE marking under the Machinery Directive (2006/42/EC) requires:
 | NFPA 79 | `rag/us/nfpa79/` |
 | IEC 60204-1 | `rag/international/machinery/iec_60204_1/` |
 | ISO 12100 | `rag/international/functional_safety/iso_12100/` [planned] |
-| Crosswalk | `rag/crosswalks/overlap_matrix/nfpa79_iec60204_overlap.md` |
+| Crosswalk | `rag/tools/crosswalks/overlap_matrix/nfpa79_iec60204_overlap.md` |
 
 ## Recommended Next Steps
 

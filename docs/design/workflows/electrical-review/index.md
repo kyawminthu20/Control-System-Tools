@@ -3,8 +3,8 @@ layout: default
 title: Electrical Review Workflow
 description: Fast design-review and bench-troubleshooting workflows for resistive circuits and basic electrical checks.
 redirect_from:
-  - /design/workflows/electrical-review/
-  - /design/workflows/electrical-review/index.html
+  - /workflows/electrical-review/
+  - /workflows/electrical-review/index.html
 ---
 
 <div class="page-header">

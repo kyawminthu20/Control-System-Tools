@@ -1,5 +1,7 @@
 # IEC 62443-2-1 — IACS Security Management System
 
+**AI_READ_ACCESS: ALLOWED**
+
 ## Standard Reference
 
 | Field | Value |

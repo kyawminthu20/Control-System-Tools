@@ -77,7 +77,7 @@ Terms stored in `docs/_data/glossary.yml`. One YAML block per term. The glossary
 
 ## Page Structure
 
-**File:** `docs/glossary/index.md`
+**File:** `docs/tools/glossary/index.md`
 **Layout:** `default`
 
 ```
@@ -180,6 +180,6 @@ Add one line to `docs/_includes/sidebar.html` in the Reference section:
 | File | Action |
 |------|--------|
 | `docs/_data/glossary.yml` | Create — term data |
-| `docs/glossary/index.md` | Create — rendered page |
+| `docs/tools/glossary/index.md` | Create — rendered page |
 | `docs/_includes/sidebar.html` | Edit — add Glossary link to Reference section |
 | `docs/assets/css/main.css` | Edit — add `.glossary-entry` styles if needed |

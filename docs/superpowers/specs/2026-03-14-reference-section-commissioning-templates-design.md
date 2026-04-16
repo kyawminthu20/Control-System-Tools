@@ -11,7 +11,7 @@
 Two parallel deliverables:
 
 1. **New `/tools/reference-hub/` section** — surface 4 canonical RAG files as first-class site pages, grouped into two sub-sections.
-2. **Commissioning Templates redesign** — rename `/implementation/commissioning-templates/` to `/implementation/commissioning-templates/`, add template header block and checkbox UI to all 6 checklist pages.
+2. **Commissioning Templates redesign** — rename `/field-engineering/` to `/implementation/commissioning-templates/`, add template header block and checkbox UI to all 6 checklist pages.
 
 ---
 
@@ -102,13 +102,13 @@ Add a **new** `<details>` block labeled **"Reference Models"** immediately befor
 
 | Old URL | New URL |
 |---------|---------|
-| `/implementation/commissioning-templates/` | `/implementation/commissioning-templates/` |
-| `/implementation/commissioning-templates/pre-power-panel/` | `/implementation/commissioning-templates/pre-power-panel/` |
-| `/implementation/commissioning-templates/basic-circuit-polarity/` | `/implementation/commissioning-templates/basic-circuit-polarity/` |
-| `/implementation/commissioning-templates/capacitor-discharge/` | `/implementation/commissioning-templates/capacitor-discharge/` |
-| `/implementation/commissioning-templates/motor-nameplate-overload/` | `/implementation/commissioning-templates/motor-nameplate-overload/` |
-| `/implementation/commissioning-templates/motor-rotation-verification/` | `/implementation/commissioning-templates/motor-rotation-verification/` |
-| `/implementation/commissioning-templates/drive-commissioning/` | `/implementation/commissioning-templates/drive-commissioning/` |
+| `/field-engineering/` | `/implementation/commissioning-templates/` |
+| `/field-engineering/pre-power-panel/` | `/implementation/commissioning-templates/pre-power-panel/` |
+| `/field-engineering/basic-circuit-polarity/` | `/implementation/commissioning-templates/basic-circuit-polarity/` |
+| `/field-engineering/capacitor-discharge/` | `/implementation/commissioning-templates/capacitor-discharge/` |
+| `/field-engineering/motor-nameplate-overload/` | `/implementation/commissioning-templates/motor-nameplate-overload/` |
+| `/field-engineering/motor-rotation-verification/` | `/implementation/commissioning-templates/motor-rotation-verification/` |
+| `/field-engineering/drive-commissioning/` | `/implementation/commissioning-templates/drive-commissioning/` |
 
 Create redirect page at `docs/field-engineering/index.md` (replace existing) using:
 ```html
@@ -117,7 +117,7 @@ Create redirect page at `docs/field-engineering/index.md` (replace existing) usi
 
 ### 3.2 Data Model Update
 
-`docs/_data/field_checklists.yml` — update `url` field for all 6 entries from `/implementation/commissioning-templates/…` to `/implementation/commissioning-templates/…`.
+`docs/_data/field_checklists.yml` — update `url` field for all 6 entries from `/field-engineering/…` to `/implementation/commissioning-templates/…`.
 
 ### 3.3 Template Header Block
 
@@ -164,7 +164,7 @@ Update in this order:
 2. Inject `.template-header` block immediately before `<div class="checklist-body">{{ content }}</div>`
 3. Add checkbox DOM transformation script after `{{ content }}`
 4. Retain existing cross-links block at bottom
-5. Update back-link href from `/implementation/commissioning-templates/` to `/implementation/commissioning-templates/`
+5. Update back-link href from `/field-engineering/` to `/implementation/commissioning-templates/`
 
 ### 3.6 CSS Additions (`docs/assets/css/main.css`)
 
@@ -222,14 +222,14 @@ Update in this order:
 ### 3.7 Sidebar Rename (`docs/_includes/sidebar.html`)
 
 - Change `<summary>Field Engineering</summary>` → `<summary>Commissioning Templates</summary>`
-- Update all 7 `href` values from `/implementation/commissioning-templates/…` to `/implementation/commissioning-templates/…`
+- Update all 7 `href` values from `/field-engineering/…` to `/implementation/commissioning-templates/…`
 - Update all `page.url contains` active-class checks from `'field-engineering'` to `'commissioning-templates'`
 
 ### 3.8 Inbound Link Updates
 
-**`docs/_data/training_catalog.yml`** — 13 URL strings across 11 modules reference `/implementation/commissioning-templates/` in their `related_checklists` field. Update all 13 to `/implementation/commissioning-templates/`.
+**`docs/_data/training_catalog.yml`** — 13 URL strings across 11 modules reference `/field-engineering/` in their `related_checklists` field. Update all 13 to `/implementation/commissioning-templates/`.
 
-**Workflow pages** — 5 pages under `docs/workflows/` contain hardcoded "Related Checklists" links to `/implementation/commissioning-templates/` URLs. Update each href to `/implementation/commissioning-templates/`.
+**Workflow pages** — 5 pages under `docs/workflows/` contain hardcoded "Related Checklists" links to `/field-engineering/` URLs. Update each href to `/implementation/commissioning-templates/`.
 
 **`docs/_layouts/field-checklist.html`** — back-link href (addressed in Section 3.5).
 

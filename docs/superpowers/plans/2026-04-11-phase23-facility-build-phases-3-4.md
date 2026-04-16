@@ -27,7 +27,7 @@
 | `docs/industries/semiconductor/facility/instrumentation/vendor-families/index.md` | `/industries/semiconductor/facility/instrumentation/vendor-families/` |
 | `docs/industries/semiconductor/facility/instrumentation/alarm-strategy/index.md` | `/industries/semiconductor/facility/instrumentation/alarm-strategy/` |
 | `docs/industries/semiconductor/facility/commissioning/index.md` | `/industries/semiconductor/facility/commissioning/` |
-| `docs/industries/semiconductor/facility/crosswalks/index.md` | `/industries/semiconductor/facility/crosswalks/` |
+| `docs/industries/semiconductor/facility/tools/crosswalks/index.md` | `/industries/semiconductor/facility/tools/crosswalks/` |
 
 ### Modified
 | File | Change |
@@ -1130,7 +1130,7 @@ git commit -m "feat: Phase 23 — facility utility system commissioning page"
 ## Task 8: System and Standards Crosswalks page
 
 **Files:**
-- Create: `docs/industries/semiconductor/facility/crosswalks/index.md`
+- Create: `docs/industries/semiconductor/facility/tools/crosswalks/index.md`
 
 - [ ] **Step 1: Create directory**
 
@@ -1140,7 +1140,7 @@ mkdir -p docs/industries/semiconductor/facility/crosswalks
 
 - [ ] **Step 2: Write the page**
 
-Create `docs/industries/semiconductor/facility/crosswalks/index.md`:
+Create `docs/industries/semiconductor/facility/tools/crosswalks/index.md`:
 
 ```markdown
 ---
@@ -1288,7 +1288,7 @@ Standards without corpus pages are referenced in the facility section with enoug
 
 ```bash
 cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
-grep -c "System and Standards Crosswalks" docs/_site/industries/semiconductor/facility/crosswalks/index.html
+grep -c "System and Standards Crosswalks" docs/_site/industries/semiconductor/facility/tools/crosswalks/index.html
 ```
 
 Expected: build clean, grep returns `1`.
@@ -1296,7 +1296,7 @@ Expected: build clean, grep returns `1`.
 - [ ] **Step 4: Commit**
 
 ```bash
-git add docs/industries/semiconductor/facility/crosswalks/
+git add docs/industries/semiconductor/facility/tools/crosswalks/
 git commit -m "feat: Phase 23 — system and standards crosswalks page"
 ```
 
@@ -1339,7 +1339,7 @@ After the `Instrumentation` block (now with children), add:
             - label: "Commissioning"
               url: "/industries/semiconductor/facility/commissioning/"
             - label: "System Crosswalks"
-              url: "/industries/semiconductor/facility/crosswalks/"
+              url: "/industries/semiconductor/facility/tools/crosswalks/"
 ```
 
 - [ ] **Step 3: Update facility index.md — add rows to scope table**

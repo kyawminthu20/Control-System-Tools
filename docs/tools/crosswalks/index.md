@@ -40,6 +40,6 @@ redirect_from:
 ## Source Files
 
 All crosswalk content is ported from:
-- `rag/crosswalks/overlap_matrix/nfpa79_iec60204_overlap.md`
-- `rag/crosswalks/overlap_matrix/ul508a_nec_nfpa79_overlap.md`
-- `rag/crosswalks/overlap_matrix/standards_decision_workflow.md`
+- `control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/nfpa79_iec60204_overlap.md`
+- `control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/ul508a_nec_nfpa79_overlap.md`
+- `control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/standards_decision_workflow.md`

@@ -24,7 +24,7 @@ Restructure the site navigation from the current 5-group file-structure mirror i
 | `/industries/` | Keep as-is | Already logically grouped |
 | `/troubleshooting/` | **NEW** section | Requires new landing page; pulls from existing troubleshooting module content where present |
 | `/training/` | Trimmed — retains structured learning paths; control-systems modules move to `/fundamentals/` where applicable | Structured study/learning paths only |
-| `/tools/` | `/tools/reference-hub/rag-browser/` + `/tools/glossary/` + crosswalks + calculator pages | Interactive and reference tools |
+| `/tools/` | `/tools/rag-browser/` + `/tools/glossary/` + crosswalks + calculator pages | Interactive and reference tools |
 | `/repository/` | **NEW** section | GitHub link, contribution notes |
 
 Every moved page gets `redirect_from:` front matter listing the old URL so bookmarks continue to work.

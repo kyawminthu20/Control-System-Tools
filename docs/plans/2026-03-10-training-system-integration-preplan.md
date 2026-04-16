@@ -22,7 +22,7 @@ The site already has most of the raw pieces needed for the proposed direction:
 - `docs/standards/` — standards reference layer
 - `docs/lifecycle/` — engineering process/lifecycle layer
 - `docs/scenarios/` — applied project examples
-- `docs/crosswalks/` — standard-to-standard routing and decision aids
+- `docs/tools/crosswalks/` — standard-to-standard routing and decision aids
 - `control-standards/rag/design_framework/` — engineering workflows, decision trees, and review content not yet fully surfaced on the site
 - `control-standards/rag/commissioning_checklists/` — field-useful checklist content not yet surfaced as a dedicated site section
 - `control-standards/rag/standards_intelligence/reference_models/` — machine architecture and reference-model content that could anchor higher-level training routes

@@ -4,7 +4,7 @@
 
 **Goal:** Promote transcript-derived electrical knowledge into the existing RAG layers using clean rewrites with correct metadata. No new parallel layers.
 
-**Architecture:** All content routes into `training_modules/`, `design_framework/`, `commissioning_checklists/checklists/`, or `standards_intelligence/crosswalks/overlap_notes/`. EV motor files are held as WIP.
+**Architecture:** All content routes into `training_modules/`, `design_framework/`, `commissioning_checklists/checklists/`, or `standards_intelligence/tools/crosswalks/overlap_notes/`. EV motor files are held as WIP.
 
 **Design doc:** `docs/plans/2026-03-08-electrical-intelligence-integration-design.md`
 
@@ -141,7 +141,7 @@ All files exist at `control-standards/rag/commissioning_checklists/checklists/`:
 
 ### Phase 6 — Crosswalk gap fills
 
-Both files exist at `control-standards/rag/standards_intelligence/crosswalks/overlap_notes/`:
+Both files exist at `control-standards/rag/standards_intelligence/tools/crosswalks/overlap_notes/`:
 
 - [x] `overlap__motors_drives.md`
 - [x] `overlap_nfpa79_iec60204__motors_drives.md`
@@ -201,7 +201,7 @@ No new parallel layer created.
 #### commissioning_checklists/checklists/ (expanded)
 - 6 files: motor, drive, circuit, and panel commissioning
 
-#### standards_intelligence/crosswalks/overlap_notes/ (gap fill)
+#### standards_intelligence/tools/crosswalks/overlap_notes/ (gap fill)
 - overlap__motors_drives.md
 - overlap_nfpa79_iec60204__motors_drives.md
 ```

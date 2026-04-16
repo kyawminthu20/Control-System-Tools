@@ -6,7 +6,7 @@ breadcrumb:
   - name: "Crosswalks"
     url: "/tools/crosswalks/"
   - name: "NFPA 79 ↔ IEC 60204-1"
-repo_path: "control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/nfpa79_iec60204_overlap.md"
+repo_path: "control-standards/rag/standards_intelligence/tools/crosswalks/overlap_matrix/nfpa79_iec60204_overlap.md"
 related_standards:
   - name: "NFPA 79"
     url: "/standards/us-electrical/nfpa-79/"
@@ -20,7 +20,7 @@ redirect_from:
 <div class="page-header">
   <span class="page-header__label">Crosswalk</span>
   <h1>NFPA 79:2024 ↔ IEC 60204-1:2018</h1>
-  <p>Equivalency matrix for dual-market machinery (US + EU). Source: <code>rag/crosswalks/overlap_matrix/nfpa79_iec60204_overlap.md</code></p>
+  <p>Equivalency matrix for dual-market machinery (US + EU). Source: <code>rag/tools/crosswalks/overlap_matrix/nfpa79_iec60204_overlap.md</code></p>
 </div>
 
 ## Purpose

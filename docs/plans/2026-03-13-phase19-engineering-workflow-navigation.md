@@ -56,7 +56,7 @@ Phase 19 plans around these section destinations:
 - `docs/engineering-workflow/index.md`
   - Landing page for engineer-intent routing
   - Groups lifecycle stages, practical workflows, and field checklists by task
-- `docs/reference/index.md`
+- `docs/tools/reference-hub/index.md`
   - Landing page for fast-lookup content
   - Groups glossary, software stack, RAG browser, crosswalks, and future equations / architecture references
 - `docs/field-engineering/index.md`
@@ -151,7 +151,7 @@ Group quick-reference and meta/reference content:
 1. Add `docs/_data/navigation.yml` with the full Phase 19 sidebar hierarchy.
 2. Refactor `docs/_includes/sidebar.html` to render from navigation data.
 3. Add `docs/engineering-workflow/index.md` as the new workflow-first hub.
-4. Add `docs/reference/index.md` as the new fast-lookup hub.
+4. Add `docs/tools/reference-hub/index.md` as the new fast-lookup hub.
 5. Wire `field-engineering/` and `reference/` into the new sidebar once Phase 18 Track B/C pages exist.
 6. Remove Scenarios, Crosswalks, and Workflows as top-level sidebar peers by routing them through the new grouped navigation.
 7. Preserve all direct URLs so legacy bookmarks and internal links continue to work unchanged.
@@ -180,4 +180,3 @@ Group quick-reference and meta/reference content:
 - Creating a full technologies section
 - Creating a broad tools/calculators section
 - Building a general troubleshooting section beyond currently surfaced content
-

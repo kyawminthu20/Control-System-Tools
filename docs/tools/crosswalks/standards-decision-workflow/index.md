@@ -247,4 +247,4 @@ The following traces a US-market conveyor through the full workflow.
 
 ## Routing Source
 
-This decision workflow is derived from `rag/routing/standards_applicability.md` and `rag/crosswalks/overlap_matrix/standards_decision_workflow.md`. See also `rag/standards_intelligence/_standards_map.md` for the full applicability matrix.
+This decision workflow is derived from `rag/routing/standards_applicability.md` and `rag/tools/crosswalks/overlap_matrix/standards_decision_workflow.md`. See also `rag/standards_intelligence/_standards_map.md` for the full applicability matrix.

@@ -6,7 +6,7 @@ breadcrumb:
   - name: "Crosswalks"
     url: "/tools/crosswalks/"
   - name: "UL 508A / NEC / NFPA 79"
-repo_path: "control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/ul508a_nec_nfpa79_overlap.md"
+repo_path: "control-standards/rag/standards_intelligence/tools/crosswalks/overlap_matrix/ul508a_nec_nfpa79_overlap.md"
 related_standards:
   - name: "NEC"
     url: "/standards/us-electrical/nec/"
@@ -22,7 +22,7 @@ redirect_from:
 <div class="page-header">
   <span class="page-header__label">Crosswalk</span>
   <h1>UL 508A / NEC / NFPA 79 — US Standards Overlap</h1>
-  <p>Topic-by-topic overlap for US industrial control panel design. Source: <code>rag/crosswalks/overlap_matrix/ul508a_nec_nfpa79_overlap.md</code></p>
+  <p>Topic-by-topic overlap for US industrial control panel design. Source: <code>rag/tools/crosswalks/overlap_matrix/ul508a_nec_nfpa79_overlap.md</code></p>
 </div>
 
 ## How the Three Standards Relate

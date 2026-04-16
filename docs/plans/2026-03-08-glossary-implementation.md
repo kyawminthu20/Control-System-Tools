@@ -4,7 +4,7 @@
 
 **Goal:** Add a cross-linked glossary encyclopedia at `/tools/glossary/` covering ~30 key terms (SIL, PL, SCCR, AHJ, NEC, NFPA, etc.) with domain badges, standard page links, lifecycle stage links, and See Also cross-links.
 
-**Architecture:** Term data lives in `docs/_data/glossary.yml` (one YAML block per term). The page `docs/glossary/index.md` renders all terms via Liquid — sorted alphabetically, grouped under A–Z letter anchors with a jump strip at the top. Each term block links to standard pages, lifecycle stages, and related terms within the glossary.
+**Architecture:** Term data lives in `docs/_data/glossary.yml` (one YAML block per term). The page `docs/tools/glossary/index.md` renders all terms via Liquid — sorted alphabetically, grouped under A–Z letter anchors with a jump strip at the top. Each term block links to standard pages, lifecycle stages, and related terms within the glossary.
 
 **Tech Stack:** Jekyll 4.2 · Liquid templating · vanilla CSS · `docs/_data/` pattern (same as any existing `_data/` files in the site)
 
@@ -640,14 +640,14 @@ git commit -m "feat(glossary): add glossary.yml data file with 30 seed terms"
 
 ---
 
-## Task 2: Create `docs/glossary/index.md`
+## Task 2: Create `docs/tools/glossary/index.md`
 
 **Files:**
-- Create: `docs/glossary/index.md`
+- Create: `docs/tools/glossary/index.md`
 
 **Step 1: Create the glossary page**
 
-Create `docs/glossary/index.md` with the following content:
+Create `docs/tools/glossary/index.md` with the following content:
 
 ````markdown
 ---
@@ -726,7 +726,7 @@ Expected: `done in X seconds.` with no errors. Page count should increase by 1 (
 **Step 3: Commit**
 
 ```bash
-git add docs/glossary/index.md
+git add docs/tools/glossary/index.md
 git commit -m "feat(glossary): add glossary page with A-Z navigation and cross-links"
 ```
 
@@ -954,7 +954,7 @@ Add the following section after the Phase 5 scope block:
 across multiple pages with no single reference point. A cross-linked glossary closes this gap.
 
 - [x] `docs/_data/glossary.yml` — 30 seed terms across Safety, Electrical, Standards Bodies, Regulatory domains
-- [x] `docs/glossary/index.md` — rendered page with A-Z anchor strip, domain badges, standard links, lifecycle links, See Also cross-links
+- [x] `docs/tools/glossary/index.md` — rendered page with A-Z anchor strip, domain badges, standard links, lifecycle links, See Also cross-links
 - [x] `docs/assets/css/main.css` — glossary entry card styles and domain badge variants
 - [x] `docs/_includes/sidebar.html` — Glossary added to Reference section
 - [x] Jekyll build clean — 53 pages
@@ -971,7 +971,7 @@ Add after the most recent change log entry:
 **Status:** Complete
 
 - Added `docs/_data/glossary.yml` with 30 seed terms (SIL, PL, SL, SCCR, AHJ, HFT, SFF, MTTFd, DC, Category, PFH, PLC, SIS, SIF, LOPA, E-stop, AFC, AIC, VFD, SPD, NEC, NFPA, UL, IEC, ISO, SEMI, AHJ, CE, OSHA)
-- Added `docs/glossary/index.md` — A-Z anchor navigation, domain badges, cross-links to standard pages, lifecycle stages, and related terms
+- Added `docs/tools/glossary/index.md` — A-Z anchor navigation, domain badges, cross-links to standard pages, lifecycle stages, and related terms
 - Added glossary card CSS and domain badge color variants to `main.css`
 - Added Glossary to Reference section in sidebar
 - Build: 53 pages, clean

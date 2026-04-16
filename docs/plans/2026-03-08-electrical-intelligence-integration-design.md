@@ -16,7 +16,7 @@ All content lands in one of four existing layers:
 1. `control-standards/rag/training_modules/`
 2. `control-standards/rag/design_framework/`
 3. `control-standards/rag/commissioning_checklists/checklists/`
-4. `control-standards/rag/standards_intelligence/crosswalks/overlap_notes/`
+4. `control-standards/rag/standards_intelligence/tools/crosswalks/overlap_notes/`
 
 ---
 
@@ -112,7 +112,7 @@ Motors + practical circuit sources → field verification checklists:
 - `pre_power_panel_and_incoming_supply_check.md`
 - `README.md`, `_index.yaml`
 
-### `standards_intelligence/crosswalks/overlap_notes/`
+### `standards_intelligence/tools/crosswalks/overlap_notes/`
 
 Motors source → compliance crosswalk gap fills:
 

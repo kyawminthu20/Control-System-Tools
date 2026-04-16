@@ -60,7 +60,7 @@ description: "Navigate industrial automation standards families, lifecycle stage
     <span class="card__label">Crosswalks</span>
     <span class="card__title">NFPA 79 ↔ IEC 60204-1 · UL 508A / NEC overlap</span>
     <p class="card__desc">Side-by-side comparison tables mapping clause equivalencies between US and international standards.</p>
-    <div class="card__path">rag/crosswalks/overlap_matrix/</div>
+    <div class="card__path">control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/</div>
     <a href="{{ '/tools/crosswalks/' | relative_url }}" class="card__link">View crosswalks &rarr;</a>
   </div>
 

@@ -629,9 +629,9 @@ git commit -m "feat: add lunr.js inline search dropdown to topnav"
 ### Task 5: Crosswalk comparison selector page
 
 **Files:**
-- Create: `docs/crosswalks/compare/index.md`
+- Create: `docs/tools/crosswalks/compare/index.md`
 - Modify: `docs/assets/css/main.css` (append comparison styles)
-- Modify: `docs/crosswalks/index.md` (add compare link)
+- Modify: `docs/tools/crosswalks/index.md` (add compare link)
 
 **Step 1: Append comparison selector styles to `main.css`**
 
@@ -685,7 +685,7 @@ Add at the end of `docs/assets/css/main.css`:
 }
 ```
 
-**Step 2: Create `docs/crosswalks/compare/index.md`**
+**Step 2: Create `docs/tools/crosswalks/compare/index.md`**
 
 Create the file. The inline `<script>` block uses only `textContent` and property access — no dynamic HTML injection:
 
@@ -851,9 +851,9 @@ These three standards form the US electrical compliance stack. They overlap but 
 </script>
 ```
 
-**Step 3: Add compare link to `docs/crosswalks/index.md`**
+**Step 3: Add compare link to `docs/tools/crosswalks/index.md`**
 
-Open `docs/crosswalks/index.md` and find the list of crosswalk page links. Add the following line to the list:
+Open `docs/tools/crosswalks/index.md` and find the list of crosswalk page links. Add the following line to the list:
 
 ```markdown
 - [Standards Comparison Tool](/tools/crosswalks/compare/) — select any two standards to view their overlap matrix
@@ -867,7 +867,7 @@ cd "/Users/kyawminthu/Dev/Control System Tools/docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll serve --detach
 ```
 
-Open `http://127.0.0.1:4000/Control-System-Tools/crosswalks/compare/`.
+Open `http://127.0.0.1:4000/Control-System-Tools/tools/crosswalks/compare/`.
 Select "NFPA 79" and "IEC 60204-1" — equivalency table should appear.
 Select "ISO 13849-1" and "IEC 61511" — "No documented crosswalk" message should appear.
 Kill server: `kill $(lsof -ti :4000)`
@@ -876,7 +876,7 @@ Kill server: `kill $(lsof -ti :4000)`
 
 ```bash
 cd "/Users/kyawminthu/Dev/Control System Tools"
-git add docs/crosswalks/compare/index.md docs/crosswalks/index.md docs/assets/css/main.css
+git add docs/tools/crosswalks/compare/index.md docs/tools/crosswalks/index.md docs/assets/css/main.css
 git commit -m "feat: add crosswalk comparison selector page with NFPA79/IEC60204 and US electrical pairs"
 ```
 
@@ -937,7 +937,7 @@ git push
 | `docs/_layouts/default.html` | 3 — lunr.js CDN |
 | `docs/_includes/topnav.html` | 4 — search input |
 | `docs/assets/data/search.json` | 3 — Jekyll search index |
-| `docs/crosswalks/compare/index.md` | 5 — comparison selector page |
-| `docs/crosswalks/index.md` | 5 — add compare link |
+| `docs/tools/crosswalks/compare/index.md` | 5 — comparison selector page |
+| `docs/tools/crosswalks/index.md` | 5 — add compare link |
 | `project_state/project_state.md` | 6 — phase update |
 | `project_state/change_log.md` | 6 — change log |

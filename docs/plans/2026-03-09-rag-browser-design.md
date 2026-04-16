@@ -70,7 +70,7 @@ Runtime (browser)
 - Includes `rag-browser.js`
 - Right context panel: unchanged (kept for consistency)
 
-### 3. `docs/rag-browser/index.md`
+### 3. `docs/tools/rag-browser/index.md`
 
 ```yaml
 ---
@@ -110,6 +110,6 @@ title: RAG Files
 | `tools/generate_rag_tree.py` | Create |
 | `docs/_data/rag_tree.json` | Generate (via script) |
 | `docs/_layouts/rag-browser.html` | Create |
-| `docs/rag-browser/index.md` | Create |
+| `docs/tools/rag-browser/index.md` | Create |
 | `docs/assets/js/rag-browser.js` | Create |
 | `docs/_includes/sidebar.html` (or equivalent) | Edit — add RAG Files link |

@@ -1,5 +1,7 @@
 # IEC 62443-4-2 — Component Security Requirements
 
+**AI_READ_ACCESS: ALLOWED**
+
 ## Standard Reference
 
 | Field | Value |

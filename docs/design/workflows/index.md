@@ -3,7 +3,7 @@ layout: default
 title: Engineering Workflows
 description: Structured workflows for motor selection, drive commissioning, troubleshooting, and electrical review.
 redirect_from:
-  - /design/workflows/
+  - /workflows/
   - /workflows/index.html
 ---
 

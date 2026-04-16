@@ -4,7 +4,7 @@
 
 **Goal:** Implement all 8 recommendations from `control-standards/archive/superseded_designs/work_design/site_source_notes/decision_workflow.md` into the live site page.
 
-**Architecture:** Single-file content update to `docs/crosswalks/standards-decision-workflow/index.md`. No new files, no layout changes, no config changes. All additions are Markdown + Mermaid compatible with the existing Jekyll site.
+**Architecture:** Single-file content update to `docs/tools/crosswalks/standards-decision-workflow/index.md`. No new files, no layout changes, no config changes. All additions are Markdown + Mermaid compatible with the existing Jekyll site.
 
 **Tech Stack:** Jekyll 4.2, Mermaid.js (CDN, neutral theme), vanilla HTML/CSS via existing layout.
 
@@ -13,7 +13,7 @@
 ### Task 1: Add front-matter metadata (edition refs + last reviewed)
 
 **Files:**
-- Modify: `docs/crosswalks/standards-decision-workflow/index.md` (front matter, lines 1–17)
+- Modify: `docs/tools/crosswalks/standards-decision-workflow/index.md` (front matter, lines 1–17)
 
 **Step 1: Add `last_reviewed` and `standards_editions` to front matter**
 
@@ -57,7 +57,7 @@ Expected: `done in X seconds` with no errors.
 **Step 3: Commit**
 
 ```bash
-git add docs/crosswalks/standards-decision-workflow/index.md
+git add docs/tools/crosswalks/standards-decision-workflow/index.md
 git commit -m "feat(workflow): add last_reviewed and standards editions to front matter"
 ```
 
@@ -66,7 +66,7 @@ git commit -m "feat(workflow): add last_reviewed and standards editions to front
 ### Task 2: Add purpose statement section
 
 **Files:**
-- Modify: `docs/crosswalks/standards-decision-workflow/index.md`
+- Modify: `docs/tools/crosswalks/standards-decision-workflow/index.md`
 
 **Step 1: Insert purpose statement block immediately after the `<div class="page-header">` closing `</div>` tag**
 
@@ -105,7 +105,7 @@ cd docs && bundle exec jekyll build 2>&1 | tail -5
 **Step 3: Commit**
 
 ```bash
-git add docs/crosswalks/standards-decision-workflow/index.md
+git add docs/tools/crosswalks/standards-decision-workflow/index.md
 git commit -m "feat(workflow): add purpose statement with audience and scope"
 ```
 
@@ -114,7 +114,7 @@ git commit -m "feat(workflow): add purpose statement with audience and scope"
 ### Task 3: Add lifecycle Mermaid diagram
 
 **Files:**
-- Modify: `docs/crosswalks/standards-decision-workflow/index.md`
+- Modify: `docs/tools/crosswalks/standards-decision-workflow/index.md`
 
 **Step 1: Add lifecycle diagram section after the existing Quick Decision Tree section and before Step 1**
 
@@ -150,12 +150,12 @@ flowchart TD
 cd docs && bundle exec jekyll build 2>&1 | tail -5
 ```
 
-Open `docs/_site/crosswalks/standards-decision-workflow/index.html` and confirm the `<pre class="mermaid">` block is present.
+Open `docs/_site/tools/crosswalks/standards-decision-workflow/index.html` and confirm the `<pre class="mermaid">` block is present.
 
 **Step 3: Commit**
 
 ```bash
-git add docs/crosswalks/standards-decision-workflow/index.md
+git add docs/tools/crosswalks/standards-decision-workflow/index.md
 git commit -m "feat(workflow): add sequential lifecycle Mermaid diagram"
 ```
 
@@ -164,7 +164,7 @@ git commit -m "feat(workflow): add sequential lifecycle Mermaid diagram"
 ### Task 4: Add decision questions to Steps 1–3
 
 **Files:**
-- Modify: `docs/crosswalks/standards-decision-workflow/index.md`
+- Modify: `docs/tools/crosswalks/standards-decision-workflow/index.md`
 
 **Step 1: Prepend a "Key question" block to Step 1 (Identify Your Market)**
 
@@ -207,7 +207,7 @@ cd docs && bundle exec jekyll build 2>&1 | tail -5
 **Step 5: Commit**
 
 ```bash
-git add docs/crosswalks/standards-decision-workflow/index.md
+git add docs/tools/crosswalks/standards-decision-workflow/index.md
 git commit -m "feat(workflow): add decision questions and outputs to steps 1-3"
 ```
 
@@ -216,7 +216,7 @@ git commit -m "feat(workflow): add decision questions and outputs to steps 1-3"
 ### Task 5: Add NFPA 79 / NEC / UL 508A boundary clarification
 
 **Files:**
-- Modify: `docs/crosswalks/standards-decision-workflow/index.md`
+- Modify: `docs/tools/crosswalks/standards-decision-workflow/index.md`
 
 **Step 1: Add boundary clarification section after Step 3 and before Step 4**
 
@@ -245,7 +245,7 @@ cd docs && bundle exec jekyll build 2>&1 | tail -5
 **Step 3: Commit**
 
 ```bash
-git add docs/crosswalks/standards-decision-workflow/index.md
+git add docs/tools/crosswalks/standards-decision-workflow/index.md
 git commit -m "feat(workflow): add NFPA 79 / NEC / UL 508A boundary clarification table"
 ```
 
@@ -254,7 +254,7 @@ git commit -m "feat(workflow): add NFPA 79 / NEC / UL 508A boundary clarificatio
 ### Task 6: Add Common Engineering Mistakes section
 
 **Files:**
-- Modify: `docs/crosswalks/standards-decision-workflow/index.md`
+- Modify: `docs/tools/crosswalks/standards-decision-workflow/index.md`
 
 **Step 1: Add after the Standard Scope Boundaries section**
 
@@ -280,7 +280,7 @@ cd docs && bundle exec jekyll build 2>&1 | tail -5
 **Step 3: Commit**
 
 ```bash
-git add docs/crosswalks/standards-decision-workflow/index.md
+git add docs/tools/crosswalks/standards-decision-workflow/index.md
 git commit -m "feat(workflow): add common engineering mistakes section"
 ```
 
@@ -289,7 +289,7 @@ git commit -m "feat(workflow): add common engineering mistakes section"
 ### Task 7: Add Typical Compliance Stack summary
 
 **Files:**
-- Modify: `docs/crosswalks/standards-decision-workflow/index.md`
+- Modify: `docs/tools/crosswalks/standards-decision-workflow/index.md`
 
 **Step 1: Add after Common Engineering Mistakes**
 
@@ -321,7 +321,7 @@ cd docs && bundle exec jekyll build 2>&1 | tail -5
 **Step 3: Commit**
 
 ```bash
-git add docs/crosswalks/standards-decision-workflow/index.md
+git add docs/tools/crosswalks/standards-decision-workflow/index.md
 git commit -m "feat(workflow): add typical machine compliance stack table with editions"
 ```
 
@@ -330,7 +330,7 @@ git commit -m "feat(workflow): add typical machine compliance stack table with e
 ### Task 8: Add practical example (conveyor system)
 
 **Files:**
-- Modify: `docs/crosswalks/standards-decision-workflow/index.md`
+- Modify: `docs/tools/crosswalks/standards-decision-workflow/index.md`
 
 **Step 1: Add after Typical Compliance Stack and before the Routing Source note**
 
@@ -370,7 +370,7 @@ Expected: clean build, page count ≥ 48.
 **Step 3: Final commit**
 
 ```bash
-git add docs/crosswalks/standards-decision-workflow/index.md
+git add docs/tools/crosswalks/standards-decision-workflow/index.md
 git commit -m "feat(workflow): add conveyor worked example tracing all 8 standards"
 ```
 
@@ -384,7 +384,7 @@ After all tasks complete:
 cd docs && bundle exec jekyll build 2>&1 | grep -E "done|error|warn"
 ```
 
-Check `docs/_site/crosswalks/standards-decision-workflow/index.html` contains:
+Check `docs/_site/tools/crosswalks/standards-decision-workflow/index.html` contains:
 - `Purpose` section
 - Two `<pre class="mermaid">` blocks
 - `Common Engineering Mistakes`
