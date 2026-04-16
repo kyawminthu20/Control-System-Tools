@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-15 (Batch 8)
+**Last Updated:** 2026-04-15 (Batch 9)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,18 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-15 — Phase 26 Batch 9 COMPLETE: Repository landing + About relocation
+
+**Type:** Site structure / New section + page move
+**Status:** Complete
+
+- Added `docs/repository/index.md` — Repository and Project Info landing with the GitHub link, a build-stack summary (Jekyll, Mermaid, Cytoscape, jekyll-redirect-from, internal link checker), a content-source-of-truth table pointing at `project_state/`, and a contributing note.
+- Moved `docs/about/index.md` to `docs/repository/about/index.md` with `redirect_from:` for `/about/` + `/about/index.html`. Breadcrumb retargeted to `Repository › About`.
+- `docs/_includes/topnav.html` — top-nav "About" link updated to `/repository/about/`.
+- `docs/_data/navigation.yml` — dropped the `/about/` prefix + About child from the Reference group, added a new Repository top-level group (children: About / Trust Boundary).
+- Empty `docs/about/` directory removed.
+- Jekyll build clean (263 HTML files); internal link check exit 0.
 
 ## 2026-04-15 — Phase 26 Batch 8 COMPLETE: Troubleshooting section
 

@@ -172,7 +172,6 @@
     - "/software-stack/"
     - "/tools/rag-browser/"
     - "/tools/crosswalks/"
-    - "/about/"
   children:
     - label: "Glossary"
       url: "/tools/glossary/"
@@ -182,5 +181,11 @@
       url: "/software-stack/"
     - label: "RAG Files"
       url: "/tools/rag-browser/"
+
+- label: "Repository"
+  url: "/repository/"
+  match_prefixes:
+    - "/repository/"
+  children:
     - label: "About / Trust Boundary"
-      url: "/about/"
+      url: "/repository/about/"

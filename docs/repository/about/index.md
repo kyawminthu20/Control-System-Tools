@@ -2,7 +2,12 @@
 layout: default
 title: "About — Trust Boundary and Disclaimer"
 description: "About the Control System Standards Atlas: purpose, trust boundary, and content limitations."
+redirect_from:
+  - /about/
+  - /about/index.html
 breadcrumb:
+  - name: "Repository"
+    url: "/repository/"
   - name: "About"
 ---
 

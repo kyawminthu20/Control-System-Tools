@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-04-15
 **Status:** Active
-**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batches 1–8 complete)
-**Next Phase:** Phase 26 Batch 9 — Repository landing + /about/ relocation (plan Task 12)
+**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batches 1–9 complete)
+**Next Phase:** Phase 26 Batch 10 — Navigation.yml rewrite to 10-group structure (plan Task 13)
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,14 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+Phase 26 Batch 9 (Task 12) is complete:
+- Created `docs/repository/index.md` — Repository and Project Info landing. Lists the GitHub URL, a link to the moved About page, a "How This Site Is Built" block, a "Content Source of Truth" table keyed off `project_state/`, and a short contributing note.
+- Moved `docs/about/index.md` → `docs/repository/about/index.md`, with `redirect_from: [/about/, /about/index.html]` so old URLs continue to resolve. Breadcrumb updated to `Repository › About`.
+- Updated the top-nav `About` link in `docs/_includes/topnav.html` to point at `/repository/about/` (active-state logic updated too).
+- Updated `docs/_data/navigation.yml` — removed the `/about/` match prefix + About child from the Reference group, and added a new Repository top-level group (children: About / Trust Boundary).
+- Removed the now-empty `docs/about/` directory.
+- Jekyll build clean (263 HTML files, +2 from Batch 8); internal link check exit 0.
 
 Phase 26 Batch 8 (Task 11) is complete:
 - New `/troubleshooting/` section created with two pages:
