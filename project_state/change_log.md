@@ -18,69 +18,6 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
-## 2026-04-15 — Phase 26 Batch 5: Verification Group Migration + Redirect Backfill (Task 8)
-
-- Verification group migration complete: 11 pages moved from `/lifecycle/...` to either `/verification/lifecycle/...` (5 analysis/design stages), `/verification/...` top-level (6 verification-gate stages), with correct `redirect_from:` on each moved file
-- Internal cross-links rewritten across 35 source files (includes, data files, glossary, industry pages, implementation/lifecycle-*, design hub)
-- `docs/_data/lifecycle_stage_urls.yml` added — slug-to-URL lookup consumed by `_includes/context-panel.html` and `docs/glossary/index.md` to resolve stage URLs now that stages are split across three top-level groups
-- Empty `docs/lifecycle/` tree removed
-- **Redirect audit:** discovered Batches 1–4 had written `redirect_from:` entries pointing at the NEW URL (self-redirect, useless) instead of the OLD URL. Corrected 41 files via script driven by the authoritative `phase26_migration_map.yml`; 7 additional files (the 5 group hub pages plus `pid-drone-control` and `motor-selection`) fixed manually
-- Internal link check: 0 broken (baseline before this session was 768 broken, masked because prior batches had never built + validated against the plugin-generated redirect stubs)
-- Jekyll build: clean, 249 HTML files
-
-## 2026-04-14 — Phase 26 Batch 4: Implementation Group Migration (Task 7)
-
-**Type:** Refactor / Navigation Restructure
-**Status:** Complete
-
-- Migrated 23 pages to `docs/implementation/`:
-  - `commissioning-templates/` (landing + 6 sub-pages) → `implementation/commissioning-templates/`
-  - `scenarios/` (landing + 9 sub-pages) → `implementation/scenarios/`
-  - `workflows/servo-commissioning/` → `implementation/servo-commissioning/`
-  - `workflows/vfd-commissioning/` → `implementation/vfd-commissioning/`
-  - `lifecycle/build/`, `lifecycle/pre-commissioning/`, `lifecycle/installation/`, `lifecycle/commissioning/` → `implementation/lifecycle-{name}/`
-- `redirect_from:` (bare + `/index.html`) added to all 23 files preserving old URLs
-- Internal cross-links inside moved pages updated to new `/implementation/...` paths
-- Empty source directories removed
-- Jekyll build: clean
-- Commit: f64372e
-
-## 2026-04-14 — Phase 26 Batch 1: Foundation (Tasks 1–4)
-
-**Type:** Tooling / Infrastructure
-**Status:** Complete
-
-- Installed `jekyll-redirect-from` 0.16.0 plugin (Gemfile + _config.yml + Gemfile.lock)
-- Created `tools/check_internal_links.py` — stdlib-only internal link checker (walks `_site/`, exits 0 clean / 1 broken)
-- Baseline audit fixed 16 pre-existing broken links across 11 source files:
-  - `docs/_data/glossary.yml`: `standards/machinery/iso-12100/` → `standards/functional-safety/iso-12100/`
-  - `docs/industries/semiconductor/facility/crosswalks/index.md`: fixed iso-13849, iec-60204, and nfpa-79 paths
-  - `docs/industries/water-wastewater/{index,distribution-scada,instrumentation,intake-pumping,treatment-discharge}/index.md`: replaced non-existent `lifecycle/stage-XX` links with real lifecycle pages
-  - `docs/lifecycle/build/index.md`: removed non-existent `standards/plc-programming/iec-61131-3/` front matter entry
-  - `docs/training/fundamentals/earthing-systems-iec/index.md` and `docs/workflows/vfd-commissioning/index.md`: `grounding-bonding-control-panels` → `grounding-bonding-panels`
-  - `docs/workflows/motor-selection/index.md`: `branch-circuits-feeders-motor-loads` → `branch-circuits-vs-feeders`; `nfpa79` → `nfpa-79`
-- Created `docs/_data/phase26_migration_map.yml` — authoritative old→new URL registry for all 6 migration groups
-- Jekyll build clean: 166 files, zero errors, zero broken internal links
-
-## 2026-04-14 — Phase 25 COMPLETE: Water/Wastewater Multi-Page Section
-
-**Type:** Content / Industry Reference
-**Status:** Complete
-
-- Added 8 RAG files to `control-standards/rag/design_framework/water_wastewater/` with `_index.yaml`
-- Added 8 Jekyll pages under `docs/industries/water-wastewater/`:
-  - Overview + standards selection flowchart
-  - Intake & Raw Water Pumping (pump station architecture, start permissive chain)
-  - Filtration & Clarification (filter state machine, turbidity bypass logic)
-  - Chemical Dosing (flow-paced Cl₂, OT shutdown, chemical feed interlock)
-  - Distribution SCADA (zone architecture, IEC 62443 security zones, fallback logic)
-  - Equalization & Neutralization (EQ basin state machine, pH neutralization loop)
-  - Treatment & Discharge (treatment train flow, permit limit trip logic)
-  - Instrumentation Reference (analyzer loop, instrument selection decision tree)
-- Added Water/Wastewater navigation entry to `docs/_data/navigation.yml`
-- ~20 Mermaid diagrams total; covers IEC 61511, IEC 62443, ISA-18.2, EPA SDWA/CWA, AWWA, NFPA 820
-- Jekyll build: clean, ~166 pages
-
 ## 2026-04-13 — Phase 24 COMPLETE: Training visual upgrades
 
 **Type:** Content / Training Enhancement
@@ -141,6 +78,7 @@ Keep entries concise and oriented to what future work needs to know.
 ## 2026-04-11 — Phase 22 Complete: Semiconductor Facility Reference (10 pages)
 
 Second slice — four additional pages:
+
 - HVAC and Cleanroom (room pressure cascade, ISO 14644, particle monitoring)
 - Bulk Chemical Distribution (storage, transfer sequencing, containment, SEMI F39/F57)
 - Safety and Shutdown Architecture (4-layer shutdown model, cause-and-effect, SIL integration)
@@ -234,6 +172,7 @@ Second slice — four additional pages:
 - Jekyll build: clean, 0.446 s, **129 pages** (matches spec target)
 
 ### 2026-03-13 — FE Study Tools: `.doc` File Support
+
 - feat(fe_study): `.doc` file support — LibreOffice headless conversion, `howto_doc` family (P2 priority), cached under `_converted/`
 - Conversion: LibreOffice headless (`soffice --headless --convert-to docx`), cached in `_converted/`
 - Covers all `.doc` files under `planning/FE_Study/How to/`
@@ -403,34 +342,41 @@ No new parallel layer created. All content routes into existing `training_module
 Design doc: `docs/plans/2026-03-08-electrical-intelligence-integration-design.md`
 
 #### training_modules/fundamentals/ (new)
+
 - 7 files: `electrical_quantities_and_circuit_language`, `series_parallel_and_divider_methods`,
   `kirchhoff_laws_and_systematic_analysis`, `equivalent_circuit_methods`,
   `electrical_equations_reference`, `passive_components_resistors_capacitors`,
   `diodes_transistors_and_switching_basics`
 
 #### training_modules/electrical_machines/ (expanded)
+
 - 3 core motor files + 6 additional: `vfd_fundamentals`, `servo_drive_fundamentals`,
   `ac_vs_dc_motor_comparison`, `motor_family_comparison`,
   `brushless_dc_ev_and_drone_motor_comparison`, `vfd_and_servo_architecture_diagrams`
 
 #### training_modules/nec_application/ (new)
+
 - 3 files: `nec_code_reading_fundamentals`, `working_space_and_table_navigation`,
   `motor_and_panel_code_application`
 
 #### design_framework/electrical_review/ (new)
+
 - 4 files: `ohms_law_and_power_check_workflow`, `basic_resistive_network_review`,
   `component_selection_basics`, `simple_signal_and_interface_circuit_notes`
 
 #### design_framework/motor_systems/ (expanded)
+
 - 13 total files including: selection workflow, nameplate checklist, star-delta notes,
   VFD integration review, commissioning workflows, troubleshooting decision tree,
   comparison matrices, integrated-drive architecture notes
 
 #### commissioning_checklists/checklists/ (expanded)
+
 - 6 files: motor rotation/overload, nameplate/overload setting, circuit polarity,
   capacitor discharge, drive commissioning, pre-power panel check
 
 #### standards_intelligence/crosswalks/overlap_notes/ (gap fill)
+
 - `overlap__motors_drives.md`
 - `overlap_nfpa79_iec60204__motors_drives.md`
 
@@ -585,16 +531,19 @@ Design doc: `docs/plans/2026-03-08-electrical-intelligence-integration-design.md
 ### 2026-03-08 — Phase 10 Complete: IEC 60079 + SEMI Corpus Gap-Fill
 
 #### IEC 60079 (Hazardous Area)
+
 - 6 new RAG files: Parts 0, 1, 10-1, 11, 14, 17
-- _index.yaml indexing all 6 parts
+- \_index.yaml indexing all 6 parts
 - 2 site pages: hazardous-area family landing + IEC 60079 standard page
 
 #### SEMI S2/S8/S14 (Semiconductor Equipment Safety)
+
 - 3 new RAG files: S2 (equipment safety), S8 (ergonomics), S14 (fire risk)
-- _index.yaml indexing all 3 standards
+- \_index.yaml indexing all 3 standards
 - 2 site pages: semiconductor family landing + SEMI S2/S8/S14 detail page
 
 #### Site updates
+
 - docs/standards/index.md: added Hazardous Area + Semiconductor sections
 - docs/scenarios/semiconductor-equipment/index.md: added SEMI/IEC 60079 links, upgraded badges
 
@@ -642,7 +591,7 @@ Design doc: `docs/plans/2026-03-08-electrical-intelligence-integration-design.md
 - Added Art 504 (intrinsically safe systems) — IS design rules, zener barriers, galvanic isolators, FISCO model
 - Added Art 505 (Zone 0/1/2) — IEC-aligned zone system, ATEX/IECEx equipment acceptance, EPL markings
 - Added Art 700–702 (emergency/standby) — three-tier power architecture, transfer times, ATS requirements, safety system coordination
-- Updated _index.yaml: 19 articles now indexed (was 12); coverage_notes.complete updated
+- Updated \_index.yaml: 19 articles now indexed (was 12); coverage_notes.complete updated
 - Updated NEC_COMPLETION_STATUS.md: 19/19 articles complete (~9,500 words)
 - Updated NEC_OVERVIEW.md: new sections for General, Power Distribution, Hazardous Locations, Emergency Power
 
@@ -727,6 +676,7 @@ Design doc: `docs/plans/2026-03-08-electrical-intelligence-integration-design.md
 **Summary:** IEC 62443 cybersecurity corpus created from scratch (no prior RAG files). Full site page with Zone/Conduit diagram, SL table, FR overview, SIL vs SL distinction, and safety checklist. Cybersecurity family index created. Standards index updated. Networked Safety PLC scenario updated.
 
 **What changed:**
+
 - Created `control-standards/rag/standards_intelligence/international/cybersecurity/iec_62443/` — new directory
 - Created `_index.yaml` — corpus index
 - Created `IEC62443_2_1__security_management.md` — CSMS, risk assessment process, asset inventory, policy elements, IT vs OT distinctions
@@ -748,6 +698,7 @@ Design doc: `docs/plans/2026-03-08-electrical-intelligence-integration-design.md
 **Summary:** Two new site pages added sourcing content from `control-standards/work/design/simple_safety_system_design.md`. No RAG changes.
 
 **What changed:**
+
 - Created `docs/scenarios/machine-safety-implementation/index.md` — Scenario 06: Practical Machine Safety Implementation. 10-step workflow (risk assessment → safety functions → architecture → device selection → wiring → safety logic → validation), SIL/PL equivalence table, Category B/1/2/3/4 selection table, example hydraulic+chemical machine safety stack, Mermaid input→PLC→output and Category 3 architecture diagrams.
 - Created `docs/lifecycle/safety-wiring/index.md` — Safety Wiring Practices lifecycle page. 24 VDC SELV rationale, NC contact fail-safe logic, dual-channel separation requirements, diagnostic test pulse explanation, discrepancy time (20–100 ms), wire gauge (18 AWG default), insulation rating, NFPA 79/UL 508A color coding, ferrule and spring-clamp termination guidance, baseline dual-channel input specification table.
 - `docs/scenarios/index.md` — added Scenario 06 card
@@ -765,6 +716,7 @@ Design doc: `docs/plans/2026-03-08-electrical-intelligence-integration-design.md
 **Summary:** IEC 61511 RAG corpus created and site page rewritten with Phase 3 Complete badge. Phase 3 is now fully complete across all four functional safety standards.
 
 **What changed:**
+
 - Created `control-standards/rag/standards_intelligence/international/functional_safety/iec_61511/_index.yaml`
 - Created `IEC61511_2016__Part1__framework.md` — SIS/SIF concepts, three-part structure, lifecycle overview, IEC 61508 relationship, prior use clause, ISA 84 equivalence
 - Created `IEC61511_2016__Clause08__sil_determination.md` — HAZOP inputs, LOPA equation, IPL credits, tolerable risk targets, worked LOPA example, risk graph overview, FTA, common mistakes
@@ -781,10 +733,12 @@ Design doc: `docs/plans/2026-03-08-electrical-intelligence-integration-design.md
 **Summary:** Identified two new site pages to implement after Phase 3 completes, sourced from `control-standards/work/design/simple_safety_system_design.md`.
 
 **What changed:**
+
 - Added Phase 4 queue to `project_state/project_state.md`
 - New untracked design file: `control-standards/work/design/simple_safety_system_design.md`
 
 **Planned pages:**
+
 - `docs/scenarios/machine-safety-implementation/index.md` — Practical Machine Safety Implementation (Scenario 05)
 - `docs/lifecycle/safety-wiring/index.md` — Safety Wiring Practices lifecycle stage
 
@@ -797,6 +751,7 @@ Design doc: `docs/plans/2026-03-08-electrical-intelligence-integration-design.md
 **Summary:** Full IEC 62061 RAG corpus created; site page rewritten with Phase 3 Complete badge and detailed content. DC vs SFF distinction clarified post-review.
 
 **What changed:**
+
 - Created `control-standards/rag/standards_intelligence/international/functional_safety/iec_62061/` corpus (Clause 06, 07, 08, Annex B, plus index)
 - IEC 62061 Clause 07 fix: corrected DC labels and clarified DC vs SFF distinction
 - Deepened `docs/standards/functional-safety/iec-62061/index.md` — badge updated to Phase 3 Complete
@@ -811,6 +766,7 @@ Design doc: `docs/plans/2026-03-08-electrical-intelligence-integration-design.md
 **Summary:** Full ISO 13849-1 RAG corpus created; site page rewritten with Phase 3 Complete badge and detailed content.
 
 **What changed:**
+
 - Created `control-standards/rag/standards_intelligence/international/functional_safety/iso_13849_1/_index.yaml` — corpus index listing all 6 files
 - Created `ISO13849_2023__Clause04__design_strategy.md` — design strategy, safety function specification, PL level table, ISO 12100 relationship
 - Created `ISO13849_2023__Clause05__srp_cs.md` — MTTFd, DC, CCF parameters; PL lookup table; PFHd and SIL equivalence
@@ -826,6 +782,7 @@ Design doc: `docs/plans/2026-03-08-electrical-intelligence-integration-design.md
 **Summary:** All Phase 2 features implemented and committed to master.
 
 **What changed:**
+
 - `docs/assets/css/main.css` — full `@media print` block (hide nav/sidebar/context, full-width content, URL-after-links, page-break rules); diagram lightbox styles; lunr.js search dropdown styles; crosswalk comparison selector styles
 - `docs/assets/js/main.js` — diagram lightbox IIFE (click `.mermaid` → full-screen SVG clone, close via ×/Escape/click-outside); lunr.js search IIFE (fetch search.json, index on load, arrow-key nav, XSS-safe DOM building)
 - `docs/_layouts/default.html` — lunr.js CDN script tag added before `</body>`
@@ -843,6 +800,7 @@ Design doc: `docs/plans/2026-03-08-electrical-intelligence-integration-design.md
 **Summary:** Built the complete Phase 1 GitHub Pages static site under `docs/`.
 
 **What changed:**
+
 - Created `docs/` Jekyll scaffold with `_config.yml`, `Gemfile`, and vendor bundle (Ruby 2.6 / Bundler 2.4.22 local)
 - Built three-panel layout: CSS Grid (240px sidebar + 1fr main + 220px context), responsive to tablet/mobile
 - Mermaid.js CDN integration (theme: neutral) in default layout
@@ -851,6 +809,7 @@ Design doc: `docs/plans/2026-03-08-electrical-intelligence-integration-design.md
 - Updated `.gitignore` to exclude `docs/_site/`, `docs/vendor/`, `docs/.jekyll-cache/`
 
 **Site sections implemented:**
+
 - Homepage: 8 content blocks (hero, standards cards, lifecycle ribbon, relationship diagram, industry matrix, scenarios, repo explorer, trust boundary)
 - Standards: explorer landing, US Electrical (NEC, NFPA 79, UL 508A), International Machinery (IEC 60204-1), Functional Safety (ISO 12100, ISO 13849-1, IEC 62061, IEC 61508, IEC 61511)
 - Lifecycle: landing + 11 stage pages
