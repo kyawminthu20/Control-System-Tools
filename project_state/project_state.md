@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-04-15
 **Status:** Active
-**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batches 1–11 complete)
-**Next Phase:** Phase 26 Batch 12 — Final link audit + project_state close-out (plan Tasks 15–16)
+**Current Phase:** Phase 26 COMPLETE — Navigation Restructure and Link Audit
+**Next Phase:** Phase 27 PLANNING — TBD
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,25 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+## Phase 26 — COMPLETE (2026-04-15)
+
+Phase 26 closed out in 12 batches covering plan Tasks 1–16. The site now has:
+
+- A 10-group intent-based sidebar rooted at `docs/_data/navigation.yml` (Home, Fundamentals, Standards, Design, Implementation, Verification, Industries, Troubleshooting, Training, Tools, Repository)
+- Physical URL reorganization: ~156 pages moved into the new hierarchy
+- Every moved page carries `redirect_from:` frontmatter — old URLs (3 years of history across fundamentals, control-systems, electrical-machines, engineering-workflow, workflows, commissioning-templates, scenarios, lifecycle/\*, field-engineering, reference, rag-browser, glossary, crosswalks, about) continue to resolve via `jekyll-redirect-from`
+- 501 residual cross-links rewritten to point directly at new paths (no unnecessary 301 hops)
+- Internal link checker `tools/check_internal_links.py` exits 0 against the built `_site/` (267 scanned files)
+- AI boundary validator shows only the 2 pre-existing Phase 25 failures — no regressions
+- `jekyll-redirect-from` plugin installed in `Gemfile` / `_config.yml`
+- Authoritative old→new URL registry persists at `docs/_data/phase26_migration_map.yml`
+
+Phase 26 Batch 12 (Tasks 15–16) is complete:
+- Final audit: Jekyll build clean (267 HTML files), internal link check exit 0, AI-boundary validator shows same pre-existing Phase 25 failures with no new regressions, `tools/validate_reorg.sh all` returns the pre-existing baseline of 48/50 (the 2 failures are the downstream AI-boundary script exit and one archive check, both carried over from before Phase 26).
+- No source changes needed — sweep in Batch 11 already resolved all residual broken links.
+- `project_state/project_state.md` closed out to **Phase 26 COMPLETE — Navigation Restructure and Link Audit**; next phase set to `Phase 27 PLANNING — TBD`.
+- `project_state/change_log.md` received a top-level Phase 26 COMPLETE rollup entry.
 
 Phase 26 Batch 11 (Task 14) is complete:
 - Site-wide cross-link sweep: 501 replacements across 49 files. All residual references to pre-Phase-26 URLs now point directly at the new paths instead of relying on the `jekyll-redirect-from` 301 chain.
@@ -117,16 +136,18 @@ Phase 26 Batch 1 (Tasks 1–4) is complete:
 ## Current Reality
 
 - Jekyll site deployed on GitHub Pages — `https://kyawminthu20.github.io/Control-System-Tools/`
-- Last validated Jekyll build: 166 HTML files, clean build (verified 2026-04-14; Phase 25 complete — 8 water/wastewater pages added)
-- Three-panel layout (sidebar 240px + main content + context panel 220px); sidebar data-driven from `docs/_data/navigation.yml` with 5 top-level groups (Engineering Workflow, Standards, Training, Industries, Reference)
+- Last validated Jekyll build: **267 HTML files**, clean build (verified 2026-04-15; Phase 26 complete — navigation restructure, physical URL reorganization, and link audit)
+- Three-panel layout (sidebar 240px + main content + context panel 220px); sidebar data-driven from `docs/_data/navigation.yml` with **11 top-level groups** — Home, Fundamentals, Standards, Design, Implementation, Verification, Industries, Troubleshooting, Training, Tools, Repository
 - Mermaid.js CDN integration for all diagrams; Cytoscape.js 3.28.1 for interactive standards graph
 - Google Analytics tag installed sitewide in `docs/_layouts/default.html` using measurement ID `G-RPL3G47EFZ`
 - GitHub Actions deployment workflow at `.github/workflows/pages.yml`
-- Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), 13 lifecycle stage pages (all comprehensive references), 9 scenarios, 6 crosswalk pages, 9 industry overlays, glossary (45 terms), training (41 surfaced modules across 4 groups), workflows (5 pages), commissioning templates (7 pages), software stack, reference models (4 pages), and about / trust boundary
+- `jekyll-redirect-from` plugin installed — every page moved in Phase 26 has `redirect_from:` frontmatter so pre-Phase-26 URLs continue to resolve
+- Internal link checker at `tools/check_internal_links.py` (stdlib only) — exits 0 against the built site
+- Phase 26 URL migration registry persists at `docs/_data/phase26_migration_map.yml`
+- Site covers: homepage, all standards families (US Electrical, Machinery, Functional Safety, Cybersecurity, Hazardous Area, Semiconductor), standards relationship graph, 13 lifecycle stage pages (split across `/verification/lifecycle/`, `/verification/`, and `/implementation/lifecycle-*/`), 10 scenarios under `/implementation/scenarios/`, 7 crosswalk pages under `/tools/crosswalks/`, 10 industry overlays, glossary (45 terms) at `/tools/glossary/`, NEC training track (11 modules) at `/training/nec-application/`, 7 commissioning templates at `/implementation/commissioning-templates/`, fundamentals landings for electrical/control/motors, design hub with architecture and workflows, troubleshooting landing with motors subpage, tools hub, repository landing with About/Trust Boundary
 - Interactive standards graph: 12 nodes, 16 edges, including IEC 60079, IEC 61511, and SEMI
-- Training groups: Electrical Fundamentals (9 modules), Motors/Drives (13), NEC (11), Control Systems (14)
-- Commissioning checklists at `/commissioning-templates/` (Phase 18 Track B+C): 7 pages with template header fill-in block, checkbox UI, cross-links; `/field-engineering/` redirects to new URL
-- Reference models at `/reference/` (Phase 18 Track C): 5 pages covering machine architecture, safety architecture, compliance stack, and motor selection matrix; sidebar "Reference Models" block added
+- Fundamentals groups: Electrical (9 modules), Control Systems (14 modules), Motors and Drives (13 modules) — formerly under `/training/*`, now at `/fundamentals/electrical/`, `/fundamentals/control/`, `/fundamentals/motors/`
+- Reference Hub at `/tools/reference-hub/`: architecture and motor-system models; design-layer architecture pages live under `/design/architecture/`
 - Root `main.py` remains a placeholder (not the site)
 
 ## Tools — FE Study Automation

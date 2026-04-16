@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-15 (Batch 11)
+**Last Updated:** 2026-04-15 (Phase 26 COMPLETE)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,26 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-15 — Phase 26 COMPLETE: Navigation Restructure and Link Audit
+
+**Type:** Site Architecture / UX
+**Status:** Complete
+
+Twelve-batch restructure that replaces the legacy 5-group sidebar with a 10-group intent-based navigation, physically relocates ~156 Jekyll pages into the new hierarchy, installs redirect infrastructure, and drives the internal link checker to zero broken links.
+
+- Installed `jekyll-redirect-from` plugin (Gemfile + _config.yml) and created `tools/check_internal_links.py` (stdlib-only internal link checker) — Batch 1.
+- Authoritative old→new URL registry persisted at `docs/_data/phase26_migration_map.yml`.
+- Group migrations (Batches 2–5): fundamentals/control/motors moved from `/training/*` to `/fundamentals/electrical|control|motors/`; engineering-workflow/software-stack/workflows/reference-architecture/reference-motor-systems moved to `/design/...`; commissioning-templates, scenarios, and four build-side lifecycle stages moved to `/implementation/...`; seven verification-oriented lifecycle stages moved to `/verification/...`.
+- Tools migration (Batch 6): rag-browser, glossary, crosswalks (+6 sub-pages), and reference landing moved to `/tools/...`. Word-boundary-safe link rewriter introduced after the first attempt hit a double-prefix bug.
+- Training landing (Batch 7) trimmed to structured-paths only; only `/training/nec-application/` remains under `/training/`.
+- Troubleshooting section (Batch 8) created; motor-troubleshooting moved from `/workflows/` into `/troubleshooting/motors/`; `/workflows/` tree deleted.
+- Repository section (Batch 9) created; `/about/` moved to `/repository/about/`.
+- Navigation rewrite (Batch 10): `docs/_data/navigation.yml` fully rewritten to 11 top-level groups (Home, Fundamentals, Standards, Design, Implementation, Verification, Industries, Troubleshooting, Training, Tools, Repository). Four top-level landings (`/fundamentals/`, `/implementation/`, `/verification/`, `/tools/`) created so sidebar group labels do not 404.
+- Cross-link sweep (Batch 11): 501 residual references to pre-Phase-26 URLs rewritten across 49 files — `training_catalog.yml` (105), `field_checklists.yml` (22), `topnav.html`, plus dozens of industry/scenario/training/standards pages. Skipped `redirect_from:` frontmatter, the migration map, `rag_tree.json`, generated RAG assets under `docs/assets/rag-files/`, and the Phase 26 plan + design spec (contain old URLs as data).
+- Final audit (Batch 12): Jekyll build clean (267 HTML files), internal link check exit 0 (267 scanned), AI-boundary validator shows same 2 pre-existing Phase 25 failures with no new regressions, reorg validator 48/50 (same pre-existing baseline).
+
+Every moved page carries `redirect_from:` frontmatter covering bare + `/index.html` variants, so three years of accumulated deep links (fundamentals/control-systems/electrical-machines, engineering-workflow, workflows/*, commissioning-templates, scenarios, lifecycle/*, field-engineering, reference, rag-browser, glossary, crosswalks, about) continue to resolve.
 
 ## 2026-04-15 — Phase 26 Batch 11 COMPLETE: Site-wide cross-link sweep
 
