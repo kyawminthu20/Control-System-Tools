@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-15
+**Last Updated:** 2026-04-15 (Batch 6)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,20 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-15 — Phase 26 Batch 6 COMPLETE: Tools group migration
+
+**Type:** Site structure / Navigation refactor
+**Status:** Complete
+
+- Moved 10 pages from `/rag-browser/`, `/glossary/`, `/crosswalks/`, and `/reference/` into the new `/tools/` hierarchy (`/tools/rag-browser/`, `/tools/glossary/`, `/tools/crosswalks/...`, `/tools/reference-hub/`).
+- Added `redirect_from:` (bare + `/index.html` variants) to every moved file so old URLs continue to resolve via `jekyll-redirect-from`.
+- Repo-wide cross-link sweep: 143 replacements across 39 files using a word-boundary-safe rewriter (`tools/_phase26_batch6_update_links.py`) that avoids double-prefix pollution like `/tools/tools/...`.
+- Also backfilled straggler references to `/reference/architecture/*` and `/reference/motor-systems/*` (originally moved to `/design/` in Batch 3) within the six design pages.
+- `docs/_data/navigation.yml` Reference group updated to point at `/tools/...` URLs.
+- Removed empty source directories: `docs/rag-browser/`, `docs/glossary/`, `docs/crosswalks/`, `docs/reference/`.
+- Fixed relative-link regression in `tools/crosswalks/compare/index.md` where `../../standards/` no longer resolves from the deeper path; rewrote to absolute `{{ '/standards/' | relative_url }}`.
+- Jekyll build clean (259 HTML files); internal link check exit 0.
 
 ## 2026-04-13 — Phase 24 COMPLETE: Training visual upgrades
 

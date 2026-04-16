@@ -2,7 +2,7 @@
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
-**Goal:** Add a cross-linked glossary encyclopedia at `/glossary/` covering ~30 key terms (SIL, PL, SCCR, AHJ, NEC, NFPA, etc.) with domain badges, standard page links, lifecycle stage links, and See Also cross-links.
+**Goal:** Add a cross-linked glossary encyclopedia at `/tools/glossary/` covering ~30 key terms (SIL, PL, SCCR, AHJ, NEC, NFPA, etc.) with domain badges, standard page links, lifecycle stage links, and See Also cross-links.
 
 **Architecture:** Term data lives in `docs/_data/glossary.yml` (one YAML block per term). The page `docs/glossary/index.md` renders all terms via Liquid — sorted alphabetically, grouped under A–Z letter anchors with a jump strip at the top. Each term block links to standard pages, lifecycle stages, and related terms within the glossary.
 
@@ -909,7 +909,7 @@ Replace with:
     <summary>Reference</summary>
     <ul class="sidebar__links">
       <li><a href="{{ '/software-stack/' | relative_url }}">Software Stack</a></li>
-      <li><a href="{{ '/glossary/' | relative_url }}">Glossary</a></li>
+      <li><a href="{{ '/tools/glossary/' | relative_url }}">Glossary</a></li>
       <li><a href="{{ '/about/' | relative_url }}">About / Trust Boundary</a></li>
     </ul>
 ```

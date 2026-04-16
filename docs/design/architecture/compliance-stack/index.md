@@ -4,7 +4,7 @@ title: "15-Standard Minimum Compliance Stack"
 description: "Minimum compliance baseline for semiconductor equipment targeting US, EU, and Asian fab installations — five technical domains, 15 standards."
 breadcrumb:
   - name: "Reference Models"
-    url: "/reference/"
+    url: "/tools/reference-hub/"
   - name: "Architecture"
     url: "/design/architecture/"
   - name: "Compliance Stack"

@@ -4,7 +4,7 @@ title: "NFPA 79 ↔ IEC 60204-1 Crosswalk"
 description: "Topic-by-topic equivalency matrix between NFPA 79:2024 and IEC 60204-1:2018 for dual-market machinery."
 breadcrumb:
   - name: "Crosswalks"
-    url: "/crosswalks/"
+    url: "/tools/crosswalks/"
   - name: "NFPA 79 ↔ IEC 60204-1"
 repo_path: "control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/nfpa79_iec60204_overlap.md"
 related_standards:
@@ -12,6 +12,9 @@ related_standards:
     url: "/standards/us-electrical/nfpa-79/"
   - name: "IEC 60204-1"
     url: "/standards/machinery/iec-60204-1/"
+redirect_from:
+  - /crosswalks/nfpa79-iec60204/
+  - /crosswalks/nfpa79-iec60204/index.html
 ---
 
 <div class="page-header">

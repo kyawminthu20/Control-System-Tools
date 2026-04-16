@@ -4,7 +4,7 @@
 
 **Goal:** Add print stylesheet, diagram lightbox, client-side search (lunr.js inline dropdown), and a crosswalk comparison selector to the Jekyll site.
 
-**Architecture:** All features are additive to existing files (`main.css`, `main.js`, `default.html`, `topnav.html`). One new data file (`search.json`) and one new page (`/crosswalks/compare/`). Vanilla JS only, no build step, CDN-only dependencies.
+**Architecture:** All features are additive to existing files (`main.css`, `main.js`, `default.html`, `topnav.html`). One new data file (`search.json`) and one new page (`/tools/crosswalks/compare/`). Vanilla JS only, no build step, CDN-only dependencies.
 
 **Tech Stack:** Jekyll 4.3, vanilla CSS, vanilla JS, lunr.js (CDN), GitHub Pages (custom Actions build)
 
@@ -352,7 +352,7 @@ Replace the full content of `docs/_includes/topnav.html` with:
     <li><a href="{{ '/lifecycle/' | relative_url }}"{% if page.url contains '/lifecycle/' %} class="active"{% endif %}>Lifecycle</a></li>
     <li><a href="{{ '/industries/' | relative_url }}"{% if page.url contains '/industries/' %} class="active"{% endif %}>Industries</a></li>
     <li><a href="{{ '/scenarios/' | relative_url }}"{% if page.url contains '/scenarios/' %} class="active"{% endif %}>Scenarios</a></li>
-    <li><a href="{{ '/crosswalks/' | relative_url }}"{% if page.url contains '/crosswalks/' %} class="active"{% endif %}>Crosswalks</a></li>
+    <li><a href="{{ '/tools/crosswalks/' | relative_url }}"{% if page.url contains '/tools/crosswalks/' %} class="active"{% endif %}>Crosswalks</a></li>
     <li><a href="{{ '/software-stack/' | relative_url }}"{% if page.url contains '/software-stack/' %} class="active"{% endif %}>Software Stack</a></li>
     <li><a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about/' %} class="active"{% endif %}>About</a></li>
   </ul>
@@ -696,15 +696,15 @@ title: "Standards Comparison"
 description: "Select any two standards to view their overlap and relationship."
 breadcrumb:
   - name: "Crosswalks"
-    url: "/crosswalks/"
+    url: "/tools/crosswalks/"
   - name: "Compare"
 related_standards:
   - name: "NFPA 79 vs IEC 60204-1"
-    url: "/crosswalks/nfpa79-iec60204/"
+    url: "/tools/crosswalks/nfpa79-iec60204/"
   - name: "UL 508A / NEC / NFPA 79"
-    url: "/crosswalks/ul508a-nec-nfpa79/"
+    url: "/tools/crosswalks/ul508a-nec-nfpa79/"
   - name: "Standards Decision Workflow"
-    url: "/crosswalks/standards-decision-workflow/"
+    url: "/tools/crosswalks/standards-decision-workflow/"
 ---
 
 <div class="page-header">
@@ -856,7 +856,7 @@ These three standards form the US electrical compliance stack. They overlap but 
 Open `docs/crosswalks/index.md` and find the list of crosswalk page links. Add the following line to the list:
 
 ```markdown
-- [Standards Comparison Tool](/crosswalks/compare/) — select any two standards to view their overlap matrix
+- [Standards Comparison Tool](/tools/crosswalks/compare/) — select any two standards to view their overlap matrix
 ```
 
 **Step 4: Verify build and comparison page**
@@ -906,7 +906,7 @@ Open `https://kyawminthu.github.io/Control-System-Tools/` and confirm:
 - Search input in topnav — type "nfpa", dropdown appears
 - Click a Mermaid diagram — lightbox appears
 - Browser print preview — clean, no sidebar
-- `/crosswalks/compare/` — comparison selector works
+- `/tools/crosswalks/compare/` — comparison selector works
 
 **Step 4: Update project state**
 

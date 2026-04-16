@@ -4,13 +4,16 @@ title: "IEC 60079 ↔ NEC Art. 500/505 Crosswalk"
 description: "Zone vs. Division: how IEC 60079 hazardous-area classification aligns with NEC Article 500 (Division) and Article 505 (Zone) for US installations."
 breadcrumb:
   - name: "Crosswalks"
-    url: "/crosswalks/"
+    url: "/tools/crosswalks/"
   - name: "IEC 60079 ↔ NEC 500/505"
 related_standards:
   - name: "IEC 60079"
     url: "/standards/hazardous-area/iec-60079/"
   - name: "NEC (Art. 500–505)"
     url: "/standards/us-electrical/nec/"
+redirect_from:
+  - /crosswalks/iec60079-nec-500-505/
+  - /crosswalks/iec60079-nec-500-505/index.html
 ---
 
 <div class="page-header">
@@ -204,4 +207,4 @@ For new US projects involving equipment carrying IECEx or ATEX markings, NEC Art
 
 Both systems require the same physical installation discipline: proper conduit seals, IS circuit segregation, equipment maintenance intervals per IEC 60079-17 or NFPA equivalent, and documentation of the area classification drawing. The classification language differs; the underlying safety goal is identical.
 
-<a href="{{ '/crosswalks/' | relative_url }}" class="card__link">&larr; All Crosswalks</a>
+<a href="{{ '/tools/crosswalks/' | relative_url }}" class="card__link">&larr; All Crosswalks</a>

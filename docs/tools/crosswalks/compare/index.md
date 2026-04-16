@@ -4,15 +4,18 @@ title: "Standards Comparison"
 description: "Select any two standards to view their overlap and relationship."
 breadcrumb:
   - name: "Crosswalks"
-    url: "/crosswalks/"
+    url: "/tools/crosswalks/"
   - name: "Compare"
 related_standards:
   - name: "NFPA 79 vs IEC 60204-1"
-    url: "/crosswalks/nfpa79-iec60204/"
+    url: "/tools/crosswalks/nfpa79-iec60204/"
   - name: "UL 508A / NEC / NFPA 79"
-    url: "/crosswalks/ul508a-nec-nfpa79/"
+    url: "/tools/crosswalks/ul508a-nec-nfpa79/"
   - name: "Standards Decision Workflow"
-    url: "/crosswalks/standards-decision-workflow/"
+    url: "/tools/crosswalks/standards-decision-workflow/"
+redirect_from:
+  - /crosswalks/compare/
+  - /crosswalks/compare/index.html
 ---
 
 <div class="page-header">
@@ -51,8 +54,8 @@ related_standards:
 
 <p class="compare-no-data" id="compare-no-data" hidden>
   No documented crosswalk exists for this pair in the local corpus.
-  See the <a href="../">Crosswalks index</a> for available comparisons,
-  or consult <a href="../../standards/">individual standard pages</a> for relationship context.
+  See the <a href="{{ '/tools/crosswalks/' | relative_url }}">Crosswalks index</a> for available comparisons,
+  or consult <a href="{{ '/standards/' | relative_url }}">individual standard pages</a> for relationship context.
 </p>
 
 <!-- Pair: NFPA 79 vs IEC 60204-1 -->

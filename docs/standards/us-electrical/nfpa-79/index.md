@@ -18,7 +18,7 @@ related_standards:
     url: "/standards/us-electrical/ul-508a/"
 crosswalk_refs:
   - name: "NFPA 79 ↔ IEC 60204-1 Overlap"
-    url: "/crosswalks/nfpa79-iec60204/"
+    url: "/tools/crosswalks/nfpa79-iec60204/"
 lifecycle_stage:
   - name: "Detailed Design"
     slug: "detailed-design/"
@@ -107,4 +107,4 @@ NFPA 79 Chapter 9 addresses safety-related control circuits and emergency stop f
 - [IEC 60204-1]({{ '/standards/machinery/iec-60204-1/' | relative_url }}) — International equivalent; use for CE-marked machinery
 - [NEC]({{ '/standards/us-electrical/nec/' | relative_url }}) — Installation code; Article 670 references NFPA 79
 - [UL 508A]({{ '/standards/us-electrical/ul-508a/' | relative_url }}) — Panel listing; applies alongside NFPA 79
-- [NFPA 79 ↔ IEC 60204-1 crosswalk]({{ '/crosswalks/nfpa79-iec60204/' | relative_url }})
+- [NFPA 79 ↔ IEC 60204-1 crosswalk]({{ '/tools/crosswalks/nfpa79-iec60204/' | relative_url }})

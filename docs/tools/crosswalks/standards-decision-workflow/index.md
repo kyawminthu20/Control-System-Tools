@@ -12,7 +12,7 @@ standards_editions:
   - "ISO 13849-1 2023"
 breadcrumb:
   - name: "Crosswalks"
-    url: "/crosswalks/"
+    url: "/tools/crosswalks/"
   - name: "Decision Workflow"
 repo_path: "control-standards/rag/standards_intelligence/routing/standards_applicability.md"
 related_standards:
@@ -22,6 +22,9 @@ related_standards:
     url: "/standards/machinery/"
   - name: "Functional Safety"
     url: "/standards/functional-safety/"
+redirect_from:
+  - /crosswalks/standards-decision-workflow/
+  - /crosswalks/standards-decision-workflow/index.html
 ---
 
 <div class="page-header">

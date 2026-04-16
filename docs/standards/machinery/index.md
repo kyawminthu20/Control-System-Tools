@@ -16,7 +16,7 @@ related_standards:
     url: "/standards/functional-safety/iso-13849-1/"
 crosswalk_refs:
   - name: "NFPA 79 ↔ IEC 60204-1 Crosswalk"
-    url: "/crosswalks/nfpa79-iec60204/"
+    url: "/tools/crosswalks/nfpa79-iec60204/"
 ---
 
 <div class="page-header">
@@ -60,4 +60,4 @@ IEC 60204-1 and NFPA 79 are broadly equivalent in technical scope but differ in 
 | Documentation | Clause 17 (detailed) | Chapter 19 |
 | Colors | Yellow-green PE required | Green or bare allowed |
 
-<a href="{{ '/crosswalks/nfpa79-iec60204/' | relative_url }}" class="card__link">View full NFPA 79 ↔ IEC 60204-1 crosswalk &rarr;</a>
+<a href="{{ '/tools/crosswalks/nfpa79-iec60204/' | relative_url }}" class="card__link">View full NFPA 79 ↔ IEC 60204-1 crosswalk &rarr;</a>

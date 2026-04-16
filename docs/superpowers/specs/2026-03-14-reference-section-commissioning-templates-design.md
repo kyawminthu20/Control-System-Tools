@@ -10,7 +10,7 @@
 
 Two parallel deliverables:
 
-1. **New `/reference/` section** — surface 4 canonical RAG files as first-class site pages, grouped into two sub-sections.
+1. **New `/tools/reference-hub/` section** — surface 4 canonical RAG files as first-class site pages, grouped into two sub-sections.
 2. **Commissioning Templates redesign** — rename `/field-engineering/` to `/commissioning-templates/`, add template header block and checkbox UI to all 6 checklist pages.
 
 ---
@@ -20,12 +20,12 @@ Two parallel deliverables:
 ### 2.1 URL Structure
 
 ```
-/reference/                                     ← landing page
-/reference/architecture/
+/tools/reference-hub/                                     ← landing page
+/design/architecture/
   machine-architecture-model/                   ← 7-Layer Industrial Machine Architecture Model
   machine-safety-architecture/                  ← Universal Machine Safety Architecture Template
   compliance-stack/                             ← 15-Standard Minimum Compliance Stack
-/reference/motor-systems/
+/design/motor-selection/
   motor-selection-matrix/                       ← Motor Selection Comparison Matrix
 ```
 
@@ -55,9 +55,9 @@ Two parallel deliverables:
   ```yaml
   breadcrumb:
     - name: "Reference"
-      url: "/reference/"
+      url: "/tools/reference-hub/"
     - name: "Architecture"
-      url: "/reference/architecture/"
+      url: "/design/architecture/"
     - name: "Machine Architecture Model"
   ```
 
@@ -71,13 +71,13 @@ Add a **new** `<details>` block labeled **"Reference Models"** immediately befor
 <details class="sidebar__section">
   <summary>Reference Models</summary>
   <ul class="sidebar__links">
-    <li><a href="{{ '/reference/' | relative_url }}">All Reference Models</a></li>
+    <li><a href="{{ '/tools/reference-hub/' | relative_url }}">All Reference Models</a></li>
     <li class="sidebar__group-label">Architecture</li>
-    <li><a href="{{ '/reference/architecture/machine-architecture-model/' | relative_url }}" class="sub">Machine Architecture</a></li>
-    <li><a href="{{ '/reference/architecture/machine-safety-architecture/' | relative_url }}" class="sub">Safety Architecture</a></li>
-    <li><a href="{{ '/reference/architecture/compliance-stack/' | relative_url }}" class="sub">Compliance Stack</a></li>
+    <li><a href="{{ '/design/architecture/machine-architecture-model/' | relative_url }}" class="sub">Machine Architecture</a></li>
+    <li><a href="{{ '/design/architecture/machine-safety-architecture/' | relative_url }}" class="sub">Safety Architecture</a></li>
+    <li><a href="{{ '/design/architecture/compliance-stack/' | relative_url }}" class="sub">Compliance Stack</a></li>
     <li class="sidebar__group-label">Motor Systems</li>
-    <li><a href="{{ '/reference/motor-systems/motor-selection-matrix/' | relative_url }}" class="sub">Motor Selection Matrix</a></li>
+    <li><a href="{{ '/design/motor-selection/motor-selection-matrix/' | relative_url }}" class="sub">Motor Selection Matrix</a></li>
   </ul>
 </details>
 ```

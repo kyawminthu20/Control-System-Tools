@@ -162,4 +162,4 @@ flowchart TD
 - [Exhaust and Abatement Systems](/industries/semiconductor/facility/exhaust-abatement/) — airflow and exhaust proof in context
 - [Tool-Facility Interface](/industries/semiconductor/facility/tool-facility-interface/) — instrument signals at the facility-tool boundary
 - [IEC 61511 — SIS Lifecycle](/standards/functional-safety/iec-61511/) — when instrument selection must support a SIL-rated function
-- [Glossary](/glossary/) — SIL, PL, SCCR, and other terms used across this page
+- [Glossary](/tools/glossary/) — SIL, PL, SCCR, and other terms used across this page

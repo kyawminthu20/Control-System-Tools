@@ -11,7 +11,7 @@ Add a RAG file browser to the Jekyll site so users can navigate and read all mar
 
 ### User flow
 
-1. User clicks "RAG Files" in the global sidebar → navigates to `/rag-browser/`
+1. User clicks "RAG Files" in the global sidebar → navigates to `/tools/rag-browser/`
 2. Left sidebar shows collapsible folder tree (nested `<details>`/`<summary>`)
 3. User clicks a file → JS fetches raw markdown from GitHub → `marked.js` renders → main panel updates
 4. Main panel starts with placeholder: "Select a file to read"

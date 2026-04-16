@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-04-15
 **Status:** Active
-**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batches 1–5 complete)
-**Next Phase:** Phase 26 Batch 6 — Tools group migration (rag-browser, glossary, crosswalks, reference-hub)
+**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batches 1–6 complete)
+**Next Phase:** Phase 26 Batch 7 — Training trim + top-level landing page refresh
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,19 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+Phase 26 Batch 6 (Task 9) is complete:
+- Tools group migrated: 10 pages moved to `/tools/`
+  - `/rag-browser/` → `/tools/rag-browser/`
+  - `/glossary/` → `/tools/glossary/`
+  - `/crosswalks/` index + 6 subpages (compare, iec60079-nec-500-505, iec61511-iec61508, nfpa79-iec60204, standards-decision-workflow, ul508a-nec-nfpa79) → `/tools/crosswalks/...`
+  - `/reference/` landing → `/tools/reference-hub/`
+- Correct `redirect_from:` with bare + `/index.html` variants added to all 10 moved files
+- Internal cross-links repo-wide updated: 143 replacements across 39 files; also backfilled straggler `/reference/architecture/*` and `/reference/motor-systems/*` refs (moved during design batch) in six design pages
+- `docs/_data/navigation.yml` Reference group updated to point at `/tools/...` URLs
+- Empty old source directories removed: `docs/rag-browser/`, `docs/glossary/`, `docs/crosswalks/`, `docs/reference/`
+- One relative-link regression caught in `compare/index.md` (`../../standards/`) and rewritten to absolute `{{ '/standards/' | relative_url }}`
+- Jekyll build clean (259 HTML files); link check exit 0
 
 Phase 26 Batch 5 (Task 8) is complete:
 - Verification group migrated: 5 pages under `/verification/lifecycle/` (index, concept, standards-selection, detailed-design, draft-documentation) and 6 top-level verification pages (`/verification/risk-assessment/`, `safety-requirements-spec/`, `safety-architecture/`, `maintenance/`, `management-of-change/`, `safety-wiring/`)

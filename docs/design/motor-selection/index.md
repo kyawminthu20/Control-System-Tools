@@ -4,7 +4,7 @@ title: "Reference — Motor Systems"
 description: "Motor systems reference: selection matrix, comparison tables, and decision flowcharts."
 breadcrumb:
   - name: "Reference Models"
-    url: "/reference/"
+    url: "/tools/reference-hub/"
   - name: "Motor Systems"
 redirect_from:
   - /reference/motor-systems/

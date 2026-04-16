@@ -4,7 +4,7 @@ title: "Motor Selection Comparison Matrix"
 description: "Decision flowchart and comparison matrix for motor-system family selection: induction, servo, BLDC, stepper, and traction platforms."
 breadcrumb:
   - name: "Reference Models"
-    url: "/reference/"
+    url: "/tools/reference-hub/"
   - name: "Motor Systems"
     url: "/design/motor-selection/"
   - name: "Motor Selection Matrix"

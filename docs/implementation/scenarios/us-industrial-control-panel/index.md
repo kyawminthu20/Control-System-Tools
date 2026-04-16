@@ -16,7 +16,7 @@ related_standards:
     url: "/standards/us-electrical/nfpa-79/"
 crosswalk_refs:
   - name: "UL 508A / NEC / NFPA 79 Overlap"
-    url: "/crosswalks/ul508a-nec-nfpa79/"
+    url: "/tools/crosswalks/ul508a-nec-nfpa79/"
 redirect_from:
   - /scenarios/us-industrial-control-panel/
   - /scenarios/us-industrial-control-panel/index.html
@@ -213,7 +213,7 @@ Audit reminder: enclosure label ≠ panel listing mark ≠ external nameplate. A
 1. [UL 508A panel construction requirements]({{ '/standards/us-electrical/ul-508a/' | relative_url }})
 2. [NEC Article 409 and 430]({{ '/standards/us-electrical/nec/' | relative_url }})
 3. [NFPA 79 Chapter 9 — control circuits]({{ '/standards/us-electrical/nfpa-79/' | relative_url }})
-4. [UL 508A / NEC / NFPA 79 overlap crosswalk]({{ '/crosswalks/ul508a-nec-nfpa79/' | relative_url }})
+4. [UL 508A / NEC / NFPA 79 overlap crosswalk]({{ '/tools/crosswalks/ul508a-nec-nfpa79/' | relative_url }})
 
 ---
 

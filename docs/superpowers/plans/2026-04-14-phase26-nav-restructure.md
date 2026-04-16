@@ -349,12 +349,12 @@ fundamentals:
 
 design:
   - { old: /engineering-workflow/,                           new: /design/,                                           from: engineering-workflow,                           to: design }
-  - { old: /reference/architecture/,                         new: /design/architecture/,                              from: reference/architecture,                         to: design/architecture }
-  - { old: /reference/architecture/compliance-stack/,        new: /design/architecture/compliance-stack/,             from: reference/architecture/compliance-stack,        to: design/architecture/compliance-stack }
-  - { old: /reference/architecture/machine-architecture-model/, new: /design/architecture/machine-architecture-model/, from: reference/architecture/machine-architecture-model, to: design/architecture/machine-architecture-model }
-  - { old: /reference/architecture/machine-safety-architecture/, new: /design/architecture/machine-safety-architecture/, from: reference/architecture/machine-safety-architecture, to: design/architecture/machine-safety-architecture }
-  - { old: /reference/motor-systems/,                        new: /design/motor-selection/,                           from: reference/motor-systems,                        to: design/motor-selection }
-  - { old: /reference/motor-systems/motor-selection-matrix/, new: /design/motor-selection/motor-selection-matrix/,    from: reference/motor-systems/motor-selection-matrix, to: design/motor-selection/motor-selection-matrix }
+  - { old: /design/architecture/,                         new: /design/architecture/,                              from: reference/architecture,                         to: design/architecture }
+  - { old: /design/architecture/compliance-stack/,        new: /design/architecture/compliance-stack/,             from: reference/architecture/compliance-stack,        to: design/architecture/compliance-stack }
+  - { old: /design/architecture/machine-architecture-model/, new: /design/architecture/machine-architecture-model/, from: reference/architecture/machine-architecture-model, to: design/architecture/machine-architecture-model }
+  - { old: /design/architecture/machine-safety-architecture/, new: /design/architecture/machine-safety-architecture/, from: reference/architecture/machine-safety-architecture, to: design/architecture/machine-safety-architecture }
+  - { old: /design/motor-selection/,                        new: /design/motor-selection/,                           from: reference/motor-systems,                        to: design/motor-selection }
+  - { old: /design/motor-selection/motor-selection-matrix/, new: /design/motor-selection/motor-selection-matrix/,    from: reference/motor-systems/motor-selection-matrix, to: design/motor-selection/motor-selection-matrix }
   - { old: /software-stack/,                                 new: /design/software-stack/,                            from: software-stack,                                 to: design/software-stack }
   - { old: /workflows/,                                      new: /design/workflows/,                                 from: workflows,                                      to: design/workflows }
   - { old: /workflows/electrical-review/,                    new: /design/workflows/electrical-review/,               from: workflows/electrical-review,                    to: design/workflows/electrical-review }
@@ -399,16 +399,16 @@ verification:
   - { old: /lifecycle/safety-wiring/,                        new: /verification/safety-wiring/,                       from: lifecycle/safety-wiring,                        to: verification/safety-wiring }
 
 tools:
-  - { old: /rag-browser/,                                    new: /tools/rag-browser/,                                from: rag-browser,                                    to: tools/rag-browser }
-  - { old: /glossary/,                                       new: /tools/glossary/,                                   from: glossary,                                       to: tools/glossary }
-  - { old: /crosswalks/,                                     new: /tools/crosswalks/,                                 from: crosswalks,                                     to: tools/crosswalks }
-  - { old: /crosswalks/compare/,                             new: /tools/crosswalks/compare/,                         from: crosswalks/compare,                             to: tools/crosswalks/compare }
-  - { old: /crosswalks/iec60079-nec-500-505/,                new: /tools/crosswalks/iec60079-nec-500-505/,            from: crosswalks/iec60079-nec-500-505,                to: tools/crosswalks/iec60079-nec-500-505 }
-  - { old: /crosswalks/iec61511-iec61508/,                   new: /tools/crosswalks/iec61511-iec61508/,               from: crosswalks/iec61511-iec61508,                   to: tools/crosswalks/iec61511-iec61508 }
-  - { old: /crosswalks/nfpa79-iec60204/,                     new: /tools/crosswalks/nfpa79-iec60204/,                 from: crosswalks/nfpa79-iec60204,                     to: tools/crosswalks/nfpa79-iec60204 }
-  - { old: /crosswalks/standards-decision-workflow/,         new: /tools/crosswalks/standards-decision-workflow/,     from: crosswalks/standards-decision-workflow,         to: tools/crosswalks/standards-decision-workflow }
-  - { old: /crosswalks/ul508a-nec-nfpa79/,                   new: /tools/crosswalks/ul508a-nec-nfpa79/,               from: crosswalks/ul508a-nec-nfpa79,                   to: tools/crosswalks/ul508a-nec-nfpa79 }
-  - { old: /reference/,                                      new: /tools/reference-hub/,                              from: reference,                                      to: tools/reference-hub }
+  - { old: /tools/rag-browser/,                                    new: /tools/rag-browser/,                                from: rag-browser,                                    to: tools/rag-browser }
+  - { old: /tools/glossary/,                                       new: /tools/glossary/,                                   from: glossary,                                       to: tools/glossary }
+  - { old: /tools/crosswalks/,                                     new: /tools/crosswalks/,                                 from: crosswalks,                                     to: tools/crosswalks }
+  - { old: /tools/crosswalks/compare/,                             new: /tools/crosswalks/compare/,                         from: crosswalks/compare,                             to: tools/crosswalks/compare }
+  - { old: /tools/crosswalks/iec60079-nec-500-505/,                new: /tools/crosswalks/iec60079-nec-500-505/,            from: crosswalks/iec60079-nec-500-505,                to: tools/crosswalks/iec60079-nec-500-505 }
+  - { old: /tools/crosswalks/iec61511-iec61508/,                   new: /tools/crosswalks/iec61511-iec61508/,               from: crosswalks/iec61511-iec61508,                   to: tools/crosswalks/iec61511-iec61508 }
+  - { old: /tools/crosswalks/nfpa79-iec60204/,                     new: /tools/crosswalks/nfpa79-iec60204/,                 from: crosswalks/nfpa79-iec60204,                     to: tools/crosswalks/nfpa79-iec60204 }
+  - { old: /tools/crosswalks/standards-decision-workflow/,         new: /tools/crosswalks/standards-decision-workflow/,     from: crosswalks/standards-decision-workflow,         to: tools/crosswalks/standards-decision-workflow }
+  - { old: /tools/crosswalks/ul508a-nec-nfpa79/,                   new: /tools/crosswalks/ul508a-nec-nfpa79/,               from: crosswalks/ul508a-nec-nfpa79,                   to: tools/crosswalks/ul508a-nec-nfpa79 }
+  - { old: /tools/reference-hub/,                                      new: /tools/reference-hub/,                              from: reference,                                      to: tools/reference-hub }
 
 training_trim:
   # Only /training/nec-application/ stays under /training/. Top-level /training/index.md is rewritten to a learning-paths landing page.
@@ -531,7 +531,7 @@ Same pattern as Task 5, Step 3.
 
 ```bash
 cd "/Users/kyawminthu/Dev/Control System Tools"
-grep -rln "/engineering-workflow/\|/reference/architecture/\|/reference/motor-systems/\|/software-stack/\|/workflows/electrical-review/\|/workflows/motor-selection/" docs/design/
+grep -rln "/engineering-workflow/\|/design/architecture/\|/design/motor-selection/\|/software-stack/\|/workflows/electrical-review/\|/workflows/motor-selection/" docs/design/
 ```
 
 Edit the listed files, replacing old paths with new per the migration map.
@@ -651,7 +651,7 @@ mkdir -p tools/rag-browser tools/glossary tools/crosswalks tools/reference-hub
 
 ```bash
 cd "/Users/kyawminthu/Dev/Control System Tools"
-grep -rln "/rag-browser/\|/glossary/\|/crosswalks/\|/reference/" docs/tools/
+grep -rln "/tools/rag-browser/\|/tools/glossary/\|/tools/crosswalks/\|/tools/reference-hub/" docs/tools/
 ```
 
 Replace with new `/tools/...` paths per the map.
@@ -1105,7 +1105,7 @@ After per-group moves, pages OUTSIDE the moved groups may still contain links to
 
 ```bash
 cd "/Users/kyawminthu/Dev/Control System Tools"
-grep -rln -E "/training/fundamentals/|/training/control-systems/|/training/electrical-machines/|/engineering-workflow/|/reference/(architecture|motor-systems)/|/software-stack/|/workflows/(electrical-review|motor-selection|servo-commissioning|vfd-commissioning|motor-troubleshooting)/|/commissioning-templates/|/scenarios/|/lifecycle/|/rag-browser/|/glossary/|/crosswalks/|/about/" docs/ | grep -v "_site/"
+grep -rln -E "/training/fundamentals/|/training/control-systems/|/training/electrical-machines/|/engineering-workflow/|/tools/reference-hub/(architecture|motor-systems)/|/software-stack/|/workflows/(electrical-review|motor-selection|servo-commissioning|vfd-commissioning|motor-troubleshooting)/|/commissioning-templates/|/scenarios/|/lifecycle/|/tools/rag-browser/|/tools/glossary/|/tools/crosswalks/|/about/" docs/ | grep -v "_site/"
 ```
 
 - [ ] **Step 2: For each file listed, update old paths to new paths per the migration map**

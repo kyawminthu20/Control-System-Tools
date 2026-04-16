@@ -4,13 +4,16 @@ title: "IEC 61511 ↔ IEC 61508 Crosswalk"
 description: "Application vs. foundation: how IEC 61511 (process SIS) derives from and relates to IEC 61508 (functional safety foundation)."
 breadcrumb:
   - name: "Crosswalks"
-    url: "/crosswalks/"
+    url: "/tools/crosswalks/"
   - name: "IEC 61511 ↔ IEC 61508"
 related_standards:
   - name: "IEC 61511"
     url: "/standards/functional-safety/iec-61511/"
   - name: "IEC 61508"
     url: "/standards/functional-safety/iec-61508/"
+redirect_from:
+  - /crosswalks/iec61511-iec61508/
+  - /crosswalks/iec61511-iec61508/index.html
 ---
 
 <div class="page-header">
@@ -175,4 +178,4 @@ Engineers working under IEC 61511 need to invoke IEC 61508 in these situations:
 **If your IEC 61511 project reaches SIL 3 or uses non-prior-use devices:**
 → Invoke **IEC 61508** requirements explicitly, coordinate with the device manufacturer's safety documentation, and consider engaging a competent functional safety assessor.
 
-<a href="{{ '/crosswalks/' | relative_url }}" class="card__link">&larr; All Crosswalks</a>
+<a href="{{ '/tools/crosswalks/' | relative_url }}" class="card__link">&larr; All Crosswalks</a>

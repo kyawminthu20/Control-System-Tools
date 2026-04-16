@@ -61,7 +61,7 @@ description: "Navigate industrial automation standards families, lifecycle stage
     <span class="card__title">NFPA 79 ↔ IEC 60204-1 · UL 508A / NEC overlap</span>
     <p class="card__desc">Side-by-side comparison tables mapping clause equivalencies between US and international standards.</p>
     <div class="card__path">rag/crosswalks/overlap_matrix/</div>
-    <a href="{{ '/crosswalks/' | relative_url }}" class="card__link">View crosswalks &rarr;</a>
+    <a href="{{ '/tools/crosswalks/' | relative_url }}" class="card__link">View crosswalks &rarr;</a>
   </div>
 
   <div class="card">
@@ -253,4 +253,4 @@ description: "Navigate industrial automation standards families, lifecycle stage
 - US panel / machinery: [`us/ul_508a/`]({{ '/standards/us-electrical/ul-508a/' | relative_url }}) · [`us/nfpa79/`]({{ '/standards/us-electrical/nfpa-79/' | relative_url }}) · [`us/nec/`]({{ '/standards/us-electrical/nec/' | relative_url }})
 - International machinery: [`international/machinery/iec_60204_1/`]({{ '/standards/machinery/iec-60204-1/' | relative_url }})
 - Safety functions: [`international/functional_safety/`]({{ '/standards/functional-safety/' | relative_url }})
-- US ↔ International overlap: [`crosswalks/overlap_matrix/`]({{ '/crosswalks/' | relative_url }})
+- US ↔ International overlap: [`crosswalks/overlap_matrix/`]({{ '/tools/crosswalks/' | relative_url }})

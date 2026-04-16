@@ -8,13 +8,13 @@
 
 ## Purpose
 
-Add a cross-linked glossary encyclopedia at `/glossary/` covering all key acronyms and terms a control or machine safety engineer will encounter when using this site (SIL, PL, SL, NEC, NFPA, SCCR, AHJ, HFT, SFF, MTTFd, DC, Category, PLC, SIS, LOPA, and more).
+Add a cross-linked glossary encyclopedia at `/tools/glossary/` covering all key acronyms and terms a control or machine safety engineer will encounter when using this site (SIL, PL, SL, NEC, NFPA, SCCR, AHJ, HFT, SFF, MTTFd, DC, Category, PLC, SIS, LOPA, and more).
 
 ---
 
 ## Placement
 
-URL: `/glossary/`
+URL: `/tools/glossary/`
 
 Sidebar: added to the existing **Reference** section as a third entry between Software Stack and About.
 
@@ -161,7 +161,7 @@ No new CSS classes required at launch. Reuse existing site patterns:
 Add one line to `docs/_includes/sidebar.html` in the Reference section:
 
 ```html
-<li><a href="{{ '/glossary/' | relative_url }}">Glossary</a></li>
+<li><a href="{{ '/tools/glossary/' | relative_url }}">Glossary</a></li>
 ```
 
 ---

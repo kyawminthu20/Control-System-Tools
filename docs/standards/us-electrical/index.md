@@ -11,14 +11,14 @@ related_standards:
   - name: "IEC 60204-1 (International equivalent)"
     url: "/standards/machinery/iec-60204-1/"
   - name: "NFPA 79 ↔ IEC 60204-1 Crosswalk"
-    url: "/crosswalks/nfpa79-iec60204/"
+    url: "/tools/crosswalks/nfpa79-iec60204/"
   - name: "UL 508A / NEC / NFPA 79 Crosswalk"
-    url: "/crosswalks/ul508a-nec-nfpa79/"
+    url: "/tools/crosswalks/ul508a-nec-nfpa79/"
 crosswalk_refs:
   - name: "UL 508A / NEC / NFPA 79 Overlap"
-    url: "/crosswalks/ul508a-nec-nfpa79/"
+    url: "/tools/crosswalks/ul508a-nec-nfpa79/"
   - name: "NFPA 79 ↔ IEC 60204-1"
-    url: "/crosswalks/nfpa79-iec60204/"
+    url: "/tools/crosswalks/nfpa79-iec60204/"
 ---
 
 <div class="page-header">
@@ -110,5 +110,5 @@ The three US electrical standards are not alternatives — they work together:
 
 ## Crosswalk References
 
-- [UL 508A / NEC / NFPA 79 overlap table]({{ '/crosswalks/ul508a-nec-nfpa79/' | relative_url }})
-- [NFPA 79 ↔ IEC 60204-1 comparison]({{ '/crosswalks/nfpa79-iec60204/' | relative_url }}) — for global machinery projects
+- [UL 508A / NEC / NFPA 79 overlap table]({{ '/tools/crosswalks/ul508a-nec-nfpa79/' | relative_url }})
+- [NFPA 79 ↔ IEC 60204-1 comparison]({{ '/tools/crosswalks/nfpa79-iec60204/' | relative_url }}) — for global machinery projects

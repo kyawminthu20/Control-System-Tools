@@ -6,6 +6,9 @@ breadcrumb:
   - name: "Reference"
   - name: "Glossary"
 last_reviewed: "2026-03-08"
+redirect_from:
+  - /glossary/
+  - /glossary/index.html
 ---
 
 <div class="page-header">

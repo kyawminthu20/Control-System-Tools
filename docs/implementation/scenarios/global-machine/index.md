@@ -16,7 +16,7 @@ related_standards:
     url: "/standards/functional-safety/iso-12100/"
 crosswalk_refs:
   - name: "NFPA 79 ↔ IEC 60204-1 Crosswalk"
-    url: "/crosswalks/nfpa79-iec60204/"
+    url: "/tools/crosswalks/nfpa79-iec60204/"
 redirect_from:
   - /scenarios/global-machine/
   - /scenarios/global-machine/index.html
@@ -88,6 +88,6 @@ CE marking under the Machinery Directive (2006/42/EC) requires:
 
 ## Recommended Next Steps
 
-1. [NFPA 79 ↔ IEC 60204-1 crosswalk — see the differences]({{ '/crosswalks/nfpa79-iec60204/' | relative_url }})
+1. [NFPA 79 ↔ IEC 60204-1 crosswalk — see the differences]({{ '/tools/crosswalks/nfpa79-iec60204/' | relative_url }})
 2. [ISO 12100 — risk assessment foundation]({{ '/standards/functional-safety/iso-12100/' | relative_url }})
 3. [ISO 13849-1 — if safety functions exist]({{ '/standards/functional-safety/iso-13849-1/' | relative_url }})

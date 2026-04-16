@@ -129,7 +129,7 @@ S2 requires that safety interlocks be independent of the process control system 
 
 ## Related References
 
-- [15-Standard Minimum Compliance Stack]({{ '/reference/architecture/compliance-stack/' | relative_url }}) — full compliance baseline for semiconductor equipment
+- [15-Standard Minimum Compliance Stack]({{ '/design/architecture/compliance-stack/' | relative_url }}) — full compliance baseline for semiconductor equipment
 
 ---
 

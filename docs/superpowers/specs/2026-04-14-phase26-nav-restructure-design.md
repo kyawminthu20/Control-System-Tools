@@ -18,13 +18,13 @@ Restructure the site navigation from the current 5-group file-structure mirror i
 |---|---|---|
 | `/fundamentals/` | `/training/fundamentals/` + control theory subset of `/training/control-systems/` | Electrical, control, safety fundamentals |
 | `/standards/` | Keep as-is | Already logically grouped |
-| `/design/` | `/engineering-workflow/` + architecture pages from `/reference/` | Design & engineering tasks |
+| `/design/` | `/engineering-workflow/` + architecture pages from `/tools/reference-hub/` | Design & engineering tasks |
 | `/implementation/` | `/commissioning-templates/` + `/scenarios/` | Commissioning, startup, scenarios |
 | `/verification/` | `/lifecycle/` stage pages + risk assessment pages | Risk assessment, SIL/PL, validation |
 | `/industries/` | Keep as-is | Already logically grouped |
 | `/troubleshooting/` | **NEW** section | Requires new landing page; pulls from existing troubleshooting module content where present |
 | `/training/` | Trimmed — retains structured learning paths; control-systems modules move to `/fundamentals/` where applicable | Structured study/learning paths only |
-| `/tools/` | `/reference/rag-browser/` + `/glossary/` + crosswalks + calculator pages | Interactive and reference tools |
+| `/tools/` | `/tools/reference-hub/rag-browser/` + `/tools/glossary/` + crosswalks + calculator pages | Interactive and reference tools |
 | `/repository/` | **NEW** section | GitHub link, contribution notes |
 
 Every moved page gets `redirect_from:` front matter listing the old URL so bookmarks continue to work.

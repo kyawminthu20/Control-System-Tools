@@ -16,7 +16,7 @@ related_standards:
     url: "/standards/us-electrical/nfpa-79/"
 crosswalk_refs:
   - name: "UL 508A / NEC / NFPA 79 Overlap"
-    url: "/crosswalks/ul508a-nec-nfpa79/"
+    url: "/tools/crosswalks/ul508a-nec-nfpa79/"
 lifecycle_stage:
   - name: "Detailed Design"
     slug: "detailed-design/"
@@ -304,4 +304,4 @@ Motor branches inside a panel typically include branch protective devices, motor
 - **NFPA 79** — Governs electrical design of the machine; UL 508A governs panel construction within that machine
 - **IEC 60204-1 Clause 11** — International equivalent for enclosed control equipment; no listing scheme, similar technical requirements
 
-<a href="{{ '/crosswalks/ul508a-nec-nfpa79/' | relative_url }}" class="card__link">View UL 508A / NEC / NFPA 79 overlap table &rarr;</a>
+<a href="{{ '/tools/crosswalks/ul508a-nec-nfpa79/' | relative_url }}" class="card__link">View UL 508A / NEC / NFPA 79 overlap table &rarr;</a>

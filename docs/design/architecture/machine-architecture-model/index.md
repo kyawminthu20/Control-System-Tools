@@ -4,7 +4,7 @@ title: "7-Layer Industrial Machine Architecture Model"
 description: "Layer-by-layer breakdown of industrial machine architecture, from the physical process to enterprise integration, with applicable standards per layer."
 breadcrumb:
   - name: "Reference Models"
-    url: "/reference/"
+    url: "/tools/reference-hub/"
   - name: "Architecture"
     url: "/design/architecture/"
   - name: "Machine Architecture Model"

@@ -2,7 +2,7 @@
 
 **Date:** 2026-03-13
 **Status:** Planning
-**Depends on:** Phase 18 Track B/C complete (`/field-engineering/` and `/reference/` surfaced)
+**Depends on:** Phase 18 Track B/C complete (`/field-engineering/` and `/tools/reference-hub/` surfaced)
 
 ## Goal
 
@@ -15,7 +15,7 @@ the site feels like an engineering navigation system rather than a repository in
 - Keep all current page URLs stable in this phase
 - No redirects, page moves, or section renames in the initial implementation
 - Do not create empty top-level sections for technologies, calculators, or broad troubleshooting
-- Consume `/field-engineering/` and `/reference/` as dependencies from Phase 18 rather than redefining them
+- Consume `/field-engineering/` and `/tools/reference-hub/` as dependencies from Phase 18 rather than redefining them
 
 ## Target information architecture
 
@@ -48,7 +48,7 @@ They are surfaced inside the new hub structure:
 Phase 19 plans around these section destinations:
 
 - `/engineering-workflow/`
-- `/reference/`
+- `/tools/reference-hub/`
 - `/field-engineering/`
 
 ### Hub page intent
@@ -162,7 +162,7 @@ Group quick-reference and meta/reference content:
 - Existing direct URLs remain valid and unchanged
 - Sidebar renders all major site destinations without broken links
 - `/engineering-workflow/` correctly routes to lifecycle, workflows, and field-engineering content
-- `/reference/` correctly routes to glossary, software stack, rag browser, crosswalks, and future quick-reference material
+- `/tools/reference-hub/` correctly routes to glossary, software stack, rag browser, crosswalks, and future quick-reference material
 - Active/open sidebar state works correctly for:
   - standards pages
   - training pages

@@ -4,7 +4,7 @@ title: "UL 508A / NEC / NFPA 79 Crosswalk"
 description: "Topic-by-topic overlap matrix for the three US standards governing industrial control panels and machinery."
 breadcrumb:
   - name: "Crosswalks"
-    url: "/crosswalks/"
+    url: "/tools/crosswalks/"
   - name: "UL 508A / NEC / NFPA 79"
 repo_path: "control-standards/rag/standards_intelligence/crosswalks/overlap_matrix/ul508a_nec_nfpa79_overlap.md"
 related_standards:
@@ -14,6 +14,9 @@ related_standards:
     url: "/standards/us-electrical/nfpa-79/"
   - name: "UL 508A"
     url: "/standards/us-electrical/ul-508a/"
+redirect_from:
+  - /crosswalks/ul508a-nec-nfpa79/
+  - /crosswalks/ul508a-nec-nfpa79/index.html
 ---
 
 <div class="page-header">

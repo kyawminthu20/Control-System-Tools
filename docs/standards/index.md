@@ -7,15 +7,15 @@ breadcrumb:
 repo_path: "control-standards/rag/standards_intelligence/"
 related_standards:
   - name: "Standards Applicability Matrix"
-    url: "/crosswalks/standards-decision-workflow/"
+    url: "/tools/crosswalks/standards-decision-workflow/"
   - name: "Crosswalks"
-    url: "/crosswalks/"
+    url: "/tools/crosswalks/"
 ---
 
 <div class="page-header">
   <span class="page-header__label">Standards Explorer</span>
   <h1>Industrial Automation Standards</h1>
-  <p>Browse standards by family. Use the <a href="{{ '/crosswalks/standards-decision-workflow/' | relative_url }}">decision workflow</a> if you're unsure which standard applies to your project.</p>
+  <p>Browse standards by family. Use the <a href="{{ '/tools/crosswalks/standards-decision-workflow/' | relative_url }}">decision workflow</a> if you're unsure which standard applies to your project.</p>
 </div>
 
 ## Quick Decision

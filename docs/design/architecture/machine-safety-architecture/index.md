@@ -4,7 +4,7 @@ title: "Universal Machine Safety Architecture Template"
 description: "Reusable safety system template covering E-stop chains, energy isolation, safety function design, and verification for industrial machines."
 breadcrumb:
   - name: "Reference Models"
-    url: "/reference/"
+    url: "/tools/reference-hub/"
   - name: "Architecture"
     url: "/design/architecture/"
   - name: "Machine Safety Architecture"

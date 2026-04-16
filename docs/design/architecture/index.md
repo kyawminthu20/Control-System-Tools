@@ -4,7 +4,7 @@ title: "Reference — Architecture"
 description: "Architecture reference models: 7-layer machine architecture, universal safety architecture, and minimum compliance stack."
 breadcrumb:
   - name: "Reference Models"
-    url: "/reference/"
+    url: "/tools/reference-hub/"
   - name: "Architecture"
 redirect_from:
   - /reference/architecture/

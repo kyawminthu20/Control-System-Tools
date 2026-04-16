@@ -116,4 +116,4 @@ rag/scenario/mini_machine_safety_design_v2/industry_overlays/semiconductor.md
 
 ## Related References
 
-- [7-Layer Machine Architecture Model]({{ '/reference/architecture/machine-architecture-model/' | relative_url }}) — layer-by-layer breakdown with applicable standards per layer
+- [7-Layer Machine Architecture Model]({{ '/design/architecture/machine-architecture-model/' | relative_url }}) — layer-by-layer breakdown with applicable standards per layer

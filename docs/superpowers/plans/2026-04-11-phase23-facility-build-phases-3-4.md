@@ -4,7 +4,7 @@
 
 **Goal:** Complete Build Sequence Phases 3 and 4 for the semiconductor facility section — instrument device-family library, vendor comparison, alarm/measurement strategy, commissioning reference, and system-to-system / standards-to-systems crosswalks — all promoted from staging into RAG and rendered as Jekyll site pages.
 
-**Architecture:** Three new instrumentation sub-pages under the existing `/instrumentation/` landing; two new first-level facility pages (`/commissioning/` and `/crosswalks/`); corresponding RAG promotions with AI boundary headers; nav and cross-link wiring. All content derived from `planning/semi_facility/instrumentation/` staging files. No new JS/CSS needed — uses existing `.page-header`, badge, Mermaid, and table styles.
+**Architecture:** Three new instrumentation sub-pages under the existing `/instrumentation/` landing; two new first-level facility pages (`/commissioning/` and `/tools/crosswalks/`); corresponding RAG promotions with AI boundary headers; nav and cross-link wiring. All content derived from `planning/semi_facility/instrumentation/` staging files. No new JS/CSS needed — uses existing `.page-header`, badge, Mermaid, and table styles.
 
 **Tech Stack:** Jekyll 4.2, Liquid templating, Mermaid.js CDN, `docs/_data/navigation.yml` for sidebar, `control-standards/rag/design_framework/semiconductor_facility/` as RAG target.
 
@@ -1275,7 +1275,7 @@ Standards without corpus pages are referenced in the facility section with enoug
 - [Common Control Philosophy](../control-philosophy/) — permissive chains and system state management
 - [Commissioning Reference](../commissioning/) — commissioning sequence and readiness criteria
 - [Standards Graph](/standards/graph/) — visual map of all standards relationships in this site
-- [Crosswalks](/crosswalks/) — IEC 61511 vs. IEC 61508, IEC 60079 vs. NEC Art. 500/505
+- [Crosswalks](/tools/crosswalks/) — IEC 61511 vs. IEC 61508, IEC 60079 vs. NEC Art. 500/505
 
 ---
 
@@ -1424,7 +1424,7 @@ Add entry:
   - `/instrumentation/vendor-families/` — manufacturer comparison by measurement class (pressure, flow, UPW, MFCs, gas detection, level, vacuum, cleanroom)
   - `/instrumentation/alarm-strategy/` — alarm philosophy, measurement windows, alarm classes, safe-state design
   - `/commissioning/` — phase-based commissioning framework with readiness criteria and system-specific notes
-  - `/crosswalks/` — system-to-system dependency map and standards-to-systems crosswalk
+  - `/tools/crosswalks/` — system-to-system dependency map and standards-to-systems crosswalk
 - Added "In This Section" navigation block to instrumentation landing page
 - Updated facility index and navigation.yml
 - Jekyll build: clean, ~157 pages
