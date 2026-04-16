@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-15 (Batch 9)
+**Last Updated:** 2026-04-15 (Batch 10)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,16 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-15 — Phase 26 Batch 10 COMPLETE: navigation.yml rewrite + 4 top-level landings
+
+**Type:** Site structure / Navigation rewrite
+**Status:** Complete
+
+- Added 4 top-level landing pages required by the new nav structure — `docs/fundamentals/index.md`, `docs/implementation/index.md`, `docs/verification/index.md`, `docs/tools/index.md`. Each page presents sub-group cards, a scope blockquote, and cross-links into adjacent sections. Without these landings, sidebar group labels (which are clickable) would have 404'd.
+- Fully rewrote `docs/_data/navigation.yml` from the prior 5-group historical layout to the 11-group intent-based structure: Home, Fundamentals, Standards, Design, Implementation, Verification, Industries, Troubleshooting, Training, Tools, Repository. Match prefixes realigned; legacy "Engineering Workflow" and "Reference" meta-groups dropped.
+- Standards group retains the full per-family hierarchy (US Electrical → NEC/NFPA 79/UL 508A, Machinery → IEC 60204-1, Functional Safety → IEC 61508/61511/62061/ISO 12100/ISO 13849-1, Cybersecurity → IEC 62443, Hazardous Area → IEC 60079, Semiconductor → SEMI, plus the Relationship Graph).
+- Jekyll build clean (267 HTML files); internal link check exit 0.
 
 ## 2026-04-15 — Phase 26 Batch 9 COMPLETE: Repository landing + About relocation
 

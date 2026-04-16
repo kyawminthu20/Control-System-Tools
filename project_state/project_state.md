@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-04-15
 **Status:** Active
-**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batches 1–9 complete)
-**Next Phase:** Phase 26 Batch 10 — Navigation.yml rewrite to 10-group structure (plan Task 13)
+**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batches 1–10 complete)
+**Next Phase:** Phase 26 Batch 11 — Site-wide cross-link sweep for residual old URLs (plan Task 14)
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,16 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+Phase 26 Batch 10 (Task 13) is complete:
+- Four new top-level landing pages created to support the 10-group nav structure without producing broken sidebar links:
+  - `docs/fundamentals/index.md` — sub-group cards for electrical, control, motors
+  - `docs/implementation/index.md` — commissioning templates, scenarios, four lifecycle stages (build/installation/pre-commissioning/commissioning), plus VFD and servo commissioning workflows
+  - `docs/verification/index.md` — risk assessment, SRS, safety architecture, safety wiring, maintenance, management of change, full lifecycle journey
+  - `docs/tools/index.md` — RAG browser, glossary, crosswalks, reference hub
+- `docs/_data/navigation.yml` fully rewritten from the prior 5-group historical layout to the new 11-top-level structure (Home + Fundamentals + Standards + Design + Implementation + Verification + Industries + Troubleshooting + Training + Tools + Repository). Match prefixes realigned and the hardcoded legacy "Engineering Workflow" / "Reference" groups dropped.
+- Sidebar now renders every top-level group clickable without 404s.
+- Jekyll build clean (267 HTML files, +4 from Batch 9); internal link check exit 0.
 
 Phase 26 Batch 9 (Task 12) is complete:
 - Created `docs/repository/index.md` — Repository and Project Info landing. Lists the GitHub URL, a link to the moved About page, a "How This Site Is Built" block, a "Content Source of Truth" table keyed off `project_state/`, and a short contributing note.
