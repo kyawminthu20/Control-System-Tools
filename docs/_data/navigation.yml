@@ -10,6 +10,13 @@
       url: "/fundamentals/electrical/"
     - label: "Control Theory"
       url: "/fundamentals/control/"
+      children:
+        - label: "Control Theory Overview"
+          url: "/fundamentals/control/control-theory-overview/"
+        - label: "PID — Intuitive Foundation"
+          url: "/fundamentals/control/pid-foundation/"
+        - label: "PID Intuition in Practice"
+          url: "/fundamentals/control/pid-intuition/"
     - label: "Motors &amp; Drives"
       url: "/fundamentals/motors/"
 
@@ -187,6 +194,19 @@
       url: "/tools/glossary/"
     - label: "Crosswalks"
       url: "/tools/crosswalks/"
+      children:
+        - label: "NFPA 79 ↔ IEC 60204-1"
+          url: "/tools/crosswalks/nfpa79-iec60204/"
+        - label: "UL 508A / NEC / NFPA 79"
+          url: "/tools/crosswalks/ul508a-nec-nfpa79/"
+        - label: "IEC 61511 ↔ IEC 61508"
+          url: "/tools/crosswalks/iec61511-iec61508/"
+        - label: "IEC 60079 ↔ NEC 500/505"
+          url: "/tools/crosswalks/iec60079-nec-500-505/"
+        - label: "Standards Decision Workflow"
+          url: "/tools/crosswalks/standards-decision-workflow/"
+        - label: "Standards Comparison Tool"
+          url: "/tools/crosswalks/compare/"
     - label: "Reference Hub"
       url: "/tools/reference-hub/"
 

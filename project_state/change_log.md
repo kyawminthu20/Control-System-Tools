@@ -18,6 +18,19 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-04-16 — Sidebar Enumeration for Control Theory & Crosswalks
+
+**Type:** Navigation / Discoverability
+**Status:** Complete
+
+Hybrid response to the 2026-04-16 site audit finding that `docs/_data/navigation.yml` listed `/fundamentals/control/` and `/tools/crosswalks/` as hubs without enumerating children, leaving 20+ reachable pages invisible in the sidebar.
+
+- **Control Theory**: added 3 curated entry modules (Control Theory Overview, PID — Intuitive Foundation, PID Intuition in Practice). Full 14-page catalog continues to render on the landing page's data-driven table — sidebar stays scannable.
+- **Crosswalks**: full enumeration of all 6 crosswalk pages (NFPA 79 ↔ IEC 60204-1, UL 508A / NEC / NFPA 79, IEC 61511 ↔ IEC 61508, IEC 60079 ↔ NEC 500/505, Standards Decision Workflow, Standards Comparison Tool).
+- Semiconductor Facility subtree (11+3 pages) **not** added to sidebar — its landing already presents all systems in a descriptive table that would be hard to replicate cleanly as flat nav entries.
+
+Jekyll build clean (268 files); internal link checker exit 0; visual verification of both built pages confirms new entries render at correct depth.
+
 ## 2026-04-16 — Trust-Boundary Deduplication
 
 **Type:** Site / Content Hygiene
