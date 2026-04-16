@@ -132,9 +132,3 @@ flowchart TD
 - [Instrumentation Reference](../) — selection flow and compliance lenses overview
 - [Alarm and Measurement Strategy](../alarm-strategy/) — measurement windows and alarm class definitions
 - [Common Control Philosophy](../../control-philosophy/) — how instruments connect to control logic
-
----
-
-<div class="trust-boundary">
-  {% include trust-boundary.html %}
-</div>

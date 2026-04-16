@@ -40,7 +40,3 @@ breadcrumb:
 - **Implementation** — [Commissioning templates]({{ '/implementation/commissioning-templates/' | relative_url }}) · [Scenarios]({{ '/implementation/scenarios/' | relative_url }})
 - **Verification** — [Safety wiring]({{ '/verification/safety-wiring/' | relative_url }}) · [Management of change]({{ '/verification/management-of-change/' | relative_url }})
 - **Tools** — [Glossary]({{ '/tools/glossary/' | relative_url }}) · [RAG file browser]({{ '/tools/rag-browser/' | relative_url }})
-
----
-
-{% include trust-boundary.html %}

@@ -39,7 +39,3 @@ breadcrumb:
 - [Implementation]({{ '/implementation/' | relative_url }}) — commissioning templates and scenario references that use these concepts during build and install
 - [Verification]({{ '/verification/' | relative_url }}) — lifecycle stages, risk assessment, and safety architecture that build on safety-relevant fundamentals
 - [Tools]({{ '/tools/reference-hub/' | relative_url }}) — glossary, crosswalks, RAG browser
-
----
-
-{% include trust-boundary.html %}

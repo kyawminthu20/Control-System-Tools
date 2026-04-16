@@ -145,8 +145,6 @@ Escalate to nodal, loop, Thévenin, or Norton methods if:
 | [Motor Selection Workflow]({{ '/design/workflows/motor-selection/' | relative_url }}) | When resistive checks arise in a motor-circuit design |
 | [VFD Commissioning Workflow]({{ '/implementation/vfd-commissioning/' | relative_url }}) | Electrical pre-checks before drive power-up |
 
-{% include trust-boundary.html %}
-
 ## Related Checklists
 
 - [Pre-Power Panel and Incoming Supply Check]({{ '/implementation/commissioning-templates/pre-power-panel/' | relative_url }})

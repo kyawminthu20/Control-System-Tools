@@ -137,9 +137,3 @@ Populate one row per alarm class per tag. A tag with both `ALARM` and `TRIP` lev
 - [Vendor Families](../vendor-families/) — manufacturer comparison by measurement class
 - [Safety and Shutdown Architecture](../../safety-shutdown/) — shutdown layers and cause-and-effect design
 - [Common Control Philosophy](../../control-philosophy/) — permissive, interlock, and trip patterns
-
----
-
-<div class="trust-boundary">
-  {% include trust-boundary.html %}
-</div>

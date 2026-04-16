@@ -65,7 +65,3 @@ breadcrumb:
 - [Design]({{ '/design/' | relative_url }}) — architecture models, motor selection, design workflows
 - [Implementation]({{ '/implementation/' | relative_url }}) — commissioning templates and scenarios
 - [Standards]({{ '/standards/' | relative_url }}) — ISO 12100, ISO 13849-1, IEC 62061, IEC 61508, IEC 61511, IEC 62443
-
----
-
-{% include trust-boundary.html %}

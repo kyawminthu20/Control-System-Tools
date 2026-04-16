@@ -114,8 +114,6 @@ Work through in order:
 | [VFD Commissioning Workflow]({{ '/implementation/vfd-commissioning/' | relative_url }}) | Re-run commissioning steps if parameter changes are needed |
 | [Servo Commissioning Workflow]({{ '/implementation/servo-commissioning/' | relative_url }}) | Re-run servo axis steps for instability faults |
 
-{% include trust-boundary.html %}
-
 ## Related Checklists
 
 - [Motor Rotation and Overload Verification]({{ '/implementation/commissioning-templates/motor-rotation-verification/' | relative_url }})

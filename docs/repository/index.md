@@ -41,7 +41,3 @@ breadcrumb:
 ## Contributing
 
 This is a personal-use knowledge base. There is no public contribution workflow. Site edits are made directly against `master`, with a [Phase 26 plan](https://github.com/kyawminthu20/Control-System-Tools/blob/master/docs/superpowers/plans/2026-04-14-phase26-nav-restructure.md) tracking the ongoing navigation restructure.
-
----
-
-{% include trust-boundary.html %}

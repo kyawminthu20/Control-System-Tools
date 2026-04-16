@@ -98,5 +98,3 @@ redirect_from:
 | [Standards](/standards/) | Code requirements that govern workflow outcomes |
 | [Lifecycle](/verification/lifecycle/) | Stage-oriented engineering process context |
 | [Scenarios](/implementation/scenarios/) | Applied project examples using these workflows |
-
-{% include trust-boundary.html %}

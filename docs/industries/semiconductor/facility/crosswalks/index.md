@@ -130,9 +130,3 @@ Standards without corpus pages are referenced in the facility section with enoug
 - [Common Control Philosophy](../control-philosophy/) — permissive chains and system state management
 - [Commissioning Reference](../commissioning/) — commissioning sequence and readiness criteria
 - [Standards Graph](/standards/graph/) — visual map of all standards relationships in this site
-
----
-
-<div class="trust-boundary">
-  {% include trust-boundary.html %}
-</div>

@@ -1,8 +1,8 @@
 # Project State
 
-**Last Updated:** 2026-04-15
+**Last Updated:** 2026-04-16
 **Status:** Active
-**Current Phase:** Phase 26 COMPLETE — Navigation Restructure and Link Audit
+**Current Phase:** Phase 26 COMPLETE — Navigation Restructure and Link Audit (+ trust-boundary deduplication 2026-04-16)
 **Next Phase:** Phase 27 PLANNING — TBD
 **Delivery Target:** GitHub Pages static site for personal use
 

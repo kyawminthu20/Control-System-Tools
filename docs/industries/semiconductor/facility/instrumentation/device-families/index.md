@@ -131,9 +131,3 @@ Higher criticality demands tighter requirements for proof, diagnostics, testing 
 - [Vendor Families](../vendor-families/) — manufacturer comparison by measurement class
 - [Alarm and Measurement Strategy](../alarm-strategy/) — alarm classes, measurement windows, safe-state design
 - [Common Control Philosophy](../../control-philosophy/) — permissive and interlock patterns
-
----
-
-<div class="trust-boundary">
-  {% include trust-boundary.html %}
-</div>

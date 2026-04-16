@@ -121,8 +121,6 @@ Document and retain:
 | [NEC Art. 430](/standards/us-electrical/nec/) | Motor branch circuits, protection, disconnecting means |
 | [IEC 60204-1](/standards/machinery/iec-60204-1/) | Machine electrical commissioning and verification |
 
-{% include trust-boundary.html %}
-
 ## Related Checklists
 
 - [Capacitor Discharge Awareness Check]({{ '/implementation/commissioning-templates/capacitor-discharge/' | relative_url }})

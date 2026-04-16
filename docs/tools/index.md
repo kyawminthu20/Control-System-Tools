@@ -42,7 +42,3 @@ breadcrumb:
 - [Standards]({{ '/standards/' | relative_url }}) — full per-standard pages and the interactive relationship graph
 - [Design]({{ '/design/' | relative_url }}) — architecture models, motor selection, design workflows
 - [Repository]({{ '/repository/' | relative_url }}) — build stack, trust boundary, source links
-
----
-
-{% include trust-boundary.html %}

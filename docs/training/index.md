@@ -31,7 +31,3 @@ Additional structured paths will appear here as they are authored.
 - **Verification** — [Lifecycle stages]({{ '/verification/lifecycle/' | relative_url }}) · [Risk assessment]({{ '/verification/risk-assessment/' | relative_url }}) · [Safety architecture]({{ '/verification/safety-architecture/' | relative_url }})
 - **Implementation** — [Scenarios]({{ '/implementation/scenarios/' | relative_url }}) · [Commissioning templates]({{ '/implementation/commissioning-templates/' | relative_url }})
 - **Tools** — [Reference hub]({{ '/tools/reference-hub/' | relative_url }}) · [Glossary]({{ '/tools/glossary/' | relative_url }}) · [Crosswalks]({{ '/tools/crosswalks/' | relative_url }}) · [RAG browser]({{ '/tools/rag-browser/' | relative_url }})
-
----
-
-{% include trust-boundary.html %}

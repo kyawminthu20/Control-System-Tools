@@ -175,9 +175,3 @@ flowchart LR
 - [Common Control Philosophy](../control-philosophy/) — mode, state, permissive, and interlock patterns
 - [Instrumentation Reference](../instrumentation/) — device selection and alarm strategy
 - [Tool-Facility Interface](../tool-facility-interface/) — handshake and permit-to-run logic
-
----
-
-<div class="trust-boundary">
-  {% include trust-boundary.html %}
-</div>

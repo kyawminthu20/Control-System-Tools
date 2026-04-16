@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-15 (Phase 26 COMPLETE)
+**Last Updated:** 2026-04-16 (trust-boundary deduplication)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,21 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-16 — Trust-Boundary Deduplication
+
+**Type:** Site / Content Hygiene
+**Status:** Complete
+
+Removed duplicate trust-boundary notices on 18 site pages. Root cause: `docs/_layouts/default.html:52` already auto-includes `trust-boundary.html` on every page, so per-page inline `{% include trust-boundary.html %}` calls produced two notices back-to-back. Five pages in `/industries/semiconductor/facility/` additionally wrapped the include in a redundant `<div class="trust-boundary">` parent, rendering an empty styled wrapper around the include's own div.
+
+Pages fixed:
+- `docs/training/index.md`, `docs/repository/index.md`, `docs/troubleshooting/index.md`, `docs/fundamentals/index.md`, `docs/implementation/index.md`, `docs/tools/index.md`, `docs/verification/index.md`, `docs/design/workflows/index.md`
+- `docs/design/workflows/motor-selection/index.md`, `docs/design/workflows/electrical-review/index.md`
+- `docs/implementation/vfd-commissioning/index.md`, `docs/implementation/servo-commissioning/index.md`, `docs/troubleshooting/motors/index.md`
+- `docs/industries/semiconductor/facility/commissioning/index.md`, `.../crosswalks/index.md`, `.../instrumentation/vendor-families/index.md`, `.../instrumentation/device-families/index.md`, `.../instrumentation/alarm-strategy/index.md`
+
+Verification: Jekyll build clean (1.327 s), internal link checker exit 0 (268 files scanned), zero built HTML pages now contain the trust-boundary heading more than once. The planning doc at `docs/superpowers/plans/2026-04-11-phase23-facility-build-phases-3-4.md` contains the include in example snippets but has no frontmatter, so Jekyll does not process its Liquid — left untouched.
 
 ## 2026-04-15 — Phase 26 COMPLETE: Navigation Restructure and Link Audit
 

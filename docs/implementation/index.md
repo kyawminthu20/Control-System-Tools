@@ -80,7 +80,3 @@ These lifecycle pages cover the execution half of the V-model. The analysis/desi
 - [Design]({{ '/design/' | relative_url }}) — architecture models, motor selection, design workflows
 - [Verification]({{ '/verification/' | relative_url }}) — risk assessment, safety architecture, maintenance, management of change
 - [Troubleshooting]({{ '/troubleshooting/' | relative_url }}) — field diagnosis by symptom category
-
----
-
-{% include trust-boundary.html %}

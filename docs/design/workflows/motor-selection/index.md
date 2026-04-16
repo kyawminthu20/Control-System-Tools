@@ -106,8 +106,6 @@ Before finalizing the design, confirm the path for:
 | [NFPA 79](/standards/us-electrical/nfpa-79/) | Machine motor requirements (Chapter 12) |
 | [IEC 60204-1](/standards/machinery/iec-60204-1/) | International machine electrical equipment (§12) |
 
-{% include trust-boundary.html %}
-
 ## Related Checklists
 
 - [Motor Nameplate and Overload Setting]({{ '/implementation/commissioning-templates/motor-nameplate-overload/' | relative_url }})

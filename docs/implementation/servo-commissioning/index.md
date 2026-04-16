@@ -113,8 +113,6 @@ If mechanical issues appear (resonance, backlash, compliance), resolve them mech
 | [VFD Commissioning Workflow]({{ '/implementation/vfd-commissioning/' | relative_url }}) | For VFD-driven induction motors on the same machine |
 | [Motor Selection Workflow]({{ '/design/workflows/motor-selection/' | relative_url }}) | Review original selection basis |
 
-{% include trust-boundary.html %}
-
 ## Related Checklists
 
 - [Drive Commissioning]({{ '/implementation/commissioning-templates/drive-commissioning/' | relative_url }})
