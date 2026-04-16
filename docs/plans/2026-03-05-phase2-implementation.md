@@ -349,12 +349,12 @@ Replace the full content of `docs/_includes/topnav.html` with:
   <a href="{{ '/' | relative_url }}" class="topnav__brand">CS Standards Atlas</a>
   <ul class="topnav__links">
     <li><a href="{{ '/standards/' | relative_url }}"{% if page.url contains '/standards/' %} class="active"{% endif %}>Standards</a></li>
-    <li><a href="{{ '/lifecycle/' | relative_url }}"{% if page.url contains '/lifecycle/' %} class="active"{% endif %}>Lifecycle</a></li>
+    <li><a href="{{ '/verification/lifecycle/' | relative_url }}"{% if page.url contains '/verification/lifecycle/' %} class="active"{% endif %}>Lifecycle</a></li>
     <li><a href="{{ '/industries/' | relative_url }}"{% if page.url contains '/industries/' %} class="active"{% endif %}>Industries</a></li>
-    <li><a href="{{ '/scenarios/' | relative_url }}"{% if page.url contains '/scenarios/' %} class="active"{% endif %}>Scenarios</a></li>
+    <li><a href="{{ '/implementation/scenarios/' | relative_url }}"{% if page.url contains '/implementation/scenarios/' %} class="active"{% endif %}>Scenarios</a></li>
     <li><a href="{{ '/tools/crosswalks/' | relative_url }}"{% if page.url contains '/tools/crosswalks/' %} class="active"{% endif %}>Crosswalks</a></li>
-    <li><a href="{{ '/software-stack/' | relative_url }}"{% if page.url contains '/software-stack/' %} class="active"{% endif %}>Software Stack</a></li>
-    <li><a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about/' %} class="active"{% endif %}>About</a></li>
+    <li><a href="{{ '/design/software-stack/' | relative_url }}"{% if page.url contains '/design/software-stack/' %} class="active"{% endif %}>Software Stack</a></li>
+    <li><a href="{{ '/repository/about/' | relative_url }}"{% if page.url contains '/repository/about/' %} class="active"{% endif %}>About</a></li>
   </ul>
   <div class="topnav__search">
     <input

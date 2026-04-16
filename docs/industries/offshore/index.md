@@ -118,6 +118,6 @@ On most requirements the two societies are equivalent. Key difference: emergency
 
 ---
 
-<a href="{{ '/scenarios/offshore-platform-control/' | relative_url }}" class="card__link">See Offshore Platform Control scenario &rarr;</a>
+<a href="{{ '/implementation/scenarios/offshore-platform-control/' | relative_url }}" class="card__link">See Offshore Platform Control scenario &rarr;</a>
 
 <a href="{{ '/industries/' | relative_url }}" class="card__link">&larr; Industry matrix</a>

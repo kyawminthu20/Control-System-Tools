@@ -8,7 +8,7 @@
 
 ## Goal
 
-Deepen the RAG source and the `/software-stack/` site page so engineers get practical, actionable answers to three questions: "When is ladder logic safety-related?", "What must be traceable?", and "What should actually be logged?" — with vendor-specific E-stop patterns for Rockwell GuardLogix and Siemens S7-1500F.
+Deepen the RAG source and the `/design/software-stack/` site page so engineers get practical, actionable answers to three questions: "When is ladder logic safety-related?", "What must be traceable?", and "What should actually be logged?" — with vendor-specific E-stop patterns for Rockwell GuardLogix and Siemens S7-1500F.
 
 ---
 

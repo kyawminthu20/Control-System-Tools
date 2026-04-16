@@ -55,12 +55,12 @@ breadcrumb:
   <div class="card">
     <h3>Fundamentals</h3>
     <p>8 modules — circuit theory, passive components, equations, conductor sizing.</p>
-    <a href="{{ '/training/fundamentals/' | relative_url }}">Browse Fundamentals &rarr;</a>
+    <a href="{{ '/fundamentals/electrical/' | relative_url }}">Browse Fundamentals &rarr;</a>
   </div>
   <div class="card">
     <h3>Electrical Machines</h3>
     <p>13 modules — induction and DC motors, VFDs, servo drives, motor selection.</p>
-    <a href="{{ '/training/electrical-machines/' | relative_url }}">Browse Electrical Machines &rarr;</a>
+    <a href="{{ '/fundamentals/motors/' | relative_url }}">Browse Electrical Machines &rarr;</a>
   </div>
   <div class="card">
     <h3>NEC Application</h3>
@@ -77,32 +77,32 @@ breadcrumb:
 
 | Module | Topics |
 |--------|--------|
-| [Electrical Quantities and Circuit Language]({{ '/training/fundamentals/electrical-quantities/' | relative_url }}) | Voltage, current, resistance, power, circuit topology |
-| [Series, Parallel, and Divider Methods]({{ '/training/fundamentals/series-parallel-dividers/' | relative_url }}) | Series/parallel reduction, voltage and current dividers |
-| [Kirchhoff's Laws and Systematic Analysis]({{ '/training/fundamentals/kirchhoff-laws/' | relative_url }}) | KCL, KVL, nodal analysis, loop analysis |
-| [Equivalent Circuit Methods]({{ '/training/fundamentals/equivalent-circuit-methods/' | relative_url }}) | Thevenin, Norton, source transformation, superposition |
-| [Electrical Equations Reference]({{ '/training/fundamentals/electrical-equations-reference/' | relative_url }}) | Ohm's law, power, dividers, KCL/KVL, capacitor energy |
-| [Passive Components]({{ '/training/fundamentals/passive-components/' | relative_url }}) | Resistors, capacitors, ratings, stored energy |
-| [Diodes, Transistors, and Switching Basics]({{ '/training/fundamentals/diodes-transistors/' | relative_url }}) | Diode families, BJT, MOSFET, IGBT, flyback diodes |
-| [Conductor Ampacity and Termination Temperature]({{ '/training/fundamentals/conductor-ampacity/' | relative_url }}) | NEC ampacity, temperature ratings, termination limits |
+| [Electrical Quantities and Circuit Language]({{ '/fundamentals/electrical/electrical-quantities/' | relative_url }}) | Voltage, current, resistance, power, circuit topology |
+| [Series, Parallel, and Divider Methods]({{ '/fundamentals/electrical/series-parallel-dividers/' | relative_url }}) | Series/parallel reduction, voltage and current dividers |
+| [Kirchhoff's Laws and Systematic Analysis]({{ '/fundamentals/electrical/kirchhoff-laws/' | relative_url }}) | KCL, KVL, nodal analysis, loop analysis |
+| [Equivalent Circuit Methods]({{ '/fundamentals/electrical/equivalent-circuit-methods/' | relative_url }}) | Thevenin, Norton, source transformation, superposition |
+| [Electrical Equations Reference]({{ '/fundamentals/electrical/electrical-equations-reference/' | relative_url }}) | Ohm's law, power, dividers, KCL/KVL, capacitor energy |
+| [Passive Components]({{ '/fundamentals/electrical/passive-components/' | relative_url }}) | Resistors, capacitors, ratings, stored energy |
+| [Diodes, Transistors, and Switching Basics]({{ '/fundamentals/electrical/diodes-transistors/' | relative_url }}) | Diode families, BJT, MOSFET, IGBT, flyback diodes |
+| [Conductor Ampacity and Termination Temperature]({{ '/fundamentals/electrical/conductor-ampacity/' | relative_url }}) | NEC ampacity, temperature ratings, termination limits |
 
 ### Electrical Machines
 
 | Module | Topics |
 |--------|--------|
-| [Induction Motor Basics]({{ '/training/electrical-machines/induction-motor-basics/' | relative_url }}) | Stator, rotating field, rotor, slip, torque production |
-| [DC Motor Basics]({{ '/training/electrical-machines/dc-motor-basics/' | relative_url }}) | Armature, commutator, back-EMF, speed control |
-| [Motor Nameplates, Slip, and Torque]({{ '/training/electrical-machines/motor-nameplates-slip-torque/' | relative_url }}) | Nameplate data, NEMA designs, torque curve |
-| [Motor Family Comparison]({{ '/training/electrical-machines/motor-family-comparison/' | relative_url }}) | Induction, DC, BLDC, PMSM, stepper overview |
-| [AC vs DC Motor Comparison]({{ '/training/electrical-machines/ac-vs-dc-motors/' | relative_url }}) | Speed control, maintenance, application selection |
-| [VFD Fundamentals]({{ '/training/electrical-machines/vfd-fundamentals/' | relative_url }}) | Rectifier, DC bus, inverter, V/Hz, vector control |
-| [Servo Drive Fundamentals]({{ '/training/electrical-machines/servo-drive-fundamentals/' | relative_url }}) | Servo loops, encoder feedback, tuning basics |
-| [VFD and Servo Architecture Diagrams]({{ '/training/electrical-machines/vfd-servo-architecture/' | relative_url }}) | System block diagrams, wiring topology |
-| [BLDC, EV, and Drone Motor Comparison]({{ '/training/electrical-machines/bldc-ev-drone-motors/' | relative_url }}) | BLDC vs PMSM, EV traction, drone ESC |
-| [Motor Control Methods and Operating Regions]({{ '/training/electrical-machines/motor-control-methods/' | relative_url }}) | V/Hz, FOC, DTC, field weakening, constant torque/power |
-| [Motor Efficiency, Power Factor, and Losses]({{ '/training/electrical-machines/motor-efficiency-losses/' | relative_url }}) | IE efficiency classes, loss types, power factor correction |
-| [Motor and VFD Equations Reference]({{ '/training/electrical-machines/motor-vfd-equations/' | relative_url }}) | Speed, torque, slip, power, VFD sizing equations |
-| [Servo Feedback and Inertia Matching]({{ '/training/electrical-machines/servo-feedback-inertia/' | relative_url }}) | Encoder types, inertia ratio, stability limits |
+| [Induction Motor Basics]({{ '/fundamentals/motors/induction-motor-basics/' | relative_url }}) | Stator, rotating field, rotor, slip, torque production |
+| [DC Motor Basics]({{ '/fundamentals/motors/dc-motor-basics/' | relative_url }}) | Armature, commutator, back-EMF, speed control |
+| [Motor Nameplates, Slip, and Torque]({{ '/fundamentals/motors/motor-nameplates-slip-torque/' | relative_url }}) | Nameplate data, NEMA designs, torque curve |
+| [Motor Family Comparison]({{ '/fundamentals/motors/motor-family-comparison/' | relative_url }}) | Induction, DC, BLDC, PMSM, stepper overview |
+| [AC vs DC Motor Comparison]({{ '/fundamentals/motors/ac-vs-dc-motors/' | relative_url }}) | Speed control, maintenance, application selection |
+| [VFD Fundamentals]({{ '/fundamentals/motors/vfd-fundamentals/' | relative_url }}) | Rectifier, DC bus, inverter, V/Hz, vector control |
+| [Servo Drive Fundamentals]({{ '/fundamentals/motors/servo-drive-fundamentals/' | relative_url }}) | Servo loops, encoder feedback, tuning basics |
+| [VFD and Servo Architecture Diagrams]({{ '/fundamentals/motors/vfd-servo-architecture/' | relative_url }}) | System block diagrams, wiring topology |
+| [BLDC, EV, and Drone Motor Comparison]({{ '/fundamentals/motors/bldc-ev-drone-motors/' | relative_url }}) | BLDC vs PMSM, EV traction, drone ESC |
+| [Motor Control Methods and Operating Regions]({{ '/fundamentals/motors/motor-control-methods/' | relative_url }}) | V/Hz, FOC, DTC, field weakening, constant torque/power |
+| [Motor Efficiency, Power Factor, and Losses]({{ '/fundamentals/motors/motor-efficiency-losses/' | relative_url }}) | IE efficiency classes, loss types, power factor correction |
+| [Motor and VFD Equations Reference]({{ '/fundamentals/motors/motor-vfd-equations/' | relative_url }}) | Speed, torque, slip, power, VFD sizing equations |
+| [Servo Feedback and Inertia Matching]({{ '/fundamentals/motors/servo-feedback-inertia/' | relative_url }}) | Encoder types, inertia ratio, stability limits |
 
 ### NEC Application
 
@@ -120,8 +120,8 @@ breadcrumb:
     <summary>Training</summary>
     <ul class="sidebar__links">
       <li><a href="{{ '/training/' | relative_url }}">All Modules</a></li>
-      <li><a href="{{ '/training/fundamentals/' | relative_url }}" class="sub">Fundamentals</a></li>
-      <li><a href="{{ '/training/electrical-machines/' | relative_url }}" class="sub">Electrical Machines</a></li>
+      <li><a href="{{ '/fundamentals/electrical/' | relative_url }}" class="sub">Fundamentals</a></li>
+      <li><a href="{{ '/fundamentals/motors/' | relative_url }}" class="sub">Electrical Machines</a></li>
       <li><a href="{{ '/training/nec-application/' | relative_url }}" class="sub">NEC Application</a></li>
     </ul>
   </details>
@@ -178,7 +178,7 @@ breadcrumb:
   - name: "Training"
     url: "/training/"
   - name: "Fundamentals"
-    url: "/training/fundamentals/"
+    url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/[source_filename].md"
 ---
 
@@ -194,9 +194,9 @@ repo_path: "control-standards/rag/training_modules/fundamentals/[source_filename
 ---
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
-  <a href="{{ '/training/fundamentals/[prev-slug]/' | relative_url }}">&larr; [Prev Title]</a>
-  <a href="{{ '/training/fundamentals/' | relative_url }}">↑ Fundamentals</a>
-  <a href="{{ '/training/fundamentals/[next-slug]/' | relative_url }}">[Next Title] &rarr;</a>
+  <a href="{{ '/fundamentals/electrical/[prev-slug]/' | relative_url }}">&larr; [Prev Title]</a>
+  <a href="{{ '/fundamentals/electrical/' | relative_url }}">↑ Fundamentals</a>
+  <a href="{{ '/fundamentals/electrical/[next-slug]/' | relative_url }}">[Next Title] &rarr;</a>
 </div>
 ```
 
@@ -260,7 +260,7 @@ control-standards/rag/training_modules/electrical_machines/servo_feedback_and_in
 
 **Step 2:** Write each page using the same template as Task 2, with these changes:
 - `page-header__label`: `Training — Electrical Machines`
-- breadcrumb `name: "Electrical Machines"`, `url: "/training/electrical-machines/"`
+- breadcrumb `name: "Electrical Machines"`, `url: "/fundamentals/motors/"`
 - `repo_path` points to the correct `electrical_machines/` source file
 
 **Module order for prev/next nav (electrical-machines):**

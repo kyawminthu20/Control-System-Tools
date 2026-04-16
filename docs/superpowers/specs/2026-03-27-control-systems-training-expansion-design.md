@@ -51,7 +51,7 @@ breadcrumb:
   - name: "Training"
     url: "/training/"
   - name: "Control Systems"
-    url: "/training/control-systems/"
+    url: "/fundamentals/control/"
 related_standards: [] # populated per module where relevant
 ```
 

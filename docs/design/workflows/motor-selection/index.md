@@ -84,10 +84,10 @@ Before finalizing the design, confirm the path for:
 
 | Module | Topic |
 |---|---|
-| [Induction Motor Basics]({{ '/training/electrical-machines/induction-motor-basics/' | relative_url }}) | Motor operating principles |
-| [Motor Nameplates, Slip, and Torque]({{ '/training/electrical-machines/motor-nameplates-slip-torque/' | relative_url }}) | Nameplate reading and torque curves |
-| [Motor Family Comparison]({{ '/training/electrical-machines/motor-family-comparison/' | relative_url }}) | AC, DC, servo, stepper comparison |
-| [VFD Fundamentals]({{ '/training/electrical-machines/vfd-fundamentals/' | relative_url }}) | Drive-driven motor selection considerations |
+| [Induction Motor Basics]({{ '/fundamentals/motors/induction-motor-basics/' | relative_url }}) | Motor operating principles |
+| [Motor Nameplates, Slip, and Torque]({{ '/fundamentals/motors/motor-nameplates-slip-torque/' | relative_url }}) | Nameplate reading and torque curves |
+| [Motor Family Comparison]({{ '/fundamentals/motors/motor-family-comparison/' | relative_url }}) | AC, DC, servo, stepper comparison |
+| [VFD Fundamentals]({{ '/fundamentals/motors/vfd-fundamentals/' | relative_url }}) | Drive-driven motor selection considerations |
 | [Branch Circuits vs. Feeders]({{ '/training/nec-application/branch-circuits-vs-feeders/' | relative_url }}) | NEC conductor and OCPD sizing |
 | [Art. 430 Practical Workflow]({{ '/training/nec-application/article-430-workflow/' | relative_url }}) | NEC motor code application |
 
@@ -95,7 +95,7 @@ Before finalizing the design, confirm the path for:
 
 | Workflow | When to use |
 |---|---|
-| [VFD Commissioning Workflow]({{ '/workflows/vfd-commissioning/' | relative_url }}) | After selection, when a VFD is in the design |
+| [VFD Commissioning Workflow]({{ '/implementation/vfd-commissioning/' | relative_url }}) | After selection, when a VFD is in the design |
 | [Motor Troubleshooting Decision Tree]({{ '/troubleshooting/motors/' | relative_url }}) | During field startup or fault investigation |
 
 ## Related standards
@@ -110,7 +110,7 @@ Before finalizing the design, confirm the path for:
 
 ## Related Checklists
 
-- [Motor Nameplate and Overload Setting]({{ '/commissioning-templates/motor-nameplate-overload/' | relative_url }})
+- [Motor Nameplate and Overload Setting]({{ '/implementation/commissioning-templates/motor-nameplate-overload/' | relative_url }})
 
 ## Related References
 

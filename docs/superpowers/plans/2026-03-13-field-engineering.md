@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED: Use superpowers:subagent-driven-development (if subagents available) or superpowers:executing-plans to implement this plan. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Surface 6 commissioning checklists from the canonical RAG as a `/field-engineering/` site section with print-optimized pages and deep cross-links into training, workflows, and lifecycle.
+**Goal:** Surface 6 commissioning checklists from the canonical RAG as a `/implementation/commissioning-templates/` site section with print-optimized pages and deep cross-links into training, workflows, and lifecycle.
 
 **Architecture:** New `field-checklist` layout reads metadata from a flat `field_checklists.yml` data file via Liquid `where` lookup. Checklist pages use plain `- ` list syntax (not `- [ ]`) so CSS `::before` supplies the `☐` symbol without Kramdown checkbox interference. Reverse links added to `training-module.html` and workflow pages.
 
@@ -21,112 +21,112 @@
 
 ```yaml
 - title: "Pre-Power Panel and Incoming Supply Check"
-  url: "/field-engineering/pre-power-panel/"
+  url: "/implementation/commissioning-templates/pre-power-panel/"
   slug: "pre-power-panel"
   use_context: "Before first energization of a control panel, machine electrical system, or incoming supply connection."
   repo_path: "control-standards/rag/commissioning_checklists/checklists/pre_power_panel_and_incoming_supply_check.md"
   related_training:
     - title: "Conductor Ampacity and Termination Temperature"
-      url: "/training/fundamentals/conductor-ampacity/"
+      url: "/fundamentals/electrical/conductor-ampacity/"
     - title: "NEC Code Reading Fundamentals"
       url: "/training/nec-application/nec-code-reading/"
     - title: "Practical Article 409 Workflow"
       url: "/training/nec-application/article-409-workflow/"
   related_workflows:
     - title: "Electrical Review Workflow"
-      url: "/workflows/electrical-review/"
+      url: "/design/workflows/electrical-review/"
   related_lifecycle:
     - title: "Detailed Design"
-      url: "/lifecycle/detailed-design/"
+      url: "/verification/lifecycle/detailed-design/"
     - title: "Commissioning"
-      url: "/lifecycle/commissioning/"
+      url: "/implementation/lifecycle-commissioning/"
 
 - title: "Basic Circuit Polarity and Power Checks"
-  url: "/field-engineering/basic-circuit-polarity/"
+  url: "/implementation/commissioning-templates/basic-circuit-polarity/"
   slug: "basic-circuit-polarity"
   use_context: "Before first energization of a simple low-voltage circuit or interface branch."
   repo_path: "control-standards/rag/commissioning_checklists/checklists/basic_circuit_polarity_and_power_checks.md"
   related_training:
     - title: "Electrical Quantities and Circuit Language"
-      url: "/training/fundamentals/electrical-quantities/"
+      url: "/fundamentals/electrical/electrical-quantities/"
     - title: "Kirchhoff's Laws and Systematic Analysis"
-      url: "/training/fundamentals/kirchhoff-laws/"
+      url: "/fundamentals/electrical/kirchhoff-laws/"
   related_workflows:
     - title: "Electrical Review Workflow"
-      url: "/workflows/electrical-review/"
+      url: "/design/workflows/electrical-review/"
   related_lifecycle:
     - title: "Commissioning"
-      url: "/lifecycle/commissioning/"
+      url: "/implementation/lifecycle-commissioning/"
 
 - title: "Capacitor Discharge Awareness Check"
-  url: "/field-engineering/capacitor-discharge/"
+  url: "/implementation/commissioning-templates/capacitor-discharge/"
   slug: "capacitor-discharge"
   use_context: "Whenever power electronics, DC buses, filters, or other energy-storage components may retain charge after power removal."
   repo_path: "control-standards/rag/commissioning_checklists/checklists/capacitor_discharge_awareness_check.md"
   related_training:
     - title: "VFD Fundamentals"
-      url: "/training/electrical-machines/vfd-fundamentals/"
+      url: "/fundamentals/motors/vfd-fundamentals/"
     - title: "VFD and Servo Drive Architecture"
-      url: "/training/electrical-machines/vfd-servo-architecture/"
+      url: "/fundamentals/motors/vfd-servo-architecture/"
   related_workflows:
     - title: "VFD Commissioning Workflow"
-      url: "/workflows/vfd-commissioning/"
+      url: "/implementation/vfd-commissioning/"
   related_lifecycle:
     - title: "Commissioning"
-      url: "/lifecycle/commissioning/"
+      url: "/implementation/lifecycle-commissioning/"
 
 - title: "Motor Nameplate and Overload Setting"
-  url: "/field-engineering/motor-nameplate-overload/"
+  url: "/implementation/commissioning-templates/motor-nameplate-overload/"
   slug: "motor-nameplate-overload"
   use_context: "Before energizing a motor branch or releasing a machine for initial run."
   repo_path: "control-standards/rag/commissioning_checklists/checklists/motor_nameplate_and_overload_setting.md"
   related_training:
     - title: "Motor Nameplates, Slip, and Torque"
-      url: "/training/electrical-machines/motor-nameplates-slip-torque/"
+      url: "/fundamentals/motors/motor-nameplates-slip-torque/"
     - title: "Practical Article 430 Workflow"
       url: "/training/nec-application/article-430-workflow/"
   related_workflows:
     - title: "Motor Selection Workflow"
-      url: "/workflows/motor-selection/"
+      url: "/design/workflows/motor-selection/"
   related_lifecycle:
     - title: "Commissioning"
-      url: "/lifecycle/commissioning/"
+      url: "/implementation/lifecycle-commissioning/"
 
 - title: "Motor Rotation and Overload Verification"
-  url: "/field-engineering/motor-rotation-verification/"
+  url: "/implementation/commissioning-templates/motor-rotation-verification/"
   slug: "motor-rotation-verification"
   use_context: "During first powered motor check or post-maintenance motor reconnection."
   repo_path: "control-standards/rag/commissioning_checklists/checklists/motor_rotation_and_overload_verification.md"
   related_training:
     - title: "Induction Motor Basics"
-      url: "/training/electrical-machines/induction-motor-basics/"
+      url: "/fundamentals/motors/induction-motor-basics/"
     - title: "Motor Nameplates, Slip, and Torque"
-      url: "/training/electrical-machines/motor-nameplates-slip-torque/"
+      url: "/fundamentals/motors/motor-nameplates-slip-torque/"
   related_workflows:
     - title: "Motor Troubleshooting Decision Tree"
-      url: "/workflows/motor-troubleshooting/"
+      url: "/troubleshooting/motors/"
   related_lifecycle:
     - title: "Commissioning"
-      url: "/lifecycle/commissioning/"
+      url: "/implementation/lifecycle-commissioning/"
 
 - title: "Drive Commissioning"
-  url: "/field-engineering/drive-commissioning/"
+  url: "/implementation/commissioning-templates/drive-commissioning/"
   slug: "drive-commissioning"
   use_context: "During first power-up and early verification of a motor-drive system."
   repo_path: "control-standards/rag/commissioning_checklists/checklists/drive_commissioning.md"
   related_training:
     - title: "VFD Fundamentals"
-      url: "/training/electrical-machines/vfd-fundamentals/"
+      url: "/fundamentals/motors/vfd-fundamentals/"
     - title: "Servo Drive Fundamentals"
-      url: "/training/electrical-machines/servo-drive-fundamentals/"
+      url: "/fundamentals/motors/servo-drive-fundamentals/"
   related_workflows:
     - title: "VFD Commissioning Workflow"
-      url: "/workflows/vfd-commissioning/"
+      url: "/implementation/vfd-commissioning/"
     - title: "Servo Commissioning Workflow"
-      url: "/workflows/servo-commissioning/"
+      url: "/implementation/servo-commissioning/"
   related_lifecycle:
     - title: "Commissioning"
-      url: "/lifecycle/commissioning/"
+      url: "/implementation/lifecycle-commissioning/"
 ```
 
 - [ ] Commit:
@@ -205,7 +205,7 @@ layout: default
 {% endif %}
 
 <div class="field-checklist__back-link">
-  <a href="{{ '/field-engineering/' | relative_url }}">&larr; All Field Engineering Checklists</a>
+  <a href="{{ '/implementation/commissioning-templates/' | relative_url }}">&larr; All Field Engineering Checklists</a>
 </div>
 ```
 
@@ -377,7 +377,7 @@ title: "Pre-Power Panel and Incoming Supply Check"
 description: "Checklist for first energization of a control panel, machine electrical system, or incoming supply connection."
 breadcrumb:
   - name: "Field Engineering"
-    url: "/field-engineering/"
+    url: "/implementation/commissioning-templates/"
 repo_path: "control-standards/rag/commissioning_checklists/checklists/pre_power_panel_and_incoming_supply_check.md"
 ---
 
@@ -433,7 +433,7 @@ title: "Basic Circuit Polarity and Power Checks"
 description: "Checklist for first energization of a simple low-voltage circuit or interface branch."
 breadcrumb:
   - name: "Field Engineering"
-    url: "/field-engineering/"
+    url: "/implementation/commissioning-templates/"
 repo_path: "control-standards/rag/commissioning_checklists/checklists/basic_circuit_polarity_and_power_checks.md"
 ---
 
@@ -459,7 +459,7 @@ title: "Capacitor Discharge Awareness Check"
 description: "Checklist for safely verifying discharge before working near power electronics, DC buses, or energy-storage components."
 breadcrumb:
   - name: "Field Engineering"
-    url: "/field-engineering/"
+    url: "/implementation/commissioning-templates/"
 repo_path: "control-standards/rag/commissioning_checklists/checklists/capacitor_discharge_awareness_check.md"
 ---
 
@@ -483,7 +483,7 @@ title: "Motor Nameplate and Overload Setting"
 description: "Checklist for verifying motor nameplate data and overload device setting before energizing a motor branch."
 breadcrumb:
   - name: "Field Engineering"
-    url: "/field-engineering/"
+    url: "/implementation/commissioning-templates/"
 repo_path: "control-standards/rag/commissioning_checklists/checklists/motor_nameplate_and_overload_setting.md"
 ---
 
@@ -508,7 +508,7 @@ title: "Motor Rotation and Overload Verification"
 description: "Checklist for first powered motor check or post-maintenance motor reconnection."
 breadcrumb:
   - name: "Field Engineering"
-    url: "/field-engineering/"
+    url: "/implementation/commissioning-templates/"
 repo_path: "control-standards/rag/commissioning_checklists/checklists/motor_rotation_and_overload_verification.md"
 ---
 
@@ -534,7 +534,7 @@ title: "Drive Commissioning"
 description: "Checklist for first power-up and early verification of a motor-drive system."
 breadcrumb:
   - name: "Field Engineering"
-    url: "/field-engineering/"
+    url: "/implementation/commissioning-templates/"
 repo_path: "control-standards/rag/commissioning_checklists/checklists/drive_commissioning.md"
 ---
 
@@ -604,13 +604,13 @@ git commit -m "feat(field-engineering): add landing page and 6 checklist pages"
   <details class="sidebar__section">
     <summary>Field Engineering</summary>
     <ul class="sidebar__links">
-      <li><a href="{{ '/field-engineering/' | relative_url }}"{% if page.url == '/field-engineering/' %} class="active"{% endif %}>All Checklists</a></li>
-      <li><a href="{{ '/field-engineering/pre-power-panel/' | relative_url }}" class="sub{% if page.url contains 'pre-power-panel' %} active{% endif %}">Pre-Power Panel</a></li>
-      <li><a href="{{ '/field-engineering/basic-circuit-polarity/' | relative_url }}" class="sub{% if page.url contains 'basic-circuit-polarity' %} active{% endif %}">Circuit Polarity</a></li>
-      <li><a href="{{ '/field-engineering/capacitor-discharge/' | relative_url }}" class="sub{% if page.url contains 'capacitor-discharge' %} active{% endif %}">Capacitor Discharge</a></li>
-      <li><a href="{{ '/field-engineering/motor-nameplate-overload/' | relative_url }}" class="sub{% if page.url contains 'motor-nameplate-overload' %} active{% endif %}">Motor Nameplate</a></li>
-      <li><a href="{{ '/field-engineering/motor-rotation-verification/' | relative_url }}" class="sub{% if page.url contains 'motor-rotation-verification' %} active{% endif %}">Motor Rotation</a></li>
-      <li><a href="{{ '/field-engineering/drive-commissioning/' | relative_url }}" class="sub{% if page.url contains 'drive-commissioning' %} active{% endif %}">Drive Commissioning</a></li>
+      <li><a href="{{ '/implementation/commissioning-templates/' | relative_url }}"{% if page.url == '/implementation/commissioning-templates/' %} class="active"{% endif %}>All Checklists</a></li>
+      <li><a href="{{ '/implementation/commissioning-templates/pre-power-panel/' | relative_url }}" class="sub{% if page.url contains 'pre-power-panel' %} active{% endif %}">Pre-Power Panel</a></li>
+      <li><a href="{{ '/implementation/commissioning-templates/basic-circuit-polarity/' | relative_url }}" class="sub{% if page.url contains 'basic-circuit-polarity' %} active{% endif %}">Circuit Polarity</a></li>
+      <li><a href="{{ '/implementation/commissioning-templates/capacitor-discharge/' | relative_url }}" class="sub{% if page.url contains 'capacitor-discharge' %} active{% endif %}">Capacitor Discharge</a></li>
+      <li><a href="{{ '/implementation/commissioning-templates/motor-nameplate-overload/' | relative_url }}" class="sub{% if page.url contains 'motor-nameplate-overload' %} active{% endif %}">Motor Nameplate</a></li>
+      <li><a href="{{ '/implementation/commissioning-templates/motor-rotation-verification/' | relative_url }}" class="sub{% if page.url contains 'motor-rotation-verification' %} active{% endif %}">Motor Rotation</a></li>
+      <li><a href="{{ '/implementation/commissioning-templates/drive-commissioning/' | relative_url }}" class="sub{% if page.url contains 'drive-commissioning' %} active{% endif %}">Drive Commissioning</a></li>
     </ul>
   </details>
 ```
@@ -653,85 +653,85 @@ The result should be inside the outer `{% if module_meta %}...{% endif %}` block
 
 - [ ] In `docs/_data/training_catalog.yml`, add `related_checklists` to the following modules. Find each by title and add the key after its existing `related_workflows` entry (or after `featured:` if no related_workflows):
 
-**Conductor Ampacity and Termination Temperature** (`/training/fundamentals/conductor-ampacity/`):
+**Conductor Ampacity and Termination Temperature** (`/fundamentals/electrical/conductor-ampacity/`):
 ```yaml
     related_checklists:
       - title: "Pre-Power Panel and Incoming Supply Check"
-        url: "/field-engineering/pre-power-panel/"
+        url: "/implementation/commissioning-templates/pre-power-panel/"
 ```
 
-**Electrical Quantities and Circuit Language** (`/training/fundamentals/electrical-quantities/`):
+**Electrical Quantities and Circuit Language** (`/fundamentals/electrical/electrical-quantities/`):
 ```yaml
     related_checklists:
       - title: "Basic Circuit Polarity and Power Checks"
-        url: "/field-engineering/basic-circuit-polarity/"
+        url: "/implementation/commissioning-templates/basic-circuit-polarity/"
 ```
 
-**Kirchhoff's Laws and Systematic Analysis** (`/training/fundamentals/kirchhoff-laws/`):
+**Kirchhoff's Laws and Systematic Analysis** (`/fundamentals/electrical/kirchhoff-laws/`):
 ```yaml
     related_checklists:
       - title: "Basic Circuit Polarity and Power Checks"
-        url: "/field-engineering/basic-circuit-polarity/"
+        url: "/implementation/commissioning-templates/basic-circuit-polarity/"
 ```
 
-**Induction Motor Basics** (`/training/electrical-machines/induction-motor-basics/`):
+**Induction Motor Basics** (`/fundamentals/motors/induction-motor-basics/`):
 ```yaml
     related_checklists:
       - title: "Motor Rotation and Overload Verification"
-        url: "/field-engineering/motor-rotation-verification/"
+        url: "/implementation/commissioning-templates/motor-rotation-verification/"
 ```
 
-**Motor Nameplates, Slip, and Torque** (`/training/electrical-machines/motor-nameplates-slip-torque/`):
+**Motor Nameplates, Slip, and Torque** (`/fundamentals/motors/motor-nameplates-slip-torque/`):
 ```yaml
     related_checklists:
       - title: "Motor Nameplate and Overload Setting"
-        url: "/field-engineering/motor-nameplate-overload/"
+        url: "/implementation/commissioning-templates/motor-nameplate-overload/"
       - title: "Motor Rotation and Overload Verification"
-        url: "/field-engineering/motor-rotation-verification/"
+        url: "/implementation/commissioning-templates/motor-rotation-verification/"
 ```
 
-**VFD Fundamentals** (`/training/electrical-machines/vfd-fundamentals/`):
+**VFD Fundamentals** (`/fundamentals/motors/vfd-fundamentals/`):
 ```yaml
     related_checklists:
       - title: "Capacitor Discharge Awareness Check"
-        url: "/field-engineering/capacitor-discharge/"
+        url: "/implementation/commissioning-templates/capacitor-discharge/"
       - title: "Drive Commissioning"
-        url: "/field-engineering/drive-commissioning/"
+        url: "/implementation/commissioning-templates/drive-commissioning/"
 ```
 
-**VFD and Servo Drive Architecture** (`/training/electrical-machines/vfd-servo-architecture/`):
+**VFD and Servo Drive Architecture** (`/fundamentals/motors/vfd-servo-architecture/`):
 ```yaml
     related_checklists:
       - title: "Capacitor Discharge Awareness Check"
-        url: "/field-engineering/capacitor-discharge/"
+        url: "/implementation/commissioning-templates/capacitor-discharge/"
 ```
 
-**Servo Drive Fundamentals** (`/training/electrical-machines/servo-drive-fundamentals/`):
+**Servo Drive Fundamentals** (`/fundamentals/motors/servo-drive-fundamentals/`):
 ```yaml
     related_checklists:
       - title: "Drive Commissioning"
-        url: "/field-engineering/drive-commissioning/"
+        url: "/implementation/commissioning-templates/drive-commissioning/"
 ```
 
 **Practical Article 409 Workflow** (`/training/nec-application/article-409-workflow/`):
 ```yaml
     related_checklists:
       - title: "Pre-Power Panel and Incoming Supply Check"
-        url: "/field-engineering/pre-power-panel/"
+        url: "/implementation/commissioning-templates/pre-power-panel/"
 ```
 
 **Practical Article 430 Workflow** (`/training/nec-application/article-430-workflow/`):
 ```yaml
     related_checklists:
       - title: "Motor Nameplate and Overload Setting"
-        url: "/field-engineering/motor-nameplate-overload/"
+        url: "/implementation/commissioning-templates/motor-nameplate-overload/"
 ```
 
 **NEC Code Reading Fundamentals** (`/training/nec-application/nec-code-reading/`):
 ```yaml
     related_checklists:
       - title: "Pre-Power Panel and Incoming Supply Check"
-        url: "/field-engineering/pre-power-panel/"
+        url: "/implementation/commissioning-templates/pre-power-panel/"
 ```
 
 - [ ] Commit:
@@ -758,37 +758,37 @@ git commit -m "feat(field-engineering): add related_checklists reverse links to 
 ```markdown
 ## Related Checklists
 
-- [Pre-Power Panel and Incoming Supply Check]({{ '/field-engineering/pre-power-panel/' | relative_url }})
-- [Basic Circuit Polarity and Power Checks]({{ '/field-engineering/basic-circuit-polarity/' | relative_url }})
+- [Pre-Power Panel and Incoming Supply Check]({{ '/implementation/commissioning-templates/pre-power-panel/' | relative_url }})
+- [Basic Circuit Polarity and Power Checks]({{ '/implementation/commissioning-templates/basic-circuit-polarity/' | relative_url }})
 ```
 
 **`docs/workflows/vfd-commissioning/index.md`** — append:
 ```markdown
 ## Related Checklists
 
-- [Capacitor Discharge Awareness Check]({{ '/field-engineering/capacitor-discharge/' | relative_url }})
-- [Drive Commissioning]({{ '/field-engineering/drive-commissioning/' | relative_url }})
+- [Capacitor Discharge Awareness Check]({{ '/implementation/commissioning-templates/capacitor-discharge/' | relative_url }})
+- [Drive Commissioning]({{ '/implementation/commissioning-templates/drive-commissioning/' | relative_url }})
 ```
 
 **`docs/workflows/servo-commissioning/index.md`** — append:
 ```markdown
 ## Related Checklists
 
-- [Drive Commissioning]({{ '/field-engineering/drive-commissioning/' | relative_url }})
+- [Drive Commissioning]({{ '/implementation/commissioning-templates/drive-commissioning/' | relative_url }})
 ```
 
 **`docs/workflows/motor-selection/index.md`** — append:
 ```markdown
 ## Related Checklists
 
-- [Motor Nameplate and Overload Setting]({{ '/field-engineering/motor-nameplate-overload/' | relative_url }})
+- [Motor Nameplate and Overload Setting]({{ '/implementation/commissioning-templates/motor-nameplate-overload/' | relative_url }})
 ```
 
 **`docs/workflows/motor-troubleshooting/index.md`** — append:
 ```markdown
 ## Related Checklists
 
-- [Motor Rotation and Overload Verification]({{ '/field-engineering/motor-rotation-verification/' | relative_url }})
+- [Motor Rotation and Overload Verification]({{ '/implementation/commissioning-templates/motor-rotation-verification/' | relative_url }})
 ```
 
 - [ ] Commit:
@@ -847,7 +847,7 @@ git push origin master
 
 ## Acceptance Checklist
 
-- [ ] `/field-engineering/` landing page renders 6 checklist cards
+- [ ] `/implementation/commissioning-templates/` landing page renders 6 checklist cards
 - [ ] All 6 checklist pages use `layout: field-checklist`
 - [ ] Each checklist page shows "When to use" box, `☐`-prefixed list items, and cross-links block
 - [ ] Print preview: sidebar hidden, cross-links hidden, `☐` symbols visible

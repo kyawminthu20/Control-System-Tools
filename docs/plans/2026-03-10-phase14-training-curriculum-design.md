@@ -32,8 +32,8 @@ The current URL structure and 24 module pages remain valid. The redesign changes
 Keep the current training URLs unchanged:
 
 - `/training/`
-- `/training/fundamentals/`
-- `/training/electrical-machines/`
+- `/fundamentals/electrical/`
+- `/fundamentals/motors/`
 - `/training/nec-application/`
 
 Change display labels only:
@@ -213,7 +213,7 @@ Example schema:
 modules:
   - id: vfd-fundamentals
     title: "VFD Fundamentals"
-    url: "/training/electrical-machines/vfd-fundamentals/"
+    url: "/fundamentals/motors/vfd-fundamentals/"
     group: "electrical-machines"
     group_label: "Motors, Drives, and Motion"
     summary: "Understand rectifier, DC bus, inverter topology, and the practical motor-system issues a VFD introduces."

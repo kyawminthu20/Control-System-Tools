@@ -4,7 +4,7 @@
 
 **Goal:** Collapse the 10-section hardcoded sidebar into a 5-group data-driven navigation system with an Engineering Workflow hub page, without changing any existing content URLs.
 
-**Architecture:** Create `docs/_data/navigation.yml` as the single source of truth for sidebar hierarchy. Refactor `docs/_includes/sidebar.html` to render from that data using Liquid loops. Add `/engineering-workflow/` as a workflow-first hub page. Expand `/tools/reference-hub/` landing to also surface lookup content (glossary, crosswalks, software stack, RAG browser).
+**Architecture:** Create `docs/_data/navigation.yml` as the single source of truth for sidebar hierarchy. Refactor `docs/_includes/sidebar.html` to render from that data using Liquid loops. Add `/design/` as a workflow-first hub page. Expand `/tools/reference-hub/` landing to also surface lookup content (glossary, crosswalks, software stack, RAG browser).
 
 **Tech Stack:** Jekyll 4.2, Liquid templating, YAML data files, vanilla HTML. No JavaScript changes. No URL moves.
 
@@ -42,22 +42,22 @@
 
 ```yaml
 - label: "Engineering Workflow"
-  url: "/engineering-workflow/"
+  url: "/design/"
   match_prefixes:
-    - "/engineering-workflow/"
-    - "/lifecycle/"
-    - "/workflows/"
-    - "/commissioning-templates/"
-    - "/scenarios/"
+    - "/design/"
+    - "/verification/lifecycle/"
+    - "/design/workflows/"
+    - "/implementation/commissioning-templates/"
+    - "/implementation/scenarios/"
   children:
     - label: "Lifecycle"
-      url: "/lifecycle/"
+      url: "/verification/lifecycle/"
     - label: "Workflows"
-      url: "/workflows/"
+      url: "/design/workflows/"
     - label: "Commissioning Templates"
-      url: "/commissioning-templates/"
+      url: "/implementation/commissioning-templates/"
     - label: "Scenarios"
-      url: "/scenarios/"
+      url: "/implementation/scenarios/"
 
 - label: "Standards"
   url: "/standards/"
@@ -116,13 +116,13 @@
     - "/training/"
   children:
     - label: "Electrical Fundamentals"
-      url: "/training/fundamentals/"
+      url: "/fundamentals/electrical/"
     - label: "Motors, Drives, and Motion"
-      url: "/training/electrical-machines/"
+      url: "/fundamentals/motors/"
     - label: "NEC for Machines and Panels"
       url: "/training/nec-application/"
     - label: "Control Systems"
-      url: "/training/control-systems/"
+      url: "/fundamentals/control/"
 
 - label: "Industries"
   url: "/industries/"
@@ -153,10 +153,10 @@
   match_prefixes:
     - "/tools/reference-hub/"
     - "/tools/glossary/"
-    - "/software-stack/"
+    - "/design/software-stack/"
     - "/tools/rag-browser/"
     - "/tools/crosswalks/"
-    - "/about/"
+    - "/repository/about/"
   children:
     - label: "Reference Models"
       url: "/tools/reference-hub/"
@@ -165,11 +165,11 @@
     - label: "Crosswalks"
       url: "/tools/crosswalks/"
     - label: "Software Stack"
-      url: "/software-stack/"
+      url: "/design/software-stack/"
     - label: "RAG Files"
       url: "/tools/rag-browser/"
     - label: "About / Trust Boundary"
-      url: "/about/"
+      url: "/repository/about/"
 ```
 
 - [ ] **Step 2: Verify the YAML file parses without errors**
@@ -222,15 +222,15 @@ breadcrumb:
 
 <div class="workflow-card-grid">
   <div class="workflow-card">
-    <h3><a href="{{ '/lifecycle/' | relative_url }}">Machine Lifecycle</a></h3>
+    <h3><a href="{{ '/verification/lifecycle/' | relative_url }}">Machine Lifecycle</a></h3>
     <p>11-stage structured progression from concept through maintenance, with standards and decision gates at each step.</p>
   </div>
   <div class="workflow-card">
-    <h3><a href="{{ '/lifecycle/safety-architecture/' | relative_url }}">Safety Architecture</a></h3>
+    <h3><a href="{{ '/verification/safety-architecture/' | relative_url }}">Safety Architecture</a></h3>
     <p>Functional layer separation, E-stop chain design, SIL/PL selection, and safety architecture constraints.</p>
   </div>
   <div class="workflow-card">
-    <h3><a href="{{ '/lifecycle/detailed-design/' | relative_url }}">Detailed Design</a></h3>
+    <h3><a href="{{ '/verification/lifecycle/detailed-design/' | relative_url }}">Detailed Design</a></h3>
     <p>Electrical design stage: schematics, IO lists, panel layout, conductor sizing, and protection coordination.</p>
   </div>
 </div>
@@ -239,11 +239,11 @@ breadcrumb:
 
 <div class="workflow-card-grid">
   <div class="workflow-card">
-    <h3><a href="{{ '/workflows/motor-selection/' | relative_url }}">Motor Selection</a></h3>
+    <h3><a href="{{ '/design/workflows/motor-selection/' | relative_url }}">Motor Selection</a></h3>
     <p>Decision framework for motor-system family selection across induction, servo, BLDC, and stepper platforms.</p>
   </div>
   <div class="workflow-card">
-    <h3><a href="{{ '/workflows/electrical-review/' | relative_url }}">Electrical Review</a></h3>
+    <h3><a href="{{ '/design/workflows/electrical-review/' | relative_url }}">Electrical Review</a></h3>
     <p>Systematic electrical design review: conductor sizing, protection coordination, grounding, and panel checklist.</p>
   </div>
 </div>
@@ -252,15 +252,15 @@ breadcrumb:
 
 <div class="workflow-card-grid">
   <div class="workflow-card">
-    <h3><a href="{{ '/commissioning-templates/' | relative_url }}">Commissioning Templates</a></h3>
+    <h3><a href="{{ '/implementation/commissioning-templates/' | relative_url }}">Commissioning Templates</a></h3>
     <p>Printable field checklists for panel energization, motor commissioning, drive startup, and circuit verification.</p>
   </div>
   <div class="workflow-card">
-    <h3><a href="{{ '/workflows/vfd-commissioning/' | relative_url }}">VFD Commissioning</a></h3>
+    <h3><a href="{{ '/implementation/vfd-commissioning/' | relative_url }}">VFD Commissioning</a></h3>
     <p>Step-by-step VFD startup: parameter entry, motor data, rotation check, and protection verification.</p>
   </div>
   <div class="workflow-card">
-    <h3><a href="{{ '/workflows/servo-commissioning/' | relative_url }}">Servo Commissioning</a></h3>
+    <h3><a href="{{ '/implementation/servo-commissioning/' | relative_url }}">Servo Commissioning</a></h3>
     <p>Servo drive startup: feedback configuration, homing, tuning, and safety function verification.</p>
   </div>
 </div>
@@ -269,7 +269,7 @@ breadcrumb:
 
 <div class="workflow-card-grid">
   <div class="workflow-card">
-    <h3><a href="{{ '/workflows/motor-troubleshooting/' | relative_url }}">Motor Troubleshooting</a></h3>
+    <h3><a href="{{ '/troubleshooting/motors/' | relative_url }}">Motor Troubleshooting</a></h3>
     <p>Decision tree for motor faults: thermal, mechanical, electrical, and drive-related fault branches.</p>
   </div>
 </div>
@@ -280,7 +280,7 @@ Industry and application scenarios showing how standards, lifecycle stages, and 
 
 <div class="workflow-card-grid">
   <div class="workflow-card">
-    <h3><a href="{{ '/scenarios/' | relative_url }}">All Scenarios</a></h3>
+    <h3><a href="{{ '/implementation/scenarios/' | relative_url }}">All Scenarios</a></h3>
     <p>9 machine and industry scenarios — from US control panels and global machinery to semiconductor fab tools and offshore platforms.</p>
   </div>
 </div>
@@ -297,7 +297,7 @@ Expected: clean build, `132`
 - [ ] **Step 3: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools" && git add docs/engineering-workflow/index.md && git commit -m "feat(site): add /engineering-workflow/ workflow-first hub page"
+cd "/Users/kyawminthu/Dev/Control System Tools" && git add docs/engineering-workflow/index.md && git commit -m "feat(site): add /design/ workflow-first hub page"
 ```
 
 ---
@@ -325,7 +325,7 @@ The existing landing has two card-grid sections (Architecture Models, Motor Syst
     <p>Side-by-side standard comparisons: NFPA 79 ↔ IEC 60204-1, IEC 61511 ↔ IEC 61508, IEC 60079 ↔ NEC 500/505, and more.</p>
   </div>
   <div class="workflow-card">
-    <h3><a href="{{ '/software-stack/' | relative_url }}">Software Stack</a></h3>
+    <h3><a href="{{ '/design/software-stack/' | relative_url }}">Software Stack</a></h3>
     <p>Site technology stack, Jekyll configuration, and deployment notes.</p>
   </div>
   <div class="workflow-card">
@@ -505,7 +505,7 @@ Add entry:
 
 - Created `docs/_data/navigation.yml` — 5-group sidebar data model (Engineering Workflow, Standards, Training, Industries, Reference)
 - Refactored `docs/_includes/sidebar.html` from 135-line hardcoded HTML to 45-line data-driven Liquid renderer
-- Added `/engineering-workflow/` hub page: 5 task-grouped sections (Design, Select, Commission, Troubleshoot, Scenarios)
+- Added `/design/` hub page: 5 task-grouped sections (Design, Select, Commission, Troubleshoot, Scenarios)
 - Expanded `/tools/reference-hub/` landing page with Quick Reference section (glossary, crosswalks, software stack, RAG browser)
 - Demoted Scenarios, Crosswalks, Workflows from top-level sidebar into Engineering Workflow and Reference groups
 - Jekyll build: clean, 132 pages

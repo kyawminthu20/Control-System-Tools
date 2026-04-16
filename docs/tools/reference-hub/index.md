@@ -50,7 +50,7 @@ redirect_from:
     <p>Side-by-side standard comparisons: NFPA 79 ↔ IEC 60204-1, IEC 61511 ↔ IEC 61508, IEC 60079 ↔ NEC 500/505, and more.</p>
   </div>
   <div class="workflow-card">
-    <h3><a href="{{ '/software-stack/' | relative_url }}">Software Stack</a></h3>
+    <h3><a href="{{ '/design/software-stack/' | relative_url }}">Software Stack</a></h3>
     <p>Site technology stack, Jekyll configuration, and deployment notes.</p>
   </div>
   <div class="workflow-card">

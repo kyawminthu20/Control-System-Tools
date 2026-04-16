@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 <div class="page-header">
-  <div class="breadcrumb"><a href="{{ '/workflows/' | relative_url }}">Workflows</a> › Drive Systems</div>
+  <div class="breadcrumb"><a href="{{ '/design/workflows/' | relative_url }}">Workflows</a> › Drive Systems</div>
   <h1>VFD Commissioning Workflow</h1>
   <p class="page-subtitle">Structure first energization and early functional checks for a VFD-driven motor system. Complements, but does not replace, the specific OEM startup procedure.</p>
   <div class="workflow-meta" style="margin-top:0.75rem;">
@@ -101,16 +101,16 @@ Document and retain:
 
 | Module | Topic |
 |---|---|
-| [VFD Fundamentals]({{ '/training/electrical-machines/vfd-fundamentals/' | relative_url }}) | Drive topology, control modes, and protection |
-| [Motor Nameplates, Slip, and Torque]({{ '/training/electrical-machines/motor-nameplates-slip-torque/' | relative_url }}) | Reading and using nameplate data |
-| [Motor Control Methods]({{ '/training/electrical-machines/motor-control-methods/' | relative_url }}) | V/Hz vs. vector vs. closed-loop control |
+| [VFD Fundamentals]({{ '/fundamentals/motors/vfd-fundamentals/' | relative_url }}) | Drive topology, control modes, and protection |
+| [Motor Nameplates, Slip, and Torque]({{ '/fundamentals/motors/motor-nameplates-slip-torque/' | relative_url }}) | Reading and using nameplate data |
+| [Motor Control Methods]({{ '/fundamentals/motors/motor-control-methods/' | relative_url }}) | V/Hz vs. vector vs. closed-loop control |
 | [Grounding and Bonding for Control Panels]({{ '/training/nec-application/grounding-bonding-panels/' | relative_url }}) | Panel-level grounding and bonding checks |
 
 ## Related workflows
 
 | Workflow | When to use |
 |---|---|
-| [Motor Selection Workflow]({{ '/workflows/motor-selection/' | relative_url }}) | Review design basis before commissioning begins |
+| [Motor Selection Workflow]({{ '/design/workflows/motor-selection/' | relative_url }}) | Review design basis before commissioning begins |
 | [Motor Troubleshooting Decision Tree]({{ '/troubleshooting/motors/' | relative_url }}) | If faults appear during commissioning |
 | [Servo Commissioning Workflow]({{ '/implementation/servo-commissioning/' | relative_url }}) | For servo axes on the same machine |
 

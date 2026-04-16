@@ -149,4 +149,4 @@ See the [Instrumentation Reference](/industries/semiconductor/facility/instrumen
 - [Safety and Shutdown Architecture](/industries/semiconductor/facility/safety-shutdown/) — how HVAC fault conditions participate in facility shutdown logic
 - [Instrumentation Reference](/industries/semiconductor/facility/instrumentation/) — room DP and particle counter selection
 - [Bulk Specialty Gas Systems](/industries/semiconductor/facility/bulk-specialty-gas/) — gas handling areas require negative pressure relative to cleanroom
-- [Commissioning Templates](/commissioning-templates/) — field validation checklists
+- [Commissioning Templates](/implementation/commissioning-templates/) — field validation checklists

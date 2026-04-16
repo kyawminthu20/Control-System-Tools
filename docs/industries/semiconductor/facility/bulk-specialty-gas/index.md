@@ -139,4 +139,4 @@ See the [Instrumentation Reference](/industries/semiconductor/facility/instrumen
 - [Instrumentation Reference](/industries/semiconductor/facility/instrumentation/) — device selection matrix
 - [SEMI S2/S8/S14](/standards/semiconductor/semi/) — equipment safety framing
 - [IEC 61511 — SIS Lifecycle](/standards/functional-safety/iec-61511/) — formal shutdown integrity when required
-- [Software Stack](/software-stack/) — PLC and safety controller platforms
+- [Software Stack](/design/software-stack/) — PLC and safety controller platforms

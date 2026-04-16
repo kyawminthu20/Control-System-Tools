@@ -973,8 +973,8 @@ flowchart LR
 ## Related Pages
 
 - [IEC 61511 — Functional Safety](/standards/functional-safety/iec-61511/)
-- [Lifecycle Stage 4 — Detailed Design](/lifecycle/stage-04/)
-- [Lifecycle Stage 6 — Commissioning](/lifecycle/stage-06/)
+- [Lifecycle Stage 4 — Detailed Design](/verification/lifecycle/stage-04/)
+- [Lifecycle Stage 6 — Commissioning](/verification/lifecycle/stage-06/)
 - [Petroleum / Oil & Gas](/industries/petroleum/) — similar SIS approach
 ```
 
@@ -1091,8 +1091,8 @@ Dry running a vertical turbine pump destroys the pump within seconds. The Low-Lo
 ## Cross-Links
 
 - [Filtration & Clarification](../filtration-clarification/) — downstream of intake
-- [Lifecycle Stage 4 — Detailed Design](/lifecycle/stage-04/)
-- [Lifecycle Stage 6 — Commissioning](/lifecycle/stage-06/)
+- [Lifecycle Stage 4 — Detailed Design](/verification/lifecycle/stage-04/)
+- [Lifecycle Stage 6 — Commissioning](/verification/lifecycle/stage-06/)
 - [IEC 61511](/standards/functional-safety/iec-61511/)
 ```
 
@@ -1441,7 +1441,7 @@ flowchart TD
 
 - [IEC 62443 — Cybersecurity](/standards/cybersecurity/iec-62443/)
 - [Chemical Dosing](../chemical-dosing/) — OT trip wired to safety layer, not SCADA
-- [Lifecycle Stage 4 — Detailed Design](/lifecycle/stage-04/)
+- [Lifecycle Stage 4 — Detailed Design](/verification/lifecycle/stage-04/)
 ```
 
 - [ ] **Step 2: Commit**
@@ -1650,7 +1650,7 @@ The aeration basin blowers run on a cascaded DO PID loop:
 - [Equalization & Neutralization](../equalization-neutralization/) — upstream
 - [Instrumentation Reference](../instrumentation/) — DO and TSS analyzer selection
 - [IEC 61511](/standards/functional-safety/iec-61511/)
-- [Lifecycle Stage 6 — Commissioning](/lifecycle/stage-06/)
+- [Lifecycle Stage 6 — Commissioning](/verification/lifecycle/stage-06/)
 ```
 
 - [ ] **Step 2: Commit**
@@ -1773,7 +1773,7 @@ Examples: `LT-101` Level Transmitter loop 101 · `AT-301` Analyzer Transmitter l
 - [Chemical Dosing](../chemical-dosing/) — Cl₂ analyzer application
 - [Filtration & Clarification](../filtration-clarification/) — turbidimeter application
 - [Treatment & Discharge](../treatment-discharge/) — DO and TSS analyzer application
-- [Lifecycle Stage 3 — P&ID Development](/lifecycle/stage-03/)
+- [Lifecycle Stage 3 — P&ID Development](/verification/lifecycle/stage-03/)
 ```
 
 - [ ] **Step 2: Commit**

@@ -25,7 +25,7 @@ Reference
   About / Trust Boundary
 ```
 
-Follows the same pattern as `/software-stack/` and `/about/` — top-level URL, linked under the Reference sidebar section. No new section or subdirectory required.
+Follows the same pattern as `/design/software-stack/` and `/repository/about/` — top-level URL, linked under the Reference sidebar section. No new section or subdirectory required.
 
 ---
 

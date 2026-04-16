@@ -18,16 +18,16 @@ start_here:
     description: "Start with circuit language, then Kirchhoff's laws and passive components."
     entry_modules:
       - title: "Electrical Quantities and Circuit Language"
-        url: "/training/fundamentals/electrical-quantities/"
+        url: "/fundamentals/electrical/electrical-quantities/"
       - title: "Kirchhoff's Laws and Systematic Analysis"
-        url: "/training/fundamentals/kirchhoff-laws/"
+        url: "/fundamentals/electrical/kirchhoff-laws/"
   - audience: "Working with motors and drives"
     description: "Jump to induction motor basics, then VFD and servo fundamentals."
     entry_modules:
       - title: "Induction Motor Basics"
-        url: "/training/electrical-machines/induction-motor-basics/"
+        url: "/fundamentals/motors/induction-motor-basics/"
       - title: "VFD Fundamentals"
-        url: "/training/electrical-machines/vfd-fundamentals/"
+        url: "/fundamentals/motors/vfd-fundamentals/"
   - audience: "Designing control panels or machines"
     description: "Start with NEC code reading, then motor and panel code application."
     entry_modules:
@@ -39,39 +39,39 @@ start_here:
     description: "Start with the control theory overview, then move through PID intuition and industrial implementation."
     entry_modules:
       - title: "Control Theory Overview"
-        url: "/training/control-systems/control-theory-overview/"
+        url: "/fundamentals/control/control-theory-overview/"
       - title: "PID Control — Intuitive Foundation"
-        url: "/training/control-systems/pid-foundation/"
+        url: "/fundamentals/control/pid-foundation/"
 
 learning_paths:
   - name: "Controls Engineering Foundations"
     slug: "controls-foundations"
     description: "Build the electrical vocabulary and circuit analysis skills used across all controls work."
     modules:
-      - url: "/training/fundamentals/electrical-quantities/"
-      - url: "/training/fundamentals/series-parallel-dividers/"
-      - url: "/training/fundamentals/kirchhoff-laws/"
-      - url: "/training/fundamentals/equivalent-circuit-methods/"
-      - url: "/training/fundamentals/passive-components/"
-      - url: "/training/fundamentals/diodes-transistors/"
-      - url: "/training/fundamentals/electrical-equations-reference/"
+      - url: "/fundamentals/electrical/electrical-quantities/"
+      - url: "/fundamentals/electrical/series-parallel-dividers/"
+      - url: "/fundamentals/electrical/kirchhoff-laws/"
+      - url: "/fundamentals/electrical/equivalent-circuit-methods/"
+      - url: "/fundamentals/electrical/passive-components/"
+      - url: "/fundamentals/electrical/diodes-transistors/"
+      - url: "/fundamentals/electrical/electrical-equations-reference/"
   - name: "Motor and Drive Engineering"
     slug: "motor-drive-engineering"
     description: "Understand motor types, drive topologies, and control methods for machine and process applications."
     modules:
-      - url: "/training/electrical-machines/induction-motor-basics/"
-      - url: "/training/electrical-machines/motor-nameplates-slip-torque/"
-      - url: "/training/electrical-machines/motor-family-comparison/"
-      - url: "/training/electrical-machines/vfd-fundamentals/"
-      - url: "/training/electrical-machines/motor-control-methods/"
-      - url: "/training/electrical-machines/servo-drive-fundamentals/"
-      - url: "/training/electrical-machines/servo-feedback-inertia/"
-      - url: "/training/electrical-machines/motor-vfd-equations/"
+      - url: "/fundamentals/motors/induction-motor-basics/"
+      - url: "/fundamentals/motors/motor-nameplates-slip-torque/"
+      - url: "/fundamentals/motors/motor-family-comparison/"
+      - url: "/fundamentals/motors/vfd-fundamentals/"
+      - url: "/fundamentals/motors/motor-control-methods/"
+      - url: "/fundamentals/motors/servo-drive-fundamentals/"
+      - url: "/fundamentals/motors/servo-feedback-inertia/"
+      - url: "/fundamentals/motors/motor-vfd-equations/"
   - name: "Industrial Panel Design (NEC Focus)"
     slug: "panel-design-nec"
     description: "Apply NEC article routing and sizing logic to control panel and machinery installations."
     modules:
-      - url: "/training/fundamentals/conductor-ampacity/"
+      - url: "/fundamentals/electrical/conductor-ampacity/"
       - url: "/training/nec-application/nec-code-reading/"
       - url: "/training/nec-application/working-space-table-navigation/"
       - url: "/training/nec-application/motor-panel-code-application/"
@@ -83,48 +83,48 @@ learning_paths:
     slug: "troubleshooting-field"
     description: "Focus on the applied modules most useful for fault diagnosis, commissioning, and field maintenance."
     modules:
-      - url: "/training/electrical-machines/induction-motor-basics/"
-      - url: "/training/electrical-machines/motor-nameplates-slip-torque/"
-      - url: "/training/electrical-machines/vfd-fundamentals/"
-      - url: "/training/electrical-machines/vfd-servo-architecture/"
-      - url: "/training/electrical-machines/motor-efficiency-losses/"
-      - url: "/training/fundamentals/conductor-ampacity/"
+      - url: "/fundamentals/motors/induction-motor-basics/"
+      - url: "/fundamentals/motors/motor-nameplates-slip-torque/"
+      - url: "/fundamentals/motors/vfd-fundamentals/"
+      - url: "/fundamentals/motors/vfd-servo-architecture/"
+      - url: "/fundamentals/motors/motor-efficiency-losses/"
+      - url: "/fundamentals/electrical/conductor-ampacity/"
   - name: "Machine Lifecycle Engineering"
     slug: "machine-lifecycle"
     description: "Follow a machine from concept through commissioning and maintenance. Routes concept → design → safety → commissioning → troubleshooting using existing modules and linked workflows."
     modules:
-      - url: "/training/fundamentals/electrical-quantities/"
-      - url: "/training/fundamentals/conductor-ampacity/"
+      - url: "/fundamentals/electrical/electrical-quantities/"
+      - url: "/fundamentals/electrical/conductor-ampacity/"
       - url: "/training/nec-application/nec-code-reading/"
       - url: "/training/nec-application/motor-panel-code-application/"
       - url: "/training/nec-application/article-430-workflow/"
       - url: "/training/nec-application/article-409-workflow/"
       - url: "/training/nec-application/sccr-workflow/"
-      - url: "/training/electrical-machines/induction-motor-basics/"
-      - url: "/training/electrical-machines/motor-nameplates-slip-torque/"
-      - url: "/training/electrical-machines/vfd-fundamentals/"
-      - url: "/training/electrical-machines/vfd-servo-architecture/"
+      - url: "/fundamentals/motors/induction-motor-basics/"
+      - url: "/fundamentals/motors/motor-nameplates-slip-torque/"
+      - url: "/fundamentals/motors/vfd-fundamentals/"
+      - url: "/fundamentals/motors/vfd-servo-architecture/"
   - name: "Control Systems Engineering"
     slug: "control-systems-engineering"
     description: "Build a control-theory foundation and apply it through PID intuition, industrial PLC implementation, and applied heater and motion-control examples."
     modules:
-      - url: "/training/control-systems/control-theory-overview/"
-      - url: "/training/control-systems/pid-foundation/"
-      - url: "/training/control-systems/pid-intuition/"
-      - url: "/training/control-systems/industrial-pid/"
-      - url: "/training/control-systems/control-loop-architectures/"
-      - url: "/training/control-systems/pid-heater-control/"
-      - url: "/training/control-systems/pid-drone-control/"
+      - url: "/fundamentals/control/control-theory-overview/"
+      - url: "/fundamentals/control/pid-foundation/"
+      - url: "/fundamentals/control/pid-intuition/"
+      - url: "/fundamentals/control/industrial-pid/"
+      - url: "/fundamentals/control/control-loop-architectures/"
+      - url: "/fundamentals/control/pid-heater-control/"
+      - url: "/fundamentals/control/pid-drone-control/"
 
 topic_groups:
   - key: "fundamentals"
     label: "Electrical Fundamentals"
-    url: "/training/fundamentals/"
+    url: "/fundamentals/electrical/"
     description: "Circuit theory, analysis methods, passive components, switching devices, conductor sizing, and IEC earthing systems."
     module_count: 9
   - key: "electrical-machines"
     label: "Motors, Drives, and Motion"
-    url: "/training/electrical-machines/"
+    url: "/fundamentals/motors/"
     description: "Induction and DC motors, VFDs, servo drives, motor selection, efficiency, and equations."
     module_count: 13
   - key: "nec-application"
@@ -134,7 +134,7 @@ topic_groups:
     module_count: 11
   - key: "control-systems"
     label: "Control Systems"
-    url: "/training/control-systems/"
+    url: "/fundamentals/control/"
     description: "Control theory, PID intuition, industrial PLC implementation, loop architectures, applied heater and motion-control examples, state machines, interlocks, and servo commissioning."
     module_count: 14
 
@@ -155,7 +155,7 @@ related_standards:
 modules:
   # ── Fundamentals ────────────────────────────────────────────────────────────
   - title: "Electrical Quantities and Circuit Language"
-    url: "/training/fundamentals/electrical-quantities/"
+    url: "/fundamentals/electrical/electrical-quantities/"
     group: "fundamentals"
     group_label: "Electrical Fundamentals"
     summary: "Build the shared vocabulary — voltage, current, resistance, power — and learn to read circuit topology before solving anything."
@@ -167,13 +167,13 @@ modules:
     featured: true
     related_workflows:
       - title: "Electrical Review Workflow"
-        url: "/workflows/electrical-review/"
+        url: "/design/workflows/electrical-review/"
     related_checklists:
       - title: "Basic Circuit Polarity and Power Checks"
-        url: "/commissioning-templates/basic-circuit-polarity/"
+        url: "/implementation/commissioning-templates/basic-circuit-polarity/"
 
   - title: "Series, Parallel, and Divider Methods"
-    url: "/training/fundamentals/series-parallel-dividers/"
+    url: "/fundamentals/electrical/series-parallel-dividers/"
     group: "fundamentals"
     group_label: "Electrical Fundamentals"
     summary: "Reduce series and parallel networks and apply voltage and current dividers to find operating points in real circuits."
@@ -185,10 +185,10 @@ modules:
       - "Electrical Quantities and Circuit Language"
     related_workflows:
       - title: "Electrical Review Workflow"
-        url: "/workflows/electrical-review/"
+        url: "/design/workflows/electrical-review/"
 
   - title: "Kirchhoff's Laws and Systematic Analysis"
-    url: "/training/fundamentals/kirchhoff-laws/"
+    url: "/fundamentals/electrical/kirchhoff-laws/"
     group: "fundamentals"
     group_label: "Electrical Fundamentals"
     summary: "Apply KCL and KVL with nodal and loop analysis to solve circuits that cannot be simplified by series/parallel rules alone."
@@ -201,10 +201,10 @@ modules:
     featured: true
     related_checklists:
       - title: "Basic Circuit Polarity and Power Checks"
-        url: "/commissioning-templates/basic-circuit-polarity/"
+        url: "/implementation/commissioning-templates/basic-circuit-polarity/"
 
   - title: "Equivalent Circuit Methods"
-    url: "/training/fundamentals/equivalent-circuit-methods/"
+    url: "/fundamentals/electrical/equivalent-circuit-methods/"
     group: "fundamentals"
     group_label: "Electrical Fundamentals"
     summary: "Simplify complex networks to Thevenin or Norton equivalents; apply source transformation and superposition for multi-source problems."
@@ -216,7 +216,7 @@ modules:
       - "Kirchhoff's Laws and Systematic Analysis"
 
   - title: "Electrical Equations Reference"
-    url: "/training/fundamentals/electrical-equations-reference/"
+    url: "/fundamentals/electrical/electrical-equations-reference/"
     group: "fundamentals"
     group_label: "Electrical Fundamentals"
     summary: "Quick-reference sheet for Ohm's law, power, dividers, KCL/KVL, and capacitor/inductor energy — formatted for fast lookup."
@@ -227,7 +227,7 @@ modules:
     prerequisites: []
 
   - title: "Passive Components"
-    url: "/training/fundamentals/passive-components/"
+    url: "/fundamentals/electrical/passive-components/"
     group: "fundamentals"
     group_label: "Electrical Fundamentals"
     summary: "Understand resistors, capacitors, and inductors — their ratings, stored energy, and behavior in DC and AC circuits."
@@ -239,7 +239,7 @@ modules:
       - "Electrical Quantities and Circuit Language"
 
   - title: "Diodes, Transistors, and Switching Basics"
-    url: "/training/fundamentals/diodes-transistors/"
+    url: "/fundamentals/electrical/diodes-transistors/"
     group: "fundamentals"
     group_label: "Electrical Fundamentals"
     summary: "Cover diode families, BJT/MOSFET/IGBT switching modes, and flyback diodes — the semiconductor layer under every drive and power supply."
@@ -251,7 +251,7 @@ modules:
       - "Passive Components"
 
   - title: "Conductor Ampacity and Termination Temperature"
-    url: "/training/fundamentals/conductor-ampacity/"
+    url: "/fundamentals/electrical/conductor-ampacity/"
     group: "fundamentals"
     group_label: "Electrical Fundamentals"
     summary: "Read NEC ampacity tables correctly, apply correction factors, and understand the 60/75°C termination temperature rule."
@@ -263,10 +263,10 @@ modules:
     featured: true
     related_checklists:
       - title: "Pre-Power Panel and Incoming Supply Check"
-        url: "/commissioning-templates/pre-power-panel/"
+        url: "/implementation/commissioning-templates/pre-power-panel/"
 
   - title: "IEC Earthing System Types"
-    url: "/training/fundamentals/earthing-systems-iec/"
+    url: "/fundamentals/electrical/earthing-systems-iec/"
     group: "fundamentals"
     group_label: "Electrical Fundamentals"
     summary: "Understand how TN-C, TT, TN-C-S, TN-S, and IT earthing systems affect fault-current path, protective-device selection, and touch-voltage risk in machine and panel design."
@@ -279,11 +279,11 @@ modules:
     featured: false
     related_workflows:
       - title: "Electrical Review Workflow"
-        url: "/workflows/electrical-review/"
+        url: "/design/workflows/electrical-review/"
 
   # ── Electrical Machines ─────────────────────────────────────────────────────
   - title: "Induction Motor Basics"
-    url: "/training/electrical-machines/induction-motor-basics/"
+    url: "/fundamentals/motors/induction-motor-basics/"
     group: "electrical-machines"
     group_label: "Motors, Drives, and Motion"
     summary: "Understand how the rotating magnetic field produces torque, what slip means, and how speed and torque relate across the motor curve."
@@ -295,15 +295,15 @@ modules:
     featured: true
     related_workflows:
       - title: "Motor Selection Workflow"
-        url: "/workflows/motor-selection/"
+        url: "/design/workflows/motor-selection/"
       - title: "Motor Troubleshooting Decision Tree"
         url: "/troubleshooting/motors/"
     related_checklists:
       - title: "Motor Rotation and Overload Verification"
-        url: "/commissioning-templates/motor-rotation-verification/"
+        url: "/implementation/commissioning-templates/motor-rotation-verification/"
 
   - title: "DC Motor Basics"
-    url: "/training/electrical-machines/dc-motor-basics/"
+    url: "/fundamentals/motors/dc-motor-basics/"
     group: "electrical-machines"
     group_label: "Motors, Drives, and Motion"
     summary: "Learn armature construction, commutation, back-EMF, and the speed control methods that apply to DC drives and servo systems."
@@ -314,7 +314,7 @@ modules:
     prerequisites: []
 
   - title: "Motor Nameplates, Slip, and Torque"
-    url: "/training/electrical-machines/motor-nameplates-slip-torque/"
+    url: "/fundamentals/motors/motor-nameplates-slip-torque/"
     group: "electrical-machines"
     group_label: "Motors, Drives, and Motion"
     summary: "Read any motor nameplate, interpret NEMA design codes, and predict torque behavior across the speed–torque curve."
@@ -326,16 +326,16 @@ modules:
       - "Induction Motor Basics"
     related_workflows:
       - title: "Motor Selection Workflow"
-        url: "/workflows/motor-selection/"
+        url: "/design/workflows/motor-selection/"
     featured: true
     related_checklists:
       - title: "Motor Nameplate and Overload Setting"
-        url: "/commissioning-templates/motor-nameplate-overload/"
+        url: "/implementation/commissioning-templates/motor-nameplate-overload/"
       - title: "Motor Rotation and Overload Verification"
-        url: "/commissioning-templates/motor-rotation-verification/"
+        url: "/implementation/commissioning-templates/motor-rotation-verification/"
 
   - title: "Motor Family Comparison"
-    url: "/training/electrical-machines/motor-family-comparison/"
+    url: "/fundamentals/motors/motor-family-comparison/"
     group: "electrical-machines"
     group_label: "Motors, Drives, and Motion"
     summary: "Compare induction, DC, BLDC, PMSM, and stepper motors across torque density, control complexity, and application fit."
@@ -348,7 +348,7 @@ modules:
       - "DC Motor Basics"
 
   - title: "AC vs DC Motor Comparison"
-    url: "/training/electrical-machines/ac-vs-dc-motors/"
+    url: "/fundamentals/motors/ac-vs-dc-motors/"
     group: "electrical-machines"
     group_label: "Motors, Drives, and Motion"
     summary: "Decide between AC and DC drives for a given application by comparing speed range, maintenance, efficiency, and control method."
@@ -361,7 +361,7 @@ modules:
       - "DC Motor Basics"
 
   - title: "VFD Fundamentals"
-    url: "/training/electrical-machines/vfd-fundamentals/"
+    url: "/fundamentals/motors/vfd-fundamentals/"
     group: "electrical-machines"
     group_label: "Motors, Drives, and Motion"
     summary: "Trace power through the rectifier, DC bus, and inverter; understand V/Hz and vector control; learn the parameters that matter most at commissioning."
@@ -374,17 +374,17 @@ modules:
     featured: true
     related_workflows:
       - title: "VFD Commissioning Workflow"
-        url: "/workflows/vfd-commissioning/"
+        url: "/implementation/vfd-commissioning/"
       - title: "Motor Troubleshooting Decision Tree"
         url: "/troubleshooting/motors/"
     related_checklists:
       - title: "Capacitor Discharge Awareness Check"
-        url: "/commissioning-templates/capacitor-discharge/"
+        url: "/implementation/commissioning-templates/capacitor-discharge/"
       - title: "Drive Commissioning"
-        url: "/commissioning-templates/drive-commissioning/"
+        url: "/implementation/commissioning-templates/drive-commissioning/"
 
   - title: "Servo Drive Fundamentals"
-    url: "/training/electrical-machines/servo-drive-fundamentals/"
+    url: "/fundamentals/motors/servo-drive-fundamentals/"
     group: "electrical-machines"
     group_label: "Motors, Drives, and Motion"
     summary: "Understand the nested current–velocity–position loop structure, encoder feedback types, and gain tuning starting points."
@@ -396,15 +396,15 @@ modules:
       - "VFD Fundamentals"
     related_workflows:
       - title: "Servo Commissioning Workflow"
-        url: "/workflows/servo-commissioning/"
+        url: "/implementation/servo-commissioning/"
       - title: "Motor Troubleshooting Decision Tree"
         url: "/troubleshooting/motors/"
     related_checklists:
       - title: "Drive Commissioning"
-        url: "/commissioning-templates/drive-commissioning/"
+        url: "/implementation/commissioning-templates/drive-commissioning/"
 
   - title: "VFD and Servo Architecture Diagrams"
-    url: "/training/electrical-machines/vfd-servo-architecture/"
+    url: "/fundamentals/motors/vfd-servo-architecture/"
     group: "electrical-machines"
     group_label: "Motors, Drives, and Motion"
     summary: "Block diagrams for VFD and servo system wiring — use as a visual reference during commissioning and troubleshooting."
@@ -416,15 +416,15 @@ modules:
       - "VFD Fundamentals"
     related_workflows:
       - title: "VFD Commissioning Workflow"
-        url: "/workflows/vfd-commissioning/"
+        url: "/implementation/vfd-commissioning/"
       - title: "Servo Commissioning Workflow"
-        url: "/workflows/servo-commissioning/"
+        url: "/implementation/servo-commissioning/"
     related_checklists:
       - title: "Capacitor Discharge Awareness Check"
-        url: "/commissioning-templates/capacitor-discharge/"
+        url: "/implementation/commissioning-templates/capacitor-discharge/"
 
   - title: "BLDC, EV, and Drone Motor Comparison"
-    url: "/training/electrical-machines/bldc-ev-drone-motors/"
+    url: "/fundamentals/motors/bldc-ev-drone-motors/"
     group: "electrical-machines"
     group_label: "Motors, Drives, and Motion"
     summary: "Compare BLDC and PMSM in industrial, EV, and drone contexts; understand ESC operation and the differences from industrial VFDs."
@@ -436,7 +436,7 @@ modules:
       - "Motor Family Comparison"
 
   - title: "Motor Control Methods and Operating Regions"
-    url: "/training/electrical-machines/motor-control-methods/"
+    url: "/fundamentals/motors/motor-control-methods/"
     group: "electrical-machines"
     group_label: "Motors, Drives, and Motion"
     summary: "Compare V/Hz, FOC, and DTC; understand field weakening and the constant-torque vs. constant-power operating regions."
@@ -449,7 +449,7 @@ modules:
       - "Servo Drive Fundamentals"
 
   - title: "Motor Efficiency, Power Factor, and Losses"
-    url: "/training/electrical-machines/motor-efficiency-losses/"
+    url: "/fundamentals/motors/motor-efficiency-losses/"
     group: "electrical-machines"
     group_label: "Motors, Drives, and Motion"
     summary: "Interpret IE efficiency classes, identify the dominant loss mechanisms, and understand when power factor correction is worth adding."
@@ -461,7 +461,7 @@ modules:
       - "Induction Motor Basics"
 
   - title: "Motor and VFD Equations Reference"
-    url: "/training/electrical-machines/motor-vfd-equations/"
+    url: "/fundamentals/motors/motor-vfd-equations/"
     group: "electrical-machines"
     group_label: "Motors, Drives, and Motion"
     summary: "Quick-reference equations for speed, torque, slip, power, and VFD sizing — formatted for fast lookup during design or commissioning."
@@ -472,7 +472,7 @@ modules:
     prerequisites: []
 
   - title: "Servo Feedback and Inertia Matching"
-    url: "/training/electrical-machines/servo-feedback-inertia/"
+    url: "/fundamentals/motors/servo-feedback-inertia/"
     group: "electrical-machines"
     group_label: "Motors, Drives, and Motion"
     summary: "Choose encoder type for the application, calculate load-to-motor inertia ratio, and understand the stability implications of mismatched inertia."
@@ -497,7 +497,7 @@ modules:
     featured: true
     related_checklists:
       - title: "Pre-Power Panel and Incoming Supply Check"
-        url: "/commissioning-templates/pre-power-panel/"
+        url: "/implementation/commissioning-templates/pre-power-panel/"
 
   - title: "Working Space and Table Navigation"
     url: "/training/nec-application/working-space-table-navigation/"
@@ -618,10 +618,10 @@ modules:
     featured: true
     related_workflows:
       - title: "Motor Selection Workflow"
-        url: "/workflows/motor-selection/"
+        url: "/design/workflows/motor-selection/"
     related_checklists:
       - title: "Motor Nameplate and Overload Setting"
-        url: "/commissioning-templates/motor-nameplate-overload/"
+        url: "/implementation/commissioning-templates/motor-nameplate-overload/"
 
   - title: "Practical Article 409 Workflow"
     url: "/training/nec-application/article-409-workflow/"
@@ -637,11 +637,11 @@ modules:
       - "SCCR Workflow for Industrial Control Panels"
     related_checklists:
       - title: "Pre-Power Panel and Incoming Supply Check"
-        url: "/commissioning-templates/pre-power-panel/"
+        url: "/implementation/commissioning-templates/pre-power-panel/"
 
   # ── Control Systems ──────────────────────────────────────────────────────────
   - title: "Control Theory Overview"
-    url: "/training/control-systems/control-theory-overview/"
+    url: "/fundamentals/control/control-theory-overview/"
     group: "control-systems"
     group_label: "Control Systems"
     summary: "A map of the control-engineering workflow — plant, feedback vs. feedforward, controller families, state estimation, and verification — before going deeper into PID."
@@ -653,7 +653,7 @@ modules:
     featured: true
 
   - title: "PID Control — Intuitive Foundation"
-    url: "/training/control-systems/pid-foundation/"
+    url: "/fundamentals/control/pid-foundation/"
     group: "control-systems"
     group_label: "Control Systems"
     summary: "Entry point for the PID modules — what P, I, and D each do, recommended reading order, and application areas across temperature, pressure, flow, and motion."
@@ -666,7 +666,7 @@ modules:
     featured: true
 
   - title: "PID Intuition — P, I, and D in Practice"
-    url: "/training/control-systems/pid-intuition/"
+    url: "/fundamentals/control/pid-intuition/"
     group: "control-systems"
     group_label: "Control Systems"
     summary: "Plain-language explanation of proportional, integral, and derivative action — why P-only leaves steady-state error, how integral removes it, and how derivative adds damping."
@@ -679,7 +679,7 @@ modules:
     featured: true
 
   - title: "Industrial PID Implementation"
-    url: "/training/control-systems/industrial-pid/"
+    url: "/fundamentals/control/industrial-pid/"
     group: "control-systems"
     group_label: "Control Systems"
     summary: "How PID appears in real industrial control systems — SP/PV/CV terminology, bias, output limits, anti-windup, and Rockwell PIDE and Siemens PID_Compact conventions."
@@ -692,7 +692,7 @@ modules:
     featured: true
 
   - title: "Industrial Control Loop Architectures"
-    url: "/training/control-systems/control-loop-architectures/"
+    url: "/fundamentals/control/control-loop-architectures/"
     group: "control-systems"
     group_label: "Control Systems"
     summary: "Why most industrial loops are PI not PID, VFD speed-loop structure, servo cascade control, and comparison of process-loop types by controller choice."
@@ -705,10 +705,10 @@ modules:
     featured: false
     related_workflows:
       - title: "Electrical Review Workflow"
-        url: "/workflows/electrical-review/"
+        url: "/design/workflows/electrical-review/"
 
   - title: "PID Heater Control with Contactor"
-    url: "/training/control-systems/pid-heater-control/"
+    url: "/fundamentals/control/pid-heater-control/"
     group: "control-systems"
     group_label: "Control Systems"
     summary: "Practical heater-control design splitting PI temperature control from time-proportioning output scheduling — minimum on/off time, state machine, and safety interlocks."
@@ -721,10 +721,10 @@ modules:
     featured: false
     related_workflows:
       - title: "Electrical Review Workflow"
-        url: "/workflows/electrical-review/"
+        url: "/design/workflows/electrical-review/"
 
   - title: "PID in Drone and Motion Control"
-    url: "/training/control-systems/pid-drone-control/"
+    url: "/fundamentals/control/pid-drone-control/"
     group: "control-systems"
     group_label: "Control Systems"
     summary: "How fast cascade PID loops stabilize a quadcopter — nested rate, attitude, altitude, and position loops, motor mixing, and parallels to industrial servo cascade control."
@@ -737,7 +737,7 @@ modules:
     featured: false
 
   - title: "Machine State Model"
-    url: "/training/control-systems/machine-state-model/"
+    url: "/fundamentals/control/machine-state-model/"
     group: "control-systems"
     group_label: "Control Systems"
     summary: "How to design structured control logic using finite state machines — states, transitions, entry conditions, and fault handling for deterministic machine behavior."
@@ -749,7 +749,7 @@ modules:
     featured: false
 
   - title: "Interlocks, Permissives & Safety Trips"
-    url: "/training/control-systems/interlocks-permissives-safety-trips/"
+    url: "/fundamentals/control/interlocks-permissives-safety-trips/"
     group: "control-systems"
     group_label: "Control Systems"
     summary: "Three distinct layers of protective logic — permissives prevent start, interlocks maintain operation, safety trips override everything — and why they must be kept separate."
@@ -761,7 +761,7 @@ modules:
     featured: false
 
   - title: "Async Faults in Distributed Systems"
-    url: "/training/control-systems/async-faults-distributed-systems/"
+    url: "/fundamentals/control/async-faults-distributed-systems/"
     group: "control-systems"
     group_label: "Control Systems"
     summary: "Detection, classification, and response for faults that arrive out of sequence across multi-device control architectures — PLCs, drives, safety controllers, and networked I/O."
@@ -774,7 +774,7 @@ modules:
     featured: false
 
   - title: "Deterministic vs Non-Deterministic Control"
-    url: "/training/control-systems/deterministic-nondeterministic-control/"
+    url: "/fundamentals/control/deterministic-nondeterministic-control/"
     group: "control-systems"
     group_label: "Control Systems"
     summary: "Why real-time control requires deterministic timing, how PLC scan cycles and fieldbus protocols provide it, and how to separate time-critical control from monitoring and analytics layers."
@@ -786,7 +786,7 @@ modules:
     featured: false
 
   - title: "Servo Tuning Strategy"
-    url: "/training/control-systems/servo-tuning/"
+    url: "/fundamentals/control/servo-tuning/"
     group: "control-systems"
     group_label: "Control Systems"
     summary: "Loop-by-loop servo commissioning from mechanical validation through current, velocity, and position loop tuning — including resonance detection, notch filters, and feedforward."
@@ -799,7 +799,7 @@ modules:
     featured: false
 
   - title: "Vibration and Resonance in Control Systems"
-    url: "/training/control-systems/vibration-resonance/"
+    url: "/fundamentals/control/vibration-resonance/"
     group: "control-systems"
     group_label: "Control Systems"
     summary: "Physical causes of vibration and resonance in controlled mechanical systems, detection methods including FFT, and the mechanical and control strategies used to mitigate them."
@@ -811,7 +811,7 @@ modules:
     featured: false
 
   - title: "Multi-Axis Coordination"
-    url: "/training/control-systems/multi-axis-coordination/"
+    url: "/fundamentals/control/multi-axis-coordination/"
     group: "control-systems"
     group_label: "Control Systems"
     summary: "How coordinated motion controllers synchronize multiple axes — master-slave coupling, electronic gearing, interpolation modes, and the architecture decisions that determine accuracy and safety."

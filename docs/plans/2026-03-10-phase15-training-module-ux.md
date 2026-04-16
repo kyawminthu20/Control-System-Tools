@@ -98,7 +98,7 @@ layout: default
 
 **Notes:**
 - The layout wraps `default`, so all existing site chrome (topnav, sidebar, context panel) is inherited.
-- The `page.url` lookup will return `/training/fundamentals/electrical-quantities/` etc., which matches the `url` fields in `training_catalog.yml` exactly.
+- The `page.url` lookup will return `/fundamentals/electrical/electrical-quantities/` etc., which matches the `url` fields in `training_catalog.yml` exactly.
 - If `module_meta` is nil (no match), the layout degrades gracefully — page-header still renders with just the title.
 - `{{ content }}` renders everything from the module page's Markdown body (the page-header div will be removed in Task 3, so there is no double header).
 

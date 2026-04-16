@@ -134,7 +134,7 @@ SIL 2 SIFs can typically be achieved with 1oo2 or 2oo3 voted architectures using
 
 ---
 
-<a href="{{ '/scenarios/oil-gas-process-skid/' | relative_url }}" class="card__link">See Oil &amp; Gas Process Skid scenario &rarr;</a>
+<a href="{{ '/implementation/scenarios/oil-gas-process-skid/' | relative_url }}" class="card__link">See Oil &amp; Gas Process Skid scenario &rarr;</a>
 
 <a href="{{ '/industries/' | relative_url }}" class="card__link">&larr; Industry matrix</a>
 ```
@@ -175,7 +175,7 @@ title: "Scenario 07 — Oil & Gas Onshore Process Skid (ESD / F&G)"
 description: "Standards design workflow for an onshore O&G process skid with ESD, F&G, and HIPPS: IEC 61511, IEC 60079, NEC Art. 500–505."
 breadcrumb:
   - name: "Scenarios"
-    url: "/scenarios/"
+    url: "/implementation/scenarios/"
   - name: "O&G Process Skid"
 related_standards:
   - name: "IEC 61511"
@@ -342,7 +342,7 @@ Avoid using a standard PLC for SIL 2 — it requires a full IEC 61508 assessment
 
 <a href="{{ '/industries/petroleum/' | relative_url }}" class="card__link">See Petroleum / O&amp;G industry overlay &rarr;</a>
 
-<a href="{{ '/scenarios/' | relative_url }}" class="card__link">&larr; All scenarios</a>
+<a href="{{ '/implementation/scenarios/' | relative_url }}" class="card__link">&larr; All scenarios</a>
 ```
 
 **Step 2: Verify build**
@@ -495,9 +495,9 @@ S2 requires that safety interlocks be independent of the process control system 
 
 ---
 
-<a href="{{ '/scenarios/semiconductor-fab-tool/' | relative_url }}" class="card__link">See Semiconductor Fab Tool scenario &rarr;</a>
+<a href="{{ '/implementation/scenarios/semiconductor-fab-tool/' | relative_url }}" class="card__link">See Semiconductor Fab Tool scenario &rarr;</a>
 
-<a href="{{ '/scenarios/semiconductor-equipment/' | relative_url }}" class="card__link">See Semiconductor Equipment Compliance scenario &rarr;</a>
+<a href="{{ '/implementation/scenarios/semiconductor-equipment/' | relative_url }}" class="card__link">See Semiconductor Equipment Compliance scenario &rarr;</a>
 
 <a href="{{ '/industries/' | relative_url }}" class="card__link">&larr; Industry matrix</a>
 ```
@@ -537,7 +537,7 @@ title: "Scenario 08 — Semiconductor Fab Tool (Etch / CVD)"
 description: "Standards design workflow for an etch or CVD process tool: SEMI S2/S8/S14, IEC 60204-1, ISO 12100, NFPA 79, IEC 62443."
 breadcrumb:
   - name: "Scenarios"
-    url: "/scenarios/"
+    url: "/implementation/scenarios/"
   - name: "Semiconductor Fab Tool"
 related_standards:
   - name: "SEMI S2/S8/S14"
@@ -725,9 +725,9 @@ If the SEMI S14 fire risk assessment determines suppression is required, use FM-
 
 <a href="{{ '/industries/semiconductor/' | relative_url }}" class="card__link">See Semiconductor industry overlay &rarr;</a>
 
-<a href="{{ '/scenarios/semiconductor-equipment/' | relative_url }}" class="card__link">See 15-Standard Compliance Stack scenario &rarr;</a>
+<a href="{{ '/implementation/scenarios/semiconductor-equipment/' | relative_url }}" class="card__link">See 15-Standard Compliance Stack scenario &rarr;</a>
 
-<a href="{{ '/scenarios/' | relative_url }}" class="card__link">&larr; All scenarios</a>
+<a href="{{ '/implementation/scenarios/' | relative_url }}" class="card__link">&larr; All scenarios</a>
 ```
 
 **Step 2: Verify build**
@@ -760,13 +760,13 @@ In `docs/scenarios/index.md`, find the closing `</div>` of the scenario-grid and
     <span class="scenario-card__num">Scenario 07</span>
     <span class="scenario-card__title">O&amp;G Onshore Process Skid (ESD / F&amp;G)</span>
     <p class="scenario-card__start"><strong>Start:</strong> IEC 61511 + IEC 60079 + NEC Art. 500–505</p>
-    <a href="{{ '/scenarios/oil-gas-process-skid/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
+    <a href="{{ '/implementation/scenarios/oil-gas-process-skid/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
   </div>
   <div class="scenario-card">
     <span class="scenario-card__num">Scenario 08</span>
     <span class="scenario-card__title">Semiconductor Fab Tool (Etch / CVD)</span>
     <p class="scenario-card__start"><strong>Start:</strong> SEMI S2/S8/S14 + IEC 60204-1 + ISO 12100</p>
-    <a href="{{ '/scenarios/semiconductor-fab-tool/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
+    <a href="{{ '/implementation/scenarios/semiconductor-fab-tool/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
   </div>
 ```
 
@@ -775,8 +775,8 @@ In `docs/scenarios/index.md`, find the closing `</div>` of the scenario-grid and
 In `docs/_includes/sidebar.html`, find the Scenarios section. After the existing `semiconductor-equipment` link, add:
 
 ```html
-      <li><a href="{{ '/scenarios/oil-gas-process-skid/' | relative_url }}" class="sub">O&amp;G Process Skid</a></li>
-      <li><a href="{{ '/scenarios/semiconductor-fab-tool/' | relative_url }}" class="sub">Semiconductor Fab Tool</a></li>
+      <li><a href="{{ '/implementation/scenarios/oil-gas-process-skid/' | relative_url }}" class="sub">O&amp;G Process Skid</a></li>
+      <li><a href="{{ '/implementation/scenarios/semiconductor-fab-tool/' | relative_url }}" class="sub">Semiconductor Fab Tool</a></li>
 ```
 
 **Step 3: Verify build — confirm page count increases by 2**

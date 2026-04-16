@@ -704,7 +704,7 @@ last_reviewed: "2026-03-08"
     {% endif %}
     {% if entry.lifecycle_stages.size > 0 %}
     <dt>Lifecycle</dt>
-    <dd>{% for stage in entry.lifecycle_stages %}<a href="{{ '/lifecycle/' | append: stage.slug | append: '/' | relative_url }}">{{ stage.label }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</dd>
+    <dd>{% for stage in entry.lifecycle_stages %}<a href="{{ '/verification/lifecycle/' | append: stage.slug | append: '/' | relative_url }}">{{ stage.label }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</dd>
     {% endif %}
     {% if entry.related_terms.size > 0 %}
     <dt>See also</dt>
@@ -898,8 +898,8 @@ In `docs/_includes/sidebar.html`, find the Reference section:
 ```html
     <summary>Reference</summary>
     <ul class="sidebar__links">
-      <li><a href="{{ '/software-stack/' | relative_url }}">Software Stack</a></li>
-      <li><a href="{{ '/about/' | relative_url }}">About / Trust Boundary</a></li>
+      <li><a href="{{ '/design/software-stack/' | relative_url }}">Software Stack</a></li>
+      <li><a href="{{ '/repository/about/' | relative_url }}">About / Trust Boundary</a></li>
     </ul>
 ```
 
@@ -908,9 +908,9 @@ Replace with:
 ```html
     <summary>Reference</summary>
     <ul class="sidebar__links">
-      <li><a href="{{ '/software-stack/' | relative_url }}">Software Stack</a></li>
+      <li><a href="{{ '/design/software-stack/' | relative_url }}">Software Stack</a></li>
       <li><a href="{{ '/tools/glossary/' | relative_url }}">Glossary</a></li>
-      <li><a href="{{ '/about/' | relative_url }}">About / Trust Boundary</a></li>
+      <li><a href="{{ '/repository/about/' | relative_url }}">About / Trust Boundary</a></li>
     </ul>
 ```
 

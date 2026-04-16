@@ -15,7 +15,7 @@ related_standards:
   - name: "IEC 62443 (Cybersecurity)"
     url: "/standards/cybersecurity/iec-62443/"
   - name: "Software Stack"
-    url: "/software-stack/"
+    url: "/design/software-stack/"
 redirect_from:
   - /scenarios/networked-safety-plc/
   - /scenarios/networked-safety-plc/index.html
@@ -97,7 +97,7 @@ IEC 62443 is a series of standards for industrial automation and control system 
 | IEC 62443-4-1 | Secure product development lifecycle |
 | IEC 62443-4-2 | Technical security requirements for IACS components |
 
-See the [IEC 62443 detail page]({{ '/standards/cybersecurity/iec-62443/' | relative_url }}) for Zone/Conduit design, Security Level table, Foundational Requirements, and safety system checklist. See [Software Stack]({{ '/software-stack/' | relative_url }}) for routing guidance on IEC 61131-3 and related topics.
+See the [IEC 62443 detail page]({{ '/standards/cybersecurity/iec-62443/' | relative_url }}) for Zone/Conduit design, Security Level table, Foundational Requirements, and safety system checklist. See [Software Stack]({{ '/design/software-stack/' | relative_url }}) for routing guidance on IEC 61131-3 and related topics.
 
 ## Repository Paths
 
@@ -107,4 +107,4 @@ See the [IEC 62443 detail page]({{ '/standards/cybersecurity/iec-62443/' | relat
 | Safety architecture reference | `rag/reference_models/Universal Machine Safety Architecture.md` |
 | 7-layer architecture | `rag/reference_models/7-Layer Industrial Machine Architecture Model.md` |
 
-<a href="{{ '/software-stack/' | relative_url }}" class="card__link">Software Stack page — IEC 61131-3, IEC 62443, and more &rarr;</a>
+<a href="{{ '/design/software-stack/' | relative_url }}" class="card__link">Software Stack page — IEC 61131-3, IEC 62443, and more &rarr;</a>

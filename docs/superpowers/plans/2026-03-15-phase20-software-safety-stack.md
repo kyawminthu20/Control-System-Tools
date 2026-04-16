@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED: Use superpowers:subagent-driven-development (if subagents available) or superpowers:executing-plans to implement this plan. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Deepen the RAG source file and the `/software-stack/` site page with a comparison table, expanded E-stop example (updated tag names, I/O list, Mermaid diagrams, sequence of operation, checklists), and vendor-specific patterns for Rockwell GuardLogix and Siemens S7-1500F.
+**Goal:** Deepen the RAG source file and the `/design/software-stack/` site page with a comparison table, expanded E-stop example (updated tag names, I/O list, Mermaid diagrams, sequence of operation, checklists), and vendor-specific patterns for Rockwell GuardLogix and Siemens S7-1500F.
 
 **Architecture:** Two files change in sequence — RAG corpus first, then site page. No new files, no nav changes, no CSS changes. The E-stop section in both files is replaced entirely with expanded content; all other sections are extended in-place. Jekyll build verifies correct output at the end.
 
@@ -755,7 +755,7 @@ No `Error`, no `Liquid Exception`. Page count should remain 132.
 
 ```bash
 git add docs/software-stack/index.md
-git commit -m "feat(site): deepen /software-stack/ — comparison table, expanded E-stop, Mermaid diagrams, vendor patterns"
+git commit -m "feat(site): deepen /design/software-stack/ — comparison table, expanded E-stop, Mermaid diagrams, vendor patterns"
 ```
 
 ---
@@ -812,7 +812,7 @@ Replace the entire Phase 20 queue block (from that heading through its last bull
 **Sources:** `planning/safety_software_stack.md`, `docs/superpowers/specs/2026-03-15-software-safety-stack-phase20-design.md`
 
 - [x] RAG corpus updated: IEC 61131-3:2025 edition note; Normal PLC vs Safety PLC vs SIS comparison table; expanded E-stop section with canonical tag names, I/O list, 7-rung pseudocode, sequence of operation, documentation checklist, logging checklist; Rockwell GuardLogix and Siemens S7-1500F vendor patterns
-- [x] `/software-stack/` site page updated: edition note, comparison table section, expanded E-stop with Mermaid wiring/architecture and state machine diagrams, vendor-specific `<details>` blocks
+- [x] `/design/software-stack/` site page updated: edition note, comparison table section, expanded E-stop with Mermaid wiring/architecture and state machine diagrams, vendor-specific `<details>` blocks
 - [x] Jekyll build: clean, 132 pages
 ```
 
@@ -824,7 +824,7 @@ In `project_state/change_log.md`, add the following at the top of the change his
 ## 2026-03-15 — Phase 20: Software Safety Stack Deepening
 
 - Updated RAG source `Software_Safety_and_Intrinsic_Safety_Standards.md`: IEC 61131-3 edition note updated to 2025; Normal PLC / Safety PLC / SIS comparison table added; E-stop section fully replaced with canonical tag names (SI_ESTOP_CH1, ESTOP_HEALTHY, SAFETY_ENABLE), 7-rung pseudocode, I/O list, sequence of operation, documentation and logging checklists; Rockwell GuardLogix and Siemens S7-1500F vendor patterns added
-- Updated `/software-stack/` site page: edition note updated; comparison table section added; E-stop section replaced with expanded content including Mermaid wiring/architecture flowchart and state machine diagram; vendor patterns in `<details>` expandable blocks
+- Updated `/design/software-stack/` site page: edition note updated; comparison table section added; E-stop section replaced with expanded content including Mermaid wiring/architecture flowchart and state machine diagram; vendor patterns in `<details>` expandable blocks
 - No new pages; no navigation changes; build remains clean at 132 pages
 ```
 

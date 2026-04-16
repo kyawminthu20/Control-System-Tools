@@ -230,4 +230,4 @@ These documents must exist before commissioning. They are also the baseline for 
 - [Bulk Chemical Distribution](/industries/semiconductor/facility/bulk-chemical/) — control philosophy applied to chemical transfer
 - [UPW and Wastewater Systems](/industries/semiconductor/facility/upw-wastewater/) — control philosophy applied to water systems
 - [Safety Architecture (Lifecycle Stage 04)](/verification/safety-architecture/) — functional safety design methodology
-- [Software Stack](/software-stack/) — PLC, DCS, and SIS platform selection
+- [Software Stack](/design/software-stack/) — PLC, DCS, and SIS platform selection

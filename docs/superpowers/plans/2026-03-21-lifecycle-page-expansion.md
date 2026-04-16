@@ -4,29 +4,29 @@
 
 **Goal:** Expand all 11 thin lifecycle stage pages (40–74 lines each) into comprehensive, standards-accurate engineering references using the detailed content in `planning/things_to_fix.md` in the kyawminthu20.github.io repo, and add 2 new stage pages (SRS and MOC) plus update the lifecycle index.
 
-**Architecture:** Each lifecycle stage gets a single `index.md` rewrite — same Jekyll frontmatter pattern as existing pages, content expanded from the planning document. The lifecycle index (`/lifecycle/index.md`) gets new stages added to the table, new mermaid diagram, and an introduction section. Two new stage directories are created for the SRS and MOC stages.
+**Architecture:** Each lifecycle stage gets a single `index.md` rewrite — same Jekyll frontmatter pattern as existing pages, content expanded from the planning document. The lifecycle index (`/verification/lifecycle/index.md`) gets new stages added to the table, new mermaid diagram, and an introduction section. Two new stage directories are created for the SRS and MOC stages.
 
 **Tech Stack:** Jekyll 4 static site, kramdown markdown, Mermaid.js diagrams, `default` layout. All pages live in `/Users/kyawminthu/Dev/Control System Tools/docs/lifecycle/`.
 
 **Source of truth for content:** `/Users/kyawminthu/Dev/kyawminthu20.github.io/planning/things_to_fix.md` (8635 lines, organized by page URL — each section after a `https://...` URL is the content for that page).
 
 **Content extraction guide:**
-- Lines 1–411: `/lifecycle/` index page improvements (new stages, columns, introduction text)
-- Lines 412–699: `/lifecycle/concept/` — Stage 01
-- Lines 700–1158: `/lifecycle/standards-selection/` — Stage 02
-- Lines 1159–1750: `/lifecycle/risk-assessment/` — Stage 03
-- Lines 1751–2501: `/lifecycle/safety-architecture/` — Stage 04
-- Lines 2502–3196: `/lifecycle/detailed-design/` — Stage 05
-- Lines 3197–3779: `/lifecycle/draft-documentation/` — Stage 06
-- Lines 3780–4540: `/lifecycle/build/` — Stage 07
-- Lines 4541–5128: `/lifecycle/installation/` — Stage 08
-- Lines 5129–5926: `/lifecycle/pre-commissioning/` — Stage 09
-- Lines 5927–6992: `/lifecycle/commissioning/` — Stage 10
-- Lines 6993–8635: `/lifecycle/maintenance/` — Stage 11
+- Lines 1–411: `/verification/lifecycle/` index page improvements (new stages, columns, introduction text)
+- Lines 412–699: `/verification/lifecycle/concept/` — Stage 01
+- Lines 700–1158: `/verification/lifecycle/standards-selection/` — Stage 02
+- Lines 1159–1750: `/verification/risk-assessment/` — Stage 03
+- Lines 1751–2501: `/verification/safety-architecture/` — Stage 04
+- Lines 2502–3196: `/verification/lifecycle/detailed-design/` — Stage 05
+- Lines 3197–3779: `/verification/lifecycle/draft-documentation/` — Stage 06
+- Lines 3780–4540: `/implementation/lifecycle-build/` — Stage 07
+- Lines 4541–5128: `/implementation/lifecycle-installation/` — Stage 08
+- Lines 5129–5926: `/implementation/lifecycle-pre-commissioning/` — Stage 09
+- Lines 5927–6992: `/implementation/lifecycle-commissioning/` — Stage 10
+- Lines 6993–8635: `/verification/maintenance/` — Stage 11
 
 **New pages to create:**
-- `/lifecycle/safety-requirements-spec/index.md` — Stage 3.5 (SRS), content from lines 11–19 of planning file plus general SRS knowledge
-- `/lifecycle/management-of-change/index.md` — Stage 12 (MOC), content from lines 31–38 of planning file
+- `/verification/safety-requirements-spec/index.md` — Stage 3.5 (SRS), content from lines 11–19 of planning file plus general SRS knowledge
+- `/verification/management-of-change/index.md` — Stage 12 (MOC), content from lines 31–38 of planning file
 
 ---
 
@@ -147,7 +147,7 @@ title: "Lifecycle Stage 1 — Concept"
 description: "Define machine limits, intended use, foreseeable misuse, and applicable markets before risk assessment begins."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "1. Concept"
 related_standards:
   - name: "ISO 12100"
@@ -186,7 +186,7 @@ title: "Lifecycle Stage 2 — Standards Selection"
 description: "Identify all applicable standards, resolve type-A/B/C hierarchy, and determine the PL or SIL pathway before detailed design begins."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "2. Standards Selection"
 related_standards:
   - name: "ISO 12100"
@@ -231,7 +231,7 @@ title: "Lifecycle Stage 3 — Risk Assessment"
 description: "Systematic hazard identification and risk estimation — the critical gate where PLr or SIL targets are assigned to each safety function."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "3. Risk Assessment"
 related_standards:
   - name: "ISO 12100"
@@ -276,7 +276,7 @@ title: "Lifecycle Stage 3.5 — Safety Requirements Specification"
 description: "The SRS is the contract between risk assessment and architecture — every safety function defined with required PL/SIL, inputs, outputs, and response time."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "3.5. Safety Requirements Spec"
 related_standards:
   - name: "IEC 62061"
@@ -321,7 +321,7 @@ title: "Lifecycle Stage 4 — Safety Architecture Definition"
 description: "Decompose safety functions into subsystems, select category/architecture, calculate PL or SIL, and verify response time budgets."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "4. Safety Architecture"
 related_standards:
   - name: "ISO 13849-1"
@@ -367,7 +367,7 @@ title: "Lifecycle Stage 5 — Detailed Design and Part Sizing"
 description: "Circuit design, wire sizing, SCCR, grounding, label requirements, BOM, and verification plan — governed by NFPA 79, UL 508A, and NEC."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "5. Detailed Design"
 related_standards:
   - name: "NFPA 79"
@@ -410,7 +410,7 @@ title: "Lifecycle Stage 6 — Draft Design Documentation"
 description: "Compile engineering outputs into formal document packages for the build team, commissioning team, and regulatory record."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "6. Draft Documentation"
 related_standards:
   - name: "IEC 62061"
@@ -453,7 +453,7 @@ title: "Lifecycle Stage 7 — Control System Build and Software Implementation"
 description: "Panel fabrication, safety PLC programming, pre-shipment functional test, and program backup — with build records for every safety-rated component."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "7. Build"
 related_standards:
   - name: "UL 508A"
@@ -498,7 +498,7 @@ title: "Lifecycle Stage 8 — Installation"
 description: "Field installation of control panels and safety devices — NEC/NFPA 79 wiring, cable segregation, grounding continuity, and installation record."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "8. Installation"
 related_standards:
   - name: "NFPA 79"
@@ -541,7 +541,7 @@ title: "Lifecycle Stage 9 — Pre-Commissioning and Calibration"
 description: "Systematic verification of wiring, I/O, calibration, and safety function response before process startup — establishes proof test baselines."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "9. Pre-Commissioning"
 related_standards:
   - name: "ISO 13849-1"
@@ -585,7 +585,7 @@ title: "Lifecycle Stage 10 — Commissioning and Validation"
 description: "FAT, SAT, safety function validation, and final PL/SIL verification — the stage where design intent is formally demonstrated on the physical system."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "10. Commissioning"
 related_standards:
   - name: "ISO 13849-1"
@@ -630,7 +630,7 @@ title: "Lifecycle Stage 11 — Maintenance and Lifecycle Support"
 description: "Proof testing at defined intervals, preventive maintenance, bypass management, and MOC — sustaining safety integrity across the full operational life."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "11. Maintenance"
 related_standards:
   - name: "ISO 13849-1"
@@ -674,7 +674,7 @@ title: "Lifecycle Stage 12 — Management of Change"
 description: "Structured re-entry into the safety lifecycle for any modification to a safety function, component, or program — the most commonly failed audit point."
 breadcrumb:
   - name: "Lifecycle"
-    url: "/lifecycle/"
+    url: "/verification/lifecycle/"
   - name: "12. Management of Change"
 related_standards:
   - name: "IEC 61511-1"

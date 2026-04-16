@@ -2,7 +2,7 @@
 
 **Date:** 2026-03-13
 **Status:** Planning
-**Depends on:** Phase 18 Track B/C complete (`/field-engineering/` and `/tools/reference-hub/` surfaced)
+**Depends on:** Phase 18 Track B/C complete (`/implementation/commissioning-templates/` and `/tools/reference-hub/` surfaced)
 
 ## Goal
 
@@ -15,7 +15,7 @@ the site feels like an engineering navigation system rather than a repository in
 - Keep all current page URLs stable in this phase
 - No redirects, page moves, or section renames in the initial implementation
 - Do not create empty top-level sections for technologies, calculators, or broad troubleshooting
-- Consume `/field-engineering/` and `/tools/reference-hub/` as dependencies from Phase 18 rather than redefining them
+- Consume `/implementation/commissioning-templates/` and `/tools/reference-hub/` as dependencies from Phase 18 rather than redefining them
 
 ## Target information architecture
 
@@ -47,9 +47,9 @@ They are surfaced inside the new hub structure:
 
 Phase 19 plans around these section destinations:
 
-- `/engineering-workflow/`
+- `/design/`
 - `/tools/reference-hub/`
-- `/field-engineering/`
+- `/implementation/commissioning-templates/`
 
 ### Hub page intent
 
@@ -85,19 +85,19 @@ Each top-level section should support:
 
 ```yaml
 - label: "Engineering Workflow"
-  url: "/engineering-workflow/"
+  url: "/design/"
   match_prefixes:
-    - "/engineering-workflow/"
-    - "/lifecycle/"
-    - "/workflows/"
-    - "/field-engineering/"
+    - "/design/"
+    - "/verification/lifecycle/"
+    - "/design/workflows/"
+    - "/implementation/commissioning-templates/"
   children:
     - label: "Lifecycle"
-      url: "/lifecycle/"
+      url: "/verification/lifecycle/"
     - label: "Workflows"
-      url: "/workflows/"
+      url: "/design/workflows/"
     - label: "Field Engineering"
-      url: "/field-engineering/"
+      url: "/implementation/commissioning-templates/"
 ```
 
 The sidebar include should render from this data rather than from manually duplicated HTML.
@@ -161,7 +161,7 @@ Group quick-reference and meta/reference content:
 - Jekyll build completes cleanly after the sidebar is moved to a data-driven model
 - Existing direct URLs remain valid and unchanged
 - Sidebar renders all major site destinations without broken links
-- `/engineering-workflow/` correctly routes to lifecycle, workflows, and field-engineering content
+- `/design/` correctly routes to lifecycle, workflows, and field-engineering content
 - `/tools/reference-hub/` correctly routes to glossary, software stack, rag browser, crosswalks, and future quick-reference material
 - Active/open sidebar state works correctly for:
   - standards pages

@@ -119,7 +119,7 @@ The current sidebar separates sections by content family. It does not yet reflec
 
 Decide whether "workflows" should become:
 
-1. a new first-class site section such as `/workflows/`, or
+1. a new first-class site section such as `/design/workflows/`, or
 2. a distributed pattern expressed through lifecycle pages, scenarios, and related-work blocks on training pages
 
 This decision should be made before writing the full implementation plan.

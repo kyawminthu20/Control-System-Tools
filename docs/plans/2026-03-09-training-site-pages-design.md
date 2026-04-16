@@ -137,7 +137,7 @@ breadcrumb:
   - name: "Training"
     url: /training/
   - name: "Electrical Machines"
-    url: /training/electrical-machines/
+    url: /fundamentals/motors/
 repo_path: "control-standards/rag/training_modules/electrical_machines/vfd_fundamentals.md"
 ---
 ```
@@ -155,8 +155,8 @@ New `Training` section in `docs/_includes/sidebar.html`, collapsed by default:
   <summary>Training</summary>
   <ul class="sidebar__links">
     <li><a href="/training/">All Modules</a></li>
-    <li><a href="/training/fundamentals/" class="sub">Fundamentals</a></li>
-    <li><a href="/training/electrical-machines/" class="sub">Electrical Machines</a></li>
+    <li><a href="/fundamentals/electrical/" class="sub">Fundamentals</a></li>
+    <li><a href="/fundamentals/motors/" class="sub">Electrical Machines</a></li>
     <li><a href="/training/nec-application/" class="sub">NEC Application</a></li>
   </ul>
 </details>

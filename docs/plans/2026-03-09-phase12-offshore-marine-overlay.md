@@ -520,7 +520,7 @@ On most requirements the two societies are equivalent. Key difference: emergency
 
 ---
 
-<a href="{{ '/scenarios/offshore-platform-control/' | relative_url }}" class="card__link">See Offshore Platform Control scenario &rarr;</a>
+<a href="{{ '/implementation/scenarios/offshore-platform-control/' | relative_url }}" class="card__link">See Offshore Platform Control scenario &rarr;</a>
 
 <a href="{{ '/industries/' | relative_url }}" class="card__link">&larr; Industry matrix</a>
 ```
@@ -683,7 +683,7 @@ title: "Scenario 09 — Offshore Platform ESD / F&G / Power Management"
 description: "Standards design workflow for an offshore platform control system: DNV-OS-D201, IEC 61511, IEC 60079, IT earthing, LSOH cable."
 breadcrumb:
   - name: "Scenarios"
-    url: "/scenarios/"
+    url: "/implementation/scenarios/"
   - name: "Offshore Platform Control"
 related_standards:
   - name: "IEC 61511"
@@ -874,7 +874,7 @@ Class surveyors are in high demand. Plan the FAT 8–10 weeks in advance and con
 
 <a href="{{ '/industries/offshore/' | relative_url }}" class="card__link">See Offshore industry overlay &rarr;</a>
 
-<a href="{{ '/scenarios/' | relative_url }}" class="card__link">&larr; All scenarios</a>
+<a href="{{ '/implementation/scenarios/' | relative_url }}" class="card__link">&larr; All scenarios</a>
 ```
 
 **Step 3: Verify build**
@@ -909,7 +909,7 @@ Find the closing `</div>` of the scenario grid. Insert before it:
     <span class="scenario-card__num">Scenario 09</span>
     <span class="scenario-card__title">Offshore Platform ESD / F&amp;G</span>
     <p class="scenario-card__start"><strong>Start:</strong> DNV-OS-D201 + IEC 61511 + IEC 60079</p>
-    <a href="{{ '/scenarios/offshore-platform-control/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
+    <a href="{{ '/implementation/scenarios/offshore-platform-control/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
   </div>
 ```
 
@@ -918,7 +918,7 @@ Find the closing `</div>` of the scenario grid. Insert before it:
 In the Scenarios section, after the `semiconductor-fab-tool` link, add:
 
 ```html
-      <li><a href="{{ '/scenarios/offshore-platform-control/' | relative_url }}" class="sub">Offshore Platform</a></li>
+      <li><a href="{{ '/implementation/scenarios/offshore-platform-control/' | relative_url }}" class="sub">Offshore Platform</a></li>
 ```
 
 **Step 3: Update `project_state/project_state.md`**

@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-15 (Batch 10)
+**Last Updated:** 2026-04-15 (Batch 11)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,18 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-15 — Phase 26 Batch 11 COMPLETE: Site-wide cross-link sweep
+
+**Type:** Site structure / Cross-link sweep
+**Status:** Complete
+
+- Swept 501 residual references to pre-Phase-26 URLs across 49 files (training/fundamentals, training/control-systems, training/electrical-machines, engineering-workflow, software-stack, workflows/* split between design/implementation/troubleshooting, commissioning-templates, scenarios, all lifecycle/* stages split across verification/implementation, field-engineering, legacy reference/architecture + motor-systems, legacy /rag-browser/ /glossary/ /crosswalks/ /about/).
+- Used a word-boundary-safe rewriter with ordered longest-first replacements (so `/tools/rag-browser/` is not rewritten into `/tools/tools/rag-browser/`).
+- Preserved `redirect_from:` frontmatter entries (they must keep the old URLs for the plugin). Skipped `docs/_data/phase26_migration_map.yml`, `docs/_data/rag_tree.json`, `docs/assets/rag-files/**`, and the Phase 26 plan/design spec (those contain old URLs as data).
+- `docs/_data/training_catalog.yml` (105 refs) and `docs/_data/field_checklists.yml` (22 refs) are the biggest single-file updates — the catalog no longer round-trips every module URL through a 301 redirect.
+- `docs/field-engineering/index.md` meta-refresh shim retained and retargeted to `/implementation/commissioning-templates/`.
+- Jekyll build clean (267 HTML files). Internal link check exit 0 (267 scanned). AI-boundary validator: only the 2 pre-existing Phase 25 failures, no new regressions.
 
 ## 2026-04-15 — Phase 26 Batch 10 COMPLETE: navigation.yml rewrite + 4 top-level landings
 

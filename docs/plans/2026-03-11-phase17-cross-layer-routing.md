@@ -2,7 +2,7 @@
 
 **Date:** 2026-03-11
 **Status:** Active
-**Decision:** Workflows as first-class `/workflows/` site section (Option A)
+**Decision:** Workflows as first-class `/design/workflows/` site section (Option A)
 
 ## Goal
 
@@ -12,7 +12,7 @@ applied scenarios. Workflows surface as a first-class destination.
 
 ## Scope
 
-### Task 1 — `/workflows/` landing page + sidebar
+### Task 1 — `/design/workflows/` landing page + sidebar
 
 - `docs/workflows/index.md` — landing page with workflow cards by category
 - `docs/_includes/sidebar.html` — Workflows section added
@@ -67,7 +67,7 @@ Clean build, verify cross-links.
 
 ## Acceptance Criteria
 
-- `/workflows/` exists as a sidebar destination with 5+ workflow pages
+- `/design/workflows/` exists as a sidebar destination with 5+ workflow pages
 - Every workflow page links to related training modules
 - Motor and NEC training pages surface Related Workflows blocks
 - Machine Lifecycle path visible on training landing

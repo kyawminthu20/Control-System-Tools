@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 <div class="page-header">
-  <div class="breadcrumb"><a href="{{ '/workflows/' | relative_url }}">Workflows</a> › Drive Systems</div>
+  <div class="breadcrumb"><a href="{{ '/design/workflows/' | relative_url }}">Workflows</a> › Drive Systems</div>
   <h1>Servo Commissioning Workflow</h1>
   <p class="page-subtitle">Staged commissioning for a servo axis. Servo systems require tighter control over mechanical risk, feedback correctness, and tuning than a basic induction-motor drive.</p>
   <div class="workflow-meta" style="margin-top:0.75rem;">
@@ -101,9 +101,9 @@ If mechanical issues appear (resonance, backlash, compliance), resolve them mech
 
 | Module | Topic |
 |---|---|
-| [Servo Drive Fundamentals]({{ '/training/electrical-machines/servo-drive-fundamentals/' | relative_url }}) | Servo architecture, feedback, and control loops |
-| [Motor Control Methods]({{ '/training/electrical-machines/motor-control-methods/' | relative_url }}) | Control loop structure (current, velocity, position) |
-| [Motor Family Comparison]({{ '/training/electrical-machines/motor-family-comparison/' | relative_url }}) | Servo vs. induction vs. stepper selection |
+| [Servo Drive Fundamentals]({{ '/fundamentals/motors/servo-drive-fundamentals/' | relative_url }}) | Servo architecture, feedback, and control loops |
+| [Motor Control Methods]({{ '/fundamentals/motors/motor-control-methods/' | relative_url }}) | Control loop structure (current, velocity, position) |
+| [Motor Family Comparison]({{ '/fundamentals/motors/motor-family-comparison/' | relative_url }}) | Servo vs. induction vs. stepper selection |
 
 ## Related workflows
 
@@ -111,7 +111,7 @@ If mechanical issues appear (resonance, backlash, compliance), resolve them mech
 |---|---|
 | [Motor Troubleshooting Decision Tree]({{ '/troubleshooting/motors/' | relative_url }}) | If servo instability or faults appear |
 | [VFD Commissioning Workflow]({{ '/implementation/vfd-commissioning/' | relative_url }}) | For VFD-driven induction motors on the same machine |
-| [Motor Selection Workflow]({{ '/workflows/motor-selection/' | relative_url }}) | Review original selection basis |
+| [Motor Selection Workflow]({{ '/design/workflows/motor-selection/' | relative_url }}) | Review original selection basis |
 
 {% include trust-boundary.html %}
 

@@ -52,7 +52,7 @@ description: "Navigate industrial automation standards families, lifecycle stage
     <span class="card__title">IEC 61131-3 · IEC 62443</span>
     <p class="card__desc">PLC programming languages and safety software lifecycle (IEC 61131-3). Industrial cybersecurity series (IEC 62443) for networked control systems.</p>
     <div class="card__path">rag/reference_models/</div>
-    <a href="{{ '/software-stack/' | relative_url }}" class="card__link">Routing guide &rarr;</a>
+    <a href="{{ '/design/software-stack/' | relative_url }}" class="card__link">Routing guide &rarr;</a>
     <span class="badge badge--verify">TO VERIFY</span>
   </div>
 
@@ -69,7 +69,7 @@ description: "Navigate industrial automation standards families, lifecycle stage
     <span class="card__title">7-Layer Architecture · Safety Architecture · 15-Standard Stack</span>
     <p class="card__desc">Cross-cutting reference models: machine architecture layers, universal safety architecture, and semiconductor compliance stack.</p>
     <div class="card__path">rag/reference_models/</div>
-    <a href="{{ '/software-stack/' | relative_url }}" class="card__link">View reference &rarr;</a>
+    <a href="{{ '/design/software-stack/' | relative_url }}" class="card__link">View reference &rarr;</a>
   </div>
 </div>
 
@@ -179,7 +179,7 @@ description: "Navigate industrial automation standards families, lifecycle stage
     <span class="scenario-card__title">US Industrial Control Panel</span>
     <p class="scenario-card__start"><strong>Start with:</strong> UL 508A + NEC Article 409 + NFPA 79</p>
     <p style="font-size:0.78rem;color:var(--color-text-muted);">Panel intended for US market, UL listing required. All three standards apply — NEC is the legal baseline, UL 508A governs construction and listing, NFPA 79 applies when machine context exists.</p>
-    <a href="{{ '/scenarios/us-industrial-control-panel/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
+    <a href="{{ '/implementation/scenarios/us-industrial-control-panel/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
   </div>
 
   <div class="scenario-card">
@@ -187,7 +187,7 @@ description: "Navigate industrial automation standards families, lifecycle stage
     <span class="scenario-card__title">Global Machine (US + EU)</span>
     <p class="scenario-card__start"><strong>Start with:</strong> NFPA 79 (US) + IEC 60204-1 (EU) + ISO 12100</p>
     <p style="font-size:0.78rem;color:var(--color-text-muted);">Machine sold in both US and EU markets. Design to most restrictive from each. CE marking requires ISO 12100 risk assessment as foundation.</p>
-    <a href="{{ '/scenarios/global-machine/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
+    <a href="{{ '/implementation/scenarios/global-machine/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
   </div>
 
   <div class="scenario-card">
@@ -195,7 +195,7 @@ description: "Navigate industrial automation standards families, lifecycle stage
     <span class="scenario-card__title">Process Skid Shutdown System</span>
     <p class="scenario-card__start"><strong>Start with:</strong> IEC 61511 + IEC 61508 (foundation)</p>
     <p style="font-size:0.78rem;color:var(--color-text-muted);">SIS / ESD system for process industry. IEC 61511 is the application standard; IEC 61508 is the foundation lifecycle standard. <span class="badge badge--complete">CORPUS COMPLETE</span></p>
-    <a href="{{ '/scenarios/process-skid/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
+    <a href="{{ '/implementation/scenarios/process-skid/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
   </div>
 
   <div class="scenario-card">
@@ -203,7 +203,7 @@ description: "Navigate industrial automation standards families, lifecycle stage
     <span class="scenario-card__title">Networked Safety PLC Architecture</span>
     <p class="scenario-card__start"><strong>Start with:</strong> ISO 13849-1 or IEC 62061 + IEC 62443</p>
     <p style="font-size:0.78rem;color:var(--color-text-muted);">Safety PLC with network connectivity. Safety function design per PL or SIL path; cybersecurity overlay per IEC 62443. <span class="badge badge--verify">TO VERIFY</span></p>
-    <a href="{{ '/scenarios/networked-safety-plc/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
+    <a href="{{ '/implementation/scenarios/networked-safety-plc/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
   </div>
 
   <div class="scenario-card">
@@ -211,7 +211,7 @@ description: "Navigate industrial automation standards families, lifecycle stage
     <span class="scenario-card__title">Semiconductor Equipment Compliance</span>
     <p class="scenario-card__start"><strong>Start with:</strong> 15-Standard Minimum Compliance Stack</p>
     <p style="font-size:0.78rem;color:var(--color-text-muted);">Complex compliance stack for semiconductor fab equipment. SEMI S2/S8/S14 are now in the local corpus alongside the industry overlay.</p>
-    <a href="{{ '/scenarios/semiconductor-equipment/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
+    <a href="{{ '/implementation/scenarios/semiconductor-equipment/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
   </div>
 </div>
 

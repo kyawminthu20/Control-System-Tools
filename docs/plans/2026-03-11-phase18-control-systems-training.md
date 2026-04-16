@@ -101,7 +101,7 @@ Registered in: `training_modules/fundamentals/_index.yaml` (9 files total)
 
 ## Acceptance criteria
 
-- `/training/control-systems/` exists with 7 module pages
+- `/fundamentals/control/` exists with 7 module pages
 - All pages use `layout: training-module`
 - Catalog updated: group entry, 7 module entries, learning path, start-here card
 - Sidebar: Control Systems link added under Training

@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-04-15
 **Status:** Active
-**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batches 1–10 complete)
-**Next Phase:** Phase 26 Batch 11 — Site-wide cross-link sweep for residual old URLs (plan Task 14)
+**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batches 1–11 complete)
+**Next Phase:** Phase 26 Batch 12 — Final link audit + project_state close-out (plan Tasks 15–16)
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,21 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+Phase 26 Batch 11 (Task 14) is complete:
+- Site-wide cross-link sweep: 501 replacements across 49 files. All residual references to pre-Phase-26 URLs now point directly at the new paths instead of relying on the `jekyll-redirect-from` 301 chain.
+- Paths swept (longest-first, word-boundary-safe so `/tools/X/` is not rewritten into `/tools/tools/X/`):
+  - `/training/fundamentals/` → `/fundamentals/electrical/`, `/training/control-systems/` → `/fundamentals/control/`, `/training/electrical-machines/` → `/fundamentals/motors/`
+  - `/engineering-workflow/` → `/design/`, `/software-stack/` → `/design/software-stack/`
+  - `/workflows/electrical-review/`, `/workflows/motor-selection/` → `/design/workflows/…`; `/workflows/servo-commissioning/`, `/workflows/vfd-commissioning/` → `/implementation/…`; `/workflows/motor-troubleshooting/` → `/troubleshooting/motors/`; `/workflows/` → `/design/workflows/`
+  - `/commissioning-templates/` → `/implementation/commissioning-templates/`, `/scenarios/` → `/implementation/scenarios/`
+  - `/lifecycle/risk-assessment/|…/safety-*|…/maintenance/|…/management-of-change/` → `/verification/…`; `/lifecycle/concept/|…/standards-selection/|…/detailed-design/|…/draft-documentation/` → `/verification/lifecycle/…`; `/lifecycle/build/|…/pre-commissioning/|…/installation/|…/commissioning/` → `/implementation/lifecycle-*/`; `/lifecycle/` → `/verification/lifecycle/`
+  - `/field-engineering/` → `/implementation/commissioning-templates/`
+  - Straggler `/reference/architecture/…`, `/reference/motor-systems/…`, `/reference/`, `/rag-browser/`, `/glossary/`, `/crosswalks/`, `/about/` swept to the Phase-26 equivalents
+- Skip list (safety): `redirect_from:` frontmatter blocks, `docs/_data/phase26_migration_map.yml`, `docs/_data/rag_tree.json`, `docs/assets/rag-files/**` (regenerated), and the Phase 26 plan + design spec (contain old URLs as data).
+- `docs/_data/training_catalog.yml` swept (105 refs), `docs/_data/field_checklists.yml` swept (22 refs), `docs/_includes/topnav.html` + top-nav now points at the new URLs.
+- `docs/field-engineering/index.md` meta-refresh shim still in place — its redirect target was updated to `/implementation/commissioning-templates/`.
+- Jekyll build clean (267 HTML files); internal link check exit 0 (267 files scanned). AI-boundary validator: same pre-existing 2 Phase 25 failures, no new regressions.
 
 Phase 26 Batch 10 (Task 13) is complete:
 - Four new top-level landing pages created to support the 10-group nav structure without producing broken sidebar links:

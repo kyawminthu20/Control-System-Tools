@@ -47,7 +47,7 @@ redirect_from:
   <div class="workflow-card">
     <div class="workflow-card-header">
       <span class="workflow-badge drive">Drive Systems</span>
-      <h3><a href="{{ '/workflows/vfd-commissioning/' | relative_url }}">VFD Commissioning Workflow</a></h3>
+      <h3><a href="{{ '/implementation/vfd-commissioning/' | relative_url }}">VFD Commissioning Workflow</a></h3>
     </div>
     <p>Structured first energization and functional check sequence for VFD-driven motor systems. Covers pre-power electrical verification through load review and evidence retention.</p>
     <div class="workflow-meta">
@@ -59,7 +59,7 @@ redirect_from:
   <div class="workflow-card">
     <div class="workflow-card-header">
       <span class="workflow-badge drive">Drive Systems</span>
-      <h3><a href="{{ '/workflows/servo-commissioning/' | relative_url }}">Servo Commissioning Workflow</a></h3>
+      <h3><a href="{{ '/implementation/servo-commissioning/' | relative_url }}">Servo Commissioning Workflow</a></h3>
     </div>
     <p>Staged commissioning sequence for servo axes — from axis readiness and feedback verification through controlled enable, tuning, and functional motion review.</p>
     <div class="workflow-meta">
@@ -97,6 +97,6 @@ redirect_from:
 | [Training](/training/) | Concept-level background for these workflows |
 | [Standards](/standards/) | Code requirements that govern workflow outcomes |
 | [Lifecycle](/verification/lifecycle/) | Stage-oriented engineering process context |
-| [Scenarios](/scenarios/) | Applied project examples using these workflows |
+| [Scenarios](/implementation/scenarios/) | Applied project examples using these workflows |
 
 {% include trust-boundary.html %}

@@ -132,22 +132,22 @@ Escalate to nodal, loop, Thévenin, or Norton methods if:
 
 | Module | Topic |
 |---|---|
-| [Electrical Quantities and Circuit Language]({{ '/training/fundamentals/electrical-quantities/' | relative_url }}) | Voltage, current, resistance, and power basics |
-| [Series, Parallel, and Divider Circuits]({{ '/training/fundamentals/series-parallel-dividers/' | relative_url }}) | Network topology and divider analysis |
-| [Kirchhoff's Laws and Systematic Analysis]({{ '/training/fundamentals/kirchhoff-laws/' | relative_url }}) | KVL/KCL for multi-source networks |
-| [Equivalent Circuit Methods]({{ '/training/fundamentals/equivalent-circuit-methods/' | relative_url }}) | Thévenin, Norton, and superposition |
-| [Passive Components]({{ '/training/fundamentals/passive-components/' | relative_url }}) | Resistor, capacitor, and inductor behavior |
+| [Electrical Quantities and Circuit Language]({{ '/fundamentals/electrical/electrical-quantities/' | relative_url }}) | Voltage, current, resistance, and power basics |
+| [Series, Parallel, and Divider Circuits]({{ '/fundamentals/electrical/series-parallel-dividers/' | relative_url }}) | Network topology and divider analysis |
+| [Kirchhoff's Laws and Systematic Analysis]({{ '/fundamentals/electrical/kirchhoff-laws/' | relative_url }}) | KVL/KCL for multi-source networks |
+| [Equivalent Circuit Methods]({{ '/fundamentals/electrical/equivalent-circuit-methods/' | relative_url }}) | Thévenin, Norton, and superposition |
+| [Passive Components]({{ '/fundamentals/electrical/passive-components/' | relative_url }}) | Resistor, capacitor, and inductor behavior |
 
 ## Related workflows
 
 | Workflow | When to use |
 |---|---|
 | [Motor Selection Workflow]({{ '/design/workflows/motor-selection/' | relative_url }}) | When resistive checks arise in a motor-circuit design |
-| [VFD Commissioning Workflow]({{ '/workflows/vfd-commissioning/' | relative_url }}) | Electrical pre-checks before drive power-up |
+| [VFD Commissioning Workflow]({{ '/implementation/vfd-commissioning/' | relative_url }}) | Electrical pre-checks before drive power-up |
 
 {% include trust-boundary.html %}
 
 ## Related Checklists
 
-- [Pre-Power Panel and Incoming Supply Check]({{ '/commissioning-templates/pre-power-panel/' | relative_url }})
-- [Basic Circuit Polarity and Power Checks]({{ '/commissioning-templates/basic-circuit-polarity/' | relative_url }})
+- [Pre-Power Panel and Incoming Supply Check]({{ '/implementation/commissioning-templates/pre-power-panel/' | relative_url }})
+- [Basic Circuit Polarity and Power Checks]({{ '/implementation/commissioning-templates/basic-circuit-polarity/' | relative_url }})

@@ -241,4 +241,4 @@ Reference specification for a standard hardwired 24 VDC safety input on an indus
 
 - [Safety Architecture — Lifecycle Stage 4]({{ '/verification/safety-architecture/' | relative_url }})
 - [Detailed Design — Lifecycle Stage 5]({{ '/verification/lifecycle/detailed-design/' | relative_url }})
-- [Scenario 06 — Practical Machine Safety Implementation]({{ '/scenarios/machine-safety-implementation/' | relative_url }})
+- [Scenario 06 — Practical Machine Safety Implementation]({{ '/implementation/scenarios/machine-safety-implementation/' | relative_url }})
