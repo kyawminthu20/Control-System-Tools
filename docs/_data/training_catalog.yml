@@ -297,7 +297,7 @@ modules:
       - title: "Motor Selection Workflow"
         url: "/workflows/motor-selection/"
       - title: "Motor Troubleshooting Decision Tree"
-        url: "/workflows/motor-troubleshooting/"
+        url: "/troubleshooting/motors/"
     related_checklists:
       - title: "Motor Rotation and Overload Verification"
         url: "/commissioning-templates/motor-rotation-verification/"
@@ -376,7 +376,7 @@ modules:
       - title: "VFD Commissioning Workflow"
         url: "/workflows/vfd-commissioning/"
       - title: "Motor Troubleshooting Decision Tree"
-        url: "/workflows/motor-troubleshooting/"
+        url: "/troubleshooting/motors/"
     related_checklists:
       - title: "Capacitor Discharge Awareness Check"
         url: "/commissioning-templates/capacitor-discharge/"
@@ -398,7 +398,7 @@ modules:
       - title: "Servo Commissioning Workflow"
         url: "/workflows/servo-commissioning/"
       - title: "Motor Troubleshooting Decision Tree"
-        url: "/workflows/motor-troubleshooting/"
+        url: "/troubleshooting/motors/"
     related_checklists:
       - title: "Drive Commissioning"
         url: "/commissioning-templates/drive-commissioning/"

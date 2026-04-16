@@ -16,6 +16,14 @@
     - label: "Scenarios"
       url: "/scenarios/"
 
+- label: "Troubleshooting"
+  url: "/troubleshooting/"
+  match_prefixes:
+    - "/troubleshooting/"
+  children:
+    - label: "Motors"
+      url: "/troubleshooting/motors/"
+
 - label: "Standards"
   url: "/standards/"
   match_prefixes:

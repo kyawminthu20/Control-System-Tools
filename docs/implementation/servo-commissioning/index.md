@@ -109,7 +109,7 @@ If mechanical issues appear (resonance, backlash, compliance), resolve them mech
 
 | Workflow | When to use |
 |---|---|
-| [Motor Troubleshooting Decision Tree]({{ '/workflows/motor-troubleshooting/' | relative_url }}) | If servo instability or faults appear |
+| [Motor Troubleshooting Decision Tree]({{ '/troubleshooting/motors/' | relative_url }}) | If servo instability or faults appear |
 | [VFD Commissioning Workflow]({{ '/implementation/vfd-commissioning/' | relative_url }}) | For VFD-driven induction motors on the same machine |
 | [Motor Selection Workflow]({{ '/workflows/motor-selection/' | relative_url }}) | Review original selection basis |
 

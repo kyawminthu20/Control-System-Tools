@@ -82,7 +82,7 @@
       url: "/training/electrical-machines/motor-nameplates-slip-torque/"
   related_workflows:
     - title: "Motor Troubleshooting Decision Tree"
-      url: "/workflows/motor-troubleshooting/"
+      url: "/troubleshooting/motors/"
   related_lifecycle:
     - title: "Commissioning"
       url: "/implementation/lifecycle-commissioning/"

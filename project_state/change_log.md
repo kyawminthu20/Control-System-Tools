@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-15 (Batch 7)
+**Last Updated:** 2026-04-15 (Batch 8)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,18 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-15 — Phase 26 Batch 8 COMPLETE: Troubleshooting section
+
+**Type:** Site structure / New section
+**Status:** Complete
+
+- Created `/troubleshooting/` section with landing + Motors subpage. Landing organizes field diagnosis entry points into 6 symptom categories (Motors, VFDs, PLC systems, Field I/O, Networks, Safety circuits), each pointing at the right existing workflow, fundamentals reference, or commissioning template.
+- Moved `docs/workflows/motor-troubleshooting/index.md` to `docs/troubleshooting/motors/index.md` with `redirect_from:` stanza, updated breadcrumb, and refreshed cross-links (fundamentals/motors, design/workflows/motor-selection, implementation/vfd-commissioning, implementation/servo-commissioning, implementation/commissioning-templates/motor-rotation-verification).
+- Sweep of `/workflows/motor-troubleshooting/` → `/troubleshooting/motors/` across 5 source pages and 2 data files (`design/workflows/index.md`, `design/workflows/motor-selection/index.md`, `design/index.md`, `implementation/vfd-commissioning/index.md`, `implementation/servo-commissioning/index.md`, `_data/training_catalog.yml`, `_data/field_checklists.yml`).
+- Removed `docs/workflows/` entirely — the empty `electrical-review/` and `motor-selection/` shells from Batch 3 were deleted along with the motor-troubleshooting subdir.
+- Added Troubleshooting group to `docs/_data/navigation.yml` (children: Motors). Full nav restructure to the 10-group target is still reserved for plan Task 13.
+- Jekyll build clean (261 HTML files); internal link check exit 0.
 
 ## 2026-04-15 — Phase 26 Batch 7 COMPLETE: Training landing trim
 

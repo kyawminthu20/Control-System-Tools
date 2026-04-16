@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-04-15
 **Status:** Active
-**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batches 1–7 complete)
-**Next Phase:** Phase 26 Batch 8 — Troubleshooting landing + /workflows/motor-troubleshooting/ relocation (plan Task 11)
+**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batches 1–8 complete)
+**Next Phase:** Phase 26 Batch 9 — Repository landing + /about/ relocation (plan Task 12)
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,18 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+Phase 26 Batch 8 (Task 11) is complete:
+- New `/troubleshooting/` section created with two pages:
+  - `docs/troubleshooting/index.md` — landing with 6 symptom categories (Motors, VFDs, PLC systems, Field I/O, Networks, Safety circuits), each row pointing at the most appropriate existing workflow, fundamentals reference, or commissioning template
+  - `docs/troubleshooting/motors/index.md` — Motor Troubleshooting Decision Tree (moved from `/workflows/motor-troubleshooting/`)
+- `redirect_from:` added to the motors page so `/workflows/motor-troubleshooting/` and `/workflows/motor-troubleshooting/index.html` still resolve
+- Motors page breadcrumb updated from `Workflows › Motor Systems` to `Troubleshooting › Motors`
+- Motors page internal cross-links updated: Related Training and Related Workflows tables now point at `/fundamentals/motors/...`, `/design/workflows/motor-selection/`, `/implementation/vfd-commissioning/`, `/implementation/servo-commissioning/`, and `/implementation/commissioning-templates/motor-rotation-verification/` (instead of the old `/training/electrical-machines/...` and `/workflows/...` paths)
+- Cross-link sweep for `/workflows/motor-troubleshooting/` → `/troubleshooting/motors/` across 5 source pages and 2 data files (`docs/design/workflows/index.md`, `docs/design/workflows/motor-selection/index.md`, `docs/design/index.md`, `docs/implementation/vfd-commissioning/index.md`, `docs/implementation/servo-commissioning/index.md`, `docs/_data/training_catalog.yml`, `docs/_data/field_checklists.yml`)
+- `docs/workflows/` tree removed — after the motor-troubleshooting move, only empty shells for `electrical-review/` and `motor-selection/` remained (those subdirs had already been emptied when Batch 3 moved their content to `/design/workflows/...`)
+- `docs/_data/navigation.yml` — Troubleshooting group added (children: Motors). The larger nav rewrite to the new 10-group structure is reserved for plan Task 13 and is out of Batch 8 scope.
+- Jekyll build clean (261 HTML files, +2 from Batch 7); internal link check exit 0.
 
 Phase 26 Batch 7 (Task 10) is complete:
 - `docs/training/index.md` rewritten as a thin structured-paths landing page. It now advertises only the NEC-for-Machines-and-Panels path (fundamentals / control / motors already moved to `/fundamentals/` in Batch 2), plus a "Related Sections" pointer block to specific existing landings (fundamentals/electrical, fundamentals/control, fundamentals/motors, design hub, lifecycle, implementation subsections, and tools entries).

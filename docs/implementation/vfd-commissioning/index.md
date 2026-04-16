@@ -111,7 +111,7 @@ Document and retain:
 | Workflow | When to use |
 |---|---|
 | [Motor Selection Workflow]({{ '/workflows/motor-selection/' | relative_url }}) | Review design basis before commissioning begins |
-| [Motor Troubleshooting Decision Tree]({{ '/workflows/motor-troubleshooting/' | relative_url }}) | If faults appear during commissioning |
+| [Motor Troubleshooting Decision Tree]({{ '/troubleshooting/motors/' | relative_url }}) | If faults appear during commissioning |
 | [Servo Commissioning Workflow]({{ '/implementation/servo-commissioning/' | relative_url }}) | For servo axes on the same machine |
 
 ## Related standards

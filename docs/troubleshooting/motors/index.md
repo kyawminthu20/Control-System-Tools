@@ -2,10 +2,13 @@
 layout: default
 title: Motor Troubleshooting Decision Tree
 description: First-pass routing for motor and drive faults before OEM diagnostics or component replacement.
+redirect_from:
+  - /workflows/motor-troubleshooting/
+  - /workflows/motor-troubleshooting/index.html
 ---
 
 <div class="page-header">
-  <div class="breadcrumb"><a href="{{ '/workflows/' | relative_url }}">Workflows</a> › Motor Systems</div>
+  <div class="breadcrumb"><a href="{{ '/troubleshooting/' | relative_url }}">Troubleshooting</a> › Motors</div>
   <h1>Motor Troubleshooting Decision Tree</h1>
   <p class="page-subtitle">First-pass troubleshooting for motor and drive systems. Routes the review before deeper OEM diagnostics or component replacement.</p>
   <div class="workflow-meta" style="margin-top:0.75rem;">
@@ -97,22 +100,22 @@ Work through in order:
 
 | Module | Topic |
 |---|---|
-| [Induction Motor Basics]({{ '/training/electrical-machines/induction-motor-basics/' | relative_url }}) | Motor operating principles |
-| [Motor Nameplates, Slip, and Torque]({{ '/training/electrical-machines/motor-nameplates-slip-torque/' | relative_url }}) | Slip, torque curves, and overload behavior |
-| [VFD Fundamentals]({{ '/training/electrical-machines/vfd-fundamentals/' | relative_url }}) | Drive fault behavior and protection |
-| [Servo Drive Fundamentals]({{ '/training/electrical-machines/servo-drive-fundamentals/' | relative_url }}) | Servo feedback and tuning concepts |
-| [Motor Control Methods]({{ '/training/electrical-machines/motor-control-methods/' | relative_url }}) | Control mode comparison (V/Hz, vector, closed-loop) |
+| [Induction Motor Basics]({{ '/fundamentals/motors/induction-motor-basics/' | relative_url }}) | Motor operating principles |
+| [Motor Nameplates, Slip, and Torque]({{ '/fundamentals/motors/motor-nameplates-slip-torque/' | relative_url }}) | Slip, torque curves, and overload behavior |
+| [VFD Fundamentals]({{ '/fundamentals/motors/vfd-fundamentals/' | relative_url }}) | Drive fault behavior and protection |
+| [Servo Drive Fundamentals]({{ '/fundamentals/motors/servo-drive-fundamentals/' | relative_url }}) | Servo feedback and tuning concepts |
+| [Motor Control Methods]({{ '/fundamentals/motors/motor-control-methods/' | relative_url }}) | Control mode comparison (V/Hz, vector, closed-loop) |
 
 ## Related workflows
 
 | Workflow | When to use |
 |---|---|
-| [Motor Selection Workflow]({{ '/workflows/motor-selection/' | relative_url }}) | Review original design basis during fault investigation |
-| [VFD Commissioning Workflow]({{ '/workflows/vfd-commissioning/' | relative_url }}) | Re-run commissioning steps if parameter changes are needed |
-| [Servo Commissioning Workflow]({{ '/workflows/servo-commissioning/' | relative_url }}) | Re-run servo axis steps for instability faults |
+| [Motor Selection Workflow]({{ '/design/workflows/motor-selection/' | relative_url }}) | Review original design basis during fault investigation |
+| [VFD Commissioning Workflow]({{ '/implementation/vfd-commissioning/' | relative_url }}) | Re-run commissioning steps if parameter changes are needed |
+| [Servo Commissioning Workflow]({{ '/implementation/servo-commissioning/' | relative_url }}) | Re-run servo axis steps for instability faults |
 
 {% include trust-boundary.html %}
 
 ## Related Checklists
 
-- [Motor Rotation and Overload Verification]({{ '/commissioning-templates/motor-rotation-verification/' | relative_url }})
+- [Motor Rotation and Overload Verification]({{ '/implementation/commissioning-templates/motor-rotation-verification/' | relative_url }})

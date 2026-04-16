@@ -35,7 +35,7 @@ redirect_from:
   <div class="workflow-card">
     <div class="workflow-card-header">
       <span class="workflow-badge motor">Motor Systems</span>
-      <h3><a href="{{ '/workflows/motor-troubleshooting/' | relative_url }}">Motor Troubleshooting Decision Tree</a></h3>
+      <h3><a href="{{ '/troubleshooting/motors/' | relative_url }}">Motor Troubleshooting Decision Tree</a></h3>
     </div>
     <p>Systematic first-pass routing for motor and drive faults: no-start, overcurrent, overheating, wrong speed, and servo instability. Routes the review before OEM diagnostics.</p>
     <div class="workflow-meta">

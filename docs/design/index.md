@@ -66,7 +66,7 @@ redirect_from:
 
 <div class="workflow-card-grid">
   <div class="workflow-card">
-    <h3><a href="{{ '/workflows/motor-troubleshooting/' | relative_url }}">Motor Troubleshooting</a></h3>
+    <h3><a href="{{ '/troubleshooting/motors/' | relative_url }}">Motor Troubleshooting</a></h3>
     <p>Decision tree for motor faults: thermal, mechanical, electrical, and drive-related fault branches.</p>
   </div>
 </div>

@@ -96,7 +96,7 @@ Before finalizing the design, confirm the path for:
 | Workflow | When to use |
 |---|---|
 | [VFD Commissioning Workflow]({{ '/workflows/vfd-commissioning/' | relative_url }}) | After selection, when a VFD is in the design |
-| [Motor Troubleshooting Decision Tree]({{ '/workflows/motor-troubleshooting/' | relative_url }}) | During field startup or fault investigation |
+| [Motor Troubleshooting Decision Tree]({{ '/troubleshooting/motors/' | relative_url }}) | During field startup or fault investigation |
 
 ## Related standards
 
