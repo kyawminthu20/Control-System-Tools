@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-15 (Batch 6)
+**Last Updated:** 2026-04-15 (Batch 7)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,17 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-15 — Phase 26 Batch 7 COMPLETE: Training landing trim
+
+**Type:** Site structure / Navigation refactor
+**Status:** Complete
+
+- Rewrote `docs/training/index.md` as a thin structured-paths landing. Only NEC-for-Machines-and-Panels remains under `/training/`; foundational electrical, control, and motors content has lived under `/fundamentals/` since Batch 2 and is no longer enumerated on the training page.
+- Replaced the old catalog-driven Start-Here grid, Learning-Paths grid, topic-group cards, all-modules table, and related-standards list with a short path table plus a "Related Sections" pointer block.
+- Link targets retargeted to existing sub-landings (`/fundamentals/electrical/`, `/design/architecture/`, `/verification/lifecycle/`, `/implementation/scenarios/`, `/tools/reference-hub/`, etc.) rather than bare `/fundamentals/`, `/verification/`, `/implementation/`, `/tools/` — those top-level landings don't exist yet and are out of scope for Batch 7.
+- `docs/_data/training_catalog.yml` untouched — it is still consumed by the three `/fundamentals/*` group landings, the NEC-application index, and the `training-module` layout.
+- Jekyll build clean (259 HTML files); internal link check exit 0.
 
 ## 2026-04-15 — Phase 26 Batch 6 COMPLETE: Tools group migration
 

@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-04-15
 **Status:** Active
-**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batches 1–6 complete)
-**Next Phase:** Phase 26 Batch 7 — Training trim + top-level landing page refresh
+**Current Phase:** Phase 26 IN PROGRESS — Navigation Restructure (Batches 1–7 complete)
+**Next Phase:** Phase 26 Batch 8 — Troubleshooting landing + /workflows/motor-troubleshooting/ relocation (plan Task 11)
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,12 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+Phase 26 Batch 7 (Task 10) is complete:
+- `docs/training/index.md` rewritten as a thin structured-paths landing page. It now advertises only the NEC-for-Machines-and-Panels path (fundamentals / control / motors already moved to `/fundamentals/` in Batch 2), plus a "Related Sections" pointer block to specific existing landings (fundamentals/electrical, fundamentals/control, fundamentals/motors, design hub, lifecycle, implementation subsections, and tools entries).
+- The page no longer iterates `site.data.training_catalog` — that catalog is still consumed by the three `/fundamentals/*` group landings, the NEC-application page, and the `training-module` layout, so it stays in place untouched.
+- Intentionally avoided linking to `/fundamentals/`, `/verification/`, `/implementation/`, `/tools/` as bare top-level URLs — those landing pages don't exist yet and are out of Batch 7 scope. Links go to specific existing sub-pages instead.
+- Jekyll build clean (259 HTML files); link check exit 0.
 
 Phase 26 Batch 6 (Task 9) is complete:
 - Tools group migrated: 10 pages moved to `/tools/`
