@@ -76,7 +76,7 @@
   });
 })();
 
-// Diagram lightbox with zoom + pan
+// Diagram lightbox with zoom + pan (mouse, touch, keyboard)
 (function () {
   function initLightbox() {
     var overlay = document.createElement('div');
@@ -90,62 +90,114 @@
 
     var hint = document.createElement('p');
     hint.className = 'lightbox-hint';
-    hint.textContent = 'Scroll to zoom \u00b7 Drag to pan \u00b7 Double-click to reset';
+    hint.textContent = 'Scroll / pinch to zoom \u00b7 Drag to pan \u00b7 +/\u2212/0 keys \u00b7 Double-click to reset';
 
     var closeBtn = document.createElement('button');
     closeBtn.className = 'lightbox-close';
     closeBtn.setAttribute('aria-label', 'Close diagram');
     closeBtn.textContent = '\u00D7';
 
+    var controls = document.createElement('div');
+    controls.className = 'lightbox-controls';
+    function makeBtn(label, ariaLabel) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'lightbox-btn';
+      b.setAttribute('aria-label', ariaLabel);
+      b.textContent = label;
+      return b;
+    }
+    var zoomInBtn  = makeBtn('+', 'Zoom in');
+    var zoomOutBtn = makeBtn('\u2212', 'Zoom out');
+    var resetBtn   = makeBtn('\u21BA', 'Reset zoom');
+    controls.appendChild(zoomInBtn);
+    controls.appendChild(zoomOutBtn);
+    controls.appendChild(resetBtn);
+
     inner.appendChild(closeBtn);
+    inner.appendChild(controls);
     inner.appendChild(hint);
     overlay.appendChild(inner);
     document.body.appendChild(overlay);
 
-    // Pan/zoom state
     var scale = 1, tx = 0, ty = 0;
     var dragging = false, startX, startY, startTx, startTy;
+    var pinchDist = 0, pinchStartScale = 1;
     var currentSvg = null;
 
     function applyTransform() {
       if (!currentSvg) return;
       currentSvg.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
     }
-
-    function resetTransform() {
-      scale = 1; tx = 0; ty = 0;
+    function resetTransform() { scale = 1; tx = 0; ty = 0; applyTransform(); }
+    function zoomBy(delta) {
+      scale = Math.max(0.3, Math.min(8, scale + delta));
       applyTransform();
     }
 
+    zoomInBtn.addEventListener('click',  function (e) { e.stopPropagation(); zoomBy(0.2); });
+    zoomOutBtn.addEventListener('click', function (e) { e.stopPropagation(); zoomBy(-0.2); });
+    resetBtn.addEventListener('click',   function (e) { e.stopPropagation(); resetTransform(); });
+
     inner.addEventListener('wheel', function (e) {
       e.preventDefault();
-      var delta = e.deltaY < 0 ? 0.15 : -0.15;
-      scale = Math.max(0.3, Math.min(8, scale + delta));
-      applyTransform();
+      zoomBy(e.deltaY < 0 ? 0.15 : -0.15);
     }, { passive: false });
 
     inner.addEventListener('mousedown', function (e) {
-      if (e.target === closeBtn) return;
+      if (e.target.closest('.lightbox-close, .lightbox-btn')) return;
       dragging = true;
       startX = e.clientX; startY = e.clientY;
       startTx = tx; startTy = ty;
       inner.style.cursor = 'grabbing';
     });
-
     window.addEventListener('mousemove', function (e) {
       if (!dragging) return;
       tx = startTx + (e.clientX - startX);
       ty = startTy + (e.clientY - startY);
       applyTransform();
     });
-
     window.addEventListener('mouseup', function () {
       dragging = false;
       inner.style.cursor = '';
     });
 
+    inner.addEventListener('touchstart', function (e) {
+      if (e.target.closest('.lightbox-close, .lightbox-btn')) return;
+      if (e.touches.length === 1) {
+        dragging = true;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        startTx = tx; startTy = ty;
+      } else if (e.touches.length === 2) {
+        dragging = false;
+        var dx0 = e.touches[0].clientX - e.touches[1].clientX;
+        var dy0 = e.touches[0].clientY - e.touches[1].clientY;
+        pinchDist = Math.sqrt(dx0 * dx0 + dy0 * dy0);
+        pinchStartScale = scale;
+      }
+    }, { passive: true });
+    inner.addEventListener('touchmove', function (e) {
+      if (e.touches.length === 1 && dragging) {
+        e.preventDefault();
+        tx = startTx + (e.touches[0].clientX - startX);
+        ty = startTy + (e.touches[0].clientY - startY);
+        applyTransform();
+      } else if (e.touches.length === 2 && pinchDist > 0) {
+        e.preventDefault();
+        var dx = e.touches[0].clientX - e.touches[1].clientX;
+        var dy = e.touches[0].clientY - e.touches[1].clientY;
+        var d = Math.sqrt(dx * dx + dy * dy);
+        scale = Math.max(0.3, Math.min(8, pinchStartScale * (d / pinchDist)));
+        applyTransform();
+      }
+    }, { passive: false });
+    inner.addEventListener('touchend', function (e) {
+      if (e.touches.length === 0) { dragging = false; pinchDist = 0; }
+    }, { passive: true });
+
     inner.addEventListener('dblclick', function (e) {
-      if (e.target === closeBtn) return;
+      if (e.target.closest('.lightbox-close, .lightbox-btn')) return;
       resetTransform();
     });
 
@@ -160,16 +212,19 @@
       if (e.target === overlay) close();
     });
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && overlay.classList.contains('is-active')) close();
+      if (!overlay.classList.contains('is-active')) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === '+' || e.key === '=') { e.preventDefault(); zoomBy(0.2); }
+      else if (e.key === '-' || e.key === '_') { e.preventDefault(); zoomBy(-0.2); }
+      else if (e.key === '0') { e.preventDefault(); resetTransform(); }
     });
 
     document.querySelectorAll('.mermaid').forEach(function (el) {
       var svg = el.querySelector('svg');
       if (!svg) return;
-      el.setAttribute('title', 'Click to enlarge \u2014 scroll/drag to zoom & pan');
+      el.setAttribute('title', 'Click to enlarge \u2014 scroll/pinch/keys to zoom, drag to pan');
       el.addEventListener('click', function () {
         var clone = svg.cloneNode(true);
-        // Remove fixed dimensions so SVG fills the lightbox naturally
         clone.removeAttribute('width');
         clone.removeAttribute('height');
         clone.style.width = '100%';

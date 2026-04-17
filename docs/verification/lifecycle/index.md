@@ -25,6 +25,25 @@ related_standards:
   <p>13 stages from concept through decommissioning — with standards overlay, roles, and entry/exit criteria at each stage.</p>
 </div>
 
+## Lifecycle at a Glance
+
+```mermaid
+flowchart LR
+    C[1. Concept] --> S[2. Standards Selection]
+    S --> R[3. Risk Assessment]
+    R --> RS[3.5 SRS]
+    RS --> SA[4. Safety Architecture]
+    SA --> DD[5. Detailed Design]
+    DD --> DOC[6. Draft Documentation]
+    DOC --> B[7. Build]
+    B --> I[8. Installation]
+    I --> PC[9. Pre-Commissioning]
+    PC --> CM[10. Commissioning]
+    CM --> M[11. Maintenance]
+    M --> MOC[12. Management of Change]
+    MOC --> DD
+```
+
 ## 1. Purpose
 
 This document defines the **Safety Engineering Lifecycle** — the structured sequence of stages, deliverables, and decision gates required to identify, design, implement, verify, and maintain safety-related controls for machinery and process systems.

@@ -23,6 +23,20 @@ redirect_from:
   <h1>Installation</h1>
 </div>
 
+## Installation Sequence
+
+```mermaid
+flowchart TD
+    A[Panel on site] --> B[Mechanical mount · Disconnects]
+    B --> C[Power feed · Grounding]
+    C --> D[Control wiring · Cable segregation]
+    D --> E[Pneumatic / hydraulic hookup]
+    E --> F[Field instruments · Safety devices]
+    F --> G[Continuity + grounding verification]
+    G --> H[Installation record]
+    H --> I[Ready for Stage 9]
+```
+
 ## 1. Purpose of This Stage
 
 This stage covers the **physical installation of the control system, machine electrical equipment, and safety devices at the final operating site** — the transition from the controlled environment of the build shop to the real-world conditions where the machine will operate for its entire service life.

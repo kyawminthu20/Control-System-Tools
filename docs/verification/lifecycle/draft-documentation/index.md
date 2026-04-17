@@ -23,6 +23,19 @@ related_standards:
   <h1>Draft Design Documentation</h1>
 </div>
 
+## Document Package Flow
+
+```mermaid
+flowchart TD
+    A[Design outputs<br/>Stages 1–5] --> B{Audience}
+    B -->|Build team| C[Schematics · BOM · Wire list · Traveler]
+    B -->|Commissioning| D[Functional spec · I/O list · Test plan]
+    B -->|Regulatory / File| E[Risk assessment · SRS · SIL/PL summary]
+    C --> F[Release for Stage 7]
+    D --> G[Release for Stages 9–10]
+    E --> H[Formal record]
+```
+
 ## 1. Purpose of This Stage
 
 This stage compiles all engineering outputs from Stages 1–5 into **formal, structured documentation packages** that serve three distinct audiences with different needs:

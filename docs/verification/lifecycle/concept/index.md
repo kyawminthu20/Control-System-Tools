@@ -20,6 +20,18 @@ related_standards:
   <p class="page-header__description">Define machine limits, intended use, foreseeable misuse, and applicable markets before risk assessment begins.</p>
 </div>
 
+## Concept Inputs and Outputs
+
+```mermaid
+flowchart TD
+    A[Business case] --> B[Machine function list]
+    B --> C[Operational envelope]
+    C --> D[Target markets / AHJ]
+    D --> E[Foreseeable misuse]
+    E --> F[Machine-limit statement]
+    F --> G[Concept brief → Stage 2]
+```
+
 ## 1. Purpose of This Stage
 
 This is the foundation stage of the safety engineering lifecycle. Its purpose is to establish **what the machine or system is**, **what it does**, **where its boundaries are**, and **what context it operates in** — before any risk assessment, design, or standards compliance work begins.

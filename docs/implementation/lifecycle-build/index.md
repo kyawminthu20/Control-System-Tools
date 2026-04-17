@@ -23,6 +23,20 @@ redirect_from:
   <h1>Control System Build and Software Implementation</h1>
 </div>
 
+## Build Sequence
+
+```mermaid
+flowchart LR
+    A[Design package<br/>Stage 6] --> B[Procure BOM]
+    B --> C[Panel wire-up]
+    C --> D[Labeling · Tagging]
+    D --> E[Point-to-point check]
+    E --> F[Dielectric / hi-pot]
+    F --> G[PLC program load + backup]
+    G --> H[QC signoff]
+    H --> I[Ship to site → Stage 8]
+```
+
 ## 1. Purpose of This Stage
 
 This stage transforms the detailed design documentation from Stage 5 and the build package from Stage 6 into **physical, functioning hardware and configured software** — the actual control panel, machine electrical system, and programmed control system that will be installed, commissioned, and operated.

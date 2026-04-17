@@ -23,6 +23,21 @@ redirect_from:
   <h1>Pre-Commissioning and Calibration</h1>
 </div>
 
+## Pre-Commissioning Gates
+
+```mermaid
+flowchart LR
+    A[Installation complete] --> B[Visual + mechanical check]
+    B --> C[Insulation · Megger]
+    C --> D[Power-on static checks]
+    D --> E[I/O force-test]
+    E --> F[Safety function static test]
+    F --> G{Faults?}
+    G -->|Yes| H[Rectify + re-test]
+    H --> B
+    G -->|No| I[Pre-comm certificate<br/>→ Stage 10]
+```
+
 ## 1. Purpose of This Stage
 
 This stage is the **systematic verification that the installed system is correctly wired, configured, calibrated, and functionally operational before the process or machine is started with actual production conditions.** It is the bridge between installation (Stage 8) and full commissioning (Stage 10).

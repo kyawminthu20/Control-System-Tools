@@ -25,6 +25,25 @@ related_standards:
   <h1>Detailed Design and Part Sizing</h1>
 </div>
 
+## Design Artifact Flow
+
+```mermaid
+flowchart LR
+    SA[Safety architecture<br/>Stage 4] --> EL[Electrical design]
+    SA --> ME[Mechanical safeguards]
+    SA --> SW[Safety logic design]
+    EL --> SCH[Schematics · Wire schedule]
+    EL --> BOM[BOM · SCCR calc]
+    EL --> PL[Panel layout]
+    ME --> G[Guards · Interlocks]
+    SW --> LAD[Program + parameter spec]
+    SCH --> PKG[Design package → Stage 6]
+    BOM --> PKG
+    PL --> PKG
+    G --> PKG
+    LAD --> PKG
+```
+
 ## 1. Purpose of This Stage
 
 This stage translates the safety architecture from Stage 4 into **fully detailed, buildable, verifiable engineering documents** — circuit schematics, panel layouts, wire schedules, BOMs, and calculation worksheets that a technician can build from and an inspector can verify against.

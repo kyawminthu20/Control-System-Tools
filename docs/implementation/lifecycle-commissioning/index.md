@@ -24,6 +24,19 @@ redirect_from:
   <strong>Final PL/SIL Verification</strong>
 </div>
 
+## Commissioning Sequence
+
+```mermaid
+flowchart LR
+    A[Pre-comm passed] --> B[Energize process]
+    B --> C[Loop checks under load]
+    C --> D[Safety function dynamic test]
+    D --> E[Sequence / interlock test]
+    E --> F[PL / SIL verification]
+    F --> G[SAT with customer]
+    G --> H[Handover · as-built docs]
+```
+
 ## 1. Purpose of This Stage
 
 This stage is the **final proof** that the safety system works as designed under actual or representative operating conditions. Everything in Stages 1–9 has been specification, design, construction, and preliminary verification. This stage answers the ultimate question: **does the installed, configured, real-world system actually achieve the required safety performance?**

@@ -8,6 +8,11 @@
     <a href="{{ '/standards/graph/' | relative_url }}">View full interactive graph &rarr;</a>
   </p>
   {% else %}
+  <div class="standards-graph-controls" role="group" aria-label="Graph zoom controls">
+    <button type="button" data-graph-action="zoom-in" aria-label="Zoom in">+</button>
+    <button type="button" data-graph-action="zoom-out" aria-label="Zoom out">&minus;</button>
+    <button type="button" data-graph-action="fit" aria-label="Fit to view">&#x21BA;</button>
+  </div>
   <div class="standards-graph-legend">
     <span class="legend-item legend-item--requires">requires</span>
     <span class="legend-item legend-item--pairs-with">pairs&nbsp;with</span>
@@ -141,6 +146,21 @@
         window.location.href = url;
       }
     });
+
+    // Zoom controls (full mode only)
+    if (MODE === "full") {
+      var wrap = document.getElementById(CONTAINER_ID + "-wrap");
+      if (wrap) {
+        wrap.querySelectorAll("[data-graph-action]").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var action = btn.getAttribute("data-graph-action");
+            if (action === "zoom-in")  { cy.zoom({ level: cy.zoom() * 1.25, renderedPosition: { x: cy.width() / 2, y: cy.height() / 2 } }); }
+            if (action === "zoom-out") { cy.zoom({ level: cy.zoom() / 1.25, renderedPosition: { x: cy.width() / 2, y: cy.height() / 2 } }); }
+            if (action === "fit")      { cy.fit(null, 40); }
+          });
+        });
+      }
+    }
 
     // Hover: highlight connected edges
     if (MODE === "full") {

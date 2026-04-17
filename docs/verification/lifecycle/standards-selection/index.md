@@ -25,6 +25,30 @@ related_standards:
   <h1>Standards Selection</h1>
 </div>
 
+## Standards Selection Decision Tree
+
+```mermaid
+flowchart TD
+    A[Concept brief] --> B{Market?}
+    B -->|US| C[NEC · NFPA 79 · UL 508A]
+    B -->|International| D[IEC 60204-1 · ISO 12100]
+    B -->|Both| E[Dual compliance set]
+    A --> F{Safety functions?}
+    F -->|Machine| G[ISO 13849-1 or IEC 62061]
+    F -->|Process SIS| H[IEC 61511]
+    A --> I{Networked / remote?}
+    I -->|Yes| J[IEC 62443]
+    A --> K{Hazardous area?}
+    K -->|Yes| L[IEC 60079 or NEC Art. 500/505]
+    C --> M[Register + type A/B/C hierarchy]
+    D --> M
+    E --> M
+    G --> M
+    H --> M
+    J --> M
+    L --> M
+```
+
 ## 1. Purpose of This Stage
 
 This stage translates the concept-stage outputs — system description, boundary definition, market identification, and machine type — into a **definitive, project-specific register of applicable standards** that will govern all subsequent design, build, verification, and documentation activities.
