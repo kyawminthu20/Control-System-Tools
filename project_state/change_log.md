@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-16 (trust-boundary deduplication)
+**Last Updated:** 2026-04-16 (control theory overview rebuild)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,26 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-16 — Control Theory Overview page rebuild
+
+**Type:** Content / Training Enhancement
+**Status:** Complete
+
+Rebuilt `docs/fundamentals/control/control-theory-overview/index.md` from a text-dense 151-line concept dump into a visual map page. Same topics, new presentation:
+
+- Hero Mermaid diagram showing the full feedback loop (reference → controller → plant → sensors → estimator → feedback)
+- 4-card "at a glance" summary row (Plant, Controller, Sensors/Estimator, Verification) using new `.glance-grid` CSS
+- Side-by-side open-loop vs closed-loop comparison with separate Mermaid diagrams using new `.compare-columns` CSS
+- "Where PID fits" layered architecture diagram showing PID as one block in a larger system
+- Controller families decision matrix (7 rows, 4 columns including industrial use level)
+- Estimator/observer flow diagram with method table (added Luenberger observer)
+- Verification process strip (model → simulation → frequency response → margins → hardware test)
+- "Where to go next" 6-row routing table replacing the old 2-link footer
+
+Added `.glance-grid` and `.compare-columns` CSS utility classes to `main.css`. Fixed kramdown markdown-inside-HTML rendering with `markdown="1"` attributes. No new pages, no layout changes, no JS.
+
+Jekyll build clean (268 files). Internal link checker exit 0.
 
 ## 2026-04-16 — Sidebar Enumeration for Control Theory & Crosswalks
 
