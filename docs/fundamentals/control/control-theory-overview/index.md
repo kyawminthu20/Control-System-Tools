@@ -77,8 +77,8 @@ Every element below maps back to a block in this diagram.
 
 ## Open-loop vs closed-loop
 
-<div class="compare-columns">
-<div>
+<div class="compare-columns" markdown="1">
+<div markdown="1">
 
 ### Open-loop
 
@@ -96,7 +96,7 @@ flowchart LR
 **Use when:** disturbances are small and the plant model is accurate (e.g. feedforward terms in a combined controller).
 
 </div>
-<div>
+<div markdown="1">
 
 ### Closed-loop
 
