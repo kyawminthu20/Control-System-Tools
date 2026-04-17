@@ -17,9 +17,12 @@ python3 main.py                          # run current placeholder
 python3 tools/project_automator.py       # refresh structure summary
 python3 tools/validate_ai_boundaries.py  # validate AI content boundaries
 bash tools/validate_reorg.sh all         # validate repo structure
+cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build   # build site
+cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll serve   # serve locally (http://localhost:4000/Control-System-Tools/)
 ```
 
-> Python >=3.12 required; `uv` preferred (run `uv sync` to install deps).
+> Python >=3.12 required; `uv` preferred (`uv sync` to install deps).
+> Ruby 2.6.10 (system macOS) + Bundler 2.4.22. CI uses Ruby 3.2.
 
 Use `project_state/` as the operational memory for this repository.
 
@@ -92,6 +95,14 @@ Update `project_state/how_to.md` when:
 - Delivery style: static-site friendly
 - Authoritative knowledge stays in `control-standards/rag/`
 - The app or site layer is a presentation layer, not the authoritative standards source
+
+## Site Architecture
+
+- Jekyll 4.3, vanilla HTML/CSS/JS — no frameworks
+- `baseurl: "/Control-System-Tools"` — all links must use `{{ site.baseurl }}`
+- Three-panel CSS Grid layout (sidebar 240px + main 1fr + context 220px)
+- Mermaid.js via CDN for diagrams
+- `docs/` is the Jekyll source root; `_config.yml` lives there
 
 ## Use Existing Automation
 
