@@ -207,6 +207,33 @@ flowchart LR
 
 ---
 
+## References and further reading
+
+### Core theory
+
+| Source | Covers |
+|---|---|
+| [MIT OCW — Feedback Control Systems (16.30)](https://ocw.mit.edu/courses/16-30-feedback-control-systems-fall-2010/pages/lecture-notes/) | Feedback, state-space, frequency response, estimator framing |
+| [Caltech — State Estimation notes (Murray)](https://murray.cds.caltech.edu/images/murray.cds/b/b3/Stateestim.pdf) | Observer and Kalman filter concepts |
+| [CMU — State Estimation, Observers, and Kalman Filters](https://www.cs.cmu.edu/~cga/controls-intro-25/lecture6.pdf) | Accessible bridge from control theory to robotics and software |
+
+### Analysis tools
+
+| Source | Covers |
+|---|---|
+| [MathWorks — Bode Plot documentation](https://www.mathworks.com/help/control/ref/controllib.chart.bodeplot.html) | Frequency response, gain margin, phase margin |
+| [MathWorks — Nyquist Plot documentation](https://www.mathworks.com/help/control/ref/nyquistplot.html) | Closed-loop stability from open-loop data |
+
+### Industrial context (this site)
+
+| Topic | Page |
+|---|---|
+| PID intuition and tuning | [PID Foundation]({{ '/fundamentals/control/pid-foundation/' | relative_url }}) · [PID in Practice]({{ '/fundamentals/control/pid-intuition/' | relative_url }}) |
+| Servo and VFD commissioning | [Servo Commissioning]({{ '/implementation/servo-commissioning/' | relative_url }}) · [VFD Commissioning]({{ '/implementation/vfd-commissioning/' | relative_url }}) |
+| Safety instrumented systems | [IEC 61511]({{ '/standards/functional-safety/iec-61511/' | relative_url }}) · [IEC 62443]({{ '/standards/cybersecurity/iec-62443/' | relative_url }}) |
+
+---
+
 ## Where to go next
 
 | If you want to... | Go to |
