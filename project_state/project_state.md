@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-04-20
 **Status:** Active
-**Current Phase:** Phase 26 COMPLETE — Navigation Restructure and Link Audit (+ trust-boundary deduplication 2026-04-16)
-**Next Phase:** Phase 27 PLANNING — TBD (motors planning staging in `planning/motors/` — BLDC vs PMSM deep dive added 2026-04-20)
+**Current Phase:** Phase 27 COMPLETE — BLDC and PMSM Motor Implementation
+**Next Phase:** Phase 28 PLANNING — TBD
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,46 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+## Phase 27 — COMPLETE (2026-04-20)
+
+Five new motor reference modules promoted from `planning/motors/` into the RAG corpus and the Jekyll site. Existing `bldc-ev-drone-motors` module enriched with a drone-class vs EV-class deep comparison section.
+
+### RAG corpus (`control-standards/rag/training_modules/electrical_machines/`)
+- [x] `bldc_motor_reference.md` — deep BLDC reference (1732 lines)
+- [x] `pmsm_motor_reference.md` — deep PMSM reference (437 lines)
+- [x] `bldc_vs_pmsm_comparison.md` — head-to-head comparison with 10 scenarios, application-fit guidance, and choice rationale (440 lines)
+- [x] `bldc_pmsm_implementation_guide.md` — 16-section production-grade implementation reference with wiring / control / drive selection patterns (918 lines)
+- [x] `bldc_pmsm_scenarios.md` — three engineering-grade scenario deep-dives (fan/pump, precision axis, AGV) with per-scenario drive, wiring, tuning, measurement, and failure-mode detail (715 lines)
+- [x] `_index.yaml` updated — 5 new files registered, file count 13 → 18
+
+### Site pages (`docs/fundamentals/motors/`)
+- [x] `bldc-reference/index.md` (1683 lines)
+- [x] `pmsm-reference/index.md` (439 lines)
+- [x] `bldc-vs-pmsm/index.md` (446 lines)
+- [x] `bldc-pmsm-implementation/index.md` (922 lines)
+- [x] `motor-selection-scenarios/index.md` (719 lines)
+
+### Data / cross-links / enrichment
+- [x] `docs/_data/training_catalog.yml` — electrical-machines module_count 13 → 18, 5 new module entries
+- [x] `docs/fundamentals/motors/bldc-ev-drone-motors/index.md` — new drone-class vs EV-class deep comparison body section (15 subsections, 2 new Mermaid diagrams, citations to TI/Microchip/Beckhoff/Tektronix preserved as inline links) + "See also" cross-links. File grew 180 → 429 lines.
+- [x] `docs/fundamentals/motors/motor-family-comparison/index.md` — "See also" cross-links to new modules
+
+### Clean-up
+- [x] `planning/motors/pmsm.md` — placeholder deleted
+- [x] `planning/motors/motors_comparisons.md` — redundant, deleted (superseded by existing `motor-family-comparison` site module)
+- [x] `planning/motors/scenarios.md` — retained as staging history (source for Module 5 and for `bldc-ev-drone-motors` enrichment)
+
+### Validation
+- Jekyll build: clean, 1.037s
+- AI boundary validator: 2 pre-existing failures only (no new regressions)
+- `tools/validate_reorg.sh all`: 48/50 baseline maintained
+- Internal link checker: exit 0 (273 files scanned, no broken links)
+
+### Header/convention adjustments made during execution
+- Plan originally spec'd YAML frontmatter for RAG files; actual project convention is HTML-comment headers with richer metadata (MODULE_FAMILY, LEARNING_LEVEL, INDEX_TAGS). Adjusted after Task 1; all 5 RAG files use the correct convention.
+- Source file `bldc.md` contained no Mermaid diagrams (used plain text ASCII art) — plan's "commutation state machine, control hierarchy (nested loops)" Mermaid expectation for Module 1 was not met because the source didn't have them. Content still complete.
+- External citations in `scenarios.md` (TI, Microchip, Beckhoff, Tektronix) rendered as inline plain markdown links per the plan's risk-note strategy; no footnote infrastructure added.
 
 ## Phase 26 — COMPLETE (2026-04-15)
 

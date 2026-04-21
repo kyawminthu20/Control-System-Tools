@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-20 (motors site: motor-selection-scenarios training module)
+**Last Updated:** 2026-04-20 (Phase 27 complete)
 **Status:** Active
 
 ## Purpose
@@ -18,12 +18,31 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
-## 2026-04-20 — Motors site: Motor Selection Scenarios training module
+## 2026-04-20 — Phase 27 complete: BLDC/PMSM motor implementation
 
-**Type:** Site content / Training module
-**Status:** Built, committed
+**Type:** Phase completion
+**Status:** Complete
 
-Added `docs/fundamentals/motors/motor-selection-scenarios/index.md` transformed from `control-standards/rag/training_modules/electrical_machines/bldc_pmsm_scenarios.md` (Phase 27 Task 9B). The page walks three engineering-grade motor-selection archetypes end-to-end: a clearly BLDC-favored fan/pump case, a clearly PMSM-favored precision axis / wafer stage case, and an ambiguous AGV traction case. Each scenario covers system context, engineering analysis, architecture (Mermaid), drive selection, wiring, tuning, measurement strategy, failure modes, cost structure, and a final verdict. Four Mermaid architecture diagrams wrapped in `<div class="mermaid-wrap">`. All inline citation links to TI, Microchip, Beckhoff, and Tektronix preserved. Clean Jekyll build.
+Five new motor reference modules shipped from planning → RAG → site:
+
+- BLDC Motor Reference (`/fundamentals/motors/bldc-reference/`)
+- PMSM Motor Reference (`/fundamentals/motors/pmsm-reference/`)
+- BLDC vs PMSM Comparison (`/fundamentals/motors/bldc-vs-pmsm/`) — Core/featured, with application-fit and choice-rationale scenarios
+- BLDC and PMSM Implementation Guide (`/fundamentals/motors/bldc-pmsm-implementation/`) — Core/featured, with basic wiring / control / drive patterns
+- Motor Selection Scenarios (`/fundamentals/motors/motor-selection-scenarios/`) — Core/featured, three engineering-grade archetypes (fan/pump, precision axis, AGV) with per-scenario drive, wiring, tuning, measurement, and failure-mode detail
+
+Existing `bldc-ev-drone-motors` module enriched with a drone-class BLDC vs EV-class PMSM/IPMSM deep comparison section (15 subsections sourced from `planning/motors/scenarios.md` block 3, including 2 new Mermaid architecture diagrams and inline citations to TI/Microchip/Beckhoff/Tektronix). File grew from 180 → 429 lines.
+
+RAG corpus at `control-standards/rag/training_modules/electrical_machines/` grew from 13 → 18 files. Training catalog `electrical-machines` group `module_count` 13 → 18. Cross-links added from `bldc-ev-drone-motors` and `motor-family-comparison` modules to the five new modules.
+
+Site HTML file count: baseline + 5. Jekyll build clean, AI boundary validator shows only the 2 pre-existing failures, `validate_reorg.sh all` at 48/50 baseline, internal link checker exit 0 (273 files scanned).
+
+Superseded planning files removed: `planning/motors/pmsm.md` (placeholder), `planning/motors/motors_comparisons.md` (redundant with existing `motor-family-comparison` site module). `planning/motors/scenarios.md` retained as staging history (source for Module 5 and for `bldc-ev-drone-motors` enrichment).
+
+Convention adjustments during execution:
+- RAG file headers use HTML-comment format (not YAML frontmatter as plan originally spec'd) — matches the existing 13 files in the same directory.
+- External citations rendered as inline plain-text markdown links, not kramdown footnotes.
+- `bldc.md` source had no Mermaid diagrams (used plain text ASCII) so Module 1's Mermaid diagram expectations were not met — content complete otherwise.
 
 ## 2026-04-20 — Motors planning: BLDC vs PMSM deep dive + full implementation reference
 
