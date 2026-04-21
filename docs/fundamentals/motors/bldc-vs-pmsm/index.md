@@ -299,7 +299,7 @@ Reason: field weakening extends top speed, MTPA extends range per Wh. BLDC 6-ste
 **Winner: PMSM servo + high-res encoder + FOC.**
 Reason: there is no other option that can hold torque at zero speed, deliver deterministic current response, and support nested loops with gain scheduling. This is the standard architecture for industrial servo press applications.
 
-**Summary — Scenario C:** Family: **PMSM servo**. Why it wins: only topology that holds full torque at zero speed deterministically and supports gain-scheduled nested loops. When BLDC would win instead: never for this duty — a trap motor cannot hold press force without severe heating. Control/feedback: FOC + high-res absolute encoder (or resolver), nested position/velocity/current loops. Drive class: industrial servo drive with STO/SS1, fieldbus (EtherCAT/PROFINET). Wiring: motor power cable (U/V/W + PE + shield), separate feedback cable, 24 V STO channel.
+**Summary — Scenario C:** Family: **PMSM servo**. Why it wins: only topology that holds full torque at zero speed deterministically and supports gain-scheduled nested loops. When BLDC would win instead: never for this duty — a trap motor cannot hold press force without severe heating. Control/feedback: FOC + high-res absolute encoder (or resolver), nested position/velocity/current loops. Drive class: industrial servo drive with STO/SS1, fieldbus (EtherCAT/PROFINET). Wiring: motor power cable (U/V/W + PE + shield), separate feedback cable, 24 V STO channel. For the full wiring pattern, see [Archetype B or Archetype C]({{ '/fundamentals/motors/bldc-pmsm-implementation/#wiring-archetypes--which-pattern-applies' | relative_url }}) in the Implementation Guide, depending on whether this is a single-axis press or a multi-axis servo line.
 
 ### Scenario D — Conveyor / roller line (continuous duty)
 
@@ -324,7 +324,7 @@ Reason: induction is actually the right answer here. If magnetic motors are desi
 **Winner: BLDC, sensorless 6-step (ESC).**
 Reason: this is the textbook BLDC use case. PMSM FOC adds no useful benefit and costs weight and compute.
 
-**Summary — Scenario E:** Family: **BLDC**. Why it wins: propeller inertia absorbs ripple; ESC is lightest, cheapest, highest power density. When PMSM would win instead: very rare — high-end cinematography gimbals or heavy-lift industrial drones where acoustic signature matters. Control/feedback: sensorless BEMF 6-step (modern ESCs may run FOC-lite). Drive class: electronic speed controller (ESC). Wiring: 3 phase leads, battery, PWM or DShot signal input.
+**Summary — Scenario E:** Family: **BLDC**. Why it wins: propeller inertia absorbs ripple; ESC is lightest, cheapest, highest power density. When PMSM would win instead: very rare — high-end cinematography gimbals or heavy-lift industrial drones where acoustic signature matters. Control/feedback: sensorless BEMF 6-step (modern ESCs may run FOC-lite). Drive class: electronic speed controller (ESC). Wiring: 3 phase leads, battery, PWM or DShot signal input. Wiring follows [Archetype A — Battery BLDC]({{ '/fundamentals/motors/bldc-pmsm-implementation/#archetype-a--battery-bldc-drone--e-bike--agv--power-tool' | relative_url }}).
 
 ### Scenario F — CNC spindle (5–20 kW)
 

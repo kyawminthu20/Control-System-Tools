@@ -599,6 +599,8 @@ flowchart LR
 
 Cable-class color legend: see the Cable-group legend in `bldc_pmsm_implementation_guide.md` §14. Solid lines carry primary conductors; dashed lines are shields, optional cables, or PE bonds.
 
+*For more detailed battery-BLDC architecture with precharge and contactor, see `bldc_pmsm_implementation_guide.md` §14 Archetype A — Battery BLDC. For real-world application scenarios, see `bldc_pmsm_scenarios.md` Scenario 1 (BLDC-favored high-speed cooling fan / pump system).*
+
 ---
 
 ## A. Power input wiring

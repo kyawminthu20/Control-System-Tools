@@ -468,6 +468,8 @@ Key differences from a BLDC wiring archetype:
 - STO is a dual-channel 24 V safety path with its own terminal block and cross-monitoring
 - Fieldbus is standard — direct PWM / analog inputs exist but are uncommon on industrial PMSM servo drives
 
+*For integrated single-axis servo wiring (one-cable power + feedback), see `bldc_pmsm_implementation_guide.md` §14 Archetype B — Integrated PMSM servo. For multi-axis shared DC-bus wiring (CNC, servo press), see `bldc_pmsm_implementation_guide.md` §14 Archetype C — Shared DC-bus multi-axis PMSM. For the precision-axis scenario walkthrough, see `bldc_pmsm_scenarios.md` Scenario 2 — PMSM-favored precision robotic axis / wafer stage.*
+
 ## Encoder connector pinout (typical servo encoder)
 
 | Pin group | Signal | Notes |

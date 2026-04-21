@@ -730,6 +730,8 @@ Microchip's PMSM FOC references and Hall/encoder guidance reflect this jump in c
 
 ## 5. Cross-scenario summary
 
+*Visual reference: see the Cable-group legend and the three wiring archetypes in `bldc_pmsm_implementation_guide.md` §14 "Wiring and integration" — the comparison tables below abstract what the diagrams there show visually.*
+
 ### 5.1 Drive comparison across the three archetypes
 
 | Feature                  | BLDC fan/pump drive       | PMSM precision servo drive                        | BLDC AGV drive          | PMSM AGV drive                 |

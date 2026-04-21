@@ -595,6 +595,8 @@ flowchart LR
 
 Cable-class color legend: see the [Cable-group legend]({{ '/fundamentals/motors/bldc-pmsm-implementation/#cable-group-legend' | relative_url }}) in the Implementation Guide. Solid lines carry primary conductors; dashed lines are shields, optional cables, or PE bonds.
 
+*For more detailed battery-BLDC architecture with precharge and contactor, see [Archetype A — Battery BLDC]({{ '/fundamentals/motors/bldc-pmsm-implementation/#archetype-a--battery-bldc-drone--e-bike--agv--power-tool' | relative_url }}) in the Implementation Guide. For real-world application scenarios, see [Fan / pump scenario]({{ '/fundamentals/motors/motor-selection-scenarios/#scenario-1--bldc-favored-high-speed-cooling-fan--pump-system' | relative_url }}) in Motor Selection Scenarios.*
+
 ---
 
 ### Power input wiring
