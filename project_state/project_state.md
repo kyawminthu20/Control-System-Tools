@@ -1,9 +1,9 @@
 # Project State
 
-**Last Updated:** 2026-04-16
+**Last Updated:** 2026-04-20
 **Status:** Active
 **Current Phase:** Phase 26 COMPLETE — Navigation Restructure and Link Audit (+ trust-boundary deduplication 2026-04-16)
-**Next Phase:** Phase 27 PLANNING — TBD
+**Next Phase:** Phase 27 PLANNING — TBD (motors planning staging in `planning/motors/` — BLDC vs PMSM deep dive added 2026-04-20)
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose

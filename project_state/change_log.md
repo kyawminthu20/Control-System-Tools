@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-16 (control theory overview rebuild)
+**Last Updated:** 2026-04-20 (motors planning: BLDC vs PMSM deep dive)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,35 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-20 — Motors planning: BLDC vs PMSM deep dive + full implementation reference
+
+**Type:** Planning / Content staging
+**Status:** Drafts in `planning/motors/`
+
+Two new files added to the motors planning set:
+
+1. `planning/motors/bldc_vs_pmsm.md` — focused head-to-head engineering comparison
+2. `planning/motors/bldc_pmsm_implementation.md` — full 16-section production-grade implementation reference (replaces a master-prompt template that was in the file)
+
+`bldc_pmsm_implementation.md` covers: executive overview, end-to-end system architecture with Mermaid diagrams, BLDC vs PMSM comparison table, control methods (6-step, sinusoidal, FOC with Clarke/Park flow diagram), practical math (V = Ri + Ldi/dt + K_e·ω, T = K_t·I, ω_e = p·ω_m, mechanical equation), drive architecture (inverter / gate driver / MCU / current sensing / feedback interface), motor selection (hobby vs industrial), drive selection (ESC/VESC/ODrive vs Siemens/Beckhoff/Kollmorgen/Yaskawa/Rockwell/Mitsubishi/etc.), hobby vs industrial comparison, cost-performance tradeoff, measurement and testing (why RMS meters fail on PWM, correct instrument set, power analyzer role), 8 practical scenarios (drone, conveyor, cobot, low-cost automation, semiconductor stage, CNC spindle, e-bike, servo press), industry brand classification, wiring and integration (shielding, grounding, cable practice), common failure modes, full implementation checklist.
+
+Scope of the new document:
+
+- Physical construction differences (SPM vs IPM, concentrated vs distributed windings, saliency, reluctance torque)
+- Back-EMF shape as the root cause of all control-strategy differences
+- Control strategies: 6-step trapezoidal, sinusoidal commutation, FOC/vector
+- Drive / inverter architecture comparison (shared power stage; differences in MCU, feedback, PWM, control loop rates, functional safety)
+- Feedback options and match to control strategy
+- Torque ripple quantified per scheme
+- Speed range and field weakening (SPM vs IPM)
+- Efficiency and cost structure
+- 10 real-world scenarios (HVAC EC fan, e-bike, servo press, conveyor, drone, CNC spindle, cobot joint, semiconductor wafer handler, power tool, retrofit)
+- Decision matrix for architecture selection
+- Common field failure modes specific to each family
+- Suggested follow-up planning docs (FOC math, field weakening, commissioning, servo tuning, drive hardware review)
+
+This stays in `planning/` — it is not yet promoted to `control-standards/rag/` or built into the Jekyll site. Next step when ready: promote relevant portions into `rag/training_modules/electrical_machines/` and expand the `fundamentals/motors/` site section.
 
 ## 2026-04-16 — Control Theory Overview page rebuild
 
