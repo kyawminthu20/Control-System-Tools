@@ -566,6 +566,41 @@ Separate wiring into groups. This is where many field problems start.
 
 ---
 
+## Wiring archetype (at a glance)
+
+A minimal BLDC system has five wiring groups. The diagram below shows them at once before the following subsections drill into each group.
+
+```mermaid
+flowchart LR
+    BAT([Battery / DC supply]):::power
+    FUSE[Fuse / disconnect]:::power
+    ESC[BLDC driver / ESC]
+    MOT[BLDC motor]:::phase
+    HALL>Hall sensor 5-wire]:::feedback
+    TEMP>NTC / PTC]:::feedback
+    HOST[Host / throttle / CAN]:::bus
+    PE((PE / chassis)):::shield
+
+    BAT -->|DC+ / DC-| FUSE
+    FUSE -->|DC bus| ESC
+    ESC -->|U / V / W| MOT
+    MOT -.->|phase shield| PE
+    HALL -.->|5V / GND / HA / HB / HC| ESC
+    TEMP -.->|2-wire| ESC
+    HOST -->|PWM / CAN / UART| ESC
+    ESC -.-> PE
+
+    classDef power stroke:#c0392b,stroke-width:2px
+    classDef phase stroke:#2c3e50,stroke-width:2px
+    classDef feedback stroke:#2980b9,stroke-width:2px
+    classDef bus stroke:#27ae60,stroke-width:2px
+    classDef shield stroke:#7f8c8d,stroke-width:1px,stroke-dasharray:3 3
+```
+
+Cable-class color legend: see the Cable-group legend in `bldc_pmsm_implementation_guide.md` §14. Solid lines carry primary conductors; dashed lines are shields, optional cables, or PE bonds.
+
+---
+
 ## A. Power input wiring
 
 From supply to drive.
@@ -614,6 +649,19 @@ From drive to motor:
 - Hall A/B/C
 - encoder A/A-, B/B-, Z/Z-
 - SPI / SSI / BiSS / resolver signals depending on system
+
+**Hall connector pinout (typical):**
+
+| Pin | Signal | Typical color (IEC 60757) | Notes |
+|-----|--------|---------------------------|-------|
+| 1   | +5V    | Red                       | Sensor supply (check drive datasheet — some drives use 3.3V) |
+| 2   | GND    | Black                     | Common return |
+| 3   | HA     | Yellow                    | Hall phase A — open-drain or push-pull |
+| 4   | HB     | Green                     | Hall phase B |
+| 5   | HC     | Blue                      | Hall phase C |
+| —   | Shield | —                         | 360° terminated at the drive end; one-end termination is standard practice for encoders and Halls |
+
+Motor manufacturer pinouts vary. Always verify against the motor datasheet before energizing — a swapped pair will either give a wrong rotation direction or wrong commutation sequence (commutation sequence error will cause severe current draw and no useful torque).
 
 ### Concerns
 
