@@ -2,7 +2,7 @@ version: "1.0"
 content_class: "RAG_APPROVED"
 status: "DRAFT"
 module_id: "electrical_machines"
-last_updated: "2026-03-09"
+last_updated: "2026-04-20"
 
 files:
   - "induction_motor_basics.md"
@@ -18,3 +18,8 @@ files:
   - "motor_efficiency_power_factor_and_losses.md"
   - "motor_control_methods_and_operating_regions.md"
   - "servo_feedback_and_inertia_matching.md"
+  - "bldc_motor_reference.md"
+  - "pmsm_motor_reference.md"
+  - "bldc_vs_pmsm_comparison.md"
+  - "bldc_pmsm_implementation_guide.md"
+  - "bldc_pmsm_scenarios.md"
