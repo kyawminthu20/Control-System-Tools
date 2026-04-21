@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-20 (motors planning: BLDC vs PMSM deep dive)
+**Last Updated:** 2026-04-20 (motors site: motor-selection-scenarios training module)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,13 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-20 — Motors site: Motor Selection Scenarios training module
+
+**Type:** Site content / Training module
+**Status:** Built, committed
+
+Added `docs/fundamentals/motors/motor-selection-scenarios/index.md` transformed from `control-standards/rag/training_modules/electrical_machines/bldc_pmsm_scenarios.md` (Phase 27 Task 9B). The page walks three engineering-grade motor-selection archetypes end-to-end: a clearly BLDC-favored fan/pump case, a clearly PMSM-favored precision axis / wafer stage case, and an ambiguous AGV traction case. Each scenario covers system context, engineering analysis, architecture (Mermaid), drive selection, wiring, tuning, measurement strategy, failure modes, cost structure, and a final verdict. Four Mermaid architecture diagrams wrapped in `<div class="mermaid-wrap">`. All inline citation links to TI, Microchip, Beckhoff, and Tektronix preserved. Clean Jekyll build.
 
 ## 2026-04-20 — Motors planning: BLDC vs PMSM deep dive + full implementation reference
 
