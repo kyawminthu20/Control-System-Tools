@@ -1,6 +1,10 @@
 # Staging / scratch files
 control-standards/work/design/check_this.md
 
+# Local screenshots and scratch images in repo root
+/control-theory-*.png
+/*.screenshot.png
+
 # Python-generated files
 __pycache__/
 *.py[oc]
