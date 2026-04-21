@@ -139,6 +139,14 @@ Their thermal assumptions, packaging goals, and duty expectations are often very
 - choose `stepper` for lower-cost discrete positioning when performance limits are acceptable
 - choose `brushed DC` mainly for legacy or specialized simple DC applications
 
+## See also
+
+- [BLDC vs PMSM Comparison]({{ '/fundamentals/motors/bldc-vs-pmsm/' | relative_url }}) — head-to-head engineering comparison with 10 application scenarios
+- [BLDC Motor Reference]({{ '/fundamentals/motors/bldc-reference/' | relative_url }}) — deep BLDC reference
+- [PMSM Motor Reference]({{ '/fundamentals/motors/pmsm-reference/' | relative_url }}) — deep PMSM reference
+- [BLDC and PMSM Implementation Guide]({{ '/fundamentals/motors/bldc-pmsm-implementation/' | relative_url }}) — production-grade implementation reference
+- [Motor Selection Scenarios]({{ '/fundamentals/motors/motor-selection-scenarios/' | relative_url }}) — three engineering-grade archetypes with tuning and measurement detail
+
 ---
 
 <div style="display:flex; justify-content:space-between; margin-top:2rem; font-size:0.9rem;">
