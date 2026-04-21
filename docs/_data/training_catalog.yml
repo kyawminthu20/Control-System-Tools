@@ -126,7 +126,7 @@ topic_groups:
     label: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
     description: "Induction and DC motors, VFDs, servo drives, motor selection, efficiency, and equations."
-    module_count: 13
+    module_count: 18
   - key: "nec-application"
     label: "NEC for Machines and Panels"
     url: "/training/nec-application/"
@@ -482,6 +482,96 @@ modules:
     type: "Concept + Practice"
     prerequisites:
       - "Servo Drive Fundamentals"
+
+  - title: "BLDC Motor Reference"
+    url: "/fundamentals/motors/bldc-reference/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Deep reference on BLDC construction, 6-step commutation, inverter operation, feedback options, wiring, and specification review."
+    level: "Intermediate"
+    time: "35 min"
+    focus: "Motor / Drive Engineering"
+    type: "Reference"
+    prerequisites:
+      - "Motor Family Comparison"
+      - "DC Motor Basics"
+    related_workflows:
+      - title: "Motor Selection Workflow"
+        url: "/design/workflows/motor-selection/"
+      - title: "Motor Troubleshooting Decision Tree"
+        url: "/troubleshooting/motors/"
+
+  - title: "PMSM Motor Reference"
+    url: "/fundamentals/motors/pmsm-reference/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Deep reference on PMSM: SPM vs IPM, sinusoidal back-EMF, field-oriented control, field weakening, and commissioning considerations."
+    level: "Intermediate"
+    time: "30 min"
+    focus: "Motor / Drive Engineering"
+    type: "Reference"
+    prerequisites:
+      - "BLDC Motor Reference"
+      - "Servo Drive Fundamentals"
+    related_workflows:
+      - title: "Servo Commissioning Workflow"
+        url: "/implementation/servo-commissioning/"
+
+  - title: "BLDC vs PMSM Comparison"
+    url: "/fundamentals/motors/bldc-vs-pmsm/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Head-to-head engineering comparison with 10 real scenarios, application-fit guidance, why one family wins over the other, and a decision matrix."
+    level: "Intermediate"
+    time: "30 min"
+    focus: "Motor / Drive Engineering"
+    type: "Concept"
+    featured: true
+    prerequisites:
+      - "Motor Family Comparison"
+    related_workflows:
+      - title: "Motor Selection Workflow"
+        url: "/design/workflows/motor-selection/"
+
+  - title: "BLDC and PMSM Implementation Guide"
+    url: "/fundamentals/motors/bldc-pmsm-implementation/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Production-grade implementation reference — system architecture, control methods, motor and drive selection, application routing, basic wiring patterns, measurement pitfalls, failure modes, and a full commissioning checklist."
+    level: "Advanced"
+    time: "60 min"
+    focus: "Motor / Drive Engineering"
+    type: "Reference"
+    featured: true
+    prerequisites:
+      - "BLDC vs PMSM Comparison"
+      - "VFD and Servo Architecture"
+    related_workflows:
+      - title: "Servo Commissioning Workflow"
+        url: "/implementation/servo-commissioning/"
+      - title: "VFD Commissioning Workflow"
+        url: "/implementation/vfd-commissioning/"
+    related_checklists:
+      - title: "Motor Nameplate and Overload Setting"
+        url: "/implementation/commissioning-templates/motor-nameplate-overload/"
+      - title: "Motor Rotation and Overload Verification"
+        url: "/implementation/commissioning-templates/motor-rotation-verification/"
+
+  - title: "Motor Selection Scenarios"
+    url: "/fundamentals/motors/motor-selection-scenarios/"
+    group: "electrical-machines"
+    group_label: "Motors, Drives, and Motion"
+    summary: "Three engineering-grade motor selection archetypes — fan/pump (BLDC-favored), precision axis (PMSM-favored), AGV (ambiguous tradeoff) — with per-scenario drive, wiring, control, tuning, measurement, and failure-mode detail."
+    level: "Intermediate"
+    time: "40 min"
+    focus: "Motor / Drive Engineering"
+    type: "Concept"
+    featured: true
+    prerequisites:
+      - "BLDC vs PMSM Comparison"
+    related_workflows:
+      - title: "Motor Selection Workflow"
+        url: "/design/workflows/motor-selection/"
 
   # ── NEC Application ─────────────────────────────────────────────────────────
   - title: "NEC Code Reading Fundamentals"
