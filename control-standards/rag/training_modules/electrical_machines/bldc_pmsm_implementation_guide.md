@@ -751,6 +751,38 @@ For three fully worked engineering archetypes (fan/pump, precision axis, AGV) wi
 
 ## 14. Wiring and Integration
 
+### Cable-group legend
+
+All wiring diagrams in the BLDC and PMSM modules use the same cable-class convention — shown once here, applied everywhere.
+
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart LR
+    P[Power]:::power
+    PH[Phase U/V/W]:::phase
+    F[Feedback]:::feedback
+    S[Safety]:::safety
+    B[Fieldbus]:::bus
+    SH[Shield / PE]:::shield
+
+    classDef power stroke:#c0392b,stroke-width:2px
+    classDef phase stroke:#2c3e50,stroke-width:2px
+    classDef feedback stroke:#2980b9,stroke-width:2px
+    classDef safety stroke:#e67e22,stroke-width:2px
+    classDef bus stroke:#27ae60,stroke-width:2px
+    classDef shield stroke:#7f8c8d,stroke-width:1px,stroke-dasharray:3 3
+</pre></div>
+
+| Cable group | Typical signals | IEC 60757 conductor color | Termination practice |
+|-------------|-----------------|---------------------------|----------------------|
+| Power       | DC+ / DC- / battery / L1/L2/L3 | Red (+), Black (−), Brown/Black/Grey for AC | Short low-impedance bond to chassis PE; separate conduit from signal cables |
+| Phase       | U, V, W         | Brown (U), Black (V), Grey (W) per IEC 60204-1 | Shielded VFD/servo cable; 360° shield termination at both ends for servo class |
+| Feedback    | Hall / encoder / resolver / temp | Twisted-pair differential; shield is separate | Shielded twisted pair; shield terminated at drive end (check drive manual); min 300 mm from power cables |
+| Safety      | STO-1, STO-2, SS1, interlocks | Typically violet or orange per panel convention | Dual-channel, cross-monitored; separate terminal blocks from control wiring |
+| Fieldbus    | EtherCAT / PROFINET / CAN / EtherNet-IP / PWM-throttle | Per bus standard (EtherCAT: green jacket is common) | Impedance-matched, terminated per bus spec; keep away from motor cables |
+| Shield / PE | Drain wire, cable shield, green/yellow PE | Green/yellow (PE); bare or foil for shield | 360° EMC gland preferred; avoid pigtails above ~10 MHz |
+
+Dashed lines in the diagrams indicate shield or optional connections. Solid lines are the primary conductor of the group.
+
 ### Power wiring
 
 - **Conductor sizing:** per NEC 430 or IEC 60204-1 — typically based on 125% of motor FLA for branch circuit
