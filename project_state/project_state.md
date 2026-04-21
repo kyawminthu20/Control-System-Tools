@@ -1,8 +1,8 @@
 # Project State
 
-**Last Updated:** 2026-04-20
+**Last Updated:** 2026-04-21
 **Status:** Active
-**Current Phase:** Phase 27 COMPLETE — BLDC and PMSM Motor Implementation
+**Current Phase:** Phase 27.5 COMPLETE — Visual Wiring Guides for BLDC and PMSM
 **Next Phase:** Phase 28 PLANNING — TBD
 **Delivery Target:** GitHub Pages static site for personal use
 
@@ -21,6 +21,55 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+## Phase 27.5 — COMPLETE (2026-04-21)
+
+Follow-up to Phase 27 adding visual wiring guides (Mermaid diagrams with cable-class coloring) across the BLDC and PMSM pages. Content-only — no new pages or routing.
+
+### New visual convention (establishes project baseline)
+
+All motor-system wiring diagrams use the same `classDef` stroke colors:
+
+- Power (DC bus / battery / AC line) → `#c0392b` (red)
+- Motor phase (U/V/W) → `#2c3e50` (near-black)
+- Feedback (Hall / encoder / resolver / temp) → `#2980b9` (blue)
+- Safety (STO / SS1 / interlocks) → `#e67e22` (orange)
+- Fieldbus (EtherCAT / PROFINET / CAN) → `#27ae60` (green)
+- Shield / PE → `#7f8c8d` dashed
+
+Legend + convention table lives in the Implementation Guide §14 top (one anchor, cross-linked from other pages).
+
+### Mermaid diagram changes (7 new across 4 pages)
+
+- `docs/fundamentals/motors/bldc-pmsm-implementation/index.md`: +1 legend diagram (D5) + 3 archetype diagrams (D4): Battery BLDC, Integrated PMSM servo, Shared DC-bus multi-axis PMSM. Mermaid count 3 → 7.
+- `docs/fundamentals/motors/bldc-reference/index.md`: +1 wiring archetype diagram (D2). Mermaid count 0 → 1.
+- `docs/fundamentals/motors/pmsm-reference/index.md`: +1 industrial servo wiring diagram (D3). Mermaid count 2 → 3.
+- `docs/fundamentals/motors/motor-selection-scenarios/index.md`: upgraded 3 trivial 3-node flows to labeled cable-group diagrams (D1) + added 1 new Scenario 2 wiring diagram. Mermaid count 4 → 5.
+
+### New pinout reference tables (2)
+
+- BLDC Reference: Hall connector pinout (5-pin, IEC 60757 conductor colors)
+- PMSM Reference: Encoder connector pinout (incremental + absolute protocols + temp + shield)
+
+### New reference content
+
+- PMSM Reference: new `## Wiring and integration` top-level section (servo wiring diagram + encoder pinout + STO dual-channel note + cross-link to Servo Commissioning Workflow)
+- Implementation Guide §14: cable-group legend subsection at top; three archetype subsections replacing prior prose bullets
+
+### Cross-links (9 new)
+
+- BLDC Reference → Implementation Guide Archetype A + Motor Selection Scenarios Scenario 1
+- PMSM Reference → Implementation Guide Archetypes B and C + Motor Selection Scenarios Scenario 2
+- BLDC vs PMSM Comparison: inline archetype references from Scenario C (servo press) and Scenario E (drone)
+- Motor Selection Scenarios: cross-scenario summary → cable-group legend + three archetypes
+
+### Validation
+
+- Jekyll build: clean, 1.026s, 273 HTML files (unchanged)
+- AI boundary validator: 2 pre-existing failures only (no new regressions)
+- `tools/validate_reorg.sh all`: 48/50 baseline
+- Internal link checker: exit 0, all 9 new cross-links resolve via kramdown heading IDs
+- RAG files and site files stay in sync (equivalent content, per-format conventions)
 
 ## Phase 27 — COMPLETE (2026-04-20)
 

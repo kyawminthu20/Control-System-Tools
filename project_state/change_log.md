@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-20 (Phase 27 complete)
+**Last Updated:** 2026-04-21 (Phase 27.5 complete)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,33 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-21 — Phase 27.5 complete: Visual wiring guides for BLDC and PMSM
+
+**Type:** Phase completion (follow-up to Phase 27)
+**Status:** Complete
+
+Phase 27 shipped five BLDC/PMSM modules with wiring **tables** but minimal visuals — scenario architecture flows were 3-node `Source → Drive → Motor` blocks and the Reference modules had no wiring diagrams. Phase 27.5 closes that gap with engineer-grade Mermaid wiring visuals across all four in-scope motor pages.
+
+**Seven new Mermaid diagrams added** using a new cable-class `classDef` convention (power=red, phase=near-black, feedback=blue, safety=orange, bus=green, shield=dashed gray):
+
+- Implementation Guide §14: cable-group legend + table (D5), plus three archetype diagrams (D4) — Battery BLDC, Integrated PMSM servo, Shared DC-bus multi-axis PMSM
+- BLDC Reference: wiring archetype (at-a-glance view of all 5 wiring groups) (D2)
+- PMSM Reference: industrial servo wiring (3φ AC, EMI filter, drive with STO/fieldbus/brake, motor cable, encoder) (D3)
+- Motor Selection Scenarios: upgraded 3 trivial flows + added new Scenario 2 wiring diagram (D1)
+
+**Two pinout reference tables added** (baseline for this content class — didn't exist before):
+
+- BLDC Reference: Hall connector pinout (IEC 60757 colors)
+- PMSM Reference: Encoder connector pinout (incremental + absolute protocols + temp + shield)
+
+**New PMSM Reference section:** `## Wiring and integration` (servo wiring + encoder pinout + STO dual-channel note + cross-link to Servo Commissioning Workflow).
+
+**Nine cross-links added** between the diagrams across BLDC Reference, PMSM Reference, BLDC vs PMSM Comparison, Motor Selection Scenarios, and Implementation Guide — all resolve via kramdown-generated heading IDs.
+
+Jekyll build clean, AI boundary validator shows only the 2 pre-existing failures, `validate_reorg.sh all` at 48/50 baseline, internal link checker exit 0 (273 files). RAG files and site files stay in sync.
+
+No new pages, no routing changes — purely content enrichment layered on top of the Phase 27 footprint.
 
 ## 2026-04-20 — Phase 27 complete: BLDC/PMSM motor implementation
 
