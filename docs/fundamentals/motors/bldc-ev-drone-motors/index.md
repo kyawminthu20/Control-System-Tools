@@ -144,6 +144,247 @@ Drone propulsion motors are selected based on:
 - ESC compatibility
 - flight-duration constraints
 
+## Drone-class BLDC vs EV-class PMSM/IPMSM
+
+Many motors marketed as "BLDC" in EVs are actually PMSM/IPMSM running full field-oriented control, not simple 6-step BLDC. This section compares low-end (drone / hobby) BLDC systems against high-end EV traction drives, showing what changes when you go from minimal switching control to a full electromechanical control system.
+
+### Executive summary
+
+| Category      | Drone BLDC (low-end)   | EV motor (high-end)                 |
+| ------------- | ---------------------- | ----------------------------------- |
+| Motor type    | BLDC (trapezoidal-ish) | PMSM / IPMSM (sinusoidal)           |
+| Control       | 6-step or basic FOC    | Advanced FOC + field weakening      |
+| Feedback      | Sensorless or Hall     | Encoder / resolver / observer       |
+| Cost priority | Extremely high         | Balanced (performance + efficiency) |
+| Precision     | Low                    | Very high                           |
+| Power level   | 10 W – few kW          | 10 kW – 500+ kW                     |
+
+### System architecture comparison
+
+#### Low-end BLDC (drone / hobby)
+
+<div class="mermaid-wrap">
+<pre class="mermaid">
+flowchart LR
+Battery --> ESC
+ESC --> Motor
+Motor --> Propeller
+
+ESC -->|Back-EMF sensing| Control
+</pre>
+</div>
+
+#### High-end BLDC / PMSM (EV)
+
+<div class="mermaid-wrap">
+<pre class="mermaid">
+flowchart LR
+Battery --> Inverter
+Inverter --> Motor
+Motor --> Wheels
+
+Resolver --> Inverter
+Controller --> Inverter
+Thermal --> Controller
+</pre>
+</div>
+
+**Key difference:** drones use a minimal system; EVs use a full electromechanical control system.
+
+### Motor construction differences
+
+| Feature               | Drone BLDC      | EV motor (PMSM/IPMSM)     |
+| --------------------- | --------------- | ------------------------- |
+| Rotor magnets         | Surface-mounted | Surface or interior (IPM) |
+| Winding               | Concentrated    | Distributed               |
+| Back-EMF              | Trapezoidal-ish | Sinusoidal                |
+| Cooling               | Air only        | Liquid / oil / advanced   |
+| Mechanical robustness | Low             | Extremely high            |
+| Torque density        | Moderate        | Very high                 |
+
+EV motors are optimized for efficiency, torque density, and thermal performance — not simplicity.
+
+### Control strategy differences
+
+#### Drone BLDC
+
+Typical control:
+
+- 6-step commutation
+- sensorless (back-EMF zero-crossing)
+
+Behavior:
+
+- high speed
+- low torque at low speed
+- torque ripple present
+
+#### EV motor
+
+Control:
+
+- full FOC (field-oriented control)
+- dq-axis current control
+- field weakening at high speed
+
+Core relationship: T ∝ Iq
+
+#### Control comparison
+
+| Feature                 | Drone BLDC | EV motor         |
+| ----------------------- | ---------- | ---------------- |
+| Commutation             | 6-step     | Sinusoidal (FOC) |
+| Low-speed control       | Weak       | Strong           |
+| Torque smoothness       | Moderate   | Very smooth      |
+| Efficiency optimization | Minimal    | Advanced         |
+
+### Drive / inverter differences
+
+#### Drone ESC
+
+| Feature         | Description           |
+| --------------- | --------------------- |
+| Power stage     | MOSFET                |
+| Voltage         | 12–60 V               |
+| Control         | MCU / simple firmware |
+| Current sensing | minimal               |
+| Protection      | basic                 |
+| Cooling         | passive               |
+
+#### EV inverter
+
+| Feature         | Description                    |
+| --------------- | ------------------------------ |
+| Power stage     | IGBT / SiC MOSFET              |
+| Voltage         | 200–800 V                      |
+| Control         | DSP / high-performance MCU     |
+| Current sensing | high precision (multi-channel) |
+| Protection      | extensive                      |
+| Cooling         | liquid cooled                  |
+
+A drone ESC is essentially a switching device. An EV inverter is a control, safety, and optimization system.
+
+### Feedback differences
+
+| Feature      | Drone BLDC | EV motor          |
+| ------------ | ---------- | ----------------- |
+| Sensorless   | Common     | Used but advanced |
+| Hall sensors | Sometimes  | Rare              |
+| Encoder      | No         | Rare              |
+| Resolver     | No         | Common            |
+| Observers    | Basic      | Advanced          |
+
+EVs use richer feedback for torque control precision, safety, efficiency optimization, and regenerative braking.
+
+### Wiring differences
+
+#### Drone BLDC wiring
+
+| Signal  | Description  |
+| ------- | ------------ |
+| Battery | + / -        |
+| Motor   | U / V / W    |
+| Control | PWM throttle |
+
+Minimal wiring.
+
+#### EV motor wiring
+
+| Signal         | Description              |
+| -------------- | ------------------------ |
+| Battery HV     | DC+ / DC-                |
+| Motor          | U / V / W (high current) |
+| Feedback       | resolver / encoder       |
+| Temp sensors   | multiple                 |
+| Communications | CAN bus                  |
+| Safety         | interlocks               |
+
+Complex, safety-critical wiring.
+
+### Thermal management
+
+| Feature       | Drone | EV               |
+| ------------- | ----- | ---------------- |
+| Cooling       | air   | liquid / oil     |
+| Monitoring    | none  | multiple sensors |
+| Derating      | none  | dynamic          |
+| Thermal model | none  | real-time        |
+
+Thermal design is one of the largest gaps between hobby and industrial-grade systems.
+
+### Efficiency and performance
+
+| Feature          | Drone BLDC | EV motor  |
+| ---------------- | ---------- | --------- |
+| Efficiency focus | moderate   | critical  |
+| Optimization     | minimal    | real-time |
+| Regen            | no         | yes       |
+| Loss management  | basic      | advanced  |
+
+### Cost structure
+
+| Component   | Drone   | EV        |
+| ----------- | ------- | --------- |
+| Motor       | low     | high      |
+| Drive       | low     | very high |
+| Sensors     | none    | multiple  |
+| Engineering | minimal | extensive |
+
+EV systems spend money to control physics precisely.
+
+### Similarities (important)
+
+Despite the differences, drone BLDC and EV PMSM share the fundamentals.
+
+Same fundamental machine:
+
+- 3-phase stator
+- permanent magnet rotor
+- inverter-driven
+
+Same equations:
+
+- V = R·i + L·(di/dt) + Ke·ω
+- T = Kt·I
+
+Same physics:
+
+- torque from magnetic field interaction
+- back-EMF proportional to speed
+- current produces torque
+
+### What actually changes
+
+| Layer        | Drone BLDC | EV motor   |
+| ------------ | ---------- | ---------- |
+| Physics      | same       | same       |
+| Control      | simple     | advanced   |
+| Measurement  | minimal    | precise    |
+| Safety       | minimal    | critical   |
+| Optimization | none       | continuous |
+
+Practical framing: low-end BLDC lets physics dominate; high-end PMSM/EV makes control dominate physics.
+
+### When BLDC becomes PMSM
+
+A drone-class BLDC architecture transforms into PMSM/FOC/EV-class territory when the following are added.
+
+| Condition              | Result                      |
+| ---------------------- | --------------------------- |
+| Add sinusoidal current | becomes PMSM-like           |
+| Add encoder/resolver   | becomes servo-like          |
+| Add FOC                | becomes full vector control |
+| Add field weakening    | becomes EV-class            |
+
+### Final takeaway
+
+| System type | Reality                       |
+| ----------- | ----------------------------- |
+| Drone BLDC  | simple commutated motor       |
+| EV "BLDC"   | PMSM + FOC + advanced control |
+
+**Bottom line:** the difference is not the motor. The difference is how much control, sensing, and optimization are applied around the same fundamental 3-phase permanent-magnet machine.
+
 ## Common mistakes
 
 ### Treating drone motors like industrial motors
@@ -170,6 +411,14 @@ Engineers should focus on:
 - choose `PMSM / servo-type architecture` for high-performance controlled motion
 - choose `traction-specific motor architecture` for EV propulsion
 - choose `outrunner drone BLDC motors` for direct propeller drive where weight is critical
+
+## See also
+
+- [BLDC Motor Reference]({{ '/fundamentals/motors/bldc-reference/' | relative_url }}) — deep single-family reference covering commutation, drives, feedback, and wiring
+- [PMSM Motor Reference]({{ '/fundamentals/motors/pmsm-reference/' | relative_url }}) — permanent-magnet synchronous motor deep reference, including SPM vs IPM and field weakening
+- [BLDC vs PMSM Comparison]({{ '/fundamentals/motors/bldc-vs-pmsm/' | relative_url }}) — head-to-head comparison with 10 application scenarios
+- [BLDC and PMSM Implementation Guide]({{ '/fundamentals/motors/bldc-pmsm-implementation/' | relative_url }}) — wiring, failure modes, and full implementation checklist
+- [Motor Selection Scenarios]({{ '/fundamentals/motors/motor-selection-scenarios/' | relative_url }}) — three engineering-grade archetypes (fan/pump, precision axis, AGV) with tuning and measurement detail
 
 ---
 
