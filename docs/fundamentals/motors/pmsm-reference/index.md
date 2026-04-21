@@ -417,6 +417,83 @@ Offset calibration is usually performed with a commissioning wizard that applies
 
 ---
 
+## Wiring and integration
+
+PMSM systems differ from BLDC in one large way at the wiring level: they need high-resolution rotor feedback and are almost always servo-class, which means the drive stack includes functional safety (STO) and fieldbus integration as standard. The diagram below shows the canonical industrial PMSM servo wiring pattern.
+
+### Industrial PMSM servo wiring
+
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart LR
+    AC([3φ AC mains]):::power
+    FIL[EMI filter]:::power
+    DRV[Servo drive]
+    BRK[Brake resistor]:::power
+    MOT[PMSM motor]:::phase
+    ENC>Encoder / resolver]:::feedback
+    STO[Safety controller]:::safety
+    PLC[Motion controller / PLC]:::bus
+    PE((PE / cabinet bond)):::shield
+
+    AC -->|L1 / L2 / L3 / PE| FIL
+    FIL -->|DC-bus capacitors| DRV
+    DRV -.->|brake chopper| BRK
+    DRV -->|U / V / W + PE| MOT
+    MOT -.->|motor cable shield| PE
+    ENC -.->|A+/A- B+/B- Z+/Z- or EnDat/BiSS| DRV
+    ENC -.->|shield| PE
+    STO -->|STO-1 / STO-2 dual channel 24V| DRV
+    PLC -->|EtherCAT / PROFINET / EtherNet-IP| DRV
+    DRV -.-> PE
+
+    classDef power stroke:#c0392b,stroke-width:2px
+    classDef phase stroke:#2c3e50,stroke-width:2px
+    classDef feedback stroke:#2980b9,stroke-width:2px
+    classDef safety stroke:#e67e22,stroke-width:2px
+    classDef bus stroke:#27ae60,stroke-width:2px
+    classDef shield stroke:#7f8c8d,stroke-width:1px,stroke-dasharray:3 3
+</pre></div>
+
+Cable-class color legend: see the [Cable-group legend]({{ '/fundamentals/motors/bldc-pmsm-implementation/#cable-group-legend' | relative_url }}) in the Implementation Guide. Solid lines carry primary conductors; dashed lines are shields, feedback, or safety bonds.
+
+Key differences from a BLDC wiring archetype:
+
+- Power side is 3-phase AC rather than DC battery (for industrial class; battery-PMSM exists in AGVs and EVs)
+- Brake resistor is a first-class part of the stack — deceleration energy has to go somewhere
+- Feedback is a dedicated shielded cable for encoder or resolver; Hall feedback alone is insufficient for FOC performance
+- STO is a dual-channel 24 V safety path with its own terminal block and cross-monitoring
+- Fieldbus is standard — direct PWM / analog inputs exist but are uncommon on industrial PMSM servo drives
+
+### Encoder connector pinout (typical servo encoder)
+
+| Pin group | Signal | Notes |
+|-----------|--------|-------|
+| Power     | +5V or +9V or +12V | Supply voltage depends on encoder; verify drive datasheet |
+| Power     | GND (0 V)          | Common return |
+| Incremental | A+, A−           | Differential line pair, impedance 120 Ω typical |
+| Incremental | B+, B−           | Differential line pair, 90° out of phase from A |
+| Incremental | Z+, Z−           | Once-per-revolution index |
+| Absolute protocol | DATA+, DATA− | EnDat, BiSS-C, Hiperface DSL use this pair (serial bidirectional) |
+| Absolute protocol | CLOCK+, CLOCK− | Clock pair for EnDat and BiSS-C (Hiperface DSL is single-pair) |
+| Temp      | TEMP+, TEMP−       | Motor winding temperature (PTC / KTY / Pt1000) — often carried through the same connector on hybrid cables |
+| Shield    | Cable shield       | 360° terminated at drive end via EMC gland |
+
+Connector types: DB-15, M23, M17 (industrial circular), or drive-vendor proprietary. Hybrid One-Cable variants (OCT, Beckhoff OCT, Siemens DRIVE-CLiQ, SEW Hiperface DSL) combine power + feedback + temp + sometimes brake into a single cable — check the drive manufacturer's cable catalog for the exact pinout on each.
+
+### STO (Safe Torque Off) — dual-channel wiring
+
+STO is the entry-level safety function on every industrial servo drive. Wiring rules:
+
+- Two independent 24 V DC channels (STO-1 and STO-2) routed to separate terminal blocks on the drive
+- Both channels must be energized for the drive to enable torque output
+- Channels are cross-monitored by a safety controller or safety relay; single-channel failure is detected within a defined response time
+- STO is NOT an emergency stop on its own — it removes torque but does not dissipate kinetic energy. Combine with a mechanical brake or SS1 (Safe Stop 1) ramp-down for loads with significant inertia
+- STO wiring is separate from the E-stop chain even if both are triggered by the same safety relay — the drive's safety inputs are on a dedicated terminal block
+
+For the operational walkthrough (commissioning, testing, validation), see the [Servo Commissioning Workflow]({{ '/implementation/servo-commissioning/' | relative_url }}).
+
+---
+
 ## Typical failure modes specific to PMSM
 
 These failure modes are specific to PMSM + FOC systems (shared BLDC/PMSM failures like gate-driver shoot-through, DC-link cap aging, and thermistor open-circuit are covered in the BLDC Motor Reference).
