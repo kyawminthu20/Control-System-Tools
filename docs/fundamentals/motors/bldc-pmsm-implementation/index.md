@@ -820,9 +820,120 @@ Dashed lines in the diagrams indicate shield or optional connections. Solid line
 
 ### Wiring archetypes — which pattern applies
 
-- **Battery BLDC (drone / e-bike / AGV):** battery → precharge → inverter → 3-phase motor; Hall or sensorless; no PE needed on the inverter chassis itself (low-voltage DC), but chassis bonding still required on the vehicle.
-- **Integrated servo / PMSM (compact cobot joint, ClearPath):** DC bus → integrated drive+motor unit; single hybrid cable carrying power + feedback + safety; shield terminated 360° at both ends of the hybrid cable.
-- **Industrial DC-bus PMSM (cabinet drive + external motor):** AC mains → rectifier/PFC → common DC bus → drive modules → shielded motor cable to motor with separate feedback cable; drive and motor both bonded to enclosure PE with star point at the drive cabinet.
+#### Archetype A — Battery BLDC (drone / e-bike / AGV / power tool)
+
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart LR
+    BAT([Battery pack]):::power
+    FUSE[Fuse / main disconnect]:::power
+    PRE[Precharge + contactor]:::power
+    ESC[BLDC inverter / ESC]
+    MOT[BLDC motor]:::phase
+    HALL>Hall sensor]:::feedback
+    HOST[Throttle / PWM / CAN]:::bus
+
+    BAT -->|DC+ / DC-| FUSE
+    FUSE --> PRE
+    PRE -->|DC bus| ESC
+    ESC -->|U / V / W| MOT
+    HALL -.->|5V / GND / HA / HB / HC| ESC
+    HOST -.-> ESC
+
+    classDef power stroke:#c0392b,stroke-width:2px
+    classDef phase stroke:#2c3e50,stroke-width:2px
+    classDef feedback stroke:#2980b9,stroke-width:2px
+    classDef bus stroke:#27ae60,stroke-width:2px
+</pre></div>
+
+Fits drones, e-bikes, AGVs, power tools, cooling fans. Typical voltage 12–96 VDC battery. Low cost; minimal wiring; no functional safety wiring required at the drive terminals. Chassis bonding still required on the vehicle side.
+
+#### Archetype B — Integrated PMSM servo (cobot joint / wafer stage / single axis)
+
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart LR
+    AC([1φ or 3φ AC]):::power
+    FIL[EMI filter]:::power
+    DRV[Integrated PMSM servo drive]
+    MOT[PMSM motor]:::phase
+    ENC>Integrated encoder]:::feedback
+    TEMP>Motor temp]:::feedback
+    STO[Safety I/O]:::safety
+    PLC[Motion controller]:::bus
+    PE((Machine PE)):::shield
+
+    AC -->|L / N / PE or 3φ| FIL
+    FIL -->|DC bus| DRV
+    DRV -->|U / V / W + PE| MOT
+    MOT -.->|hybrid cable shield| PE
+    ENC -.->|OCT / DRIVE-CLiQ / Hiperface DSL| DRV
+    TEMP -.->|PTC / Pt1000| DRV
+    STO -->|STO-1 / STO-2| DRV
+    PLC -->|EtherCAT / PROFINET| DRV
+    DRV -.-> PE
+
+    classDef power stroke:#c0392b,stroke-width:2px
+    classDef phase stroke:#2c3e50,stroke-width:2px
+    classDef feedback stroke:#2980b9,stroke-width:2px
+    classDef safety stroke:#e67e22,stroke-width:2px
+    classDef bus stroke:#27ae60,stroke-width:2px
+    classDef shield stroke:#7f8c8d,stroke-width:1px,stroke-dasharray:3 3
+</pre></div>
+
+Fits cobot joints, wafer-stage axes, single-axis industrial servo. Typical voltage 230–480 VAC or 24–72 VDC on compact variants. One-cable hybrid power + feedback is typical (Beckhoff OCT, Siemens DRIVE-CLiQ, SEW Hiperface DSL). STO + fieldbus standard. Cost-per-axis moderate.
+
+#### Archetype C — Shared DC-bus multi-axis PMSM (CNC / press / printing press)
+
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart LR
+    AC([3φ 400–480 VAC]):::power
+    REC[Rectifier + regen unit]:::power
+    BRK[Brake chopper + resistor]:::power
+    DC[[DC bus]]:::power
+    INV1[Servo inverter axis 1]
+    INV2[Servo inverter axis 2]
+    INV3[Servo inverter axis N]
+    MOT1[PMSM axis 1]:::phase
+    MOT2[PMSM axis 2]:::phase
+    MOT3[PMSM axis N]:::phase
+    ENC1>Encoder 1]:::feedback
+    ENC2>Encoder 2]:::feedback
+    ENC3>Encoder N]:::feedback
+    STO[Safety controller]:::safety
+    PLC[CNC / motion controller]:::bus
+    PE((Cabinet PE)):::shield
+
+    AC -->|L1 / L2 / L3 / PE| REC
+    REC --> DC
+    DC -.-> BRK
+    DC --> INV1
+    DC --> INV2
+    DC --> INV3
+    INV1 -->|U / V / W + PE| MOT1
+    INV2 -->|U / V / W + PE| MOT2
+    INV3 -->|U / V / W + PE| MOT3
+    ENC1 -.-> INV1
+    ENC2 -.-> INV2
+    ENC3 -.-> INV3
+    STO -->|STO loop| INV1
+    STO -->|STO loop| INV2
+    STO -->|STO loop| INV3
+    PLC -->|EtherCAT trunk| INV1
+    PLC --> INV2
+    PLC --> INV3
+    INV1 -.-> PE
+    INV2 -.-> PE
+    INV3 -.-> PE
+    MOT1 -.-> PE
+
+    classDef power stroke:#c0392b,stroke-width:2px
+    classDef phase stroke:#2c3e50,stroke-width:2px
+    classDef feedback stroke:#2980b9,stroke-width:2px
+    classDef safety stroke:#e67e22,stroke-width:2px
+    classDef bus stroke:#27ae60,stroke-width:2px
+    classDef shield stroke:#7f8c8d,stroke-width:1px,stroke-dasharray:3 3
+</pre></div>
+
+Fits CNC machining centers, servo presses, printing presses, multi-axis pick-and-place. Typical voltage 400–800 VDC bus from 3φ 400/480 VAC mains. Shared DC bus enables regen recovery between axes. Highest integration and cost; daisy-chained fieldbus + shared STO loop + bonded PE star point at the cabinet.
 
 ### Common integration mistakes
 
