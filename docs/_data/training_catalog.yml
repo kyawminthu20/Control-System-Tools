@@ -545,7 +545,7 @@ modules:
     featured: true
     prerequisites:
       - "BLDC vs PMSM Comparison"
-      - "VFD and Servo Architecture"
+      - "VFD and Servo Architecture Diagrams"
     related_workflows:
       - title: "Servo Commissioning Workflow"
         url: "/implementation/servo-commissioning/"

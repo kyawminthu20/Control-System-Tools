@@ -293,7 +293,7 @@ Reason: field weakening extends top speed, MTPA extends range per Wh. BLDC 6-ste
 
 **Summary — Scenario B:** Family: **PMSM (IPM preferred)**. Why it wins: field weakening + MTPA give wide constant-power range and best Wh/km. When BLDC would win instead: strict cost floor on sub-$500 bikes where range and top speed are unregulated. Control/feedback: FOC with Halls + observer fusion (startup-safe, sensorless at speed). Drive class: integrated e-mobility controller (30–80 V class, 20–80 A). Wiring: 3 phase leads + Hall harness + battery + throttle/CAN.
 
-## Scenario C — Industrial Servo Press (the user's real system)
+## Scenario C — Industrial Servo Press
 
 - Torque at zero speed: mandatory (press hold)
 - Position accuracy: tight
@@ -301,7 +301,7 @@ Reason: field weakening extends top speed, MTPA extends range per Wh. BLDC 6-ste
 - Gain scheduling needed between press and travel modes
 
 **Winner: PMSM servo + high-res encoder + FOC.**
-Reason: there is no other option that can hold torque at zero speed, deliver deterministic current response, and support nested loops with gain scheduling. This matches the user's EASII system context.
+Reason: there is no other option that can hold torque at zero speed, deliver deterministic current response, and support nested loops with gain scheduling. This is the standard architecture for industrial servo press applications.
 
 **Summary — Scenario C:** Family: **PMSM servo**. Why it wins: only topology that holds full torque at zero speed deterministically and supports gain-scheduled nested loops. When BLDC would win instead: never for this duty — a trap motor cannot hold press force without severe heating. Control/feedback: FOC + high-res absolute encoder (or resolver), nested position/velocity/current loops. Drive class: industrial servo drive with STO/SS1, fieldbus (EtherCAT/PROFINET). Wiring: motor power cable (U/V/W + PE + shield), separate feedback cable, 24 V STO channel.
 
