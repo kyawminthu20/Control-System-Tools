@@ -62,9 +62,28 @@ Each scenario follows the same four-step engineering template: **constraints →
 
 ```mermaid
 flowchart LR
-DC --> BLDC_ESC --> Motor --> Fan_Load
-Hall(Optional) --> BLDC_ESC
+    BAT([24–48 V DC]):::power
+    FUSE[Fuse]:::power
+    ESC[BLDC ESC]
+    MOT[BLDC motor]:::phase
+    FAN[Fan / pump]
+    HALL>Hall sensor 5-wire]:::feedback
+    HOST[PWM / analog / CAN]:::bus
+
+    BAT -->|DC+ / DC-| FUSE
+    FUSE -->|DC bus| ESC
+    ESC -->|U / V / W| MOT
+    MOT --> FAN
+    HALL -.->|5V / GND / HA / HB / HC| ESC
+    HOST -.->|optional| ESC
+
+    classDef power stroke:#c0392b,stroke-width:2px
+    classDef phase stroke:#2c3e50,stroke-width:2px
+    classDef feedback stroke:#2980b9,stroke-width:2px
+    classDef bus stroke:#27ae60,stroke-width:2px
 ```
+
+*Cable-class color legend: see bldc_pmsm_implementation_guide.md §14 cable-group legend. Solid lines are primary conductors; dashed lines are shields, feedback, or optional connections.*
 
 ### 2.4 Why BLDC wins and why PMSM is not justified
 
@@ -334,6 +353,37 @@ Beckhoff's AX5000/AX8000 documentation reflects this industrial servo architectu
 
 ### 3.9 Wiring
 
+```mermaid
+flowchart LR
+    AC([3φ 200–480 VAC]):::power
+    FIL[EMI filter + disconnect]:::power
+    DRV[Servo drive]
+    BRK[Brake resistor]:::power
+    MOT[PMSM motor]:::phase
+    ENC>Encoder / resolver]:::feedback
+    STO[Safety relay]:::safety
+    PLC[Motion controller]:::bus
+    PE((Cabinet PE)):::shield
+
+    AC -->|L1 / L2 / L3 / PE| FIL
+    FIL -->|DC bus| DRV
+    DRV -.->|brake chopper| BRK
+    DRV -->|U / V / W + PE| MOT
+    MOT -.->|motor cable shield| PE
+    ENC -.->|A± / B± / Z± or EnDat/BiSS-C| DRV
+    ENC -.->|shield| PE
+    STO -->|STO-1 / STO-2 24V| DRV
+    PLC -->|EtherCAT / PROFINET| DRV
+    DRV -.-> PE
+
+    classDef power stroke:#c0392b,stroke-width:2px
+    classDef phase stroke:#2c3e50,stroke-width:2px
+    classDef feedback stroke:#2980b9,stroke-width:2px
+    classDef safety stroke:#e67e22,stroke-width:2px
+    classDef bus stroke:#27ae60,stroke-width:2px
+    classDef shield stroke:#7f8c8d,stroke-width:1px,stroke-dasharray:3 3
+```
+
 | Signal   | Notes                                           |
 | -------- | ----------------------------------------------- |
 | AC input | Drive supply                                    |
@@ -502,8 +552,25 @@ Tektronix recommends high-voltage differential probes and AC/DC current probes f
 
 ```mermaid
 flowchart LR
-Battery --> BLDC_Driver --> Motor --> Wheel
-Hall --> Driver
+    BAT([24–72 V battery]):::power
+    CONT[Main contactor + precharge]:::power
+    DRV[BLDC traction driver]
+    MOT[BLDC motor]:::phase
+    WHL[Drive wheel]
+    HALL>Hall sensor]:::feedback
+    HOST[Throttle / CAN]:::bus
+
+    BAT -->|DC+ / DC-| CONT
+    CONT -->|DC bus| DRV
+    DRV -->|U / V / W| MOT
+    MOT --> WHL
+    HALL -.-> DRV
+    HOST -.-> DRV
+
+    classDef power stroke:#c0392b,stroke-width:2px
+    classDef phase stroke:#2c3e50,stroke-width:2px
+    classDef feedback stroke:#2980b9,stroke-width:2px
+    classDef bus stroke:#27ae60,stroke-width:2px
 ```
 
 *Characteristics.* Hall-based commutation, 6-step or basic FOC, moderate control.
@@ -527,9 +594,28 @@ Hall --> Driver
 
 ```mermaid
 flowchart LR
-Battery --> Servo_Drive --> PMSM --> Wheel
-Encoder --> Drive
-Controller --> Drive
+    BAT([24–72 V battery]):::power
+    CONT[Main contactor + precharge]:::power
+    DRV[FOC traction drive]
+    MOT[PMSM motor]:::phase
+    WHL[Drive wheel]
+    ENC>Encoder]:::feedback
+    PLC[Motion controller]:::bus
+    PE((Chassis bond)):::shield
+
+    BAT -->|DC+ / DC-| CONT
+    CONT -->|DC bus| DRV
+    DRV -->|U / V / W + PE| MOT
+    MOT -.-> PE
+    ENC -.->|A± / B± / Z±| DRV
+    ENC -.-> PE
+    PLC -->|CAN / EtherCAT| DRV
+
+    classDef power stroke:#c0392b,stroke-width:2px
+    classDef phase stroke:#2c3e50,stroke-width:2px
+    classDef feedback stroke:#2980b9,stroke-width:2px
+    classDef bus stroke:#27ae60,stroke-width:2px
+    classDef shield stroke:#7f8c8d,stroke-width:1px,stroke-dasharray:3 3
 ```
 
 *Characteristics.* FOC control, encoder feedback, full torque control.
