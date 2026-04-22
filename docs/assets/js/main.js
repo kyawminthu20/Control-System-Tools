@@ -76,6 +76,96 @@
   });
 })();
 
+// Local section sidebar: active-page TOC + bucket open-state persistence.
+// Runs only when <nav class="sidebar sidebar--local"> is present.
+(function () {
+  var sidebar = document.querySelector('.sidebar.sidebar--local');
+  if (!sidebar) return;
+
+  var groupKey = sidebar.getAttribute('data-topic-group') || 'default';
+  var storageKey = 'sidebar-buckets:' + groupKey;
+
+  // ---------- 1. Persist open bucket state --------------------------------
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(storageKey) || '{}') || {}; } catch (e) { saved = {}; }
+
+  var buckets = sidebar.querySelectorAll('.sidebar__bucket');
+  buckets.forEach(function (bucket) {
+    var name = bucket.getAttribute('data-bucket');
+    if (!name) return;
+
+    // Always keep the bucket containing the active page open. Otherwise
+    // restore last-session state; default-open markup wins if no entry.
+    var hasActive = !!bucket.querySelector('.sidebar__item.is-active');
+    if (!hasActive && Object.prototype.hasOwnProperty.call(saved, name)) {
+      bucket.open = !!saved[name];
+    }
+
+    bucket.addEventListener('toggle', function () {
+      try {
+        saved[name] = bucket.open;
+        localStorage.setItem(storageKey, JSON.stringify(saved));
+      } catch (e) { /* quota / private mode — ignore */ }
+    });
+  });
+
+  // ---------- 2. Inject active-page TOC (H2 / H3) -------------------------
+  var tocMount = sidebar.querySelector('[data-local-toc]');
+  if (!tocMount) return;
+
+  var main = document.querySelector('.main-content');
+  if (!main) return;
+
+  var headings = main.querySelectorAll('h2[id], h3[id]');
+  if (!headings.length) return;
+
+  var frag = document.createDocumentFragment();
+  headings.forEach(function (h) {
+    var li = document.createElement('li');
+    var a  = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent.trim();
+    a.className = h.tagName === 'H3' ? 'toc-h3' : 'toc-h2';
+    li.appendChild(a);
+    frag.appendChild(li);
+  });
+  tocMount.appendChild(frag);
+
+  // Highlight the nearest heading as the user scrolls.
+  var tocLinks = tocMount.querySelectorAll('a');
+  if (!tocLinks.length || !('IntersectionObserver' in window)) return;
+
+  var byId = {};
+  tocLinks.forEach(function (a) {
+    byId[a.getAttribute('href').slice(1)] = a;
+  });
+
+  var visible = new Set();
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      var id = entry.target.id;
+      if (entry.isIntersecting) visible.add(id);
+      else visible.delete(id);
+    });
+
+    tocLinks.forEach(function (a) { a.classList.remove('is-active'); });
+
+    // Pick the first heading currently intersecting in document order.
+    for (var i = 0; i < headings.length; i++) {
+      if (visible.has(headings[i].id)) {
+        var link = byId[headings[i].id];
+        if (link) link.classList.add('is-active');
+        break;
+      }
+    }
+  }, {
+    rootMargin: '-10% 0px -70% 0px',
+    threshold: 0
+  });
+
+  headings.forEach(function (h) { observer.observe(h); });
+})();
+
 // Diagram lightbox with zoom + pan (mouse, touch, keyboard)
 (function () {
   function initLightbox() {

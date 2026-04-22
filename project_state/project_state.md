@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-04-21
 **Status:** Active
-**Current Phase:** Phase 27.7 COMPLETE — BLDC vs PMSM Comparison UX Polish + Factual Pass
-**Next Phase:** Phase 28 PLANNING — TBD
+**Current Phase:** Phase 28 COMPLETE — Sidebar Pilot for Motors/Fundamentals (local section tree)
+**Next Phase:** Phase 28.1 PLANNING — extend local sidebar to Control Systems / Electrical Fundamentals / NEC, or pause to see pilot bake in
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,70 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+## Phase 28 — COMPLETE (2026-04-21)
+
+Sidebar pilot: the global sidebar was a mirror of the top-level sitemap on every page, which meant deep-section pages (especially under `/fundamentals/motors/`) had no visible local tree, no bucket grouping, and no sense of page depth. Phase 28 introduces a **local section sidebar** for opted-in topic groups and keeps the **global sidebar** as the fallback for everything else. Pilot is scoped to `/fundamentals/motors/` (18 modules) only.
+
+### Architecture
+
+- **Router**: `docs/_includes/sidebar.html` now decides between a local and global sidebar at build time.
+  - It walks `training_catalog.topic_groups`, finds the one whose `url` is a prefix of `page.url`, and checks whether any of that group's modules carry a `sidebar_bucket` tag.
+  - If both conditions are met, it includes `sidebar-training-group.html`. Otherwise it includes `sidebar-global.html` (which contains the pre-pilot markup verbatim).
+  - This means adding a new section to the pilot is a data-only change: tag its modules with `sidebar_bucket` and list the buckets under the topic group.
+- **Local sidebar include**: `docs/_includes/sidebar-training-group.html` renders section title + description, then iterates `topic_groups[…].sidebar_buckets` in a defined order, rendering each bucket as a `<details>` element with its active state open. A catch-all "Other" bucket captures any tagged module whose bucket is missing from the order list.
+- **Global sidebar include**: `docs/_includes/sidebar-global.html` is a byte-for-byte copy of the old sidebar.html markup. No behavior change on non-pilot pages.
+
+### Data changes (`docs/_data/training_catalog.yml`)
+
+- `topic_groups.electrical-machines.sidebar_buckets` — defines bucket order for both the sidebar and the landing page. Buckets:
+  1. Foundations (5 modules)
+  2. Drive Systems (5)
+  3. Selection & Comparison (3)
+  4. Deep References (3)
+  5. Quick References (2)
+- Each of the 18 Motors modules tagged with `sidebar_bucket`.
+- 11 modules also got a `nav_title` for a shorter sidebar label (e.g. `Motor Nameplates, Slip, and Torque` → `Nameplates, Slip, Torque`; `BLDC, EV, and Drone Motor Comparison` → `BLDC / EV / Drone`; `BLDC and PMSM Implementation Guide` → `Implementation Guide`).
+
+### Styling (`docs/assets/css/main.css`)
+
+- `--sidebar-width: 240px → 288px`. This is a **site-wide** token — it widens every sidebar, not just the local one. Intentional per the pilot spec; visible effect on all pages.
+- New CSS block for the local sidebar only: `.sidebar--local`, `.sidebar__section-meta`, `.sidebar__section-title`, `.sidebar__section-desc`, `.sidebar__bucket`, `.sidebar__bucket-summary` (+ `-label`, `-count`), `.sidebar__item` (+ active state), `.sidebar__item-meta`, `.sidebar__chip` (`-b`/`-i`/`-a`/`-ref`/`-concept`/`-code`/`-core`), `.sidebar__toc` (+ `.toc-h2`/`.toc-h3` + `.is-active`), `.sidebar__section-footer`.
+- Chip palette reuses the color tokens already used in `.chip-beginner/-intermediate/-advanced/-reference/-concept/-code/-featured` blocks further down the stylesheet.
+
+### JavaScript (`docs/assets/js/main.js`)
+
+- New IIFE after the existing "Mark active sidebar links" block, runs only when `.sidebar.sidebar--local` is present.
+- Reads `data-topic-group` from the nav to scope `localStorage` to `sidebar-buckets:<group>`, saving the open state per topic group so sections don't collide.
+- On load, user-toggled bucket state is restored; the bucket containing the active page is always forced open regardless.
+- Scans `.main-content h2[id], h3[id]` on the active page and injects them into `[data-local-toc]` as a nested list. An `IntersectionObserver` keeps the nearest heading highlighted as the reader scrolls. No static fallback for the TOC — it is purely a JS enhancement.
+
+### Landing page (`docs/fundamentals/motors/index.md`)
+
+- Description updated ("13 modules" → "18 modules"), intro copy tweaked to mention the deep BLDC/PMSM reference work added in Phase 27.
+- Rebuilt the body from a single flat module table into 5 tables, one per bucket, iterating `topic_groups[…].sidebar_buckets` so the landing and sidebar always share the same ordering and mental model.
+
+### Pages **not** changed by this pilot (kept intentionally)
+
+- `docs/_includes/topnav.html` — topnav stays as global site navigation.
+- `docs/_data/navigation.yml` — still the source for the global sidebar fallback.
+- All non-motors pages — no schema change, no visual change beyond the sidebar widening.
+
+### Validation
+
+- Jekyll build: clean, 1.185s.
+- Local sidebar verified on the motors landing, BLDC/PMSM Comparison, and BLDC/PMSM Implementation pages — correct bucket rendering, chip counts (18 bucketed modules → 18 level + 18 type chips; 6 `Core` chips matching `featured: true`), active item, and TOC mount.
+- Fallback verified on 3 non-pilot pages (`/standards/`, `/standards/cybersecurity/iec-62443/`, `/fundamentals/electrical/`) — each gets exactly one sidebar and it is the global one.
+- Kramdown bucket H2s render with correct slug IDs on the landing page.
+- `validate_ai_boundaries.py`: 2 pre-existing failures only (no new regressions).
+- `tools/validate_reorg.sh all`: 48/50 baseline unchanged.
+
+### Known deferred
+
+- Mobile sidebar pattern is unchanged — the drawer pattern (`is-open` on `.sidebar`) works for both local and global markup.
+- The global sidebar widening may feel loose on non-pilot sections that still have short menu labels. Revisit after the pilot bakes in.
+- The active-page TOC is JS-only. Users with JS disabled get the sidebar structure and module tree but no heading list.
+- No search-box or filter inside the local sidebar yet; out of pilot scope.
 
 ## Phase 27.7 — COMPLETE (2026-04-21)
 

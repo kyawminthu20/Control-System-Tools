@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Motors, Drives, and Motion — Training"
-description: "13 modules covering induction and DC motors, VFDs, servo drives, motor selection, efficiency, and equations reference."
+description: "18 modules covering induction and DC motors, VFDs, servo drives, motor selection, efficiency, and equations reference."
 breadcrumb:
   - name: "Training"
     url: "/training/"
@@ -15,7 +15,7 @@ redirect_from:
 <div class="page-header">
   <span class="page-header__label">Training / Motors, Drives, and Motion</span>
   <h1>Motors, Drives, and Motion</h1>
-  <p>For controls engineers and field technicians working with motor selection, VFD commissioning, servo tuning, and drive troubleshooting. Covers induction and DC machines, drive topologies, and motion control fundamentals.</p>
+  <p>For controls engineers and field technicians working with motor selection, VFD commissioning, servo tuning, and drive troubleshooting. Covers induction and DC machines, drive topologies, motion control fundamentals, and deep BLDC/PMSM implementation reference.</p>
 </div>
 
 ### Recommended entry modules
@@ -25,6 +25,15 @@ redirect_from:
 - [VFD Fundamentals]({{ '/fundamentals/motors/vfd-fundamentals/' | relative_url }}) — drive topology and commissioning parameters
 
 ---
+
+{% assign group = site.data.training_catalog.topic_groups | where: "key", "electrical-machines" | first %}
+{% assign group_modules = site.data.training_catalog.modules | where: "group", "electrical-machines" %}
+
+{% for bucket in group.sidebar_buckets %}
+  {% assign bucket_modules = group_modules | where: "sidebar_bucket", bucket %}
+  {% if bucket_modules.size == 0 %}{% continue %}{% endif %}
+
+## {{ bucket }}
 
 <div class="training-table-wrap">
 <table>
@@ -37,8 +46,7 @@ redirect_from:
     </tr>
   </thead>
   <tbody>
-  {% assign machines = site.data.training_catalog.modules | where: "group", "electrical-machines" %}
-  {% for mod in machines %}
+  {% for mod in bucket_modules %}
     <tr{% if mod.featured %} class="featured-row"{% endif %}>
       <td>
         <a href="{{ mod.url | relative_url }}">{{ mod.title }}</a>
@@ -58,6 +66,8 @@ redirect_from:
   </tbody>
 </table>
 </div>
+
+{% endfor %}
 
 ---
 

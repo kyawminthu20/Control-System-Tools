@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-21 (Phase 27.7 complete)
+**Last Updated:** 2026-04-21 (Phase 28 complete)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,48 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-21 — Phase 28 complete: Sidebar pilot for Motors/Fundamentals (local section tree)
+
+**Type:** Navigation architecture
+**Status:** Complete
+**Scope:** Sidebar architecture change, pilot scoped to `/fundamentals/motors/`
+
+Replaced the single global sidebar include with a router that picks between a local section tree and the existing global sidebar. Pilot runs on one topic group; global fallback is byte-for-byte identical to the pre-pilot sidebar on every other page.
+
+Includes:
+- `docs/_includes/sidebar.html` — now a router. Matches `page.url` against `training_catalog.topic_groups[].url`; if the active group's modules carry `sidebar_bucket` tags, it includes the local sidebar, else the global.
+- `docs/_includes/sidebar-global.html` — new, contains the pre-pilot markup verbatim.
+- `docs/_includes/sidebar-training-group.html` — new, renders section meta + buckets (with counts) + module rows with compact chips (B/I/A, Ref/Concept/Code, Core) + nav_title-driven short labels + a TOC mount point under the active module.
+
+Data (`docs/_data/training_catalog.yml`):
+- Added `sidebar_buckets` order under `topic_groups[electrical-machines]` (Foundations / Drive Systems / Selection & Comparison / Deep References / Quick References).
+- Tagged all 18 Motors modules with `sidebar_bucket`; 11 of them also received a `nav_title` for tighter sidebar text.
+
+Styling (`docs/assets/css/main.css`):
+- `--sidebar-width` bumped 240 → 288 (global token; affects all sidebars).
+- New CSS block scoped to `.sidebar--local` and its children, including a chip palette and a `.sidebar__toc` active-heading indicator.
+
+JS (`docs/assets/js/main.js`):
+- New IIFE that only runs when `.sidebar.sidebar--local` exists.
+- Persists open bucket state per topic group in `localStorage` (`sidebar-buckets:<group>`).
+- On active module pages, scans `.main-content h2[id], h3[id]` and injects them into the TOC; an IntersectionObserver keeps the nearest heading highlighted while scrolling. No static fallback — JS-only enhancement.
+
+Landing page (`docs/fundamentals/motors/index.md`):
+- Rebuilt from one flat table into 5 bucket-grouped tables, iterating the same `sidebar_buckets` array so the landing and sidebar cannot drift out of sync.
+- Module-count copy corrected 13 → 18; intro copy tweaked to mention the Phase 27 BLDC/PMSM deep references.
+
+Validation:
+- Jekyll build: clean, 1.185s.
+- 3 motors pages inspected for local sidebar + correct bucket rendering + active state + TOC mount.
+- 3 non-pilot pages inspected — all get the global sidebar (fallback verified).
+- `validate_ai_boundaries.py`: 2 pre-existing failures, no new regressions.
+- `validate_reorg.sh all`: 48/50 baseline unchanged.
+
+Deferred:
+- Extending the local sidebar to other topic groups (Control Systems, Electrical Fundamentals, NEC) — data-only changes when ready.
+- Search / filter inside the local sidebar.
+- Sidebar TOC fallback for no-JS users.
 
 ## 2026-04-21 — Phase 27.7 complete: BLDC vs PMSM Comparison UX polish + factual pass
 

@@ -1,53 +1,35 @@
-<nav class="sidebar" id="sidebar">
-  {% for section in site.data.navigation %}
-    {% assign in_section = false %}
-    {% if section.match_prefixes %}
-      {% for prefix in section.match_prefixes %}
-        {% if page.url contains prefix %}{% assign in_section = true %}{% endif %}
-      {% endfor %}
-    {% else %}
-      {% if page.url contains section.url %}{% assign in_section = true %}{% endif %}
+{% comment %}
+  Sidebar router.
+
+  Pilot: if the current page is inside a training_catalog topic_group whose
+  modules have been tagged with `sidebar_bucket`, render the local section
+  tree (sidebar-training-group.html). Otherwise fall back to the global
+  navigation sidebar (sidebar-global.html).
+
+  This keeps the pilot scoped to opted-in sections; a topic_group without
+  bucket tags on its modules continues to use the global sidebar.
+{% endcomment %}
+
+{% assign active_group = nil %}
+{% assign active_group_has_buckets = false %}
+
+{% if site.data.training_catalog.topic_groups %}
+  {% for group in site.data.training_catalog.topic_groups %}
+    {% if group.url and group.url != "/" and page.url contains group.url %}
+      {% assign active_group = group %}
     {% endif %}
-
-    <details class="sidebar__section"{% if section.always_open or in_section %} open{% endif %}>
-      <summary>{{ section.label }}</summary>
-      <ul class="sidebar__links">
-        <li>
-          <a href="{{ section.url | relative_url }}"{% if page.url == section.url %} class="active"{% endif %}>{{ section.label }}</a>
-        </li>
-
-        {% for child in section.children %}
-          {% assign child_has_active_gc = false %}
-          {% if child.children %}
-            {% for grandchild in child.children %}
-              {% if page.url contains grandchild.url %}{% assign child_has_active_gc = true %}{% endif %}
-            {% endfor %}
-          {% endif %}
-
-          {% assign child_active = false %}
-          {% if child.children %}
-            {% if page.url contains child.url and child_has_active_gc == false %}{% assign child_active = true %}{% endif %}
-          {% else %}
-            {% if page.url contains child.url %}{% assign child_active = true %}{% endif %}
-          {% endif %}
-
-          <li>
-            <a href="{{ child.url | relative_url }}" class="sub{% if child_active %} active{% endif %}">{{ child.label }}</a>
-          </li>
-
-          {% if child.children %}
-            {% for grandchild in child.children %}
-              {% assign gc_active = false %}
-              {% if page.url contains grandchild.url %}{% assign gc_active = true %}{% endif %}
-              <li>
-                <a href="{{ grandchild.url | relative_url }}" class="sub{% if gc_active %} active{% endif %}" style="padding-left:2.75rem">{{ grandchild.label }}</a>
-              </li>
-            {% endfor %}
-          {% endif %}
-
-        {% endfor %}
-
-      </ul>
-    </details>
   {% endfor %}
-</nav>
+{% endif %}
+
+{% if active_group %}
+  {% assign bucketed = site.data.training_catalog.modules | where: "group", active_group.key | where_exp: "m", "m.sidebar_bucket" %}
+  {% if bucketed.size > 0 %}
+    {% assign active_group_has_buckets = true %}
+  {% endif %}
+{% endif %}
+
+{% if active_group_has_buckets %}
+  {% include sidebar-training-group.html active_group=active_group %}
+{% else %}
+  {% include sidebar-global.html %}
+{% endif %}

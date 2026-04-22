@@ -1,0 +1,104 @@
+{% comment %}
+  Local section sidebar for a training_catalog topic_group.
+  Caller passes: include.active_group  (a single entry from topic_groups)
+
+  Modules are filtered by matching group.key and then grouped by `sidebar_bucket`.
+  Bucket order is driven by active_group.sidebar_buckets; any module whose bucket
+  is missing from that list still appears, in an implicit "Other" section at the
+  bottom, so a newly added bucket name never silently disappears.
+{% endcomment %}
+
+{% assign group = include.active_group %}
+{% assign group_modules = site.data.training_catalog.modules | where: "group", group.key %}
+{% assign ordered_buckets = group.sidebar_buckets | default: empty %}
+
+<nav class="sidebar sidebar--local" id="sidebar" data-topic-group="{{ group.key }}">
+
+  <div class="sidebar__section-meta">
+    <a class="sidebar__section-title" href="{{ group.url | relative_url }}">{{ group.label }}</a>
+    {% if group.description %}
+      <p class="sidebar__section-desc">{{ group.description }}</p>
+    {% endif %}
+  </div>
+
+  {% assign rendered_buckets = "" | split: "" %}
+
+  {% for bucket in ordered_buckets %}
+    {% assign bucket_modules = group_modules | where: "sidebar_bucket", bucket %}
+    {% if bucket_modules.size == 0 %}{% continue %}{% endif %}
+
+    {% assign bucket_is_active = false %}
+    {% for mod in bucket_modules %}
+      {% if page.url == mod.url %}{% assign bucket_is_active = true %}{% endif %}
+    {% endfor %}
+
+    <details class="sidebar__bucket" data-bucket="{{ bucket | slugify }}"{% if bucket_is_active %} open{% endif %}>
+      <summary class="sidebar__bucket-summary">
+        <span class="sidebar__bucket-label">{{ bucket }}</span>
+        <span class="sidebar__bucket-count">{{ bucket_modules.size }}</span>
+      </summary>
+      <ul class="sidebar__links">
+        {% for mod in bucket_modules %}
+          {% assign is_active = false %}
+          {% if page.url == mod.url %}{% assign is_active = true %}{% endif %}
+          <li class="sidebar__item{% if is_active %} is-active{% endif %}">
+            <a href="{{ mod.url | relative_url }}"{% if is_active %} aria-current="page"{% endif %}>
+              <span class="sidebar__item-title">{{ mod.nav_title | default: mod.title }}</span>
+              <span class="sidebar__item-meta">
+                {% if mod.level == "Beginner" %}<span class="sidebar__chip sidebar__chip--b" title="Beginner">B</span>
+                {% elsif mod.level == "Intermediate" %}<span class="sidebar__chip sidebar__chip--i" title="Intermediate">I</span>
+                {% elsif mod.level == "Advanced" %}<span class="sidebar__chip sidebar__chip--a" title="Advanced">A</span>
+                {% endif %}
+                {% if mod.type == "Reference" %}<span class="sidebar__chip sidebar__chip--ref" title="{{ mod.type }}">Ref</span>
+                {% elsif mod.type contains "Concept" %}<span class="sidebar__chip sidebar__chip--concept" title="{{ mod.type }}">Concept</span>
+                {% elsif mod.type contains "Code" %}<span class="sidebar__chip sidebar__chip--code" title="{{ mod.type }}">Code</span>
+                {% endif %}
+                {% if mod.featured %}<span class="sidebar__chip sidebar__chip--core" title="Core module">Core</span>{% endif %}
+              </span>
+            </a>
+            {% if is_active %}
+              <ul class="sidebar__toc" data-local-toc aria-label="On this page"></ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </details>
+
+    {% assign rendered_buckets = rendered_buckets | push: bucket %}
+  {% endfor %}
+
+  {% comment %} Catch-all: any module whose bucket isn't listed in sidebar_buckets. {% endcomment %}
+  {% assign leftover = "" | split: "" %}
+  {% for mod in group_modules %}
+    {% if mod.sidebar_bucket %}
+      {% unless rendered_buckets contains mod.sidebar_bucket %}
+        {% assign leftover = leftover | push: mod %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+
+  {% if leftover.size > 0 %}
+    <details class="sidebar__bucket sidebar__bucket--other" data-bucket="other" open>
+      <summary class="sidebar__bucket-summary">
+        <span class="sidebar__bucket-label">Other</span>
+        <span class="sidebar__bucket-count">{{ leftover.size }}</span>
+      </summary>
+      <ul class="sidebar__links">
+        {% for mod in leftover %}
+          {% assign is_active = false %}
+          {% if page.url == mod.url %}{% assign is_active = true %}{% endif %}
+          <li class="sidebar__item{% if is_active %} is-active{% endif %}">
+            <a href="{{ mod.url | relative_url }}"{% if is_active %} aria-current="page"{% endif %}>
+              <span class="sidebar__item-title">{{ mod.nav_title | default: mod.title }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </details>
+  {% endif %}
+
+  <div class="sidebar__section-footer">
+    <a href="{{ '/training/' | relative_url }}">&larr; All Training</a>
+  </div>
+
+</nav>
