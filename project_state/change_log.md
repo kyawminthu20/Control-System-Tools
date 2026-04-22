@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-21 (Phase 27.5 complete)
+**Last Updated:** 2026-04-21 (Phase 27.6 complete)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,34 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-21 — Phase 27.6 complete: BLDC/PMSM Implementation Guide UX polish + factual pass
+
+**Type:** Page-level UX polish + factual correctness
+**Status:** Complete
+**Scope:** `docs/fundamentals/motors/bldc-pmsm-implementation/index.md` only
+
+First-pass rework of the deepest motors page to make it feel less like a generic template. No new pages, no new layouts, no new CSS — reused `.glance-grid`, `.card`, `.card-grid`, `.scenario-grid`, `.scenario-card`.
+
+UX:
+- Trimmed `## Purpose` from a 200-word paragraph to 3 bullets (When/What/Will-not).
+- Added a "Choose fast" 4-card decision strip (Choose BLDC / Choose PMSM / Watch-outs / Build sequence).
+- Added a 6-card "Jump to" nav (Architecture / Control / Sizing / Drive Choice / Wiring / Checklist); all kramdown anchor IDs verified.
+- Rebuilt the 8 `Practical implementation scenarios` as scan cards (Motor / Drive / Control / Why it wins), each linking to the existing detail H3 below.
+- Moved `## Known industry brands` to a compact 3-column appendix table (Category / Typical vendors / Fit) at the end of the page.
+- Cardified `## Implementation checklist` into 5 `.card-grid` cards (Motor / Drive / Wiring / Control / Testing). 44 task-list checkboxes render correctly inside the cards via kramdown `markdown="1"`.
+
+Factual fixes:
+- Scenario 1 drone: "PWM command ... DShot protocol" → "Digital throttle, DShot (150/300/600/1200 kbit serial) signaling — not PWM".
+- Common failure modes: "DC-link **undervoltage** during regen" → "DC-link **overvoltage** during regen" with corrected physics.
+- Power wiring: softened "125% of motor FLA" into an explicit NEC 430.22 citation for single continuous-duty motor branch circuits, with pointers to NEC 430.24/430.33 and IEC 60204-1 §12 for other cases.
+- Contactor: rewrote to distinguish lockout / SS1-Cat-0/1 use from certified STO use.
+- Feedback shield: replaced absolute "at drive end only" with a drive-manual-driven note covering single-end vs 360° both-end practice.
+
+Validation:
+- Jekyll build: clean, 1.219s.
+- `validate_ai_boundaries.py`: 2 pre-existing failures only (no new regressions).
+- `validate_reorg.sh all`: 48/50 baseline unchanged.
 
 ## 2026-04-21 — Phase 27.5 complete: Visual wiring guides for BLDC and PMSM
 

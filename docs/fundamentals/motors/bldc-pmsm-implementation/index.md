@@ -12,7 +12,45 @@ repo_path: "control-standards/rag/training_modules/electrical_machines/bldc_pmsm
 
 ## Purpose
 
-This module is a production-grade implementation reference for BLDC and PMSM motor systems. It covers end-to-end system architecture, control methods (6-step commutation, sinusoidal, FOC with Clarke/Park/SVPWM), the practical math that drives design choices, drive architecture (inverter topology, gate driver, MCU, current sensing, feedback interface), motor and drive selection guidance for both hobby and industrial contexts, cost vs performance tradeoffs, measurement and testing (including why RMS meters fail on PWM), eight practical implementation scenarios, industry brand classification by category, wiring and integration archetypes (battery BLDC, integrated servo/PMSM, industrial DC-bus), common failure modes, and a full commissioning checklist. It is the operational companion to the BLDC vs PMSM Comparison module: once the family decision is made, this module tells you how to actually build it. For three deep engineering archetype scenarios (fan/pump, precision axis, AGV) with full per-scenario drive/wiring/tuning/measurement detail, see the Motor Selection Scenarios module.
+- **When to use this page:** you are about to build, specify, or commission a BLDC or PMSM system and the motor family is already decided.
+- **What it helps you decide:** drive stack, control method, wiring archetype, and commissioning gates.
+- **What it will not do:** choose the family for you (see [BLDC vs PMSM Comparison]({{ '/fundamentals/motors/bldc-vs-pmsm/' | relative_url }})), replace the drive vendor's manual, or substitute for a machine-specific risk assessment.
+
+### Choose fast
+
+<div class="glance-grid">
+  <div class="card">
+    <span class="card__label">Choose BLDC when</span>
+    <span class="card__title">Cost &amp; simplicity win</span>
+    <p class="card__desc">Fans, pumps, drones, power tools, low-cost conveyors. Torque ripple is tolerable; zero-speed torque is not required.</p>
+  </div>
+  <div class="card">
+    <span class="card__label">Choose PMSM when</span>
+    <span class="card__title">Precision &amp; efficiency win</span>
+    <p class="card__desc">Servo, robotics, CNC, EV traction, semi stages. You need smooth torque, zero-speed holding, or field-weakening range.</p>
+  </div>
+  <div class="card">
+    <span class="card__label">Watch-outs</span>
+    <span class="card__title">What usually bites first</span>
+    <p class="card__desc">Encoder offset wrong, shield pigtailed, long motor cable without reactor, regen OV, FOC parameters not ID'd.</p>
+  </div>
+  <div class="card">
+    <span class="card__label">Build sequence</span>
+    <span class="card__title">Size → spec → wire → tune</span>
+    <p class="card__desc">Size motor from load, spec drive to motor, wire per archetype, run parameter ID, then tune current → speed → position.</p>
+  </div>
+</div>
+
+### Jump to
+
+<div class="glance-grid" role="navigation" aria-label="On this page">
+  <a class="card" href="#system-architecture-end-to-end"><span class="card__title">Architecture</span></a>
+  <a class="card" href="#control-methods"><span class="card__title">Control</span></a>
+  <a class="card" href="#motor-selection-guide"><span class="card__title">Sizing</span></a>
+  <a class="card" href="#drive-selection-guide"><span class="card__title">Drive Choice</span></a>
+  <a class="card" href="#wiring-and-integration"><span class="card__title">Wiring</span></a>
+  <a class="card" href="#implementation-checklist"><span class="card__title">Checklist</span></a>
+</div>
 
 ---
 
@@ -587,13 +625,82 @@ A typical handheld RMS multimeter bandwidth is 1–10 kHz. Inverter PWM switches
 
 ## Practical implementation scenarios
 
+Scan the 8 scenarios below, jump to the closest match for the detailed stack.
+
+<div class="scenario-grid">
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario 1</span>
+    <span class="scenario-card__title"><a href="#scenario-1--drone-motor">Drone motor</a></span>
+    <div class="scenario-card__start"><strong>Motor:</strong> BLDC outrunner, high KV</div>
+    <div class="scenario-card__start"><strong>Drive:</strong> ESC, 6-step sensorless</div>
+    <div class="scenario-card__start"><strong>Control:</strong> DShot digital throttle</div>
+    <div class="scenario-card__start"><strong>Why it wins:</strong> lightest, cheapest, no feedback needed</div>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario 2</span>
+    <span class="scenario-card__title"><a href="#scenario-2--conveyor-system">Conveyor system</a></span>
+    <div class="scenario-card__start"><strong>Motor:</strong> Induction or IE4 PMSM</div>
+    <div class="scenario-card__start"><strong>Drive:</strong> General-purpose VFD</div>
+    <div class="scenario-card__start"><strong>Control:</strong> V/Hz or sensorless vector</div>
+    <div class="scenario-card__start"><strong>Why it wins:</strong> continuous duty, serviceable, energy bills</div>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario 3</span>
+    <span class="scenario-card__title"><a href="#scenario-3--precision-robotics-cobot-joint">Precision robotics (cobot joint)</a></span>
+    <div class="scenario-card__start"><strong>Motor:</strong> Frameless PMSM, low-cogging</div>
+    <div class="scenario-card__start"><strong>Drive:</strong> EtherCAT servo, STO minimum</div>
+    <div class="scenario-card__start"><strong>Control:</strong> Nested FOC + feedforward</div>
+    <div class="scenario-card__start"><strong>Why it wins:</strong> transparent torque, absolute power-up</div>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario 4</span>
+    <span class="scenario-card__title"><a href="#scenario-4--low-cost-industrial-automation">Low-cost industrial automation</a></span>
+    <div class="scenario-card__start"><strong>Motor:</strong> BLDC with integrated Halls</div>
+    <div class="scenario-card__start"><strong>Drive:</strong> Hall-based 6-step / basic FOC</div>
+    <div class="scenario-card__start"><strong>Control:</strong> 0–10 V analog or Modbus RTU</div>
+    <div class="scenario-card__start"><strong>Why it wins:</strong> robust in dust/vibration, tight budget</div>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario 5</span>
+    <span class="scenario-card__title"><a href="#scenario-5--semiconductor-equipment-wafer-handler-stage">Semiconductor stage</a></span>
+    <div class="scenario-card__start"><strong>Motor:</strong> Ironless linear or rotary PMSM</div>
+    <div class="scenario-card__start"><strong>Drive:</strong> High-end servo (Elmo / ACS / Aerotech)</div>
+    <div class="scenario-card__start"><strong>Control:</strong> Jerk-limited FOC + ILC</div>
+    <div class="scenario-card__start"><strong>Why it wins:</strong> sub-micron accuracy, cogging-free</div>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario 6</span>
+    <span class="scenario-card__title"><a href="#scenario-6--cnc-spindle">CNC spindle</a></span>
+    <div class="scenario-card__start"><strong>Motor:</strong> IPM-PMSM or high-speed induction</div>
+    <div class="scenario-card__start"><strong>Drive:</strong> Servo w/ field-weakening + HSC</div>
+    <div class="scenario-card__start"><strong>Control:</strong> FOC MTPA + field weakening</div>
+    <div class="scenario-card__start"><strong>Why it wins:</strong> 3–5× constant-power range, rigid tapping</div>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario 7</span>
+    <span class="scenario-card__title"><a href="#scenario-7--e-bike--light-ev-traction">E-bike / light EV</a></span>
+    <div class="scenario-card__start"><strong>Motor:</strong> PMSM (IPM perf, SPM low-cost)</div>
+    <div class="scenario-card__start"><strong>Drive:</strong> VESC-class FOC with regen</div>
+    <div class="scenario-card__start"><strong>Control:</strong> FOC + MTPA + field weakening</div>
+    <div class="scenario-card__start"><strong>Why it wins:</strong> range per Wh, hill-start holding torque</div>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario 8</span>
+    <span class="scenario-card__title"><a href="#scenario-8--industrial-servo-press">Industrial servo press</a></span>
+    <div class="scenario-card__start"><strong>Motor:</strong> PMSM servo, 5–30 kW</div>
+    <div class="scenario-card__start"><strong>Drive:</strong> Servo w/ STO/SS1, gain scheduling</div>
+    <div class="scenario-card__start"><strong>Control:</strong> Gain-scheduled PI + force loop</div>
+    <div class="scenario-card__start"><strong>Why it wins:</strong> handles orders-of-magnitude load swing safely</div>
+  </div>
+</div>
+
 ### Scenario 1 — Drone motor
 
 - **Motor:** BLDC, outrunner (e.g. 2207, 1700 KV), 14 poles
 - **Drive:** ESC, 6-step sensorless (BLHeli_32 or AM32)
 - **Feedback:** None (sensorless BEMF)
 - **Power:** 4S–6S LiPo, 14.8–22.2 V nominal
-- **Control:** PWM command from flight controller at 4–8 kHz (DShot protocol)
+- **Control:** Digital throttle from flight controller — DShot (150/300/600/1200 kbit serial) is the common signaling protocol, not PWM
 - **Why this choice:**
   - Weight-critical — no encoder or Halls
   - Load (propeller) is dynamic but tolerant of torque ripple
@@ -685,66 +792,6 @@ For three fully worked engineering archetypes (fan/pump, precision axis, AGV) wi
 
 ---
 
-## Known industry brands
-
-### Industrial servo (motor + drive)
-
-- Siemens (Sinamics / Simotics)
-- Rockwell / Allen-Bradley (Kinetix / MP-Series)
-- Bosch Rexroth (IndraDrive / MS2N)
-- Yaskawa (Sigma-7 / Sigma-X)
-- Mitsubishi Electric (MELSERVO MR-J5)
-- Kollmorgen (AKD2G / AKM)
-- Parker (PSD / Compax)
-- Beckhoff (AX8000 + AM8000)
-- SEW-Eurodrive (Movidrive + CMP)
-- Schneider Electric (Lexium 62 + BMH)
-- Delta (ASDA-A3 + ECMA)
-- Fanuc (αi / βi — CNC-coupled)
-- Omron (1S / G5)
-
-### Compact / integrated servo
-
-- Maxon (EC motors + EPOS / ESCON)
-- Faulhaber
-- Nanotec
-- Teknic (ClearPath — motor and drive integrated)
-- Oriental Motor (AZ series)
-- Applied Motion
-- Moog
-
-### Embedded BLDC / BLDC controller ICs
-
-- Texas Instruments (DRV832x, DRV835x, InstaSPIN)
-- STMicroelectronics (STSPIN + STM32 motor-control)
-- ON Semi / onsemi (NCV gate drivers)
-- Infineon (iMOTION, XMC)
-- Toshiba (TB67 series)
-- NXP (S32K + MCSPTE motor-control libraries)
-- Monolithic Power Systems (MP65xx)
-- Allegro MicroSystems (A4910, A89301)
-
-### Hobby / maker ESCs and drives
-
-- BLHeli_S and BLHeli_32 ESCs (drones)
-- VESC project (open source)
-- ODrive
-- Moteus (robotics)
-- SimpleFOC (educational)
-- Trinamic / ADI (stepper + BLDC ICs)
-- FLIPSKY (e-skate / e-bike)
-
-### Linear motors and specialty motion
-
-- Aerotech
-- ACS Motion Control
-- Etel
-- Tecnotion
-- Parker Trilogy
-- Yaskawa Sigma linear
-
----
-
 ## Wiring and integration
 
 ### Cable-group legend
@@ -781,10 +828,10 @@ Dashed lines in the diagrams indicate shield or optional connections. Solid line
 
 ### Power wiring
 
-- **Conductor sizing:** per NEC 430 or IEC 60204-1 — typically based on 125% of motor FLA for branch circuit
+- **Conductor sizing:** per NEC 430 / IEC 60204-1. For a single continuous-duty motor, NEC 430.22 gives 125 % of motor FLC as the branch-circuit minimum. Multi-motor, intermittent-duty, and drive-fed feeders use different rules (NEC 430.24 / 430.33, IEC 60204-1 §12) — check the applicable clause before sizing.
 - **Overcurrent protection:** fuse or breaker sized for inrush, not steady-state
 - **Precharge:** required for drives with large DC-link capacitance to limit inrush
-- **Contactor:** on the line side for E-stop and lockout
+- **Line-side contactor:** use for lockout/tagout isolation and for SS1-Cat-0/1 stop where no certified STO is available. On drives with certified STO per IEC 61800-5-2, use STO as the primary stop path — cycling the main contactor on every E-stop stresses the precharge circuit and shortens contactor life.
 - **Bond the drive chassis to PE** with a short low-impedance conductor
 
 ### Phase wiring (drive → motor)
@@ -798,7 +845,7 @@ Dashed lines in the diagrams indicate shield or optional connections. Solid line
 ### Feedback wiring
 
 - **Shielded twisted-pair** cable, dedicated per signal pair (A/A-, B/B-, Z/Z-, data/data-, clock/clock-)
-- Shield terminated **at the drive end only** (typical for encoders) — check drive manual
+- **Shield termination varies.** Single-end at the drive is common for classical incremental/analog encoders to avoid ground-loop noise. Digital one-cable interfaces (Hiperface DSL, DRIVE-CLiQ, OCT) and EMC-rated installations typically require 360° termination at both ends. Always follow the drive/motor manual.
 - **Separate conduit or tray from power cables** — minimum 300 mm separation, perpendicular crossings only
 - Use connector with positive latching (DB-15, M23, M17)
 - Twisted-pair impedance-matched to the signaling standard (120 Ω for BiSS, EnDat, RS-485)
@@ -961,7 +1008,7 @@ Fits CNC machining centers, servo presses, printing presses, multi-axis pick-and
 - **Shoot-through** from inadequate dead time → instantaneous MOSFET/IGBT destruction
 - **Aggressive gain settings** cause current-loop saturation and oscillation
 - **dv/dt-induced false turn-on** at the low-side gate → partial shoot-through
-- **DC-link undervoltage during regen** — drive trips OC on the brake event
+- **DC-link overvoltage during regen** — with an undersized or missing brake chopper/resistor, returning kinetic energy pushes the DC bus above OV threshold and the drive trips on the deceleration event
 
 ### Noise and EMI
 
@@ -997,7 +1044,9 @@ Fits CNC machining centers, servo presses, printing presses, multi-axis pick-and
 
 ## Implementation checklist
 
-### Motor
+<div class="card-grid">
+  <div class="card" markdown="1">
+<span class="card__label">1 · Motor</span>
 
 - [ ] Torque sized for continuous and peak operation with safety margin (1.2–1.5×)
 - [ ] Speed rating above maximum operating point
@@ -1008,8 +1057,9 @@ Fits CNC machining centers, servo presses, printing presses, multi-axis pick-and
 - [ ] Thermistor / PT100 present and wired
 - [ ] Brake (if required) matched to drive's brake output voltage
 - [ ] Feedback device matches drive interface (Hall, incremental, absolute, resolver)
-
-### Drive
+  </div>
+  <div class="card" markdown="1">
+<span class="card__label">2 · Drive</span>
 
 - [ ] Rated current ≥ motor peak current
 - [ ] DC bus voltage range matches supply
@@ -1019,19 +1069,21 @@ Fits CNC machining centers, servo presses, printing presses, multi-axis pick-and
 - [ ] Firmware up to date
 - [ ] Brake chopper resistor sized for regen energy
 - [ ] Heatsink / cooling adequate for duty cycle
-
-### Wiring
+  </div>
+  <div class="card" markdown="1">
+<span class="card__label">3 · Wiring</span>
 
 - [ ] Power cable sized per NEC 430 / IEC 60204-1
 - [ ] Motor cable shielded, terminated 360° at both ends
-- [ ] Feedback cable shielded, terminated at drive end only (verify with manual)
+- [ ] Feedback shield terminated per drive manual (single- or double-end)
 - [ ] Power and signal wiring physically separated (minimum 300 mm)
 - [ ] PE bonded star-point at drive enclosure
 - [ ] EMC glands used at panel entries
 - [ ] Output reactor / du/dt filter installed for long motor cable runs
 - [ ] Connectors latched, strain-relieved, rated for ambient
-
-### Control
+  </div>
+  <div class="card" markdown="1">
+<span class="card__label">4 · Control</span>
 
 - [ ] Parameter identification complete (Rs, Ld, Lq, ψ_f for PMSM)
 - [ ] Encoder offset calibrated (for FOC)
@@ -1042,8 +1094,9 @@ Fits CNC machining centers, servo presses, printing presses, multi-axis pick-and
 - [ ] Feedforward terms tuned (velocity, acceleration, friction)
 - [ ] Safety parameters configured (STO reaction, SS1 ramp, SLS threshold)
 - [ ] Diagnostic logging enabled
-
-### Testing
+  </div>
+  <div class="card" markdown="1">
+<span class="card__label">5 · Testing</span>
 
 - [ ] No-load spin in both directions, with expected current
 - [ ] Current balance across three phases within tolerance
@@ -1055,6 +1108,22 @@ Fits CNC machining centers, servo presses, printing presses, multi-axis pick-and
 - [ ] STO / E-stop response verified (motor torque removed within rated reaction time)
 - [ ] Encoder position stable across power cycles (absolute)
 - [ ] Fault history reviewed — no unexpected warnings or trips during acceptance test
+  </div>
+</div>
+
+---
+
+## Appendix — Known industry brands
+
+Reference-only vendor map. Pick based on your PLC/CNC ecosystem, required feedback, and required safety functions — not brand.
+
+| Category | Typical vendors | Fit |
+|----------|-----------------|-----|
+| Industrial servo (motor + drive) | Siemens (Sinamics / Simotics), Rockwell / Allen-Bradley (Kinetix / MP), Bosch Rexroth (IndraDrive / MS2N), Yaskawa (Sigma-7 / Sigma-X), Mitsubishi (MR-J5), Kollmorgen (AKD2G / AKM), Parker (PSD / Compax), Beckhoff (AX8000 + AM8000), SEW-Eurodrive (Movidrive + CMP), Schneider (Lexium 62 + BMH), Delta (ASDA-A3 + ECMA), Fanuc (αi / βi, CNC-coupled), Omron (1S / G5) | Industrial machines with PLC/CNC, STO/SS1/SLS, fieldbus |
+| Compact / integrated servo | Maxon (EC + EPOS / ESCON), Faulhaber, Nanotec, Teknic ClearPath, Oriental Motor (AZ), Applied Motion, Moog | Small axes, lab/medical, integrated motor+drive packages |
+| Embedded BLDC / motor-control ICs | TI (DRV832x/835x, InstaSPIN), ST (STSPIN, STM32 MC), onsemi (NCV gate drivers), Infineon (iMOTION, XMC), Toshiba (TB67), NXP (S32K + MCSPTE), MPS (MP65xx), Allegro (A4910, A89301) | Custom boards, OEM products, cost-driven BLDC |
+| Hobby / maker drives | BLHeli_S / BLHeli_32 ESCs, VESC (open source), ODrive, Moteus, SimpleFOC, Trinamic / ADI, FLIPSKY | Prototypes, drones, e-skate / e-bike, research |
+| Linear / specialty motion | Aerotech, ACS Motion Control, Etel, Tecnotion, Parker Trilogy, Yaskawa Sigma linear | Semiconductor stages, metrology, lithography, direct-drive |
 
 ---
 

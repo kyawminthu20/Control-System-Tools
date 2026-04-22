@@ -2,7 +2,7 @@
 
 **Last Updated:** 2026-04-21
 **Status:** Active
-**Current Phase:** Phase 27.5 COMPLETE — Visual Wiring Guides for BLDC and PMSM
+**Current Phase:** Phase 27.6 COMPLETE — BLDC/PMSM Implementation Guide UX Polish + Factual Pass
 **Next Phase:** Phase 28 PLANNING — TBD
 **Delivery Target:** GitHub Pages static site for personal use
 
@@ -21,6 +21,43 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+## Phase 27.6 — COMPLETE (2026-04-21)
+
+First-pass UX polish of `docs/fundamentals/motors/bldc-pmsm-implementation/index.md` (the deepest and most template-feeling page of the Phase 27 motors set) plus a small factual-correctness pass. Site-only; no RAG edits.
+
+### UX changes (reuse existing CSS — `.glance-grid`, `.card`, `.card-grid`, `.scenario-grid`, `.scenario-card`)
+
+- **Trimmed `## Purpose`** from a 200-word paragraph to 3 bullets: When to use, What it helps decide, What it will not do — plus an inline link back to the BLDC vs PMSM Comparison page for family-choice questions.
+- **"Choose fast" 4-card strip** added directly under Purpose: Choose BLDC / Choose PMSM / Watch-outs / Build sequence.
+- **"Jump to" 6-card nav** (Architecture / Control / Sizing / Drive Choice / Wiring / Checklist) rendered as `<nav class="glance-grid">` pointing at kramdown-generated H2 anchor IDs. All 6 targets verified in built HTML.
+- **Scenarios cardified** — 8 scan cards (`.scenario-grid` / `.scenario-card`) showing 4 fields each (Motor, Drive, Control, Why it wins), each linking to the existing detailed H3 section below (all 8 anchors resolve via kramdown heading IDs).
+- **Checklist cardified** — 5-section checklist (Motor, Drive, Wiring, Control, Testing) wrapped in `.card-grid` with `markdown="1"` per card; 44 task-list checkboxes rendered correctly inside the cards.
+- **Known industry brands moved to appendix** — formerly a 5-subsection bullet-list interruption between scenarios and wiring, now a compact 3-column table (Category / Typical vendors / Fit) placed after the checklist.
+
+### Factual fixes in the same file
+
+- Scenario 1 drone control: corrected "PWM command ... DShot protocol" → "Digital throttle ... DShot (150/300/600/1200 kbit serial) is the common signaling protocol, not PWM".
+- Common failure modes: corrected "DC-link **undervoltage** during regen" → "DC-link **overvoltage** during regen" with a correct physics description (returning kinetic energy pushes bus up, not down).
+- Power wiring sizing: softened "typically 125% of motor FLA" to explicitly cite NEC 430.22 for single continuous-duty motor branch circuits and note that multi-motor / intermittent / drive-fed cases use NEC 430.24/430.33 or IEC 60204-1 §12.
+- Contactor practice: rewrote "Contactor: on the line side for E-stop and lockout" to distinguish lockout/SS1-Cat-0/1 use from certified STO use, with the caveat that contactor-on-every-E-stop stresses the precharge circuit.
+- Feedback shield termination: replaced the "drive end only — check drive manual" line with a more accurate note that single-end is common for classical analog/incremental encoders, and 360° both-end termination is typically required for digital one-cable interfaces (Hiperface DSL, DRIVE-CLiQ, OCT) and EMC compliance.
+
+### Validation
+
+- Jekyll build: clean, 1.219s, page count unchanged.
+- Kramdown-generated anchor IDs verified for all 6 jump-menu targets and all 8 scenario-card targets.
+- `markdown="1"` task-list rendering verified: 44 `<input type="checkbox">` elements inside the 5 checklist cards.
+- AI-boundary validator: 2 pre-existing failures only (no new regressions).
+- `tools/validate_reorg.sh all`: 48/50 baseline unchanged.
+
+### What this phase did not touch
+
+Deferred follow-ups from the full edit plan (optional second-pass work):
+- Rebuild `## Executive overview` as `.compare-columns` side-by-side (first-pass keeps the existing bullet comparison).
+- Rename flatter section headers to more directional ones (e.g., "Pick the drive stack", "Wire it without creating noise").
+- Insert "Use this when / Avoid this when / Cost penalty / Commissioning burden" callouts through the `Drive architecture` → `Cost vs performance tradeoff` middle section.
+- Resolve the Training vs Fundamentals identity mismatch (`/fundamentals/` URL under a `training-module` layout).
 
 ## Phase 27.5 — COMPLETE (2026-04-21)
 
