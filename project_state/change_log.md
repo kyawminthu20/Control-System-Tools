@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-21 (Phase 27.6 complete)
+**Last Updated:** 2026-04-21 (Phase 27.7 complete)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,31 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-21 — Phase 27.7 complete: BLDC vs PMSM Comparison UX polish + factual pass
+
+**Type:** Page-level UX polish + factual correctness
+**Status:** Complete
+**Scope:** `docs/fundamentals/motors/bldc-vs-pmsm/index.md` only
+
+Applied the same pattern that landed in Phase 27.6, adapted for a decision-framed comparison page. No new pages, no new CSS; reused `.glance-grid`, `.card`, `.scenario-grid`, `.scenario-card`.
+
+UX:
+- Trimmed `## Purpose` from a 170-word paragraph to 3 bullets (Use this when / Choose BLDC if / Choose PMSM if).
+- Added a 4-card "At a glance" decision strip under Purpose (BLDC wins / PMSM wins / Induction still valid / Don't choose by motor name).
+- Added a 5-card "Jump to" nav: Construction, Control, Feedback, Decision Matrix, Scenarios. All anchor IDs verified.
+- Moved `## Decision matrix` from after the scenarios to before them — high-value content now lands early.
+- Rebuilt all 10 scenario walkthroughs (A–J) as scan cards at the top of `## Scenario walkthroughs`, each with Winner / Why / When other side wins / Stack, each linking to its existing detail H3. All 10 anchor IDs verified.
+
+Factual / tone fixes:
+- Softened `PMSM = ... always driven with sinusoidal (FOC)` → `typically driven with sinusoidal commutation or FOC`, with an explicit module-scope note.
+- Corrected `DC-link undervoltage during hard regen` → `overvoltage` with correct physics.
+- Softened `full stop` and `the right answer in 2026` phrasing in the takeaway section while keeping the core engineering advice.
+
+Validation:
+- Jekyll build: clean, 1.134s.
+- `validate_ai_boundaries.py`: 2 pre-existing failures only (no new regressions).
+- `validate_reorg.sh all`: 48/50 baseline unchanged.
 
 ## 2026-04-21 — Phase 27.6 complete: BLDC/PMSM Implementation Guide UX polish + factual pass
 

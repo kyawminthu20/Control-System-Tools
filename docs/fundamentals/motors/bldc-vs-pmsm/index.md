@@ -12,14 +12,53 @@ repo_path: "control-standards/rag/training_modules/electrical_machines/bldc_vs_p
 
 ## Purpose
 
-This module is a head-to-head engineering comparison of BLDC and PMSM systems for practical motor family selection. It covers the one-sentence physical distinction, back-EMF as root cause, control strategy and drive architecture differences, feedback matching, torque ripple quantified, speed range and field weakening, efficiency and cost, application-routing guidance, 10 real-world scenario walkthroughs, decision matrix, and failure modes by family. Each scenario and decision point is framed to answer "which family wins, why, and when would the opposite choice be better" — so the reader can make an architecture decision, not just understand theory. For three deeper per-scenario engineering walkthroughs (fan/pump, precision axis, AGV) with full drive/wiring/tuning/measurement detail, see the Motor Selection Scenarios module (being added in the same phase).
+- **Use this page when** you are choosing between BLDC and PMSM (and implicitly, against induction) for a new or retrofit machine.
+- **Choose BLDC if** BOM cost dominates, the load tolerates torque ripple, and you do not need torque at zero speed.
+- **Choose PMSM if** you need smooth torque, zero-speed holding, field-weakening range, or functional safety (STO/SS1/SLS).
+
+### At a glance
+
+<div class="glance-grid">
+  <div class="card">
+    <span class="card__label">BLDC wins when</span>
+    <span class="card__title">Cost dominates</span>
+    <p class="card__desc">Fans, pumps, propellers, power tools, low-end conveyors. Load masks ripple; no encoder required.</p>
+  </div>
+  <div class="card">
+    <span class="card__label">PMSM wins when</span>
+    <span class="card__title">Control quality dominates</span>
+    <p class="card__desc">Servos, cobots, CNC, EV traction, semi stages. Needs smooth torque, zero-speed hold, or field weakening.</p>
+  </div>
+  <div class="card">
+    <span class="card__label">Induction + VFD</span>
+    <span class="card__title">Still the right answer sometimes</span>
+    <p class="card__desc">Continuous-duty conveyors, pumps, HVAC fans where robustness and zero-magnet cost beat marginal efficiency gains.</p>
+  </div>
+  <div class="card">
+    <span class="card__label">Health warning</span>
+    <span class="card__title">Don't choose by motor name</span>
+    <p class="card__desc">Vendors mix the terms. A "BLDC" with sinusoidal BEMF + FOC is really a PMSM system. The back-EMF waveform decides, not the nameplate.</p>
+  </div>
+</div>
+
+### Jump to
+
+<div class="glance-grid" role="navigation" aria-label="On this page">
+  <a class="card" href="#physical-construction--what-actually-differs"><span class="card__title">Construction</span></a>
+  <a class="card" href="#control-strategy-comparison"><span class="card__title">Control</span></a>
+  <a class="card" href="#feedback--why-it-gates-performance"><span class="card__title">Feedback</span></a>
+  <a class="card" href="#decision-matrix-use-this-when-speccing"><span class="card__title">Decision Matrix</span></a>
+  <a class="card" href="#scenario-walkthroughs"><span class="card__title">Scenarios</span></a>
+</div>
 
 ---
 
 ## The one-sentence distinction
 
-- **BLDC** = permanent-magnet synchronous motor with **trapezoidal** back-EMF, usually driven with **6-step commutation**.
-- **PMSM** = permanent-magnet synchronous motor with **sinusoidal** back-EMF, always driven with **sinusoidal (FOC) control**.
+- **BLDC** = permanent-magnet synchronous motor with **trapezoidal** back-EMF, typically driven with **6-step commutation**.
+- **PMSM** = permanent-magnet synchronous motor with **sinusoidal** back-EMF, typically driven with **sinusoidal commutation or FOC**.
+
+In this module, "PMSM" refers to the servo-style sinusoidal/FOC case — the combination that dominates industrial and high-performance designs. A PMSM can be driven 6-step (and some low-cost products do this), but it behaves like a noisy BLDC when you do.
 
 Same family. Different shaping of the flux linkage. Different control strategy. Different drive cost.
 
@@ -261,7 +300,110 @@ Rule: if a 6-step BLDC covers your spec, the total installed cost is **roughly o
 
 ---
 
+## Decision matrix (use this when speccing)
+
+Step through these in order. The first row that returns "yes" selects the architecture. Use it as a fast first pass, then drop into the scenario that matches your load for the full reasoning.
+
+| Question                                                          | If yes, choose                |
+| ----------------------------------------------------------------- | ----------------------------- |
+| Need full torque at zero speed, deterministically?                | PMSM + FOC + encoder          |
+| Need wide constant-power range (>2× base speed)?                  | IPM-PMSM + FOC + field weak.  |
+| Need torque ripple below ~3%?                                     | PMSM + FOC                    |
+| Need absolute position at startup?                                | PMSM + FOC + absolute encoder |
+| Need functional safety (STO/SS1/SLS)?                             | PMSM servo drive (certified)  |
+| Is load a fluid / fan / quadratic torque, moderate speed range?   | BLDC sensorless / sinusoidal  |
+| Is BOM cost the dominant constraint and ripple tolerable?         | BLDC 6-step                   |
+| Is it a propeller / light inertia high-speed load?                | BLDC sensorless 6-step        |
+| Is the machine a conveyor / pump / continuous process?            | Induction + VFD (reconsider)  |
+
+---
+
 ## Scenario walkthroughs
+
+Scan the 10 scenario cards, then jump to the detail section that matches your load.
+
+<div class="scenario-grid">
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario A</span>
+    <span class="scenario-card__title"><a href="#scenario-a--hvac-ec-fan--pump-variable-torque">HVAC EC fan / pump</a></span>
+    <div class="scenario-card__start"><strong>Winner:</strong> BLDC</div>
+    <div class="scenario-card__start"><strong>Why:</strong> fluid load masks ripple; no position need; lowest BOM</div>
+    <div class="scenario-card__start"><strong>When PMSM wins:</strong> IE5 / low-noise mandates</div>
+    <div class="scenario-card__start"><strong>Stack:</strong> sensorless BEMF or 3-Hall 6-step / sine</div>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario B</span>
+    <span class="scenario-card__title"><a href="#scenario-b--e-bike--light-ev-traction">E-bike / light EV</a></span>
+    <div class="scenario-card__start"><strong>Winner:</strong> PMSM (IPM)</div>
+    <div class="scenario-card__start"><strong>Why:</strong> field weakening + MTPA give wide speed + best Wh/km</div>
+    <div class="scenario-card__start"><strong>When BLDC wins:</strong> rock-bottom cost floor on low-end bikes</div>
+    <div class="scenario-card__start"><strong>Stack:</strong> FOC + Halls + sensorless observer fusion</div>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario C</span>
+    <span class="scenario-card__title"><a href="#scenario-c--industrial-servo-press">Industrial servo press</a></span>
+    <div class="scenario-card__start"><strong>Winner:</strong> PMSM servo</div>
+    <div class="scenario-card__start"><strong>Why:</strong> only stack that holds full torque at zero speed deterministically</div>
+    <div class="scenario-card__start"><strong>When BLDC wins:</strong> not for this duty</div>
+    <div class="scenario-card__start"><strong>Stack:</strong> FOC + absolute encoder + gain-scheduled nested loops + STO/SS1</div>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario D</span>
+    <span class="scenario-card__title"><a href="#scenario-d--conveyor--roller-line-continuous-duty">Conveyor / roller line</a></span>
+    <div class="scenario-card__start"><strong>Winner:</strong> Induction + VFD first; BLDC / PMSM as alternatives</div>
+    <div class="scenario-card__start"><strong>Why:</strong> rugged, no magnets, mature VFD ecosystem, no feedback needed</div>
+    <div class="scenario-card__start"><strong>When PMSM wins:</strong> IE4/IE5 mandates or regen payback on inclines</div>
+    <div class="scenario-card__start"><strong>Stack:</strong> V/f or sensorless vector; scalar / light-vector FOC for PMSM</div>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario E</span>
+    <span class="scenario-card__title"><a href="#scenario-e--drone--multirotor-propulsion">Drone / multirotor</a></span>
+    <div class="scenario-card__start"><strong>Winner:</strong> BLDC</div>
+    <div class="scenario-card__start"><strong>Why:</strong> propeller inertia absorbs ripple; ESC is lightest and cheapest</div>
+    <div class="scenario-card__start"><strong>When PMSM wins:</strong> rare — cinematography gimbals, heavy-lift industrial drones</div>
+    <div class="scenario-card__start"><strong>Stack:</strong> sensorless BEMF 6-step or FOC-lite ESC</div>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario F</span>
+    <span class="scenario-card__title"><a href="#scenario-f--cnc-spindle-520-kw">CNC spindle (5–20 kW)</a></span>
+    <div class="scenario-card__start"><strong>Winner:</strong> PMSM IPM</div>
+    <div class="scenario-card__start"><strong>Why:</strong> field-weakening + reluctance torque give constant-power window without oversizing</div>
+    <div class="scenario-card__start"><strong>When BLDC wins:</strong> not for this duty</div>
+    <div class="scenario-card__start"><strong>Stack:</strong> FOC + MTPA + field weakening + high-res encoder for C-axis</div>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario G</span>
+    <span class="scenario-card__title"><a href="#scenario-g--robot-joint-collaborative-robot">Robot joint (cobot)</a></span>
+    <div class="scenario-card__start"><strong>Winner:</strong> PMSM</div>
+    <div class="scenario-card__start"><strong>Why:</strong> cog-free torque transparency required for safe human-contact force control</div>
+    <div class="scenario-card__start"><strong>When BLDC wins:</strong> not for cobot joints — ripple breaks force estimation</div>
+    <div class="scenario-card__start"><strong>Stack:</strong> FOC + dual absolute encoder + strain-gauge torque sensor + EtherCAT</div>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario H</span>
+    <span class="scenario-card__title"><a href="#scenario-h--semiconductor-wafer-handler--lithography-stage">Semi wafer handler / stage</a></span>
+    <div class="scenario-card__start"><strong>Winner:</strong> PMSM (ironless or linear)</div>
+    <div class="scenario-card__start"><strong>Why:</strong> ironless topology + FOC hit the positioning noise floor lithography needs</div>
+    <div class="scenario-card__start"><strong>When BLDC wins:</strong> not at this accuracy class</div>
+    <div class="scenario-card__start"><strong>Stack:</strong> FOC + laser interferometer or sub-nm encoder + jerk-limited trajectory</div>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario I</span>
+    <span class="scenario-card__title"><a href="#scenario-i--battery-powered-power-tool-drill-impact">Power tool (drill / impact)</a></span>
+    <div class="scenario-card__start"><strong>Winner:</strong> BLDC (migrating to light FOC on premium lines)</div>
+    <div class="scenario-card__start"><strong>Why:</strong> compact, cheap, sensorless, drop-proof</div>
+    <div class="scenario-card__start"><strong>When PMSM/FOC wins:</strong> premium tools where low-speed feel, regen, and efficiency justify the MCU cost</div>
+    <div class="scenario-card__start"><strong>Stack:</strong> sensorless BEMF 6-step or light FOC with observer</div>
+  </div>
+  <div class="scenario-card">
+    <span class="scenario-card__num">Scenario J</span>
+    <span class="scenario-card__title"><a href="#scenario-j--retrofit-replacement-field-upgrade">Retrofit / field upgrade</a></span>
+    <div class="scenario-card__start"><strong>Winner:</strong> Keep BLDC motor; upgrade drive to Hall-interpolated sinusoidal</div>
+    <div class="scenario-card__start"><strong>Why:</strong> no mechanical change allowed; interpolated sine gives ~5–8 dB quieter</div>
+    <div class="scenario-card__start"><strong>When full PMSM/FOC wins:</strong> if the envelope opens and an encoder can be added</div>
+    <div class="scenario-card__start"><strong>Stack:</strong> mid-range BLDC drive, sine-mode firmware, existing Hall harness</div>
+  </div>
+</div>
 
 Each scenario identifies the winning choice and the reasoning. These are drawn from real application patterns.
 
@@ -387,24 +529,6 @@ Reason: you cannot run clean FOC on 60° Halls alone, but interpolated sinusoida
 
 ---
 
-## Decision matrix (use this when speccing)
-
-Step through these in order. The first row that returns "yes" selects the architecture.
-
-| Question                                                          | If yes, choose                |
-| ----------------------------------------------------------------- | ----------------------------- |
-| Need full torque at zero speed, deterministically?                | PMSM + FOC + encoder          |
-| Need wide constant-power range (>2× base speed)?                  | IPM-PMSM + FOC + field weak.  |
-| Need torque ripple below ~3%?                                     | PMSM + FOC                    |
-| Need absolute position at startup?                                | PMSM + FOC + absolute encoder |
-| Need functional safety (STO/SS1/SLS)?                             | PMSM servo drive (certified)  |
-| Is load a fluid / fan / quadratic torque, moderate speed range?   | BLDC sensorless / sinusoidal  |
-| Is BOM cost the dominant constraint and ripple tolerable?         | BLDC 6-step                   |
-| Is it a propeller / light inertia high-speed load?                | BLDC sensorless 6-step        |
-| Is the machine a conveyor / pump / continuous process?            | Induction + VFD (reconsider)  |
-
----
-
 ## Common field failure modes (BLDC vs PMSM-specific)
 
 ### BLDC-specific
@@ -419,7 +543,7 @@ Step through these in order. The first row that returns "yes" selects the archit
 - Encoder offset not calibrated (or lost after replacement) → wrong dq alignment → motor runs hot, max torque unreachable
 - Encoder cable noise → position jitter → current jitter → acoustic whine
 - Parameter ID wrong (Ld/Lq swapped on IPM) → instability near base speed
-- DC-link undervoltage during hard regen → drive trips on brake events
+- DC-link **overvoltage** during hard regen → with an undersized or missing brake chopper/resistor, returning kinetic energy pushes the bus above OV threshold and the drive trips on the deceleration event
 
 ### Shared
 
@@ -432,10 +556,10 @@ Step through these in order. The first row that returns "yes" selects the archit
 ## What the user should take away
 
 - BLDC and PMSM are the same family; the control strategy and the back-EMF shape define the split.
-- The **drive** is where most of the cost, complexity, and capability live — not the motor.
-- For anything with the word "servo" in the mechanical spec, the answer is **PMSM + FOC + real feedback**, full stop.
-- For anything that is a fan, a pump, a propeller, or a simple continuous-motion task, **BLDC 6-step** (or sensorless sinusoidal) is still the right answer in 2026.
-- The middle ground — appliance motors, e-bikes, cordless tools — is **migrating to FOC** as MCU cost drops. The distinction is blurring at the low end but remains hard at the industrial-servo end.
+- Most of the cost, complexity, and capability live in the **drive**, not the motor.
+- When the mechanical spec says "servo" — deterministic torque at zero speed, tight position accuracy, or functional safety — **PMSM + FOC + proper feedback** is almost always the right architecture.
+- For fans, pumps, propellers, and simple continuous-motion loads, **BLDC 6-step** (or sensorless sinusoidal) is still hard to beat on cost and robustness.
+- The middle ground — appliance motors, e-bikes, cordless tools — is **migrating to FOC** as MCU cost drops. The distinction is blurring at the low end; it remains sharp at the industrial-servo end.
 
 ---
 

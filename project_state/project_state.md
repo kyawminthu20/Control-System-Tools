@@ -2,7 +2,7 @@
 
 **Last Updated:** 2026-04-21
 **Status:** Active
-**Current Phase:** Phase 27.6 COMPLETE — BLDC/PMSM Implementation Guide UX Polish + Factual Pass
+**Current Phase:** Phase 27.7 COMPLETE — BLDC vs PMSM Comparison UX Polish + Factual Pass
 **Next Phase:** Phase 28 PLANNING — TBD
 **Delivery Target:** GitHub Pages static site for personal use
 
@@ -21,6 +21,39 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+## Phase 27.7 — COMPLETE (2026-04-21)
+
+Same UX polish pattern as Phase 27.6, applied to the BLDC vs PMSM Comparison page (`docs/fundamentals/motors/bldc-vs-pmsm/index.md`). Site-only; no RAG edits; no new CSS.
+
+### UX changes (reuse existing `.glance-grid`, `.card`, `.scenario-grid`, `.scenario-card`)
+
+- **Trimmed `## Purpose`** from a 170-word paragraph to 3 short lines (Use this when / Choose BLDC if / Choose PMSM if).
+- **"At a glance" 4-card decision strip** directly under Purpose: BLDC wins when / PMSM wins when / Induction still the right answer sometimes / Don't choose by motor name alone.
+- **"Jump to" 5-card nav** pointing at Construction, Control, Feedback, Decision Matrix, Scenarios — all 5 kramdown anchor IDs verified in built HTML.
+- **Moved the Decision matrix up** from after the scenarios to just before them (high-value content now lands before the long scenario section).
+- **Rebuilt 10 scenario walkthroughs as scan cards** at the top of `## Scenario walkthroughs`, each with 4 fields (Winner / Why / When the other side wins / Stack) and each linking to the existing detail H3 below. All 10 anchor IDs verified.
+
+### Factual and tone fixes in the same file
+
+- "One-sentence distinction": softened `PMSM = ... always driven with sinusoidal (FOC) control` → `typically driven with sinusoidal commutation or FOC`, with an explicit scope note that this module treats PMSM as the servo-style sinusoidal/FOC case.
+- Common failure modes: corrected `DC-link undervoltage during hard regen` → `overvoltage` with correct physics (regen pushes the bus up, not down, and OV trips occur when the brake chopper/resistor is undersized or missing).
+- Takeaway block: softened absolute phrasing — replaced `full stop` and `the right answer in 2026` with more engineering-style qualifications while keeping the core recommendations intact.
+
+### Validation
+
+- Jekyll build: clean, 1.134s, page count unchanged.
+- All 5 jump-menu anchor IDs verified in built HTML.
+- All 10 scenario-card anchor IDs verified in built HTML (kramdown em-dash handling yields the double-hyphen slug form consistently).
+- AI-boundary validator: 2 pre-existing failures only (no new regressions).
+- `tools/validate_reorg.sh all`: 48/50 baseline unchanged.
+
+### Deferred (not in first-pass scope)
+
+- Alternating visual rhythm across `Control strategy comparison`, `Drive / inverter architecture`, and `Feedback` sections using `.compare-columns` (instead of table-after-table prose).
+- Shorten per-scenario detail: move Summary line to top, trim repeat setup bullets.
+- Front-matter title sharpening (`BLDC vs PMSM — Motors, Drives, and Scenarios` → decision-focused variant).
+- Training vs Fundamentals identity (shared with Phase 27.6 deferred list).
 
 ## Phase 27.6 — COMPLETE (2026-04-21)
 
