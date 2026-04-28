@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-21 (Phase 29 complete)
+**Last Updated:** 2026-04-27 (Phase 29.1 complete)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,27 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-27 — Phase 29.1 complete: Sidebar theme-compatibility tiers A–D
+
+**Type:** UI polish / accessibility
+**Status:** Complete
+**Scope:** Phase 28 local sidebar (Motors pilot) + global sidebar aria-current
+
+Single batch covering the four sidebar tiers that had been queued during Phase 29 planning.
+
+CSS (`docs/assets/css/main.css`):
+- Tier A — `[data-theme="dark"] .sidebar__chip--{b,i,a,ref,concept,code,core}` overrides mirroring the existing dark page-chip palette so local-sidebar level/type chips read in dark mode.
+- Tier B — `.sidebar--local .sidebar__section-meta` gains a subtle `box-shadow` (separate light/dark values); global sidebar caret switched from text-swap (▶/▼) to a rotating ▸ chevron with a 0.15s ease, harmonizing with the local sidebar; `.sidebar__bucket-summary` letter-spacing tightened 0.07em → 0.05em.
+- Tier C — `.sidebar__bucket[open] > .sidebar__bucket-summary` brightens to `var(--color-text)`; `.sidebar__chip` and `.sidebar__bucket-count` get `border-radius: 4px`.
+
+Data (`docs/_data/training_catalog.yml`):
+- Tier C — added `nav_title` for 6 Motors modules previously using their full titles in the sidebar (Induction/DC/Servo modules + Motor Family Comparison + BLDC/PMSM References).
+
+Includes (`docs/_includes/sidebar-global.html`):
+- Tier D — added `aria-current="page"` alongside `class="active"` on section, child, and grandchild links (local sidebar already had this since Phase 28).
+
+Validated: clean Jekyll build (1.146 s), `validate_ai_boundaries.py` and `validate_reorg.sh all` show only pre-existing baseline failures.
 
 ## 2026-04-21 — Phase 29 complete: Homepage front-door rework (task-router, dedicated home layout)
 

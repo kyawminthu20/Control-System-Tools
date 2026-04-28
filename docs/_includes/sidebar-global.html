@@ -13,7 +13,7 @@
       <summary>{{ section.label }}</summary>
       <ul class="sidebar__links">
         <li>
-          <a href="{{ section.url | relative_url }}"{% if page.url == section.url %} class="active"{% endif %}>{{ section.label }}</a>
+          <a href="{{ section.url | relative_url }}"{% if page.url == section.url %} class="active" aria-current="page"{% endif %}>{{ section.label }}</a>
         </li>
 
         {% for child in section.children %}
@@ -32,7 +32,7 @@
           {% endif %}
 
           <li>
-            <a href="{{ child.url | relative_url }}" class="sub{% if child_active %} active{% endif %}">{{ child.label }}</a>
+            <a href="{{ child.url | relative_url }}" class="sub{% if child_active %} active{% endif %}"{% if child_active %} aria-current="page"{% endif %}>{{ child.label }}</a>
           </li>
 
           {% if child.children %}
@@ -40,7 +40,7 @@
               {% assign gc_active = false %}
               {% if page.url contains grandchild.url %}{% assign gc_active = true %}{% endif %}
               <li>
-                <a href="{{ grandchild.url | relative_url }}" class="sub{% if gc_active %} active{% endif %}" style="padding-left:2.75rem">{{ grandchild.label }}</a>
+                <a href="{{ grandchild.url | relative_url }}" class="sub{% if gc_active %} active{% endif %}"{% if gc_active %} aria-current="page"{% endif %} style="padding-left:2.75rem">{{ grandchild.label }}</a>
               </li>
             {% endfor %}
           {% endif %}

@@ -1,9 +1,9 @@
 # Project State
 
-**Last Updated:** 2026-04-21
+**Last Updated:** 2026-04-27
 **Status:** Active
-**Current Phase:** Phase 29 COMPLETE — Homepage Front-Door Rework (task-router, dedicated home layout)
-**Next Phase:** Phase 29.1 PLANNING — pending decisions: (a) theme-compatibility tiers on the Phase 28 sidebar (dark-mode chip palette, elevation/caret/spacing), (b) whether to extend local sidebar to Control Systems / Electrical Fundamentals / NEC topic groups.
+**Current Phase:** Phase 29.1 COMPLETE — Sidebar theme-compatibility tiers A–D (dark chip palette, elevation/caret/spacing, weight/abbrevs/radius, global aria-current)
+**Next Phase:** Phase 29.2 PLANNING — pending decisions: (a) extend local sidebar to Control Systems / Electrical Fundamentals / NEC topic groups, (b) dedicated Standards Finder page for the "I need applicable standards" Start Here card.
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,52 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+## Phase 29.1 — COMPLETE (2026-04-27)
+
+Theme-compatibility and polish pass for the Phase 28 local sidebar pilot, plus an accessibility fix for the global sidebar. Single batch covering all four tiers that had been queued during Phase 29 planning.
+
+### Tier A — dark-mode chip palette
+
+`.sidebar__chip--b/i/a/ref/concept/code/core` were hard-coded to light-mode colors, leaving dark-mode chip backgrounds illegible on the local sidebar. Added `[data-theme="dark"]` overrides for all seven variants, mirroring the existing dark page-chip palette (lines 2016–2022 of main.css).
+
+### Tier B — elevation, caret, letter-spacing
+
+- `.sidebar--local .sidebar__section-meta` now carries a soft `box-shadow` (light: `0 1px 2px rgba(0,0,0,.04)`; dark: `0 1px 2px rgba(0,0,0,.35)`) to separate the section header from the bucket list.
+- Global sidebar (`.sidebar__section summary::after`) was switched from a text-swap caret (▶/▼) to a rotating ▸ chevron with a 0.15s ease transition — same pattern the local sidebar already used. Both sidebars now animate consistently.
+- `.sidebar__bucket-summary` letter-spacing tightened from 0.07em → 0.05em (less shouty against tightly-packed bucket labels).
+
+### Tier C — active-weight, label abbreviations, border-radius
+
+- New rule `.sidebar__bucket[open] > .sidebar__bucket-summary { color: var(--color-text); }` brightens the bucket label color when the bucket is open, giving a clearer "you are here" cue alongside the rotated caret.
+- `.sidebar__chip` and `.sidebar__bucket-count` got `border-radius: 4px` to match the chip language used elsewhere on the site.
+- Six Motors modules that were still using their full titles in the sidebar got `nav_title` overrides:
+  - Induction Motor Basics → "Induction Basics"
+  - DC Motor Basics → "DC Basics"
+  - Motor Family Comparison → "Family Comparison"
+  - Servo Drive Fundamentals → "Servo Fundamentals"
+  - BLDC Motor Reference → "BLDC Reference"
+  - PMSM Motor Reference → "PMSM Reference"
+- VFD Fundamentals left unchanged — already concise, no shorter form without losing meaning.
+
+### Tier D — aria-current on global sidebar
+
+`sidebar-global.html` was setting `class="active"` on the active link but never `aria-current="page"`, leaving screen readers without a programmatic "current page" cue on every non-pilot page. Added `aria-current="page"` alongside the existing `class="active"` for section, child, and grandchild links. The local sidebar already had this since Phase 28.
+
+### Validation
+
+- Jekyll build: clean, 1.146 s.
+- 7 dark-mode chip overrides present in built CSS.
+- Rotated chevron CSS present on global sidebar.
+- All 6 new `nav_title` strings rendered in the Motors sidebar.
+- `aria-current="page"` present on both `/standards/` (global) and `/fundamentals/motors/induction-motor-basics/` (local).
+- `validate_ai_boundaries.py`: 2 pre-existing failures only.
+- `validate_reorg.sh all`: 48/50 baseline.
+
+### Known deferred (now in Phase 29.2)
+
+- Extend the local sidebar pilot to Control Systems, Electrical Fundamentals, or NEC topic groups (data-only change per the Phase 28 architecture).
+- Dedicated Standards Finder page so the "I need applicable standards" Start Here card routes to a real decision tool rather than the crosswalks page.
 
 ## Phase 29 — COMPLETE (2026-04-21)
 
