@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-21 (Phase 28 complete)
+**Last Updated:** 2026-04-21 (Phase 29 complete)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,40 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-21 — Phase 29 complete: Homepage front-door rework (task-router, dedicated home layout)
+
+**Type:** Information architecture / landing page
+**Status:** Complete
+**Scope:** `/` only; interior pages unchanged
+
+Reworked the homepage from a reference-first atlas index into a task-first front door. The interior `default.html` layout was forcing the global sidebar, right-side context panel, and trust-boundary block onto `/`, competing with the topnav as a third navigation system. Phase 29 addresses that.
+
+Includes / layouts:
+- `docs/_layouts/home.html` — new. Topnav + scripts, no sidebar, no context panel, no trust-boundary, no breadcrumb. Uses a centered `.home-main` instead of the three-panel CSS Grid.
+- `docs/_layouts/default.html` — untouched; interior surface stays byte-for-byte identical.
+
+Content (`docs/index.md`):
+- Hero rewritten with a plain-language promise: "Find the right standards path for your machine, panel, or safety system." 3 CTAs route to the decision workflow, scenarios, and training.
+- New "Start here" 6-card task grid (decision / US panel / US+EU machine / safety / troubleshooting / training).
+- Scenarios moved up from sixth section to second.
+- Standards Families card grid kept but raw corpus paths (`rag/...`) removed from card bodies.
+- Industry Matrix table replaced with 6 industry tile links.
+- Standards Graph reduced to a one-line teaser + link.
+- Repository tree moved into a collapsed `<details>` block at the bottom labelled for power users.
+
+Topnav (`docs/_includes/topnav.html`):
+- Search placeholder + ARIA "Search standards…" → "Search standards, workflows, training…".
+
+Styling (`docs/assets/css/main.css`):
+- New block at the existing home-styles area: `.home-body`, `.home-main`, `.home-hero` family, `.start-grid` / `.start-card` family, `.home-section` + intro, `.industry-tiles` / `.industry-tile` family, `.home-deep-dive` with text-swap caret matching the sidebar pattern. Reuses `--color-*` tokens so dark mode works automatically.
+
+Validation:
+- Jekyll clean build, 1.14 s.
+- Home has 0 sidebars + 0 context panels; 6 Start Here cards + 6 industry tiles verified in built HTML.
+- Interior pages (/standards/, Motors pilot page) unchanged.
+- AI-boundary validator: 2 pre-existing failures.
+- `validate_reorg.sh all`: 48/50 baseline.
 
 ## 2026-04-21 — Phase 28 complete: Sidebar pilot for Motors/Fundamentals (local section tree)
 

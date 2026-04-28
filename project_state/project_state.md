@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-04-21
 **Status:** Active
-**Current Phase:** Phase 28 COMPLETE — Sidebar Pilot for Motors/Fundamentals (local section tree)
-**Next Phase:** Phase 28.1 PLANNING — extend local sidebar to Control Systems / Electrical Fundamentals / NEC, or pause to see pilot bake in
+**Current Phase:** Phase 29 COMPLETE — Homepage Front-Door Rework (task-router, dedicated home layout)
+**Next Phase:** Phase 29.1 PLANNING — pending decisions: (a) theme-compatibility tiers on the Phase 28 sidebar (dark-mode chip palette, elevation/caret/spacing), (b) whether to extend local sidebar to Control Systems / Electrical Fundamentals / NEC topic groups.
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,66 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+## Phase 29 — COMPLETE (2026-04-21)
+
+Homepage rework: the site's front door was inheriting the interior-page layout (default.html), so visitors arriving at `/` faced the global sidebar, right-side context panel, trust-boundary block, and a reference-first content order. Phase 29 replaces that with a dedicated home layout and a task-router content order.
+
+### New layout (`docs/_layouts/home.html`)
+
+- Topnav + scripts kept.
+- Dropped: sidebar include, context-panel include, trust-boundary include, breadcrumb block.
+- `<main class="home-main">` replaces the three-panel CSS Grid. Centered, `max-width: 1100px`, `2rem 2rem 3rem` padding.
+- Theme script, Mermaid init, analytics all retained — parity with default.html except the interior chrome.
+
+### Homepage content (`docs/index.md`)
+
+Reordered from **Standards Families → Lifecycle → Graph → Industry Matrix → Scenarios → Repository Explorer** to **Hero → Start Here → Scenarios → Browse by family → Browse by lifecycle → Browse by industry → Power-user deep-dive (collapsed)**.
+
+- **Hero rewritten** to a plain-language promise: title *"Find the right standards path for your machine, panel, or safety system."*, subtitle explains the routing-by-intent model, 3 CTAs (Find applicable standards / Start with a scenario / Learn fundamentals).
+- **Start Here 6-card grid** (new `.start-card` component): I need applicable standards · US control panel · Machine for US + EU · Safety architecture · Troubleshooting / commissioning · Training and fundamentals. Each card routes to an existing page — all 6 URLs verified at build time.
+- **Common engineering scenarios** moved up — now the second section after Start Here (was sixth).
+- **Browse by standards family**: cards preserved but the raw corpus path labels (e.g., `rag/us/`, `control-standards/rag/.../overlap_matrix/`) were dropped. The `TO VERIFY` badge was also removed since IEC 62443 corpus is now complete.
+- **Browse by lifecycle**: 11-stage ribbon kept intact but moved below scenarios. The `_standards_map` filename was replaced with plain *"Decision map"*.
+- **Browse by industry**: the 9-row matrix table replaced with 6 clickable `.industry-tile` cards (Semiconductor, Oil & Gas, Energy, Food & Beverage, Water & Wastewater, Offshore & Marine), plus a link to the full industries page.
+- **Standards graph** reduced to a one-line teaser + link inside the collapsed deep-dive block.
+- **Repository explorer tree** moved into the collapsed `<details class="home-deep-dive">` block at the bottom, labelled *"For power users — standards graph and repository layout"*.
+
+### Topnav (`docs/_includes/topnav.html`)
+
+- Search placeholder "Search standards…" → "Search standards, workflows, training…". ARIA label updated to match. Single-line change.
+
+### CSS (`docs/assets/css/main.css`)
+
+New block *Home layout* introduces:
+- `.home-body`, `.home-main` — centered container without grid.
+- `.home-hero` + `.home-hero__label/__title/__subtitle/__ctas` — wider typography than `.hero` used elsewhere.
+- `.start-grid` + `.start-card` + `.start-card__label/__title/__desc/__next` — reuses existing color tokens and border treatment so it slots into the theme.
+- `.home-section` + `.home-section__intro` — consistent rhythm between the four browse sections.
+- `.industry-tiles` + `.industry-tile` + `.industry-tile__name/__meta` — lightweight tile grid to replace the dense matrix.
+- `.home-deep-dive` — `<details>` with mono summary that mirrors the sidebar bucket caret pattern (text-swap `▶`/`▼`, no animation).
+- Mobile breakpoint tightening for hero type at ≤900px.
+
+### Pages **not** changed
+
+- `docs/_layouts/default.html` — interior layout is byte-for-byte unchanged. No conditional logic added; the separate-layout approach keeps the interior surface protected.
+- Every non-homepage URL continues to render its existing sidebar (global or local Motors pilot) and context panel.
+
+### Validation
+
+- Jekyll build: clean, 1.136 s.
+- `/` (home): 0 sidebar elements, 0 context-panel elements, `home-main` + `home-hero` present, 6 `start-card`, 6 `industry-tile`.
+- `/standards/` (interior sample): 23 `sidebar__*` elements — global sidebar intact.
+- `/fundamentals/motors/bldc-pmsm-implementation/` (Motors pilot page): local Phase 28 sidebar intact.
+- `validate_ai_boundaries.py`: 2 pre-existing failures only.
+- `validate_reorg.sh all`: 48/50 baseline.
+
+### Known deferred
+
+- Theme-compatibility plan for the Phase 28 local sidebar (Tier A dark-mode chip fix, Tier B elevation/caret/letter-spacing, Tier C active-weight/label-abbreviations/border-radius, Tier D aria-current on global sidebar) — still pending the user's pick on which tiers to run.
+- Sub-categorisation or filter UI inside the Start Here grid.
+- A dedicated "Standards Finder" decision page that the "I need applicable standards" card could route to instead of the crosswalks page.
+- Illustrated hero (photo or diagram) — intentionally skipped for the first pass.
 
 ## Phase 28 — COMPLETE (2026-04-21)
 
