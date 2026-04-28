@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-27 (Phase 29.2 complete)
+**Last Updated:** 2026-04-27 (Phase 29.3 complete)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,32 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-27 — Phase 29.3 complete: Standards Finder page (scenario-card entry)
+
+**Type:** Information architecture / new page
+**Status:** Complete
+**Scope:** New page at `/tools/standards-finder/` + homepage re-routes + nav entry
+
+The Phase 29 homepage promised a "Find applicable standards" entry point but routed both the hero CTA and the Start Here card to `/tools/crosswalks/` — a comparison tool, not a finder. Phase 29.3 ships the actual finder.
+
+New page (`docs/tools/standards-finder/index.md`):
+- Sketch C from the IA brainstorm — scenario-card entry, no JS, no faceted filter.
+- `.finder-jump` anchor-chip strip + 5 grouped sections covering the 9 existing engineering scenarios reused from `docs/implementation/scenarios/`.
+- Sections: US-market machines & panels (Scen. 01, 06) · Global / EU machines (02) · Process safety SIS/ESD (03, 07) · Networked & cyber-physical safety (04) · Industry-specific stacks (05, 08, 09).
+- Closing escape-hatch routes to crosswalks (comparison) and the standards atlas (browse) so users who don't match a scenario don't dead-end.
+
+CSS (`docs/assets/css/main.css`):
+- `.finder-jump` block — bordered horizontal anchor strip, theme-token only, no overrides needed.
+
+Re-routes (`docs/index.md`):
+- Hero CTA "Find applicable standards" → `/tools/standards-finder/`.
+- Start Here card "I need applicable standards" → `/tools/standards-finder/` + copy refreshed to match the Finder's scenario-first framing.
+
+Navigation (`docs/_data/navigation.yml`):
+- Added `Standards Finder` as the first child under Tools (above RAG Browser).
+
+Validated: clean Jekyll build (1.078 s), 9 scenario cards + 5 jump anchors render on the Finder, both homepage entry points re-route correctly, validators show only baseline failures.
 
 ## 2026-04-27 — Phase 29.2 complete: Extend local sidebar pilot to 3 more topic groups
 

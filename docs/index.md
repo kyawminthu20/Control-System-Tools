@@ -13,7 +13,7 @@ description: "Route from your project, lifecycle stage, or market to the standar
     for the published standards or your authority having jurisdiction.
   </p>
   <div class="home-hero__ctas">
-    <a href="{{ '/tools/crosswalks/' | relative_url }}" class="hero__cta">Find applicable standards &rarr;</a>
+    <a href="{{ '/tools/standards-finder/' | relative_url }}" class="hero__cta">Find applicable standards &rarr;</a>
     <a href="{{ '/implementation/scenarios/' | relative_url }}" class="hero__cta hero__cta--secondary">Start with a scenario &rarr;</a>
     <a href="{{ '/training/' | relative_url }}" class="hero__cta hero__cta--secondary">Learn fundamentals &rarr;</a>
   </div>
@@ -24,11 +24,11 @@ description: "Route from your project, lifecycle stage, or market to the standar
   <p class="home-section__intro">Pick the card that best describes what you are doing right now. Each one routes to the right reference, workflow, or module.</p>
 
   <div class="start-grid">
-    <a class="start-card" href="{{ '/tools/crosswalks/' | relative_url }}">
+    <a class="start-card" href="{{ '/tools/standards-finder/' | relative_url }}">
       <span class="start-card__label">Decision</span>
       <span class="start-card__title">I need applicable standards</span>
-      <span class="start-card__desc">Route by region, machine type, and risk class to the US and international standards that apply.</span>
-      <span class="start-card__next">Open the decision workflow &rarr;</span>
+      <span class="start-card__desc">Pick the scenario closest to your project — region, equipment class, and risk profile already mapped to a standards stack.</span>
+      <span class="start-card__next">Open the Standards Finder &rarr;</span>
     </a>
 
     <a class="start-card" href="{{ '/implementation/scenarios/us-industrial-control-panel/' | relative_url }}">

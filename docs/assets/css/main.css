@@ -1047,6 +1047,42 @@ tr:nth-child(even) td {
 .home-deep-dive > summary::after { content: " ▶"; font-size: 0.7em; }
 .home-deep-dive[open] > summary::after { content: " ▼"; }
 
+/* --- Standards Finder jump-to nav (/tools/standards-finder/) -------------- */
+.finder-jump {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.5rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0.6rem 0.75rem;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  font-size: 0.8rem;
+}
+.finder-jump__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-right: 0.25rem;
+}
+.finder-jump a {
+  display: inline-block;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  text-decoration: none;
+  line-height: 1.2;
+}
+.finder-jump a:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
 @media (max-width: 900px) {
   .home-main { padding: 1.25rem 1rem 2rem; }
   .home-hero__title { font-size: 1.55rem; }

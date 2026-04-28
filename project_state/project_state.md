@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-04-27
 **Status:** Active
-**Current Phase:** Phase 29.2 COMPLETE — Local sidebar pilot extended to Electrical Fundamentals, Control Systems, and NEC for Machines and Panels (4 topic groups now opted in, 52 modules tagged, 17 buckets total)
-**Next Phase:** Phase 29.3 PLANNING — pending decision: dedicated Standards Finder page for the "I need applicable standards" Start Here card (currently routes to crosswalks).
+**Current Phase:** Phase 29.3 COMPLETE — Standards Finder page (scenario-card entry, /tools/standards-finder/) wired into homepage hero + Start Here + Tools sub-nav
+**Next Phase:** Open. Phase 29.x backlog is empty; possible directions include a Sketch-B faceted-filter upgrade to the Finder, a Standards Finder for industries (vs. scenarios), or moving to an unrelated phase.
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,49 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+## Phase 29.3 — COMPLETE (2026-04-27)
+
+Built the Standards Finder page that the Phase 29 Start Here grid had been promising. The "I need applicable standards" card and the hero-CTA "Find applicable standards" both used to route to `/tools/crosswalks/` — a comparison tool, not a finder. Phase 29.3 ships a real entry surface.
+
+Implementation followed Sketch C from the IA brainstorm: a scenario-card entry page, no JS, no faceted filter (deferred). The 9 existing engineering scenarios in `docs/implementation/scenarios/` are reused verbatim — no new scenario content was authored. The Finder's job is purely to organize them so the user can scan and pick.
+
+### New page (`docs/tools/standards-finder/index.md`)
+
+- Page-header with the routing promise as the H1.
+- A `.finder-jump` anchor-chip strip at the top with 5 in-page jumps.
+- 5 grouped sections, each with the scenario cards relevant to that context:
+  1. **US-market machines & control panels** (Scenarios 01, 06)
+  2. **Global / EU-market machines** (Scenario 02)
+  3. **Process safety — SIS / ESD** (Scenarios 03, 07)
+  4. **Networked & cyber-physical safety** (Scenario 04)
+  5. **Industry-specific stacks** (Scenarios 05, 08, 09)
+- Closing escape-hatch section with two `.card`s: route to Crosswalks (comparison) and Standards Atlas (browse). This handles the "none of these fit" case explicitly rather than dead-ending the user.
+
+### CSS (`docs/assets/css/main.css`)
+
+- New `.finder-jump` block (~35 lines): horizontal flex strip with a mono `__label`, then small bordered anchor chips. Reuses existing color tokens — works in both light and dark mode without further overrides.
+
+### Re-routes
+
+- `docs/index.md` hero CTA: `/tools/crosswalks/` → `/tools/standards-finder/`.
+- `docs/index.md` Start Here "I need applicable standards" card: same re-route, plus copy refresh to match the Finder's scenario-first framing ("Pick the scenario closest to your project — region, equipment class, and risk profile already mapped to a standards stack").
+- `docs/_data/navigation.yml`: added `Standards Finder` as the first child under Tools (above RAG Browser, Glossary, Crosswalks). Now visible in the global sidebar on every Tools page.
+
+### What was NOT built (deliberate scope cut)
+
+- No live filter UI (Sketch B). The 5-section anchor jump covers the same find-by-context need with zero JS. If this proves insufficient, a Phase 29.4 could add real filter chips that hide non-matching scenario sections.
+- No new scenario content. The 9 existing scenarios already cover the meaningful territory; what was missing was an entry surface, not more scenarios.
+- The crosswalks page wasn't deprecated. It still serves the comparison use case (NFPA 79 ↔ IEC 60204-1 etc.); the Finder just stops being the wrong default destination.
+
+### Validation
+
+- Jekyll build: clean, 1.078 s.
+- `/tools/standards-finder/` renders: 5 jump anchors, 9 scenario cards, both escape-hatch cards.
+- Homepage hero CTA + Start Here card both point to `/tools/standards-finder/` in built HTML.
+- Standards Finder appears in the Tools-section sidebar on `/tools/`.
+- `validate_ai_boundaries.py`: 2 pre-existing failures only.
+- `validate_reorg.sh all`: 48/50 baseline.
 
 ## Phase 29.2 — COMPLETE (2026-04-27)
 
