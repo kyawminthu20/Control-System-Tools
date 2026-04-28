@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-27 (Phase 29.1 complete)
+**Last Updated:** 2026-04-27 (Phase 29.2 complete)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,25 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-27 — Phase 29.2 complete: Extend local sidebar pilot to 3 more topic groups
+
+**Type:** Information architecture
+**Status:** Complete
+**Scope:** Pure data change in `docs/_data/training_catalog.yml`
+
+The Phase 28 local-sidebar pilot covered only `electrical-machines` (Motors). Phase 29.2 extends it to three more groups, going from 1/4 → 4/4 of the topic groups in the catalog.
+
+Data (`docs/_data/training_catalog.yml`):
+- Added `sidebar_buckets:` ordering arrays to `fundamentals`, `control-systems`, and `nec-application` topic_groups.
+- Tagged all 34 modules in those groups with `sidebar_bucket:` and gave 32 of them a `nav_title:` for sidebar-friendly labels.
+
+Bucket taxonomies:
+- **Electrical Fundamentals** (9 modules): Circuit Analysis · Components & Devices · Practical Wiring · Quick References.
+- **Control Systems** (14 modules): Foundations · PID Methods · Machine Logic & Safety · Distributed Systems · Motion & Tuning.
+- **NEC for Machines and Panels** (11 modules): Foundations · Motors & Article 430 · Panels & Article 409 · Machine-Side Wiring.
+
+No template, CSS, or JS changes — the Phase 28 router (`docs/_includes/sidebar.html`) automatically opts a topic group in once any of its modules carry a `sidebar_bucket`. Validated: clean Jekyll build (1.057 s), local sidebar rendering on a sample page from each new group, baseline validators unchanged.
 
 ## 2026-04-27 — Phase 29.1 complete: Sidebar theme-compatibility tiers A–D
 

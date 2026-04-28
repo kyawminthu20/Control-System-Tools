@@ -2,8 +2,8 @@
 
 **Last Updated:** 2026-04-27
 **Status:** Active
-**Current Phase:** Phase 29.1 COMPLETE — Sidebar theme-compatibility tiers A–D (dark chip palette, elevation/caret/spacing, weight/abbrevs/radius, global aria-current)
-**Next Phase:** Phase 29.2 PLANNING — pending decisions: (a) extend local sidebar to Control Systems / Electrical Fundamentals / NEC topic groups, (b) dedicated Standards Finder page for the "I need applicable standards" Start Here card.
+**Current Phase:** Phase 29.2 COMPLETE — Local sidebar pilot extended to Electrical Fundamentals, Control Systems, and NEC for Machines and Panels (4 topic groups now opted in, 52 modules tagged, 17 buckets total)
+**Next Phase:** Phase 29.3 PLANNING — pending decision: dedicated Standards Finder page for the "I need applicable standards" Start Here card (currently routes to crosswalks).
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,31 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+## Phase 29.2 — COMPLETE (2026-04-27)
+
+Extended the Phase 28 local-sidebar pilot from `electrical-machines` (Motors, 18 modules, 5 buckets) to three more topic groups, taking the pilot total to 4 groups and 52 modules. Pure data change in `docs/_data/training_catalog.yml` — no template, CSS, or JS edits required, exactly as the Phase 28 architecture promised.
+
+### Bucket taxonomies
+
+- **Electrical Fundamentals** (`fundamentals`, 9 modules, 4 buckets): Circuit Analysis (4), Components & Devices (2), Practical Wiring (2), Quick References (1).
+- **Control Systems** (`control-systems`, 14 modules, 5 buckets): Foundations (2), PID Methods (5), Machine Logic & Safety (2), Distributed Systems (2), Motion & Tuning (3).
+- **NEC for Machines and Panels** (`nec-application`, 11 modules, 4 buckets): Foundations (2), Motors & Article 430 (3), Panels & Article 409 (3), Machine-Side Wiring (3).
+
+### Module label discipline
+
+Every module in the three new groups got a `nav_title` (32 of 34 modules — the 2 already-short ones, Passive Components and Equivalent Circuit Methods, were left to use their full `title`). Result: bucket labels and module labels both fit comfortably inside the 288 px sidebar without truncation.
+
+### Validation
+
+- Jekyll build: clean, 1.057 s.
+- Sample local sidebars verified for `/fundamentals/electrical/electrical-quantities/` (4 buckets), `/fundamentals/control/pid-foundation/` (5 buckets), `/training/nec-application/nec-code-reading/` (4 buckets).
+- `validate_ai_boundaries.py`: 2 pre-existing failures only.
+- `validate_reorg.sh all`: 48/50 baseline.
+
+### Known deferred (now in Phase 29.3)
+
+- Standards Finder page so the "I need applicable standards" Start Here card routes to a real decision tool rather than the crosswalks page.
 
 ## Phase 29.1 — COMPLETE (2026-04-27)
 
