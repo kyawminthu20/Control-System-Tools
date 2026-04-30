@@ -26,7 +26,7 @@ This library is intended to stay public-friendly and reusable. The working rule 
 - Customer drawings, fab-specific packages, or NDA vendor deliverables.
 - Verbatim copies of copyrighted manuals beyond short citation-sized excerpts.
 - Screenshots, scans, or image dumps with unclear redistribution rights.
-- Proprietary setpoints, recipes, tool parameters, or confidential alarm lists.
+- Proprietary setpoints, recipes, tool parameters, or sensitive alarm lists.
 
 ## Manual handling rule
 

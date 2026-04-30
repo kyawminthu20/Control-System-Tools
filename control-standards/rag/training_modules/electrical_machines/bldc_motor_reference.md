@@ -1015,7 +1015,7 @@ sensorless may not be the right choice.
 
 ---
 
-# 21. What to Check First on a Confidential BLDC System
+# 21. What to Check First on a Proprietary BLDC System
 
 Without revealing details, this is the fastest disciplined review order.
 
@@ -1151,7 +1151,7 @@ Determine whether the commanded torque creates smooth motion or trouble.
 
 # 24. Practical Design Questions You Should Ask
 
-When you review the confidential system, ask:
+When you review the proprietary system, ask:
 
 ### Motor
 
@@ -1297,7 +1297,7 @@ For your case, the best progression is:
 
 ---
 
-# 29. A Practical Confidential-System Worksheet
+# 29. A Practical Proprietary-System Worksheet
 
 Use this privately for your application.
 

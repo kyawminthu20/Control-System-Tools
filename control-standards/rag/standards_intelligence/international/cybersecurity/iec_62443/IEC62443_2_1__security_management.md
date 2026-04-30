@@ -108,6 +108,8 @@ IEC 62443-2-1 is compatible with ISO/IEC 27001 but diverges in important areas:
 | Consequences of failure | Data breach, business disruption | Safety hazard, environmental release, equipment damage, production loss |
 | Availability requirements | Best effort or SLA-based | Near-continuous availability; patching and updates require planned downtime |
 
+> *Terminology: "Confidentiality" here is the IEC 62443 security property (the C in C-I-A) — protection from unauthorized disclosure, not a content-classification label.*
+
 ---
 
 ## Practical Notes

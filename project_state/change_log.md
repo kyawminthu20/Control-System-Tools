@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-29 (Phase 29.4 complete)
+**Last Updated:** 2026-04-29 (terminology pass: "confidential" → "proprietary")
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,38 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-29 — Terminology pass: "confidential" → "proprietary" / "sensitive"
+
+**Type:** Editorial / public-content tone
+**Status:** Complete
+**Reason:** "Confidential" framing in the BLDC pages made the public site sound like it was hiding restricted material. Replaced with engineering-accurate words. IEC 62443 standard terminology kept (with a clarifying note added).
+
+**Renamed:**
+
+- `docs/fundamentals/motors/bldc-reference/index.md` — three section headings + body references: "confidential BLDC system" → "proprietary BLDC system", "confidential system" → "proprietary system", "confidential-system worksheet" → "proprietary-system worksheet".
+- `control-standards/rag/training_modules/electrical_machines/bldc_motor_reference.md` — same three replacements (RAG source kept in sync with site).
+- `planning/motors/bldc.md` — same three replacements + the opening line ("right way to approach a confidential system" → "right way to approach a proprietary system").
+- `planning/semi_facility/governance/public_content_rules.md` — "confidential alarm lists" → "sensitive alarm lists" in the Not-allowed list.
+
+**Kept (with terminology footnote added):**
+
+IEC 62443 cybersecurity docs use "Data Confidentiality" / "Confidentiality" as the literal CIA-triad security-property name from the standard (FR 4). Renaming would misquote the standard. Per user direction (Option B), the term is kept and a one-line note has been added to each file:
+
+> *Terminology: "Confidentiality" here is the IEC 62443 security property (the C in C-I-A) — protection from unauthorized disclosure, not a content-classification label.*
+
+Files with the note (7 total — public summary plus 3 RAG-file mirror pairs):
+
+- `docs/standards/cybersecurity/iec-62443/index.md` — after the FR table.
+- `docs/assets/rag-files/.../IEC62443_3_3__system_security_requirements.md` + `control-standards/rag/.../IEC62443_3_3...md` — after the FR table.
+- `docs/assets/rag-files/.../IEC62443_2_1__security_management.md` + `control-standards/rag/.../IEC62443_2_1...md` — after the IT-vs-IACS comparison table.
+- `docs/assets/rag-files/.../IEC62443_4_2__component_requirements.md` + `control-standards/rag/.../IEC62443_4_2...md` — directly under the "Common Findings" heading.
+
+**Kept (validator):**
+
+- `tools/validate_ai_boundaries.py:22` — `"CONFIDENTIAL"` is a forbidden-keyword string the validator scans for. Removing it would weaken the rule that prevents this very issue.
+
+**Validation:** `jekyll build` clean, 1.078 s. No structural changes.
 
 ## 2026-04-29 — Phase 29.4 complete: Standards Finder faceted filter (Sketch B)
 

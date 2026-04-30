@@ -159,6 +159,8 @@ IEC 62443-3-3 organizes all system security requirements into seven Foundational
 | **FR 6** | Timely Response to Events | Security event logging with timestamps; log integrity protection; SIEM integration |
 | **FR 7** | Resource Availability | DoS resistance; control system backup and recovery; tested restore procedures |
 
+> *Terminology: "Confidentiality" here is the IEC 62443 security property (the C in C-I-A) — protection from unauthorized disclosure, not a content-classification label.*
+
 **SL 2 adds over SL 1:** MFA for untrusted network access (FR 1 RE 1), deny-by-default conduit policy (FR 5 SR 5.2 RE 1), encrypted data in transit for sensitive data (FR 4), application partitioning (FR 5), SIEM-capable logging (FR 6).
 
 ---

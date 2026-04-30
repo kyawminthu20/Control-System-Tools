@@ -140,6 +140,8 @@ When selecting components for a Zone with a defined SL-T:
 
 ## Common Findings in Component Assessment
 
+> *Terminology: "Data confidentiality" referenced below is the IEC 62443 security property (the C in C-I-A) — protection from unauthorized disclosure, not a content-classification label.*
+
 1. **Default credentials not changed** — many embedded devices ship with default usernames and passwords. FR 1 requires unique credentials; failing to change defaults is an immediate SL-C 1 failure.
 2. **No secure boot** — legacy PLCs often have no firmware integrity verification. SL-C 2 for FR 3 requires firmware integrity on boot; compensating controls (physical access control, network-level restriction) must be documented.
 3. **Unencrypted management protocols** — devices using Telnet, HTTP, or SNMP v1/v2 in management interfaces cannot meet FR 4 data confidentiality requirements without compensating controls.

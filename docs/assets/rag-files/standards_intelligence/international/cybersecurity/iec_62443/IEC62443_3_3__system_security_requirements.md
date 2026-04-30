@@ -92,6 +92,8 @@ IEC 62443-3-3 organizes system security requirements into seven Foundational Req
 | **FR 6** | Timely Response to Events (TRE) | Security events must be detected, logged, and responded to in a timely manner; audit logs must be protected |
 | **FR 7** | Resource Availability (RA) | The IACS must be available to authorized users when needed; denial-of-service resistance required |
 
+> *Terminology: "Confidentiality" here is the IEC 62443 security property (the C in C-I-A) — protection from unauthorized disclosure, not a content-classification label.*
+
 ### FR Applicability by SL
 
 Each SR and RE specifies at which SL it becomes required. The pattern is:
