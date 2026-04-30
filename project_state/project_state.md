@@ -1,9 +1,9 @@
 # Project State
 
-**Last Updated:** 2026-04-27
+**Last Updated:** 2026-04-29
 **Status:** Active
-**Current Phase:** Phase 29.3 COMPLETE — Standards Finder page (scenario-card entry, /tools/standards-finder/) wired into homepage hero + Start Here + Tools sub-nav
-**Next Phase:** Open. Phase 29.x backlog is empty; possible directions include a Sketch-B faceted-filter upgrade to the Finder, a Standards Finder for industries (vs. scenarios), or moving to an unrelated phase.
+**Current Phase:** Phase 29.4 COMPLETE — Sketch-B faceted-filter on the Standards Finder (Market × Domain chips, vanilla-JS, progressive enhancement on top of the Phase 29.3 anchor strip)
+**Next Phase:** Open. Candidates: industries-axis Finder (sibling page that pivots on industry vertical instead of scenario), URL-persistence for filter chips (29.4.1), or a content-depth phase to fill documented corpus gaps (ISO 13849-1, IEC 62061, IEC 61508/61511, SEMI S2/S8/S14).
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,55 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+## Phase 29.4 — COMPLETE (2026-04-29)
+
+Sketch-B faceted-filter upgrade to the Standards Finder. The Phase 29.3 page shipped with a 5-anchor jump strip and an explicit deferral note: *"If this proves insufficient, a Phase 29.4 could add real filter chips that hide non-matching scenario sections."* Phase 29.4 ships exactly that, additively — the no-JS jump strip stays.
+
+### Filter UI (`docs/tools/standards-finder/index.md`)
+
+- New `.finder-filters` block above the jump strip.
+- Two chip rows (`<button>` + `aria-pressed`):
+  - **Market**: US-market | Global / EU | Industry-bound
+  - **What you're building**: Machinery / panel | Process safety (SIS) | Hazardous area | Cybersecurity | Industry overlay (SEMI / DNV)
+- Result-count line (`Showing N of 9 scenarios`) and a Clear-filters link, divided by a dashed border.
+- Empty-state message that surfaces when the filter combination matches nothing — links into the closing escape-hatch section.
+- Each `.scenario-card` carries `data-finder-region` and `data-finder-domain` (multi-value where honest — e.g. Networked Safety PLC = `machinery cyber`; Offshore Platform = `process hazloc industry-overlay`).
+- Each grouping `<section>` carries `data-finder-section` so empty sections collapse when none of their cards survive the filter.
+
+### Filter logic (`docs/assets/js/main.js`, ~85-line IIFE)
+
+- No-ops when `[data-finder-filters]` is absent — safe to ship in the global bundle.
+- OR within a facet row, AND across rows. (Selecting two market chips broadens; selecting a market + a domain narrows.)
+- Updates `aria-pressed` on chips, toggles `.is-hidden` on cards and empty sections, updates the count, surfaces the empty-state when nothing matches, hides Clear button when no chip is pressed.
+- No URL persistence in this phase. (Deferred — see Next Phase.)
+
+### CSS (`docs/assets/css/main.css`)
+
+- New `.finder-filters` block (~95 lines): chip pill styling, active state via `aria-pressed="true"`, dashed-divider meta row, dark-mode parity via existing color tokens, `.is-hidden` helper for cards/sections.
+
+### Progressive enhancement
+
+The existing `.finder-jump` anchor strip is kept verbatim underneath the filter block. No-JS readers still get the original 5-section scroll-and-pick experience; JS-on readers get filter chips on top. The filter is additive and not load-bearing for the page's core function.
+
+### Validation
+
+- Jekyll build: clean, 1.261 s.
+- Built HTML: 9 `data-finder-region` cards, 8 `.finder-chip` buttons (3 + 5), 5 `data-finder-section` sections, 1 `.finder-empty` element.
+- `validate_ai_boundaries.py`: 2 pre-existing failures only (same baseline as Phase 29.3).
+- `validate_reorg.sh all`: 48/50 baseline.
+
+### What was NOT built
+
+- No URL persistence for filter state. Personal-use site, not yet justified.
+- No "save my preset" or any storage layer.
+- No new scenarios. Phase 29.4 is a UI improvement on the existing 9.
+- No removal of the anchor jump strip — kept as the no-JS fallback and as a quick scroll-and-pick path.
+
+### Known follow-ups
+
+- **Phase 29.4.1** — URL hash persistence for filter chips (`#region=us&domain=cyber`). Cheap to add; only worth it if shareable filter links become useful.
+- **Phase 29.5** — Industries-axis Finder (sibling page that pivots on industry vertical: semicon, water, pharma, oil-and-gas) reusing the same scenario cards via different grouping.
 
 ## Phase 29.3 — COMPLETE (2026-04-27)
 

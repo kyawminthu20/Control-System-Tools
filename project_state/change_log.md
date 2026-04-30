@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-27 (Phase 29.3 complete)
+**Last Updated:** 2026-04-29 (Phase 29.4 complete)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,47 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-29 — Phase 29.4 complete: Standards Finder faceted filter (Sketch B)
+
+**Type:** UX enhancement / progressive enhancement
+**Status:** Complete
+**Scope:** Faceted-filter chip UI added to the Standards Finder page; vanilla-JS filter logic; no new content.
+
+**Files touched:**
+
+- `docs/tools/standards-finder/index.md` — added `.finder-filters` block with 2 chip rows (Market: US/Global/Industry; What you're building: Machinery, Process, Hazloc, Cyber, Industry overlay), result-count display, Clear button, empty-state message. Tagged each `.scenario-card` with `data-finder-region` and `data-finder-domain` (multi-value where honest, e.g. Networked Safety PLC = `machinery cyber`). Tagged each grouping `<section>` with `data-finder-section` so empty sections collapse on filter. Added `id="escape-hatch"` to the closing "None of these fit?" section so the empty-state message can deep-link to it.
+- `docs/assets/css/main.css` — new `.finder-filters` block (~95 lines): chip pill styling, active state via `aria-pressed="true"`, dashed-divider meta row with count + clear, dark-mode parity via existing color tokens, `.is-hidden` helper for cards/sections.
+- `docs/assets/js/main.js` — appended ~85-line IIFE. No-ops if `[data-finder-filters]` not present. Filter logic: OR within a facet row, AND across rows. Updates `aria-pressed` on chips, hides non-matching cards via `.is-hidden`, hides any section whose cards are all hidden, updates result-count text, toggles Clear button visibility, surfaces an empty-state message when zero match.
+
+**Facet tagging (region / domain):**
+
+- 01 US ICP — `us` / `machinery`
+- 02 Global Machine — `us global` / `machinery`
+- 03 Process Skid — `us global` / `process`
+- 04 Networked Safety PLC — `us global` / `machinery cyber`
+- 05 Semi Equipment — `industry` / `industry-overlay`
+- 06 Practical Machine Safety — `us global` / `machinery`
+- 07 O&G Onshore Skid — `us` / `process hazloc`
+- 08 Semi Fab Tool — `industry` / `industry-overlay machinery`
+- 09 Offshore Platform — `industry` / `process hazloc industry-overlay`
+
+**Progressive enhancement:** the existing `.finder-jump` anchor strip is kept underneath the filter block. No-JS readers still get the original scenario-card listing with section anchors — the filter is additive, not load-bearing.
+
+**No URL persistence in this phase.** Deferred to a possible Phase 29.4.1 if the personal-use case actually demands shareable filter URLs.
+
+**Validation:**
+
+- `jekyll build`: clean, 1.261 s.
+- `_site/tools/standards-finder/index.html`: 9 cards carry `data-finder-region`, 8 `.finder-chip` buttons (3 region + 5 domain), 5 `data-finder-section` markers, 1 `.finder-empty` element.
+- `validate_ai_boundaries.py`: 2 pre-existing failures (UPW_water_skid_scenario.md, plus one other) — same baseline as Phase 29.3, unrelated.
+- `validate_reorg.sh all`: 48/50 baseline.
+
+**What this phase did not change:**
+
+- No scenario content rewritten or added.
+- No deprecation of the comparison crosswalks page.
+- No edits to other Tools pages, sidebar, or the homepage.
 
 ## 2026-04-27 — Phase 29.3 complete: Standards Finder page (scenario-card entry)
 

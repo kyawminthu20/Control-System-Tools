@@ -1083,6 +1083,104 @@ tr:nth-child(even) td {
   text-decoration: none;
 }
 
+/* --- Standards Finder: faceted filter (Phase 29.4) ------------------------ */
+.finder-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0 0.75rem;
+  padding: 0.75rem 0.85rem;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+.finder-filters__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.45rem;
+}
+.finder-filters__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-right: 0.25rem;
+  flex: 0 0 auto;
+}
+.finder-chip {
+  display: inline-block;
+  padding: 0.28rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 0.78rem;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: border-color 0.12s, color 0.12s, background 0.12s;
+}
+.finder-chip:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+.finder-chip[aria-pressed="true"] {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+.finder-chip[aria-pressed="true"]:hover {
+  filter: brightness(1.05);
+}
+.finder-chip:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+.finder-filters__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.15rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--color-border);
+  font-size: 0.75rem;
+}
+.finder-filters__count {
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+.finder-filters__clear {
+  border: 0;
+  background: transparent;
+  padding: 0.15rem 0.35rem;
+  color: var(--color-accent);
+  font-family: inherit;
+  font-size: 0.78rem;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.finder-filters__clear:hover {
+  text-decoration: none;
+}
+.finder-empty {
+  margin: 0.5rem 0 1.5rem;
+  padding: 0.75rem 0.85rem;
+  background: var(--color-bg-elevated);
+  border: 1px dashed var(--color-border);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+.scenario-card.is-hidden,
+.home-section.is-hidden {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .home-main { padding: 1.25rem 1rem 2rem; }
   .home-hero__title { font-size: 1.55rem; }

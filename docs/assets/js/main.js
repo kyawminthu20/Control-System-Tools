@@ -483,3 +483,97 @@
     updateBtn(next);
   });
 })();
+
+// Standards Finder — faceted filter (Phase 29.4)
+// Filter logic: OR within a facet row, AND across rows. No URL persistence.
+(function () {
+  var root = document.querySelector('[data-finder-filters]');
+  if (!root) return;
+
+  var chips = Array.prototype.slice.call(root.querySelectorAll('.finder-chip'));
+  var clearBtn = root.querySelector('[data-finder-clear]');
+  var countEl = root.querySelector('[data-finder-count]');
+  var emptyEl = document.querySelector('[data-finder-empty]');
+  var sections = Array.prototype.slice.call(document.querySelectorAll('[data-finder-section]'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.scenario-card[data-finder-region]'));
+  var totalCards = cards.length;
+
+  // Initialize aria-pressed so the button has a stable accessibility state.
+  chips.forEach(function (chip) { chip.setAttribute('aria-pressed', 'false'); });
+
+  function selectedValues(facet) {
+    return chips
+      .filter(function (c) { return c.dataset.facet === facet && c.getAttribute('aria-pressed') === 'true'; })
+      .map(function (c) { return c.dataset.value; });
+  }
+
+  function cardTokens(card, facet) {
+    var raw = card.getAttribute('data-finder-' + facet) || '';
+    return raw.split(/\s+/).filter(Boolean);
+  }
+
+  function matches(card, regionSel, domainSel) {
+    if (regionSel.length) {
+      var rTokens = cardTokens(card, 'region');
+      var rHit = regionSel.some(function (v) { return rTokens.indexOf(v) !== -1; });
+      if (!rHit) return false;
+    }
+    if (domainSel.length) {
+      var dTokens = cardTokens(card, 'domain');
+      var dHit = domainSel.some(function (v) { return dTokens.indexOf(v) !== -1; });
+      if (!dHit) return false;
+    }
+    return true;
+  }
+
+  function applyFilter() {
+    var regionSel = selectedValues('region');
+    var domainSel = selectedValues('domain');
+    var anySelected = regionSel.length + domainSel.length > 0;
+    var visibleCount = 0;
+
+    cards.forEach(function (card) {
+      var show = matches(card, regionSel, domainSel);
+      card.classList.toggle('is-hidden', !show);
+      if (show) visibleCount++;
+    });
+
+    sections.forEach(function (section) {
+      var sectionCards = section.querySelectorAll('.scenario-card[data-finder-region]');
+      var anyVisible = false;
+      for (var i = 0; i < sectionCards.length; i++) {
+        if (!sectionCards[i].classList.contains('is-hidden')) { anyVisible = true; break; }
+      }
+      section.classList.toggle('is-hidden', !anyVisible);
+    });
+
+    if (countEl) {
+      countEl.textContent = anySelected
+        ? 'Showing ' + visibleCount + ' of ' + totalCards + ' scenarios'
+        : 'Showing all ' + totalCards + ' scenarios';
+    }
+    if (clearBtn) {
+      if (anySelected) clearBtn.removeAttribute('hidden');
+      else clearBtn.setAttribute('hidden', '');
+    }
+    if (emptyEl) {
+      if (anySelected && visibleCount === 0) emptyEl.removeAttribute('hidden');
+      else emptyEl.setAttribute('hidden', '');
+    }
+  }
+
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var pressed = chip.getAttribute('aria-pressed') === 'true';
+      chip.setAttribute('aria-pressed', pressed ? 'false' : 'true');
+      applyFilter();
+    });
+  });
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', function () {
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+      applyFilter();
+    });
+  }
+})();
