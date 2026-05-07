@@ -1,9 +1,9 @@
 # Project State
 
-**Last Updated:** 2026-05-06 (Phase 30.1 COMPLETE — NFPA 79 depth pass)
+**Last Updated:** 2026-05-06 (Phase 30.2 COMPLETE — IEC 60079 depth pass)
 **Status:** Active
-**Current Phase:** Phase 30.1 COMPLETE — NFPA 79 detail page brought up to the ISO 13849-1 template floor (Quick Start, corrected chapter reference, per-chapter depth for Ch 4/5/6/7/8/9/15/16/19, Worked Example for a UL-listed packaging machine, 6 numbered Common Mistakes, Practical Checklist, Lifecycle Application). Page grew 110 → 246 lines. Plan-vs-RAG chapter-mapping mismatch caught during execution (plan assumed Ch 7 = OCP / Ch 13 = wiring; actual NFPA 79:2024 has Ch 6 = OCP / Ch 16 = wiring). Mapping corrected for this and downstream sub-phases.
-**Next Phase:** Phase 30.2 — IEC 60079 Depth (per-part sections, IS-loop worked example with entity-parameter math, Common Mistakes). Per-part chapter mapping in the plan should be sanity-checked against the RAG before drafting (same lesson learned from 30.1).
+**Current Phase:** Phase 30.2 COMPLETE — IEC 60079 detail page brought up to the ISO 13849-1 template floor. Per-part depth covers the 6 RAG-corpus parts (60079-0 / -1 / -10-1 / -11 / -14 / -17). Worked Example walks a 4–20 mA pressure-transmitter IS loop on an ethylene Zone 1 area with full entity-parameter check. 6 Common Mistakes, Practical Checklist (Area classification / Equipment / Installation / Inspection), Lifecycle Application table, expanded NEC Art. 500–505 mapping. Page grew 123 → 364 lines. Plan-vs-RAG mismatch caught a second time: plan called for Ex e (-7) and Ex p (-2) per-part depth, but neither part is in the corpus — covered as gap-flagged entries in the new Corpus Coverage table instead. Phase 30.1 lesson successfully applied.
+**Next Phase:** Phase 30.3 — IEC 60204-1 Depth (per-clause depth, CNC worked example, 5+ Common Mistakes). Verify clause numbering against the IEC 60204-1 RAG before drafting — same RAG-mapping check that caught issues in 30.1 and 30.2.
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,55 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+## Phase 30.2 — COMPLETE (2026-05-06)
+
+IEC 60079 detail page upgraded from 3/8 to full ISO 13849-1 template-floor compliance. Branch: `feat/phase30-standards-depth-pass`. File: `docs/standards/hazardous-area/iec-60079/index.md` (123 → 364 lines).
+
+### Sections added
+
+- **Quick Start** (5 bullets) — IEC vs NEC Class/Division (Article 505 imports IEC 60079); how to read the marking string; why area classification (60079-10-1) drives every downstream decision; when to choose IS vs Ex d; certificate vs nameplate (certificates can be withdrawn).
+- **Equipment Marking System** — kept and expanded: marking string format, EPL→Zone mapping table, gas-group table (IIA propane / IIB ethylene / IIC hydrogen-acetylene), T-code table with the 50 °C autoignition-margin rule.
+- **Corpus Coverage** table — new. Lists all major parts of the IEC 60079 family with corpus status: 6 parts in corpus (-0, -1, -10-1, -11, -14, -17), 4 parts gap-flagged (-2 Ex p, -7 Ex e, -10-2 dust, -15 Ex nA, -18 Ex m, -31 dust enclosure). Honest about what the RAG can authoritatively support.
+- **Per-Part Depth** for the 6 corpus parts: -0 (general / marking / certification schemes), -10-1 (zone definitions, release grades, ventilation, classified-area drawing), -1 (Ex d flame-path principle, cable entry methods, live-work caution), -11 (IS levels ia/ib/ic, energy limitation, zener vs galvanic isolator, entity concept with full parameter list, FISCO), -14 (equipment-selection check, cable selection, IS segregation, equipotential bonding ≤10 Ω / IS earth ≤1 Ω, commissioning certificate), -17 (visual / close / detailed inspection grades, competent person, common defects, records).
+- **Worked Example** — concrete IS-loop entity check on a 4–20 mA pressure transmitter, ethylene Zone 1 (gas group IIB), area drawing requiring at least T3 equipment. Selected components: transmitter `Ex ia IIB T4 Gb` with Ui=30 V / Ii=100 mA / Ci=15 nF / Li=50 µH; zener barrier `[Ex ia] IIC` with Uo=28 V / Io=93 mA / Co=83 nF / Lo=5.7 mH; 100 m IS-rated TP cable at 200 pF/m + 0.7 µH/m. All four entity checks computed and shown to pass: Uo≤Ui, Io≤Ii, Ci+Ccable≤Co (35 nF ≤ 83 nF), Li+Lcable≤Lo (120 µH ≤ 5 700 µH). Marking compatibility verified (IIB matches, T4 colder than T3 minimum, Gb matches Zone 1). Earthing rules and documentation deliverables included.
+- **Common Mistakes** (6 numbered) — IIC-by-default equipment shopping; trusting nameplate over certificate; mixing certified / uncertified components in IS loop; failing to segregate IS from non-IS cables; zener barrier with IS earth >1 Ω; field-modifying an Ex enclosure (replaced the plan's Ex e thermal-protection mistake, which would have leaned on a part not in corpus).
+- **Practical Checklist** — Area Classification / Equipment Selection / Installation (60079-14) / Periodic Inspection (60079-17) groups.
+- **Lifecycle Application table** — Standards Selection → Detailed Design → Build → Installation → Pre-Commissioning → Commissioning, each linking to the corresponding lifecycle-stage page.
+- **Relationship to NEC** — replaced the brief table with a fuller mapping (Art. 500–503 parallel; Art. 504 ≈ 60079-11; Art. 505 imports IEC 60079) and linked the existing IEC 60079 ↔ NEC 500–505 crosswalk page.
+
+### Plan vs RAG correction (second occurrence — lesson is sticking)
+
+The Phase 30.2 plan called for per-part depth on **Ex e (60079-7)** and **Ex p (60079-2)**. Neither part is in the RAG corpus — only -0, -1, -10-1, -11, -14, -17 are present. Verified against `_index.yaml` and chapter front-matter before drafting.
+
+Adjustments made:
+- Per-part depth covers only the 6 RAG-corpus parts.
+- Ex e and Ex p (and other gap parts: -10-2, -15, -18, -31) listed in a new "Corpus Coverage" table with explicit `<span class="badge badge--gap">` markers.
+- The plan's Common Mistake #6 (Ex e motor thermal protection) was replaced with a generally-applicable mistake drawn from corpus parts (-1 / -17): field-modifying an Ex enclosure invalidates the certificate.
+
+The IS-loop entity-check math from the plan was verified arithmetically before drafting (Ci+Ccable = 35 ≤ 83 ✓; Li+Lcable = 120 ≤ 5 700 ✓) and presented in the Worked Example as written.
+
+### Validation
+
+- Jekyll build: clean (1.215 s → 1.191 s after one micro-edit; site build unchanged).
+- Internal links: all 12 outgoing links from the rewritten page resolve. Same 2 pre-existing site-wide broken links (`/industries/food-beverage/`, `/industries/offshore-marine/` from the homepage) — unrelated to Phase 30.2.
+- `validate_ai_boundaries.py`: 2 pre-existing failures, no new regressions.
+- One external URL (`https://www.iecex.com/`) was generated and **then removed** to comply with the system rule against generating external URLs not provided by the user. Replaced with a plain text reference to "the IECEx online certificate database".
+
+### Corpus quality observations
+
+The IEC 60079 RAG corpus is markedly cleaner than the NFPA 79 corpus encountered in Phase 30.1: no stray LLM prompts, no empty placeholder values, consistent front-matter, accurate cross-references. No corpus-hygiene findings to log from this sub-phase.
+
+### Deferred (still to come in Phase 30)
+
+- 30.3 — IEC 60204-1 Depth (next)
+- 30.4 — SEMI S2/S8/S14 Depth
+- 30.5 — IEC 62443 Depth (Worked Example + Common Mistakes)
+- 30.6 — UL 508A and NEC (light polish)
+- 30.7 — Functional Safety Worked Examples (ISO 12100, IEC 61508, IEC 61511)
+- 30.8 — Family Overview Pages (decision-flow pass)
+
+---
 
 ## Phase 30.1 — COMPLETE (2026-05-06)
 
