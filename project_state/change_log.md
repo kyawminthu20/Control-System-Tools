@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-29 (Phase 30 plan added — Standards Depth Pass)
+**Last Updated:** 2026-05-06 (Phase 30.1 COMPLETE — NFPA 79 depth pass)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,28 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-05-06 — Phase 30.1 COMPLETE — NFPA 79 depth pass
+
+**Type:** Site content / standards detail page upgrade
+**Status:** Complete on `feat/phase30-standards-depth-pass`.
+**Reason:** NFPA 79 detail page audited at 3/8 on the ISO 13849-1 template floor — missing Quick Start, Worked Example, Common Mistakes, Practical Checklist; chapter table had wrong titles. Brought page up to floor compliance.
+
+**Changes:**
+- `docs/standards/us-electrical/nfpa-79/index.md` — 110 → 246 lines.
+  - **Added** Quick Start (5 bullets), Per-Chapter Depth (9 chapters: 4, 5, 6, 7, 8, 9, 15, 16, 19), Worked Example (UL-listed packaging machine), Common Mistakes (6 numbered), Practical Checklist (Design / Build / Ship & Install), Lifecycle Application table.
+  - **Replaced** the previous "Key Chapters" table (which had Ch 6/7 swapped and used "Protection of equipment" — an IEC 60204-1 phrase, not an NFPA 79 chapter title) with a corrected 14-row Chapter Reference table.
+  - **Replaced** the thin "Lifecycle Stages" section with a Lifecycle Application table linking to all six site lifecycle-stage pages.
+  - **Kept** the page header, Standard Overview table, "Relationship to NEC and UL 508A" diagram, "PL / SIL Relevance" cross-reference, and Related Standards block.
+
+**Plan vs RAG correction.** The Phase 30.1 plan as drafted on 2026-04-29 assumed a different NFPA 79 chapter layout than NFPA 79:2024 actually uses. Mapping verified against `control-standards/rag/standards_intelligence/us/nfpa79/_index.yaml` and chapter front-matter. Page drafted against the verified corpus mapping, not the stale plan. See `project_state/project_state.md` for the per-chapter delta table. Same verification step is queued ahead of 30.2.
+
+**Validation:**
+- Jekyll build: clean (1.351 s, 268 HTML files).
+- All 13 outgoing links from the rewritten page resolve. Two pre-existing broken links elsewhere on the site (homepage → `/industries/food-beverage/` and `/industries/offshore-marine/`) are not Phase 30.1 regressions; flagged for a separate hygiene task.
+- `validate_ai_boundaries.py`: 2 pre-existing failures, no new regressions.
+
+**Corpus hygiene findings (out of scope for Phase 30, queued separately).** The NFPA 79 RAG files contain stray LLM prompts at chapter ends (Ch 6, 7, 8, 15, 16, 17, 18), empty placeholder values for numerical ranges (Ch 4 temperatures, Ch 17 bend-radius), an internal-numbering bug (Ch 6 says "intent of Chapter 7"), and a suspect "Table 7.2.7" cite in Ch 15. These do not affect site content because the rewrite only used independently verifiable facts.
 
 ## 2026-04-29 — Phase 30 plan recorded — Standards Depth Pass (planning only, no code)
 

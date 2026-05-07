@@ -1,9 +1,9 @@
 # Project State
 
-**Last Updated:** 2026-04-29 (Phase 30 plan added — Standards Depth Pass)
+**Last Updated:** 2026-05-06 (Phase 30.1 COMPLETE — NFPA 79 depth pass)
 **Status:** Active
-**Current Phase:** Phase 29.4 COMPLETE — Sketch-B faceted-filter on the Standards Finder (Market × Domain chips, vanilla-JS, progressive enhancement on top of the Phase 29.3 anchor strip)
-**Next Phase:** Phase 30 — Standards Depth Pass (Planned). Bring all standards detail pages up to the ISO 13849-1 template floor: Quick Start, per-clause depth, Worked Example, Common Mistakes, Practical Checklist, Lifecycle Application. Audit shows 7 detail pages and 4 family pages below the bar. See "Phase 30 — Standards Depth Pass (Planned)" section below for sub-phase breakdown and per-page work specs.
+**Current Phase:** Phase 30.1 COMPLETE — NFPA 79 detail page brought up to the ISO 13849-1 template floor (Quick Start, corrected chapter reference, per-chapter depth for Ch 4/5/6/7/8/9/15/16/19, Worked Example for a UL-listed packaging machine, 6 numbered Common Mistakes, Practical Checklist, Lifecycle Application). Page grew 110 → 246 lines. Plan-vs-RAG chapter-mapping mismatch caught during execution (plan assumed Ch 7 = OCP / Ch 13 = wiring; actual NFPA 79:2024 has Ch 6 = OCP / Ch 16 = wiring). Mapping corrected for this and downstream sub-phases.
+**Next Phase:** Phase 30.2 — IEC 60079 Depth (per-part sections, IS-loop worked example with entity-parameter math, Common Mistakes). Per-part chapter mapping in the plan should be sanity-checked against the RAG before drafting (same lesson learned from 30.1).
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -22,9 +22,73 @@ Phase 24 Task 1 is complete. The IEC earthing systems training module now includ
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
 
+## Phase 30.1 — COMPLETE (2026-05-06)
+
+NFPA 79 detail page upgraded from 3/8 to full ISO 13849-1 template-floor compliance. Branch: `feat/phase30-standards-depth-pass`. File: `docs/standards/us-electrical/nfpa-79/index.md` (110 → 246 lines).
+
+### Sections added
+
+- **Quick Start** (5 bullets) — scope cutoff (≤600 V, point-of-supply-connection), NEC handoff (Article 670 site / Article 409 panel), NFPA 79 vs IEC 60204-1 destination-market choice, where Ch 9 hands off to ISO 13849-1 / IEC 62061 for PL/SIL, UL 508A overlay (panel construction + SCCR per SB4).
+- **Chapter Reference table** (corrected) — replaces the previous 11-row table that had Ch 6/7 swapped. Now lists 14 chapters with the chapters covered in depth marked in bold.
+- **Per-Chapter Depth** for Ch 4 (general installation conditions), Ch 5 (disconnecting means — padlockable in OFF only, ≤2.0 m handle height, line-side guarding), Ch 6 (overcurrent protection — listed branch-circuit OCPDs, machine SCCR labelling), Ch 7 (shock protection — 30 V rms / 60 V DC threshold, IP2X/IPXXB barriers, capacitor discharge < 60 V in 5 s), Ch 8 (grounding — PE bus, Table 8.2.2.3 sizing, no daisy-chain), Ch 9 (control circuits — stop categories 0/1/2, E-stop device requirements, safety-rated controller for software safety), Ch 15 (transformers — isolated only, magnetising-inrush sizing, secondary OCP), Ch 16 (wiring colours: black/red/blue/orange/green-or-green-yellow), Ch 19 (marking & documentation — nameplate items including SCCR, ANSI Z535).
+- **Worked Example** — UL-listed packaging machine for the US market: 480 V 3-phase, 50 A FLA, two E-stop zones, light curtain on infeed, NEMA 12. Walks the seven design steps (disconnect → OCP/SCCR → wire size and colour → grounding → control transformer → E-stop architecture → nameplate/docs) and ends with what NFPA 79 leaves to UL 508A and what NEC handles.
+- **Common Mistakes** (6 numbered) — branch-circuit OCP vs SCCR confusion, NEC vs IEC 60204-1 PE colour mistakes, control-transformer inrush sizing, E-stop series-wiring without Cat 3/PLd architecture, treating NFPA 79 as installation code, missing the lockable-in-OFF requirement.
+- **Practical Checklist** — Design / Build / Ship & Install groups.
+- **Lifecycle Application table** — Standards Selection → Detailed Design → Build → Installation → Pre-Commissioning → Commissioning, each linking to the corresponding lifecycle-stage page.
+
+### Plan vs RAG correction (lesson for 30.2 onward)
+
+The Phase 30.1 plan as written assumed an NFPA 79 chapter layout that did not match NFPA 79:2024. Verified mapping (from `_index.yaml` and chapter content):
+
+| Plan said | Actual NFPA 79:2024 |
+|-----------|---------------------|
+| Ch 4 — "general/EMC/environmental" | Ch 4 — General Conditions of Installation |
+| Ch 5 — Disconnecting means ✓ | Ch 5 — Disconnecting Means ✓ |
+| Ch 7 — Overcurrent vs SCCR | **Ch 6 — Overcurrent Protection** (Ch 7 is Shock Protection) |
+| Ch 8 — Grounding ✓ | Ch 8 — Grounding and Bonding ✓ |
+| Ch 9 — Control + transformer sizing | Ch 9 — Control Circuits; **transformer sizing is Ch 15** |
+| Ch 13 — Wiring practices, colours | **Ch 16 — Wiring Methods** (Ch 13 is Appliances) |
+| Ch 14 — Wireways/conduit | **Ch 16 — Wiring Methods** (Ch 14 is Lighting) |
+| Ch 19 — Documentation ✓ | Ch 19 — Marking and Documentation ✓ |
+
+The existing site page's "Key Chapters" table also had Ch 6 and Ch 7 swapped, with "Protection of equipment" mis-attributed to Ch 7 (that phrase is from IEC 60204-1, not NFPA 79). Both were corrected in this rewrite.
+
+Specific clause numbers cited in the plan ("9.1.4" for inrush, "5.3.3" for lockable-in-OFF) are not present in the RAG corpus at the sub-clause level. The page cites chapter-level only and notes this explicitly in Common Mistake #3.
+
+**Action for 30.2 onward:** before drafting any per-part / per-clause section, verify the chapter / part / clause mapping against the RAG `_index.yaml` and chapter front-matter. The Phase 30 plan is a target, not ground truth — the corpus is.
+
+### Validation
+
+- Jekyll build: clean (1.351 s, 268 HTML files generated).
+- Internal links: all 13 outgoing links from the rewritten page resolve correctly. The 2 broken-link findings in the site-wide check (`/industries/food-beverage/`, `/industries/offshore-marine/`) come from `index.html` and pre-date Phase 30.1 — flagged as separate hygiene work.
+- `validate_ai_boundaries.py`: 2 pre-existing failures (`IEC61511.md`, `UPW_water_skid_scenario.md`) — same baseline as start of Phase 30, no new regressions.
+
+### Corpus hygiene findings (separate task — not Phase 30 scope)
+
+The NFPA 79 RAG corpus at `control-standards/rag/standards_intelligence/us/nfpa79/` has several quality issues that should be addressed in a dedicated hygiene pass:
+
+1. **Stray LLM prompts at chapter ends.** Ch 6, 7, 8, 15, 16, 17, 18 each end with a "Would you like me to assist with Chapter N?" line — clearly authoring artefacts that were never cleaned up.
+2. **Empty placeholder values.** Ch 4 — temperature ranges read "between ** and ** ( to )"; Ch 17 — bend-radius multiples read "typically  to ". Numerical values are missing.
+3. **Internal numbering bug.** Ch 6 file's Section 0 begins "The intent of Chapter 7 is to define..." — text refers to the chapter as 7 but the file is 6.
+4. **Suspect cross-reference.** Ch 15 cites "Table 7.2.7" for primary transformer protection; that looks like a reference to an old chapter numbering and should be verified.
+
+These do not block Phase 30.1 (the site page only used facts that were verifiable elsewhere in the chapter), but they degrade the RAG's value as authoritative source material.
+
+### Deferred (still to come in Phase 30)
+
+- 30.2 — IEC 60079 Depth (next)
+- 30.3 — IEC 60204-1 Depth
+- 30.4 — SEMI S2/S8/S14 Depth
+- 30.5 — IEC 62443 Depth (Worked Example + Common Mistakes)
+- 30.6 — UL 508A and NEC (light polish)
+- 30.7 — Functional Safety Worked Examples (ISO 12100, IEC 61508, IEC 61511)
+- 30.8 — Family Overview Pages (decision-flow pass)
+
+---
+
 ## Phase 30 — Standards Depth Pass (Planned, 2026-04-29)
 
-Drafted: 2026-04-29. Status: Planned, not started. Branch (when started): `feat/phase30-standards-depth-pass`.
+Drafted: 2026-04-29. Status: 30.1 COMPLETE (2026-05-06); 30.2–30.8 still planned. Branch: `feat/phase30-standards-depth-pass`.
 
 ### Motivation
 
