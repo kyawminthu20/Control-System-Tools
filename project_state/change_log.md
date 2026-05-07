@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-04-29 (terminology pass: "confidential" → "proprietary")
+**Last Updated:** 2026-04-29 (Phase 30 plan added — Standards Depth Pass)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,27 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-04-29 — Phase 30 plan recorded — Standards Depth Pass (planning only, no code)
+
+**Type:** Planning / project_state authored
+**Status:** Plan recorded; implementation not started.
+**Reason:** Live-site audit revealed standards detail pages all carry "Complete" badges but actual depth varies ~3×. ISO 13849-1 and IEC 62061 set an 8-section template (Quick Start, per-clause depth, Worked Example, Common Mistakes, Practical Checklist, Lifecycle Application, plus Standard Overview and Related Standards). NFPA 79, IEC 60079, IEC 60204-1, and SEMI S2/S8/S14 are at 3/8 or below. Family overview pages are list-only when they should help a user choose between members.
+
+**What was added:**
+- New "## Phase 30 — Standards Depth Pass (Planned)" section in `project_state/project_state.md` between Current Direction and the Phase 29.4 entry.
+- Header `Next Phase` line in `project_state.md` updated to point to Phase 30 with the audit summary.
+- Phase 30 plan contents:
+  - Audit findings table (per-page template-completeness scores).
+  - Family-page audit table.
+  - Eight sub-phases (30.1 through 30.8) with file paths, RAG sources, exact section additions per page, worked-example specifications with concrete numbers (e.g. NFPA 79 packaging machine, IEC 60079 ethylene-tank IS loop with entity-parameter math, IEC 60204-1 CNC machine, SEMI PVD tool, IEC 62443 networked safety PLC), and Common Mistakes specifications.
+  - Cross-cutting principles (RAG is authoritative; worked examples must be concrete; no new corpus claims; build clean every sub-phase).
+  - Recommended sequencing.
+  - Sub-phase validation checklist.
+  - Out-of-scope statement.
+  - Branch and commit discipline.
+
+**No code changes in this entry.** Implementation begins when Phase 30.1 (NFPA 79) starts on `feat/phase30-standards-depth-pass`.
 
 ## 2026-04-29 — Terminology pass: "confidential" → "proprietary" / "sensitive"
 

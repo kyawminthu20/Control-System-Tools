@@ -1,9 +1,9 @@
 # Project State
 
-**Last Updated:** 2026-04-29
+**Last Updated:** 2026-04-29 (Phase 30 plan added — Standards Depth Pass)
 **Status:** Active
 **Current Phase:** Phase 29.4 COMPLETE — Sketch-B faceted-filter on the Standards Finder (Market × Domain chips, vanilla-JS, progressive enhancement on top of the Phase 29.3 anchor strip)
-**Next Phase:** Open. Candidates: industries-axis Finder (sibling page that pivots on industry vertical instead of scenario), URL-persistence for filter chips (29.4.1), or a content-depth phase to fill documented corpus gaps (ISO 13849-1, IEC 62061, IEC 61508/61511, SEMI S2/S8/S14).
+**Next Phase:** Phase 30 — Standards Depth Pass (Planned). Bring all standards detail pages up to the ISO 13849-1 template floor: Quick Start, per-clause depth, Worked Example, Common Mistakes, Practical Checklist, Lifecycle Application. Audit shows 7 detail pages and 4 family pages below the bar. See "Phase 30 — Standards Depth Pass (Planned)" section below for sub-phase breakdown and per-page work specs.
 **Delivery Target:** GitHub Pages static site for personal use
 
 ## Purpose
@@ -21,6 +21,350 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+## Phase 30 — Standards Depth Pass (Planned, 2026-04-29)
+
+Drafted: 2026-04-29. Status: Planned, not started. Branch (when started): `feat/phase30-standards-depth-pass`.
+
+### Motivation
+
+Audit on 2026-04-29 showed standards detail pages all carry "Complete" badges on the live site, but actual depth varies by ~3×. ISO 13849-1 (224 lines) sets the bar with Quick Start, per-clause depth, a worked example, six numbered Common Mistakes, a practical checklist, and a lifecycle application table. Several other detail pages are 100–125 lines and lack worked examples, common-mistakes sections, and checklists. The site says "complete" but the user-facing utility is uneven — a US-market machine builder lands on NFPA 79 and gets a chapter table; a CE machine builder lands on IEC 60204-1 and gets a clause table; a hazardous-area engineer lands on IEC 60079 and gets marking codes without a worked IS-loop calculation. The corpus already has the underlying knowledge in `control-standards/rag/`; the gap is presentation.
+
+### Depth Template (the floor)
+
+Every standards detail page must carry these eight sections in this order. Pages currently missing one or more are listed below.
+
+1. **Quick Start** — 5 bullets: the absolute essentials a designer needs before reading anything else
+2. **Standard Overview** — table: Standard ID, Edition, Publisher, Jurisdiction, Scope, Repository path, Status badge
+3. **Per-clause / per-part technical depth** — the standard's actual technical content, sectioned by clause or by part
+4. **Worked Example** — concrete scenario → design choices → validation steps (named scenario, concrete numbers, specific clause references)
+5. **Common Mistakes** — at least 5, numbered, each with root cause explanation; not generic advice but the specific mistakes that actually trigger non-compliance or rework
+6. **Practical Checklist** — checkbox list a designer can use during the work, organized by lifecycle stage
+7. **Lifecycle Application** — table: Stage → activity per that lifecycle stage, mapped to the site's existing lifecycle stage pages
+8. **Related Standards** — links to the standards that interact with this one
+
+### Audit Findings (2026-04-29)
+
+Detail pages, scored against the 8-section template:
+
+| Page | Lines | QS | Worked Ex | Mistakes | Checklist | Lifecycle | Score | Priority |
+|------|-------|----|-----------|----------|-----------|-----------|-------|----------|
+| ISO 13849-1 | 224 | ✓ | ✓ | 6 | ✓ | ✓ | 8/8 | reference (no work) |
+| IEC 62061 | 257 | ✓ | ✓ | ✓ | ✓ | ✓ | 8/8 | reference (no work) |
+| IEC 61511 | 266 | ✓ | — | ✓ | ✓ | ✓ | 7/8 | 30.7 |
+| IEC 61508 | 194 | ✓ | — | ✓ | ✓ | ✓ | 7/8 | 30.7 |
+| ISO 12100 | 189 | ✓ | — | ✓ | ✓ | ✓ | 7/8 | 30.7 |
+| **NFPA 79** | **110** | — | — | — | — | partial | **3/8** | **30.1 (first)** |
+| **IEC 60079** | **123** | — | — | — | partial | — | **3/8** | **30.2** |
+| **IEC 60204-1** | **103** | — | — | — | — | partial | **3/8** | **30.3** |
+| **SEMI S2/S8/S14** | **95** | — | — | — | — | — | **2/8** | **30.4** |
+| IEC 62443 | 246 | ✓ | — | — | partial | partial | 5/8 | 30.5 |
+| UL 508A | 307 | — | — | — | — | partial | 5/8 | 30.6 (lighter) |
+| NEC | 355 | — | — | — | ✓ | partial | 6/8 | 30.6 (lighter) |
+
+Family overview pages, scored on whether they help a user choose between members:
+
+| Page | Lines | Has decision flow | Has comparison table | Has out-of-scope/gap call-outs | Priority |
+|------|-------|-------------------|----------------------|-------------------------------|----------|
+| Hazardous-area | 38 | — | partial | — | 30.8 |
+| Semiconductor | 26 | — | — | — | 30.8 |
+| Machinery | 63 | — | partial (60204 vs 79) | — | 30.8 |
+| Cybersecurity | 74 | ✓ (routing block) | ✓ | ✓ | reference |
+| Functional-safety | 124 | partial | ✓ | — | 30.8 (light) |
+| US-electrical | 114 | — | partial | — | 30.8 (light) |
+
+### Sub-Phase 30.1 — NFPA 79 Depth (FIRST)
+
+**File:** `docs/standards/us-electrical/nfpa-79/index.md` (currently 110 lines)
+**RAG source:** `control-standards/rag/standards_intelligence/us/nfpa79/` (20 chapters)
+**Why first:** US-market machine-builder default. Largest gap (3/8) on a high-traffic page.
+
+**Add — Quick Start (after page-header, before Standard Overview):**
+- Five bullets covering: scope cutoff (600 V, point-of-supply-connection), relationship to NEC Article 670, when to choose NFPA 79 vs. IEC 60204-1, where Chapter 9 (E-stop) hands off to ISO 13849-1 / IEC 62061, what UL 508A adds when listing is required.
+
+**Expand — Per-clause depth.** Current page has a 10-row chapter table. Replace or augment with sections covering:
+- Chapter 4 — General requirements (EMC, environmental conditions)
+- Chapter 5 — Supply circuit disconnecting means (size, type, location, lockable position)
+- Chapter 7 — Overcurrent protection, branch-circuit protection vs. SCCR (this is the most-confused topic on the standard)
+- Chapter 8 — Equipment grounding, equipotential bonding, grounded supply conductors
+- Chapter 9 — Control circuit voltage classes, control circuit protection, control transformer sizing, E-stop categories (0/1)
+- Chapter 13 — Wiring practices: wire colors, conductor identification, raceway fill (the table that catches first-time builders)
+- Chapter 14 — Wireways, conduit, cable trays
+- Chapter 19 — Technical documentation and markings
+
+**Add — Worked Example: UL-listed packaging machine for US market.**
+- Scenario: 480 V, 3-phase, 50 A FLA packaging machine, panel-mounted controls, two E-stop zones, one safety light curtain, NEMA 12 enclosure.
+- Walk through: supply disconnect selection (Ch 5), branch-circuit OCP vs. machine SCCR (Ch 7), wire size and color (Ch 13), grounding bus and PE conductor sizing (Ch 8), control transformer sizing for 24 VDC controls (Ch 9), E-stop wiring and category selection (Ch 9 + handoff to ISO 13849-1), nameplate and documentation (Ch 19).
+- End with: what NFPA 79 leaves to UL 508A (panel construction & listing) and what the NEC handles (installation post-shipment).
+
+**Add — Common Mistakes (numbered, at least 6):**
+1. Confusing branch-circuit OCP rating with machine SCCR — they are separate analyses; the panel needs both an OCPD upstream and a documented SCCR per UL 508A SB4.
+2. Using NEC color rules (green-or-bare PE) when shipping to a market that requires IEC 60204-1 (yellow-green PE only).
+3. Sizing control transformers from steady-state current and missing the inrush requirement (NFPA 79 9.1.4).
+4. Tying E-stop pushbuttons in series without considering Category 3/PLd architectural requirements — wiring works, but the safety architecture per ISO 13849-1 doesn't.
+5. Treating NFPA 79 as the installation code — it's the design code for the machine; NEC Article 670 governs installation at the site.
+6. Missing the disconnecting-means lockable-in-OFF requirement (5.3.3) on machines that ship without one — added cost late if caught at site commissioning.
+
+**Add — Practical Checklist** (Design / Build / Ship & Install groups).
+
+**Add — Lifecycle Application table** mapping NFPA 79 activities to: Standards Selection, Detailed Design, Build, Installation, Commissioning, Maintenance.
+
+**Estimated added length:** ~150–180 lines. Target final: ~280 lines.
+
+**Validation:**
+- Jekyll build: clean, no broken links.
+- Internal links: ISO 13849-1, UL 508A, NEC Art. 670, IEC 60204-1, NFPA 79 ↔ IEC 60204-1 crosswalk all resolve.
+- `validate_ai_boundaries.py`: same baseline (2 pre-existing failures — separate hygiene task).
+
+---
+
+### Sub-Phase 30.2 — IEC 60079 Depth
+
+**File:** `docs/standards/hazardous-area/iec-60079/index.md` (currently 123 lines)
+**RAG source:** `control-standards/rag/standards_intelligence/international/hazardous_area/iec_60079/`
+
+**Add — Quick Start** (5 bullets): when IEC 60079 applies vs. NEC Class/Division, what the marking string actually tells you, why area classification (60079-10-1) drives everything else, when intrinsic safety is the right choice, what the certificate says vs. what the nameplate says.
+
+**Expand — Per-part depth.** Current page lists 6 parts in a marking-elements table. Add per-part sections:
+- 60079-0 — General requirements; marking; T-class **temperature classes table** (T1 = 450°C through T6 = 85°C with 5 K margin rule).
+- 60079-10-1 — Area classification methodology (release grade × ventilation × dispersion). This is the topic with the worst depth gap.
+- 60079-11 — Intrinsic safety: ia/ib/ic; entity parameters; concept of energy limitation; **gas group autoignition examples**: hydrogen IIC (560°C), acetylene IIC (305°C), ethylene IIB (425°C), methane IIA (537°C), propane IIA (470°C).
+- 60079-1 — Flameproof Ex d: flame paths, gap and length requirements, certified glands.
+- 60079-7 — Increased safety Ex e: design rules, terminal blocks, motor cage rotor temperature rise.
+- 60079-2 — Pressurization Ex p: types Px, Py, Pz; purge cycle; pressure monitoring loss-of-pressure response.
+- 60079-14 — Installation: cable systems, gland selection by Ex method, equipotential bonding in HazAreas.
+- 60079-17 — Inspection: visual / close / detailed grades; periodicity.
+
+**Add — Worked Example: 4–20 mA pressure transmitter on an ethylene tank, Zone 1, T3.**
+- IS loop math (entity check):
+  - Field device: Ui = 30 V, Ii = 100 mA, Ci = 15 nF, Li = 50 µH
+  - Barrier: Uo = 28 V, Io = 93 mA, Co = 83 nF, Lo = 5.7 mH
+  - Cable: 100 m × 200 pF/m = 20 nF, 100 m × 0.7 µH/m = 70 µH
+- Verify each: Uo ≤ Ui ✓, Io ≤ Ii ✓, Ci + Ccable ≤ Co (15 + 20 = 35 ≤ 83) ✓, Li + Lcable ≤ Lo (50 + 70 = 120 µH ≤ 5700 µH) ✓
+- Earthing: zener barrier earth ≤ 1 Ω; trunk earthed at one point only.
+- Marking verify: equipment Ex ia IIB T4 Gb satisfies Zone 1 ethylene (IIB) T3 area.
+
+**Add — Common Mistakes (numbered, at least 5):**
+1. Choosing equipment by gas-group letter alphabetically ("IIC must be best, pick that"). IIC equipment satisfies any gas group, but is more expensive and Ex e or Ex d in IIC has stricter installation requirements — match to actual hazard.
+2. Trusting the nameplate without checking the certificate. Certificates can be withdrawn; nameplates persist. Verify against IECEx/ATEX online database.
+3. Mixing certified and uncertified components in an IS loop. The entity-check math fails immediately if any uncertified component touches the loop.
+4. Routing IS and non-IS cables in the same multicore cable or tray without the required separation (minimum 50 mm or rigid metal barrier, per 60079-14).
+5. Using zener barriers with inadequate IS earth (>1 Ω). The fault-current path becomes the issue; barriers behave unpredictably.
+6. Forgetting that Ex e motors require thermal protection (PTC or microthermistor in winding) wired to a certified relay — overload alone is not sufficient.
+
+**Add — Practical Checklist** (Area classification / Equipment selection / Installation / Inspection groups).
+
+**Add — Lifecycle Application table.**
+
+**Estimated added length:** ~180–220 lines. Target final: ~310 lines.
+
+---
+
+### Sub-Phase 30.3 — IEC 60204-1 Depth
+
+**File:** `docs/standards/machinery/iec-60204-1/index.md` (currently 103 lines)
+**RAG source:** `control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/` (15 clauses)
+
+**Add — Quick Start** (5 bullets): scope/voltage range, harmonized status under EU Machinery Directive, where ISO 12100 hands off, where ISO 13849-1 / IEC 62061 take over for safety functions, what the Technical Construction File needs (Clause 17).
+
+**Expand — Per-clause depth.** Current page lists 14 clauses in a crosswalk table. Add sections for at least:
+- Clause 5 — Incoming supply, disconnecting means (lockable, position-indicated, 90% retention rule), main switch sizing.
+- Clause 6 — Protection against electric shock; PELV vs. SELV; fault protection by automatic disconnection, double insulation, electrical separation.
+- Clause 7 — Protection of equipment; overcurrent vs. overload distinction.
+- Clause 8 — Equipotential bonding circuit, PE conductor sizing rules (Table 1: 16 mm² → 16 mm²; >35 mm² → S/2), continuity test 0.1 Ω at 10 A.
+- Clause 9 — Control circuits; safety functions; emergency stop categories 0/1/2; control voltages 24 VAC/DC preferred; control transformer rules.
+- Clause 12 — Conductors and cables; minimum sizing; voltage drop; ampacity by installation method.
+- Clause 13 — Wiring practices; identification; PE wire-color requirement (yellow-green only).
+- Clause 17 — Technical documentation set: schematics, layout, parts list, maintenance manual.
+
+**Add — Worked Example: CE-marked CNC machine for EU market.**
+- Scenario: 400 V 3-phase, 25 A FLA, Class I machine, two E-stop zones, safety door interlock, IP54 panel.
+- Walk through: supply disconnector type and rating (Cl 5), PE conductor sizing from Table 1 (Cl 8), continuity test method (Cl 8), control voltage selection 24 VDC (Cl 9), E-stop Category 1 with safety relay (Cl 9 + handoff to ISO 13849-1), wire color audit (Cl 13), Technical Construction File contents (Cl 17 + Machinery Directive Annex VII).
+- End with: what's added when shipping the same machine to the US (NFPA 79 deltas: voltage scope, wire colors, neutral handling).
+
+**Add — Common Mistakes (numbered, at least 5):**
+1. Ignoring the 90% supply-voltage retention rule on the disconnector (Cl 5). Many disconnectors meet IEC 60947-3 but not the higher retention required by 60204-1.
+2. PE conductor sized by current rating instead of Table 1 — Table 1 governs and often demands a larger PE than the line conductor sizing would suggest.
+3. Mixing PE wire colors (green, green-with-yellow stripe sized differently). Only yellow-green continuous is acceptable; this is a frequent CE audit finding.
+4. Treating Clause 9 E-stop categories as ISO 13849-1 PL categories. They are different concepts: stop category 0/1/2 ≠ PL/Cat. They interact (a Cat-1 E-stop with PLd architecture is a typical pairing).
+5. Skipping the Technical Construction File detail in Clause 17 because internal documentation already exists. CE audit specifically checks the items listed in 17 — if your internal binder doesn't map, it counts as missing.
+6. Designing for global use but choosing 480 V supply and 110 V control circuits — will not pass IEC 60204-1 (above its preferred ranges) and adds rework when shipping to EU.
+
+**Add — Practical Checklist** (Design / Build / Validation / TCF groups).
+
+**Add — Lifecycle Application table.**
+
+**Estimated added length:** ~180–210 lines. Target final: ~290 lines.
+
+---
+
+### Sub-Phase 30.4 — SEMI S2/S8/S14 Depth
+
+**File:** `docs/standards/semiconductor/semi/index.md` (currently 95 lines)
+**RAG source:** `control-standards/rag/standards_intelligence/international/semiconductor/semi/`
+
+**Add — Quick Start** (5 bullets): why SEMI is purchase-condition not statutory, the S2 → S8 → S14 progression, overlap with IEC 60204-1 / NFPA 79, where ISO 12100 plugs in, what the third-party EHS report typically covers.
+
+**Expand — Per-standard depth.** Current page has bullet highlights only.
+- SEMI S2: deepen Sections 8 (electrical), 11 (interlocks), 14 (chemicals & gases), 19 (radiation), 23 (seismic) — what each section actually requires for control engineers.
+- SEMI S8: full ergonomic envelope (reach, vertical access zones), display readability, lifting and material handling, maintenance access requirements.
+- SEMI S14: fire risk assessment methodology, hazard categories, suppression options (clean agent, water mist, local pre-action), interaction with facility fire alarm.
+
+**Add — Worked Example: PVD tool S2 review.**
+- Hazards: high-voltage DC supply (cap-discharge), pyrophoric process gas (silane), heated chuck, vacuum interlocks.
+- Walk through interlock chain (gas → vacuum → process), capacitor discharge proof (50 V in 5 s), S8 ergonomics for chamber access, S14 silane fire risk assessment and N₂ purge interlock.
+- End with: how the third-party SEMI S2 report packet integrates with the customer's fab acceptance test.
+
+**Add — Common Mistakes (numbered, at least 5):**
+1. Treating SEMI S2 like a checklist instead of a risk-assessment-driven document. S2 references ISO 12100; the risk assessment drives interlock and protection selection.
+2. Tagout-only on a primary energy isolation point. SEMI S2 requires lockable-capable; tagout-only fails most fab AHJ reviews.
+3. Capacitor discharge timing measured at last-known-good but not periodically. The 50 V / 5 s rule is design-validated but field-degradable.
+4. Water suppression in cleanroom areas. SEMI S14 strongly disfavors water; clean agent or pre-action is the standard.
+5. Missing the integration with facility-wide gas detection and exhaust systems. The tool's own monitors are necessary but not sufficient — fab interlock and reporting protocols apply.
+
+**Add — Practical Checklist** (S2, S8, S14 columns or sections).
+
+**Add — Lifecycle Application table** (Tool Design → Factory Test → Site Acceptance Test → Production → Decommissioning).
+
+**Estimated added length:** ~180 lines. Target final: ~275 lines.
+
+---
+
+### Sub-Phase 30.5 — IEC 62443 Depth (Worked Example + Common Mistakes)
+
+**File:** `docs/standards/cybersecurity/iec-62443/index.md` (currently 246 lines)
+
+Already has Quick Start, FRs, Zones/Conduits, SL table. Missing a concrete worked example and a generalised Common Mistakes section.
+
+**Add — Worked Example: Networked safety PLC in a process plant.**
+- Architecture: control-room safety PLC connected to field junction via fiber, integrated with DCS via OPC UA, SIS-rated for SIL 2.
+- Walk through: Zone definition (Safety Zone vs. Process Zone vs. Office Zone), Conduit definition (OPC UA conduit between SIS-Process), SL-T target derivation per zone (SL-T 3 for Safety Zone given Internet-adjacent enterprise zone two hops away), FRs implemented per Foundational Requirement (FR1 access control, FR3 system integrity for the SIS-DCS conduit, FR5 restricted data flow), residual risk register entries.
+
+**Add — Common Mistakes (numbered, at least 5):**
+1. Conflating SIL with SL — SIL is functional-safety failure rate; SL is cybersecurity threat tier. They are independently dimensioned.
+2. Treating the safety PLC as inherently isolated. Modern safety PLCs have firmware update channels, diagnostic ports, and engineering-station connections — all of which are conduits.
+3. Skipping the Asset Inventory step (62443-2-1). Without an enumerated asset inventory the Zone/Conduit map is a guess.
+4. Buying a "62443-4-2 certified" component and assuming the system is compliant. Component certification does not satisfy 62443-3-3 system requirements.
+5. Cybersecurity risk assessment as a one-time activity. 62443 lifecycle is ongoing; threat landscape changes faster than the SIS does.
+
+**Estimated added length:** ~80–100 lines.
+
+---
+
+### Sub-Phase 30.6 — UL 508A and NEC (Light Polish)
+
+**Files:**
+- `docs/standards/us-electrical/ul-508a/index.md` (307 lines, content-heavy already)
+- `docs/standards/us-electrical/nec/index.md` (355 lines, content-heavy already)
+
+Both pages have strong per-clause/per-article depth but are missing Quick Start, an explicit worked example, and a Common Mistakes section.
+
+**UL 508A — Add:**
+- Quick Start (5 bullets): when listing matters, SCCR vs. branch-circuit protection, the SB4 method, marking requirements, relationship to NFPA 79 and NEC Art. 409.
+- Worked Example: SCCR calculation on an industrial control panel with VFD, fused disconnect, and TVSS — using SB4 step-by-step.
+- Common Mistakes (5): SCCR = OCPD rating (wrong); using TVSS to "boost" SCCR (it doesn't); marking SCCR as letter-of-record only without component documentation; mixing UL listed and recognized components without confirming the listing chain; ignoring that field-modification can void listing.
+
+**NEC — Add:**
+- Quick Start (5 bullets): NEC scope vs. NFPA 79 scope at machinery handoff, when Art. 409/430/670 each apply, when 2026 edition matters for control engineers, where AHJ discretion applies.
+- Worked Example: machine installation walk-through (Art. 670 → NFPA 79 → UL 508A panel → branch circuit & disconnect at site per Art. 240/430).
+- Common Mistakes (5): treating NEC as the design code for the machine itself (it isn't — it's the installation code); confusing Art. 409 (industrial control panels) with Art. 670 (industrial machinery); missing the Art. 430 motor-circuit protection differentiation between OCP and overload; missing 2026 edition changes that affect EVSE-adjacent panels even if the panel itself isn't EV.
+
+**Estimated added length:** ~80 lines per page.
+
+---
+
+### Sub-Phase 30.7 — Functional Safety Worked Examples (ISO 12100, IEC 61508, IEC 61511)
+
+**Files:**
+- `docs/standards/functional-safety/iso-12100/index.md` (189 lines)
+- `docs/standards/functional-safety/iec-61508/index.md` (194 lines)
+- `docs/standards/functional-safety/iec-61511/index.md` (266 lines)
+
+These pages already have Quick Start, Common Mistakes, Checklist, and Lifecycle. They are missing concrete worked examples.
+
+**ISO 12100 — Add Worked Example: Conveyor pinch-point risk assessment.**
+- Hazard identification → S/F/P assessment → 3-step method (inherently safe by design first, then guarding, then information for use) → outputs PLr handed off to ISO 13849-1.
+
+**IEC 61508 — Add Worked Example: Safety burner management subsystem.**
+- 16-phase lifecycle traversal at high level, hardware fault-tolerance HFT calculation, SFF → SIL ceiling, software development to SIL 2.
+
+**IEC 61511 — Add Worked Example: Process tank overpressure SIF.**
+- LOPA analysis with named IPLs (relief valve credit, BPCS credit, alarm credit), PFDavg calculation by sum of subsystem PFDs, proof-test interval derivation, IPLs → SIL target → architecture.
+
+**Estimated added length:** ~80 lines per page.
+
+---
+
+### Sub-Phase 30.8 — Family Overview Pages (Decision Flow Pass)
+
+**Files:**
+- `docs/standards/hazardous-area/index.md` (38 lines — extreme outlier)
+- `docs/standards/semiconductor/index.md` (26 lines — extreme outlier)
+- `docs/standards/machinery/index.md` (63 lines)
+- `docs/standards/functional-safety/index.md` (124 lines, light polish only)
+- `docs/standards/us-electrical/index.md` (114 lines, light polish only)
+
+Family pages currently list members. They should help a user **choose between members** when more than one applies.
+
+**Add to each family page:**
+- Decision flow diagram (Mermaid, similar to cybersecurity routing block) — "I have X, which standard applies?"
+- Comparison table when family has more than one member with overlapping scope.
+- Out-of-scope / gap callouts (which adjacent standards we don't cover, with badges) — cybersecurity family already does this well; copy the pattern.
+
+For semiconductor (26 lines) and hazardous-area (38 lines): also add a brief "Why this family" framing paragraph and a "Where to start by lifecycle stage" mapping.
+
+**Estimated added length:** ~50–80 lines per family page.
+
+---
+
+### Cross-Cutting Principles for Phase 30
+
+- **RAG is authoritative.** Pages draw from `control-standards/rag/`. If a worked example needs technical content not yet in RAG, add to RAG first, then to the site. Do not invent technical content on the site layer.
+- **Worked examples must be concrete.** Named scenario, real numeric values, specific clause/article references. Generic advice does not count.
+- **Common Mistakes are not a marketing list.** Each mistake must name what goes wrong, why it goes wrong, and how to detect it. If we cannot name the failure mode, the entry is too vague to keep.
+- **No new corpus claims.** This is a depth pass on existing corpus. Do not introduce coverage of standards not already in `rag/standards_intelligence/`.
+- **Build clean every sub-phase.** Each sub-phase ends with a Jekyll build, link audit, and `validate_ai_boundaries.py` baseline check.
+
+### Recommended Order and Sequencing
+
+1. **Pre-30 hygiene (15 min):** clear the 2 pre-existing `validate_ai_boundaries.py` failures so depth-pass commits show a clean baseline. This is mechanical, no scope.
+2. **30.1 — NFPA 79** (largest gap on highest-traffic page).
+3. **30.2 — IEC 60079** (largest single technical-depth gap; IS worked example is high value).
+4. **30.3 — IEC 60204-1** (CE-market default; pairs naturally with 30.1 since the NFPA 79 worked example references the IEC 60204-1 contrast).
+5. **30.4 — SEMI S2/S8/S14**.
+6. **30.5 — IEC 62443** worked example + common mistakes.
+7. **30.6 — UL 508A + NEC** (light polish — Quick Start + worked example + common mistakes).
+8. **30.7 — ISO 12100, IEC 61508, IEC 61511** worked examples.
+9. **30.8 — Family overview pages** (decision flows; can be done in parallel with any of the above since it touches different files).
+
+### Sub-Phase Validation Checklist (apply to every sub-phase)
+
+- [ ] Jekyll build clean (`cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build`).
+- [ ] All internal links resolve in built HTML.
+- [ ] All clause/article references in worked example match the cited standard edition.
+- [ ] Common Mistakes entries each have a named failure mode + root cause + detection cue.
+- [ ] Practical Checklist groups align with the site's lifecycle stage taxonomy.
+- [ ] Lifecycle Application table maps to existing `/lifecycle/<slug>/` pages.
+- [ ] `validate_ai_boundaries.py`: same baseline as start of Phase 30 (no new failures).
+- [ ] `validate_reorg.sh all`: same baseline as start of Phase 30.
+- [ ] `project_state.md` updated: sub-phase moved from Planned to COMPLETE; line counts logged.
+- [ ] `change_log.md` entry added.
+
+### Out of Scope for Phase 30
+
+- No new standards added to corpus.
+- No new pages outside `docs/standards/`.
+- No re-architecture of the standards section information architecture (that would be a Phase 31).
+- No changes to homepage front-door, Standards Finder, or scenario pages.
+- No CSS or template changes — depth pass is content-only.
+
+### Branch and Commit Discipline
+
+- Single feature branch: `feat/phase30-standards-depth-pass`.
+- One commit per sub-phase.
+- Commit-message scheme: `site: <Page> depth pass — Quick Start + Worked Example + Common Mistakes (Phase 30.x)`.
+- Each commit is independently buildable and reviewable.
+- No commit lands on master directly. Merge once entire Phase 30 (or a clean sub-phase batch) is complete.
 
 ## Phase 29.4 — COMPLETE (2026-04-29)
 
