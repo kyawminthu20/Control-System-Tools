@@ -219,6 +219,8 @@
           url: "/communications/opc-ua/"
         - label: "BACnet/IP"
           url: "/communications/bacnet-ip/"
+        - label: "EtherCAT"
+          url: "/communications/ethercat/"
     - label: "Serial &amp; Device Networks"
       url: "/communications/modbus-rtu-rs485/"
       children:
@@ -228,6 +230,15 @@
           url: "/communications/profibus-dp/"
         - label: "IO-Link"
           url: "/communications/io-link/"
+        - label: "HART"
+          url: "/communications/hart/"
+    - label: "Utility &amp; Substation"
+      url: "/communications/dnp3/"
+      children:
+        - label: "DNP3"
+          url: "/communications/dnp3/"
+        - label: "IEC 61850"
+          url: "/communications/iec-61850/"
     - label: "Diagnostics"
       url: "/communications/wireshark-methodology/"
       children:

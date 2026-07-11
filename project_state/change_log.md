@@ -177,6 +177,24 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-07-11 — Phase 44 — Communications Expansion (EtherCAT, HART, DNP3, IEC 61850)
+
+**Type:** Content — communications section expansion (35.4 backlog, first batch)
+**Status:** Complete on `feat/phase44-comms-expansion`.
+
+- 4 new protocol pages using the established six-question comms template:
+  - EtherCAT (Ethernet Protocols group) — processing-on-the-fly, distributed clocks, ESI files, INIT→...→OP state machine, working-counter health indicator; explicitly not switched Ethernet
+  - HART (smart-device group) — FSK digital on the 4–20 mA loop, point-to-point vs multidrop, loop-resistance requirement, DD/EDD; "use a HART modem, not Wireshark" — links the 4–20 mA wiring + analog-fault troubleshooting pages
+  - DNP3 (new Utility & Substation group) — master/outstation, time-stamped events, report-by-exception, point-map-as-contract; serial-capture caveat
+  - IEC 61850 (Utility & Substation) — data model + GOOSE (Layer-2, non-routable, PROFINET-RT parallel) + Sampled Values, SCL files, PTP time sync; mms/goose/sv filters
+- Coordinator normalized 27 links from `{{ site.baseurl }}` to the governance-standard `relative_url` form before merge.
+- Landing page + nav updated (EtherCAT into Ethernet, HART into serial/device, new Utility & Substation group). Communications section now 22 protocol/diagnostics pages.
+- All Review pending; validation: clean build (363 files), zero broken links, boundary baseline unchanged, 145 tests.
+
+**This completes the Phase 42-44 arc and the roadmap's named build phases.** Remaining are standing threads (author reviews, Phase 30.3+ standards depth, cst data hand-offs, SVG diagrams) and future comms items (Foundation Fieldbus, wireless, TSN, capture library).
+
+
+
 ## 2026-07-11 — Phase 43 — IEC 61131-3 / PLC Software
 
 **Type:** Content — new PLC-software section, closes the longest-standing corpus gap

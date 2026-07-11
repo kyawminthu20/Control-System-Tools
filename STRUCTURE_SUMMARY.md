@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-11 15:22:52
+**Last Auto-Updated:** 2026-07-11 15:28:56
 
 ```text
 ├── .claude/
@@ -1081,11 +1081,19 @@
 │   │   │   └── index.md
 │   │   ├── copper-ethernet/
 │   │   │   └── index.md
+│   │   ├── dnp3/
+│   │   │   └── index.md
+│   │   ├── ethercat/
+│   │   │   └── index.md
 │   │   ├── ethernet-fundamentals/
 │   │   │   └── index.md
 │   │   ├── ethernet-ip/
 │   │   │   └── index.md
 │   │   ├── fiber-optics/
+│   │   │   └── index.md
+│   │   ├── hart/
+│   │   │   └── index.md
+│   │   ├── iec-61850/
 │   │   │   └── index.md
 │   │   ├── index.md
 │   │   ├── io-link/

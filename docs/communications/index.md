@@ -106,6 +106,10 @@ frame-level checks with a serial analyzer and oscilloscope.
     <h3><a href="{{ '/communications/bacnet-ip/' | relative_url }}">BACnet/IP</a></h3>
     <p>Objects and device instances, Who-Is/I-Am discovery, and BBMD for multi-subnet building integration.</p>
   </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/communications/ethercat/' | relative_url }}">EtherCAT</a></h3>
+    <p>Processing-on-the-fly for high-performance motion — one frame through every slave, distributed clocks, and the working counter.</p>
+  </div>
 </div>
 
 ## Serial, Fieldbus &amp; Device-Level
@@ -129,6 +133,23 @@ frame-level checks with a serial analyzer and oscilloscope.
   <div class="workflow-card">
     <h3><a href="{{ '/communications/io-link/' | relative_url }}">IO-Link</a></h3>
     <p>Point-to-point sensor communication: masters as fieldbus gateways, IODDs, and parameter data storage.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/communications/hart/' | relative_url }}">HART</a></h3>
+    <p>Digital config and diagnostics riding on the 4–20 mA loop — smart transmitters on existing two-wire infrastructure.</p>
+  </div>
+</div>
+
+## Utility &amp; Substation
+
+<div class="workflow-card-grid">
+  <div class="workflow-card">
+    <h3><a href="{{ '/communications/dnp3/' | relative_url }}">DNP3</a></h3>
+    <p>Utility SCADA/telemetry — master/outstation, time-stamped events, report-by-exception over slow remote links.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/communications/iec-61850/' | relative_url }}">IEC 61850</a></h3>
+    <p>Substation automation — a standardized data model plus GOOSE for fast Layer-2 protection messaging.</p>
   </div>
 </div>
 
@@ -159,5 +180,5 @@ VLAN register, firewall matrix, capture log) live on the
 
 ## Planned Next
 
-EtherCAT · DNP3 · IEC 61850 · HART · Foundation Fieldbus · industrial wireless
-— added as they reach review, per the same six-question template.
+Foundation Fieldbus · industrial wireless · TSN — added as they reach
+review, per the same six-question template.

@@ -33,7 +33,7 @@ practice captured through the knowledge-intake loop (§ below).
 |---|---|---|
 | 42 | **Troubleshooting engine** — DONE 2026-07-11 (Review pending): 4 decision-tree pages (VFD faults, motor-won't-start, analog signal faults, comms dropouts) + corpus troubleshooting_engine module populated | Field pattern-recognition is the least Google-able knowledge here |
 | 43 | **IEC 61131-3 / PLC software** — DONE 2026-07-11 (Review pending): 4 pages under /fundamentals/plc-software/ + corpus training_modules/plc_software module | Longest-standing known corpus gap; pairs with cst tag tooling |
-| 44 | **Communications expansion** (35.4 backlog) — EtherCAT, DNP3, IEC 61850, HART, FF, wireless, TSN; capture library; interface-neutral diagrams | Deferred by design until fundamentals/diagnostics matured |
+| 44 | **Communications expansion** — DONE 2026-07-11 (Review pending): EtherCAT, HART, DNP3, IEC 61850 pages added (Foundation Fieldbus, wireless, TSN, capture library, SVG diagrams remain future) | Deferred by design until fundamentals/diagnostics matured |
 
 ### Standing threads (parallel to all phases)
 
