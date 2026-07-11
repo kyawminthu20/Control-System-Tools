@@ -154,6 +154,12 @@
           url: "/communications/ethernet-fundamentals/"
         - label: "Managed Switches"
           url: "/communications/managed-switches/"
+        - label: "Copper Ethernet"
+          url: "/communications/copper-ethernet/"
+        - label: "Fiber Optics"
+          url: "/communications/fiber-optics/"
+        - label: "RS-485 Physical Layer"
+          url: "/communications/rs485-physical-layer/"
     - label: "Ethernet Protocols"
       url: "/communications/ethernet-ip/"
       children:

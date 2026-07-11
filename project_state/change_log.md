@@ -1,7 +1,20 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-11 (Phase 35.2 — diagnostics depth: Wireshark fundamentals, case study, config examples, network templates)
+**Last Updated:** 2026-07-11 (Phase 35.3 — physical-layer pages: copper Ethernet, fiber optics, RS-485)
 **Status:** Active
+
+## 2026-07-11 — Phase 35.3 — Physical-layer pages (copper, fiber, RS-485)
+
+**Type:** Content expansion of the communications section (second review's "physical layer before more protocols" guidance)
+**Status:** Complete on `feat/phase35-3-physical-layer`.
+
+- **`/communications/copper-ethernet/`** (150 lines) — category ratings, 100BASE-TX vs 1000BASE-T pair usage, channel-length budget, M12 vs RJ45, shield bonding decisions, patch-cord weak link, VFD-cable separation, cable certification vs wiremap testers, PoE overview. Cross-links the intermittent-I/O case study (whose root cause was exactly this failure class).
+- **`/communications/fiber-optics/`** (154 lines) — when fiber beats copper, single-mode vs multimode, connector types and TX/RX polarity, optical power budget, cleanliness discipline, SFP compatibility, DOM readings via managed switches, light-source/power-meter vs OTDR, eye-safety note.
+- **`/communications/rs485-physical-layer/`** (161 lines) — differential signaling and common-mode rejection, termination placement and value, bias/failsafe resistors, the signal-reference/isolation question, vendor polarity-labeling chaos, stub length and topology, unit loads, oscilloscope practice (healthy vs reflections/rounding/noise/contention waveform signatures). Protocol content deferred to the Modbus RTU page (cross-linked both ways).
+- All three at "Review pending" with TIA/ISO-IEC/IEEE reference bodies named; nav (Fundamentals group) + landing page updated.
+- Validation: clean build (333 files), zero broken internal links.
+
+**Phase 35.4 backlog (remaining from second review):** interface-neutral diagrams, protocol expansion (EtherCAT, DNP3, IEC 61850, HART, FF, wireless, TSN), sanitized capture library, optional build-time Mermaid pre-render.
 
 ## 2026-07-11 — Phase 35.2 — Communications diagnostics depth (second review's "add next" tier)
 

@@ -69,6 +69,18 @@ frame-level checks with a serial analyzer and oscilloscope.
     <h3><a href="{{ '/communications/managed-switches/' | relative_url }}">Managed Switches</a></h3>
     <p>What managed switches add — VLANs, IGMP snooping, port mirroring, redundancy — and when unmanaged is acceptable.</p>
   </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/communications/copper-ethernet/' | relative_url }}">Copper Ethernet</a></h3>
+    <p>Category ratings, M12 vs RJ45, shield bonding, VFD-cable separation, and what a cable certifier proves that a continuity tester can't.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/communications/fiber-optics/' | relative_url }}">Fiber Optics</a></h3>
+    <p>Single-mode vs multimode, optical power budgets, connector cleanliness, and DOM readings as free diagnostics.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/communications/rs485-physical-layer/' | relative_url }}">RS-485 Physical Layer</a></h3>
+    <p>Differential signaling, termination and bias, polarity labeling chaos, and what a healthy bus looks like on an oscilloscope.</p>
+  </div>
 </div>
 
 ## Ethernet Protocols

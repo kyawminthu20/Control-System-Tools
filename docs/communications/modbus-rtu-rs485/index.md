@@ -139,6 +139,7 @@ Verify filter names against the Wireshark version in use. But understand what yo
 
 ## Related Pages
 
+- [RS-485 physical layer]({{ '/communications/rs485-physical-layer/' | relative_url }}) — signaling depth: differential measurement, unit loads, oscilloscope practice
 - [Industrial Ethernet Fundamentals]({{ site.baseurl }}/communications/ethernet-fundamentals/) — the contrasting world of switched networks and IP addressing
 - [Managed Switches in Industrial Networks]({{ site.baseurl }}/communications/managed-switches/) — relevant once RTU devices sit behind a Modbus TCP gateway
 - [IEC 62443 — Industrial Cybersecurity]({{ site.baseurl }}/standards/cybersecurity/iec-62443/) — compensating controls for a protocol with no built-in security

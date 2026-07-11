@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-11 04:47:41
+**Last Auto-Updated:** 2026-07-11 08:27:32
 
 ```text
 ├── .claude/
@@ -29,6 +29,7 @@
 ├── .python-version
 ├── AGENTS.md
 ├── CLAUDE.md
+├── Control System Tools.code-workspace
 ├── PROJECT_STARTUP_CONTEXT.md
 ├── README.md
 ├── STRUCTURE_SUMMARY.md
@@ -1020,9 +1021,13 @@
 │   │   │   └── index.md
 │   │   ├── case-study-intermittent-io/
 │   │   │   └── index.md
+│   │   ├── copper-ethernet/
+│   │   │   └── index.md
 │   │   ├── ethernet-fundamentals/
 │   │   │   └── index.md
 │   │   ├── ethernet-ip/
+│   │   │   └── index.md
+│   │   ├── fiber-optics/
 │   │   │   └── index.md
 │   │   ├── index.md
 │   │   ├── io-link/
@@ -1040,6 +1045,8 @@
 │   │   ├── profibus-dp/
 │   │   │   └── index.md
 │   │   ├── profinet/
+│   │   │   └── index.md
+│   │   ├── rs485-physical-layer/
 │   │   │   └── index.md
 │   │   ├── wireshark-fundamentals/
 │   │   │   └── index.md
