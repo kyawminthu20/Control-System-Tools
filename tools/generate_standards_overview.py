@@ -4,8 +4,8 @@ import datetime
 from pathlib import Path
 
 # --- CONFIGURATION ---
-# Canonical path from AGENTS.md
-ROOT_DIR = Path("/Users/kyawminthu/Dev/Control System Tools/control-standards/rag")
+# Resolve relative to this file so the script works on any checkout location
+ROOT_DIR = Path(__file__).resolve().parent.parent / "control-standards" / "rag"
 OUTPUT_FILE = ROOT_DIR / "VERSION_OVERVIEW.md"
 
 def get_file_description(file_path):

@@ -17,6 +17,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor/
+  # Internal design/plan docs — not part of the public site
+  - plans/
+  - superpowers/
 
 defaults:
   - scope:

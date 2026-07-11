@@ -1748,6 +1748,30 @@
             "serve_path": "training_modules/electrical_machines/ac_vs_dc_motor_comparison.md"
           },
           {
+            "name": "bldc_motor_reference.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/electrical_machines/bldc_motor_reference.md",
+            "serve_path": "training_modules/electrical_machines/bldc_motor_reference.md"
+          },
+          {
+            "name": "bldc_pmsm_implementation_guide.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/electrical_machines/bldc_pmsm_implementation_guide.md",
+            "serve_path": "training_modules/electrical_machines/bldc_pmsm_implementation_guide.md"
+          },
+          {
+            "name": "bldc_pmsm_scenarios.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/electrical_machines/bldc_pmsm_scenarios.md",
+            "serve_path": "training_modules/electrical_machines/bldc_pmsm_scenarios.md"
+          },
+          {
+            "name": "bldc_vs_pmsm_comparison.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/electrical_machines/bldc_vs_pmsm_comparison.md",
+            "serve_path": "training_modules/electrical_machines/bldc_vs_pmsm_comparison.md"
+          },
+          {
             "name": "brushless_dc_ev_and_drone_motor_comparison.md",
             "type": "file",
             "path": "control-standards/rag/training_modules/electrical_machines/brushless_dc_ev_and_drone_motor_comparison.md",
@@ -1794,6 +1818,12 @@
             "type": "file",
             "path": "control-standards/rag/training_modules/electrical_machines/motor_nameplates_slip_and_torque.md",
             "serve_path": "training_modules/electrical_machines/motor_nameplates_slip_and_torque.md"
+          },
+          {
+            "name": "pmsm_motor_reference.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/electrical_machines/pmsm_motor_reference.md",
+            "serve_path": "training_modules/electrical_machines/pmsm_motor_reference.md"
           },
           {
             "name": "servo_drive_fundamentals.md",

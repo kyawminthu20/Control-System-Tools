@@ -247,7 +247,7 @@ description: "Route from your project, lifecycle stage, or market to the standar
       <span class="industry-tile__name">Energy</span>
       <span class="industry-tile__meta">SIL · IEC 62443 cybersecurity</span>
     </a>
-    <a class="industry-tile" href="{{ '/industries/food-beverage/' | relative_url }}">
+    <a class="industry-tile" href="{{ '/industries/food-and-beverage/' | relative_url }}">
       <span class="industry-tile__name">Food &amp; Beverage</span>
       <span class="industry-tile__meta">Hygienic design · washdown</span>
     </a>
@@ -255,7 +255,7 @@ description: "Route from your project, lifecycle stage, or market to the standar
       <span class="industry-tile__name">Water &amp; Wastewater</span>
       <span class="industry-tile__meta">IEC 61511 · AWWA · ISA-18.2</span>
     </a>
-    <a class="industry-tile" href="{{ '/industries/offshore-marine/' | relative_url }}">
+    <a class="industry-tile" href="{{ '/industries/offshore/' | relative_url }}">
       <span class="industry-tile__name">Offshore &amp; Marine</span>
       <span class="industry-tile__meta">Class rules · IEC 61511</span>
     </a>

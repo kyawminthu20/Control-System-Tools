@@ -40,5 +40,15 @@ docs/vendor/
 
 planning/FE_Study/
 
+# Third-party course material — untracked 2026-07-10 (copyright; was bloating .git)
+planning/Python/
+
+# Licensed standard table values (NEC/UL/IEC) — supplied locally from licensed
+# copies, never committed. Schemas and sample fixtures ARE committed.
+data/standards_tables/*.yaml
+data/standards_tables/*.json
+!data/standards_tables/schemas/**
+!data/standards_tables/samples/**
+
 # pytest
 .pytest_cache/
