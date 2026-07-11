@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-11 10:27:44
+**Last Auto-Updated:** 2026-07-11 14:57:36
 
 ```text
 ├── .claude/
@@ -145,12 +145,17 @@
 │   │   │       ├── README.md
 │   │   │       ├── analog_0_10v_wiring.md
 │   │   │       ├── analog_4_20ma_wiring.md
+│   │   │       ├── comm_cable_installation.md
+│   │   │       ├── control_power_distribution.md
 │   │   │       ├── emc_noise_mitigation.md
 │   │   │       ├── encoder_wiring.md
 │   │   │       ├── ipc_wiring.md
+│   │   │       ├── motor_starter_wiring.md
 │   │   │       ├── panel_grounding_bonding.md
 │   │   │       ├── plc_wiring.md
 │   │   │       ├── remote_io_wiring.md
+│   │   │       ├── rtd_thermocouple_wiring.md
+│   │   │       ├── safety_circuit_wiring.md
 │   │   │       ├── servo_drive_wiring.md
 │   │   │       ├── vfd_wiring.md
 │   │   │       └── wire_sizing_workflow.md
@@ -734,12 +739,17 @@
 │   │   │   │   └── wiring_practices/
 │   │   │   │       ├── analog_0_10v_wiring.md
 │   │   │   │       ├── analog_4_20ma_wiring.md
+│   │   │   │       ├── comm_cable_installation.md
+│   │   │   │       ├── control_power_distribution.md
 │   │   │   │       ├── emc_noise_mitigation.md
 │   │   │   │       ├── encoder_wiring.md
 │   │   │   │       ├── ipc_wiring.md
+│   │   │   │       ├── motor_starter_wiring.md
 │   │   │   │       ├── panel_grounding_bonding.md
 │   │   │   │       ├── plc_wiring.md
 │   │   │   │       ├── remote_io_wiring.md
+│   │   │   │       ├── rtd_thermocouple_wiring.md
+│   │   │   │       ├── safety_circuit_wiring.md
 │   │   │   │       ├── servo_drive_wiring.md
 │   │   │   │       ├── vfd_wiring.md
 │   │   │   │       └── wire_sizing_workflow.md
@@ -1098,6 +1108,10 @@
 │   │   │   │   └── index.md
 │   │   │   ├── analog-4-20ma/
 │   │   │   │   └── index.md
+│   │   │   ├── comm-cable/
+│   │   │   │   └── index.md
+│   │   │   ├── control-power/
+│   │   │   │   └── index.md
 │   │   │   ├── emc-noise-mitigation/
 │   │   │   │   └── index.md
 │   │   │   ├── encoder/
@@ -1107,9 +1121,15 @@
 │   │   │   ├── index.md
 │   │   │   ├── ipc/
 │   │   │   │   └── index.md
+│   │   │   ├── motor-starter/
+│   │   │   │   └── index.md
 │   │   │   ├── plc/
 │   │   │   │   └── index.md
 │   │   │   ├── remote-io/
+│   │   │   │   └── index.md
+│   │   │   ├── rtd-thermocouple/
+│   │   │   │   └── index.md
+│   │   │   ├── safety-circuit/
 │   │   │   │   └── index.md
 │   │   │   ├── servo-drive/
 │   │   │   │   └── index.md
@@ -1528,6 +1548,8 @@
 │   │   └── index.md
 │   └── verification/
 │       └── index.md
+├── drawings examples/
+│   └── fec5c93b-0ccd-44c6-b4e7-5d7d01acaa07.png
 ├── governance/
 │   ├── AI_WORKFLOW.md
 │   ├── CONTENT_STANDARDS.md
@@ -1541,6 +1563,7 @@
 │   ├── environment.md
 │   ├── how_to.md
 │   └── project_state.md
+├── prompt.md
 ├── pyproject.toml
 ├── rag -> control-standards/rag
 ├── src/
@@ -1586,6 +1609,37 @@
 │           ├── address_map.py
 │           ├── comms.py
 │           └── tag_db.py
+├── temp/
+│   ├── PLC_IPC_Official_Reference_Links.xlsx
+│   ├── ai-ml-control-systems-research/
+│   │   ├── README.md
+│   │   ├── digital-twin-integration.md
+│   │   ├── research-map.md
+│   │   ├── scientific-domain-integration.md
+│   │   └── source-register.md
+│   ├── plc_software.md
+│   ├── plcs.md
+│   ├── standards_check.md
+│   └── wire-color-coding-web-assets/
+│       ├── 00-wire-color-coding-title-banner.png
+│       ├── 01-reference-standards.png
+│       ├── 02-nfpa79-machinery-panel-us.png
+│       ├── 03-iec60204-machinery-panel.png
+│       ├── 04-us-facility-power-distribution.png
+│       ├── 05-plc-24vdc-io-wiring.png
+│       ├── 06-120vac-control-circuit.png
+│       ├── 07-4-20ma-transmitter-hookup.png
+│       ├── 08-intrinsically-safe-wiring.png
+│       ├── 09-vfd-to-motor-wiring.png
+│       ├── 10-servo-motion-system-wiring.png
+│       ├── 11-hvac-building-automation.png
+│       ├── 12-semiconductor-facility-color-map.png
+│       ├── 13-industrial-ethernet-cable-identification.png
+│       ├── 14-legacy-panel-before-after.png
+│       ├── 15-important-wiring-notes.png
+│       ├── 16-symbol-legend.png
+│       ├── README.md
+│       └── assets.json
 ├── tests/
 │   ├── __init__.py
 │   ├── cst/

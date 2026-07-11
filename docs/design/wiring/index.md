@@ -85,14 +85,30 @@ mistakes → verification checks → standards references.
   </div>
 </div>
 
-## Planned Guides
+## Infrastructure &amp; Safety
 
-The program covers the full device set — added wave by wave (roadmap in the
-repo's `governance/ROADMAP.md`):
-
-| Wave | Devices |
-|---|---|
-| Infrastructure &amp; safety | Communication cable installation · Safety circuit wiring · Motor starters · Control power distribution · RTD &amp; thermocouple wiring |
+<div class="workflow-card-grid">
+  <div class="workflow-card">
+    <h3><a href="{{ '/design/wiring/comm-cable/' | relative_url }}">Communication Cable Installation</a></h3>
+    <p>Routing, segregation from motor cables, connectors and termination, and shield policy — the install-practice companion to the Communications physical-layer pages.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/design/wiring/control-power/' | relative_url }}">Control Power Distribution</a></h3>
+    <p>Control transformers vs 24 V supplies, sizing for inrush not just holding VA, primary/secondary fusing, and per-branch protection.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/design/wiring/safety-circuit/' | relative_url }}">Safety Circuit Wiring</a></h3>
+    <p>E-stops, safety relays, dual-channel input wiring, EDM feedback, and monitored reset — wiring the architecture the SRS already specified.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/design/wiring/motor-starter/' | relative_url }}">Motor Starters</a></h3>
+    <p>DOL, reversing, and star-delta — the Art. 430 chain, the seal-in rung, and the reversing interlock that prevents a phase short.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/design/wiring/rtd-thermocouple/' | relative_url }}">RTD &amp; Thermocouple</a></h3>
+    <p>2/3/4-wire RTD lead compensation, matched thermocouple extension wire and polarity, and keeping low-level signals clean.</p>
+  </div>
+</div>
 
 ## Related
 

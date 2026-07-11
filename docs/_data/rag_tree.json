@@ -380,6 +380,18 @@
             "serve_path": "design_framework/wiring_practices/analog_4_20ma_wiring.md"
           },
           {
+            "name": "comm_cable_installation.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/wiring_practices/comm_cable_installation.md",
+            "serve_path": "design_framework/wiring_practices/comm_cable_installation.md"
+          },
+          {
+            "name": "control_power_distribution.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/wiring_practices/control_power_distribution.md",
+            "serve_path": "design_framework/wiring_practices/control_power_distribution.md"
+          },
+          {
             "name": "emc_noise_mitigation.md",
             "type": "file",
             "path": "control-standards/rag/design_framework/wiring_practices/emc_noise_mitigation.md",
@@ -398,6 +410,12 @@
             "serve_path": "design_framework/wiring_practices/ipc_wiring.md"
           },
           {
+            "name": "motor_starter_wiring.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/wiring_practices/motor_starter_wiring.md",
+            "serve_path": "design_framework/wiring_practices/motor_starter_wiring.md"
+          },
+          {
             "name": "panel_grounding_bonding.md",
             "type": "file",
             "path": "control-standards/rag/design_framework/wiring_practices/panel_grounding_bonding.md",
@@ -414,6 +432,18 @@
             "type": "file",
             "path": "control-standards/rag/design_framework/wiring_practices/remote_io_wiring.md",
             "serve_path": "design_framework/wiring_practices/remote_io_wiring.md"
+          },
+          {
+            "name": "rtd_thermocouple_wiring.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/wiring_practices/rtd_thermocouple_wiring.md",
+            "serve_path": "design_framework/wiring_practices/rtd_thermocouple_wiring.md"
+          },
+          {
+            "name": "safety_circuit_wiring.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/wiring_practices/safety_circuit_wiring.md",
+            "serve_path": "design_framework/wiring_practices/safety_circuit_wiring.md"
           },
           {
             "name": "servo_drive_wiring.md",

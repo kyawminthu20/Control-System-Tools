@@ -177,6 +177,25 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-07-11 — Phase 41 — Wiring Guides Wave 4 (Infrastructure & Safety) — wiring program complete
+
+**Type:** Content (wiring-guides program, wave 4 — final wave)
+**Status:** Complete on `feat/phase41-wave4-infra`.
+
+- 5 site guides + 5 corpus notes, completing the 16-guide wiring program:
+  - Communication Cable Installation (257) — install-practice companion to the Communications physical-layer pages: routing/segregation from motor cables, connectors/termination, shield-at-gland; references the intermittent-I/O case study
+  - Control Power Distribution (242) — CPT vs 24 V PSU, sizing for inrush not holding VA (the classic brownout), primary+secondary and per-branch fusing, grounded-control-circuit bonding; cites cst transformer
+  - Safety Circuit Wiring (327) — framed as wiring-not-design (architecture comes from the SRS/risk assessment): dual-channel e-stop/interlock, EDM feedback, monitored reset, redundant contactors/STO; per-channel functional test
+  - Motor Starters (261) — DOL/reversing/star-delta: the Art. 430 chain (OCPD protects wiring, overload protects motor), seal-in rung, reversing interlock (electrical+mechanical), SCCR via UL 508A; cites cst motor-branch
+  - RTD & Thermocouple (249) — 2/3/4-wire RTD lead compensation, matched TC extension wire + polarity + cold-junction, single-end shielding, grounded vs ungrounded junction; IEC 60751/60584 at category level
+- Coordinator fixes at assembly: reworded a "mandatory" voice flag in the RTD/TC guide; fixed one broken link (/lifecycle/guides/ index doesn't exist -> /lifecycle/commissioning/).
+- Section index gains an Infrastructure & Safety card grid (Planned-Guides table removed); nav lists all 16 guides; mirror synced.
+- All Review pending; validation: clean build (350 files), zero broken links, boundary baseline unchanged, 145 tests pass.
+
+**The Wiring & Installation Guides program (Phases 38-41) is complete: 16 guides across Foundations, Controllers & I/O, Motion & Feedback, and Infrastructure & Safety.**
+
+
+
 ## 2026-07-11 — Phase 40 — Wiring Guides Wave 3 (Motion & Feedback)
 
 **Type:** Content (wiring-guides program, wave 3)
