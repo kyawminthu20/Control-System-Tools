@@ -2098,5 +2098,53 @@
         ]
       }
     ]
+  },
+  {
+    "name": "troubleshooting_engine",
+    "type": "dir",
+    "children": [
+      {
+        "name": "analog_io",
+        "type": "dir",
+        "children": [
+          {
+            "name": "analog_signal_faults.md",
+            "type": "file",
+            "path": "control-standards/rag/troubleshooting_engine/analog_io/analog_signal_faults.md",
+            "serve_path": "troubleshooting_engine/analog_io/analog_signal_faults.md"
+          }
+        ]
+      },
+      {
+        "name": "motion_drives",
+        "type": "dir",
+        "children": [
+          {
+            "name": "motor_wont_start.md",
+            "type": "file",
+            "path": "control-standards/rag/troubleshooting_engine/motion_drives/motor_wont_start.md",
+            "serve_path": "troubleshooting_engine/motion_drives/motor_wont_start.md"
+          },
+          {
+            "name": "vfd_faults.md",
+            "type": "file",
+            "path": "control-standards/rag/troubleshooting_engine/motion_drives/vfd_faults.md",
+            "serve_path": "troubleshooting_engine/motion_drives/vfd_faults.md"
+          }
+        ]
+      },
+      {
+        "name": "networks",
+        "type": "dir",
+        "children": [
+          {
+            "name": "comms_dropouts.md",
+            "type": "file",
+            "path": "control-standards/rag/troubleshooting_engine/networks/comms_dropouts.md",
+            "serve_path": "troubleshooting_engine/networks/comms_dropouts.md"
+          }
+        ]
+      }
+    ]
   }
 ]

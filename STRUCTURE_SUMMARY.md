@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-11 14:57:36
+**Last Auto-Updated:** 2026-07-11 15:10:03
 
 ```text
 ├── .claude/
@@ -477,10 +477,15 @@
 │   │   │   └── troubleshooting/
 │   │   └── troubleshooting_engine/
 │   │       ├── analog_io/
+│   │       │   └── analog_signal_faults.md
 │   │       ├── decision_trees.yaml
 │   │       ├── digital_io/
+│   │       ├── motion_drives/
+│   │       │   ├── motor_wont_start.md
+│   │       │   └── vfd_faults.md
 │   │       ├── motion_servo/
 │   │       ├── networks/
+│   │       │   └── comms_dropouts.md
 │   │       └── pid_control/
 │   ├── templates/
 │   │   ├── README.md
@@ -973,58 +978,66 @@
 │   │   │   │           ├── UL508A_2022__transformers_and_power_supplies.md
 │   │   │   │           ├── UL508A_2022__wiring_methods_and_conductors.md
 │   │   │   │           └── UL508A_OVERVIEW.md
-│   │   │   └── training_modules/
-│   │   │       ├── control_systems/
-│   │   │       │   ├── control_theory_overview.md
-│   │   │       │   ├── industrial_control_loop_architectures.md
-│   │   │       │   ├── industrial_pid_implementation.md
-│   │   │       │   ├── pid_control_intuition.md
-│   │   │       │   ├── pid_control_intuitive_foundation.md
-│   │   │       │   ├── pid_drone_control.md
-│   │   │       │   └── pid_heater_control_with_contactor.md
-│   │   │       ├── electrical_machines/
-│   │   │       │   ├── ac_vs_dc_motor_comparison.md
-│   │   │       │   ├── bldc_motor_reference.md
-│   │   │       │   ├── bldc_pmsm_implementation_guide.md
-│   │   │       │   ├── bldc_pmsm_scenarios.md
-│   │   │       │   ├── bldc_vs_pmsm_comparison.md
-│   │   │       │   ├── brushless_dc_ev_and_drone_motor_comparison.md
-│   │   │       │   ├── dc_motor_basics.md
-│   │   │       │   ├── induction_motor_basics.md
-│   │   │       │   ├── motor_and_vfd_equations_reference.md
-│   │   │       │   ├── motor_control_methods_and_operating_regions.md
-│   │   │       │   ├── motor_efficiency_power_factor_and_losses.md
-│   │   │       │   ├── motor_family_comparison.md
-│   │   │       │   ├── motor_nameplates_slip_and_torque.md
-│   │   │       │   ├── pmsm_motor_reference.md
-│   │   │       │   ├── servo_drive_fundamentals.md
-│   │   │       │   ├── servo_feedback_and_inertia_matching.md
-│   │   │       │   ├── vfd_and_servo_architecture_diagrams.md
-│   │   │       │   └── vfd_fundamentals.md
-│   │   │       ├── fundamentals/
-│   │   │       │   ├── conductor_ampacity_and_termination_temperature.md
-│   │   │       │   ├── diodes_transistors_and_switching_basics.md
-│   │   │       │   ├── earthing_systems_iec.md
-│   │   │       │   ├── electrical_equations_reference.md
-│   │   │       │   ├── electrical_quantities_and_circuit_language.md
-│   │   │       │   ├── equivalent_circuit_methods.md
-│   │   │       │   ├── kirchhoff_laws_and_systematic_analysis.md
-│   │   │       │   ├── passive_components_resistors_capacitors.md
-│   │   │       │   └── series_parallel_and_divider_methods.md
-│   │   │       ├── nec_application/
-│   │   │       │   ├── article_409_practical_workflow.md
-│   │   │       │   ├── article_430_practical_workflow.md
-│   │   │       │   ├── branch_circuits_vs_feeders_motor_loads.md
-│   │   │       │   ├── class1_class2_remote_control_circuits.md
-│   │   │       │   ├── conductor_ocpd_sizing_examples.md
-│   │   │       │   ├── disconnecting_means_for_machinery.md
-│   │   │       │   ├── grounding_bonding_control_panels.md
-│   │   │       │   ├── motor_and_panel_code_application.md
-│   │   │       │   ├── nec_code_reading_fundamentals.md
-│   │   │       │   ├── sccr_workflow.md
-│   │   │       │   └── working_space_and_table_navigation.md
-│   │   │       └── semiconductor_facility/
-│   │   │           └── hf_handling_controls_materials_and_shutdowns.md
+│   │   │   ├── training_modules/
+│   │   │   │   ├── control_systems/
+│   │   │   │   │   ├── control_theory_overview.md
+│   │   │   │   │   ├── industrial_control_loop_architectures.md
+│   │   │   │   │   ├── industrial_pid_implementation.md
+│   │   │   │   │   ├── pid_control_intuition.md
+│   │   │   │   │   ├── pid_control_intuitive_foundation.md
+│   │   │   │   │   ├── pid_drone_control.md
+│   │   │   │   │   └── pid_heater_control_with_contactor.md
+│   │   │   │   ├── electrical_machines/
+│   │   │   │   │   ├── ac_vs_dc_motor_comparison.md
+│   │   │   │   │   ├── bldc_motor_reference.md
+│   │   │   │   │   ├── bldc_pmsm_implementation_guide.md
+│   │   │   │   │   ├── bldc_pmsm_scenarios.md
+│   │   │   │   │   ├── bldc_vs_pmsm_comparison.md
+│   │   │   │   │   ├── brushless_dc_ev_and_drone_motor_comparison.md
+│   │   │   │   │   ├── dc_motor_basics.md
+│   │   │   │   │   ├── induction_motor_basics.md
+│   │   │   │   │   ├── motor_and_vfd_equations_reference.md
+│   │   │   │   │   ├── motor_control_methods_and_operating_regions.md
+│   │   │   │   │   ├── motor_efficiency_power_factor_and_losses.md
+│   │   │   │   │   ├── motor_family_comparison.md
+│   │   │   │   │   ├── motor_nameplates_slip_and_torque.md
+│   │   │   │   │   ├── pmsm_motor_reference.md
+│   │   │   │   │   ├── servo_drive_fundamentals.md
+│   │   │   │   │   ├── servo_feedback_and_inertia_matching.md
+│   │   │   │   │   ├── vfd_and_servo_architecture_diagrams.md
+│   │   │   │   │   └── vfd_fundamentals.md
+│   │   │   │   ├── fundamentals/
+│   │   │   │   │   ├── conductor_ampacity_and_termination_temperature.md
+│   │   │   │   │   ├── diodes_transistors_and_switching_basics.md
+│   │   │   │   │   ├── earthing_systems_iec.md
+│   │   │   │   │   ├── electrical_equations_reference.md
+│   │   │   │   │   ├── electrical_quantities_and_circuit_language.md
+│   │   │   │   │   ├── equivalent_circuit_methods.md
+│   │   │   │   │   ├── kirchhoff_laws_and_systematic_analysis.md
+│   │   │   │   │   ├── passive_components_resistors_capacitors.md
+│   │   │   │   │   └── series_parallel_and_divider_methods.md
+│   │   │   │   ├── nec_application/
+│   │   │   │   │   ├── article_409_practical_workflow.md
+│   │   │   │   │   ├── article_430_practical_workflow.md
+│   │   │   │   │   ├── branch_circuits_vs_feeders_motor_loads.md
+│   │   │   │   │   ├── class1_class2_remote_control_circuits.md
+│   │   │   │   │   ├── conductor_ocpd_sizing_examples.md
+│   │   │   │   │   ├── disconnecting_means_for_machinery.md
+│   │   │   │   │   ├── grounding_bonding_control_panels.md
+│   │   │   │   │   ├── motor_and_panel_code_application.md
+│   │   │   │   │   ├── nec_code_reading_fundamentals.md
+│   │   │   │   │   ├── sccr_workflow.md
+│   │   │   │   │   └── working_space_and_table_navigation.md
+│   │   │   │   └── semiconductor_facility/
+│   │   │   │       └── hf_handling_controls_materials_and_shutdowns.md
+│   │   │   └── troubleshooting_engine/
+│   │   │       ├── analog_io/
+│   │   │       │   └── analog_signal_faults.md
+│   │   │       ├── motion_drives/
+│   │   │       │   ├── motor_wont_start.md
+│   │   │       │   └── vfd_faults.md
+│   │   │       └── networks/
+│   │   │           └── comms_dropouts.md
 │   │   └── templates/
 │   │       ├── alarm_rationalization.csv
 │   │       ├── bom_example.csv
@@ -1539,8 +1552,16 @@
 │   │   ├── templates/
 │   │   │   └── index.md
 │   │   └── troubleshooting/
+│   │       ├── analog-signal-faults/
+│   │       │   └── index.md
+│   │       ├── comms-dropouts/
+│   │       │   └── index.md
 │   │       ├── index.md
-│   │       └── motors/
+│   │       ├── motor-wont-start/
+│   │       │   └── index.md
+│   │       ├── motors/
+│   │       │   └── index.md
+│   │       └── vfd-faults/
 │   │           └── index.md
 │   ├── training/
 │   │   └── index.md

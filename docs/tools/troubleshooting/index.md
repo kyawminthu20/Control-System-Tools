@@ -18,16 +18,38 @@ redirect_from:
 <strong>Scope:</strong> Routing page for field diagnosis. It is not an OEM fault manual or an SOP — it points at the right workflow, reference, or commissioning template for the symptom in front of you.
 </blockquote>
 
-## Categories
+## Decision Trees by Symptom
+
+<div class="workflow-card-grid">
+  <div class="workflow-card">
+    <h3><a href="{{ '/tools/troubleshooting/vfd-faults/' | relative_url }}">VFD Faults</a></h3>
+    <p>Overvoltage, overcurrent, overtemp, ground fault, and "faults but I don't know why" — by fault category, routed to the wiring guides.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/tools/troubleshooting/motor-wont-start/' | relative_url }}">Motor Won't Start</a></h3>
+    <p>Does the contactor pull in? Branch from there into control-circuit vs power-side vs mechanical causes.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/tools/troubleshooting/analog-signal-faults/' | relative_url }}">Analog Signal Faults</a></h3>
+    <p>4–20 mA and 0–10 V reading zero, full-scale, noisy, or offset — bisect the loop to find where it breaks.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/tools/troubleshooting/comms-dropouts/' | relative_url }}">Communication Dropouts</a></h3>
+    <p>Total vs intermittent, one device vs a segment — triage that routes into the Communications diagnostics workflow.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/tools/troubleshooting/motors/' | relative_url }}">Motor Symptoms</a></h3>
+    <p>General motor symptom decision tree — noise, heat, vibration, and performance patterns.</p>
+  </div>
+</div>
+
+## Other Starting Points
 
 | Category | Where to start |
 |---|---|
-| Motors | [Motor troubleshooting decision tree]({{ '/tools/troubleshooting/motors/' | relative_url }}) · [Motor symptom patterns — RAG browser]({{ '/tools/rag-browser/' | relative_url }}) |
-| VFDs | [VFD commissioning — common faults]({{ '/lifecycle/guides/vfd-commissioning/' | relative_url }}) · [Drive commissioning template]({{ '/lifecycle/guides/commissioning-templates/drive-commissioning/' | relative_url }}) |
 | PLC systems | [Async faults in distributed systems]({{ '/fundamentals/control/async-faults-distributed-systems/' | relative_url }}) · [Machine state model]({{ '/fundamentals/control/machine-state-model/' | relative_url }}) |
-| Field I/O | [Electrical quantities reference]({{ '/fundamentals/electrical/electrical-quantities/' | relative_url }}) · [Basic circuit polarity template]({{ '/lifecycle/guides/commissioning-templates/basic-circuit-polarity/' | relative_url }}) |
-| Networks | [Networked safety PLC scenario]({{ '/tools/scenarios/networked-safety-plc/' | relative_url }}) · [IEC 62443 cybersecurity]({{ '/standards/cybersecurity/iec-62443/' | relative_url }}) |
-| Safety circuits | [Safety wiring]({{ '/lifecycle/safety-wiring/' | relative_url }}) · [Interlocks and permissives]({{ '/fundamentals/control/interlocks-permissives-safety-trips/' | relative_url }}) |
+| Safety circuits | [Safety circuit wiring]({{ '/design/wiring/safety-circuit/' | relative_url }}) · [Interlocks and permissives]({{ '/fundamentals/control/interlocks-permissives-safety-trips/' | relative_url }}) |
+| Wiring practice | [Wiring &amp; installation guides]({{ '/design/wiring/' | relative_url }}) — the underlying wiring for every symptom above |
 
 ## How to use this section
 

@@ -177,6 +177,22 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-07-11 — Phase 42 — Troubleshooting Engine
+
+**Type:** Content — new troubleshooting decision-tree genre + corpus module populated
+**Status:** Complete on `feat/phase42-troubleshooting`.
+
+- 4 symptom decision-tree pages under `/tools/troubleshooting/`, each with a Mermaid decision flowchart, routing INTO the wiring guides and comms diagnostics rather than duplicating them:
+  - VFD Faults (230) — by fault category (overvoltage/overcurrent/overtemp/ground-fault/no-fault-but-won't-run); "consult your drive's fault-code list" refrain, no vendor code tables reproduced
+  - Motor Won't Start (206) — branches from "does the contactor pull in?" into control-circuit vs power-side vs mechanical
+  - Analog Signal Faults (230) — 4–20 mA / 0–10 V by reading symptom (zero/full-scale/noisy/offset), bisect-the-loop method
+  - Communication Dropouts (202) — triage front-end that routes into the Communications 8-step methodology (doesn't restate it)
+- Corpus `troubleshooting_engine/` module (previously empty per the known-gaps list) now populated: 4 notes across new `motion_drives/`, `analog_io/`, `networks/` dirs. Mirror synced (rag tree 6→7 top-level entries).
+- Troubleshooting landing page upgraded to a symptom card grid; nav extended.
+- All Review pending; validation: clean build (354 files), zero broken links, boundary baseline unchanged, 145 tests.
+
+
+
 ## 2026-07-11 — Phase 41 — Wiring Guides Wave 4 (Infrastructure & Safety) — wiring program complete
 
 **Type:** Content (wiring-guides program, wave 4 — final wave)
