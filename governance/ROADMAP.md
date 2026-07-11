@@ -20,7 +20,7 @@ practice captured through the knowledge-intake loop (§ below).
 
 | Wave | Phase | Guides | Status |
 |---|---|---|---|
-| 1 — Foundations | 38 | **How to wire a VFD** (flagship, sets the template) · Wire-sizing walkthrough (cst-driven: ampacity + voltage drop + Art. 430) · Panel grounding & bonding practice · Noise & EMC mitigation | In progress |
+| 1 — Foundations | 38 | **How to wire a VFD** (flagship, sets the template) · Wire-sizing walkthrough (cst-driven: ampacity + voltage drop + Art. 430) · Panel grounding & bonding practice · Noise & EMC mitigation | **Done 2026-07-11** (Review pending) |
 | 2 — Controllers & I/O | 39 | PLC wiring (power, DI/DO, sourcing/sinking, commons, fusing) · Remote I/O stations (network + power + commons across drops) · IPC / industrial PC (power/UPS, grounding, environment, ports) · 4–20 mA current loops (2/3/4-wire, loop power, shields, isolators) · 0–10 V signals (when voltage is acceptable, commons, distance limits) | Planned |
 | 3 — Motion & feedback | 40 | Servo drive wiring (power, motor, feedback, STO, brake) · Encoder wiring (differential vs single-ended, TTL/HTL, cable spec, shields) | Planned |
 | 4 — Infrastructure & safety | 41 | Communication cable installation (Ethernet/RS-485/PROFIBUS field practice in machines — routing, termination, segregation; cross-links the communications physical-layer pages) · Safety circuit wiring (e-stop chains, safety relays, monitored reset) · Motor starters (DOL/reversing/star-delta) · Control power distribution (CPT vs PSU, fusing scheme) · RTD & thermocouple wiring | Planned |

@@ -1,7 +1,22 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-11 (Phase 37 — repo-wide governance documentation)
+**Last Updated:** 2026-07-11 (Phase 38 — Wiring & Installation Guides, Wave 1 complete)
 **Status:** Active
+
+## 2026-07-11 — Phase 38 — Wiring & Installation Guides program + Wave 1
+
+**Type:** New content genre (owner roadmap: consolidate practical control-system knowledge)
+**Status:** Complete on `feat/phase38-wiring-guides`.
+
+- **Program formalized:** `governance/ROADMAP.md` — full device matrix across 4 waves (VFD/sizing/grounding/EMC → PLCs/IPCs/remote-I/O/4-20mA/0-10V → servo/encoders → comm cables/safety/starters/control-power/RTD-TC), then troubleshooting engine, IEC 61131-3, comms expansion. Includes the knowledge-intake loop (rough field notes in work/ → agent-normalized into corpus via promotion checklist → guides). Wiring-guide page template added to CONTENT_STANDARDS §5 with genre rules (safety notice, consult-the-manual refrain, generally-accepted-practice labeling).
+- **New corpus module** `rag/design_framework/wiring_practices/` — 4 source notes (vfd_wiring, wire_sizing_workflow, panel_grounding_bonding, emc_noise_mitigation; ~470 lines) with RAG headers, chapter/article-level citations only, field practice flagged. Mirror re-synced (287 files).
+- **4 site guides** at `docs/design/wiring/` (+ section index showing planned waves; Design nav group):
+  - How to Wire a VFD (260 lines, flagship) — line/load/control/brake terminal groups, table-FLC-vs-nameplate sizing via cst, inverter-duty cable + 360° shields, reflected wave, megger-before-connecting warning
+  - Wire Sizing Walkthrough (247) — nameplate→conductor→OCPD→overload worked with REAL cst outputs (SAMPLE-data warning shown)
+  - Panel Grounding & Bonding (180) — the three conflated jobs; shield one-end-vs-both-ends physics; table numbers cited, never values; writer corrected a corpus clause number against the published IEC 60204-1 edition
+  - Noise & EMC Mitigation (192) — coupling mechanisms, separate/shield/filter hierarchy, 4-class separation table, flyback-diode drop-out caveat for safety circuits
+- All guides at "Review pending"; validation: clean build (338 files), zero broken links, boundary-validator baseline unchanged, 145 tests pass.
+
 
 ## 2026-07-11 — Phase 37 — Governance documentation (binding standards for humans and AI)
 

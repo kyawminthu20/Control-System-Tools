@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-11 09:42:21
+**Last Auto-Updated:** 2026-07-11 09:56:32
 
 ```text
 ├── .claude/
@@ -143,7 +143,10 @@
 │   │   │   │   └── treatment_and_discharge.md
 │   │   │   └── wiring_practices/
 │   │   │       ├── README.md
-│   │   │       └── vfd_wiring.md
+│   │   │       ├── emc_noise_mitigation.md
+│   │   │       ├── panel_grounding_bonding.md
+│   │   │       ├── vfd_wiring.md
+│   │   │       └── wire_sizing_workflow.md
 │   │   ├── meta/
 │   │   │   ├── RAG_DIRECTORY_STATUS.md
 │   │   │   └── VERSION_OVERVIEW.md
@@ -712,15 +715,20 @@
 │   │   │   │   ├── us_eu_compliance_wizard/
 │   │   │   │   │   ├── US_EU_Machine_Compliance_Wizard.md
 │   │   │   │   │   └── us_eu_delta_report_template.md
-│   │   │   │   └── water_wastewater/
-│   │   │   │       ├── chemical_dosing.md
-│   │   │   │       ├── distribution_scada_telemetry.md
-│   │   │   │       ├── equalization_and_neutralization.md
-│   │   │   │       ├── filtration_and_clarification.md
-│   │   │   │       ├── instrumentation_reference.md
-│   │   │   │       ├── intake_and_pumping.md
-│   │   │   │       ├── overview_and_standards.md
-│   │   │   │       └── treatment_and_discharge.md
+│   │   │   │   ├── water_wastewater/
+│   │   │   │   │   ├── chemical_dosing.md
+│   │   │   │   │   ├── distribution_scada_telemetry.md
+│   │   │   │   │   ├── equalization_and_neutralization.md
+│   │   │   │   │   ├── filtration_and_clarification.md
+│   │   │   │   │   ├── instrumentation_reference.md
+│   │   │   │   │   ├── intake_and_pumping.md
+│   │   │   │   │   ├── overview_and_standards.md
+│   │   │   │   │   └── treatment_and_discharge.md
+│   │   │   │   └── wiring_practices/
+│   │   │   │       ├── emc_noise_mitigation.md
+│   │   │   │       ├── panel_grounding_bonding.md
+│   │   │   │       ├── vfd_wiring.md
+│   │   │   │       └── wire_sizing_workflow.md
 │   │   │   ├── meta/
 │   │   │   │   ├── RAG_DIRECTORY_STATUS.md
 │   │   │   │   └── VERSION_OVERVIEW.md
@@ -1073,8 +1081,14 @@
 │   │   │   └── index.md
 │   │   ├── wiring/
 │   │   │   ├── emc-noise-mitigation/
+│   │   │   │   └── index.md
+│   │   │   ├── grounding-bonding/
+│   │   │   │   └── index.md
 │   │   │   ├── index.md
-│   │   │   └── vfd/
+│   │   │   ├── vfd/
+│   │   │   │   └── index.md
+│   │   │   └── wire-sizing/
+│   │   │       └── index.md
 │   │   └── workflows/
 │   │       ├── electrical-review/
 │   │       │   └── index.md
