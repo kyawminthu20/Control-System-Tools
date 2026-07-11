@@ -5,12 +5,13 @@ description: "Route from your project, lifecycle stage, or market to the standar
 ---
 
 <section class="home-hero">
-  <span class="home-hero__label">Control System Standards Atlas</span>
+  <span class="home-hero__label">Control Systems Engineering Field Guide</span>
   <h1 class="home-hero__title">Find the right standards path for your machine, panel, or safety system.</h1>
   <p class="home-hero__subtitle">
-    Start from your project type, lifecycle stage, or market and route to the standards,
-    workflows, and training pages that matter. Evidence-grade references — not a substitute
-    for the published standards or your authority having jurisdiction.
+    Practical standards guidance, design workflows, commissioning references, and engineering
+    tools for industrial automation. Start from your project type, lifecycle stage, or market —
+    an independent educational reference, not a substitute for the published standards or your
+    authority having jurisdiction.
   </p>
   <div class="home-hero__ctas">
     <a href="{{ '/tools/standards-finder/' | relative_url }}" class="hero__cta">Find applicable standards &rarr;</a>
@@ -93,7 +94,7 @@ description: "Route from your project, lifecycle stage, or market to the standar
       <span class="scenario-card__num">Scenario 03</span>
       <span class="scenario-card__title">Process Skid Shutdown System</span>
       <p class="scenario-card__start"><strong>Start with:</strong> IEC 61511 + IEC 61508 foundation</p>
-      <p style="font-size:0.78rem;color:var(--color-text-muted);">SIS / ESD for process industry. IEC 61511 is the application standard; IEC 61508 is the lifecycle foundation. <span class="badge badge--complete">CORPUS COMPLETE</span></p>
+      <p style="font-size:0.78rem;color:var(--color-text-muted);">SIS / ESD for process industry. IEC 61511 is the application standard; IEC 61508 is the lifecycle foundation. <span class="badge badge--complete">REVIEWED</span></p>
       <a href="{{ '/tools/scenarios/process-skid/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
     </div>
 
@@ -109,7 +110,7 @@ description: "Route from your project, lifecycle stage, or market to the standar
       <span class="scenario-card__num">Scenario 05</span>
       <span class="scenario-card__title">Semiconductor Equipment Compliance</span>
       <p class="scenario-card__start"><strong>Start with:</strong> 15-Standard Minimum Compliance Stack</p>
-      <p style="font-size:0.78rem;color:var(--color-text-muted);">Complex compliance stack for fab equipment. SEMI S2/S8/S14 in the local corpus alongside the industry overlay.</p>
+      <p style="font-size:0.78rem;color:var(--color-text-muted);">Complex compliance stack for fab equipment. SEMI S2/S8/S14 in the reference library alongside the industry overlay.</p>
       <a href="{{ '/tools/scenarios/semiconductor-equipment/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
     </div>
   </div>
@@ -141,7 +142,7 @@ description: "Route from your project, lifecycle stage, or market to the standar
       <span class="card__title">ISO 12100 · 13849-1 · IEC 62061 · 61508 · 61511</span>
       <p class="card__desc">Risk assessment and safety function design. PL path via ISO 13849-1; SIL path via IEC 62061 or IEC 61511 for process.</p>
       <a href="{{ '/standards/functional-safety/' | relative_url }}" class="card__link">View family &rarr;</a>
-      <span class="badge badge--complete">Complete</span>
+      <span class="badge badge--complete">Reviewed</span>
     </div>
 
     <div class="card">
@@ -265,7 +266,7 @@ description: "Route from your project, lifecycle stage, or market to the standar
 </section>
 
 <details class="home-deep-dive">
-  <summary>For power users — standards graph and repository layout</summary>
+  <summary>For power users — standards graph and source browser</summary>
 
   <section class="home-section" style="margin-top:1.5rem;">
     <h2 style="font-size:1.1rem;">Standards relationship graph</h2>
@@ -274,36 +275,13 @@ description: "Route from your project, lifecycle stage, or market to the standar
   </section>
 
   <section class="home-section">
-    <h2 style="font-size:1.1rem;">Repository layout</h2>
-    <p class="home-section__intro">Source of truth is <code>control-standards/rag/</code>. The site layer never modifies it.</p>
-
-    <div class="repo-tree">
-<pre>control-standards/rag/standards_intelligence/
-├── _index.yaml               ← master index (standards, routing, status)
-├── _standards_map.md         ← applicability decision matrix
-├── us/
-│   ├── nec/                  ← NEC (NFPA 70) 2023
-│   ├── nfpa79/               ← NFPA 79 2024 — 20 chapters
-│   └── ul_508a/              ← UL 508A 2022 — 11 sections
-├── international/
-│   ├── machinery/
-│   │   └── iec_60204_1/      ← IEC 60204-1:2018 — 15 clauses
-│   ├── functional_safety/
-│   │   ├── iso_13849_1/      ← ISO 13849-1:2023 [complete]
-│   │   ├── iso_12100/        ← ISO 12100:2010 [complete]
-│   │   ├── iec_62061/        ← IEC 62061:2021 [complete]
-│   │   ├── iec_61508/        ← IEC 61508:2010 [complete]
-│   │   └── iec_61511/        ← IEC 61511:2016 [complete]
-│   ├── hazardous_area/
-│   │   └── iec_60079/        ← IEC 60079 series — 6 parts
-│   └── semiconductor/
-│       └── semi/             ← SEMI S2/S8/S14 — 3 standards
-├── crosswalks/
-│   └── overlap_matrix/       ← NFPA79↔IEC60204, UL508A/NEC, decision workflow
-├── reference_models/         ← 7-layer arch, safety arch, 15-std stack, diagrams
-├── routing/                  ← standards applicability routing
-└── scenario/                 ← example engineering packages</pre>
-    </div>
+    <h2 style="font-size:1.1rem;">Source material</h2>
+    <p class="home-section__intro">
+      Every page is backed by the project's reference library of clause-level source notes.
+      Browse the raw notes in the <a href="{{ '/tools/rag-browser/' | relative_url }}">source browser</a>,
+      or read how content is produced and reviewed on the
+      <a href="{{ '/about/' | relative_url }}">About &amp; methodology page</a>.
+    </p>
   </section>
 
 </details>

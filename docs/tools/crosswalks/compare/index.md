@@ -53,7 +53,7 @@ redirect_from:
 </div>
 
 <p class="compare-no-data" id="compare-no-data" hidden>
-  No documented crosswalk exists for this pair in the local corpus.
+  No documented crosswalk exists for this pair in the reference library.
   See the <a href="{{ '/tools/crosswalks/' | relative_url }}">Crosswalks index</a> for available comparisons,
   or consult <a href="{{ '/standards/' | relative_url }}">individual standard pages</a> for relationship context.
 </p>

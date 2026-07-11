@@ -33,14 +33,14 @@ redirect_from:
 | **Safety standard** | IEC 61511 (application) + IEC 61508 (foundation) |
 | **Corpus coverage** | IEC 61511 and IEC 61508 functional-safety pages are present; IEC 60079 coverage is available for hazardous-area routing |
 
-**Important note:** The local RAG corpus covers the IEC 61511 routing and lifecycle basics needed to place a process skid on the correct standards path. Project SIL calculations, proof-test intervals, and hazardous-area design details still need direct engineering verification against the published standards and the plant basis of design.
+**Important note:** The project reference library covers the IEC 61511 routing and lifecycle basics needed to place a process skid on the correct standards path. Project SIL calculations, proof-test intervals, and hazardous-area design details still need direct engineering verification against the published standards and the plant basis of design.
 
 ## Starting Standards
 
 | Standard | Role | Status |
 |----------|------|--------|
-| **IEC 61511 2016** | SIS application standard for process industry | <span class="badge badge--complete">Complete</span> |
-| **IEC 61508 2010** | Foundation safety lifecycle standard | <span class="badge badge--complete">Complete</span> |
+| **IEC 61511 2016** | SIS application standard for process industry | <span class="badge badge--complete">Reviewed</span> |
+| **IEC 61508 2010** | Foundation safety lifecycle standard | <span class="badge badge--complete">Reviewed</span> |
 | **NEC / local code** | Electrical installation | Complete for US |
 | **IEC 60204-1** | Machine electrical (if machine elements present) | Complete |
 

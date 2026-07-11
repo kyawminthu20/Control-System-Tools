@@ -3,7 +3,7 @@
 This repository combines two related concerns:
 
 - an industrial automation standards intelligence knowledge base, published as a
-  static site (the **Standards Atlas**, live on GitHub Pages)
+  static site (the **Control Systems Engineering Field Guide**, live on GitHub Pages)
 - a Python engineering tools suite (the **`cst` package**) built on top of that
   knowledge: standards-cited calculators, motion utilities, and (planned)
   panel-design and commissioning generators

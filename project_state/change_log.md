@@ -1,7 +1,26 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-11 (Phase 31 — IA restructure: 7 unified sections, lifecycle reunified)
+**Last Updated:** 2026-07-11 (Phase 32 — trust & language pass; Field Guide identity; Phases 33–36 planned)
 **Status:** Active
+
+## 2026-07-11 — Phase 32 — Trust & language pass (from external site review)
+
+**Type:** Site identity, status vocabulary, and public-language overhaul
+**Status:** Complete on `feat/phase32-trust-language`.
+**Source:** External review saved at `planning/2026-07-10-external-site-review.md` (4 concatenated proposals: site review, homepage rewrite, manufacturer directory, industrial communications section). Review was written against the stale May build and assumes MkDocs — recommendations validated claim-by-claim; several were already fixed (Phase 29 badges, Phase 31 nav) or false positives (Mermaid "broken" = reviewer scraped without JS).
+
+**User decisions:** identity renamed to **"Control Systems Engineering Field Guide"** (brand: "CS Field Guide"; repo/URL unchanged); 5-term status vocabulary (Reviewed / Partial coverage / Review pending / Needs revalidation / Planned); sequencing Phase 33→34→35→36.
+
+**Changes:**
+- Identity: `_config.yml` title/description, topnav brand, homepage hero label + subtitle
+- Status vocabulary swept across 33 site pages: Complete→Reviewed, TO VERIFY→Review pending, NOT IN CORPUS→Not yet covered, CORPUS COMPLETE→REVIEWED; "RAG corpus"/"local corpus"→"reference library". Corpus mirror (rag-files) deliberately untouched — corpus keeps internal authoring flags; site is presentation layer only
+- Context panel: "Repository Path"→"Source Notes"; content-status blurb de-jargonized. Trust-boundary include rewritten (independent educational reference; new badge legend)
+- Homepage: repository tree removed from the power-user block (replaced with source-browser + About links)
+- Overconfident-language pass on lifecycle index: "mandatory"→calibrated should-normally-follow wording; independence "required at SIL 2+"→varies-by-standard wording; "non-negotiable principles" softened; `_standards_map.md` internal reference→Standards Finder link
+- Applicability caveat added under the Quick Decision table (AHJ, listing, local adoption, hazloc, customer specs, equipment/installation boundary)
+- About page fully rewritten: calibrated author bio + non-affiliation statement, honest methodology section (AI-assisted drafting + author curation + promotion checklist), 5-term status table, corrected Known Gaps (old table still claimed functional-safety/SEMI/IEC 60079 were missing — stale by 3+ months), 8-item not-a-substitute-for notice, repo/issues links
+
+**Planned next (from the same review):** Phase 33 page-metadata blocks + general-vs-safety lifecycle separation; Phase 34 templates/tools surface (cst-generated downloads); Phase 35 Industrial Communications section (12-page first release); Phase 36 curated manufacturer directory. Rejected: MkDocs migration, all-protocols-at-once, "all manufacturers" claim.
 
 ## 2026-07-11 — Phase 31 — Information-architecture restructure (user-approved)
 

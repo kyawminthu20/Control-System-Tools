@@ -35,7 +35,7 @@ repo_path: "control-standards/rag/standards_intelligence/scenario/mini_machine_s
 | **Markets** | US and international |
 | **Special concern** | Outdoor installation, process safety, cybersecurity |
 
-> **Corpus note:** This overlay is strongest when it separates machine electrical scope from plant, process, and grid obligations. Detailed NERC CIP, IEC 61850, and utility-owner requirements are not in the local corpus.
+> **Corpus note:** This overlay is strongest when it separates machine electrical scope from plant, process, and grid obligations. Detailed NERC CIP, IEC 61850, and utility-owner requirements are not in the reference library.
 
 ---
 
@@ -76,11 +76,11 @@ Is the package installed outdoors or in a substation / yard environment?
 
 | Category | Standards | Corpus Status |
 |----------|-----------|---------------|
-| US electrical | NEC, NFPA 79, UL 508A | <span class="badge badge--complete">Complete</span> |
-| International electrical | IEC 60204-1 | <span class="badge badge--complete">Complete</span> |
-| Risk assessment | ISO 12100 | Planned <span class="badge badge--verify">TO VERIFY</span> |
-| Process safety | IEC 61511 | Limited coverage <span class="badge badge--verify">TO VERIFY</span> |
-| Cybersecurity | IEC 62443 | Routing reference <span class="badge badge--verify">TO VERIFY</span> |
+| US electrical | NEC, NFPA 79, UL 508A | <span class="badge badge--complete">Reviewed</span> |
+| International electrical | IEC 60204-1 | <span class="badge badge--complete">Reviewed</span> |
+| Risk assessment | ISO 12100 | Planned <span class="badge badge--verify">Review pending</span> |
+| Process safety | IEC 61511 | Limited coverage <span class="badge badge--verify">Review pending</span> |
+| Cybersecurity | IEC 62443 | Routing reference <span class="badge badge--verify">Review pending</span> |
 | Grid / utility integration | NERC CIP, IEC 61850 | Not in corpus |
 
 ---

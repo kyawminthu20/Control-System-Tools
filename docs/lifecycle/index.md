@@ -157,9 +157,11 @@ Without those answers, every design decision is either a guess or a rework liabi
 | Software-only change to a safety PLC program | Stage 12 (MOC) → Stage 4.5 — software safety lifecycle re-engaged |
 | Periodic proof testing reveals degradation | Stage 11 — maintenance lifecycle, may trigger MOC if repair changes the function |
 
-### Projects That Require This Lifecycle
+### Projects That Should Follow This Lifecycle
 
-To be explicit — if **any** of the following are true, this lifecycle is mandatory:
+Projects involving safety-related control functions should normally follow a documented
+functional-safety lifecycle appropriate to the applicable standard. If **any** of the
+following are true, plan on it:
 
 - The system includes a safety-rated controller, relay, interlock, or SIS
 - The project scope references ISO 13849, IEC 62061, IEC 61508, or IEC 61511
@@ -173,7 +175,7 @@ To be explicit — if **any** of the following are true, this lifecycle is manda
 
 ## 5. Roles and Responsibilities Overview
 
-This lifecycle requires involvement from multiple disciplines. No single engineer owns every stage.
+This lifecycle draws on multiple disciplines; in practice no single engineer covers every stage well, even where a small team formally could.
 
 | Role | Primary Involvement |
 |------|-------------------|
@@ -184,7 +186,7 @@ This lifecycle requires involvement from multiple disciplines. No single enginee
 | **Software / Controls Programmer** | Owns Stage 4.5 safety application logic, contributes to Stage 10 V&V |
 | **Commissioning Engineer** | Owns Stages 9–10, executes pre-commissioning checklists and FAT/SAT |
 | **End User / Operations** | Participates in Stage 3 (they know the real-world use and foreseeable misuse), owns Stage 11 maintenance |
-| **Independent Verifier** | Reviews and verifies deliverables at gate points — should not be the same person who designed the safety function (required at SIL 2+ per IEC 61508/61511, best practice at any level) |
+| **Independent Verifier** | Reviews and verifies deliverables at gate points — normally not the person who designed the safety function. Independence requirements vary by applicable standard, integrity level, lifecycle phase, and organizational structure; confirm against the governing edition |
 
 ---
 
@@ -223,13 +225,13 @@ This lifecycle is built on the requirements of the following hierarchy:
     └──────────────┘ └──────────────┘ └──────────────────┘
 ```
 
-The selection of which pathway (PL vs SIL) and which implementation standards apply is determined at **Stage 2 (Standards Selection)** and confirmed at **Stage 3 (Risk Assessment)**. The routing logic is documented in your `_standards_map.md`.
+The selection of which pathway (PL vs SIL) and which implementation standards apply is determined at **Stage 2 (Standards Selection)** and confirmed at **Stage 3 (Risk Assessment)**. See the [Standards Finder]({{ '/tools/standards-finder/' | relative_url }}) for the selection logic.
 
 ---
 
 ## 7. Key Principles Governing This Lifecycle
 
-These are non-negotiable principles. If a project deviates from any of them, it must be documented and justified.
+These principles hold across the functional-safety standards this lifecycle draws on. Where a project deviates from one, the deviation should be documented and justified against the governing standard.
 
 **1. Safety is designed in, not tested in.**
 The lifecycle front-loads analysis and specification. Commissioning testing verifies what was designed — it does not discover what should have been designed.

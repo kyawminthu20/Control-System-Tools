@@ -31,6 +31,13 @@ Semiconductor tool / fab?    → SEMI S2/S8/S14 + IEC 60204-1 + NFPA 79
 Global (US + EU)?            → NFPA 79 + IEC 60204-1 + ISO 13849-1 (design to most restrictive)
 ```
 
+> **Applicability note:** these are common starting points, not complete determinations.
+> Actual applicability also depends on the authority having jurisdiction, listing
+> requirements, state/local code adoption, hazardous-location classification,
+> customer specifications, product-specific standards, and where the equipment
+> boundary ends and the installation begins. Confirm the governing editions for
+> your project before relying on any row above.
+
 ---
 
 ## US Electrical Standards
@@ -59,11 +66,11 @@ Global (US + EU)?            → NFPA 79 + IEC 60204-1 + ISO 13849-1 (design to 
 
 | Standard | Edition | Scope | Status |
 |----------|---------|-------|--------|
-| [ISO 12100]({{ '/standards/functional-safety/iso-12100/' | relative_url }}) | 2010 | Risk assessment and risk reduction | <span class="badge badge--complete">Complete</span> |
-| [ISO 13849-1]({{ '/standards/functional-safety/iso-13849-1/' | relative_url }}) | 2023 | Safety of machinery — PL approach | <span class="badge badge--complete">Complete</span> |
-| [IEC 62061]({{ '/standards/functional-safety/iec-62061/' | relative_url }}) | 2021 | Functional safety — machinery SIL approach | <span class="badge badge--complete">Complete</span> |
-| [IEC 61508]({{ '/standards/functional-safety/iec-61508/' | relative_url }}) | 2010 | Functional safety of E/E/PE systems | <span class="badge badge--complete">Complete</span> |
-| [IEC 61511]({{ '/standards/functional-safety/iec-61511/' | relative_url }}) | 2016 | Functional safety — process industry | <span class="badge badge--complete">Complete</span> |
+| [ISO 12100]({{ '/standards/functional-safety/iso-12100/' | relative_url }}) | 2010 | Risk assessment and risk reduction | <span class="badge badge--complete">Reviewed</span> |
+| [ISO 13849-1]({{ '/standards/functional-safety/iso-13849-1/' | relative_url }}) | 2023 | Safety of machinery — PL approach | <span class="badge badge--complete">Reviewed</span> |
+| [IEC 62061]({{ '/standards/functional-safety/iec-62061/' | relative_url }}) | 2021 | Functional safety — machinery SIL approach | <span class="badge badge--complete">Reviewed</span> |
+| [IEC 61508]({{ '/standards/functional-safety/iec-61508/' | relative_url }}) | 2010 | Functional safety of E/E/PE systems | <span class="badge badge--complete">Reviewed</span> |
+| [IEC 61511]({{ '/standards/functional-safety/iec-61511/' | relative_url }}) | 2016 | Functional safety — process industry | <span class="badge badge--complete">Reviewed</span> |
 
 <p><a href="{{ '/standards/functional-safety/' | relative_url }}">View Functional Safety family page &rarr;</a></p>
 
@@ -83,7 +90,7 @@ Global (US + EU)?            → NFPA 79 + IEC 60204-1 + ISO 13849-1 (design to 
 
 | Standard | Publisher | Scope | Status |
 |----------|-----------|-------|--------|
-| [IEC 60079 (6 parts)]({{ '/standards/hazardous-area/iec-60079/' | relative_url }}) | IEC | Explosive atmosphere equipment and installation | <span class="badge badge--complete">Complete</span> |
+| [IEC 60079 (6 parts)]({{ '/standards/hazardous-area/iec-60079/' | relative_url }}) | IEC | Explosive atmosphere equipment and installation | <span class="badge badge--complete">Reviewed</span> |
 
 <p><a href="{{ '/standards/hazardous-area/' | relative_url }}">View Hazardous Area family page &rarr;</a></p>
 
@@ -93,7 +100,7 @@ Global (US + EU)?            → NFPA 79 + IEC 60204-1 + ISO 13849-1 (design to 
 
 | Standard | Publisher | Scope | Status |
 |----------|-----------|-------|--------|
-| [SEMI S2 / S8 / S14]({{ '/standards/semiconductor/semi/' | relative_url }}) | SEMI | Semiconductor equipment safety, ergonomics, fire risk | <span class="badge badge--complete">Complete</span> |
+| [SEMI S2 / S8 / S14]({{ '/standards/semiconductor/semi/' | relative_url }}) | SEMI | Semiconductor equipment safety, ergonomics, fire risk | <span class="badge badge--complete">Reviewed</span> |
 
 <p><a href="{{ '/standards/semiconductor/' | relative_url }}">View Semiconductor family page &rarr;</a></p>
 

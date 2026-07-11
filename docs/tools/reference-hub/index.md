@@ -60,5 +60,5 @@ redirect_from:
 </div>
 
 <div style="margin-top:2rem; font-size:0.9rem; color:var(--color-text-muted);">
-These reference models are derived from the canonical RAG corpus at <code>control-standards/rag/</code>. They are design aids, not authoritative standards documents. Always verify against the applicable standard and OEM documentation.
+These reference models are derived from the canonical reference library at <code>control-standards/rag/</code>. They are design aids, not authoritative standards documents. Always verify against the applicable standard and OEM documentation.
 </div>

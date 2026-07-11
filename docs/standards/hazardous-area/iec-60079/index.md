@@ -104,7 +104,7 @@ Equipment marked **IIC** is suitable for any gas group (it satisfies the most de
 
 ## Corpus Coverage
 
-The RAG corpus carries six core parts of the IEC 60079 series — the parts most-consulted by control and process-safety engineers. Other parts of the family are referenced in equipment markings but not held in depth.
+The reference library carries six core parts of the IEC 60079 series — the parts most-consulted by control and process-safety engineers. Other parts of the family are referenced in equipment markings but not held in depth.
 
 | Part | Title | Corpus |
 |------|-------|--------|

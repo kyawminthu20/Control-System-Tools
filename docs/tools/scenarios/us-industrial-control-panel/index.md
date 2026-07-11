@@ -222,4 +222,4 @@ Audit reminder: enclosure label ≠ panel listing mark ≠ external nameplate. A
 
 - This scenario assumes a US-only market panel. For EU or global markets, see [Scenario 02]({{ '/tools/scenarios/global-machine/' | relative_url }}).
 - Safety function design (PL/SIL) is not the primary focus of this scenario. If safety functions are required, add ISO 13849-1 and see [Scenario 04]({{ '/tools/scenarios/networked-safety-plc/' | relative_url }}).
-- Content is derived from the local RAG corpus. Verify against current published editions of each standard.
+- Content is derived from the project's reference library. Verify against current published editions of each standard.

@@ -31,7 +31,7 @@ repo_path: "control-standards/rag/standards_intelligence/scenario/mini_machine_s
 | **Markets** | US (NRC) and international (IAEA) |
 | **Special concern** | Nuclear QA (10 CFR 50 Appendix B), seismic qualification, strict traceability |
 
-> **Corpus note:** The local corpus helps with general electrical workmanship, panel construction, and verification structure. It does not contain the nuclear safety, QA, software, independence, or qualification standards needed for reactor or important-to-safety I&C decisions.
+> **Corpus note:** The reference library helps with general electrical workmanship, panel construction, and verification structure. It does not contain the nuclear safety, QA, software, independence, or qualification standards needed for reactor or important-to-safety I&C decisions.
 
 ---
 
@@ -71,8 +71,8 @@ Does the equipment need seismic or environmental qualification?
 
 | Category | Standards | Corpus Status |
 |----------|-----------|---------------|
-| US electrical baseline | NEC | <span class="badge badge--complete">Complete</span> |
-| International electrical baseline | IEC 60204-1 | <span class="badge badge--complete">Complete</span> |
+| US electrical baseline | NEC | <span class="badge badge--complete">Reviewed</span> |
+| International electrical baseline | IEC 60204-1 | <span class="badge badge--complete">Reviewed</span> |
 | Nuclear QA | 10 CFR 50 Appendix B | Not in corpus |
 | Nuclear I&C | IEEE 603, IEEE 7-4.3.2 | Not in corpus |
 | IEC nuclear I&C | IEC 61513, IEC 62138 | Not in corpus |

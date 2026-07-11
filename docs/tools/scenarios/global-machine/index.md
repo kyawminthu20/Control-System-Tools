@@ -43,8 +43,8 @@ redirect_from:
 |----------|--------|--------|
 | **NFPA 79 2024** | US | Complete in corpus |
 | **IEC 60204-1 2018** | EU / International | Complete in corpus |
-| **ISO 12100 2010** | EU (CE marking foundation) | Planned <span class="badge badge--verify">TO VERIFY</span> |
-| **ISO 13849-1 2023** | Both (if safety functions) | Planned <span class="badge badge--verify">TO VERIFY</span> |
+| **ISO 12100 2010** | EU (CE marking foundation) | Planned <span class="badge badge--verify">Review pending</span> |
+| **ISO 13849-1 2023** | Both (if safety functions) | Planned <span class="badge badge--verify">Review pending</span> |
 
 ## Design Strategy
 
@@ -73,9 +73,9 @@ For each topic area:
 
 CE marking under the Machinery Directive (2006/42/EC) requires:
 
-1. **ISO 12100 risk assessment** (first, always) <span class="badge badge--verify">TO VERIFY</span>
+1. **ISO 12100 risk assessment** (first, always) <span class="badge badge--verify">Review pending</span>
 2. **IEC 60204-1** for electrical equipment requirements
-3. **ISO 13849-1 or IEC 62061** if safety functions exist <span class="badge badge--verify">TO VERIFY</span>
+3. **ISO 13849-1 or IEC 62061** if safety functions exist <span class="badge badge--verify">Review pending</span>
 4. Technical file and Declaration of Conformity
 
 ## Repository Paths

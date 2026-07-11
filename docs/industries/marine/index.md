@@ -28,7 +28,7 @@ related_standards:
 | **Markets** | International (IMO flag-state system) |
 | **Special concerns** | Class society approval, flag-state authority, IMO regulations, marine environment rating |
 
-> **Corpus note:** IEC 60092 (Electrical Installations in Ships) is not yet in the RAG corpus. This page covers the framework and key concepts. For detailed IEC 60092 requirements, consult the standard directly.
+> **Corpus note:** IEC 60092 (Electrical Installations in Ships) is not yet in the reference library. This page covers the framework and key concepts. For detailed IEC 60092 requirements, consult the standard directly.
 
 ---
 
@@ -53,9 +53,9 @@ Marine vessels operate under a layered regulatory system unlike any onshore indu
 |----------|----------|--------|
 | Electrical installations on ships | IEC 60092 series | Not in corpus — consult directly |
 | Machinery control automation | IEC 60092-504 | Not in corpus |
-| Process safety (SIS on tankers) | IEC 61511 | <span class="badge badge--complete">Complete</span> |
-| Hazardous area (tankers, gas carriers) | IEC 60079 series | <span class="badge badge--complete">Complete</span> |
-| Functional safety (machinery) | IEC 62061 / ISO 13849-1 | <span class="badge badge--complete">Complete</span> |
+| Process safety (SIS on tankers) | IEC 61511 | <span class="badge badge--complete">Reviewed</span> |
+| Hazardous area (tankers, gas carriers) | IEC 60079 series | <span class="badge badge--complete">Reviewed</span> |
+| Functional safety (machinery) | IEC 62061 / ISO 13849-1 | <span class="badge badge--complete">Reviewed</span> |
 | IMO fire safety | SOLAS Chapter II-2 | Not in corpus |
 
 ---

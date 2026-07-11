@@ -78,12 +78,12 @@ Is the tool connected to fab host or remote network?
 
 | Category | Standards | Corpus Status |
 |----------|-----------|---------------|
-| Risk assessment | ISO 12100 | <span class="badge badge--complete">Complete</span> |
-| Safety functions | ISO 13849-1 (PLd typical for tools) | <span class="badge badge--complete">Complete</span> |
-| Machine electrical (international) | IEC 60204-1 | <span class="badge badge--complete">Complete</span> |
-| US electrical | NEC, NFPA 79, UL 508A | <span class="badge badge--complete">Complete</span> |
-| Semiconductor-specific | SEMI S2, S8, S14 | <span class="badge badge--complete">Complete</span> |
-| Cybersecurity | IEC 62443 | <span class="badge badge--complete">Complete</span> |
+| Risk assessment | ISO 12100 | <span class="badge badge--complete">Reviewed</span> |
+| Safety functions | ISO 13849-1 (PLd typical for tools) | <span class="badge badge--complete">Reviewed</span> |
+| Machine electrical (international) | IEC 60204-1 | <span class="badge badge--complete">Reviewed</span> |
+| US electrical | NEC, NFPA 79, UL 508A | <span class="badge badge--complete">Reviewed</span> |
+| Semiconductor-specific | SEMI S2, S8, S14 | <span class="badge badge--complete">Reviewed</span> |
+| Cybersecurity | IEC 62443 | <span class="badge badge--complete">Reviewed</span> |
 | Fab fire code | NFPA 318 | Not in corpus |
 
 ---

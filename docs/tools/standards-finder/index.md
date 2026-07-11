@@ -89,7 +89,7 @@ breadcrumb:
       <span class="scenario-card__num">Scenario 03</span>
       <span class="scenario-card__title">Process Skid Shutdown System</span>
       <p class="scenario-card__start"><strong>Stack:</strong> IEC 61511 + IEC 61508 foundation</p>
-      <p style="font-size:0.78rem;color:var(--color-text-muted);">SIS / ESD for general process industry. <span class="badge badge--complete">CORPUS COMPLETE</span></p>
+      <p style="font-size:0.78rem;color:var(--color-text-muted);">SIS / ESD for general process industry. <span class="badge badge--complete">REVIEWED</span></p>
       <a href="{{ '/tools/scenarios/process-skid/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
     </div>
     <div class="scenario-card" data-finder-region="us" data-finder-domain="process hazloc">

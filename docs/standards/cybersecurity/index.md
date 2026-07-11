@@ -69,6 +69,6 @@ Cybersecurity and functional safety are separate but interdependent disciplines 
 | Topic | Status |
 |-------|--------|
 | IEC 60079 (hazardous area) | <span class="badge badge--gap">NOT CONFIRMED IN CORPUS</span> |
-| NIST SP 800-82 (US OT security guide) | <span class="badge badge--gap">NOT IN CORPUS</span> |
-| NERC CIP (electric utility cybersecurity) | <span class="badge badge--gap">NOT IN CORPUS</span> |
-| ISA/IEC 62443 certification schemes | <span class="badge badge--gap">NOT IN CORPUS</span> — verify against ISASecure and TÜV certification bodies |
+| NIST SP 800-82 (US OT security guide) | <span class="badge badge--gap">Not yet covered</span> |
+| NERC CIP (electric utility cybersecurity) | <span class="badge badge--gap">Not yet covered</span> |
+| ISA/IEC 62443 certification schemes | <span class="badge badge--gap">Not yet covered</span> — verify against ISASecure and TÜV certification bodies |

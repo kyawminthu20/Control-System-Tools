@@ -37,7 +37,7 @@ repo_path: "control-standards/rag/standards_intelligence/scenario/mini_machine_s
 | **Markets** | US and international |
 | **Special concern** | Washdown environments, hygienic design, food-contact materials |
 
-> **Corpus note:** The local corpus is strong on machine electrical requirements, but it does not contain EHEDG, NSF, or 3-A hygienic design content. Use this page to define the electrical baseline and then add the sanitation-specific standards directly.
+> **Corpus note:** The reference library is strong on machine electrical requirements, but it does not contain EHEDG, NSF, or 3-A hygienic design content. Use this page to define the electrical baseline and then add the sanitation-specific standards directly.
 
 ---
 
@@ -78,10 +78,10 @@ Is the machine shipped globally?
 
 | Category | Standards | Corpus Status |
 |----------|-----------|---------------|
-| US electrical | NEC, NFPA 79, UL 508A | <span class="badge badge--complete">Complete</span> |
-| International electrical | IEC 60204-1 | <span class="badge badge--complete">Complete</span> |
-| Risk assessment | ISO 12100 | Planned <span class="badge badge--verify">TO VERIFY</span> |
-| Safety functions (guarding, E-stop) | ISO 13849-1 (PLd common) | Planned <span class="badge badge--verify">TO VERIFY</span> |
+| US electrical | NEC, NFPA 79, UL 508A | <span class="badge badge--complete">Reviewed</span> |
+| International electrical | IEC 60204-1 | <span class="badge badge--complete">Reviewed</span> |
+| Risk assessment | ISO 12100 | Planned <span class="badge badge--verify">Review pending</span> |
+| Safety functions (guarding, E-stop) | ISO 13849-1 (PLd common) | Planned <span class="badge badge--verify">Review pending</span> |
 | Hygienic design | EHEDG, NSF, or 3-A standards | Not in corpus |
 | IP ratings | IEC 60529 | Referenced; not separately covered |
 

@@ -30,7 +30,7 @@ This page is a **routing and implementation-boundary guide**. Key limits:
 - `IEC 61131-3` is a PLC programming language standard. It does **not** by itself create a SIL or PL claim.
 - SIL and PL claims apply to the full safety function chain: sensors, logic solver, software, final elements, diagnostics, and proof-test assumptions.
 - Redundancy, diagnostics, sensor count, and logging depth depend on the required risk reduction and architecture.
-- Detailed SIL calculations, hardware fault-tolerance tables, proof-test equations, and intrinsic-safety entity calculations are **not confirmed in this local corpus** — verify against the published standards.
+- Detailed SIL calculations, hardware fault-tolerance tables, proof-test equations, and intrinsic-safety entity calculations are **not confirmed in this reference library** — verify against the published standards.
 
 ---
 
@@ -370,7 +370,7 @@ For sensors, barriers, and I/O in classified locations, start with:
 - `IEC 60079-14` for installation design and erection
 - `IEC 60079-25` for intrinsically safe electrical systems
 
-These detailed rules are **not confirmed in the local corpus**. Verify against the published standards and the applicable US code or listing path where relevant.
+These detailed rules are **not confirmed in the reference library**. Verify against the published standards and the applicable US code or listing path where relevant.
 
 ---
 

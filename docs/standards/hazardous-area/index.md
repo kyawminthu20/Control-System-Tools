@@ -30,7 +30,7 @@ Both systems are valid in the US. IEC Zone is preferred for projects using ATEX/
 
 | Standard | Scope | Corpus Status |
 |----------|-------|--------------|
-| [IEC 60079 (6 parts)]({{ '/standards/hazardous-area/iec-60079/' | relative_url }}) | Explosive atmosphere equipment and installation | <span class="badge badge--complete">Complete</span> |
+| [IEC 60079 (6 parts)]({{ '/standards/hazardous-area/iec-60079/' | relative_url }}) | Explosive atmosphere equipment and installation | <span class="badge badge--complete">Reviewed</span> |
 | NEC Art. 500–505 | US hazardous location wiring | [See NEC page]({{ '/standards/us-electrical/nec/' | relative_url }}) |
 
 ---

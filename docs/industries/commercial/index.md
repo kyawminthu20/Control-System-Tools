@@ -74,10 +74,10 @@ Does the system connect to BAS or low-voltage building controls?
 
 | Category | Standards | Corpus Status |
 |----------|-----------|---------------|
-| US electrical | NEC | <span class="badge badge--complete">Complete</span> |
-| Building electrical | NEC commercial installation route | <span class="badge badge--complete">Complete</span> |
-| Panel construction | UL 508A | <span class="badge badge--complete">Complete</span> |
-| Machinery electrical | NFPA 79 (if machinery present) | <span class="badge badge--complete">Complete</span> |
+| US electrical | NEC | <span class="badge badge--complete">Reviewed</span> |
+| Building electrical | NEC commercial installation route | <span class="badge badge--complete">Reviewed</span> |
+| Panel construction | UL 508A | <span class="badge badge--complete">Reviewed</span> |
+| Machinery electrical | NFPA 79 (if machinery present) | <span class="badge badge--complete">Reviewed</span> |
 | Building codes | IBC, local building codes | Not in corpus |
 | HVAC | ASHRAE, NFPA 90A | Not in corpus |
 | Building automation | BACnet, LON | Not in corpus |

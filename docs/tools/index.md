@@ -9,7 +9,7 @@ breadcrumb:
 <div class="page-header">
   <span class="page-header__label">Tools</span>
   <h1>Tools</h1>
-  <p>Site-wide navigation and reference tools: browse the canonical RAG corpus, look up terms, compare related standards side-by-side, or jump into the consolidated reference hub.</p>
+  <p>Site-wide navigation and reference tools: browse the canonical reference library, look up terms, compare related standards side-by-side, or jump into the consolidated reference hub.</p>
 </div>
 
 <blockquote>
@@ -21,7 +21,7 @@ breadcrumb:
 <div class="workflow-card-grid">
   <div class="workflow-card">
     <h3><a href="{{ '/tools/rag-browser/' | relative_url }}">RAG File Browser</a></h3>
-    <p>Browse and read every markdown file in the canonical RAG corpus — standards intelligence, design framework, training modules, commissioning checklists, and crosswalks.</p>
+    <p>Browse and read every markdown file in the canonical reference library — standards intelligence, design framework, training modules, commissioning checklists, and crosswalks.</p>
   </div>
   <div class="workflow-card">
     <h3><a href="{{ '/tools/glossary/' | relative_url }}">Glossary</a></h3>

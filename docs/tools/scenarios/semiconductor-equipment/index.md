@@ -50,8 +50,8 @@ Source: `rag/reference_models/15-Standard Minimum Compliance Stack.md`
 
 | # | Standard | Purpose | Corpus Status |
 |---|----------|---------|---------------|
-| 1 | ISO 12100 | Risk assessment foundation | Planned <span class="badge badge--verify">TO VERIFY</span> |
-| 2 | ISO 13849-1 | Performance Level safety design | Planned <span class="badge badge--verify">TO VERIFY</span> |
+| 1 | ISO 12100 | Risk assessment foundation | Planned <span class="badge badge--verify">Review pending</span> |
+| 2 | ISO 13849-1 | Performance Level safety design | Planned <span class="badge badge--verify">Review pending</span> |
 | 3 | ISO 13850 | Emergency stop requirements | Not separately covered |
 | 4 | IEC 60204-1 | Electrical machine design | Complete |
 
@@ -67,8 +67,8 @@ Source: `rag/reference_models/15-Standard Minimum Compliance Stack.md`
 
 | # | Standard | Purpose | Corpus Status |
 |---|----------|---------|---------------|
-| 8 | IEC 62061 | SIL-based machinery safety | Planned <span class="badge badge--verify">TO VERIFY</span> |
-| 9 | IEC 61508 | Foundation standard | Planned <span class="badge badge--verify">TO VERIFY</span> |
+| 8 | IEC 62061 | SIL-based machinery safety | Planned <span class="badge badge--verify">Review pending</span> |
+| 9 | IEC 61508 | Foundation standard | Planned <span class="badge badge--verify">Review pending</span> |
 
 ### Domain 4 — Hazardous Materials and Gas Systems
 
@@ -76,16 +76,16 @@ Source: `rag/reference_models/15-Standard Minimum Compliance Stack.md`
 
 | # | Standard | Purpose | Corpus Status |
 |---|----------|---------|---------------|
-| 10 | SEMI S2 | Semiconductor equipment safety | <span class="badge badge--complete">Complete</span> |
-| 11 | SEMI S8 | Operator safety | <span class="badge badge--complete">Complete</span> |
-| 12 | SEMI S14 | Fire hazards in tools | <span class="badge badge--complete">Complete</span> |
+| 10 | SEMI S2 | Semiconductor equipment safety | <span class="badge badge--complete">Reviewed</span> |
+| 11 | SEMI S8 | Operator safety | <span class="badge badge--complete">Reviewed</span> |
+| 12 | SEMI S14 | Fire hazards in tools | <span class="badge badge--complete">Reviewed</span> |
 | — | NFPA 318 | Fab safety requirements | Not confirmed in corpus |
 
 ### Domain 5 — Cybersecurity
 
 | # | Standard | Purpose | Corpus Status |
 |---|----------|---------|---------------|
-| 13 | IEC 62443 | Industrial automation security | Routing reference <span class="badge badge--verify">TO VERIFY</span> |
+| 13 | IEC 62443 | Industrial automation security | Routing reference <span class="badge badge--verify">Review pending</span> |
 | 14 | NIST SP 800-82 | US ICS security guidance | Not in corpus |
 
 ---

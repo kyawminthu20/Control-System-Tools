@@ -26,5 +26,5 @@ redirect_from:
 </div>
 
 <div style="margin-top:2rem; font-size:0.9rem; color:var(--color-text-muted);">
-These checklists are derived from the canonical RAG corpus. They complement, but do not replace, OEM commissioning instructions, site LOTO procedures, and applicable standards.
+These checklists are derived from the canonical reference library. They complement, but do not replace, OEM commissioning instructions, site LOTO procedures, and applicable standards.
 </div>
