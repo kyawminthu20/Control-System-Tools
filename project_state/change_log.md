@@ -1,7 +1,19 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-11 (Phase 34 — templates & tools surface)
+**Last Updated:** 2026-07-11 (Phase 35 — Industrial Communications section, 12-page first release)
 **Status:** Active
+
+## 2026-07-11 — Phase 35 — Industrial Communications & Network Diagnostics (first release)
+
+**Type:** New site section (review Part D proposal, first-release scope per its R44)
+**Status:** Complete on `feat/phase35-communications`.
+
+- New top-level section `/communications/` (8th nav section, top nav + sidebar): 12 pages + index, each answering the review's six questions (what / where used / network design / configuration / commissioning / diagnostics) plus a common-faults table and related pages.
+- Pages: Ethernet fundamentals, managed switches, EtherNet/IP, Modbus TCP, PROFINET, OPC UA, BACnet/IP, Modbus RTU/RS-485, PROFIBUS DP, IO-Link, diagnostics methodology (8-step workflow, Wireshark can/cannot lists), packet-capture methods (workstation vs SPAN vs TAP vs hub, confidentiality warning: never share employer/customer captures).
+- Technical guardrails carried through: Modbus-protocol vs RS-485-physical-layer distinction explicit; serial buses documented as NOT Wireshark-capturable with the real toolset instead; filter names carry verify-against-your-version caveats; RFC1918 example addressing only; every page has a review: block at status "Review pending" (honest — awaiting author review against the governing specs).
+- Authored by 4 parallel writer agents against a shared page spec; coordinator fixed 2 wrong-slug cross-links at assembly.
+- Planned next per the review: EtherCAT, DNP3, IEC 61850, HART, Foundation Fieldbus, wireless.
+- Validation: clean build (322 files), zero broken internal links, 12/12 Mermaid diagrams render, review-meta boxes render.
 
 ## 2026-07-11 — Phase 34 — Engineering templates + Python toolkit surfaced on the site
 

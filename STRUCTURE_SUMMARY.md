@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-11 00:10:09
+**Last Auto-Updated:** 2026-07-11 00:25:19
 
 ```text
 ├── .claude/
@@ -1003,6 +1003,32 @@
 │   │       ├── standards_applicability_register.csv
 │   │       ├── test_instrument_record.csv
 │   │       └── wire_schedule_example.csv
+│   ├── communications/
+│   │   ├── bacnet-ip/
+│   │   │   └── index.md
+│   │   ├── ethernet-fundamentals/
+│   │   │   └── index.md
+│   │   ├── ethernet-ip/
+│   │   │   └── index.md
+│   │   ├── index.md
+│   │   ├── io-link/
+│   │   │   └── index.md
+│   │   ├── managed-switches/
+│   │   │   └── index.md
+│   │   ├── modbus-rtu-rs485/
+│   │   │   └── index.md
+│   │   ├── modbus-tcp/
+│   │   │   └── index.md
+│   │   ├── opc-ua/
+│   │   │   └── index.md
+│   │   ├── packet-capture-methods/
+│   │   │   └── index.md
+│   │   ├── profibus-dp/
+│   │   │   └── index.md
+│   │   ├── profinet/
+│   │   │   └── index.md
+│   │   └── wireshark-methodology/
+│   │       └── index.md
 │   ├── design/
 │   │   ├── architecture/
 │   │   │   ├── compliance-stack/
