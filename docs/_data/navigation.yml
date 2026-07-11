@@ -176,6 +176,10 @@
   children:
     - label: "Standards Finder"
       url: "/tools/standards-finder/"
+    - label: "Templates"
+      url: "/tools/templates/"
+    - label: "Python Toolkit"
+      url: "/tools/engineering-toolkit/"
     - label: "Scenarios"
       url: "/tools/scenarios/"
     - label: "Crosswalks"

@@ -1,0 +1,12 @@
+standard,edition_used,applicable,driver,scope_notes,open_questions,owner,verified_date
+NEC (NFPA 70),,,"installation code / AHJ","which articles govern this project",,,
+NFPA 79,,,"machine electrical design (US)","supply point to machine boundary",,,
+UL 508A,,,"panel listing requirement","listing needed? SCCR target?",,,
+IEC 60204-1,,,"machine electrical design (CE)","clause deviations if any",,,
+ISO 12100,,,"risk assessment methodology",,,,
+ISO 13849-1,,,"safety functions (PL route)","which safety functions, PLr each",,,
+IEC 62061,,,"safety functions (SIL route)",,,,
+IEC 61511,,,"process SIF lifecycle",,,,
+IEC 62443,,,"control-system cybersecurity","zones/conduits in scope?",,,
+IEC 60079 / NEC 500-505,,,"hazardous-area classification","classified areas present?",,,
+customer specification,,,"contractual requirements","spec number and revision",,,

@@ -1,0 +1,9 @@
+item,description,qty,part_number,basis
+DI modules,"16-channel digital input module, 24 VDC",1,,5 points + 20% spares = 6 ch @ 16/module
+DO modules,"16-channel digital output module, 24 VDC",1,,3 points + 20% spares = 4 ch @ 16/module
+AI modules,"8-channel analog input module, 4-20 mA",1,,3 points + 20% spares = 4 ch @ 8/module
+AO modules,"8-channel analog output module, 4-20 mA",1,,1 points + 20% spares = 2 ch @ 8/module
+RTD modules,8-channel RTD input module,1,,1 points + 20% spares = 2 ch @ 8/module
+field terminal blocks,feed-through terminal block (screw or spring per spec),32,,"per-point terminal counts: DIx2, DOx2, AIx3, AOx3, RTDx4"
+shield/ground terminals,"shield landing terminal, grounded",5,,5 shielded analog points
+interposing relays,"slim interface relay, 24 VDC coil, with socket",3,,one per DO point (interposing option enabled)

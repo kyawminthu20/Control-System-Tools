@@ -47,6 +47,17 @@ Calculators that need licensed table values (NEC 310.16, 430.250, ...) read
 them from `data/standards_tables/*.json` — populate from your licensed copies
 per `data/standards_tables/README.md`. Values are gitignored.
 
+## Regenerate Site Templates
+
+After changing the cst generators or `data/examples/io_list_example.csv`:
+
+```bash
+uv run python tools/generate_site_templates.py
+```
+
+Writes the generated example templates to `docs/assets/templates/` (served
+at `/tools/templates/` on the site).
+
 ## Run Tests
 
 ```bash

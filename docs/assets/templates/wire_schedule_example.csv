@@ -1,0 +1,33 @@
+wire_no,from,to,terminal,function,color
+XV-101-ZSO-+,limit switch (skid east),DI 0/1/0,TB1-1,24 VDC supply to device,blue
+XV-101-ZSO-S,limit switch (skid east),DI 0/1/0,TB1-2,signal return to input channel,blue
+XV-101-ZSC-+,limit switch (skid east),DI 0/1/1,TB1-3,24 VDC supply to device,blue
+XV-101-ZSC-S,limit switch (skid east),DI 0/1/1,TB1-4,signal return to input channel,blue
+P-201-RUN-+,aux contact (MCC-2),DI 0/1/2,TB1-5,24 VDC supply to device,blue
+P-201-RUN-S,aux contact (MCC-2),DI 0/1/2,TB1-6,signal return to input channel,blue
+P-201-FLT-+,relay contact (MCC-2),DI 0/1/3,TB1-7,24 VDC supply to device,blue
+P-201-FLT-S,relay contact (MCC-2),DI 0/1/3,TB1-8,signal return to input channel,blue
+HS-301-+,pushbutton (operator station),DI 0/1/4,TB1-9,24 VDC supply to device,blue
+HS-301-S,pushbutton (operator station),DI 0/1/4,TB1-10,signal return to input channel,blue
+XV-101-SOL-S,solenoid valve (skid east),DO 0/2/0,TB1-11,switched 24 VDC from output channel,blue
+XV-101-SOL--,solenoid valve (skid east),DO 0/2/0,TB1-12,0 VDC return,blue-white
+P-201-CMD-S,MCC starter (MCC-2),DO 0/2/1,TB1-13,switched 24 VDC from output channel,blue
+P-201-CMD--,MCC starter (MCC-2),DO 0/2/1,TB1-14,0 VDC return,blue-white
+YL-301-S,pilot light (operator station),DO 0/2/2,TB1-15,switched 24 VDC from output channel,blue
+YL-301--,pilot light (operator station),DO 0/2/2,TB1-16,0 VDC return,blue-white
+PT-401-+,pressure transmitter (skid east),AI 0/3/0,TB1-17,4-20 mA loop +,shielded pair
+PT-401--,pressure transmitter (skid east),AI 0/3/0,TB1-18,4-20 mA loop -,shielded pair
+PT-401-SH,pressure transmitter (skid east),AI 0/3/0,TB1-19,shield — ground at panel end only,drain
+FT-402-+,magmeter (line 2),AI 0/3/1,TB1-20,4-20 mA loop +,shielded pair
+FT-402--,magmeter (line 2),AI 0/3/1,TB1-21,4-20 mA loop -,shielded pair
+FT-402-SH,magmeter (line 2),AI 0/3/1,TB1-22,shield — ground at panel end only,drain
+LT-403-+,radar level (tank T-1),AI 0/3/2,TB1-23,4-20 mA loop +,shielded pair
+LT-403--,radar level (tank T-1),AI 0/3/2,TB1-24,4-20 mA loop -,shielded pair
+LT-403-SH,radar level (tank T-1),AI 0/3/2,TB1-25,shield — ground at panel end only,drain
+FCV-404-+,I/P positioner (line 2),AO 0/4/0,TB1-26,4-20 mA output +,shielded pair
+FCV-404--,I/P positioner (line 2),AO 0/4/0,TB1-27,4-20 mA output -,shielded pair
+FCV-404-SH,I/P positioner (line 2),AO 0/4/0,TB1-28,shield — ground at panel end only,drain
+TE-405-A,Pt100 (P-201 DE bearing),RTD 0/5/0,TB1-29,RTD sense A,shielded triad
+TE-405-B,Pt100 (P-201 DE bearing),RTD 0/5/0,TB1-30,RTD sense B,shielded triad
+TE-405-C,Pt100 (P-201 DE bearing),RTD 0/5/0,TB1-31,RTD excitation,shielded triad
+TE-405-SH,Pt100 (P-201 DE bearing),RTD 0/5/0,TB1-32,shield — ground at panel end only,drain
