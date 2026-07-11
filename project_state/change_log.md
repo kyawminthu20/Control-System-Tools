@@ -177,6 +177,18 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-07-11 — Phase 40 — Wiring Guides Wave 3 (Motion & Feedback)
+
+**Type:** Content (wiring-guides program, wave 3)
+**Status:** Complete on `feat/phase40-wave3-motion`.
+
+- Servo Drive Wiring (321) — builds on the VFD guide for power/shielding/reflected-wave, focuses on the closed-loop differences: feedback cable segregation, dual-channel STO (not a disconnect, still LOTO the mains), holding brake (holds != stops, release/enable sequencing, coil suppression). Longer than the nominal ceiling by design — a servo axis carries feedback+STO+brake subsystems a VFD lacks, all safety-relevant.
+- Encoder Wiring (267) — differential vs single-ended output matching, twisted-pair channel-complement grouping, 5 V supply drop over distance, counts-jump-under-motor-load fault, one-end vs both-ends shield contrast; differential theory deferred to the RS-485 page, scaling math to the cst encoder tool.
+- 2 corpus notes; section index gains a Motion & Feedback card grid; nav extended; mirror synced.
+- All Review pending; validation: clean build (345 files), zero broken links, boundary baseline unchanged, 145 tests pass.
+
+
+
 ## 2026-07-11 — Phase 39 — Wiring Guides Wave 2 (Controllers & I/O)
 
 **Type:** Content (wiring-guides program, wave 2)

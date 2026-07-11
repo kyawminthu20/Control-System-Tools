@@ -94,6 +94,10 @@
           url: "/design/wiring/analog-4-20ma/"
         - label: "0–10 V Signals"
           url: "/design/wiring/analog-0-10v/"
+        - label: "Servo Drive Wiring"
+          url: "/design/wiring/servo-drive/"
+        - label: "Encoder Wiring"
+          url: "/design/wiring/encoder/"
     - label: "Architecture"
       url: "/design/architecture/"
       children:

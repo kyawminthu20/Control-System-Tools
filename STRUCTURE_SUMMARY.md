@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-11 10:15:19
+**Last Auto-Updated:** 2026-07-11 10:27:44
 
 ```text
 ├── .claude/
@@ -146,10 +146,12 @@
 │   │   │       ├── analog_0_10v_wiring.md
 │   │   │       ├── analog_4_20ma_wiring.md
 │   │   │       ├── emc_noise_mitigation.md
+│   │   │       ├── encoder_wiring.md
 │   │   │       ├── ipc_wiring.md
 │   │   │       ├── panel_grounding_bonding.md
 │   │   │       ├── plc_wiring.md
 │   │   │       ├── remote_io_wiring.md
+│   │   │       ├── servo_drive_wiring.md
 │   │   │       ├── vfd_wiring.md
 │   │   │       └── wire_sizing_workflow.md
 │   │   ├── meta/
@@ -733,10 +735,12 @@
 │   │   │   │       ├── analog_0_10v_wiring.md
 │   │   │   │       ├── analog_4_20ma_wiring.md
 │   │   │   │       ├── emc_noise_mitigation.md
+│   │   │   │       ├── encoder_wiring.md
 │   │   │   │       ├── ipc_wiring.md
 │   │   │   │       ├── panel_grounding_bonding.md
 │   │   │   │       ├── plc_wiring.md
 │   │   │   │       ├── remote_io_wiring.md
+│   │   │   │       ├── servo_drive_wiring.md
 │   │   │   │       ├── vfd_wiring.md
 │   │   │   │       └── wire_sizing_workflow.md
 │   │   │   ├── meta/
@@ -1096,6 +1100,8 @@
 │   │   │   │   └── index.md
 │   │   │   ├── emc-noise-mitigation/
 │   │   │   │   └── index.md
+│   │   │   ├── encoder/
+│   │   │   │   └── index.md
 │   │   │   ├── grounding-bonding/
 │   │   │   │   └── index.md
 │   │   │   ├── index.md
@@ -1104,6 +1110,8 @@
 │   │   │   ├── plc/
 │   │   │   │   └── index.md
 │   │   │   ├── remote-io/
+│   │   │   │   └── index.md
+│   │   │   ├── servo-drive/
 │   │   │   │   └── index.md
 │   │   │   ├── vfd/
 │   │   │   │   └── index.md

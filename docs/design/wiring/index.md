@@ -72,6 +72,19 @@ mistakes → verification checks → standards references.
   </div>
 </div>
 
+## Motion &amp; Feedback
+
+<div class="workflow-card-grid">
+  <div class="workflow-card">
+    <h3><a href="{{ '/design/wiring/servo-drive/' | relative_url }}">Servo Drive Wiring</a></h3>
+    <p>Power, motor cable, feedback, STO, and the holding brake — plus the servo-specific traps a VFD doesn't have.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/design/wiring/encoder/' | relative_url }}">Encoder Wiring</a></h3>
+    <p>Differential vs single-ended, twisted-pair grouping, 5 V supply drop, and keeping counts clean past the motor cable.</p>
+  </div>
+</div>
+
 ## Planned Guides
 
 The program covers the full device set — added wave by wave (roadmap in the
@@ -79,7 +92,6 @@ repo's `governance/ROADMAP.md`):
 
 | Wave | Devices |
 |---|---|
-| Motion &amp; feedback | Servo drives (power, feedback, STO, brake) · Encoders (differential vs single-ended, cable practice) |
 | Infrastructure &amp; safety | Communication cable installation · Safety circuit wiring · Motor starters · Control power distribution · RTD &amp; thermocouple wiring |
 
 ## Related
