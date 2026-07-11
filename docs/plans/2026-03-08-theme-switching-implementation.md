@@ -165,7 +165,7 @@ Append the following to the end of `docs/assets/css/main.css`:
 **Step 5: Run Jekyll build — must be clean**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools/docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -4
+cd ./docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -4
 ```
 
 Expected: `done in X seconds.` — no errors.
@@ -173,7 +173,7 @@ Expected: `done in X seconds.` — no errors.
 **Step 6: Commit**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools
+cd .
 git add docs/assets/css/main.css
 git commit -m "feat(theme): add dark token CSS — variables, dark block, media query"
 ```
@@ -212,13 +212,13 @@ This runs synchronously before any paint — the `data-theme` attribute is set o
 **Step 2: Run Jekyll build — must be clean**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools/docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -4
+cd ./docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -4
 ```
 
 **Step 3: Verify the inline script appears in built HTML**
 
 ```bash
-grep -c "localStorage.getItem" /Users/kyawminthu/Dev/Control\ System\ Tools/docs/_site/index.html
+grep -c "localStorage.getItem" ./docs/_site/index.html
 ```
 
 Expected: `1`
@@ -226,7 +226,7 @@ Expected: `1`
 **Step 4: Commit**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools
+cd .
 git add docs/_layouts/default.html
 git commit -m "feat(theme): add flash-free theme resolution script to <head>"
 ```
@@ -259,13 +259,13 @@ Replace with:
 **Step 2: Run Jekyll build — must be clean**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools/docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -4
+cd ./docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -4
 ```
 
 **Step 3: Commit**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools
+cd .
 git add docs/_includes/topnav.html
 git commit -m "feat(theme): add theme toggle button to topnav"
 ```
@@ -310,13 +310,13 @@ In `docs/assets/js/main.js`, append the following block at the end of the file:
 **Step 2: Run Jekyll build — must be clean**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools/docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -4
+cd ./docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -4
 ```
 
 **Step 3: Verify toggle handler in built JS**
 
 ```bash
-grep -c "theme-toggle" /Users/kyawminthu/Dev/Control\ System\ Tools/docs/_site/assets/js/main.js
+grep -c "theme-toggle" ./docs/_site/assets/js/main.js
 ```
 
 Expected: `1` or more.
@@ -361,7 +361,7 @@ Insert the following at the top of the change history (before the most recent en
 **Step 6: Commit everything**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools
+cd .
 git add docs/assets/js/main.js project_state/project_state.md project_state/change_log.md
 git commit -m "feat(theme): add toggle handler + update project state for Phase 7"
 ```

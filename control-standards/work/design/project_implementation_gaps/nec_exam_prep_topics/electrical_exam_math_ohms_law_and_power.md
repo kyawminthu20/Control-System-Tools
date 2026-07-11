@@ -9,7 +9,7 @@ CATEGORY: ELECTRICAL_EXAM_MATH
 
 ## What this file is
 
-This is a cleaned work note derived from the basic calculation section of [electrical exam prep.md](../../electrical%20exam%20prep.md).
+This is a cleaned work note derived from the basic calculation section of `electrical exam prep.md` (raw source note removed from the repository).
 
 ## Topic focus
 

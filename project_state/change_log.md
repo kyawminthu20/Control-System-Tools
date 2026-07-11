@@ -18,6 +18,28 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-07-10 — Pre-public sanitization pass (user-approved)
+
+**Type:** Repository sanitization + second history rewrite
+**Reason:** Repo is going public. Full audit (secrets/PII/copyright, tree + history) found no credentials, no client/employer references, and a clean RAG corpus — but flagged verbatim third-party video transcripts, a backup tarball leaking the restricted tree, and personal learning material.
+
+**Removed from tree AND purged from history** (copies archived in `~/Dev/_archive/repo-sanitize-removed-20260710/`; pre-sanitize mirror at `~/Dev/_archive/CST-pre-sanitize-backup-20260710.git`):
+- 8 verbatim YouTube/webinar transcripts + 1 affiliate-links copy under `control-standards/work/design/` (Ryan Jackson 2026 NEC, Electrical Code Coach paid exam prep, NEC livestream, Engineering Mindset motors, Solid State Workshop circuit analysis, Praxis NFPA 79/70E webinar, temp links, mini_machine v2 status chat dump)
+- History-only ghosts: `check_this.md`, the Mike Holt-derived grounding note
+- `planning/backups/*.tgz` (pre-reorg snapshot containing drafts_DO_NOT_READ + business-IP module skeletons), `planning/manifests/` (leaked restricted filenames)
+- Personal learning/AI-chat material: `planning/RUST/`, `planning/SCADA/`, `planning/motors/`, `safety_software_stack.md`, `ground_earth_visual.md`, `semi_facility/phase_20260413.md`
+- `STRUCTURE_SUMMARY.md` history (old versions listed restricted filenames; regenerated clean)
+
+**Tree-only fixes:**
+- 37 derived-note files: links to removed raw transcripts converted to plain-text notes (derived paraphrased summaries were audited as fine and KEPT)
+- `ul508_spacing.md`: 13 ephemeral images.openai.com URLs stripped
+- All `/Users/kyawminthu/...` absolute paths scrubbed from 34 tracked files (repo-relative or `~` forms)
+- `.claude/settings.json`: legacy `~/Dev/tools` permission removed
+- `project_automator.py`: `restricted/`, `drafts_DO_NOT_READ/`, `archive/` excluded from the generated structure summary
+- Commit author/committer email rewritten to the GitHub noreply address across all history
+
+**Audited and cleared (no action):** RAG corpus paraphrasing (no reproduced NEC/UL tables), semi_facility (follows its public-content rules), GA4 ID, docs/ content, secrets/keys (zero hits tree + history), PII (only fictional examples), internal hostnames/IPs (none), employer/client names (none).
+
 ## 2026-07-10 — Git history rewrite: Udemy course purged from repo and remote
 
 **Type:** Repository history rewrite (user-approved)

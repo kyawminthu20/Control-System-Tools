@@ -137,7 +137,7 @@ ATEX and IECEx certificates are mutually recognized in many countries. US instal
 **Step 2: Validate**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools" && python3 tools/validate_ai_boundaries.py 2>&1 | grep "iec_60079"
+cd "." && python3 tools/validate_ai_boundaries.py 2>&1 | grep "iec_60079"
 ```
 Expected: no output (no violations).
 
@@ -711,7 +711,7 @@ notes: |
 **Step 2: Validate**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools" && python3 tools/validate_ai_boundaries.py 2>&1 | grep -E "error|iec_60079" | head -10
+cd "." && python3 tools/validate_ai_boundaries.py 2>&1 | grep -E "error|iec_60079" | head -10
 ```
 Expected: no errors for iec_60079 files.
 
@@ -1024,7 +1024,7 @@ coverage_notes:
 **Step 6: Validate and commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools" && python3 tools/validate_ai_boundaries.py 2>&1 | grep -E "error|semi" | head -10
+cd "." && python3 tools/validate_ai_boundaries.py 2>&1 | grep -E "error|semi" | head -10
 ```
 Expected: no errors.
 
@@ -1215,7 +1215,7 @@ ATEX/IECEx certified equipment is generally accepted in NEC Art. 505 Zone instal
 **Step 3: Verify build**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
 ```
 
 **Step 4: Commit**
@@ -1400,7 +1400,7 @@ Also update the badge from `badge--gap` to `badge--complete` for SEMI if it's ma
 **Step 5: Verify build and page count**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
 ```
 Expected: clean build, page count increases by 4.
 
@@ -1418,7 +1418,7 @@ git commit -m "feat(site): add semiconductor family + SEMI S2/S8/S14 page; updat
 **Step 1: Run full validation**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools" && python3 tools/validate_ai_boundaries.py 2>&1 | tail -5
+cd "." && python3 tools/validate_ai_boundaries.py 2>&1 | tail -5
 ```
 Expected: no new violations in iec_60079 or semi files. (Pre-existing IEC 62443 violations are unrelated.)
 

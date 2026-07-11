@@ -8,7 +8,7 @@ STATUS: TRANSCRIPT_TOPIC_INDEX
 
 ## Source
 
-These notes were derived from the raw transcript in [motors.md](../motors.md).
+These notes were derived from the raw transcript in `motors.md` (raw source note removed from the repository).
 
 For project-integration guidance, see [INTEGRATION_PLAN.md](./INTEGRATION_PLAN.md).
 

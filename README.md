@@ -40,12 +40,12 @@ licensed copies (schemas are committed; see `data/standards_tables/README.md`).
 
 ## Start Here
 
-- [PROJECT_STARTUP_CONTEXT.md](/Users/kyawminthu/Dev/Control System Tools/PROJECT_STARTUP_CONTEXT.md) for repository orientation
-- [control-standards/README.md](/Users/kyawminthu/Dev/Control System Tools/control-standards/README.md) for the product root
-- [project_state/project_state.md](/Users/kyawminthu/Dev/Control System Tools/project_state/project_state.md) for the current implementation phase and backlog
-- [project_state/environment.md](/Users/kyawminthu/Dev/Control System Tools/project_state/environment.md) for runtime and deployment requirements
-- [project_state/how_to.md](/Users/kyawminthu/Dev/Control System Tools/project_state/how_to.md) for setup and run instructions
-- [project_state/change_log.md](/Users/kyawminthu/Dev/Control System Tools/project_state/change_log.md) for project-level changes
+- [PROJECT_STARTUP_CONTEXT.md](PROJECT_STARTUP_CONTEXT.md) for repository orientation
+- [control-standards/README.md](control-standards/README.md) for the product root
+- [project_state/project_state.md](project_state/project_state.md) for the current implementation phase and backlog
+- [project_state/environment.md](project_state/environment.md) for runtime and deployment requirements
+- [project_state/how_to.md](project_state/how_to.md) for setup and run instructions
+- [project_state/change_log.md](project_state/change_log.md) for project-level changes
 
 ## Repository Roles
 

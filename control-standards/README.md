@@ -43,7 +43,7 @@ Authoritative standards content is grouped under `rag/standards_intelligence/`:
 
 ## First Files To Read
 
-- [QUICK_START.md](/Users/kyawminthu/Dev/Control System Tools/control-standards/QUICK_START.md)
-- [STRUCTURE_SUMMARY.md](/Users/kyawminthu/Dev/Control System Tools/control-standards/STRUCTURE_SUMMARY.md)
-- [rag/standards_intelligence/_index.yaml](/Users/kyawminthu/Dev/Control System Tools/control-standards/rag/standards_intelligence/_index.yaml)
-- [rag/standards_intelligence/_standards_map.md](/Users/kyawminthu/Dev/Control System Tools/control-standards/rag/standards_intelligence/_standards_map.md)
+- [QUICK_START.md](control-standards/QUICK_START.md)
+- [STRUCTURE_SUMMARY.md](control-standards/STRUCTURE_SUMMARY.md)
+- [rag/standards_intelligence/_index.yaml](control-standards/rag/standards_intelligence/_index.yaml)
+- [rag/standards_intelligence/_standards_map.md](control-standards/rag/standards_intelligence/_standards_map.md)

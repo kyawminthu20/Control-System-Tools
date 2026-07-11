@@ -23,7 +23,7 @@ Read these files first:
 Build command:
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build
 ```
 
 Expected result: clean build with no Liquid or front matter errors.

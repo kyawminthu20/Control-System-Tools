@@ -142,7 +142,7 @@ SIL 2 SIFs can typically be achieved with 1oo2 or 2oo3 voted architectures using
 **Step 2: Verify build**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
 ```
 Expected: clean build, no errors.
 
@@ -348,7 +348,7 @@ Avoid using a standard PLC for SIL 2 — it requires a full IEC 61508 assessment
 **Step 2: Verify build**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
 ```
 
 **Step 3: Commit**
@@ -505,7 +505,7 @@ S2 requires that safety interlocks be independent of the process control system 
 **Step 2: Verify build**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
 ```
 
 **Step 3: Commit**
@@ -733,7 +733,7 @@ If the SEMI S14 fire risk assessment determines suppression is required, use FM-
 **Step 2: Verify build**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
 ```
 
 **Step 3: Commit**
@@ -782,7 +782,7 @@ In `docs/_includes/sidebar.html`, find the Scenarios section. After the existing
 **Step 3: Verify build — confirm page count increases by 2**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
 ```
 
 **Step 4: Commit**
@@ -837,6 +837,6 @@ Update the Current Phase header to "Phase 11 COMPLETE".
 **Step 3: Final build + commit + push**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
-cd "/Users/kyawminthu/Dev/Control System Tools" && git add project_state/ && git commit -m "chore(state): mark Phase 11 complete — industry overlay depth" && git push
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
+cd "." && git add project_state/ && git commit -m "chore(state): mark Phase 11 complete — industry overlay depth" && git push
 ```

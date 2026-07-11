@@ -735,7 +735,7 @@ Expected: each `</summary>` is followed by a blank line.
 - [ ] **Step 5: Run Jekyll build**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools/docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1
+cd ./docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1
 ```
 
 Expected last lines:

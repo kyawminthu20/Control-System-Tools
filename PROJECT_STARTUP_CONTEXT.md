@@ -34,10 +34,10 @@ Current content reality:
 Start here, in order:
 
 1. This file
-2. [README.md](/Users/kyawminthu/Dev/Control System Tools/README.md)
-3. [control-standards/README.md](/Users/kyawminthu/Dev/Control System Tools/control-standards/README.md)
-4. [control-standards/rag/standards_intelligence/_index.yaml](/Users/kyawminthu/Dev/Control System Tools/control-standards/rag/standards_intelligence/_index.yaml)
-5. [control-standards/rag/standards_intelligence/_standards_map.md](/Users/kyawminthu/Dev/Control System Tools/control-standards/rag/standards_intelligence/_standards_map.md)
+2. [README.md](README.md)
+3. [control-standards/README.md](control-standards/README.md)
+4. [control-standards/rag/standards_intelligence/_index.yaml](control-standards/rag/standards_intelligence/_index.yaml)
+5. [control-standards/rag/standards_intelligence/_standards_map.md](control-standards/rag/standards_intelligence/_standards_map.md)
 
 Then route by task:
 
@@ -45,7 +45,7 @@ Then route by task:
 - process/governance questions: `control-standards/governance/`
 - work-in-progress design context: `control-standards/work/design/`
 - automation questions: `tools/`
-- file layout questions: [STRUCTURE_SUMMARY.md](/Users/kyawminthu/Dev/Control System Tools/STRUCTURE_SUMMARY.md) and [control-standards/STRUCTURE_SUMMARY.md](/Users/kyawminthu/Dev/Control System Tools/control-standards/STRUCTURE_SUMMARY.md)
+- file layout questions: [STRUCTURE_SUMMARY.md](STRUCTURE_SUMMARY.md) and [control-standards/STRUCTURE_SUMMARY.md](control-standards/STRUCTURE_SUMMARY.md)
 
 ## Directory Trust Rules
 

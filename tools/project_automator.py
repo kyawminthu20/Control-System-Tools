@@ -17,6 +17,9 @@ IGNORE_DIRS = {
     '.git', '__pycache__', '.DS_Store', '.idea', 'venv', '.venv',
     'node_modules', 'planning', 'vendor', '_site', '.jekyll-cache',
     '.worktrees', '.pytest_cache', '.playwright-mcp', '.egg-info',
+    # Private/quarantined trees — never list their contents in the
+    # committed structure summary
+    'restricted', 'drafts_DO_NOT_READ', 'archive',
 }
 IGNORE_FILES = {'.DS_Store'}
 

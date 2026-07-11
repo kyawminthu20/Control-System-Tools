@@ -8,7 +8,7 @@ STATUS: TRANSCRIPT_TOPIC_INDEX
 
 ## Source
 
-These notes were derived from the raw transcript in [2026 NEC Changes.md](../2026%20NEC%20Changes.md).
+These notes were derived from the raw transcript in `2026 NEC Changes.md` (raw source note removed from the repository).
 
 The source is a high-level overview lesson focused on codewide 2026 NEC changes, especially the restructuring work that prepares for the 2029 NEC layout.
 

@@ -24,7 +24,7 @@ Read these files first:
 Build command:
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build
 ```
 
 Expected result: clean build, no Liquid errors.
@@ -183,7 +183,7 @@ Use these scripts from the repo root:
 - [ ] **Step 1: Change layout in all 24 module pages**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 
 for dir in \
   docs/training/fundamentals/conductor-ampacity \
@@ -265,7 +265,7 @@ pattern = re.compile(
     re.MULTILINE
 )
 
-base = "/Users/kyawminthu/Dev/Control System Tools"
+base = "."
 for d in module_dirs:
     path = os.path.join(base, d, "index.md")
     with open(path) as f:
@@ -294,7 +294,7 @@ replacements = {
     'name: "NEC Application"': 'name: "NEC for Machines and Panels"',
 }
 
-base = "/Users/kyawminthu/Dev/Control System Tools"
+base = "."
 dirs = [
     "docs/training/fundamentals/conductor-ampacity",
     "docs/training/fundamentals/diodes-transistors",
@@ -352,7 +352,7 @@ PYEOF
 - [ ] Run Jekyll build:
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build
 ```
 
 Expected: clean build, no Liquid errors, no "uninitialized constant" warnings.

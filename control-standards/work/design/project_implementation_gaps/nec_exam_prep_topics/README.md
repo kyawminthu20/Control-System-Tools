@@ -8,7 +8,7 @@ STATUS: TRANSCRIPT_TOPIC_INDEX
 
 ## Source
 
-These notes were derived from the mixed transcript in [electrical exam prep.md](../../electrical%20exam%20prep.md).
+These notes were derived from the mixed transcript in `electrical exam prep.md` (raw source note removed from the repository).
 
 For project-integration guidance, see [INTEGRATION_PLAN.md](./INTEGRATION_PLAN.md).
 

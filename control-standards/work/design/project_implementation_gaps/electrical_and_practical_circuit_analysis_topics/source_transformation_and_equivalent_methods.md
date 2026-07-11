@@ -9,7 +9,7 @@ CATEGORY: EQUIVALENT_CIRCUIT_METHODS
 
 ## What this file is
 
-This is a cleaned work note derived from the final analysis-method section of [electrical and practical circuit analysis.md](../electrical%20and%20practical%20circuit%20analysis.md).
+This is a cleaned work note derived from the final analysis-method section of `electrical and practical circuit analysis.md` (raw source note removed from the repository).
 
 Approximate source range:
 

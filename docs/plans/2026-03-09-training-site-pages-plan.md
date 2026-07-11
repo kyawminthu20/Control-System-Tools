@@ -129,7 +129,7 @@ breadcrumb:
 
 **Step 3:** Build and verify:
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools/docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
+cd ./docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
 ```
 Expected: clean build, page count increases by 1.
 
@@ -338,19 +338,19 @@ git commit -m "feat(site): add 3 NEC application training module pages"
 
 **Step 1:** Full clean build:
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools/docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -10
+cd ./docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -10
 ```
 Expected: clean build, no errors. Page count should be previous count + 25.
 
 **Step 2:** Verify training pages exist in `_site/`:
 ```bash
-find /Users/kyawminthu/Dev/Control\ System\ Tools/docs/_site/training -name "index.html" | wc -l
+find ./docs/_site/training -name "index.html" | wc -l
 ```
 Expected: `25`
 
 **Step 3:** Spot-check a page renders correctly:
 ```bash
-grep -l "VFD Fundamentals" /Users/kyawminthu/Dev/Control\ System\ Tools/docs/_site/training/electrical-machines/vfd-fundamentals/index.html
+grep -l "VFD Fundamentals" ./docs/_site/training/electrical-machines/vfd-fundamentals/index.html
 ```
 Expected: file path returned (not empty).
 
@@ -387,7 +387,7 @@ git commit -m "chore(state): add training site pages to project tracking"
 ## Task 7: Push to Remote
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && git push origin master
+cd . && git push origin master
 ```
 
 Expected: GitHub Actions deploys automatically to GitHub Pages.

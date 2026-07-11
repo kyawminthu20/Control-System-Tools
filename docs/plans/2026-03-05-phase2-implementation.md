@@ -77,7 +77,7 @@ Add the following at the very end of `docs/assets/css/main.css`:
 **Step 2: Verify Jekyll builds cleanly**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
 ```
 
@@ -97,7 +97,7 @@ Kill the server: `kill $(lsof -ti :4000)`
 **Step 4: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add docs/assets/css/main.css
 git commit -m "feat: add print stylesheet (hide nav/sidebar, full-width content, URL after links)"
 ```
@@ -243,7 +243,7 @@ Add at the end of `docs/assets/js/main.js`:
 **Step 3: Verify build and lightbox works**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll serve --detach
 ```
@@ -255,7 +255,7 @@ Kill server: `kill $(lsof -ti :4000)`
 **Step 4: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add docs/assets/css/main.css docs/assets/js/main.js
 git commit -m "feat: add diagram lightbox — click any Mermaid diagram to enlarge"
 ```
@@ -314,7 +314,7 @@ layout: none
 **Step 3: Verify search.json produces valid JSON**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
 python3 -m json.tool _site/assets/data/search.json > /dev/null && echo "Valid JSON" || echo "INVALID — check for trailing comma"
 ```
@@ -326,7 +326,7 @@ If invalid: replace `normalize_whitespace` with `strip_newlines | replace: '  ',
 **Step 4: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add docs/_layouts/default.html docs/assets/data/search.json
 git commit -m "feat: add lunr.js CDN and Jekyll search index (search.json)"
 ```
@@ -606,7 +606,7 @@ Note: all result DOM nodes are built with `createElement` and `textContent` to a
 **Step 4: Verify build and search**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll serve --detach
 ```
@@ -619,7 +619,7 @@ Kill server: `kill $(lsof -ti :4000)`
 **Step 5: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add docs/_includes/topnav.html docs/assets/css/main.css docs/assets/js/main.js
 git commit -m "feat: add lunr.js inline search dropdown to topnav"
 ```
@@ -862,7 +862,7 @@ Open `docs/tools/crosswalks/index.md` and find the list of crosswalk page links.
 **Step 4: Verify build and comparison page**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll serve --detach
 ```
@@ -875,7 +875,7 @@ Kill server: `kill $(lsof -ti :4000)`
 **Step 5: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add docs/tools/crosswalks/compare/index.md docs/tools/crosswalks/index.md docs/assets/css/main.css
 git commit -m "feat: add crosswalk comparison selector page with NFPA79/IEC60204 and US electrical pairs"
 ```
@@ -887,7 +887,7 @@ git commit -m "feat: add crosswalk comparison selector page with NFPA79/IEC60204
 **Step 1: Push all commits**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git push
 ```
 
@@ -920,7 +920,7 @@ Update `project_state/change_log.md` with a `2026-03-05` entry for Phase 2.
 **Step 5: Commit project state**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add project_state/
 git commit -m "docs: update project state for Phase 2 completion"
 git push

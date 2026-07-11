@@ -175,7 +175,7 @@
 - [ ] **Step 2: Verify the YAML file parses without errors**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools" && ruby -e "require 'yaml'; YAML.load_file('docs/_data/navigation.yml'); puts 'OK'"
+cd "." && ruby -e "require 'yaml'; YAML.load_file('docs/_data/navigation.yml'); puts 'OK'"
 ```
 
 Expected output: `OK`
@@ -183,7 +183,7 @@ Expected output: `OK`
 - [ ] **Step 3: Run Jekyll build — verify still 131 pages (data file only, no new pages)**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3 && find _site -name "index.html" | wc -l
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3 && find _site -name "index.html" | wc -l
 ```
 
 Expected: clean build, `131`
@@ -191,7 +191,7 @@ Expected: clean build, `131`
 - [ ] **Step 4: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools" && git add docs/_data/navigation.yml && git commit -m "feat(nav): add navigation.yml — 5-group sidebar data model"
+cd "." && git add docs/_data/navigation.yml && git commit -m "feat(nav): add navigation.yml — 5-group sidebar data model"
 ```
 
 ---
@@ -289,7 +289,7 @@ Industry and application scenarios showing how standards, lifecycle stages, and 
 - [ ] **Step 2: Run Jekyll build — verify 132 pages**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3 && find _site -name "index.html" | wc -l
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3 && find _site -name "index.html" | wc -l
 ```
 
 Expected: clean build, `132`
@@ -297,7 +297,7 @@ Expected: clean build, `132`
 - [ ] **Step 3: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools" && git add docs/engineering-workflow/index.md && git commit -m "feat(site): add /design/ workflow-first hub page"
+cd "." && git add docs/engineering-workflow/index.md && git commit -m "feat(site): add /design/ workflow-first hub page"
 ```
 
 ---
@@ -338,7 +338,7 @@ The existing landing has two card-grid sections (Architecture Models, Motor Syst
 - [ ] **Step 3: Run Jekyll build — verify 132 pages, clean build**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3 && find _site -name "index.html" | wc -l
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3 && find _site -name "index.html" | wc -l
 ```
 
 Expected: clean build, `132`
@@ -346,7 +346,7 @@ Expected: clean build, `132`
 - [ ] **Step 4: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools" && git add docs/tools/reference-hub/index.md && git commit -m "feat(reference): add Quick Reference section to landing page"
+cd "." && git add docs/tools/reference-hub/index.md && git commit -m "feat(reference): add Quick Reference section to landing page"
 ```
 
 ---
@@ -438,7 +438,7 @@ This replaces ~135 lines of hardcoded HTML with ~45 lines of Liquid. The rendere
 - [ ] **Step 2: Run Jekyll build — verify clean build, 132 pages**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3 && find _site -name "index.html" | wc -l
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3 && find _site -name "index.html" | wc -l
 ```
 
 Expected: clean build, `132`
@@ -446,7 +446,7 @@ Expected: clean build, `132`
 - [ ] **Step 3: Verify sidebar section count in built output**
 
 ```bash
-grep -c "<details class=\"sidebar__section\"" "/Users/kyawminthu/Dev/Control System Tools/docs/_site/index.html"
+grep -c "<details class=\"sidebar__section\"" "docs/_site/index.html"
 ```
 
 Expected: `5`
@@ -454,7 +454,7 @@ Expected: `5`
 - [ ] **Step 4: Verify Standards grandchildren are rendered**
 
 ```bash
-grep "padding-left:2.75rem" "/Users/kyawminthu/Dev/Control System Tools/docs/_site/standards/index.html" | wc -l
+grep "padding-left:2.75rem" "docs/_site/standards/index.html" | wc -l
 ```
 
 Expected: at least `12` (NEC, NFPA 79, UL 508A, IEC 60204-1, ISO 12100, ISO 13849-1, IEC 62061, IEC 61508, IEC 61511, IEC 62443, IEC 60079, SEMI = 12 grandchild links)
@@ -462,7 +462,7 @@ Expected: at least `12` (NEC, NFPA 79, UL 508A, IEC 60204-1, ISO 12100, ISO 1384
 - [ ] **Step 5: Verify Engineering Workflow section auto-opens on a lifecycle page**
 
 ```bash
-grep -B 1 "<summary>Engineering Workflow" "/Users/kyawminthu/Dev/Control System Tools/docs/_site/lifecycle/index.html" | head -5
+grep -B 1 "<summary>Engineering Workflow" "docs/_site/lifecycle/index.html" | head -5
 ```
 
 Expected: the line before `<summary>Engineering Workflow` contains `<details class="sidebar__section" open>`.
@@ -470,7 +470,7 @@ Expected: the line before `<summary>Engineering Workflow` contains `<details cla
 - [ ] **Step 6: Verify Standards section is always open on a non-standards page (e.g., training)**
 
 ```bash
-grep -B 1 "<summary>Standards" "/Users/kyawminthu/Dev/Control System Tools/docs/_site/training/index.html" | head -5
+grep -B 1 "<summary>Standards" "docs/_site/training/index.html" | head -5
 ```
 
 Expected: the line before `<summary>Standards` contains `<details class="sidebar__section" open>`.
@@ -478,7 +478,7 @@ Expected: the line before `<summary>Standards` contains `<details class="sidebar
 - [ ] **Step 7: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools" && git add docs/_includes/sidebar.html && git commit -m "feat(nav): data-driven sidebar from navigation.yml — 5-group structure"
+cd "." && git add docs/_includes/sidebar.html && git commit -m "feat(nav): data-driven sidebar from navigation.yml — 5-group structure"
 ```
 
 ---
@@ -514,5 +514,5 @@ Add entry:
 - [ ] **Step 3: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools" && git add project_state/ && git commit -m "chore: update project state — Phase 19 complete"
+cd "." && git add project_state/ && git commit -m "chore: update project state — Phase 19 complete"
 ```

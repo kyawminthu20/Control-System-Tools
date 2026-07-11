@@ -9,7 +9,7 @@ CATEGORY: SPECIAL_APPLICATIONS
 
 ## What this file is
 
-This is a cleaned work note derived from the fire-pump portion of the voltage-drop transcript in [check_this.md](../check_this.md).
+This is a cleaned work note derived from the fire-pump portion of the voltage-drop transcript in `check_this.md` (raw source note removed from the repository).
 
 Approximate source range:
 

@@ -1,11 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(find:*)",
-      "Read(/Users/kyawminthu/Dev/tools/**)"
-    ],
-    "additionalDirectories": [
-      "/Users/kyawminthu/Dev/tools"
+      "Bash(find:*)"
     ]
   },
   "hooks": {

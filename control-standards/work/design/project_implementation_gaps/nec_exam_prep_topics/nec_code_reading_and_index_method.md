@@ -9,7 +9,7 @@ CATEGORY: NEC_EXAM_PREP
 
 ## What this file is
 
-This is a cleaned work note derived from the opening instructional portion of [electrical exam prep.md](../../electrical%20exam%20prep.md).
+This is a cleaned work note derived from the opening instructional portion of `electrical exam prep.md` (raw source note removed from the repository).
 
 ## Topic focus
 

@@ -9,7 +9,7 @@ CATEGORY: EV_MOTOR_TECHNOLOGIES
 
 ## What this file is
 
-This is a cleaned work note derived from the second embedded lesson in [motors.md](../motors.md).
+This is a cleaned work note derived from the second embedded lesson in `motors.md` (raw source note removed from the repository).
 
 Approximate source range:
 

@@ -172,7 +172,7 @@ Communication: Modbus TCP or EtherNet/IP for local PLCs; DNP3 or ICCP over dedic
 - [ ] **Step 2: Run AI boundary validator**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 python3 tools/validate_ai_boundaries.py 2>&1 | tail -5
 ```
 Expected: no new failures (existing baseline must not regress)
@@ -981,7 +981,7 @@ flowchart LR
 - [ ] **Step 2: Verify Jekyll build is clean**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -10
 ```
 Expected: `done in X.XXX seconds` with no errors or warnings.
@@ -1818,7 +1818,7 @@ Find the Industries section in `docs/_data/navigation.yml`. After the Semiconduc
 - [ ] **Step 2: Run AI boundary validator**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 python3 tools/validate_ai_boundaries.py 2>&1 | tail -10
 ```
 Expected: all new RAG files pass. Total count increases by 8 (one per new RAG file).
@@ -1826,7 +1826,7 @@ Expected: all new RAG files pass. Total count increases by 8 (one per new RAG fi
 - [ ] **Step 3: Run Jekyll build**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -15
 ```
 Expected: `done in X.XXX seconds` — zero errors, zero warnings. Page count should be approximately 165 (157 + 8 new pages).
@@ -1867,7 +1867,7 @@ Add a new entry at the top of `## Change History`:
 - [ ] **Step 6: Commit everything**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add docs/_data/navigation.yml project_state/project_state.md project_state/change_log.md
 git commit -m "feat(phase-25): complete water/wastewater section — navigation, validation, project state"
 ```

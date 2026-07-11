@@ -397,7 +397,7 @@ Write the following to `docs/_includes/standards-graph.html`:
 **Step 2: Verify Jekyll builds**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
 ```
 Expected: `done in X seconds.` with no errors.
 
@@ -478,7 +478,7 @@ git commit -m "feat(graph): add reusable standards-graph.html include (Cytoscape
 **Step 2: Verify build**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
 ```
 
 **Step 3: Commit**
@@ -508,7 +508,7 @@ It should appear before the existing `<script src=".../lunr.min.js"...>` line.
 **Step 2: Verify build**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
 ```
 
 **Step 3: Commit**
@@ -563,7 +563,7 @@ Open `docs/_includes/sidebar.html`. Find the Standards section and add a "Relati
 **Step 3: Verify build — confirm page count increases by 1**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | grep "pages"
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | grep "pages"
 ```
 
 **Step 4: Commit**
@@ -597,7 +597,7 @@ In `docs/index.md`, find the entire `## Standards Relationship Graph` section (f
 **Step 2: Verify build**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
 ```
 
 **Step 3: Commit**
@@ -646,6 +646,6 @@ Add Phase 9 as COMPLETE after Phase 8:
 **Step 3: Final build + push**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
-cd "/Users/kyawminthu/Dev/Control System Tools" && git add project_state/ && git commit -m "chore(state): mark Phase 9 complete — interactive standards graph" && git push
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
+cd "." && git add project_state/ && git commit -m "chore(state): mark Phase 9 complete — interactive standards graph" && git push
 ```

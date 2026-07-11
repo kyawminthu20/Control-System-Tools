@@ -8,7 +8,7 @@ STATUS: TRANSCRIPT_TOPIC_INDEX
 
 ## Source
 
-These notes were derived from the raw transcript in [check_this.md](../check_this.md).
+These notes were derived from the raw transcript in `check_this.md` (raw source note removed from the repository).
 
 They are organized by topic and category so the source material is easier to reuse.
 

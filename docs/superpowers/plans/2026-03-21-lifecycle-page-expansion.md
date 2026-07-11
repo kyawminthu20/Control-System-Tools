@@ -6,9 +6,9 @@
 
 **Architecture:** Each lifecycle stage gets a single `index.md` rewrite — same Jekyll frontmatter pattern as existing pages, content expanded from the planning document. The lifecycle index (`/verification/lifecycle/index.md`) gets new stages added to the table, new mermaid diagram, and an introduction section. Two new stage directories are created for the SRS and MOC stages.
 
-**Tech Stack:** Jekyll 4 static site, kramdown markdown, Mermaid.js diagrams, `default` layout. All pages live in `/Users/kyawminthu/Dev/Control System Tools/docs/lifecycle/`.
+**Tech Stack:** Jekyll 4 static site, kramdown markdown, Mermaid.js diagrams, `default` layout. All pages live in `docs/lifecycle/`.
 
-**Source of truth for content:** `/Users/kyawminthu/Dev/kyawminthu20.github.io/planning/things_to_fix.md` (8635 lines, organized by page URL — each section after a `https://...` URL is the content for that page).
+**Source of truth for content:** `~/Dev/kyawminthu20.github.io/planning/things_to_fix.md` (8635 lines, organized by page URL — each section after a `https://...` URL is the content for that page).
 
 **Content extraction guide:**
 - Lines 1–411: `/verification/lifecycle/` index page improvements (new stages, columns, introduction text)
@@ -82,7 +82,7 @@ Read: `docs/lifecycle/index.md`
 
 Read planning file lines 1–411 (from kyawminthu20.github.io repo):
 ```
-/Users/kyawminthu/Dev/kyawminthu20.github.io/planning/things_to_fix.md
+~/Dev/kyawminthu20.github.io/planning/things_to_fix.md
 offset=0, limit=411
 ```
 
@@ -117,7 +117,7 @@ The page body should include:
 - [ ] **Step 4: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add docs/lifecycle/index.md
 git commit -m "docs: expand lifecycle index with introduction, roles, and stages 3.5/12"
 ```

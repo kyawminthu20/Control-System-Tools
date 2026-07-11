@@ -22,7 +22,7 @@ Read these files for patterns:
 
 Build command:
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build
 ```
 
 Expected: clean build, no Liquid errors.
@@ -438,13 +438,13 @@ Full entries for all 8 new modules (levels, times, and featured flags):
 - [ ] Regenerate `docs/_data/rag_tree.json`:
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools" && python3 tools/generate_rag_tree.py
+cd "." && python3 tools/generate_rag_tree.py
 ```
 
 - [ ] Run Jekyll build:
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build
 ```
 
 Expected: clean build. Count should now be ~68+ pages.

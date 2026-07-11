@@ -9,7 +9,7 @@ CATEGORY: PRACTICAL_ELECTRONICS_BASICS
 
 ## What this file is
 
-This is a cleaned work note derived from the second embedded lesson inside [electrical and practical circuit analysis.md](../electrical%20and%20practical%20circuit%20analysis.md).
+This is a cleaned work note derived from the second embedded lesson inside `electrical and practical circuit analysis.md` (raw source note removed from the repository).
 
 Approximate source range within that second lesson:
 

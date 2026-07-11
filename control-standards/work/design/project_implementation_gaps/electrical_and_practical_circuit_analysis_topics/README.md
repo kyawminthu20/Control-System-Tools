@@ -8,7 +8,7 @@ STATUS: TRANSCRIPT_TOPIC_INDEX
 
 ## Source
 
-These notes were derived from the raw transcript in [electrical and practical circuit analysis.md](../electrical%20and%20practical%20circuit%20analysis.md).
+These notes were derived from the raw transcript in `electrical and practical circuit analysis.md` (raw source note removed from the repository).
 
 For project-integration guidance, see [INTEGRATION_PLAN.md](./INTEGRATION_PLAN.md).
 

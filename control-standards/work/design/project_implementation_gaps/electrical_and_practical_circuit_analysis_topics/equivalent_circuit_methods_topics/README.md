@@ -10,7 +10,7 @@ STATUS: TRANSCRIPT_TOPIC_INDEX
 
 These notes were derived from [source_transformation_and_equivalent_methods.md](../source_transformation_and_equivalent_methods.md).
 
-That source note was itself normalized from the final analysis-method section of [electrical and practical circuit analysis.md](../../electrical%20and%20practical%20circuit%20analysis.md).
+That source note was itself normalized from the final analysis-method section of `electrical and practical circuit analysis.md` (raw source note removed from the repository).
 
 ## Category map
 

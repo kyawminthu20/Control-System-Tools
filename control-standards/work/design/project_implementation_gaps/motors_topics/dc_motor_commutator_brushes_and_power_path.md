@@ -9,7 +9,7 @@ CATEGORY: DC_MOTOR_CONSTRUCTION
 
 ## What this file is
 
-This is a cleaned work note derived from the third embedded lesson in [motors.md](../motors.md).
+This is a cleaned work note derived from the third embedded lesson in `motors.md` (raw source note removed from the repository).
 
 Approximate source range:
 

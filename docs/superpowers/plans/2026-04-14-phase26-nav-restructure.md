@@ -8,7 +8,7 @@
 
 **Tech Stack:** Jekyll 4.3, `jekyll-redirect-from` plugin, Ruby 2.6.10 bundler at `~/.gem/ruby/2.6.0/bin/bundle`, Python 3.12+, `html.parser` stdlib only.
 
-**Working directory:** `/Users/kyawminthu/Dev/Control System Tools` (master branch).
+**Working directory:** `.` (master branch).
 
 ---
 
@@ -47,7 +47,7 @@ plugins:
 - [ ] **Step 3: Install the gem**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle install
 ```
 
@@ -56,7 +56,7 @@ Expected: `Bundle complete!` with `jekyll-redirect-from` listed as installed.
 - [ ] **Step 4: Verify build still works**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
 ```
 
@@ -65,7 +65,7 @@ Expected: `done in X.XXX seconds.` — zero errors.
 - [ ] **Step 5: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add docs/Gemfile docs/Gemfile.lock docs/_config.yml
 git commit -m "feat(site): install jekyll-redirect-from plugin"
 ```
@@ -213,13 +213,13 @@ if __name__ == "__main__":
 - [ ] **Step 2: Make it executable**
 
 ```bash
-chmod +x "/Users/kyawminthu/Dev/Control System Tools/tools/check_internal_links.py"
+chmod +x "tools/check_internal_links.py"
 ```
 
 - [ ] **Step 3: Smoke-test against current site**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
 cd ..
 python3 tools/check_internal_links.py docs/_site/ 2>&1 | tail -20
@@ -230,7 +230,7 @@ Expected: either `OK: no broken internal links ...` or a list of broken links. E
 - [ ] **Step 4: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add tools/check_internal_links.py
 git commit -m "feat(tools): add internal link checker (stdlib only)"
 ```
@@ -244,7 +244,7 @@ git commit -m "feat(tools): add internal link checker (stdlib only)"
 - [ ] **Step 1: Run the link checker and save the report**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 python3 tools/check_internal_links.py docs/_site/ > /tmp/phase26_baseline_links.txt 2>&1 || true
 cat /tmp/phase26_baseline_links.txt
 ```
@@ -264,7 +264,7 @@ NOTE: Do not "fix" broken links by creating empty stub pages. Either fix the URL
 - [ ] **Step 3: Rebuild and re-check**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
 cd ..
 python3 tools/check_internal_links.py docs/_site/
@@ -275,7 +275,7 @@ Repeat Steps 2–3 until the checker exits 0.
 - [ ] **Step 4: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add -u docs/
 git commit -m "fix(links): baseline — resolve pre-existing broken internal links"
 ```
@@ -418,7 +418,7 @@ training_trim:
 - [ ] **Step 2: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add docs/_data/phase26_migration_map.yml
 git commit -m "feat(phase-26): add URL migration map"
 ```
@@ -432,7 +432,7 @@ git commit -m "feat(phase-26): add URL migration map"
 - [ ] **Step 1: Create destination directories**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 mkdir -p fundamentals/electrical fundamentals/control fundamentals/motors
 ```
 
@@ -447,7 +447,7 @@ git mv "docs/<from>/index.md" "docs/<to>/index.md"
 Example for the first 3:
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git mv docs/training/fundamentals/index.md                     docs/fundamentals/electrical/index.md
 git mv docs/training/fundamentals/conductor-ampacity/index.md  docs/fundamentals/electrical/conductor-ampacity/index.md
 git mv docs/training/fundamentals/diodes-transistors/index.md  docs/fundamentals/electrical/diodes-transistors/index.md
@@ -483,7 +483,7 @@ Do this for every moved page in this group. The old URL comes from the `old` fie
 Cross-links from a fundamentals page to another fundamentals page should now use the new URL. Run a grep + edit:
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 grep -rln "/training/fundamentals/\|/training/control-systems/\|/training/electrical-machines/" docs/fundamentals/
 ```
 
@@ -492,7 +492,7 @@ For every file listed, open it and replace old paths with new paths per the migr
 - [ ] **Step 5: Rebuild and verify**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -10
 ```
 
@@ -501,7 +501,7 @@ Expected: `done in X.XXX seconds.` Warnings about broken links from OTHER groups
 - [ ] **Step 6: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add -A docs/
 git commit -m "refactor(site): migrate fundamentals group to /fundamentals/ with redirects"
 ```
@@ -515,7 +515,7 @@ git commit -m "refactor(site): migrate fundamentals group to /fundamentals/ with
 - [ ] **Step 1: Create destination directories**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 mkdir -p design/architecture design/motor-selection design/software-stack design/workflows
 ```
 
@@ -530,7 +530,7 @@ Same pattern as Task 5, Step 3.
 - [ ] **Step 4: Update internal cross-links inside moved pages**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 grep -rln "/engineering-workflow/\|/design/architecture/\|/design/motor-selection/\|/software-stack/\|/workflows/electrical-review/\|/workflows/motor-selection/" docs/design/
 ```
 
@@ -539,14 +539,14 @@ Edit the listed files, replacing old paths with new per the migration map.
 - [ ] **Step 5: Rebuild and verify**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -10
 ```
 
 - [ ] **Step 6: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add -A docs/
 git commit -m "refactor(site): migrate design group to /design/ with redirects"
 ```
@@ -560,7 +560,7 @@ Follow the same pattern as Tasks 5–6 for the `implementation:` section of the 
 - [ ] **Step 1: Create destinations**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 mkdir -p implementation/commissioning-templates implementation/scenarios \
          implementation/servo-commissioning implementation/vfd-commissioning \
          implementation/lifecycle-build implementation/lifecycle-pre-commissioning \
@@ -576,7 +576,7 @@ Execute `git mv` for each `from → to` pair in the `implementation:` block of t
 - [ ] **Step 4: Update cross-links inside moved pages**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 grep -rln "/commissioning-templates/\|/scenarios/\|/workflows/servo-commissioning/\|/workflows/vfd-commissioning/\|/lifecycle/build/\|/lifecycle/pre-commissioning/\|/lifecycle/installation/\|/lifecycle/commissioning/" docs/implementation/
 ```
 
@@ -585,7 +585,7 @@ Edit as needed.
 - [ ] **Step 5: Build and commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -10
 cd ..
 git add -A docs/
@@ -601,7 +601,7 @@ Same pattern for `verification:` block.
 - [ ] **Step 1: Create destinations**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 mkdir -p verification/lifecycle verification/risk-assessment verification/safety-requirements-spec \
          verification/safety-architecture verification/maintenance verification/management-of-change \
          verification/safety-wiring
@@ -614,7 +614,7 @@ mkdir -p verification/lifecycle verification/risk-assessment verification/safety
 - [ ] **Step 4: Update cross-links inside moved pages**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 grep -rln "/lifecycle/" docs/verification/
 ```
 
@@ -623,7 +623,7 @@ Replace with new `/verification/...` paths per the map.
 - [ ] **Step 5: Build and commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -10
 cd ..
 git add -A docs/
@@ -639,7 +639,7 @@ Same pattern for `tools:` block.
 - [ ] **Step 1: Create destinations**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 mkdir -p tools/rag-browser tools/glossary tools/crosswalks tools/reference-hub
 ```
 
@@ -650,7 +650,7 @@ mkdir -p tools/rag-browser tools/glossary tools/crosswalks tools/reference-hub
 - [ ] **Step 4: Update cross-links inside moved pages**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 grep -rln "/tools/rag-browser/\|/tools/glossary/\|/tools/crosswalks/\|/tools/reference-hub/" docs/tools/
 ```
 
@@ -659,7 +659,7 @@ Replace with new `/tools/...` paths per the map.
 - [ ] **Step 5: Build and commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -10
 cd ..
 git add -A docs/
@@ -713,7 +713,7 @@ breadcrumb:
 - [ ] **Step 2: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add docs/training/index.md
 git commit -m "refactor(site): rewrite /training/ landing for structured paths only"
 ```
@@ -766,7 +766,7 @@ breadcrumb:
 - [ ] **Step 2: Move the motor-troubleshooting workflow into this section**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git mv docs/workflows/motor-troubleshooting/index.md docs/troubleshooting/motors/index.md
 rmdir docs/workflows/motor-troubleshooting 2>/dev/null || true
 ```
@@ -790,7 +790,7 @@ Update the Motors row in the landing table to:
 If `docs/workflows/` is empty, remove `docs/workflows/index.md` (it was the landing page — superseded by `/design/workflows/` and `/implementation/`):
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 rm -f docs/workflows/index.md
 rmdir docs/workflows 2>/dev/null || true
 ```
@@ -798,7 +798,7 @@ rmdir docs/workflows 2>/dev/null || true
 - [ ] **Step 4: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add -A docs/
 git commit -m "feat(site): add /troubleshooting/ landing; move motor-troubleshooting"
 ```
@@ -843,7 +843,7 @@ breadcrumb:
 - [ ] **Step 2: Move /about/ to /repository/about/**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 mkdir -p docs/repository/about
 git mv docs/about/index.md docs/repository/about/index.md
 rmdir docs/about 2>/dev/null || true
@@ -860,7 +860,7 @@ redirect_from:
 - [ ] **Step 3: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add -A docs/
 git commit -m "feat(site): add /repository/ landing; move /about/"
 ```
@@ -1081,7 +1081,7 @@ Overwrite `docs/_data/navigation.yml` with:
 - [ ] **Step 2: Build and verify sidebar renders**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -10
 ```
 
@@ -1090,7 +1090,7 @@ Expected: clean build.
 - [ ] **Step 3: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add docs/_data/navigation.yml
 git commit -m "refactor(nav): rewrite navigation.yml to 10-group intent-based structure"
 ```
@@ -1104,7 +1104,7 @@ After per-group moves, pages OUTSIDE the moved groups may still contain links to
 - [ ] **Step 1: Find all remaining references to old paths**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 grep -rln -E "/training/fundamentals/|/training/control-systems/|/training/electrical-machines/|/engineering-workflow/|/tools/reference-hub/(architecture|motor-systems)/|/software-stack/|/workflows/(electrical-review|motor-selection|servo-commissioning|vfd-commissioning|motor-troubleshooting)/|/commissioning-templates/|/scenarios/|/lifecycle/|/tools/rag-browser/|/tools/glossary/|/tools/crosswalks/|/about/" docs/ | grep -v "_site/"
 ```
 
@@ -1115,7 +1115,7 @@ Use Edit tool on each flagged file, replacing each old path with the new path fr
 - [ ] **Step 3: Rebuild and run link checker**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
 cd ..
 python3 tools/check_internal_links.py docs/_site/ 2>&1 | tail -20
@@ -1126,7 +1126,7 @@ If broken links remain, fix them in source markdown and re-run.
 - [ ] **Step 4: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add -A docs/
 git commit -m "refactor(site): sweep — update all internal cross-links to new paths"
 ```
@@ -1138,7 +1138,7 @@ git commit -m "refactor(site): sweep — update all internal cross-links to new 
 - [ ] **Step 1: Build and run checker**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs"
+cd "docs"
 ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -10
 cd ..
 python3 tools/check_internal_links.py docs/_site/
@@ -1157,7 +1157,7 @@ Loop until the checker passes.
 - [ ] **Step 2: Run AI boundary validator — no regression**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 python3 tools/validate_ai_boundaries.py 2>&1 | tail -10
 ```
 
@@ -1166,7 +1166,7 @@ Expected: same pre-existing 2 failures from Phase 25 (IEC61511.md, UPW_water_ski
 - [ ] **Step 3: Commit only if fixes were made**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add -u docs/
 git diff --cached --quiet || git commit -m "fix(links): final audit — resolve remaining broken links"
 ```
@@ -1222,7 +1222,7 @@ Add at the top of `## Change History`:
 - [ ] **Step 3: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add project_state/project_state.md project_state/change_log.md
 git commit -m "feat(phase-26): complete navigation restructure — project state update"
 ```

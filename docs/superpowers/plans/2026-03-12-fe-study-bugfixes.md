@@ -149,7 +149,7 @@ the intent. If you see duplicate text in practice, revert to `/w:p`.
 - [ ] **Step 4: Compile-check**
 
   ```bash
-  cd "/Users/kyawminthu/Dev/Control System Tools"
+  cd "."
   python3 -m py_compile tools/fe_study/common.py && echo "OK"
   ```
 
@@ -445,7 +445,7 @@ for consistency, even though the order isn't consumed.
 - [ ] **Full compile-check of all five files**
 
   ```bash
-  cd "/Users/kyawminthu/Dev/Control System Tools"
+  cd "."
   python3 -m py_compile \
     tools/fe_study/common.py \
     tools/fe_study/inventory_fe_study.py \

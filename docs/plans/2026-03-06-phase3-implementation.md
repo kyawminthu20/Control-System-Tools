@@ -78,7 +78,7 @@ The `badge--complete` class already exists in `docs/assets/css/main.css` (green,
 ## Jekyll Build Validation Command
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
 ```
 
 Expected output ends with: `done in X seconds.` — no errors, no warnings.
@@ -358,7 +358,7 @@ Once PLr targets are determined:
 **Step 3: Validate the build**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -5
 ```
 
 Expected: ends with `done in X seconds.` — no errors.
@@ -366,7 +366,7 @@ Expected: ends with `done in X seconds.` — no errors.
 **Step 4: Commit Group 1**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add control-standards/rag/standards_intelligence/international/functional_safety/iso_12100/
 git add docs/standards/functional-safety/iso-12100/index.md
 git commit -m "$(cat <<'EOF'
@@ -720,7 +720,7 @@ rm "control-standards/rag/standards_intelligence/international/functional_safety
 **Step 5: Commit Group 2**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add control-standards/rag/standards_intelligence/international/functional_safety/iso_13849_1/
 git add control-standards/rag/standards_intelligence/international/functional_safety/iec_62061/
 git add docs/standards/functional-safety/iso-13849-1/index.md
@@ -965,7 +965,7 @@ Rewrite body (~300 lines):
 **Step 4: Commit Group 3**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add control-standards/rag/standards_intelligence/international/functional_safety/iec_61508/
 git add control-standards/rag/standards_intelligence/international/functional_safety/iec_61511/
 git add docs/standards/functional-safety/iec-61508/index.md
@@ -1024,7 +1024,7 @@ Add entry:
 **Step 3: Commit**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools"
+cd "."
 git add project_state/project_state.md project_state/change_log.md
 git commit -m "$(cat <<'EOF'
 docs: update project state for Phase 3 completion

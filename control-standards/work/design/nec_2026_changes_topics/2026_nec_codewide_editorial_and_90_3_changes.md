@@ -9,7 +9,7 @@ CATEGORY: CODEWIDE_EDITORIAL
 
 ## What this file is
 
-This is a cleaned work note derived from the closing codewide-change section of [2026 NEC Changes.md](../2026%20NEC%20Changes.md).
+This is a cleaned work note derived from the closing codewide-change section of `2026 NEC Changes.md` (raw source note removed from the repository).
 
 Approximate source range:
 

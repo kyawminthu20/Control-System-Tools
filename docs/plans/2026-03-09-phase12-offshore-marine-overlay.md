@@ -24,7 +24,7 @@
 **Step 1: Create directory and write file**
 
 ```bash
-mkdir -p "/Users/kyawminthu/Dev/Control System Tools/control-standards/rag/standards_intelligence/international/offshore"
+mkdir -p "control-standards/rag/standards_intelligence/international/offshore"
 ```
 
 Write the file with this exact content:
@@ -182,7 +182,7 @@ Understanding the DNV class approval timeline is essential for project planning:
 **Step 2: Verify file exists**
 
 ```bash
-ls "/Users/kyawminthu/Dev/Control System Tools/control-standards/rag/standards_intelligence/international/offshore/"
+ls "control-standards/rag/standards_intelligence/international/offshore/"
 ```
 Expected: file present.
 
@@ -528,7 +528,7 @@ On most requirements the two societies are equivalent. Key difference: emergency
 **Step 2: Verify build**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
 ```
 
 **Step 3: Commit**
@@ -651,7 +651,7 @@ For chemical tankers, gas carriers (LNG, LPG), and offshore supply vessels with 
 **Step 2: Verify build**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
 ```
 
 **Step 3: Commit**
@@ -671,7 +671,7 @@ git commit -m "feat(industry): deepen marine industry page — IMO framework, IE
 **Step 1: Create directory**
 
 ```bash
-mkdir -p "/Users/kyawminthu/Dev/Control System Tools/docs/scenarios/offshore-platform-control"
+mkdir -p "docs/scenarios/offshore-platform-control"
 ```
 
 **Step 2: Write the file**
@@ -880,7 +880,7 @@ Class surveyors are in high demand. Plan the FAT 8–10 weeks in advance and con
 **Step 3: Verify build**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
 ```
 
 **Step 4: Commit**
@@ -967,6 +967,6 @@ At the top of Change History:
 **Step 5: Final build, commit, and push**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools/docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
-cd "/Users/kyawminthu/Dev/Control System Tools" && git add docs/scenarios/index.md docs/_includes/sidebar.html project_state/ && git commit -m "chore(state): mark Phase 12 complete — offshore/marine overlay" && git push
+cd "docs" && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build 2>&1 | tail -3
+cd "." && git add docs/scenarios/index.md docs/_includes/sidebar.html project_state/ && git commit -m "chore(state): mark Phase 12 complete — offshore/marine overlay" && git push
 ```

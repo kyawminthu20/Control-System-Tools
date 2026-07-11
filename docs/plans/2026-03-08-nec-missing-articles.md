@@ -1024,7 +1024,7 @@ In the "Planned (Not Yet Created)" section, update it to reflect that Art 500/50
 **Step 4: Run validation tool**
 
 ```bash
-cd "/Users/kyawminthu/Dev/Control System Tools" && python3 tools/validate_ai_boundaries.py 2>&1 | tail -10
+cd "." && python3 tools/validate_ai_boundaries.py 2>&1 | tail -10
 ```
 Expected: no errors in the new files.
 

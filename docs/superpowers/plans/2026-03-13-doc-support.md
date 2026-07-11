@@ -43,7 +43,7 @@ def test_work_dirs_has_converted():
 - [ ] **Step 2: Run test to verify it fails**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/test_common.py::test_work_dirs_has_converted -v
+cd . && python -m pytest tests/tools/fe_study/test_common.py::test_work_dirs_has_converted -v
 ```
 
 Expected: FAIL — `AssertionError` (key not in dict)
@@ -68,7 +68,7 @@ WORK_DIRS = {
 - [ ] **Step 4: Run test to verify it passes**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/test_common.py::test_work_dirs_has_converted -v
+cd . && python -m pytest tests/tools/fe_study/test_common.py::test_work_dirs_has_converted -v
 ```
 
 Expected: PASS
@@ -104,7 +104,7 @@ def test_infer_priority_howto_doc():
 - [ ] **Step 2: Run tests to verify they fail**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/test_common.py::test_infer_family_doc tests/tools/fe_study/test_common.py::test_infer_priority_howto_doc -v
+cd . && python -m pytest tests/tools/fe_study/test_common.py::test_infer_family_doc tests/tools/fe_study/test_common.py::test_infer_priority_howto_doc -v
 ```
 
 Expected: FAIL — both return wrong values
@@ -128,7 +128,7 @@ In `infer_priority`, add before the final `return "P4"`:
 - [ ] **Step 4: Run tests to verify they pass**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/test_common.py::test_infer_family_doc tests/tools/fe_study/test_common.py::test_infer_priority_howto_doc -v
+cd . && python -m pytest tests/tools/fe_study/test_common.py::test_infer_family_doc tests/tools/fe_study/test_common.py::test_infer_priority_howto_doc -v
 ```
 
 Expected: PASS
@@ -202,7 +202,7 @@ def test_convert_doc_to_docx_success(tmp_path, monkeypatch):
 - [ ] **Step 2: Run tests to verify they fail**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/test_common.py -k "convert_doc" -v
+cd . && python -m pytest tests/tools/fe_study/test_common.py -k "convert_doc" -v
 ```
 
 Expected: FAIL — `ImportError: cannot import name 'convert_doc_to_docx'`
@@ -246,7 +246,7 @@ def convert_doc_to_docx(path: Path, target_dir: Path) -> Path | None:
 - [ ] **Step 4: Run tests to verify they pass**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/test_common.py -k "convert_doc" -v
+cd . && python -m pytest tests/tools/fe_study/test_common.py -k "convert_doc" -v
 ```
 
 Expected: PASS (4 tests)
@@ -280,7 +280,7 @@ def test_converted_docx_path(tmp_path):
 - [ ] **Step 2: Run test to verify it fails**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/test_common.py::test_converted_docx_path -v
+cd . && python -m pytest tests/tools/fe_study/test_common.py::test_converted_docx_path -v
 ```
 
 Expected: FAIL — `ImportError`
@@ -298,7 +298,7 @@ def converted_docx_path(source_root: Path, source_path: Path) -> Path:
 - [ ] **Step 4: Run test to verify it passes**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/test_common.py::test_converted_docx_path -v
+cd . && python -m pytest tests/tools/fe_study/test_common.py::test_converted_docx_path -v
 ```
 
 Expected: PASS
@@ -351,7 +351,7 @@ def test_scan_sources_excludes_converted_dir(tmp_path):
 - [ ] **Step 2: Run tests to verify they fail**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/test_inventory_fe_study.py -k "scan_sources" -v
+cd . && python -m pytest tests/tools/fe_study/test_inventory_fe_study.py -k "scan_sources" -v
 ```
 
 Expected: FAIL
@@ -374,7 +374,7 @@ def scan_sources(source_root: Path) -> list[Path]:
 - [ ] **Step 4: Run tests to verify they pass**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/test_inventory_fe_study.py -k "scan_sources" -v
+cd . && python -m pytest tests/tools/fe_study/test_inventory_fe_study.py -k "scan_sources" -v
 ```
 
 Expected: PASS
@@ -480,7 +480,7 @@ def test_build_record_doc_conversion_failure(tmp_path, monkeypatch):
 - [ ] **Step 2: Run tests to verify they fail**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/test_inventory_fe_study.py -k "build_record_doc" -v
+cd . && python -m pytest tests/tools/fe_study/test_inventory_fe_study.py -k "build_record_doc" -v
 ```
 
 Expected: FAIL
@@ -529,7 +529,7 @@ Also add `work_output_path` to the imports from `common` if not already present.
 - [ ] **Step 4: Run tests to verify they pass**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/test_inventory_fe_study.py -k "build_record_doc" -v
+cd . && python -m pytest tests/tools/fe_study/test_inventory_fe_study.py -k "build_record_doc" -v
 ```
 
 Expected: PASS
@@ -537,7 +537,7 @@ Expected: PASS
 - [ ] **Step 5: Run all inventory tests to catch regressions**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/test_inventory_fe_study.py -v
+cd . && python -m pytest tests/tools/fe_study/test_inventory_fe_study.py -v
 ```
 
 Expected: all PASS
@@ -679,7 +679,7 @@ def test_extract_doc_reconverts_when_cache_missing(tmp_path, monkeypatch):
 - [ ] **Step 2: Run tests to verify they fail**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/test_extract_fe_study.py -k "doc" -v
+cd . && python -m pytest tests/tools/fe_study/test_extract_fe_study.py -k "doc" -v
 ```
 
 Expected: FAIL
@@ -721,7 +721,7 @@ Add `convert_doc_to_docx` and `converted_docx_path` to the `from tools.fe_study.
 - [ ] **Step 4: Run tests to verify they pass**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/test_extract_fe_study.py -k "doc" -v
+cd . && python -m pytest tests/tools/fe_study/test_extract_fe_study.py -k "doc" -v
 ```
 
 Expected: PASS
@@ -729,7 +729,7 @@ Expected: PASS
 - [ ] **Step 5: Run full test suite to catch regressions**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/ -v
+cd . && python -m pytest tests/tools/fe_study/ -v
 ```
 
 Expected: all PASS
@@ -763,7 +763,7 @@ Add a dated entry:
 - [ ] **Step 3: Run full test suite one final time**
 
 ```bash
-cd /Users/kyawminthu/Dev/Control\ System\ Tools && python -m pytest tests/tools/fe_study/ -v
+cd . && python -m pytest tests/tools/fe_study/ -v
 ```
 
 Expected: all PASS

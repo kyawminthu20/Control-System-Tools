@@ -1,6 +1,6 @@
 # Project Instructions
 
-Start each session by reading [PROJECT_STARTUP_CONTEXT.md](/Users/kyawminthu/Dev/Control System Tools/PROJECT_STARTUP_CONTEXT.md). Use [STRUCTURE_SUMMARY.md](/Users/kyawminthu/Dev/Control System Tools/STRUCTURE_SUMMARY.md) as a current tree reference, not as the primary project narrative.
+Start each session by reading [PROJECT_STARTUP_CONTEXT.md](PROJECT_STARTUP_CONTEXT.md). Use [STRUCTURE_SUMMARY.md](STRUCTURE_SUMMARY.md) as a current tree reference, not as the primary project narrative.
 
 ## Project Focus
 

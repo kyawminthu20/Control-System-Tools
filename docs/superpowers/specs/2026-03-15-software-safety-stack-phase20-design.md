@@ -21,7 +21,7 @@ Two files change:
 
 No new pages. No navigation changes. No CSS changes.
 
-**Source reference:** `planning/safety_software_stack.md` (absolute path: `/Users/kyawminthu/Dev/Control System Tools/planning/safety_software_stack.md`) — read-only reference material; do not modify this file.
+**Source reference:** `planning/safety_software_stack.md` (absolute path: `planning/safety_software_stack.md`) — read-only reference material; do not modify this file.
 
 ---
 
