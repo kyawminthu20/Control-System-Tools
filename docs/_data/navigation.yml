@@ -73,6 +73,17 @@
   match_prefixes:
     - "/design/"
   children:
+    - label: "Wiring &amp; Installation"
+      url: "/design/wiring/"
+      children:
+        - label: "How to Wire a VFD"
+          url: "/design/wiring/vfd/"
+        - label: "Wire Sizing Walkthrough"
+          url: "/design/wiring/wire-sizing/"
+        - label: "Grounding &amp; Bonding"
+          url: "/design/wiring/grounding-bonding/"
+        - label: "Noise &amp; EMC Mitigation"
+          url: "/design/wiring/emc-noise-mitigation/"
     - label: "Architecture"
       url: "/design/architecture/"
       children:

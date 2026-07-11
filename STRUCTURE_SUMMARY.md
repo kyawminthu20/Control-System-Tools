@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-11 08:41:18
+**Last Auto-Updated:** 2026-07-11 09:41:44
 
 ```text
 ├── .claude/
@@ -131,16 +131,19 @@
 │   │   │   │   ├── US_EU_Machine_Compliance_Wizard.md
 │   │   │   │   ├── us_eu_delta_report_template.md
 │   │   │   │   └── us_eu_wizard_rules.yaml
-│   │   │   └── water_wastewater/
-│   │   │       ├── _index.yaml
-│   │   │       ├── chemical_dosing.md
-│   │   │       ├── distribution_scada_telemetry.md
-│   │   │       ├── equalization_and_neutralization.md
-│   │   │       ├── filtration_and_clarification.md
-│   │   │       ├── instrumentation_reference.md
-│   │   │       ├── intake_and_pumping.md
-│   │   │       ├── overview_and_standards.md
-│   │   │       └── treatment_and_discharge.md
+│   │   │   ├── water_wastewater/
+│   │   │   │   ├── _index.yaml
+│   │   │   │   ├── chemical_dosing.md
+│   │   │   │   ├── distribution_scada_telemetry.md
+│   │   │   │   ├── equalization_and_neutralization.md
+│   │   │   │   ├── filtration_and_clarification.md
+│   │   │   │   ├── instrumentation_reference.md
+│   │   │   │   ├── intake_and_pumping.md
+│   │   │   │   ├── overview_and_standards.md
+│   │   │   │   └── treatment_and_discharge.md
+│   │   │   └── wiring_practices/
+│   │   │       ├── README.md
+│   │   │       └── vfd_wiring.md
 │   │   ├── meta/
 │   │   │   ├── RAG_DIRECTORY_STATUS.md
 │   │   │   └── VERSION_OVERVIEW.md
@@ -1068,6 +1071,10 @@
 │   │   │       └── index.md
 │   │   ├── software-stack/
 │   │   │   └── index.md
+│   │   ├── wiring/
+│   │   │   ├── emc-noise-mitigation/
+│   │   │   ├── index.md
+│   │   │   └── vfd/
 │   │   └── workflows/
 │   │       ├── electrical-review/
 │   │       │   └── index.md
@@ -1483,7 +1490,8 @@
 │   ├── AI_WORKFLOW.md
 │   ├── CONTENT_STANDARDS.md
 │   ├── ENGINEERING_STANDARDS.md
-│   └── PROJECT_ORGANIZATION.md
+│   ├── PROJECT_ORGANIZATION.md
+│   └── ROADMAP.md
 ├── lifecycle-build-page.png
 ├── main.py
 ├── project_state/

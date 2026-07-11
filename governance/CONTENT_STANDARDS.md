@@ -67,6 +67,21 @@ Worked Example (concrete numbers, named scenario) → Common Mistakes (5+,
 numbered, each with root cause) → Practical Checklist → Lifecycle
 Application table → Related Standards.
 
+**Wiring & installation guides** (`docs/design/wiring/`) — the device-wiring
+template (see [ROADMAP.md](ROADMAP.md) for the program):
+Overview (device + terminal groups, what this guide covers/excludes) →
+Before You Start (nameplate data, drawings, tools, de-energize/LOTO
+reminder) → Sizing & Protection (conductors, OCPD, overload — computed via
+the `cst` toolkit, cited to NEC/NFPA 79/IEC 60204-1) → Power Wiring →
+Control / Signal Wiring → Grounding, Shielding & EMC → Common Mistakes
+(numbered, root cause) → Verification Checks (checklist, links to
+commissioning/loop-sheet templates) → Standards References.
+Extra rules for this genre: field practice comes from the knowledge-intake
+loop (ROADMAP.md) or is explicitly marked generally-accepted-practice with a
+verify note; every guide carries a prominent qualified-personnel /
+de-energized-work safety notice; vendor-specific values are never stated as
+universal — "consult the device manual" is a required refrain.
+
 **Communications protocol pages** — the six-question structure:
 Overview (with one Mermaid architecture diagram) → Where It Is Used →
 Network Design → Configuration (device-description files; illustrative
