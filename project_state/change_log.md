@@ -1,7 +1,20 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-11 (Phase 35 — Industrial Communications section, 12-page first release)
+**Last Updated:** 2026-07-11 (Phase 36 — manufacturer directory; external-review roadmap COMPLETE)
 **Status:** Active
+
+## 2026-07-11 — Phase 36 — Curated manufacturer directory (review roadmap complete)
+
+**Type:** New site feature (review Part C proposal, curated per its own R23 guardrail)
+**Status:** Complete on `feat/phase36-manufacturers`.
+
+- `/tools/manufacturers/` + 5 category pages: PLC/PAC & safety controllers (25), VFDs (21), servo/motion incl. CNC (26), SCADA/HMI incl. open source (29), process instrumentation (26) — 127 vendor entries total.
+- Data-driven: vendors live in `docs/_data/manufacturers/*.yml` (name/region/families/protocols/notes), extracted from the review's major tables only — additional/regional long lists deliberately skipped for the curated first release; entries the review doesn't support were excluded rather than invented. Pages render tables via Liquid, so future faceted filtering is a data-attribute pass, not a rewrite.
+- Framing per the review's own guardrails: "major and notable, not all"; absence-means-nothing scope note; inclusion-is-not-endorsement notice; per-category selection notes (ecosystem lock-in, licensing models, open-source caveats, hazardous-area certificates) cross-linked to standards and lifecycle pages; review blocks at "Partial coverage".
+- Tools nav + index updated.
+- Validation: clean build (328 files), zero broken links, table row counts match data entries, 145 tests pass.
+
+**With this, all six phases derived from the external site review (32–36 + the Phase 31 IA restructure that preceded it) are complete.** Remaining work is user-driven: review the comms pages (Review pending → Reviewed), content Phase 30.3+, cst data hand-offs.
 
 ## 2026-07-11 — Phase 35 — Industrial Communications & Network Diagnostics (first release)
 

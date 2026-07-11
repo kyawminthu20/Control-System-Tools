@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-11 00:25:19
+**Last Auto-Updated:** 2026-07-11 00:36:45
 
 ```text
 ├── .claude/
@@ -615,6 +615,12 @@
 │   │   ├── glossary.yml
 │   │   ├── lifecycle_stage_urls.yml
 │   │   ├── lifecycle_stages.yml
+│   │   ├── manufacturers/
+│   │   │   ├── plc_pac.yml
+│   │   │   ├── process_instrumentation.yml
+│   │   │   ├── scada_hmi.yml
+│   │   │   ├── servo_motion.yml
+│   │   │   └── vfd.yml
 │   │   ├── navigation.yml
 │   │   ├── phase26_migration_map.yml
 │   │   ├── rag_tree.json
@@ -1406,6 +1412,18 @@
 │   │   ├── glossary/
 │   │   │   └── index.md
 │   │   ├── index.md
+│   │   ├── manufacturers/
+│   │   │   ├── index.md
+│   │   │   ├── plc-pac/
+│   │   │   │   └── index.md
+│   │   │   ├── process-instrumentation/
+│   │   │   │   └── index.md
+│   │   │   ├── scada-hmi/
+│   │   │   │   └── index.md
+│   │   │   ├── servo-motion/
+│   │   │   │   └── index.md
+│   │   │   └── vfd-drives/
+│   │   │       └── index.md
 │   │   ├── rag-browser/
 │   │   │   └── index.md
 │   │   ├── reference-hub/

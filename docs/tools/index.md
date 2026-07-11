@@ -28,6 +28,10 @@ breadcrumb:
     <p>The open-source package behind the templates: standards-cited calculators (voltage drop, Art. 430, SCCR), panel design pipeline, commissioning generators, PLC utilities, and diagnostics.</p>
   </div>
   <div class="workflow-card">
+    <h3><a href="{{ '/tools/manufacturers/' | relative_url }}">Manufacturer Directory</a></h3>
+    <p>Curated major-and-notable vendors by category — PLC/PAC, VFDs, servo/motion, SCADA/HMI, and process instrumentation — with selection criteria and honest scope limits.</p>
+  </div>
+  <div class="workflow-card">
     <h3><a href="{{ '/tools/rag-browser/' | relative_url }}">RAG File Browser</a></h3>
     <p>Browse and read every markdown file in the canonical reference library — standards intelligence, design framework, training modules, commissioning checklists, and crosswalks.</p>
   </div>
