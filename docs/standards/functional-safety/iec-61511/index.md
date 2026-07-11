@@ -23,6 +23,12 @@ lifecycle_stage:
     slug: "safety-architecture/"
   - name: "Commissioning"
     slug: "commissioning/"
+review:
+  standard: "IEC 61511"
+  edition: "2016"
+  status: "Reviewed"
+  coverage: "SIS lifecycle and key clauses; worked example pending"
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

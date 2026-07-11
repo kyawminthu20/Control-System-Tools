@@ -1,0 +1,26 @@
+{% comment %}
+  Page review-information box (Phase 33, review items R9/R22).
+  Renders when the page declares a `review:` block in frontmatter:
+    review:
+      standard: "NFPA 79"
+      edition: "2024"
+      status: "Reviewed"        # 5-term vocabulary
+      coverage: "All 20 chapters at chapter level"
+      last_reviewed: "May 2026"
+{% endcomment %}
+{% if page.review %}
+<div class="review-meta">
+  <div class="review-meta__title">Page review information</div>
+  <dl class="review-meta__grid">
+    <dt>Edition covered</dt><dd>{{ page.review.standard }} — {{ page.review.edition }}</dd>
+    <dt>Content status</dt><dd>{{ page.review.status }}</dd>
+    {% if page.review.coverage %}<dt>Coverage</dt><dd>{{ page.review.coverage }}</dd>{% endif %}
+    <dt>Last reviewed</dt><dd>{{ page.review.last_reviewed }}</dd>
+    <dt>Primary reference</dt><dd>The official published standard — required for final decisions</dd>
+  </dl>
+  <p class="review-meta__note">
+    Confirm the governing edition, jurisdiction, and project-specific requirements
+    before applying anything on this page.
+  </p>
+</div>
+{% endif %}

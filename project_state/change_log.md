@@ -1,7 +1,17 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-11 (Phase 32 — trust & language pass; Field Guide identity; Phases 33–36 planned)
+**Last Updated:** 2026-07-11 (Phase 33 — page review metadata, dual-lifecycle separation, stage navigation)
 **Status:** Active
+
+## 2026-07-11 — Phase 33 — Page metadata, dual-lifecycle separation, stage navigation
+
+**Type:** Site trust/navigation features (review items R9/R22, R7, R15)
+**Status:** Complete on `feat/phase33-metadata-lifecycle`.
+
+- **Page review information** (R9/R22): new `review:` frontmatter block + `_includes/review-meta.html` box rendered under the breadcrumb on all 12 standards detail pages — edition covered, content status (5-term vocabulary), coverage limits, last-reviewed date, primary-reference reminder. Statuses assigned honestly: IEC 60204-1, IEC 62443, SEMI = Partial coverage (pending depth passes); others Reviewed with coverage caveats (e.g. IEC 60079 "6 of 12+ parts").
+- **General vs functional-safety lifecycle** (R7): new `/lifecycle/general/` page (requirements → architecture → design → build → FAT → installation → SAT → handover → maintenance → MOC, with Mermaid flow and a phase-by-phase overlay table mapping the safety stages onto it). Lifecycle index retitled "Functional-Safety Engineering Lifecycle" with a "Two lifecycles, one project" callout — fixes the general-title/safety-content mislabel the review flagged. Added to Lifecycle nav as first child.
+- **Stage-strip navigation** (R15): `_data/lifecycle_stages.yml` (14 ordered stages) + `_includes/stage-nav.html` — every lifecycle stage page shows the full numbered journey with a "you are here" marker plus prev/next/all links. URL-matched, zero per-page frontmatter.
+- Validation: clean build (307 files), zero broken internal links, stage strip and review boxes verified in built HTML.
 
 ## 2026-07-11 — Phase 32 — Trust & language pass (from external site review)
 

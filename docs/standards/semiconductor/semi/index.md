@@ -14,6 +14,12 @@ related_standards:
   - name: "ISO 12100"
     url: "/standards/functional-safety/iso-12100/"
 last_reviewed: "2026-03-08"
+review:
+  standard: "SEMI S2 / S8 / S14"
+  edition: "editions per source notes"
+  status: "Partial coverage"
+  coverage: "Highlight level; per-section depth pass pending"
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

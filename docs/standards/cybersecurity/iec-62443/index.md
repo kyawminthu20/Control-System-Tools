@@ -23,6 +23,12 @@ lifecycle_stage:
     slug: "safety-architecture/"
   - name: "Detailed Design"
     slug: "detailed-design/"
+review:
+  standard: "IEC 62443 series"
+  edition: "parts 2-1, 3-3, 4-2"
+  status: "Partial coverage"
+  coverage: "Zones/conduits, SLs, FRs; worked example and common mistakes pending"
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

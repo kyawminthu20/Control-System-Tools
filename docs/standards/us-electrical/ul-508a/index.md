@@ -22,6 +22,12 @@ lifecycle_stage:
     slug: "detailed-design/"
   - name: "Build"
     slug: "build/"
+review:
+  standard: "UL 508A"
+  edition: "2022"
+  status: "Reviewed"
+  coverage: "12 topical sections including SCCR Supplement SB"
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

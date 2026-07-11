@@ -21,6 +21,12 @@ lifecycle_stage:
     slug: "safety-architecture/"
   - name: "Detailed Design"
     slug: "detailed-design/"
+review:
+  standard: "IEC 62061"
+  edition: "2021"
+  status: "Reviewed"
+  coverage: "Core clauses plus Annex A SILCL tables; worked example included"
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

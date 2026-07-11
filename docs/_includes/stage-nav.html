@@ -1,0 +1,39 @@
+{% comment %}
+  Lifecycle stage strip (Phase 33, review item R15): renders only on
+  lifecycle stage pages — shows the whole journey with "you are here",
+  plus previous/next links. No-ops everywhere else.
+{% endcomment %}
+{% assign stages = site.data.lifecycle_stages %}
+{% assign current_index = -1 %}
+{% for stage in stages %}
+  {% capture stage_url %}/lifecycle/{{ stage.slug }}/{% endcapture %}
+  {% if page.url == stage_url %}{% assign current_index = forloop.index0 %}{% endif %}
+{% endfor %}
+{% if current_index >= 0 %}
+<nav class="stage-nav" aria-label="Lifecycle stages">
+  <ol class="stage-nav__strip">
+    {% for stage in stages %}
+    {% capture stage_url %}/lifecycle/{{ stage.slug }}/{% endcapture %}
+    <li class="stage-nav__item{% if forloop.index0 == current_index %} stage-nav__item--current{% endif %}">
+      {% if forloop.index0 == current_index %}
+      <span aria-current="step" title="{{ stage.label }} — you are here">{{ stage.num }}</span>
+      {% else %}
+      <a href="{{ stage_url | relative_url }}" title="{{ stage.num }}. {{ stage.label }}">{{ stage.num }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+  <div class="stage-nav__links">
+    {% assign prev_index = current_index | minus: 1 %}
+    {% assign next_index = current_index | plus: 1 %}
+    {% if current_index > 0 %}{% assign prev = stages[prev_index] %}
+    <a class="stage-nav__prev" href="{{ '/lifecycle/' | relative_url }}{{ prev.slug }}/">&larr; {{ prev.num }}. {{ prev.label }}</a>
+    {% else %}<span></span>{% endif %}
+    <a class="stage-nav__all" href="{{ '/lifecycle/' | relative_url }}">All stages</a>
+    {% assign stage_count = stages | size %}
+    {% if next_index < stage_count %}{% assign next = stages[next_index] %}
+    <a class="stage-nav__next" href="{{ '/lifecycle/' | relative_url }}{{ next.slug }}/">{{ next.num }}. {{ next.label }} &rarr;</a>
+    {% else %}<span></span>{% endif %}
+  </div>
+</nav>
+{% endif %}

@@ -102,6 +102,8 @@
   match_prefixes:
     - "/lifecycle/"
   children:
+    - label: "General Project Lifecycle"
+      url: "/lifecycle/general/"
     - label: "1. Concept"
       url: "/lifecycle/concept/"
     - label: "2. Standards Selection"

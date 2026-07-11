@@ -26,6 +26,12 @@ lifecycle_stage:
     slug: "detailed-design/"
   - name: "Build"
     slug: "build/"
+review:
+  standard: "IEC 60204-1"
+  edition: "2018"
+  status: "Partial coverage"
+  coverage: "All 15 clauses summarized; per-clause depth pass pending"
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

@@ -2508,3 +2508,81 @@ tr:nth-child(even) td {
     padding: 0.4rem 0.55rem;
   }
 }
+
+/* ── Phase 33: lifecycle stage strip ─────────────────────────────── */
+.stage-nav {
+  margin: 0 0 1.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-bg-subtle, var(--color-bg));
+}
+.stage-nav__strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  list-style: none;
+  margin: 0 0 0.6rem;
+  padding: 0;
+}
+.stage-nav__item a,
+.stage-nav__item span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.9rem;
+  height: 1.9rem;
+  padding: 0 0.4rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-family: var(--font-mono, monospace);
+  text-decoration: none;
+  color: var(--color-text-muted);
+}
+.stage-nav__item a:hover { color: var(--color-text); border-color: var(--color-text-muted); }
+.stage-nav__item--current span {
+  background: var(--color-accent, #2563eb);
+  border-color: var(--color-accent, #2563eb);
+  color: #fff;
+  font-weight: 600;
+}
+.stage-nav__links {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.78rem;
+}
+.stage-nav__links a { text-decoration: none; }
+.stage-nav__all { color: var(--color-text-muted); }
+
+/* ── Phase 33: page review-information box ───────────────────────── */
+.review-meta {
+  margin: 0 0 1.5rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent, #2563eb);
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+.review-meta__title {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+.review-meta__grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.15rem 1rem;
+  margin: 0;
+}
+.review-meta__grid dt { color: var(--color-text-muted); }
+.review-meta__grid dd { margin: 0; }
+.review-meta__note {
+  margin: 0.6rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+}

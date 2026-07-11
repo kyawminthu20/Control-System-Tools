@@ -23,6 +23,12 @@ lifecycle_stage:
     slug: "safety-architecture/"
   - name: "Commissioning"
     slug: "commissioning/"
+review:
+  standard: "ISO 13849-1"
+  edition: "2023"
+  status: "Reviewed"
+  coverage: "Clauses 4-7 plus Annex A and CCF; worked example included"
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

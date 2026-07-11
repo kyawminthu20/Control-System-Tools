@@ -18,6 +18,12 @@ crosswalk_refs:
   - name: "IEC 60079 ↔ NEC Art. 500–505"
     url: "/tools/crosswalks/iec60079-nec-500-505/"
 last_reviewed: "2026-05-06"
+review:
+  standard: "IEC 60079 series"
+  edition: "parts -0, -1, -10-1, -11, -14, -17"
+  status: "Reviewed"
+  coverage: "6 of 12+ parts; remaining parts flagged as gaps on this page"
+  last_reviewed: "May 2026"
 ---
 
 <div class="page-header">

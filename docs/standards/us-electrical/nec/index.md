@@ -28,6 +28,12 @@ companion_standards:
   - "ISO 12100"
   - "ISO 13849-1"
   - "IEC 60204-1"
+review:
+  standard: "NEC (NFPA 70)"
+  edition: "2023"
+  status: "Reviewed"
+  coverage: "19 articles relevant to machines and panels"
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

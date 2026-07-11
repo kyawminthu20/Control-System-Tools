@@ -26,6 +26,12 @@ lifecycle_stage:
     slug: "build/"
   - name: "Installation"
     slug: "installation/"
+review:
+  standard: "NFPA 79"
+  edition: "2024"
+  status: "Reviewed"
+  coverage: "All 20 chapters at chapter level; worked example and common mistakes"
+  last_reviewed: "May 2026"
 ---
 
 <div class="page-header">

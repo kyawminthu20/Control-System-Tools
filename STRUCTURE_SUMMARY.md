@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-10 23:54:24
+**Last Auto-Updated:** 2026-07-11 00:03:08
 
 ```text
 ├── .claude/
@@ -614,6 +614,7 @@
 │   │   ├── field_checklists.yml
 │   │   ├── glossary.yml
 │   │   ├── lifecycle_stage_urls.yml
+│   │   ├── lifecycle_stages.yml
 │   │   ├── navigation.yml
 │   │   ├── phase26_migration_map.yml
 │   │   ├── rag_tree.json
@@ -622,9 +623,11 @@
 │   ├── _includes/
 │   │   ├── context-panel.html
 │   │   ├── rag-tree-nodes.html
+│   │   ├── review-meta.html
 │   │   ├── sidebar-global.html
 │   │   ├── sidebar-training-group.html
 │   │   ├── sidebar.html
+│   │   ├── stage-nav.html
 │   │   ├── standards-graph.html
 │   │   ├── topnav.html
 │   │   └── trust-boundary.html
@@ -1200,6 +1203,8 @@
 │   │   ├── detailed-design/
 │   │   │   └── index.md
 │   │   ├── draft-documentation/
+│   │   │   └── index.md
+│   │   ├── general/
 │   │   │   └── index.md
 │   │   ├── guides/
 │   │   │   ├── commissioning-templates/

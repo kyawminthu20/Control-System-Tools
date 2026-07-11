@@ -23,6 +23,12 @@ lifecycle_stage:
     slug: "risk-assessment/"
   - name: "Safety Architecture"
     slug: "safety-architecture/"
+review:
+  standard: "ISO 12100"
+  edition: "2010"
+  status: "Reviewed"
+  coverage: "Risk-assessment methodology; worked example pending"
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

@@ -20,9 +20,17 @@ related_standards:
 
 <div class="page-header">
   <span class="page-header__label">Engineering Lifecycle</span>
-  <h1>Control System Engineering Lifecycle</h1>
+  <h1>Functional-Safety Engineering Lifecycle</h1>
   <p>13 stages from concept through decommissioning — with standards overlay, roles, and entry/exit criteria at each stage.</p>
 </div>
+
+> **Two lifecycles, one project.** This page defines the **functional-safety
+> lifecycle** — the analysis stages and verification gates that safety-related
+> control functions add to a project. It overlays the
+> [general controls project lifecycle]({{ '/lifecycle/general/' | relative_url }})
+> (requirements → design → build → FAT → installation → commissioning →
+> handover), which every project follows whether or not it has safety
+> functions. The two are related but not identical.
 
 ## Lifecycle at a Glance
 

@@ -19,6 +19,12 @@ related_standards:
 lifecycle_stage:
   - name: "Safety Architecture"
     slug: "safety-architecture/"
+review:
+  standard: "IEC 61508"
+  edition: "2010"
+  status: "Reviewed"
+  coverage: "Lifecycle overview and key concepts; worked example pending"
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">
