@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-10 21:22:07
+**Last Auto-Updated:** 2026-07-10 21:28:35
 
 ```text
 ├── .claude/
@@ -591,6 +591,8 @@
 ├── control-theory-overview-full.png
 ├── data/
 │   ├── README.md
+│   ├── examples/
+│   │   └── io_list_example.csv
 │   ├── historian_exports/
 │   ├── network_captures/
 │   ├── plc_exports/
@@ -1406,20 +1408,32 @@
 │       │   ├── transformer.py
 │       │   └── voltage_drop.py
 │       ├── cli.py
+│       ├── commissioning/
+│       │   ├── __init__.py
+│       │   ├── fat_sat.py
+│       │   └── loop_sheets.py
 │       ├── common/
 │       │   ├── __init__.py
 │       │   ├── cite.py
 │       │   ├── tables.py
 │       │   └── units.py
-│       └── motion/
+│       ├── motion/
+│       │   ├── __init__.py
+│       │   └── encoder.py
+│       └── panel/
 │           ├── __init__.py
-│           └── encoder.py
+│           ├── bom.py
+│           ├── io_list.py
+│           ├── nameplates.py
+│           └── wire_schedule.py
 ├── tests/
 │   ├── __init__.py
 │   ├── cst/
 │   │   ├── __init__.py
+│   │   ├── test_commissioning.py
 │   │   ├── test_enclosure_thermal.py
 │   │   ├── test_encoder.py
+│   │   ├── test_panel.py
 │   │   ├── test_phase2_calcs.py
 │   │   ├── test_tables.py
 │   │   ├── test_units.py

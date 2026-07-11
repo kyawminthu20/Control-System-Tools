@@ -30,7 +30,8 @@ Package map (`src/cst/`):
 | `calc/` | voltage drop + min wire size (NEC K-factor), enclosure thermal (IEC/TR 60890 method) | ✅ |
 | `calc/` | ampacity w/ corrections (NEC 310.15), motor branch circuit (Art. 430 chain), transformer OCPD (Table 450.3(B)), panel SCCR (UL 508A SB4), fault current (infinite-bus + point-to-point) | ✅ logic; bulk table values user-supplied |
 | `motion/` | encoder scaling: counts ↔ units ↔ RPM ↔ linear speed | ✅ |
-| `panel/`, `commissioning/` | I/O list → BOM → wire schedule → nameplates; loop sheets, FAT/SAT | Phase 3 |
+| `panel/` | I/O list model + validation → BOM (spares/densities) → wire/terminal schedule → legend & panel nameplates | ✅ |
+| `commissioning/` | per-point loop test sheets (5-pt analog checks), FAT/SAT protocol skeleton | ✅ |
 | `plc/`, `diagnostics/`, `docgen/` | tag DB / address maps / pycomm3, SBM anomaly detection, design packages | Phase 4 |
 
 Every calculator cites its source standard/formula and lists its assumptions in

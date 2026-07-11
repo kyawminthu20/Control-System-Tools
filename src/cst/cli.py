@@ -11,12 +11,19 @@ Usage examples:
     cst transformer --kva 15 --primary 480 --secondary 208
     cst sccr --component "main breaker:65" --component "contactor:5"
     cst fault-current --kva 1500 --volts 480 --z 5.75
+    cst io-check data/examples/io_list_example.csv
+    cst bom data/examples/io_list_example.csv --relays
+    cst wire-schedule data/examples/io_list_example.csv
+    cst legend data/examples/io_list_example.csv
+    cst loop-sheets data/examples/io_list_example.csv --out-dir loop_sheets/
+    cst fat data/examples/io_list_example.csv --panel CP-01
 """
 
 from __future__ import annotations
 
 import argparse
 import sys
+from pathlib import Path
 
 from cst.calc import (
     ampacity,
@@ -27,7 +34,9 @@ from cst.calc import (
     transformer,
     voltage_drop,
 )
+from cst.commissioning import fat_sat, loop_sheets
 from cst.motion.encoder import EncoderScaling
+from cst.panel import bom, io_list as io_list_mod, nameplates, wire_schedule
 
 
 def _cmd_voltage_drop(args: argparse.Namespace) -> int:
@@ -169,6 +178,58 @@ def _cmd_fault_current(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_io_check(args: argparse.Namespace) -> int:
+    problems = io_list_mod.load_io_list(args.csv).validate()
+    if problems:
+        print(f"{len(problems)} problem(s):")
+        for p in problems:
+            print(f"  - {p}")
+        return 1
+    print("I/O list OK")
+    return 0
+
+
+def _cmd_bom(args: argparse.Namespace) -> int:
+    loaded = io_list_mod.load_io_list(args.csv)
+    lines = bom.generate_bom(
+        loaded, spare_fraction=args.spares, interposing_relays_for_do=args.relays
+    )
+    print(bom.bom_to_csv(lines), end="")
+    return 0
+
+
+def _cmd_wire_schedule(args: argparse.Namespace) -> int:
+    loaded = io_list_mod.load_io_list(args.csv)
+    rows = wire_schedule.generate_wire_schedule(loaded, strip_prefix=args.strip)
+    print(wire_schedule.wire_schedule_to_csv(rows), end="")
+    return 0
+
+
+def _cmd_legend(args: argparse.Namespace) -> int:
+    loaded = io_list_mod.load_io_list(args.csv)
+    print(nameplates.legend_plates_to_csv(nameplates.legend_plates(loaded)), end="")
+    return 0
+
+
+def _cmd_loop_sheets(args: argparse.Namespace) -> int:
+    loaded = io_list_mod.load_io_list(args.csv)
+    sheets = loop_sheets.generate_loop_sheets(loaded, project=args.project)
+    out_dir = Path(args.out_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for tag, sheet in sheets.items():
+        (out_dir / f"{tag.replace('/', '_')}.md").write_text(sheet, encoding="utf-8")
+    print(f"Wrote {len(sheets)} loop sheets to {out_dir}/")
+    return 0
+
+
+def _cmd_fat(args: argparse.Namespace) -> int:
+    loaded = io_list_mod.load_io_list(args.csv)
+    print(fat_sat.fat_template(
+        loaded, project=args.project, panel_id=args.panel, test_type=args.type
+    ))
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="cst", description="Control System Tools — standards-cited calculators"
@@ -257,6 +318,38 @@ def build_parser() -> argparse.ArgumentParser:
     fc.add_argument("--feet", type=float, default=None, help="conductor run for point-to-point")
     fc.add_argument("--c-value", type=float, default=None, help="Bussmann C constant")
     fc.set_defaults(func=_cmd_fault_current)
+
+    ioc = sub.add_parser("io-check", help="validate an I/O list CSV")
+    ioc.add_argument("csv", help="I/O list CSV path")
+    ioc.set_defaults(func=_cmd_io_check)
+
+    bm = sub.add_parser("bom", help="BOM from an I/O list (CSV to stdout)")
+    bm.add_argument("csv")
+    bm.add_argument("--spares", type=float, default=0.20, help="spare I/O fraction")
+    bm.add_argument("--relays", action="store_true", help="interposing relays per DO")
+    bm.set_defaults(func=_cmd_bom)
+
+    ws = sub.add_parser("wire-schedule", help="wire/terminal schedule (CSV to stdout)")
+    ws.add_argument("csv")
+    ws.add_argument("--strip", default="TB1", help="terminal strip prefix")
+    ws.set_defaults(func=_cmd_wire_schedule)
+
+    lg = sub.add_parser("legend", help="legend-plate engraving list (CSV to stdout)")
+    lg.add_argument("csv")
+    lg.set_defaults(func=_cmd_legend)
+
+    ls = sub.add_parser("loop-sheets", help="markdown loop test sheet per point")
+    ls.add_argument("csv")
+    ls.add_argument("--out-dir", required=True, help="directory for generated sheets")
+    ls.add_argument("--project", default="", help="project name on sheets")
+    ls.set_defaults(func=_cmd_loop_sheets)
+
+    ft = sub.add_parser("fat", help="FAT/SAT protocol skeleton (markdown to stdout)")
+    ft.add_argument("csv")
+    ft.add_argument("--project", default="")
+    ft.add_argument("--panel", default="")
+    ft.add_argument("--type", choices=("FAT", "SAT"), default="FAT")
+    ft.set_defaults(func=_cmd_fat)
 
     return parser
 

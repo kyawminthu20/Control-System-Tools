@@ -18,6 +18,23 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-07-11 — Tools Suite Phase 3 — panel design pipeline + commissioning generators
+
+**Type:** Feature (cst package expansion)
+**Status:** Complete on `feat/cst-phase3`.
+
+- `cst.panel.io_list` — canonical I/O-list CSV model (tag/description/io_type/signal/address...), tolerant header mapping via `column_map`, validation (duplicate tags, address conflicts, unknown types).
+- `cst.panel.bom` — structural BOM: module counts from channel totals + spare fraction (default 20 %), terminal blocks per point by signal class, shield terminals, optional interposing relays. Generic descriptions; part numbers deliberately left to the user.
+- `cst.panel.wire_schedule` — tag-suffix wire numbers, sequential terminal assignment, conductor sets + default colors per NFPA 79 Ch. 16 practice (parameterized).
+- `cst.panel.nameplates` — legend-plate engraving list (flags over-length descriptions) + panel nameplate content per NFPA 79 Ch. 19 / UL 508A marking items.
+- `cst.commissioning.loop_sheets` — markdown loop test sheet per point: ISA-style 5-point analog checks, actuate/verify discrete checks, RTD/TC substitution checks, as-found/as-left, sign-off.
+- `cst.commissioning.fat_sat` — FAT/SAT protocol skeleton generated from the I/O list summary.
+- `data/examples/io_list_example.csv` — 13-point worked example driving docs, demos, and tests.
+- 6 new CLI subcommands: `io-check`, `bom`, `wire-schedule`, `legend`, `loop-sheets`, `fat`.
+- Tests: 115 passing (18 new).
+
+**Note:** default CSV format is the suite's own; a real (scrubbed) project I/O list from the user would let `column_map` presets be added for their exports.
+
 ## 2026-07-11 — Tools Suite Phase 2 — NEC/UL calculators
 
 **Type:** Feature (cst package expansion)
