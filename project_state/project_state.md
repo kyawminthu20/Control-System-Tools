@@ -28,7 +28,7 @@ New track: grow the repo into a comprehensive engineering tools suite (audit →
 
 ### Phase 0 — Hygiene (commit c027d72)
 
-- Untracked `planning/Python/` (1,141 Udemy course files, 168 MB — 54 % of all tracked files; copyright exposure on a public remote). Files stay on disk; `.git` history rewrite deliberately deferred pending user decision.
+- Untracked `planning/Python/` (1,141 Udemy course files, 168 MB — 54 % of all tracked files; copyright exposure on a public remote). **Update 2026-07-10 (later same day):** user approved full removal — history rewritten with `git filter-repo`, course moved to `~/Dev/_archive/udemy-python-bootcamp/`, rewritten master force-pushed, 3 stale merged remote branches deleted. `.git` 171 MB → 5.9 MB. Pre-rewrite mirror backup: `~/Dev/_archive/Control-System-Tools-pre-rewrite-backup.git`.
 - `tools/project_automator.py`: IGNORE_DIRS now excludes `.venv`, `docs/vendor`, `docs/_site`, caches — STRUCTURE_SUMMARY.md 600 KB → 99 KB (the pre-commit hook had been re-committing the bloat on every commit).
 - Fixed the 2 long-standing broken homepage links (`/industries/food-and-beverage/`, `/industries/offshore/`).
 - Excluded internal `docs/plans/` + `docs/superpowers/` from the published site (`_config.yml` exclude).

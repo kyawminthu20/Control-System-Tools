@@ -18,6 +18,24 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-07-10 — Git history rewrite: Udemy course purged from repo and remote
+
+**Type:** Repository history rewrite (user-approved)
+**Status:** Complete; rewritten `master` force-pushed to `origin`.
+**Reason:** `planning/Python/` (168 MB third-party "Complete Python 3 Bootcamp" course, 1,141 files) was tracked since early history and present on the public GitHub remote — copyright exposure and 165 MB of pointless `.git` weight.
+
+**What was done:**
+- Full mirror backup first: `~/Dev/_archive/Control-System-Tools-pre-rewrite-backup.git` (169 MB, contains pre-rewrite history).
+- Course files moved out of the repo to `~/Dev/_archive/udemy-python-bootcamp/`.
+- The stale `phase-19-nav-refactor` worktree blocked filter-repo; its uncommitted changes were committed onto the `phase-19-nav-refactor` branch (and copied to `~/Dev/_archive/phase19-worktree-uncommitted/`), then the worktree was removed.
+- `git filter-repo --invert-paths --path planning/Python` rewrote all 328 commits. `.git`: 171 MB → 5.9 MB. Zero refs touch `planning/Python` afterwards; 65/65 tests pass.
+- Rewritten `master` force-pushed; 3 stale fully-merged remote branches deleted (`feat/control-systems-training-expansion`, `feat/phase22-semiconductor-facility-reference`, `feat/ul508a-content-depth`). Remote now carries only `master`.
+
+**Consequences to know:**
+- **All commit SHAs changed.** Any existing clone of this repo must be re-cloned (or hard-reset to the new history). Old SHAs in notes/links no longer resolve.
+- GitHub may retain pre-rewrite objects in caches/unreachable storage for a while; a GitHub Support request can force-purge if needed.
+- `planning/Python/` remains in `.gitignore` as a guard.
+
 ## 2026-07-10 — Tools Suite Phases 0–1 — repo hygiene + `cst` Python package
 
 **Type:** New project track (Python tools suite) + repository hygiene
