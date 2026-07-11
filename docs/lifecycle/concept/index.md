@@ -4,7 +4,6 @@ title: "Lifecycle Stage 1 — Concept"
 description: "Define machine limits, intended use, foreseeable misuse, and applicable markets before risk assessment begins."
 redirect_from:
   - /verification/lifecycle/concept/
-  - /lifecycle/concept/index.html
 breadcrumb:
   - name: "Lifecycle"
     url: "/lifecycle/"

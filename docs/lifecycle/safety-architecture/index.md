@@ -4,7 +4,6 @@ title: "Lifecycle Stage 4 — Safety Architecture Definition"
 description: "Decompose safety functions into subsystems, select category/architecture, calculate PL or SIL, and verify response time budgets."
 redirect_from:
   - /verification/safety-architecture/
-  - /lifecycle/safety-architecture/index.html
 breadcrumb:
   - name: "Lifecycle"
     url: "/lifecycle/"

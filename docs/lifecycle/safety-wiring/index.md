@@ -4,7 +4,6 @@ title: "Lifecycle — Safety Wiring Practices"
 description: "Practical safety wiring reference: 24 VDC rationale, NC contact logic, wire gauge, color coding, termination, and dual-channel input specification."
 redirect_from:
   - /verification/safety-wiring/
-  - /lifecycle/safety-wiring/index.html
 breadcrumb:
   - name: "Lifecycle"
     url: "/lifecycle/"

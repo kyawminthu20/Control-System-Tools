@@ -4,7 +4,6 @@ title: "Lifecycle Stage 6 — Draft Design Documentation"
 description: "Compile engineering outputs into formal document packages for the build team, commissioning team, and regulatory record."
 redirect_from:
   - /verification/lifecycle/draft-documentation/
-  - /lifecycle/draft-documentation/index.html
 breadcrumb:
   - name: "Lifecycle"
     url: "/lifecycle/"

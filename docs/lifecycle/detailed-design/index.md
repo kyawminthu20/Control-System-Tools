@@ -4,7 +4,6 @@ title: "Lifecycle Stage 5 — Detailed Design and Part Sizing"
 description: "Circuit design, wire sizing, SCCR, grounding, label requirements, BOM, and verification plan — governed by NFPA 79, UL 508A, and NEC."
 redirect_from:
   - /verification/lifecycle/detailed-design/
-  - /lifecycle/detailed-design/index.html
 breadcrumb:
   - name: "Lifecycle"
     url: "/lifecycle/"

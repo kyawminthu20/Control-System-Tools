@@ -4,7 +4,6 @@ title: "Lifecycle Stage 12 — Management of Change"
 description: "Structured re-entry into the safety lifecycle for any modification to a safety function, component, or program — the most commonly failed audit point."
 redirect_from:
   - /verification/management-of-change/
-  - /lifecycle/management-of-change/index.html
 breadcrumb:
   - name: "Lifecycle"
     url: "/lifecycle/"

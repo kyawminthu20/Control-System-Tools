@@ -4,7 +4,6 @@ title: "Lifecycle Stage 2 — Standards Selection"
 description: "Identify all applicable standards, resolve type-A/B/C hierarchy, and determine the PL or SIL pathway before detailed design begins."
 redirect_from:
   - /verification/lifecycle/standards-selection/
-  - /lifecycle/standards-selection/index.html
 breadcrumb:
   - name: "Lifecycle"
     url: "/lifecycle/"

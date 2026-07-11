@@ -4,7 +4,6 @@ title: "Lifecycle Stage 11 — Maintenance and Lifecycle Support"
 description: "Proof testing at defined intervals, preventive maintenance, bypass management, and MOC — sustaining safety integrity across the full operational life."
 redirect_from:
   - /verification/maintenance/
-  - /lifecycle/maintenance/index.html
 breadcrumb:
   - name: "Lifecycle"
     url: "/lifecycle/"

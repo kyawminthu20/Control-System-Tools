@@ -4,7 +4,6 @@ title: "Lifecycle Stage 3.5 — Safety Requirements Specification"
 description: "The SRS is the contract between risk assessment and architecture — every safety function defined with required PL/SIL, inputs, outputs, and response time."
 redirect_from:
   - /verification/safety-requirements-spec/
-  - /lifecycle/safety-requirements-spec/index.html
 breadcrumb:
   - name: "Lifecycle"
     url: "/lifecycle/"

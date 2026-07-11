@@ -15,7 +15,6 @@ related_standards:
     url: "/standards/machinery/iec-60204-1/"
 redirect_from:
   - /implementation/lifecycle-installation/
-  - /lifecycle/installation/index.html
 ---
 
 <div class="page-header">

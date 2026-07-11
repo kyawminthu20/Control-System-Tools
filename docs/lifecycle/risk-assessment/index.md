@@ -4,7 +4,6 @@ title: "Lifecycle Stage 3 — Risk Assessment"
 description: "Systematic hazard identification and risk estimation — the critical gate where PLr or SIL targets are assigned to each safety function."
 redirect_from:
   - /verification/risk-assessment/
-  - /lifecycle/risk-assessment/index.html
 breadcrumb:
   - name: "Lifecycle"
     url: "/lifecycle/"

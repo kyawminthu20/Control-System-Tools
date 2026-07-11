@@ -15,7 +15,6 @@ related_standards:
     url: "/standards/functional-safety/iec-62061/"
 redirect_from:
   - /implementation/lifecycle-build/
-  - /lifecycle/build/index.html
 ---
 
 <div class="page-header">

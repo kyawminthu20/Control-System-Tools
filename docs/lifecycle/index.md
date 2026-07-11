@@ -4,7 +4,6 @@ title: "Engineering Lifecycle"
 description: "Safety engineering lifecycle — 13 stages from concept through decommissioning, with standards overlay, roles, and entry/exit criteria at each stage."
 redirect_from:
   - /verification/lifecycle/
-  - /lifecycle/index.html
 breadcrumb:
   - name: "Lifecycle"
 repo_path: "control-standards/rag/standards_intelligence/reference_models/"
