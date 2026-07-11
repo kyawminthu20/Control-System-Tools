@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-11 08:27:32
+**Last Auto-Updated:** 2026-07-11 08:41:18
 
 ```text
 ├── .claude/
@@ -1479,6 +1479,11 @@
 │   │   └── index.md
 │   └── verification/
 │       └── index.md
+├── governance/
+│   ├── AI_WORKFLOW.md
+│   ├── CONTENT_STANDARDS.md
+│   ├── ENGINEERING_STANDARDS.md
+│   └── PROJECT_ORGANIZATION.md
 ├── lifecycle-build-page.png
 ├── main.py
 ├── project_state/

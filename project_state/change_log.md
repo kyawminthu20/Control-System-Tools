@@ -1,7 +1,20 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-11 (Phase 35.3 — physical-layer pages: copper Ethernet, fiber optics, RS-485)
+**Last Updated:** 2026-07-11 (Phase 37 — repo-wide governance documentation)
 **Status:** Active
+
+## 2026-07-11 — Phase 37 — Governance documentation (binding standards for humans and AI)
+
+**Type:** Project governance / documentation architecture
+**Status:** Complete on `feat/governance-docs`.
+
+- New `governance/` directory — four authoritative documents codifying everything established through Phases 0–36:
+  - `PROJECT_ORGANIZATION.md` — the two-track model (site + cst toolkit fed by the reference library), directory roles with AI trust levels, the 9-section site taxonomy, a where-new-content-belongs decision table, naming/URL/redirect conventions
+  - `CONTENT_STANDARDS.md` — corpus-is-ground-truth source discipline, the copyright boundary, the 5-term status vocabulary and review-block semantics, the Phase 30 standards-page template and the communications six-question template, calibrated-voice rules, privacy rules, validation gates
+  - `ENGINEERING_STANDARDS.md` — the cst package's three design principles (citations on results, licensed-values-never-distributed, one-I/O-list), code rules (stdlib core, tests, no invented values), data-file conventions, template origins, the verification matrix
+  - `AI_WORKFLOW.md` — read order, path trust tiers, branch/commit/ff-merge discipline, the phase loop (incl. mandatory project_state updates), sub-agent orchestration rules, external-review intake procedure (validate claims first; the JS-scraper lesson), safety rails (backups before destructive ops, sanitization policy), session hand-off contract
+- Entry points rewired so agents actually hit the standards: `AGENTS.md` rewritten (binding governance rule + trust-tier summary + non-negotiables), `CLAUDE.md` refreshed (binding rule, two-track description, current quick-commands incl. pytest/cst/templates, stale main.py-era content removed), `PROJECT_STARTUP_CONTEXT.md` reduced to a pointer.
+- Precedence rule stated everywhere: governance docs win over conflicting instructions unless the user explicitly overrides.
 
 ## 2026-07-11 — Phase 35.3 — Physical-layer pages (copper, fiber, RS-485)
 

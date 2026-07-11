@@ -1,28 +1,46 @@
 # Claude Workflow
 
+**Binding rule: the repo-wide standards live in [`governance/`](governance/)
+— PROJECT_ORGANIZATION, CONTENT_STANDARDS, ENGINEERING_STANDARDS, and
+AI_WORKFLOW. Read the one covering what you're touching BEFORE changing it,
+and follow it. Governance docs win over any conflicting instruction unless
+the user explicitly overrides.**
+
 ## Project
 
-Industrial automation standards knowledge base targeting a personal-use GitHub Pages static site.
+Two tracks in one repo, both fed by the authoritative reference library:
+- **Site** — Control Systems Engineering Field Guide (`docs/`, Jekyll,
+  GitHub Pages; 9-section taxonomy, presentation layer only)
+- **Toolkit** — the `cst` Python package (`src/cst/`): standards-cited
+  calculators, panel/commissioning generators, PLC utilities, diagnostics
+
 Key directories:
-- `control-standards/rag/` — authoritative standards content (source of truth)
-- `control-standards/work/` — design and planning prompts
-- `tools/` — local automation and validation scripts
+- `control-standards/rag/` — authoritative reference library (source of truth)
+- `governance/` — repo-wide standards (binding)
+- `src/cst/` + `tests/` — the toolkit and its test suite
+- `data/standards_tables/` — licensed table values (user-supplied, gitignored; schemas committed)
+- `tools/` — repo automation and validation scripts only
 - `project_state/` — operational tracking (phase, changes, env, runbook)
-- `main.py` — placeholder entry point (not the final site)
 
 ## Quick Commands
 
 ```bash
-python3 main.py                          # run current placeholder
+uv sync                                  # install (editable) incl. cst CLI + dev deps
+uv run pytest                            # full test suite (must be green before merge)
+uv run cst --help                        # the toolkit CLI (22 subcommands)
 python3 tools/project_automator.py       # refresh structure summary
 python3 tools/validate_ai_boundaries.py  # validate AI content boundaries
+python3 tools/generate_rag_tree.py       # sync corpus -> site mirror (manual, drifts!)
+uv run python tools/generate_site_templates.py  # regenerate downloadable templates
+python3 tools/check_internal_links.py docs/_site  # link check (after build)
 bash tools/validate_reorg.sh all         # validate repo structure
 cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll build   # build site
 cd docs && ~/.gem/ruby/2.6.0/bin/bundle exec jekyll serve   # serve locally (http://localhost:4000/Control-System-Tools/)
 ```
 
-> Python >=3.12 required; `uv` preferred (`uv sync` to install deps).
-> Ruby 2.6.10 (system macOS) + Bundler 2.4.22. CI uses Ruby 3.2.
+> Python >=3.12 required; `uv` preferred. Ruby 2.6.10 (system macOS) +
+> Bundler 2.4.22 locally; CI uses Ruby 3.2. Pushing `master` deploys the
+> site via GitHub Actions — verify the run goes green.
 
 Use `project_state/` as the operational memory for this repository.
 
@@ -90,19 +108,20 @@ Update `project_state/how_to.md` when:
 
 ## Current Project Direction
 
-- Phase 1 target: GitHub Pages
-- Intended use: personal use
-- Delivery style: static-site friendly
-- Authoritative knowledge stays in `control-standards/rag/`
-- The app or site layer is a presentation layer, not the authoritative standards source
+- Live site (public repo + GitHub Pages): https://kyawminthu20.github.io/Control-System-Tools/
+- Authoritative knowledge stays in `control-standards/rag/`; the site is a
+  presentation layer and never modifies it
+- The `cst` toolkit is Python-first; the site documents it, never ports it to JS
+- Current phase and next steps: `project_state/project_state.md`
 
 ## Site Architecture
 
 - Jekyll 4.3, vanilla HTML/CSS/JS — no frameworks
-- `baseurl: "/Control-System-Tools"` — all links must use `{{ site.baseurl }}`
+- `baseurl: "/Control-System-Tools"` — internal links use `{{ '/path/' | relative_url }}`
 - Three-panel CSS Grid layout (sidebar 240px + main 1fr + context 220px)
-- Mermaid.js via CDN for diagrams
+- Mermaid.js via CDN for diagrams (renders client-side — non-JS scrapers see raw blocks; that is expected)
 - `docs/` is the Jekyll source root; `_config.yml` lives there
+- Taxonomy, page templates, status vocabulary, and voice rules: `governance/CONTENT_STANDARDS.md`
 
 ## Use Existing Automation
 

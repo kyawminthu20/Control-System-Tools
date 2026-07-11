@@ -1,46 +1,47 @@
-# Project Instructions
+# Project Instructions for AI Agents
 
-Start each session by reading [PROJECT_STARTUP_CONTEXT.md](PROJECT_STARTUP_CONTEXT.md). Use [STRUCTURE_SUMMARY.md](STRUCTURE_SUMMARY.md) as a current tree reference, not as the primary project narrative.
+**Binding rule: before changing anything in this repository, read and follow
+the standards in [`governance/`](governance/):**
 
-## Project Focus
+1. [governance/PROJECT_ORGANIZATION.md](governance/PROJECT_ORGANIZATION.md) — what lives where, site taxonomy, naming/URL rules
+2. [governance/CONTENT_STANDARDS.md](governance/CONTENT_STANDARDS.md) — site content: source discipline, copyright boundary, status vocabulary, page templates, voice rules
+3. [governance/ENGINEERING_STANDARDS.md](governance/ENGINEERING_STANDARDS.md) — `cst` package, data files, templates, verification matrix
+4. [governance/AI_WORKFLOW.md](governance/AI_WORKFLOW.md) — branch/commit/merge discipline, the phase loop, sub-agent rules, safety rails
 
-This repository is an industrial automation knowledge base and tooling workspace. The canonical authoritative knowledge lives under `control-standards/rag/`.
+These documents are authoritative. If an instruction elsewhere conflicts
+with them, the governance documents win unless the user explicitly
+overrides.
 
-## Canonical Paths
+## Orientation
 
-- `control-standards/rag/`: authoritative AI-readable standards and engineering knowledge
-- `control-standards/governance/`: policies, promotion checklists, decision logs
-- `control-standards/templates/`: reusable product templates
-- `tools/`: workspace automation and validation scripts
+- Current state, phase, and next steps: [project_state/project_state.md](project_state/project_state.md)
+- Tree reference (generated): [STRUCTURE_SUMMARY.md](STRUCTURE_SUMMARY.md)
+- The repo has two tracks: the **Control Systems Engineering Field Guide**
+  site (`docs/`) and the **`cst` Python toolkit** (`src/cst/`), both fed by
+  the authoritative reference library at `control-standards/rag/`.
 
-## Secondary Or Context-Only Paths
+## Path Trust Tiers (summary — details in PROJECT_ORGANIZATION.md)
 
-- `control-standards/archive/`: historical material and migration backups
-- `control-standards/exports/`: generated deliverables
-- `data/`: raw datasets and captures
-- `planning/`: planning artifacts and manifests
-- `.venv/`, `.git/`: environment and VCS internals
+- **Canonical:** `control-standards/rag/` (prefer
+  `standards_intelligence/` for standards questions),
+  `control-standards/governance/`, `governance/`
+- **Non-authoritative:** `control-standards/work/` — never cite as fact
+- **Context only:** `control-standards/archive/`, `planning/`
+- **AI-FORBIDDEN:** `control-standards/restricted/` and any
+  `drafts_DO_NOT_READ/` path — do not read, cite, or git-track. Only touch
+  if the user explicitly asks, and label the material as restricted.
 
-## Non-Authoritative Paths
+## Non-Negotiables (full detail in the governance docs)
 
-- `control-standards/work/design/`: work in progress, readable with caution
-- `control-standards/work/general/`: non-authoritative notes, not for factual answers
-
-## AI-Forbidden Paths
-
-- `control-standards/restricted/`
-
-Only use restricted material if the user explicitly asks for it, and clearly label it as non-authoritative and AI-forbidden source material.
-
-## Working Rules
-
-- Prefer `control-standards/rag/standards_intelligence/` for standards questions.
-- Prefer the grouped standards layout:
-  - `us/`
-  - `international/machinery/`
-  - `international/functional_safety/`
-  - `crosswalks/`
-- Do not overstate completeness. `standards_intelligence/` is populated; several other RAG modules are still mostly scaffolding.
-- Preserve AI boundary rules: authoritative content is paraphrased guidance, not copyrighted standards text.
-- When adding authoritative Markdown, include metadata such as `AI_READ_ACCESS`, `CONTENT_CLASS`, and `STATUS`.
-- After structural or metadata changes, consider running `python3 tools/validate_ai_boundaries.py`, `python3 tools/project_automator.py`, and `bash tools/validate_reorg.sh all`.
+- Authoritative content is paraphrase — never copyrighted standards text,
+  table values, or third-party material.
+- New authoritative Markdown carries `AI_READ_ACCESS`, `CONTENT_CLASS`, and
+  `STATUS` metadata; site pages carry the `review:` frontmatter block with
+  the 5-term status vocabulary.
+- AI-drafted content starts at "Review pending" — agents never mark their
+  own work "Reviewed".
+- Every meaningful change updates `project_state/`; validation gates run
+  before merge (`uv run pytest`, Jekyll build, link check, boundary
+  validator).
+- No employer/customer data, credentials, network captures, or personal
+  material in tracked files.
