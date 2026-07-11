@@ -1,4 +1,4 @@
-"""Tests for the licensed-table loader (uses tmp_path, never real data)."""
+"""Tests for the licensed-table loader (tmp_path + shipped samples)."""
 
 from __future__ import annotations
 
@@ -29,4 +29,39 @@ def test_valid_table_round_trips(tmp_path: Path) -> None:
     }
     (tmp_path / "ampacity.json").write_text(json.dumps(content), encoding="utf-8")
     loaded = load_table("ampacity", tables_dir=tmp_path)
-    assert loaded["data"][0]["ampacity_a"] == 25
+    assert loaded.data[0]["ampacity_a"] == 25
+    assert not loaded.is_sample
+
+
+def test_sample_fallback_is_tagged(tmp_path: Path) -> None:
+    sample_dir = tmp_path / "samples"
+    sample_dir.mkdir()
+    content = {"source": {"standard": "X", "edition": "1", "table": "T"}, "data": []}
+    (sample_dir / "demo.json").write_text(json.dumps(content), encoding="utf-8")
+    loaded = load_table("demo", tables_dir=tmp_path)
+    assert loaded.is_sample
+    assert "SAMPLE" in loaded.source_label
+
+
+def test_user_file_wins_over_sample(tmp_path: Path) -> None:
+    (tmp_path / "samples").mkdir()
+    sample = {"source": {"standard": "S", "edition": "1", "table": "T"}, "data": [{"v": 1}]}
+    user = {"source": {"standard": "U", "edition": "1", "table": "T"}, "data": [{"v": 2}]}
+    (tmp_path / "samples" / "demo.json").write_text(json.dumps(sample), encoding="utf-8")
+    (tmp_path / "demo.json").write_text(json.dumps(user), encoding="utf-8")
+    loaded = load_table("demo", tables_dir=tmp_path)
+    assert loaded.data[0]["v"] == 2 and not loaded.is_sample
+
+
+def test_allow_sample_false_requires_user_data(tmp_path: Path) -> None:
+    (tmp_path / "samples").mkdir()
+    content = {"source": {"standard": "S", "edition": "1", "table": "T"}, "data": []}
+    (tmp_path / "samples" / "demo.json").write_text(json.dumps(content), encoding="utf-8")
+    with pytest.raises(TableDataMissingError):
+        load_table("demo", tables_dir=tmp_path, allow_sample=False)
+
+
+def test_shipped_samples_load() -> None:
+    for name in ("ampacity_nec_310_16", "motor_flc_nec_430_250"):
+        loaded = load_table(name)
+        assert loaded.is_sample and loaded.data, name

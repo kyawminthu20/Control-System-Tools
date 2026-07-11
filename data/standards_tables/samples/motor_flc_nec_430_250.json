@@ -1,0 +1,25 @@
+{
+  "source": {
+    "standard": "NEC (NFPA 70)",
+    "edition": "2023",
+    "table": "430.250",
+    "notes": "SAMPLE DATA — common 460 V three-phase induction-motor full-load currents for demonstration and tests. VERIFY every value against a licensed NEC copy and replace this file with your own transcription (data/standards_tables/motor_flc_nec_430_250.json) before design use."
+  },
+  "data": [
+    { "hp": 1,    "voltage": 460, "phases": 3, "flc_a": 2.1 },
+    { "hp": 2,    "voltage": 460, "phases": 3, "flc_a": 3.4 },
+    { "hp": 3,    "voltage": 460, "phases": 3, "flc_a": 4.8 },
+    { "hp": 5,    "voltage": 460, "phases": 3, "flc_a": 7.6 },
+    { "hp": 7.5,  "voltage": 460, "phases": 3, "flc_a": 11 },
+    { "hp": 10,   "voltage": 460, "phases": 3, "flc_a": 14 },
+    { "hp": 15,   "voltage": 460, "phases": 3, "flc_a": 21 },
+    { "hp": 20,   "voltage": 460, "phases": 3, "flc_a": 27 },
+    { "hp": 25,   "voltage": 460, "phases": 3, "flc_a": 34 },
+    { "hp": 30,   "voltage": 460, "phases": 3, "flc_a": 40 },
+    { "hp": 40,   "voltage": 460, "phases": 3, "flc_a": 52 },
+    { "hp": 50,   "voltage": 460, "phases": 3, "flc_a": 65 },
+    { "hp": 60,   "voltage": 460, "phases": 3, "flc_a": 77 },
+    { "hp": 75,   "voltage": 460, "phases": 3, "flc_a": 96 },
+    { "hp": 100,  "voltage": 460, "phases": 3, "flc_a": 124 }
+  ]
+}

@@ -26,10 +26,10 @@ Package map (`src/cst/`):
 
 | Subpackage | Contents | Status |
 |---|---|---|
-| `common/` | units (ASTM B258 AWG), `CalcResult` citation framework, licensed-table loader | ✅ |
+| `common/` | units (ASTM B258 AWG), `CalcResult` citation framework, licensed-table loader with SAMPLE fallback | ✅ |
 | `calc/` | voltage drop + min wire size (NEC K-factor), enclosure thermal (IEC/TR 60890 method) | ✅ |
+| `calc/` | ampacity w/ corrections (NEC 310.15), motor branch circuit (Art. 430 chain), transformer OCPD (Table 450.3(B)), panel SCCR (UL 508A SB4), fault current (infinite-bus + point-to-point) | ✅ logic; bulk table values user-supplied |
 | `motion/` | encoder scaling: counts ↔ units ↔ RPM ↔ linear speed | ✅ |
-| `calc/` (data-dependent) | ampacity, motor branch circuit (Art. 430), transformer, SCCR (UL 508A SB4), short-circuit | Phase 2 |
 | `panel/`, `commissioning/` | I/O list → BOM → wire schedule → nameplates; loop sheets, FAT/SAT | Phase 3 |
 | `plc/`, `diagnostics/`, `docgen/` | tag DB / address maps / pycomm3, SBM anomaly detection, design packages | Phase 4 |
 

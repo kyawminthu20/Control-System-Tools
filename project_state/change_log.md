@@ -18,6 +18,22 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-07-11 — Tools Suite Phase 2 — NEC/UL calculators
+
+**Type:** Feature (cst package expansion)
+**Status:** Complete on `feat/cst-phase2`.
+
+- `cst.calc.ampacity` — NEC 310.15: base ampacity from user table, ambient correction via the 310.15(B) equation, bundle adjustment per Table 310.15(C)(1).
+- `cst.calc.motor_branch` — full Art. 430 chain: table FLC → conductors at 125 % (430.22) → OCPD max per Table 430.52(C)(1) with next-size-up (240.6(A)) → overload per 430.32(A)(1) from nameplate FLA.
+- `cst.calc.transformer` — FLA math + OCPD limits per Table 450.3(B) (primary-only and primary+secondary schemes, Note 1 next-size-up only where permitted).
+- `cst.calc.sccr` — UL 508A SB4 weakest-link panel SCCR with NEC 409.22 available-fault check; never infers series ratings.
+- `cst.calc.short_circuit` — infinite-bus transformer fault current + Bussmann point-to-point attenuation (C-value user-supplied; not embedded).
+- Table loader now supports `data/standards_tables/samples/` fallback: clearly-marked SAMPLE files (common NEC 310.16 Cu-75°C and 430.250 460 V values) let everything run/test out of the box; results carry a SAMPLE warning; user files always win; `allow_sample=False` for design use.
+- 5 new CLI subcommands: `ampacity`, `motor-branch`, `transformer`, `sccr`, `fault-current`.
+- Tests: 97 passing (32 new), all doctests green.
+
+**Boundary note:** rule multipliers/percentages implemented in code with clause citations (same class of content as the corpus's worked examples); bulk table values (310.16, 430.250, Bussmann C) remain user-supplied per the licensing boundary. SAMPLE values are flagged for verification against a licensed copy.
+
 ## 2026-07-10 — Pre-public sanitization pass (user-approved)
 
 **Type:** Repository sanitization + second history rewrite

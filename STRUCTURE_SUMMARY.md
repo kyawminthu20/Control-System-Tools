@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-10 20:26:21
+**Last Auto-Updated:** 2026-07-10 21:22:07
 
 ```text
 ├── .claude/
@@ -596,6 +596,9 @@
 │   ├── plc_exports/
 │   └── standards_tables/
 │       ├── README.md
+│       ├── samples/
+│       │   ├── ampacity_nec_310_16.json
+│       │   └── motor_flc_nec_430_250.json
 │       └── schemas/
 │           ├── ampacity.schema.json
 │           └── motor_flc.schema.json
@@ -1395,7 +1398,12 @@
 │       ├── __init__.py
 │       ├── calc/
 │       │   ├── __init__.py
+│       │   ├── ampacity.py
 │       │   ├── enclosure_thermal.py
+│       │   ├── motor_branch.py
+│       │   ├── sccr.py
+│       │   ├── short_circuit.py
+│       │   ├── transformer.py
 │       │   └── voltage_drop.py
 │       ├── cli.py
 │       ├── common/
@@ -1412,6 +1420,7 @@
 │   │   ├── __init__.py
 │   │   ├── test_enclosure_thermal.py
 │   │   ├── test_encoder.py
+│   │   ├── test_phase2_calcs.py
 │   │   ├── test_tables.py
 │   │   ├── test_units.py
 │   │   └── test_voltage_drop.py

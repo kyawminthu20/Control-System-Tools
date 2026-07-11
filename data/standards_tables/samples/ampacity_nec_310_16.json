@@ -1,0 +1,23 @@
+{
+  "source": {
+    "standard": "NEC (NFPA 70)",
+    "edition": "2023",
+    "table": "310.16",
+    "notes": "SAMPLE DATA — common copper 75 degC column values for demonstration and tests. VERIFY every value against a licensed NEC copy and replace this file with your own transcription (data/standards_tables/ampacity_nec_310_16.json) before design use. Conditions: not more than 3 current-carrying conductors, 30 degC ambient."
+  },
+  "data": [
+    { "size_awg_kcmil": "14", "material": "cu", "insulation_rating_c": 75, "ampacity_a": 20 },
+    { "size_awg_kcmil": "12", "material": "cu", "insulation_rating_c": 75, "ampacity_a": 25 },
+    { "size_awg_kcmil": "10", "material": "cu", "insulation_rating_c": 75, "ampacity_a": 35 },
+    { "size_awg_kcmil": "8",  "material": "cu", "insulation_rating_c": 75, "ampacity_a": 50 },
+    { "size_awg_kcmil": "6",  "material": "cu", "insulation_rating_c": 75, "ampacity_a": 65 },
+    { "size_awg_kcmil": "4",  "material": "cu", "insulation_rating_c": 75, "ampacity_a": 85 },
+    { "size_awg_kcmil": "3",  "material": "cu", "insulation_rating_c": 75, "ampacity_a": 100 },
+    { "size_awg_kcmil": "2",  "material": "cu", "insulation_rating_c": 75, "ampacity_a": 115 },
+    { "size_awg_kcmil": "1",  "material": "cu", "insulation_rating_c": 75, "ampacity_a": 130 },
+    { "size_awg_kcmil": "1/0", "material": "cu", "insulation_rating_c": 75, "ampacity_a": 150 },
+    { "size_awg_kcmil": "2/0", "material": "cu", "insulation_rating_c": 75, "ampacity_a": 175 },
+    { "size_awg_kcmil": "3/0", "material": "cu", "insulation_rating_c": 75, "ampacity_a": 200 },
+    { "size_awg_kcmil": "4/0", "material": "cu", "insulation_rating_c": 75, "ampacity_a": 230 }
+  ]
+}
