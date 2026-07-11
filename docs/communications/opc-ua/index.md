@@ -117,6 +117,22 @@ A workable diagnostic sequence for a failed connection:
 4. Attempt the secured connection with the test client; resolve certificate trust in both directions.
 5. Only then debug the production client's own configuration — you have now proven the server side end to end.
 
+### Wireshark Workflow
+
+1. Confirm TCP connection establishment to the endpoint port (default
+   4840): filter `tcp.port == 4840` — a reset here is a port/endpoint
+   problem, not a security one
+2. Filter `opcua` and watch the Hello/Acknowledge exchange and
+   **SecureChannel** establishment — failure at this stage points at
+   security-policy or certificate mismatch
+3. Certificate rejections are usually explicit only in the **application
+   logs** of client and server — check both trust lists; the wire mostly
+   shows the channel failing to open
+4. With Sign&Encrypt sessions the payload is opaque by design — Wireshark
+   confirms session health and timing, not data content
+5. Subscription drops with a healthy TCP session point at keepalive/
+   lifetime counts or server subscription limits rather than the network
+
 ## Common Faults
 
 | Symptom | Likely causes | First checks |

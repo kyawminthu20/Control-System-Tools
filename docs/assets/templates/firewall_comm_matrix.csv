@@ -1,0 +1,3 @@
+source_zone,source_device,destination_zone,destination_device,protocol,port,direction,purpose,approved_by,notes
+machine,PLC-01,scada,SCADA-01,OPC UA,TCP 4840,outbound,tag data to SCADA,,
+scada,ENG-01,machine,PLC-01,vendor engineering,vendor-defined,inbound,program access,,time-limited rule

@@ -181,8 +181,12 @@
       children:
         - label: "Troubleshooting Methodology"
           url: "/communications/wireshark-methodology/"
+        - label: "Wireshark Fundamentals"
+          url: "/communications/wireshark-fundamentals/"
         - label: "Packet Capture Methods"
           url: "/communications/packet-capture-methods/"
+        - label: "Case Study: I/O Dropout"
+          url: "/communications/case-study-intermittent-io/"
 
 - label: "Industries"
   url: "/industries/"

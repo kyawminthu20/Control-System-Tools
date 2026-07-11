@@ -59,6 +59,22 @@ related_standards:
 | [Commissioning punch list]({{ '/assets/templates/commissioning_punch_list.csv' | relative_url }}) | CSV | Original template |
 | [Test instrument record]({{ '/assets/templates/test_instrument_record.csv' | relative_url }}) | CSV | Original template |
 
+## Communications & Networks
+
+| Template | Format | Origin |
+|---|---|---|
+| [IP address register]({{ '/assets/templates/ip_address_register.csv' | relative_url }}) | CSV | Original template |
+| [Switch port schedule]({{ '/assets/templates/switch_port_schedule.csv' | relative_url }}) | CSV | Original template |
+| [VLAN register]({{ '/assets/templates/vlan_register.csv' | relative_url }}) | CSV | Original template |
+| [Firewall communication matrix]({{ '/assets/templates/firewall_comm_matrix.csv' | relative_url }}) | CSV | Original template |
+| [Device & firmware inventory]({{ '/assets/templates/device_firmware_inventory.csv' | relative_url }}) | CSV | Original template |
+| [Baseline capture log]({{ '/assets/templates/network_baseline_capture_log.csv' | relative_url }}) | CSV | Original template |
+
+These pair with the [Industrial Communications]({{ '/communications/' | relative_url }})
+section — the capture log in particular supports the
+[baseline-comparison step]({{ '/communications/wireshark-methodology/' | relative_url }})
+of the diagnostics methodology.
+
 ## Documentation
 
 | Template | Format | Origin |

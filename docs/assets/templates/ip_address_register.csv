@@ -1,0 +1,4 @@
+area,device,function,mac_recorded_at_fat,ip_address,mask,gateway,vlan,switch_port,firmware,notes
+Cell 01,PLC-01,main controller,,192.168.10.10,/24,none,110,SW-01/1,,
+Cell 01,HMI-01,operator panel,,192.168.10.20,/24,none,110,SW-01/2,,
+Cell 01,VFD-01,conveyor drive,,192.168.10.40,/24,none,110,SW-01/4,,

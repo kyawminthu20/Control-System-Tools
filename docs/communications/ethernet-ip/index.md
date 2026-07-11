@@ -76,6 +76,34 @@ Scope notes: this page covers standard EtherNet/IP. CIP Safety, CIP Motion, and 
 4. **Set connection ownership.** An **Exclusive Owner** connection controls outputs — only one scanner may own it. **Listen Only** and **Input Only** connections let additional controllers read inputs without ownership; a Listen Only connection drops when the exclusive owner's connection drops.
 5. **Configure the switch** — VLAN membership, IGMP snooping/querier (if multicast), port descriptions, and a spare port pre-configured for mirroring.
 
+### Configuration Example (Illustrative)
+
+A minimal PLC-to-VFD setup on an isolated machine network. **Assembly
+instances, sizes, and scaling vary by drive — this shows the shape of the
+work, not values to copy:**
+
+| Parameter | PLC | VFD |
+|---|---|---|
+| IP address | 192.168.10.10 | 192.168.10.40 |
+| Subnet mask | 255.255.255.0 | 255.255.255.0 |
+| Gateway | blank (isolated machine network) | blank |
+| Input / output assembly | — | vendor-defined instances and sizes |
+| RPI | set in controller connection | must be within adapter's supported range |
+| Connection role | originator | target |
+| Data format | controller tags | drive status/control words |
+
+Typical drive control-word mapping (again, vendor-defined — read the
+drive's manual):
+
+```text
+Command word:  bit 0 = run forward, bit 1 = run reverse, bit 2 = fault reset
+Reference:     0-6000 corresponds to 0.00-60.00 Hz
+```
+
+The two classic mistakes here: assembly size mismatch (connection refuses
+to open — check the error code in the controller) and scaling assumptions
+(drive runs, but at the wrong speed).
+
 ## Commissioning Checks
 
 - [ ] Physical link active on every device; speed/duplex as expected (typically 100 Mb/s or 1 Gb/s full duplex, auto-negotiated)
@@ -118,6 +146,21 @@ arp
 ```
 
 In a healthy capture, Class 1 frames from each connection repeat at a steady RPI. Gaps, jitter clusters, or repeated Forward Open requests point at the failure window. Repeated Forward Open with error responses means the device is rejecting the connection parameters — decode the CIP status code in the response.
+
+### Wireshark Workflow
+
+1. Filter `enip || cip` and confirm you can see both directions
+2. Find the **Forward Open** for the suspect connection — it carries the
+   requested RPI and connection parameters; a matching success response
+   means the configuration was accepted
+3. Confirm explicit messaging on TCP 44818 and cyclic I/O on UDP 2222
+4. Compare actual cyclic packet spacing against the configured RPI
+   (Statistics → I/O Graph makes gaps obvious)
+5. Repeated Forward Open attempts = connection cycling — correlate the
+   timestamps with PLC fault logs and switch port counters
+6. Check whether multicast I/O is flooding ports it shouldn't reach
+   (IGMP snooping/querier problem — see
+   [managed switches]({{ '/communications/managed-switches/' | relative_url }}))
 
 ## Common Faults
 

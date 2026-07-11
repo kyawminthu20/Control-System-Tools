@@ -1,0 +1,4 @@
+switch,port,connected_device,cable_id,vlan,speed_duplex,poe,mirror_role,spare,notes
+SW-01,1,PLC-01,C-101,110,auto,no,,,
+SW-01,2,HMI-01,C-102,110,auto,no,,,
+SW-01,24,,,,auto,no,mirror destination,yes,reserved for diagnostics

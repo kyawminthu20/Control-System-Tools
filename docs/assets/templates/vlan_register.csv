@@ -1,0 +1,2 @@
+vlan_id,name,purpose,subnet,gateway,switches_carrying,notes
+110,cell01-control,machine control traffic,192.168.10.0/24,none,SW-01,isolated machine network

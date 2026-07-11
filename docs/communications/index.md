@@ -131,7 +131,19 @@ frame-level checks with a serial analyzer and oscilloscope.
     <h3><a href="{{ '/communications/packet-capture-methods/' | relative_url }}">Packet Capture Methods</a></h3>
     <p>Workstation capture vs port mirroring vs TAP — what each sees, what each risks, and where to capture.</p>
   </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/communications/wireshark-fundamentals/' | relative_url }}">Wireshark Fundamentals</a></h3>
+    <p>Interface selection, capture vs display filters, Expert Information, and capture hygiene — the tool basics.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/communications/case-study-intermittent-io/' | relative_url }}">Case Study: Intermittent I/O Dropout</a></h3>
+    <p>One complete investigation from vague symptom to proven root cause — the methodology in action.</p>
+  </div>
 </div>
+
+Network-documentation starting points (IP register, switch-port schedule,
+VLAN register, firewall matrix, capture log) live on the
+[templates page]({{ '/tools/templates/' | relative_url }}).
 
 ## Planned Next
 

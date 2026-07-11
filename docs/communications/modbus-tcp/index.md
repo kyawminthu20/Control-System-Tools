@@ -84,6 +84,27 @@ Scope notes: Modbus has no device profiles — every vendor's register map is di
 4. **Handle 32-bit values.** Floats and 32-bit integers span **two consecutive registers**, and the specification does not define which register holds the high word. If a float decodes as an absurd value (e.g., 5.8e-39) or a large counter jumps erratically, try swapping word order in the client before suspecting the device.
 5. **For gateways**: map unit IDs to RS-485 slave addresses, set the serial parameters (baud, parity, stop bits) to match every slave, and set the gateway's RTU response timeout below the TCP client's timeout.
 
+### Worked Example — "Register 40001" vs Protocol Address 0
+
+The single most common Modbus integration error is the off-by-one between
+**documentation addressing** and **protocol addressing**:
+
+```text
+Device manual says:      holding register 40001
+On the wire that is:     function code 03, starting address 0
+Data type:               IEEE-754 float
+Length:                  2 registers (one 32-bit value)
+Word order:              high word first (vendor-specific — verify)
+```
+
+The `4xxxx` convention is a documentation habit: the leading 4 means
+"holding register," and the numbering starts at 1. The protocol itself
+sends a zero-based offset. Software that expects the raw offset will read
+the wrong register if you type `40001` into it — and software that expects
+the `4xxxx` form will be off by one if you type `0`. When a value looks
+plausible but wrong (or two values are swapped), suspect this and the word
+order before anything else.
+
 ## Commissioning Checks
 
 - [ ] Server answers ping and accepts a TCP connection on port 502
@@ -117,6 +138,22 @@ tcp.analysis.retransmission
 `modbus.exception_code` isolates exception responses immediately — the exception code plus the request it answers usually identifies the fault without further work. The Wireshark dissector also decodes function codes and register addresses (as 0-based protocol addresses, which helps settle offset disputes).
 
 What Wireshark cannot see: anything on the RS-485 side of a serial gateway. If the gateway answers with timeouts or gateway exceptions, the fault is on the serial segment — that requires the gateway's own diagnostics, an isolated USB-to-RS-485 adapter with a serial monitor, or in stubborn cases an oscilloscope on the A/B pair. A clean TCP capture proves nothing about the serial side.
+
+### Wireshark Workflow
+
+1. Filter `mbtcp || modbus` — identify which end is client (sends requests)
+   and which is server
+2. Match request/response pairs by **transaction identifier**
+3. Confirm the function code, starting address, and quantity actually on
+   the wire match what the integration documentation claims
+4. Look for **exception responses** (`modbus.exception_code`) — an
+   exception is the server answering "no," which is a configuration
+   problem, not a network problem
+5. Measure request→response time; then check TCP retransmissions
+   (`tcp.analysis.retransmission`) separately — slow responses and lost
+   packets have different owners
+6. Silence (no response at all) with a healthy TCP session points at unit
+   ID or gateway routing rather than the TCP path
 
 ## Common Faults
 

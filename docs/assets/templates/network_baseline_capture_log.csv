@@ -1,0 +1,2 @@
+date,capture_file,network_segment,capture_point,method,duration,traffic_summary,taken_by,stored_at,notes
+,,,"SW-01 port 24 mirror of port 1",mirror,,,,,"baseline during normal production"

@@ -117,6 +117,20 @@ arp
 
 What Wireshark cannot show: channel-level device diagnostics (wire break on input 3, undervoltage) travel as alarm frames but are far easier to read in the engineering tool; and no capture proves physical-layer health — port error counters and, where warranted, cable certification cover that layer.
 
+### Wireshark Workflow
+
+1. Filter `pn_dcp` — watch discovery and name assignment; confirm the
+   station name on the wire is exactly the name in the project
+2. Filter `lldp` — verify the physical topology the devices report matches
+   the topology the project expects (port-to-port)
+3. Inspect cyclic PROFINET IO traffic (RT frames need the capture point on
+   the actual path — see
+   [packet capture methods]({{ '/communications/packet-capture-methods/' | relative_url }}))
+4. Look for alarm frames and application-relationship (AR) establishment
+   after faults — repeated AR setup means the connection is cycling
+5. Correlate device diagnostics (module diff blocks) with the module
+   configuration in the engineering project
+
 ## Common Faults
 
 | Symptom | Likely causes | First checks |

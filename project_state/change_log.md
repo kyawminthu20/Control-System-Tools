@@ -1,7 +1,22 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-11 (Phase 35.1 — communications-section fixes from second external review)
+**Last Updated:** 2026-07-11 (Phase 35.2 — diagnostics depth: Wireshark fundamentals, case study, config examples, network templates)
 **Status:** Active
+
+## 2026-07-11 — Phase 35.2 — Communications diagnostics depth (second review's "add next" tier)
+
+**Type:** Content expansion of the communications section
+**Status:** Complete on `feat/phase35-2-diagnostics-depth`.
+
+- **New page `/communications/wireshark-fundamentals/`** — interface selection (tshark -D, sparklines), promiscuous mode, the switched-network visibility rule, capture-vs-display filter syntax distinction (BPF vs Wireshark, with the capture-broadly-display-narrowly rule), time display + clock-offset practice, name-resolution caution, Conversations/Endpoints, coloring, I/O Graph for dropout hunting, Expert Information, Export Specified Packets, pcapng comments, sanitize-before-sharing.
+- **New page `/communications/case-study-intermittent-io/`** — one complete end-to-end investigation (clearly labeled constructed teaching example): vague ticket → precise symptom statement → boundary → physical checks → config checks → switch CRC counters localize to one leg → ring-buffer capture with I/O-graph gap analysis → baseline comparison → evidence chain (motor replacement + missing tray divider + failed cable cert) → verified fix. Demonstrates the 8-step methodology in action.
+- **Configuration examples** (illustrative, vendor-defined-values flagged): EtherNet/IP PLC↔VFD parameter table + control-word/scaling example; Modbus TCP "register 40001 vs protocol address 0" worked example with the off-by-one failure modes.
+- **Protocol-specific Wireshark workflows** (numbered what-to-look-for sequences) added to EtherNet/IP, Modbus TCP, PROFINET, and OPC UA diagnostics sections.
+- **6 network-documentation templates** added to /tools/templates/ (Communications & Networks group): IP address register, switch port schedule, VLAN register, firewall communication matrix, device & firmware inventory, baseline capture log.
+- Nav (Diagnostics group) + landing page updated with the two new pages.
+- Validation: clean build (330 files), zero broken internal links.
+
+**Still on Phase 35.3 backlog:** physical-layer pages (copper/fiber/RS-485), interface-neutral diagrams, protocol expansion (EtherCAT, DNP3, IEC 61850, HART, FF, wireless, TSN), sanitized capture library, optional build-time Mermaid pre-render.
 
 ## 2026-07-11 — Phase 35.1 — Communications fixes from the second external review
 

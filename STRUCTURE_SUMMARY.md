@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-11 00:43:43
+**Last Auto-Updated:** 2026-07-11 04:47:41
 
 ```text
 ├── .claude/
@@ -998,19 +998,27 @@
 │   │       ├── controls_design_basis.md
 │   │       ├── cybersecurity_asset_inventory.csv
 │   │       ├── design_package_example.md
+│   │       ├── device_firmware_inventory.csv
 │   │       ├── electrical_drawing_review_checklist.md
 │   │       ├── fat_protocol_example.md
+│   │       ├── firewall_comm_matrix.csv
 │   │       ├── instrument_index.csv
 │   │       ├── io_list_example.csv
+│   │       ├── ip_address_register.csv
 │   │       ├── legend_plates_example.csv
 │   │       ├── loop_sheet_example.md
 │   │       ├── management_of_change_form.md
+│   │       ├── network_baseline_capture_log.csv
 │   │       ├── safety_requirements_spec.md
 │   │       ├── standards_applicability_register.csv
+│   │       ├── switch_port_schedule.csv
 │   │       ├── test_instrument_record.csv
+│   │       ├── vlan_register.csv
 │   │       └── wire_schedule_example.csv
 │   ├── communications/
 │   │   ├── bacnet-ip/
+│   │   │   └── index.md
+│   │   ├── case-study-intermittent-io/
 │   │   │   └── index.md
 │   │   ├── ethernet-fundamentals/
 │   │   │   └── index.md
@@ -1032,6 +1040,8 @@
 │   │   ├── profibus-dp/
 │   │   │   └── index.md
 │   │   ├── profinet/
+│   │   │   └── index.md
+│   │   ├── wireshark-fundamentals/
 │   │   │   └── index.md
 │   │   └── wireshark-methodology/
 │   │       └── index.md
