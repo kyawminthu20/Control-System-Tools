@@ -368,16 +368,46 @@
         "type": "dir",
         "children": [
           {
+            "name": "analog_0_10v_wiring.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/wiring_practices/analog_0_10v_wiring.md",
+            "serve_path": "design_framework/wiring_practices/analog_0_10v_wiring.md"
+          },
+          {
+            "name": "analog_4_20ma_wiring.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/wiring_practices/analog_4_20ma_wiring.md",
+            "serve_path": "design_framework/wiring_practices/analog_4_20ma_wiring.md"
+          },
+          {
             "name": "emc_noise_mitigation.md",
             "type": "file",
             "path": "control-standards/rag/design_framework/wiring_practices/emc_noise_mitigation.md",
             "serve_path": "design_framework/wiring_practices/emc_noise_mitigation.md"
           },
           {
+            "name": "ipc_wiring.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/wiring_practices/ipc_wiring.md",
+            "serve_path": "design_framework/wiring_practices/ipc_wiring.md"
+          },
+          {
             "name": "panel_grounding_bonding.md",
             "type": "file",
             "path": "control-standards/rag/design_framework/wiring_practices/panel_grounding_bonding.md",
             "serve_path": "design_framework/wiring_practices/panel_grounding_bonding.md"
+          },
+          {
+            "name": "plc_wiring.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/wiring_practices/plc_wiring.md",
+            "serve_path": "design_framework/wiring_practices/plc_wiring.md"
+          },
+          {
+            "name": "remote_io_wiring.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/wiring_practices/remote_io_wiring.md",
+            "serve_path": "design_framework/wiring_practices/remote_io_wiring.md"
           },
           {
             "name": "vfd_wiring.md",

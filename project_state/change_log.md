@@ -177,6 +177,22 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-07-11 — Phase 39 — Wiring Guides Wave 2 (Controllers & I/O)
+
+**Type:** Content (wiring-guides program, wave 2)
+**Status:** Complete on `feat/phase39-wave2-io`.
+
+- 5 site guides at `docs/design/wiring/` + 5 corpus notes in `wiring_practices/`:
+  - PLC Wiring (263) — sinking vs sourcing DI, relay/transistor DO, shared-vs-isolated common sneak paths, freewheeling diodes; NFPA 79 Ch. 6/7/9/16 basis incl. wire-color convention
+  - Remote I/O Stations (226) — separate logic/actuator 24 V rails, feeder voltage-drop browning out the coupler (cst voltage-drop), inter-panel ground loops
+  - Industrial PCs (261) — UPS/holdup vs storage corruption, PE mandatory on a DC device, port segregation, clean-side placement
+  - 4–20 mA Current Loops (260) — 2/3/4-wire transmitters, compliance/burden budget, active-vs-passive double-powering trap, one-point grounding, isolators; contrasts the analog one-end shield rule against the VFD both-ends rule
+  - 0–10 V Signals (225) — companion to 4–20 mA; shared-reference weakness, return-conductor voltage-divider distance limit, no broken-wire detection
+- Section index promotes Wave 2 to a Controllers & I/O card grid; nav group extended. Mirror synced.
+- All Review pending; validation: clean build (343 files), zero broken links, boundary baseline unchanged, 145 tests pass.
+
+
+
 ## 2026-07-11 — Tools Suite Phase 4 — PLC utilities, diagnostics, docgen (roadmap complete)
 
 **Type:** Feature (cst package expansion — final planned phase)

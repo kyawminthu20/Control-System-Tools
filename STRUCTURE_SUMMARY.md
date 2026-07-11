@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-11 09:56:32
+**Last Auto-Updated:** 2026-07-11 10:15:19
 
 ```text
 ├── .claude/
@@ -143,8 +143,13 @@
 │   │   │   │   └── treatment_and_discharge.md
 │   │   │   └── wiring_practices/
 │   │   │       ├── README.md
+│   │   │       ├── analog_0_10v_wiring.md
+│   │   │       ├── analog_4_20ma_wiring.md
 │   │   │       ├── emc_noise_mitigation.md
+│   │   │       ├── ipc_wiring.md
 │   │   │       ├── panel_grounding_bonding.md
+│   │   │       ├── plc_wiring.md
+│   │   │       ├── remote_io_wiring.md
 │   │   │       ├── vfd_wiring.md
 │   │   │       └── wire_sizing_workflow.md
 │   │   ├── meta/
@@ -725,8 +730,13 @@
 │   │   │   │   │   ├── overview_and_standards.md
 │   │   │   │   │   └── treatment_and_discharge.md
 │   │   │   │   └── wiring_practices/
+│   │   │   │       ├── analog_0_10v_wiring.md
+│   │   │   │       ├── analog_4_20ma_wiring.md
 │   │   │   │       ├── emc_noise_mitigation.md
+│   │   │   │       ├── ipc_wiring.md
 │   │   │   │       ├── panel_grounding_bonding.md
+│   │   │   │       ├── plc_wiring.md
+│   │   │   │       ├── remote_io_wiring.md
 │   │   │   │       ├── vfd_wiring.md
 │   │   │   │       └── wire_sizing_workflow.md
 │   │   │   ├── meta/
@@ -1080,11 +1090,21 @@
 │   │   ├── software-stack/
 │   │   │   └── index.md
 │   │   ├── wiring/
+│   │   │   ├── analog-0-10v/
+│   │   │   │   └── index.md
+│   │   │   ├── analog-4-20ma/
+│   │   │   │   └── index.md
 │   │   │   ├── emc-noise-mitigation/
 │   │   │   │   └── index.md
 │   │   │   ├── grounding-bonding/
 │   │   │   │   └── index.md
 │   │   │   ├── index.md
+│   │   │   ├── ipc/
+│   │   │   │   └── index.md
+│   │   │   ├── plc/
+│   │   │   │   └── index.md
+│   │   │   ├── remote-io/
+│   │   │   │   └── index.md
 │   │   │   ├── vfd/
 │   │   │   │   └── index.md
 │   │   │   └── wire-sizing/

@@ -47,6 +47,31 @@ mistakes → verification checks → standards references.
   </div>
 </div>
 
+## Controllers &amp; I/O
+
+<div class="workflow-card-grid">
+  <div class="workflow-card">
+    <h3><a href="{{ '/design/wiring/plc/' | relative_url }}">PLC Wiring</a></h3>
+    <p>Controller power, digital I/O, sinking vs sourcing, shared vs isolated commons, and freewheeling diodes on inductive loads.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/design/wiring/remote-io/' | relative_url }}">Remote I/O Stations</a></h3>
+    <p>Network plus power plus field wiring per drop — separate logic and actuator rails, 24 V feeder voltage drop, and inter-panel grounding.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/design/wiring/ipc/' | relative_url }}">Industrial PCs (IPCs)</a></h3>
+    <p>Clean DC power and UPS holdup, protective earth on a DC device, port segregation, and keeping the computer on the panel's clean side.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/design/wiring/analog-4-20ma/' | relative_url }}">4–20 mA Current Loops</a></h3>
+    <p>2/3/4-wire transmitters, loop-burden budget, active vs passive inputs, one-point grounding, and isolators.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/design/wiring/analog-0-10v/' | relative_url }}">0–10 V Signals</a></h3>
+    <p>When voltage signals are acceptable, the shared-reference error mechanism, and why distance is the enemy.</p>
+  </div>
+</div>
+
 ## Planned Guides
 
 The program covers the full device set — added wave by wave (roadmap in the
@@ -54,7 +79,6 @@ repo's `governance/ROADMAP.md`):
 
 | Wave | Devices |
 |---|---|
-| Controllers &amp; I/O | PLC wiring · Remote I/O stations · Industrial PCs (IPCs) · 4–20 mA current loops · 0–10 V signals |
 | Motion &amp; feedback | Servo drives (power, feedback, STO, brake) · Encoders (differential vs single-ended, cable practice) |
 | Infrastructure &amp; safety | Communication cable installation · Safety circuit wiring · Motor starters · Control power distribution · RTD &amp; thermocouple wiring |
 
