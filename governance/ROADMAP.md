@@ -46,6 +46,49 @@ practice captured through the knowledge-intake loop (§ below).
 - **Diagrams** — original SVG wiring/terminal diagrams added incrementally
   (guides ship text+table-first; never vendor screenshots)
 
+## Intake Batch 2026-07-11 (`temp/` + `drawings examples/`)
+
+Digested and planned 2026-07-11 (plan file: session record; triage per
+AI_WORKFLOW §5). Items stay in place until their phase executes — each phase
+below records the relocation so nothing is lost.
+
+| Phase | Program | Source material | Status |
+|---|---|---|---|
+| 45 | **Standards accuracy pass** — claim-by-claim triage of the third external review; verify every edition claim against the official publisher before adoption; fix the confirmed items (IEC 60204-1 edition/scope/Clause-18/E-stop-category; ISO 12100↔13849-1 risk-graph attribution incl. 62061/family/Finder/scenario touchpoints; CE-marking calibrated wording + 2006/42/EC→(EU) 2023/1230 transition; IEC 62061 edition + PFHd example band check; IEC 62443 zones→3-2 + SL-T derivation + part editions; NEC covered/latest/AHJ-adopted three-field metadata; UL 508A edition metadata); sweep residual raw status labels using the GOVERNANCE 5-term vocabulary (the review's replacement vocabulary is REJECTED — conflicts with CONTENT_STANDARDS §3); update review-meta blocks. Relocates the review to `planning/2026-07-11-standards-accuracy-review.md`. | `temp/standards_check.md` | Planned — safety-significant, do first |
+| 46 | **Visual assets** — wire-color-coding gallery guide at `/design/wiring/wire-color-coding/` (17 diagrams grouped per the asset README, alt text from assets.json, AHJ/customer-drawings precedence caveat, corpus note, diagram-grid CSS adapted from MkDocs vars to site tokens) + the design-package poster embedded on `/tools/templates/` (products-shown-are-examples caption) and cross-linked from scenarios. Assets move to `docs/assets/images/`. | `temp/wire-color-coding-web-assets/`, `drawings examples/` | Planned — quick win |
+| 47 | **PLC software expansion** — 4 new pages + corpus notes in `/fundamentals/plc-software/`: Ladder Logic Fundamentals (primitives, seal-in, one-shots, scan order, alarm hysteresis, analog scaling) · PLC Algorithms & Equipment Staging (FIFO/queues, lead-lag, runtime/capacity staging, load shedding; cross-links water-wastewater) · PackML/ISA-88/ISA-95 (deepens machine-state/architecture models, no duplication) · Vendor Programming Architectures (Siemens OB/FB/DB vs Logix tags/AOI vs TwinCAT OO — consolidates both source docs' philosophy comparison, written once). Source discipline: strip `utm_source` params, re-verify all citations, paraphrase only. Source doc relocates to `control-standards/work/` (intake-loop capture tier). | `temp/plc_software.md` | Planned |
+| 48 | **PLC/IPC hardware reference + vendor documentation index** — xlsx → `docs/_data/manufacturers/vendor_doc_links.yml` → `/tools/manufacturers/vendor-documentation/` (~130 official-manual links: portal/manual/pub-ID/URL/notes); `/tools/manufacturers/plc-hardware-families/` from plcs.md (data-driven family tables, Mermaid selection flowchart, suffix decoding; ALL lifecycle/market claims dated "as of July 2026" and marked verify-current; positioning language softened). NOTE: `docs/vendor/` is the Jekyll Ruby bundle, not a content home. Sources relocate to `control-standards/work/` (md) and `planning/` (xlsx). | `temp/plcs.md`, `temp/PLC_IPC_Official_Reference_Links.xlsx` | Planned |
+
+### Research Tracks (recorded, deliberately not scheduled)
+
+**AI/ML for Control Systems** — the owner's staging workspace
+(`temp/ai-ml-control-systems-research/`, 5 files: digital-twin integration
+spine, 6-level authority model, model-family capability map, source register,
+scientific-domain mapping). Self-labeled non-authoritative with an explicit
+do-not-build-yet posture, which this roadmap honors.
+
+- **Relocation (when touched next):** → `control-standards/work/research/ai-ml-control-systems/` (work tier)
+- **Promotion criteria before ANY site/corpus content:** the source-register
+  "still needed" gaps filled; the two arXiv preprints re-checked for
+  supersession; peer-reviewed vs vendor claims separated; the owner decides
+  taxonomy placement (candidates: Fundamentals or Design); corpus-first
+  authoring via the promotion checklist; least-authority framing (offline →
+  read-only → advisory → … → closed-loop) preserved; safety functions stay
+  independent of any AI path.
+
+### Backlog (recorded from the third review, not scheduled)
+
+- **Standards-family expansion wishlist** (robotics ISO 10218-1/-2 + ISO/TS
+  15066, B11, NFPA 70E, IEEE 1584, ISA-18.2/IEC 62682, ISA-5.1/88/95,
+  IEC 61499/61800-5-2, additional UL/CSA panel standards, SEMI S10/S22/F47/
+  E-series, NIST SP 800-82/CSF, IEC 61784/61850 parts, …). Each addition is a
+  corpus-first effort with real copyright exposure — clause-level coverage
+  must stay paraphrase (CONTENT_STANDARDS §2). Adopt selectively by project
+  need, not as a bulk import.
+- **Three-level page architecture** (Simple / Engineering / Design-guide
+  variants + 19-section master template) — evaluate after Phase 45 lands;
+  conflicts partially with the established Phase-30 eight-section template.
+
 ## The Knowledge-Intake Loop (how real-life knowledge gets in)
 
 1. **Capture** — the author brain-dumps field lessons into

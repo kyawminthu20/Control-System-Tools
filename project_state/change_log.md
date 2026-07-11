@@ -177,6 +177,23 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-07-11 — Intake batch digested and planned (Phases 45–48 + AI/ML research track)
+
+**Type:** Planning/recording only — no content built
+**Status:** Recorded on `docs/intake-batch-plan`; plan approved by owner in plan mode.
+
+Digested everything in `temp/` and `drawings examples/` (3 explore passes) and recorded the integration plan in `governance/ROADMAP.md`:
+
+- **Phase 45 (do first, safety-significant):** standards accuracy pass from a third external review (`temp/standards_check.md`). Confirmed-real catches include the IEC 60204-1 edition/scope/Clause-18/E-stop-category errors, the ISO 12100↔13849-1 risk-graph misattribution, CE-marking wording, 62061/62443 edition issues, and a residual raw "Complete" status leak in plain-text table cells that the Phase 32 sweep missed. Every edition claim gets publisher verification before adoption. **Triage decision recorded: the review's proposed replacement status vocabulary is REJECTED — it conflicts with the governance 5-term vocabulary (CONTENT_STANDARDS §3); the leak it found is real, the fix uses OUR terms.** Expansion wishlist + 3-level page model → backlog, not scheduled.
+- **Phase 46:** wire-color-coding gallery guide (17 ready diagrams) + the worked design-package poster.
+- **Phase 47:** PLC software expansion — 4 new pages (ladder fundamentals, algorithms/staging, PackML/ISA-88/95, vendor programming architectures) from `temp/plc_software.md` via the knowledge-intake loop; utm-stripping + citation re-verification required.
+- **Phase 48:** PLC/IPC hardware families page + a data-driven vendor-documentation index (~130 official links from the xlsx) under `/tools/manufacturers/`.
+- **AI/ML for Control Systems** recorded as a deferred research track honoring its own do-not-build-yet status; promotion criteria written into ROADMAP.
+
+Sources stay in place until each phase executes (relocations are written into each phase's steps). No site content, corpus content, or temp/ moves in this change.
+
+
+
 ## 2026-07-11 — Phase 44 — Communications Expansion (EtherCAT, HART, DNP3, IEC 61850)
 
 **Type:** Content — communications section expansion (35.4 backlog, first batch)
