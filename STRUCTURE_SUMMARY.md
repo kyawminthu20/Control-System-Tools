@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-10 21:28:35
+**Last Auto-Updated:** 2026-07-10 21:43:24
 
 ```text
 ├── .claude/
@@ -1417,24 +1417,39 @@
 │       │   ├── cite.py
 │       │   ├── tables.py
 │       │   └── units.py
+│       ├── diagnostics/
+│       │   ├── __init__.py
+│       │   ├── saleae.py
+│       │   └── sbm.py
+│       ├── docgen/
+│       │   ├── __init__.py
+│       │   └── design_package.py
 │       ├── motion/
 │       │   ├── __init__.py
 │       │   └── encoder.py
-│       └── panel/
+│       ├── panel/
+│       │   ├── __init__.py
+│       │   ├── bom.py
+│       │   ├── io_list.py
+│       │   ├── nameplates.py
+│       │   └── wire_schedule.py
+│       └── plc/
 │           ├── __init__.py
-│           ├── bom.py
-│           ├── io_list.py
-│           ├── nameplates.py
-│           └── wire_schedule.py
+│           ├── address_map.py
+│           ├── comms.py
+│           └── tag_db.py
 ├── tests/
 │   ├── __init__.py
 │   ├── cst/
 │   │   ├── __init__.py
 │   │   ├── test_commissioning.py
+│   │   ├── test_diagnostics.py
+│   │   ├── test_docgen.py
 │   │   ├── test_enclosure_thermal.py
 │   │   ├── test_encoder.py
 │   │   ├── test_panel.py
 │   │   ├── test_phase2_calcs.py
+│   │   ├── test_plc.py
 │   │   ├── test_tables.py
 │   │   ├── test_units.py
 │   │   └── test_voltage_drop.py

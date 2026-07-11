@@ -20,6 +20,11 @@ dependencies = [
     { name = "pypdf" },
 ]
 
+[package.optional-dependencies]
+plc = [
+    { name = "pycomm3" },
+]
+
 [package.dev-dependencies]
 dev = [
     { name = "pytest" },
@@ -27,9 +32,11 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "pycomm3", marker = "extra == 'plc'", specifier = ">=1.2" },
     { name = "pymupdf", specifier = ">=1.27.2" },
     { name = "pypdf", specifier = ">=6.8.0" },
 ]
+provides-extras = ["plc"]
 
 [package.metadata.requires-dev]
 dev = [{ name = "pytest", specifier = ">=8.0" }]
@@ -59,6 +66,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/f9/e2/3e91f31a7d2b083fe6ef3fa267035b518369d9511ffab804f839851d2779/pluggy-1.6.0.tar.gz", hash = "sha256:7dcc130b76258d33b90f61b658791dede3486c3e6bfb003ee5c9bfb396dd22f3", size = 69412, upload-time = "2025-05-15T12:30:07.975Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/54/20/4d324d65cc6d9205fabedc306948156824eb9f0ee1633355a8f7ec5c66bf/pluggy-1.6.0-py3-none-any.whl", hash = "sha256:e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746", size = 20538, upload-time = "2025-05-15T12:30:06.134Z" },
+]
+
+[[package]]
+name = "pycomm3"
+version = "1.2.16"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/69/a4/9afd4bb8ea95f92e5bf57afe819fe88b8c10584f89b7b867aeeef76bf323/pycomm3-1.2.16.tar.gz", hash = "sha256:dda3bd1713614af9d20089f0920195a8ad7922f42b283fe62cf2d256ad2f52c6", size = 82912, upload-time = "2025-12-22T17:33:06.853Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/82/60/c31ddd4903be23d4056571d31ccaf4c6d71d9b6a085a3d488236996e0010/pycomm3-1.2.16-py3-none-any.whl", hash = "sha256:88e95c70472154ee32233f76af126526db208830e1e803eb9f621c8bd1d8fcd0", size = 99589, upload-time = "2025-12-22T17:33:05.576Z" },
 ]
 
 [[package]]

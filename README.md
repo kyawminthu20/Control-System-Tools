@@ -32,7 +32,9 @@ Package map (`src/cst/`):
 | `motion/` | encoder scaling: counts ↔ units ↔ RPM ↔ linear speed | ✅ |
 | `panel/` | I/O list model + validation → BOM (spares/densities) → wire/terminal schedule → legend & panel nameplates | ✅ |
 | `commissioning/` | per-point loop test sheets (5-pt analog checks), FAT/SAT protocol skeleton | ✅ |
-| `plc/`, `diagnostics/`, `docgen/` | tag DB / address maps / pycomm3, SBM anomaly detection, design packages | Phase 4 |
+| `plc/` | tag DB w/ IEC 61131-3 identifier rules, tags-from-I/O generator, Modbus register maps, pycomm3 read/verify helpers (`--extra plc`) | ✅ |
+| `diagnostics/` | SBM-style anomaly detection (stdlib, kernel autoassociative), Saleae Logic 2 post-processing (pulse stats, glitches, quadrature decode) | ✅ |
+| `docgen/` | design-package assembler — stitches I/O summary, BOM, wire schedule, nameplate, and cited calc results into one markdown document | ✅ |
 
 Every calculator cites its source standard/formula and lists its assumptions in
 the result. **Licensed table values are never committed** — calculators that

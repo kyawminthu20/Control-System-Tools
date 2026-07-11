@@ -17,6 +17,11 @@ Usage examples:
     cst legend data/examples/io_list_example.csv
     cst loop-sheets data/examples/io_list_example.csv --out-dir loop_sheets/
     cst fat data/examples/io_list_example.csv --panel CP-01
+    cst tags-from-io data/examples/io_list_example.csv
+    cst modbus-map data/examples/io_list_example.csv
+    cst saleae capture.csv --channel "Channel 0"
+    cst sbm --train normal.csv --score live.csv
+    cst design-package data/examples/io_list_example.csv --project "Demo" --panel CP-01
 """
 
 from __future__ import annotations
@@ -35,8 +40,11 @@ from cst.calc import (
     voltage_drop,
 )
 from cst.commissioning import fat_sat, loop_sheets
+from cst.diagnostics import saleae, sbm as sbm_mod
+from cst.docgen.design_package import DesignPackage
 from cst.motion.encoder import EncoderScaling
 from cst.panel import bom, io_list as io_list_mod, nameplates, wire_schedule
+from cst.plc import address_map, tag_db
 
 
 def _cmd_voltage_drop(args: argparse.Namespace) -> int:
@@ -230,6 +238,86 @@ def _cmd_fat(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_tags_from_io(args: argparse.Namespace) -> int:
+    loaded = io_list_mod.load_io_list(args.csv)
+    db = tag_db.tags_from_io_list(loaded, prefix=args.prefix)
+    problems = db.validate()
+    print(db.to_csv(), end="")
+    if problems:
+        print(f"\n{len(problems)} tag problem(s):", file=sys.stderr)
+        for p in problems:
+            print(f"  - {p}", file=sys.stderr)
+        return 1
+    return 0
+
+
+def _cmd_modbus_map(args: argparse.Namespace) -> int:
+    loaded = io_list_mod.load_io_list(args.csv)
+    db = tag_db.tags_from_io_list(loaded)
+    print(address_map.modbus_map_to_csv(address_map.modbus_map(db)), end="")
+    return 0
+
+
+def _cmd_saleae(args: argparse.Namespace) -> int:
+    edges = saleae.load_digital_export(args.csv)
+    if args.channel not in edges:
+        raise ValueError(
+            f"channel {args.channel!r} not in capture; available: {sorted(edges)}"
+        )
+    stats = saleae.pulse_stats(edges[args.channel])
+    print(f"{args.channel}: {stats.edge_count} edges")
+    print(f"  frequency : {stats.frequency_hz:.3f} Hz")
+    print(f"  duty      : {stats.duty_cycle:.1%}")
+    print(f"  high pulse: {stats.min_high_s * 1e6:.2f} .. {stats.max_high_s * 1e6:.2f} us")
+    if args.glitch_us is not None:
+        glitches = saleae.find_glitches(edges[args.channel], args.glitch_us * 1e-6)
+        print(f"  glitches < {args.glitch_us} us: {len(glitches)}")
+        for t, width in glitches[:10]:
+            print(f"    t={t:.6f}s width={width * 1e6:.2f}us")
+    return 0
+
+
+def _read_numeric_csv(path: str) -> list[list[float]]:
+    import csv as _csv
+    with open(path, newline="", encoding="utf-8-sig") as fh:
+        reader = _csv.reader(fh)
+        header = next(reader)
+        try:
+            float(header[0])  # headerless file — first row is data
+            rows = [[float(v) for v in header]]
+        except ValueError:
+            rows = []
+        rows += [[float(v) for v in row] for row in reader if row and row[0].strip()]
+    return rows
+
+
+def _cmd_sbm(args: argparse.Namespace) -> int:
+    model = sbm_mod.train(
+        _read_numeric_csv(args.train),
+        memory_size=args.memory, bandwidth=args.bandwidth,
+    )
+    flagged = 0
+    for i, row in enumerate(_read_numeric_csv(args.score), start=1):
+        score = model.score(row)
+        marker = "  <-- ANOMALY" if score > args.threshold else ""
+        flagged += bool(marker)
+        print(f"row {i}: score {score:.2f}{marker}")
+    print(f"\n{flagged} row(s) above threshold {args.threshold:g}")
+    return 1 if flagged else 0
+
+
+def _cmd_design_package(args: argparse.Namespace) -> int:
+    loaded = io_list_mod.load_io_list(args.csv)
+    package = DesignPackage(
+        project=args.project, panel_id=args.panel, prepared_by=args.author
+    )
+    package.add_io_summary(loaded)
+    package.add_bom(loaded)
+    package.add_wire_schedule(loaded)
+    print(package.render())
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="cst", description="Control System Tools — standards-cited calculators"
@@ -350,6 +438,37 @@ def build_parser() -> argparse.ArgumentParser:
     ft.add_argument("--panel", default="")
     ft.add_argument("--type", choices=("FAT", "SAT"), default="FAT")
     ft.set_defaults(func=_cmd_fat)
+
+    tg = sub.add_parser("tags-from-io", help="PLC tag database from an I/O list (CSV)")
+    tg.add_argument("csv")
+    tg.add_argument("--prefix", default="", help="prefix for generated tag names")
+    tg.set_defaults(func=_cmd_tags_from_io)
+
+    mm = sub.add_parser("modbus-map", help="Modbus register map from an I/O list (CSV)")
+    mm.add_argument("csv")
+    mm.set_defaults(func=_cmd_modbus_map)
+
+    sa = sub.add_parser("saleae", help="analyze a Saleae Logic 2 digital export")
+    sa.add_argument("csv")
+    sa.add_argument("--channel", required=True, help="channel name from the header")
+    sa.add_argument("--glitch-us", type=float, default=None,
+                    help="report pulses shorter than this (microseconds)")
+    sa.set_defaults(func=_cmd_saleae)
+
+    sb = sub.add_parser("sbm", help="SBM anomaly scores (train + score CSVs)")
+    sb.add_argument("--train", required=True, help="known-normal numeric CSV")
+    sb.add_argument("--score", required=True, help="numeric CSV to score")
+    sb.add_argument("--memory", type=int, default=25)
+    sb.add_argument("--bandwidth", type=float, default=1.0)
+    sb.add_argument("--threshold", type=float, default=3.0)
+    sb.set_defaults(func=_cmd_sbm)
+
+    dp = sub.add_parser("design-package", help="assemble a design package (markdown)")
+    dp.add_argument("csv", help="I/O list CSV")
+    dp.add_argument("--project", required=True)
+    dp.add_argument("--panel", default="")
+    dp.add_argument("--author", default="")
+    dp.set_defaults(func=_cmd_design_package)
 
     return parser
 

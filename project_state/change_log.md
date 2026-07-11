@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-10 (Tools Suite Phases 0–1 — repo hygiene + `cst` Python package)
+**Last Updated:** 2026-07-11 (Tools Suite Phase 4 COMPLETE — PLC utils, diagnostics, docgen; suite roadmap done)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,22 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-07-11 — Tools Suite Phase 4 — PLC utilities, diagnostics, docgen (roadmap complete)
+
+**Type:** Feature (cst package expansion — final planned phase)
+**Status:** Complete on `feat/cst-phase4`.
+
+- `cst.plc.tag_db` — tag model + IEC 61131-3 (Cl. 6.1) identifier validation, case-insensitive duplicate detection, `tags_from_io_list` bridge (sanitizes field tags like `XV-101-ZSO` → `XV_101_ZSO`).
+- `cst.plc.address_map` — Modbus register maps per the Modbus Application Protocol data model: coils/discrete-inputs/input-registers/holding-registers, 2-register REAL/DINT with word-order flag, writable-set override.
+- `cst.plc.comms` — pycomm3 LogixDriver wrappers (batch read, FAT read-back verify) as optional extra `plc`; writes deliberately not wrapped. Degrades with a clear install message.
+- `cst.diagnostics.sbm` — SBM-style (Wegerich) kernel autoassociative anomaly detection, stdlib-only: z-scored memory matrix (envelope + spaced selection), Gaussian-kernel reconstruction, per-sensor residual localization; score = max |z-residual|, thresholds set from a normal baseline (documented).
+- `cst.diagnostics.saleae` — Logic 2 digital-export parser (initial state ≠ edge), pulse stats (freq/duty/width extremes), glitch finder, x4 quadrature decode with direction reversals.
+- `cst.docgen.design_package` — DesignPackage assembler: I/O summary + BOM + wire schedule + nameplate + cited CalcResults → single markdown with TOC.
+- 5 new CLI subcommands: `tags-from-io`, `modbus-map`, `saleae`, `sbm`, `design-package`.
+- Tests: 145 passing (30 new). Two real bugs caught and fixed during test-first work: quadrature initial-level derivation, and SBM scoring diluted by RMS (now max-residual with baseline-relative thresholds).
+
+**All four Tools Suite phases now complete.** Remaining user-dependent items: licensed table values for design use (Phase 2), real project I/O list for column presets (Phase 3), real historian/Saleae data for SBM/decode tuning (Phase 4), content Phase 30.3+.
 
 ## 2026-07-11 — Tools Suite Phase 3 — panel design pipeline + commissioning generators
 

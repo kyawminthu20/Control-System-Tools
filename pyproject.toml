@@ -11,6 +11,10 @@ dependencies = [
     "pypdf>=6.8.0",
 ]
 
+[project.optional-dependencies]
+# Live PLC comms helpers (cst.plc.comms)
+plc = ["pycomm3>=1.2"]
+
 [project.scripts]
 cst = "cst.cli:main"
 
