@@ -8,7 +8,7 @@ breadcrumb:
   - name: "BACnet/IP"
 review:
   standard: "ASHRAE 135 — BACnet"
-  edition: "current published spec"
+  edition: "exact governing revision not yet recorded"
   status: "Review pending"
   coverage: "BACnet/IP device integration, discovery, BBMD, and commissioning from a controls-engineering viewpoint; MS/TP wiring, BACnet/SC, and life-safety objects are noted but not covered."
   last_reviewed: "July 2026"

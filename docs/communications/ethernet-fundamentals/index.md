@@ -8,7 +8,7 @@ breadcrumb:
   - name: "Ethernet Fundamentals"
 review:
   standard: "IEEE 802.3 / IETF (TCP/IP suite)"
-  edition: "current published spec"
+  edition: "exact governing revision not yet recorded"
   status: "Review pending"
   coverage: "Addressing, transport, traffic types, VLANs, QoS, switching, and redundancy concepts; does not cover per-protocol behavior, wireless, or TSN"
   last_reviewed: "July 2026"
@@ -25,11 +25,11 @@ related_standards:
 
 ## Overview
 
-Every industrial Ethernet protocol — EtherNet/IP, PROFINET, Modbus TCP, OPC UA — rides on the same underlying stack: Ethernet frames (IEEE 802.3) carrying IP packets, carrying TCP or UDP. When a device "won't connect," the fault is usually in these lower layers, not the automation protocol itself. Understanding them turns network troubleshooting from guesswork into a layer-by-layer elimination.
+Industrial Ethernet protocols share the IEEE 802.3 physical and data-link foundation, but they do not all use the same upper-layer stack: Modbus TCP and OPC UA normally ride TCP/IP, EtherNet/IP uses TCP and UDP/IP depending on message type, while PROFINET RT carries cyclic traffic directly in Ethernet frames at Layer 2. (EtherCAT diverges even further and needs its own explanation.) When a device "won't connect," the fault is usually in these lower layers, not the automation protocol itself. Understanding them turns network troubleshooting from guesswork into a layer-by-layer elimination.
 
 Two addresses matter, and they are not interchangeable:
 
-- **MAC address** — a 48-bit hardware identifier burned into the interface (e.g., `00:11:22:33:44:55`). Switches forward frames by MAC. It normally never changes and is only meaningful within the local network segment.
+- **MAC address** — a 48-bit Layer-2 interface identifier (e.g., `00:11:22:33:44:55`). Manufacturers normally assign a globally unique hardware address, but operating systems, virtual machines, and some devices allow it to be overridden or locally administered. Switches forward frames by MAC; it is normally used for forwarding within a Layer-2 broadcast domain and is not forwarded through ordinary IP routers.
 - **IP address** — a logical, configurable address (e.g., `192.168.10.40`). Routers forward packets by IP. It is what you assign during commissioning and what your PLC project references.
 
 **ARP** (Address Resolution Protocol) is the glue: before a device can send an IP packet locally, it broadcasts "who has 192.168.10.40?" and caches the MAC that answers. Duplicate IP addresses typically surface as ARP conflicts — two devices answering for the same address — which is why intermittent comms faults often trace back to an address collision.

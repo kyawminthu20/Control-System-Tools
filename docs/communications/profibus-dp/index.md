@@ -8,7 +8,7 @@ breadcrumb:
   - name: "PROFIBUS DP"
 review:
   standard: "PROFIBUS & PROFINET International (PI) — PROFIBUS DP / IEC 61158"
-  edition: "current published spec"
+  edition: "exact governing revision not yet recorded"
   status: "Review pending"
   coverage: "DP-V0 cyclic exchange, RS-485 physical layer, GSD configuration, and diagnostics; DP-V1/V2 acyclic services and PA engineering are noted but not covered in depth."
   last_reviewed: "July 2026"

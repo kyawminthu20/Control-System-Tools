@@ -8,7 +8,7 @@ breadcrumb:
   - name: "Managed Switches"
 review:
   standard: "IEEE 802.1 (bridging/VLAN)"
-  edition: "current published spec"
+  edition: "exact governing revision not yet recorded"
   status: "Review pending"
   coverage: "Feature selection, IGMP snooping for multicast I/O, port security basics, configuration checklist, and counter-based diagnostics; does not cover routing/L3 switching or vendor CLI specifics"
   last_reviewed: "July 2026"
@@ -120,6 +120,24 @@ ip.addr == 192.168.10.30
 ```
 
 Verify filter names against the Wireshark version in use. Switch counters and a capture answer different questions — counters tell you *that* and *where* frames are dying; the capture tells you *what* the surviving traffic is doing.
+
+### Interpreting Port Counters
+
+Counter names differ by manufacturer and model — the patterns below are the
+common vocabulary:
+
+| Counter or symptom | Likely interpretation |
+|---|---|
+| CRC / FCS errors | Cable, connector, noise, transceiver, or other physical-layer problem |
+| Alignment errors | Physical-layer or duplex-related issue |
+| Input discards | Congestion, buffer exhaustion, or a switch policy dropping traffic |
+| Output discards | Egress congestion or oversubscription (common on mirror ports) |
+| Link up/down events | Cable movement, device power loss, or connector issue |
+| Excessive broadcasts | Loop, discovery storm, or a faulty device |
+| Excessive multicast | Missing or misconfigured multicast control (IGMP snooping/querier) |
+| Late collisions | Duplex mismatch or legacy shared-medium behavior |
+| Unknown unicast flooding | MAC table aging, topology change, or unusual traffic pattern |
+| STP topology changes | Link instability, an unintended loop, or a redundancy event |
 
 ## Common Faults
 

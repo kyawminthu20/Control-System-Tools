@@ -8,7 +8,7 @@ breadcrumb:
   - name: "Diagnostics Methodology"
 review:
   standard: "— (methodology page; tool-version specifics vary)"
-  edition: "current published spec"
+  edition: "exact governing revision not yet recorded"
   status: "Review pending"
   coverage: "General diagnostic workflow and Wireshark scope/limits; protocol-specific filters live on each protocol page"
   last_reviewed: "July 2026"

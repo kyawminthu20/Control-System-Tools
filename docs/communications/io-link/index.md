@@ -8,7 +8,7 @@ breadcrumb:
   - name: "IO-Link"
 review:
   standard: "IEC 61131-9 (IO-Link / SDCI)"
-  edition: "current published spec"
+  edition: "exact governing revision not yet recorded"
   status: "Review pending"
   coverage: "Port architecture, IODD, process vs service data, data storage, commissioning, diagnostics; safety (IO-Link Safety) and wireless variants not covered"
   last_reviewed: "July 2026"

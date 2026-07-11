@@ -8,7 +8,7 @@ breadcrumb:
   - name: "OPC UA"
 review:
   standard: "OPC Foundation — OPC UA (IEC 62541)"
-  edition: "current published spec"
+  edition: "exact governing revision not yet recorded"
   status: "Review pending"
   coverage: "Client/server sessions, subscriptions, security configuration, and commissioning; PubSub, companion specifications, and aggregation/historical access are noted but not covered."
   last_reviewed: "July 2026"

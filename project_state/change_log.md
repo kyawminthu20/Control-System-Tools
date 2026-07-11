@@ -1,7 +1,25 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-11 (Phase 36 — manufacturer directory; external-review roadmap COMPLETE)
+**Last Updated:** 2026-07-11 (Phase 35.1 — communications-section fixes from second external review)
 **Status:** Active
+
+## 2026-07-11 — Phase 35.1 — Communications fixes from the second external review
+
+**Type:** Corrections + enhancements to the Phase 35 section (review validated claim-by-claim)
+**Status:** Complete on `feat/phase35-review-fixes`.
+
+**Validated as FALSE POSITIVE:** "Mermaid diagrams not rendering" — live-browser check confirmed 1 mermaid div → 1 rendered SVG, zero raw code blocks. Same cause as the first review: reviewer scrapes HTML without JS and assumes MkDocs. (Kernel of truth kept on backlog: build-time SVG pre-render would serve no-JS readers/SEO.)
+
+**Real findings fixed:**
+- Ethernet-fundamentals opener wrongly claimed all industrial Ethernet protocols ride IP/TCP/UDP — contradicted our own PROFINET page (RT is Layer-2). Corrected per the review's wording, incl. EtherCAT divergence note.
+- MAC-address bullet ("burned in… never changes") → locally-administered/override reality; broadcast-domain phrasing.
+- Three over-absolute phrasings calibrated: PROFINET name-of-station identity (commissioning identity; IP still matters for IP services), Modbus TCP "simplest" (subjective), EtherNet/IP "dominant" (market claim).
+- review-meta include semantics: non-Reviewed pages now show "Last content update" + "Technical validation: Not yet completed" (a page can no longer say both "Review pending" and "Last reviewed"); comms pages' edition field → "exact governing revision not yet recorded" (12 pages); note wording is now context-aware ("jurisdiction" kept on standards pages; spec-revision/firmware/vendor-implementation wording on comms pages).
+- Landing page: protocol comparison table ("Which protocol am I looking at?"), Start-by-Task learning paths (4 tasks), IO-Link recategorized under "Smart device interfaces" (point-to-point, not a fieldbus).
+- Sidebar nav grouped: Fundamentals / Ethernet Protocols / Serial & Device Networks / Diagnostics (scales for future protocols).
+- Packet-capture page: ring-buffer TShark instructions (time- and size-based rotation). Managed-switches page: 10-row port-counter interpretation table with vendor-naming caveat.
+
+**Deferred to Phase 35.2 backlog (review's "add next / expand later"):** Wireshark fundamentals page (capture vs display filter syntax, interface selection, Expert Info...), vendor-neutral configuration examples per protocol (EtherNet/IP assembly/scaling, Modbus 40001-vs-offset-0 worked example), protocol-specific Wireshark workflows, one end-to-end packet-analysis case study, physical-layer pages (copper/fiber/RS-485), comms templates (IP register, switch-port schedule, firewall matrix, capture log), interface-neutral diagrams, then EtherCAT/DNP3/IEC 61850/HART/FF/wireless/TSN, sanitized capture library.
 
 ## 2026-07-11 — Phase 36 — Curated manufacturer directory (review roadmap complete)
 

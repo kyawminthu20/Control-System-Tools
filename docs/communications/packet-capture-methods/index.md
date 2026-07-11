@@ -8,7 +8,7 @@ breadcrumb:
   - name: "Packet Capture Methods"
 review:
   standard: "— (methodology page)"
-  edition: "current published spec"
+  edition: "exact governing revision not yet recorded"
   status: "Review pending"
   coverage: "Ethernet capture attachment methods, placement, and hygiene; serial-bus capture tooling is covered on the serial protocol pages"
   last_reviewed: "July 2026"
@@ -150,6 +150,41 @@ measurement method itself can create the fault, or a new one.
   nearly worthless six months later.
 - **Take a baseline** while the system is healthy, from the same capture
   point, and archive it with the project.
+
+## Ring-Buffer Captures for Intermittent Faults
+
+Intermittent industrial faults may occur once per shift or once per week — a
+manual five-minute capture will miss them. A ring buffer captures
+continuously into a rotating set of files so the fault is always inside the
+retained window when it finally happens.
+
+Time-based rotation with TShark (Wireshark's command-line capture tool):
+
+```bash
+tshark \
+  -i 1 \
+  -b duration:300 \
+  -b files:24 \
+  -w industrial-network-ring.pcapng
+```
+
+- each file holds five minutes; 24 files retain roughly the last two hours
+- older files are overwritten automatically, so disk usage stays bounded
+- confirm the correct interface number first (`tshark -D` lists them)
+- note the wall-clock time whenever the symptom occurs, then pull the file
+  covering that window
+
+Size-based rotation works the same way where traffic volume varies:
+
+```bash
+tshark \
+  -i 1 \
+  -b filesize:100000 \
+  -b files:20 \
+  -w capture-ring.pcapng
+```
+
+Verify exact option syntax against the TShark version in use.
 
 ## Confidentiality
 

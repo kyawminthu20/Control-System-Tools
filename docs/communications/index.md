@@ -21,6 +21,43 @@ related_standards:
 > specifications. Verify protocol details against the specification and your
 > device documentation.
 
+## Which Protocol Am I Looking At?
+
+| Protocol | Main use | Transport | Typical cycle behavior | Common diagnostic method |
+|---|---|---|---|---|
+| [EtherNet/IP]({{ '/communications/ethernet-ip/' | relative_url }}) | PLC, I/O, drives, machine devices | TCP/UDP over IP | Cyclic implicit I/O + explicit messages | Wireshark, controller diagnostics, switch counters |
+| [PROFINET]({{ '/communications/profinet/' | relative_url }}) | PLC, I/O, drives, motion | Layer-2 RT plus IP services | Cyclic RT or IRT | Wireshark, topology tools, PLC diagnostics |
+| [Modbus TCP]({{ '/communications/modbus-tcp/' | relative_url }}) | Meters, VFDs, packaged equipment | TCP port 502 | Client polling | Wireshark, register testing |
+| [OPC UA]({{ '/communications/opc-ua/' | relative_url }}) | SCADA, MES, system integration | Commonly TCP with security sessions | Subscriptions and requests | Wireshark, certificate logs, server diagnostics |
+| [BACnet/IP]({{ '/communications/bacnet-ip/' | relative_url }}) | Building automation | UDP/IP (commonly UDP 47808) | Object reads/writes and COV | Wireshark, BACnet discovery tools |
+| [Modbus RTU]({{ '/communications/modbus-rtu-rs485/' | relative_url }}) | Serial instruments and VFDs | Serial, typically RS-485 | Request/response polling | Serial analyzer, oscilloscope |
+| [PROFIBUS DP]({{ '/communications/profibus-dp/' | relative_url }}) | Distributed I/O, legacy drives | PROFIBUS physical layer (RS-485-based) | Cyclic master/slave | Bus analyzer, waveform diagnostics |
+| [IO-Link]({{ '/communications/io-link/' | relative_url }}) | Smart sensors and actuators | Point-to-point device link | Cyclic process data + acyclic parameters | Master diagnostics, IODD tools |
+
+## Start by Task
+
+**I need to connect a PLC to a drive or device** —
+[Ethernet fundamentals]({{ '/communications/ethernet-fundamentals/' | relative_url }}) →
+the applicable protocol page → its device-description file section → its
+commissioning checklist → its diagnostic filters.
+
+**I need to troubleshoot an intermittent dropout** —
+[Diagnostics methodology]({{ '/communications/wireshark-methodology/' | relative_url }}) →
+[managed-switch counters]({{ '/communications/managed-switches/' | relative_url }}) →
+[packet-capture methods]({{ '/communications/packet-capture-methods/' | relative_url }}) →
+capture a baseline → protocol-specific diagnosis.
+
+**I need to integrate a SCADA system** —
+[Ethernet fundamentals]({{ '/communications/ethernet-fundamentals/' | relative_url }}) (addressing/routing) →
+[OPC UA]({{ '/communications/opc-ua/' | relative_url }}) or
+[Modbus TCP]({{ '/communications/modbus-tcp/' | relative_url }}) →
+firewall ports → certificates and authentication → tag-quality and timeout diagnosis.
+
+**I need to troubleshoot RS-485** —
+[Modbus RTU / RS-485]({{ '/communications/modbus-rtu-rs485/' | relative_url }})
+(physical layer first: termination, bias, polarity) → serial parameters →
+frame-level checks with a serial analyzer and oscilloscope.
+
 ## Fundamentals
 
 <div class="workflow-card-grid">
@@ -59,7 +96,9 @@ related_standards:
   </div>
 </div>
 
-## Serial &amp; Device-Level
+## Serial, Fieldbus &amp; Device-Level
+
+**Serial and fieldbus** — multidrop networks on shared physical media:
 
 <div class="workflow-card-grid">
   <div class="workflow-card">
@@ -70,6 +109,11 @@ related_standards:
     <h3><a href="{{ '/communications/profibus-dp/' | relative_url }}">PROFIBUS DP</a></h3>
     <p>Segment rules, powered termination, GSD files, and bus-health diagnostics beyond packet capture.</p>
   </div>
+</div>
+
+**Smart device interfaces** — point-to-point links, not multidrop buses:
+
+<div class="workflow-card-grid">
   <div class="workflow-card">
     <h3><a href="{{ '/communications/io-link/' | relative_url }}">IO-Link</a></h3>
     <p>Point-to-point sensor communication: masters as fieldbus gateways, IODDs, and parameter data storage.</p>

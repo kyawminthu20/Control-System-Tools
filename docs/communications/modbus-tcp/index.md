@@ -8,7 +8,7 @@ breadcrumb:
   - name: "Modbus TCP"
 review:
   standard: "Modbus.org — Modbus Application Protocol / Modbus TCP"
-  edition: "current published spec"
+  edition: "exact governing revision not yet recorded"
   status: "Review pending"
   coverage: "Covers Modbus TCP register model, polling, and diagnostics; Modbus RTU/ASCII serial variants and Modbus Security are noted but not covered in depth"
   last_reviewed: "July 2026"
@@ -20,7 +20,7 @@ related_standards:
 <div class="page-header">
   <span class="page-header__label">Industrial Communications</span>
   <h1>Modbus TCP</h1>
-  <p>The simplest widely-deployed industrial protocol — a register read/write model over TCP port 502, supported by nearly every meter, VFD, and instrument.</p>
+  <p>A widely deployed request-response protocol with a relatively simple register-based data model, over TCP port 502 — supported by nearly every meter, VFD, and instrument.</p>
 </div>
 
 ## Overview

@@ -8,7 +8,7 @@ breadcrumb:
   - name: "PROFINET"
 review:
   standard: "PROFIBUS & PROFINET International (PI) — PROFINET"
-  edition: "current published spec"
+  edition: "exact governing revision not yet recorded"
   status: "Review pending"
   coverage: "Covers PROFINET IO (RT) design, naming, and diagnostics; IRT, PROFIsafe, and TSN-based PROFINET are noted only at overview level"
   last_reviewed: "July 2026"
@@ -20,7 +20,7 @@ related_standards:
 <div class="page-header">
   <span class="page-header__label">Industrial Communications</span>
   <h1>PROFINET</h1>
-  <p>The PI-managed industrial Ethernet standard for cyclic I/O — dominant in Siemens-ecosystem machines, where a device's name-of-station, not its IP address, is its identity.</p>
+  <p>The PI-managed industrial Ethernet standard for cyclic I/O — common as the primary I/O network in Siemens-ecosystem machines, where the configured name-of-station is the commissioning identity.</p>
 </div>
 
 ## Overview
@@ -33,7 +33,7 @@ PROFINET IO is the industrial Ethernet protocol managed by PROFIBUS & PROFINET I
 
 Two real-time classes matter at overview level: **RT** (Real-Time) carries cyclic I/O directly in Ethernet frames — prioritized but running through standard switches, sufficient for most machinery — and **IRT** (Isochronous Real-Time) adds scheduled, clock-synchronized transmission through IRT-capable switch hardware for tight motion synchronization. Most installations are RT; treat IRT as a separate design exercise against vendor documentation.
 
-The defining behavioral difference from other Ethernet protocols: **the device's identity is its name-of-station, not its IP address.** The controller finds devices by name using **DCP (Discovery and Configuration Protocol)** at Layer 2, then assigns each device the IP address configured in the project. Swapping a failed device therefore means giving the replacement the right name (or letting topology-based naming do it) — not setting an IP.
+The defining behavioral difference from other Ethernet protocols: **for PROFINET IO commissioning, the configured name-of-station is the primary identity** used to match an IO-Device to the engineering project. The controller finds devices by name using **DCP (Discovery and Configuration Protocol)** at Layer 2, then assigns each device the IP parameters configured in the project — IP addresses remain relevant for IP-based services and engineering access. Swapping a failed device therefore means giving the replacement the right name (or letting topology-based naming do it) — not setting an IP.
 
 ```mermaid
 flowchart TD

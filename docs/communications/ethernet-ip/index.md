@@ -8,7 +8,7 @@ breadcrumb:
   - name: "EtherNet/IP"
 review:
   standard: "ODVA — EtherNet/IP (CIP)"
-  edition: "current published spec"
+  edition: "exact governing revision not yet recorded"
   status: "Review pending"
   coverage: "Covers standard EtherNet/IP I/O and messaging concepts; CIP Safety, CIP Motion, and DLR are mentioned only at overview level"
   last_reviewed: "July 2026"
@@ -20,7 +20,7 @@ related_standards:
 <div class="page-header">
   <span class="page-header__label">Industrial Communications</span>
   <h1>EtherNet/IP</h1>
-  <p>The Common Industrial Protocol (CIP) carried over standard Ethernet and IP — the dominant I/O network in Rockwell-centric plants.</p>
+  <p>The Common Industrial Protocol (CIP) carried over standard Ethernet and IP — commonly used as the primary controller, I/O, drive, and device network in Rockwell Automation-based systems.</p>
 </div>
 
 ## Overview

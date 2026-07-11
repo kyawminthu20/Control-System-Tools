@@ -8,7 +8,7 @@ breadcrumb:
   - name: "Modbus RTU / RS-485"
 review:
   standard: "Modbus.org (Modbus over Serial Line) / TIA-485"
-  edition: "current published spec"
+  edition: "exact governing revision not yet recorded"
   status: "Review pending"
   coverage: "RTU framing, 2-wire multidrop wiring, termination/bias, addressing, timing, and no-Wireshark diagnostics; does not cover Modbus ASCII, 4-wire RS-485, or register maps of specific devices"
   last_reviewed: "July 2026"

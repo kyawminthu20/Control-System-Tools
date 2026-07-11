@@ -1,12 +1,9 @@
 {% comment %}
-  Page review-information box (Phase 33, review items R9/R22).
-  Renders when the page declares a `review:` block in frontmatter:
-    review:
-      standard: "NFPA 79"
-      edition: "2024"
-      status: "Reviewed"        # 5-term vocabulary
-      coverage: "All 20 chapters at chapter level"
-      last_reviewed: "May 2026"
+  Page review-information box (Phase 33; semantics refined Phase 35.1).
+  Renders when the page declares a `review:` block in frontmatter. When the
+  status is not "Reviewed", the date is labeled "Last content update" and an
+  explicit "Technical validation: not yet completed" row is shown — a page
+  cannot simultaneously claim "Review pending" and "Last reviewed".
 {% endcomment %}
 {% if page.review %}
 <div class="review-meta">
@@ -15,12 +12,23 @@
     <dt>Edition covered</dt><dd>{{ page.review.standard }} — {{ page.review.edition }}</dd>
     <dt>Content status</dt><dd>{{ page.review.status }}</dd>
     {% if page.review.coverage %}<dt>Coverage</dt><dd>{{ page.review.coverage }}</dd>{% endif %}
+    {% if page.review.status == "Reviewed" %}
     <dt>Last reviewed</dt><dd>{{ page.review.last_reviewed }}</dd>
+    {% else %}
+    <dt>Last content update</dt><dd>{{ page.review.last_reviewed }}</dd>
+    <dt>Technical validation</dt><dd>Not yet completed</dd>
+    {% endif %}
     <dt>Primary reference</dt><dd>The official published standard — required for final decisions</dd>
   </dl>
   <p class="review-meta__note">
+    {% if page.url contains '/communications/' %}
+    Confirm the applicable specification revision, device firmware, vendor
+    implementation, network architecture, cybersecurity requirements, and
+    project-specific constraints before applying anything on this page.
+    {% else %}
     Confirm the governing edition, jurisdiction, and project-specific requirements
     before applying anything on this page.
+    {% endif %}
   </p>
 </div>
 {% endif %}
