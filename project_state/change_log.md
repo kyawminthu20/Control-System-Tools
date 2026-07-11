@@ -1,6 +1,6 @@
 # Project Change Log
 
-**Last Updated:** 2026-05-06 (Phase 30.2 COMPLETE — IEC 60079 depth pass)
+**Last Updated:** 2026-07-10 (Tools Suite Phases 0–1 — repo hygiene + `cst` Python package)
 **Status:** Active
 
 ## Purpose
@@ -17,6 +17,28 @@ Use it for:
 Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
+
+## 2026-07-10 — Tools Suite Phases 0–1 — repo hygiene + `cst` Python package
+
+**Type:** New project track (Python tools suite) + repository hygiene
+**Status:** Complete on `feat/cst-suite` (Phase 0: commit c027d72; Phase 1: follow-up commit).
+**Reason:** Full repo audit (2026-07-10) found zero engineering-calculation code despite the "Control System Tools" name, plus active hygiene defects. User approved a 4-phase plan to grow the repo into a comprehensive, portfolio-grade engineering tools suite alongside the content site.
+
+**Phase 0 changes (hygiene):**
+- Untracked `planning/Python/` (168 MB Udemy course, 1,141 files — 54 % of tracked files; copyright exposure). History rewrite deferred pending user decision.
+- `tools/project_automator.py` IGNORE_DIRS fixed (was indexing `.venv`/`docs/vendor`/`docs/_site`) — STRUCTURE_SUMMARY.md 600 KB → 99 KB.
+- Fixed the 2 pre-existing broken homepage links; excluded `docs/plans/` + `docs/superpowers/` from the published site.
+- Deleted 0-byte `generate_rag_index.py` and retired `_phase26_*` scripts; un-hardcoded `generate_standards_overview.py` root path.
+- Re-synced the RAG→site mirror (5 stale BLDC/PMSM files).
+
+**Phase 1 changes (package):**
+- New installable package `src/cst/` with console script `cst` (hatchling, `uv sync`).
+- `cst.common`: units (ASTM B258 AWG), Citation/CalcResult framework (every result carries standard references + assumptions), loader for user-supplied licensed table JSON.
+- Calculators: `cst.calc.voltage_drop` (NEC K-factor method + minimum-wire-size search), `cst.motion.encoder` (counts↔units↔RPM scaling), `cst.calc.enclosure_thermal` (IEC/TR 60890-style temp rise + fan sizing).
+- `data/standards_tables/`: committed schemas, gitignored values — licensed table data (NEC 310.16, 430.250, …) is supplied by the user, never committed.
+- 50 new tests in `tests/cst/` (65 total pass); pytest declared as dev dependency; redundant `pypdf2` dropped.
+
+**Architecture decision:** calculation logic open/committed, licensed numeric table values local-only — same copyright boundary as the RAG corpus. Roadmap: Phase 2 NEC/UL data-dependent calculators (blocked on user table data), Phase 3 panel/commissioning pipeline, Phase 4 PLC/diagnostics/docgen.
 
 ## 2026-05-06 — Phase 30.2 COMPLETE — IEC 60079 depth pass
 

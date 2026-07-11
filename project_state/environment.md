@@ -1,6 +1,6 @@
 # Environment
 
-**Last Updated:** 2026-03-09
+**Last Updated:** 2026-07-10
 **Status:** Active
 
 ## Purpose
@@ -17,9 +17,11 @@ If a dependency, version, environment variable, toolchain rule, or deployment ta
 
 ## Current Project Surface
 
-- `main.py` is the current placeholder entry point (not the site)
-- `docs/` contains the Phase 1 Jekyll static site
-- `tools/` contains the main local automation and validation scripts
+- `src/cst/` is the installable Python tools package (console script: `cst`)
+- `main.py` is a legacy placeholder (superseded by `cst.cli`)
+- `docs/` contains the Jekyll static site
+- `tools/` contains repo automation and validation scripts (not engineering tools)
+- `data/standards_tables/` holds user-supplied licensed table values (gitignored) + committed schemas
 - `.github/workflows/pages.yml` deploys the site to GitHub Pages on push to master
 
 ## Jekyll Site Requirements
@@ -50,7 +52,10 @@ If a dependency, version, environment variable, toolchain rule, or deployment ta
 
 ## Current Python Dependencies
 
-- none declared beyond the standard library
+- `src/cst/` package: standard library only (by design)
+- `pymupdf`, `pypdf`: optional PDF extractors consumed only by `tools/fe_study/`
+- Dev group: `pytest` (installed by `uv sync`)
+- Packaging: hatchling build backend; `uv sync` installs the project editable with the `cst` console script
 
 ## Environment Variables
 
@@ -64,6 +69,7 @@ If a dependency, version, environment variable, toolchain rule, or deployment ta
 
 ## Validation And Automation Commands
 
+- `uv run pytest` (65 tests: cst package + fe_study pipeline)
 - `python3 tools/project_automator.py`
 - `python3 tools/validate_ai_boundaries.py`
 - `python3 tools/fix_ai_boundaries.py`

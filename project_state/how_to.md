@@ -1,6 +1,6 @@
 # How To
 
-**Last Updated:** 2026-03-10
+**Last Updated:** 2026-07-10
 **Status:** Active
 
 ## Purpose
@@ -28,23 +28,32 @@ uv sync
 
 If `uv` is not available, use the local Python environment directly for the current project state.
 
-## Run The Current Project
+## Run The Tools Suite (cst)
 
-Current app entry point:
-
-```bash
-python3 main.py
-```
-
-Or with `uv`:
+`uv sync` installs the `cst` package (editable) with its console script. Examples:
 
 ```bash
-uv run python main.py
+uv run cst voltage-drop --amps 20 --feet 100 --awg 12 --volts 120
+uv run cst wire-size --amps 32 --feet 250 --volts 480 --phases 3
+uv run cst encoder --ppr 1024 --gear 5 --lead 10 --rpm 3000
+uv run cst enclosure --watts 350 --height 1.6 --width 0.8 --depth 0.5
+uv run cst fan --watts 400 --max-temp 45
 ```
 
-Current expected behavior:
+Or import it: `from cst.calc.voltage_drop import voltage_drop`. Every result
+is a `CalcResult` with `.report()` for cited plain-text output.
 
-- prints a placeholder message
+Calculators that need licensed table values (NEC 310.16, 430.250, ...) read
+them from `data/standards_tables/*.json` — populate from your licensed copies
+per `data/standards_tables/README.md`. Values are gitignored.
+
+## Run Tests
+
+```bash
+uv run pytest
+```
+
+65 tests (cst package + fe_study extraction pipeline) must pass.
 
 ## Refresh Project Automation
 

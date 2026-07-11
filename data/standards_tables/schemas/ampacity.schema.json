@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Conductor ampacity table (e.g. NEC 2023 Table 310.16)",
+  "description": "Transcribe from a licensed copy. File name suggestion: ampacity_nec_310_16.json",
+  "type": "object",
+  "required": ["source", "data"],
+  "properties": {
+    "source": {
+      "type": "object",
+      "required": ["standard", "edition", "table"],
+      "properties": {
+        "standard": { "type": "string", "const": "NEC (NFPA 70)" },
+        "edition": { "type": "string", "examples": ["2023"] },
+        "table": { "type": "string", "examples": ["310.16"] },
+        "notes": { "type": "string" }
+      }
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["size_awg_kcmil", "material", "ampacity_a"],
+        "properties": {
+          "size_awg_kcmil": { "type": "string", "examples": ["12", "4/0", "250"] },
+          "material": { "enum": ["cu", "al"] },
+          "insulation_rating_c": { "enum": [60, 75, 90] },
+          "ampacity_a": { "type": "number", "exclusiveMinimum": 0 }
+        }
+      }
+    }
+  }
+}

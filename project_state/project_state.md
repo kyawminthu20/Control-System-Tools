@@ -1,10 +1,10 @@
 # Project State
 
-**Last Updated:** 2026-05-06 (Phase 30.2 COMPLETE — IEC 60079 depth pass)
+**Last Updated:** 2026-07-10 (Tools Suite Phases 0–1 COMPLETE — repo hygiene + `cst` Python package)
 **Status:** Active
-**Current Phase:** Phase 30.2 COMPLETE — IEC 60079 detail page brought up to the ISO 13849-1 template floor. Per-part depth covers the 6 RAG-corpus parts (60079-0 / -1 / -10-1 / -11 / -14 / -17). Worked Example walks a 4–20 mA pressure-transmitter IS loop on an ethylene Zone 1 area with full entity-parameter check. 6 Common Mistakes, Practical Checklist (Area classification / Equipment / Installation / Inspection), Lifecycle Application table, expanded NEC Art. 500–505 mapping. Page grew 123 → 364 lines. Plan-vs-RAG mismatch caught a second time: plan called for Ex e (-7) and Ex p (-2) per-part depth, but neither part is in the corpus — covered as gap-flagged entries in the new Corpus Coverage table instead. Phase 30.1 lesson successfully applied.
-**Next Phase:** Phase 30.3 — IEC 60204-1 Depth (per-clause depth, CNC worked example, 5+ Common Mistakes). Verify clause numbering against the IEC 60204-1 RAG before drafting — same RAG-mapping check that caught issues in 30.1 and 30.2.
-**Delivery Target:** GitHub Pages static site for personal use
+**Current Phase:** Tools Suite Phase 1 COMPLETE — the repository now has a second track alongside the content site: an installable Python package (`src/cst/`) of standards-cited engineering calculators. Phase 0 (hygiene) fixed the STRUCTURE_SUMMARY bloat bug, the 2 broken homepage links, the stale RAG→site mirror, and untracked the 168 MB third-party course material under `planning/Python/`. Phase 1 shipped the package spine (`cst.common`: units / citation framework / licensed-table loader) plus three zero-data-dependency tools: voltage drop + minimum-wire-size (NEC K-factor method), encoder scaling (counts↔units↔RPM), and enclosure thermal (IEC/TR 60890-style temperature rise + fan sizing). 50 new tests; 65 total pass via `uv run pytest`. CLI: `uv run cst <voltage-drop|wire-size|encoder|enclosure|fan>`. Branch: `feat/cst-suite`.
+**Next Phase:** Tools Suite Phase 2 — NEC/UL calculators (ampacity, motor branch circuit per Art. 430, transformer, SCCR per UL 508A SB4, short-circuit). Blocked on user transcribing licensed table values into `data/standards_tables/` (schemas committed; values gitignored). Content track: Phase 30.3 (IEC 60204-1 depth) still pending, unchanged.
+**Delivery Target:** GitHub Pages static site (content) + importable/installable Python package `cst` (tools), both personal-use first
 
 ## Purpose
 
@@ -21,6 +21,39 @@ The site is a presentation and navigation layer on top of `control-standards/rag
 Phase 24 Task 1 is complete. The IEC earthing systems training module now includes: a visual summary flowchart showing how each system type handles fault return, compact Mermaid diagrams for each of the five earthing systems (TN-C, TT, TN-C-S, TN-S, IT), per-system blockquote callout cards, "Machine designer takeaway" lines, an expanded practical comparison table, and a selection-logic decision flowchart before the practical questions section. Jekyll build remains clean.
 
 Phase 25 is complete. An 8-page water/wastewater section was added under `docs/industries/water-wastewater/`, covering municipal drinking water treatment and industrial wastewater treatment with Mermaid diagrams on every page. Topics include: overview and standards selection flowchart, intake and raw water pumping, filtration and clarification, chemical dosing, distribution SCADA and telemetry, equalization and neutralization, treatment and discharge compliance, and instrumentation reference. Eight corresponding RAG files were added to `control-standards/rag/design_framework/water_wastewater/`. Standards covered: IEC 61511, IEC 62443, ISA-18.2, AWWA, EPA SDWA/CWA, NFPA 820, NEC.
+
+## Tools Suite Phases 0–1 — COMPLETE (2026-07-10)
+
+New track: grow the repo into a comprehensive engineering tools suite (audit → architecture → phased build, user-approved 2026-07-10). Branch: `feat/cst-suite`. Key architecture decision: **calculation code is committed and open; licensed standard table values are gitignored** (`data/standards_tables/`, schemas committed) — the same copyright boundary the RAG corpus follows.
+
+### Phase 0 — Hygiene (commit c027d72)
+
+- Untracked `planning/Python/` (1,141 Udemy course files, 168 MB — 54 % of all tracked files; copyright exposure on a public remote). Files stay on disk; `.git` history rewrite deliberately deferred pending user decision.
+- `tools/project_automator.py`: IGNORE_DIRS now excludes `.venv`, `docs/vendor`, `docs/_site`, caches — STRUCTURE_SUMMARY.md 600 KB → 99 KB (the pre-commit hook had been re-committing the bloat on every commit).
+- Fixed the 2 long-standing broken homepage links (`/industries/food-and-beverage/`, `/industries/offshore/`).
+- Excluded internal `docs/plans/` + `docs/superpowers/` from the published site (`_config.yml` exclude).
+- `generate_standards_overview.py`: root derived from `__file__` instead of a hardcoded absolute path.
+- Deleted 0-byte `tools/generate_rag_index.py` and the retired `_phase26_*` one-shot scripts.
+- Re-ran `generate_rag_tree.py`: the 5 BLDC/PMSM corpus files added 2026-04-29 are now mirrored to the site (283 files).
+
+### Phase 1 — Package spine + first calculators
+
+- `src/cst/` installable package (hatchling; `uv sync` installs editable; console script `cst`).
+- `cst.common`: `cite.py` (Citation + CalcResult — every result carries standard references and assumptions), `units.py` (ASTM B258 AWG geometry, exact-constant conversions), `tables.py` (loader for user-supplied licensed table JSON; refuses files without a `source` provenance block).
+- `cst.calc.voltage_drop`: K-factor method (2·K·I·L/cmil, √3 for 3-phase), NEC 210.19(A)/215.2(A) 3 %/5 % recommendation warnings, inverse minimum-conductor-size search with an explicit "ampacity still governs" warning.
+- `cst.motion.encoder`: EncoderScaling dataclass — quadrature, gear ratio, ballscrew lead; counts↔position↔RPM↔linear speed.
+- `cst.calc.enclosure_thermal`: effective-surface-area method (IEC/TR 60890 concept, vendor-guide constants exposed as parameters), sealed temperature rise + required fan airflow, 50 °C derating warning.
+- `data/standards_tables/`: README + JSON schemas for ampacity and motor-FLC tables. Values are **never committed** — user transcribes from licensed copies.
+- Tests: 50 new golden-value tests (`tests/cst/`), 65 total passing including doctests; `pytest` now a declared dev dependency and runs inside the project venv (previously only worked via system Python).
+- `pyproject.toml`: dropped redundant `pypdf2` (deprecated predecessor of `pypdf`), added packaging config + `[dependency-groups] dev`.
+
+### Roadmap (remaining)
+
+- **Phase 2** — NEC/UL data-dependent calculators (ampacity w/ corrections, motor branch circuit, transformer, SCCR, short-circuit). Needs user-populated `data/standards_tables/*.json`.
+- **Phase 3** — Panel design pipeline (I/O list → BOM → wire/terminal schedule → nameplates) + commissioning generators (loop sheets, FAT/SAT). Needs a sample I/O list as reference fixture.
+- **Phase 4** — PLC utilities (tag DB, address map, pycomm3 extra), diagnostics (SBM anomaly detection, Saleae post-processing — needs field data), docgen.
+
+---
 
 ## Phase 30.2 — COMPLETE (2026-05-06)
 

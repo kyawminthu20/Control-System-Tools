@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Motor full-load current table (e.g. NEC 2023 Tables 430.248 / 430.250)",
+  "description": "Transcribe from a licensed copy. File name suggestion: motor_flc_nec_430_250.json",
+  "type": "object",
+  "required": ["source", "data"],
+  "properties": {
+    "source": {
+      "type": "object",
+      "required": ["standard", "edition", "table"],
+      "properties": {
+        "standard": { "type": "string", "const": "NEC (NFPA 70)" },
+        "edition": { "type": "string", "examples": ["2023"] },
+        "table": { "type": "string", "examples": ["430.250 (three-phase AC)"] },
+        "notes": { "type": "string" }
+      }
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["hp", "voltage", "flc_a"],
+        "properties": {
+          "hp": { "type": "number", "exclusiveMinimum": 0 },
+          "voltage": { "type": "number", "examples": [200, 230, 460, 575] },
+          "phases": { "enum": [1, 3], "default": 3 },
+          "flc_a": { "type": "number", "exclusiveMinimum": 0 }
+        }
+      }
+    }
+  }
+}
