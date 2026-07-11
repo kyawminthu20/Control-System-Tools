@@ -177,6 +177,22 @@ Keep entries concise and oriented to what future work needs to know.
 
 ## Change History
 
+## 2026-07-11 — Phase 43 — IEC 61131-3 / PLC Software
+
+**Type:** Content — new PLC-software section, closes the longest-standing corpus gap
+**Status:** Complete on `feat/phase43-iec61131`.
+
+- New `/fundamentals/plc-software/` section (4 pages + index) + corpus `training_modules/plc_software/` module (4 notes):
+  - Languages Overview (184) — the five IEC 61131-3 languages (LD/FBD/ST/SFC/IL, IL deprecation noted), when each fits, comparison table, SFC step-transition diagram
+  - Program Structure (159) — POUs (Program/FB/Function), tasks/scan model (standard vs vendor reality), variable scope + globals-as-trap, links cst tag tooling
+  - State Machines (195) — explicit-state-machine argument, three implementations (SFC / ST CASE / Ladder), fault-recovery, links the existing machine-state-model page
+  - Safety Application Patterns (174) — framed patterns-not-PL/SIL: safety-rated controller + certified function blocks, safety program kept separate/traceable, anti-patterns; links ISO 13849-1/IEC 62061/IEC 61508, SRS, safety-circuit wiring
+- IEC 61131-3 paraphrased at concept level, illustrative ST snippets only, no reproduced grammar tables. Vendor tools as examples with consult-your-platform refrain.
+- Added to Fundamentals landing + nav. Mirror synced.
+- All Review pending; validation: clean build (359 files), zero broken links, boundary baseline unchanged, 145 tests.
+
+
+
 ## 2026-07-11 — Phase 42 — Troubleshooting Engine
 
 **Type:** Content — new troubleshooting decision-tree genre + corpus module populated

@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-11 15:10:03
+**Last Auto-Updated:** 2026-07-11 15:22:52
 
 ```text
 ├── .claude/
@@ -470,6 +470,11 @@
 │   │   │   │   ├── nec_code_reading_fundamentals.md
 │   │   │   │   ├── sccr_workflow.md
 │   │   │   │   └── working_space_and_table_navigation.md
+│   │   │   ├── plc_software/
+│   │   │   │   ├── languages_overview.md
+│   │   │   │   ├── program_structure.md
+│   │   │   │   ├── safety_application_patterns.md
+│   │   │   │   └── state_machines.md
 │   │   │   ├── safety/
 │   │   │   ├── semiconductor_facility/
 │   │   │   │   ├── README.md
@@ -1028,6 +1033,11 @@
 │   │   │   │   │   ├── nec_code_reading_fundamentals.md
 │   │   │   │   │   ├── sccr_workflow.md
 │   │   │   │   │   └── working_space_and_table_navigation.md
+│   │   │   │   ├── plc_software/
+│   │   │   │   │   ├── languages_overview.md
+│   │   │   │   │   ├── program_structure.md
+│   │   │   │   │   ├── safety_application_patterns.md
+│   │   │   │   │   └── state_machines.md
 │   │   │   │   └── semiconductor_facility/
 │   │   │   │       └── hf_handling_controls_materials_and_shutdowns.md
 │   │   │   └── troubleshooting_engine/
@@ -1249,29 +1259,39 @@
 │   │   │   │   └── index.md
 │   │   │   └── vfd-servo-architecture/
 │   │   │       └── index.md
-│   │   └── nec-application/
-│   │       ├── article-409-workflow/
-│   │       │   └── index.md
-│   │       ├── article-430-workflow/
-│   │       │   └── index.md
-│   │       ├── branch-circuits-vs-feeders/
-│   │       │   └── index.md
-│   │       ├── class1-class2-circuits/
-│   │       │   └── index.md
-│   │       ├── conductor-ocpd-sizing/
-│   │       │   └── index.md
-│   │       ├── disconnecting-means/
-│   │       │   └── index.md
-│   │       ├── grounding-bonding-panels/
-│   │       │   └── index.md
+│   │   ├── nec-application/
+│   │   │   ├── article-409-workflow/
+│   │   │   │   └── index.md
+│   │   │   ├── article-430-workflow/
+│   │   │   │   └── index.md
+│   │   │   ├── branch-circuits-vs-feeders/
+│   │   │   │   └── index.md
+│   │   │   ├── class1-class2-circuits/
+│   │   │   │   └── index.md
+│   │   │   ├── conductor-ocpd-sizing/
+│   │   │   │   └── index.md
+│   │   │   ├── disconnecting-means/
+│   │   │   │   └── index.md
+│   │   │   ├── grounding-bonding-panels/
+│   │   │   │   └── index.md
+│   │   │   ├── index.md
+│   │   │   ├── motor-panel-code-application/
+│   │   │   │   └── index.md
+│   │   │   ├── nec-code-reading/
+│   │   │   │   └── index.md
+│   │   │   ├── sccr-workflow/
+│   │   │   │   └── index.md
+│   │   │   └── working-space-table-navigation/
+│   │   │       └── index.md
+│   │   └── plc-software/
 │   │       ├── index.md
-│   │       ├── motor-panel-code-application/
+│   │       ├── languages-overview/
 │   │       │   └── index.md
-│   │       ├── nec-code-reading/
+│   │       ├── program-structure/
 │   │       │   └── index.md
-│   │       ├── sccr-workflow/
+│   │       ├── safety-application-patterns/
 │   │       │   └── index.md
-│   │       └── working-space-table-navigation/
+│   │       └── state-machines/
 │   │           └── index.md
 │   ├── implementation/
 │   │   └── index.md

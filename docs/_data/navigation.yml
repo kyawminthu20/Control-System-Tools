@@ -17,6 +17,17 @@
       url: "/fundamentals/motors/"
     - label: "NEC for Machines &amp; Panels"
       url: "/fundamentals/nec-application/"
+    - label: "PLC Software"
+      url: "/fundamentals/plc-software/"
+      children:
+        - label: "Languages Overview"
+          url: "/fundamentals/plc-software/languages-overview/"
+        - label: "Program Structure"
+          url: "/fundamentals/plc-software/program-structure/"
+        - label: "State Machines"
+          url: "/fundamentals/plc-software/state-machines/"
+        - label: "Safety Application Patterns"
+          url: "/fundamentals/plc-software/safety-application-patterns/"
 
 - label: "Standards"
   url: "/standards/"

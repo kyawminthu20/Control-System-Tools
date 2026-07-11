@@ -31,6 +31,10 @@ breadcrumb:
     <h3><a href="{{ '/fundamentals/motors/' | relative_url }}">Motors and Drives</a></h3>
     <p>AC vs DC motors, induction motor basics, DC motor basics, BLDC/EV/drone motors, motor nameplates/slip/torque, motor control methods, motor-VFD equations, motor family comparison, VFD fundamentals, servo drive fundamentals, servo feedback/inertia, VFD/servo architecture, motor efficiency and losses.</p>
   </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/fundamentals/plc-software/' | relative_url }}">PLC Software</a></h3>
+    <p>IEC 61131-3 languages (LD/FBD/ST/SFC/IL), program structure and POUs, state-machine design, and safety application patterns.</p>
+  </div>
 </div>
 
 ## Related Sections

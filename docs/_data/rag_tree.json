@@ -2086,6 +2086,36 @@
         ]
       },
       {
+        "name": "plc_software",
+        "type": "dir",
+        "children": [
+          {
+            "name": "languages_overview.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/plc_software/languages_overview.md",
+            "serve_path": "training_modules/plc_software/languages_overview.md"
+          },
+          {
+            "name": "program_structure.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/plc_software/program_structure.md",
+            "serve_path": "training_modules/plc_software/program_structure.md"
+          },
+          {
+            "name": "safety_application_patterns.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/plc_software/safety_application_patterns.md",
+            "serve_path": "training_modules/plc_software/safety_application_patterns.md"
+          },
+          {
+            "name": "state_machines.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/plc_software/state_machines.md",
+            "serve_path": "training_modules/plc_software/state_machines.md"
+          }
+        ]
+      },
+      {
         "name": "semiconductor_facility",
         "type": "dir",
         "children": [
