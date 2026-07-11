@@ -4,13 +4,13 @@ title: "Passive Components: Resistors and Capacitors"
 description: "This module explains the basic practical behavior of two common passive components used throughout electrical and control work."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Electrical Fundamentals"
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/passive_components_resistors_capacitors.md"
 redirect_from:
-  - /training/fundamentals/passive-components/
-  - /training/fundamentals/passive-components/index.html
+  - /fundamentals/fundamentals/passive-components/
+  - /fundamentals/fundamentals/passive-components/index.html
 
 ---
 

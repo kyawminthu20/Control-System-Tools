@@ -4,7 +4,7 @@ title: "IEC Earthing System Types"
 description: "How the earthing arrangement of an electrical installation affects fault-current path, protective-device operation, and touch-voltage risk — TN-C, TT, TN-C-S, TN-S, and IT systems."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Electrical Fundamentals"
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/earthing_systems_iec.md"
@@ -14,8 +14,8 @@ related_standards:
   - name: "NEC (NFPA 70)"
     url: "/standards/us-electrical/nec/"
 redirect_from:
-  - /training/fundamentals/earthing-systems-iec/
-  - /training/fundamentals/earthing-systems-iec/index.html
+  - /fundamentals/fundamentals/earthing-systems-iec/
+  - /fundamentals/fundamentals/earthing-systems-iec/index.html
 
 ---
 
@@ -257,7 +257,7 @@ When assessing or designing for any earthing system:
 
 ## See also
 
-The US counterpart to this topic is the [NEC Grounding and Bonding module]({{ '/training/nec-application/grounding-bonding-panels/' | relative_url }}), which covers Art. 250 grounding using NEC terminology and classification.
+The US counterpart to this topic is the [NEC Grounding and Bonding module]({{ '/fundamentals/nec-application/grounding-bonding-panels/' | relative_url }}), which covers Art. 250 grounding using NEC terminology and classification.
 
 ---
 

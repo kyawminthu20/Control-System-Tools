@@ -4,13 +4,13 @@ title: "Equivalent Circuit Methods"
 description: "This module explains how to replace a complicated section of a circuit with a simpler equivalent form that behaves the same way at the terminals of interest."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Electrical Fundamentals"
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/equivalent_circuit_methods.md"
 redirect_from:
-  - /training/fundamentals/equivalent-circuit-methods/
-  - /training/fundamentals/equivalent-circuit-methods/index.html
+  - /fundamentals/fundamentals/equivalent-circuit-methods/
+  - /fundamentals/fundamentals/equivalent-circuit-methods/index.html
 
 ---
 

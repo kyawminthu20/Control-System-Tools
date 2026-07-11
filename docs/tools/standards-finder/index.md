@@ -55,14 +55,14 @@ breadcrumb:
       <span class="scenario-card__title">US Industrial Control Panel</span>
       <p class="scenario-card__start"><strong>Stack:</strong> UL 508A + NEC Article 409 + NFPA 79</p>
       <p style="font-size:0.78rem;color:var(--color-text-muted);">UL listing required. NEC is the legal baseline, UL 508A governs panel construction, NFPA 79 applies once the panel sits on a machine.</p>
-      <a href="{{ '/implementation/scenarios/us-industrial-control-panel/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
+      <a href="{{ '/tools/scenarios/us-industrial-control-panel/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
     </div>
     <div class="scenario-card" data-finder-region="us global" data-finder-domain="machinery">
       <span class="scenario-card__num">Scenario 06</span>
       <span class="scenario-card__title">Practical Machine Safety Implementation</span>
       <p class="scenario-card__start"><strong>Stack:</strong> ISO 13849-1 / IEC 62061 — 10-step SIL/PL workflow</p>
       <p style="font-size:0.78rem;color:var(--color-text-muted);">Safety-function design path applicable to US machines too. Pick PL (ISO 13849-1) or SIL (IEC 62061) depending on the safety lifecycle you're already inside.</p>
-      <a href="{{ '/implementation/scenarios/machine-safety-implementation/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
+      <a href="{{ '/tools/scenarios/machine-safety-implementation/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
     </div>
   </div>
 </section>
@@ -76,7 +76,7 @@ breadcrumb:
       <span class="scenario-card__title">Global Machine (US + EU)</span>
       <p class="scenario-card__start"><strong>Stack:</strong> NFPA 79 (US) + IEC 60204-1 (EU) + ISO 12100</p>
       <p style="font-size:0.78rem;color:var(--color-text-muted);">Same machine for both markets. CE marking requires an ISO 12100 risk assessment as the foundation; the rest layers on top.</p>
-      <a href="{{ '/implementation/scenarios/global-machine/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
+      <a href="{{ '/tools/scenarios/global-machine/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
     </div>
   </div>
 </section>
@@ -90,14 +90,14 @@ breadcrumb:
       <span class="scenario-card__title">Process Skid Shutdown System</span>
       <p class="scenario-card__start"><strong>Stack:</strong> IEC 61511 + IEC 61508 foundation</p>
       <p style="font-size:0.78rem;color:var(--color-text-muted);">SIS / ESD for general process industry. <span class="badge badge--complete">CORPUS COMPLETE</span></p>
-      <a href="{{ '/implementation/scenarios/process-skid/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
+      <a href="{{ '/tools/scenarios/process-skid/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
     </div>
     <div class="scenario-card" data-finder-region="us" data-finder-domain="process hazloc">
       <span class="scenario-card__num">Scenario 07</span>
       <span class="scenario-card__title">O&amp;G Onshore Process Skid (ESD / F&amp;G)</span>
       <p class="scenario-card__start"><strong>Stack:</strong> IEC 61511 + IEC 60079 + NEC Art. 500–505</p>
       <p style="font-size:0.78rem;color:var(--color-text-muted);">Hazardous-area onshore skid. Adds explosive-atmosphere classification and area marking on top of the SIS path.</p>
-      <a href="{{ '/implementation/scenarios/oil-gas-process-skid/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
+      <a href="{{ '/tools/scenarios/oil-gas-process-skid/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
     </div>
   </div>
 </section>
@@ -111,7 +111,7 @@ breadcrumb:
       <span class="scenario-card__title">Networked Safety PLC Architecture</span>
       <p class="scenario-card__start"><strong>Stack:</strong> ISO 13849-1 or IEC 62061 + IEC 62443</p>
       <p style="font-size:0.78rem;color:var(--color-text-muted);">Safety PLC with network connectivity. Pick the safety-function path you're already on; layer cybersecurity per IEC 62443 zones &amp; conduits.</p>
-      <a href="{{ '/implementation/scenarios/networked-safety-plc/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
+      <a href="{{ '/tools/scenarios/networked-safety-plc/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
     </div>
   </div>
 </section>
@@ -125,21 +125,21 @@ breadcrumb:
       <span class="scenario-card__title">Semiconductor Equipment Compliance</span>
       <p class="scenario-card__start"><strong>Stack:</strong> 15-Standard Minimum Compliance Stack</p>
       <p style="font-size:0.78rem;color:var(--color-text-muted);">SEMI S2/S8/S14 + the general machinery and electrical stacks. Use this when the buyer is a fab.</p>
-      <a href="{{ '/implementation/scenarios/semiconductor-equipment/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
+      <a href="{{ '/tools/scenarios/semiconductor-equipment/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
     </div>
     <div class="scenario-card" data-finder-region="industry" data-finder-domain="industry-overlay machinery">
       <span class="scenario-card__num">Scenario 08</span>
       <span class="scenario-card__title">Semiconductor Fab Tool (Etch / CVD)</span>
       <p class="scenario-card__start"><strong>Stack:</strong> SEMI S2/S8/S14 + IEC 60204-1 + ISO 12100</p>
       <p style="font-size:0.78rem;color:var(--color-text-muted);">Specific to etch and CVD process tools — narrower scope than the general SEMI compliance stack.</p>
-      <a href="{{ '/implementation/scenarios/semiconductor-fab-tool/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
+      <a href="{{ '/tools/scenarios/semiconductor-fab-tool/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
     </div>
     <div class="scenario-card" data-finder-region="industry" data-finder-domain="process hazloc industry-overlay">
       <span class="scenario-card__num">Scenario 09</span>
       <span class="scenario-card__title">Offshore Platform ESD / F&amp;G</span>
       <p class="scenario-card__start"><strong>Stack:</strong> DNV-OS-D201 + IEC 61511 + IEC 60079</p>
       <p style="font-size:0.78rem;color:var(--color-text-muted);">Offshore-specific control and safety. DNV is non-negotiable; IEC 61511 carries the SIS lifecycle; IEC 60079 covers hazardous-area equipment.</p>
-      <a href="{{ '/implementation/scenarios/offshore-platform-control/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
+      <a href="{{ '/tools/scenarios/offshore-platform-control/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
     </div>
   </div>
 </section>

@@ -4,13 +4,13 @@ title: "Servo Feedback and Inertia Matching"
 description: "This module explains two practical servo concepts that strongly affect stability and motion quality: feedback devices and inertia matching."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/servo_feedback_and_inertia_matching.md"
 redirect_from:
-  - /training/electrical-machines/servo-feedback-inertia/
-  - /training/electrical-machines/servo-feedback-inertia/index.html
+  - /fundamentals/electrical-machines/servo-feedback-inertia/
+  - /fundamentals/electrical-machines/servo-feedback-inertia/index.html
 
 ---
 

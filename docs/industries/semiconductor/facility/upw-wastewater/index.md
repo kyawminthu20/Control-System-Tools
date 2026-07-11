@@ -141,5 +141,5 @@ See the [Instrumentation Reference](/industries/semiconductor/facility/instrumen
 
 - [Tool-Facility Interface](/industries/semiconductor/facility/tool-facility-interface/) — utility handshake and permit-to-run
 - [Instrumentation Reference](/industries/semiconductor/facility/instrumentation/) — analyzer and sensor selection
-- [Commissioning Templates](/implementation/commissioning-templates/) — field validation checklists
+- [Commissioning Templates](/lifecycle/guides/commissioning-templates/) — field validation checklists
 - [IEC 61511 — SIS Lifecycle](/standards/functional-safety/iec-61511/) — when water-quality shutdown logic requires formal SIL treatment

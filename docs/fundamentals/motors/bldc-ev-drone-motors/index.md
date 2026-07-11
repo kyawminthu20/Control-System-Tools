@@ -4,13 +4,13 @@ title: "BLDC, EV, and Drone Motors"
 description: "This module compares BLDC systems, EV traction motors, and drone propulsion motors, which are often discussed together but are not optimized for the same design goals."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/brushless_dc_ev_and_drone_motor_comparison.md"
 redirect_from:
-  - /training/electrical-machines/bldc-ev-drone-motors/
-  - /training/electrical-machines/bldc-ev-drone-motors/index.html
+  - /fundamentals/electrical-machines/bldc-ev-drone-motors/
+  - /fundamentals/electrical-machines/bldc-ev-drone-motors/index.html
 
 ---
 

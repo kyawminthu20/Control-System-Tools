@@ -4,13 +4,13 @@ title: "Motor Family Comparison"
 description: "This module introduces the major motor families used in industrial automation so the reader can distinguish the motor type before choosing a drive, control method, or protection strategy."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/motor_family_comparison.md"
 redirect_from:
-  - /training/electrical-machines/motor-family-comparison/
-  - /training/electrical-machines/motor-family-comparison/index.html
+  - /fundamentals/electrical-machines/motor-family-comparison/
+  - /fundamentals/electrical-machines/motor-family-comparison/index.html
 
 ---
 

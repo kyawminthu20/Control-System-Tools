@@ -129,5 +129,5 @@ See the [Instrumentation Reference](/industries/semiconductor/facility/instrumen
 - [Bulk Specialty Gas Systems](/industries/semiconductor/facility/bulk-specialty-gas/) — exhaust prove is a prerequisite for gas enable
 - [Tool-Facility Interface](/industries/semiconductor/facility/tool-facility-interface/) — exhaust status as a permit-to-run input
 - [Instrumentation Reference](/industries/semiconductor/facility/instrumentation/) — airflow and differential pressure device selection
-- [Safety Architecture (Lifecycle Stage 04)](/verification/safety-architecture/) — safety function design methodology
+- [Safety Architecture (Lifecycle Stage 04)](/lifecycle/safety-architecture/) — safety function design methodology
 - [IEC 61511 — SIS Lifecycle](/standards/functional-safety/iec-61511/) — SIL requirements for exhaust-loss shutdown functions

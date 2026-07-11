@@ -4,13 +4,13 @@ title: "DC Motor Basics"
 description: "This module explains the main construction and current path of a classical industrial DC motor."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/dc_motor_basics.md"
 redirect_from:
-  - /training/electrical-machines/dc-motor-basics/
-  - /training/electrical-machines/dc-motor-basics/index.html
+  - /fundamentals/electrical-machines/dc-motor-basics/
+  - /fundamentals/electrical-machines/dc-motor-basics/index.html
 
 ---
 

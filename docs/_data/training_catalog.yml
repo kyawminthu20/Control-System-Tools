@@ -32,9 +32,9 @@ start_here:
     description: "Start with NEC code reading, then motor and panel code application."
     entry_modules:
       - title: "NEC Code Reading Fundamentals"
-        url: "/training/nec-application/nec-code-reading/"
+        url: "/fundamentals/nec-application/nec-code-reading/"
       - title: "Motor and Panel Code Application"
-        url: "/training/nec-application/motor-panel-code-application/"
+        url: "/fundamentals/nec-application/motor-panel-code-application/"
   - audience: "Learning control theory and PID"
     description: "Start with the control theory overview, then move through PID intuition and industrial implementation."
     entry_modules:
@@ -72,13 +72,13 @@ learning_paths:
     description: "Apply NEC article routing and sizing logic to control panel and machinery installations."
     modules:
       - url: "/fundamentals/electrical/conductor-ampacity/"
-      - url: "/training/nec-application/nec-code-reading/"
-      - url: "/training/nec-application/working-space-table-navigation/"
-      - url: "/training/nec-application/motor-panel-code-application/"
-      - url: "/training/nec-application/branch-circuits-vs-feeders/"
-      - url: "/training/nec-application/grounding-bonding-panels/"
-      - url: "/training/nec-application/sccr-workflow/"
-      - url: "/training/nec-application/conductor-ocpd-sizing/"
+      - url: "/fundamentals/nec-application/nec-code-reading/"
+      - url: "/fundamentals/nec-application/working-space-table-navigation/"
+      - url: "/fundamentals/nec-application/motor-panel-code-application/"
+      - url: "/fundamentals/nec-application/branch-circuits-vs-feeders/"
+      - url: "/fundamentals/nec-application/grounding-bonding-panels/"
+      - url: "/fundamentals/nec-application/sccr-workflow/"
+      - url: "/fundamentals/nec-application/conductor-ocpd-sizing/"
   - name: "Troubleshooting and Field Service"
     slug: "troubleshooting-field"
     description: "Focus on the applied modules most useful for fault diagnosis, commissioning, and field maintenance."
@@ -95,11 +95,11 @@ learning_paths:
     modules:
       - url: "/fundamentals/electrical/electrical-quantities/"
       - url: "/fundamentals/electrical/conductor-ampacity/"
-      - url: "/training/nec-application/nec-code-reading/"
-      - url: "/training/nec-application/motor-panel-code-application/"
-      - url: "/training/nec-application/article-430-workflow/"
-      - url: "/training/nec-application/article-409-workflow/"
-      - url: "/training/nec-application/sccr-workflow/"
+      - url: "/fundamentals/nec-application/nec-code-reading/"
+      - url: "/fundamentals/nec-application/motor-panel-code-application/"
+      - url: "/fundamentals/nec-application/article-430-workflow/"
+      - url: "/fundamentals/nec-application/article-409-workflow/"
+      - url: "/fundamentals/nec-application/sccr-workflow/"
       - url: "/fundamentals/motors/induction-motor-basics/"
       - url: "/fundamentals/motors/motor-nameplates-slip-torque/"
       - url: "/fundamentals/motors/vfd-fundamentals/"
@@ -142,7 +142,7 @@ topic_groups:
       - "Quick References"
   - key: "nec-application"
     label: "NEC for Machines and Panels"
-    url: "/training/nec-application/"
+    url: "/fundamentals/nec-application/"
     description: "NEC code reading, table navigation, and article routing for motor and panel work."
     module_count: 11
     sidebar_buckets:
@@ -196,7 +196,7 @@ modules:
         url: "/design/workflows/electrical-review/"
     related_checklists:
       - title: "Basic Circuit Polarity and Power Checks"
-        url: "/implementation/commissioning-templates/basic-circuit-polarity/"
+        url: "/lifecycle/guides/commissioning-templates/basic-circuit-polarity/"
 
   - title: "Series, Parallel, and Divider Methods"
     url: "/fundamentals/electrical/series-parallel-dividers/"
@@ -231,7 +231,7 @@ modules:
     featured: true
     related_checklists:
       - title: "Basic Circuit Polarity and Power Checks"
-        url: "/implementation/commissioning-templates/basic-circuit-polarity/"
+        url: "/lifecycle/guides/commissioning-templates/basic-circuit-polarity/"
 
   - title: "Equivalent Circuit Methods"
     url: "/fundamentals/electrical/equivalent-circuit-methods/"
@@ -302,7 +302,7 @@ modules:
     featured: true
     related_checklists:
       - title: "Pre-Power Panel and Incoming Supply Check"
-        url: "/implementation/commissioning-templates/pre-power-panel/"
+        url: "/lifecycle/guides/commissioning-templates/pre-power-panel/"
 
   - title: "IEC Earthing System Types"
     url: "/fundamentals/electrical/earthing-systems-iec/"
@@ -340,10 +340,10 @@ modules:
       - title: "Motor Selection Workflow"
         url: "/design/workflows/motor-selection/"
       - title: "Motor Troubleshooting Decision Tree"
-        url: "/troubleshooting/motors/"
+        url: "/tools/troubleshooting/motors/"
     related_checklists:
       - title: "Motor Rotation and Overload Verification"
-        url: "/implementation/commissioning-templates/motor-rotation-verification/"
+        url: "/lifecycle/guides/commissioning-templates/motor-rotation-verification/"
 
   - title: "DC Motor Basics"
     url: "/fundamentals/motors/dc-motor-basics/"
@@ -377,9 +377,9 @@ modules:
     featured: true
     related_checklists:
       - title: "Motor Nameplate and Overload Setting"
-        url: "/implementation/commissioning-templates/motor-nameplate-overload/"
+        url: "/lifecycle/guides/commissioning-templates/motor-nameplate-overload/"
       - title: "Motor Rotation and Overload Verification"
-        url: "/implementation/commissioning-templates/motor-rotation-verification/"
+        url: "/lifecycle/guides/commissioning-templates/motor-rotation-verification/"
 
   - title: "Motor Family Comparison"
     url: "/fundamentals/motors/motor-family-comparison/"
@@ -426,14 +426,14 @@ modules:
     featured: true
     related_workflows:
       - title: "VFD Commissioning Workflow"
-        url: "/implementation/vfd-commissioning/"
+        url: "/lifecycle/guides/vfd-commissioning/"
       - title: "Motor Troubleshooting Decision Tree"
-        url: "/troubleshooting/motors/"
+        url: "/tools/troubleshooting/motors/"
     related_checklists:
       - title: "Capacitor Discharge Awareness Check"
-        url: "/implementation/commissioning-templates/capacitor-discharge/"
+        url: "/lifecycle/guides/commissioning-templates/capacitor-discharge/"
       - title: "Drive Commissioning"
-        url: "/implementation/commissioning-templates/drive-commissioning/"
+        url: "/lifecycle/guides/commissioning-templates/drive-commissioning/"
 
   - title: "Servo Drive Fundamentals"
     url: "/fundamentals/motors/servo-drive-fundamentals/"
@@ -450,12 +450,12 @@ modules:
       - "VFD Fundamentals"
     related_workflows:
       - title: "Servo Commissioning Workflow"
-        url: "/implementation/servo-commissioning/"
+        url: "/lifecycle/guides/servo-commissioning/"
       - title: "Motor Troubleshooting Decision Tree"
-        url: "/troubleshooting/motors/"
+        url: "/tools/troubleshooting/motors/"
     related_checklists:
       - title: "Drive Commissioning"
-        url: "/implementation/commissioning-templates/drive-commissioning/"
+        url: "/lifecycle/guides/commissioning-templates/drive-commissioning/"
 
   - title: "VFD and Servo Architecture Diagrams"
     url: "/fundamentals/motors/vfd-servo-architecture/"
@@ -472,12 +472,12 @@ modules:
       - "VFD Fundamentals"
     related_workflows:
       - title: "VFD Commissioning Workflow"
-        url: "/implementation/vfd-commissioning/"
+        url: "/lifecycle/guides/vfd-commissioning/"
       - title: "Servo Commissioning Workflow"
-        url: "/implementation/servo-commissioning/"
+        url: "/lifecycle/guides/servo-commissioning/"
     related_checklists:
       - title: "Capacitor Discharge Awareness Check"
-        url: "/implementation/commissioning-templates/capacitor-discharge/"
+        url: "/lifecycle/guides/commissioning-templates/capacitor-discharge/"
 
   - title: "BLDC, EV, and Drone Motor Comparison"
     url: "/fundamentals/motors/bldc-ev-drone-motors/"
@@ -567,7 +567,7 @@ modules:
       - title: "Motor Selection Workflow"
         url: "/design/workflows/motor-selection/"
       - title: "Motor Troubleshooting Decision Tree"
-        url: "/troubleshooting/motors/"
+        url: "/tools/troubleshooting/motors/"
 
   - title: "PMSM Motor Reference"
     url: "/fundamentals/motors/pmsm-reference/"
@@ -585,7 +585,7 @@ modules:
       - "Servo Drive Fundamentals"
     related_workflows:
       - title: "Servo Commissioning Workflow"
-        url: "/implementation/servo-commissioning/"
+        url: "/lifecycle/guides/servo-commissioning/"
 
   - title: "BLDC vs PMSM Comparison"
     url: "/fundamentals/motors/bldc-vs-pmsm/"
@@ -622,14 +622,14 @@ modules:
       - "VFD and Servo Architecture Diagrams"
     related_workflows:
       - title: "Servo Commissioning Workflow"
-        url: "/implementation/servo-commissioning/"
+        url: "/lifecycle/guides/servo-commissioning/"
       - title: "VFD Commissioning Workflow"
-        url: "/implementation/vfd-commissioning/"
+        url: "/lifecycle/guides/vfd-commissioning/"
     related_checklists:
       - title: "Motor Nameplate and Overload Setting"
-        url: "/implementation/commissioning-templates/motor-nameplate-overload/"
+        url: "/lifecycle/guides/commissioning-templates/motor-nameplate-overload/"
       - title: "Motor Rotation and Overload Verification"
-        url: "/implementation/commissioning-templates/motor-rotation-verification/"
+        url: "/lifecycle/guides/commissioning-templates/motor-rotation-verification/"
 
   - title: "Motor Selection Scenarios"
     url: "/fundamentals/motors/motor-selection-scenarios/"
@@ -651,7 +651,7 @@ modules:
 
   # ── NEC Application ─────────────────────────────────────────────────────────
   - title: "NEC Code Reading Fundamentals"
-    url: "/training/nec-application/nec-code-reading/"
+    url: "/fundamentals/nec-application/nec-code-reading/"
     group: "nec-application"
     group_label: "NEC for Machines and Panels"
     sidebar_bucket: "Foundations"
@@ -665,10 +665,10 @@ modules:
     featured: true
     related_checklists:
       - title: "Pre-Power Panel and Incoming Supply Check"
-        url: "/implementation/commissioning-templates/pre-power-panel/"
+        url: "/lifecycle/guides/commissioning-templates/pre-power-panel/"
 
   - title: "Working Space and Table Navigation"
-    url: "/training/nec-application/working-space-table-navigation/"
+    url: "/fundamentals/nec-application/working-space-table-navigation/"
     group: "nec-application"
     group_label: "NEC for Machines and Panels"
     sidebar_bucket: "Foundations"
@@ -682,7 +682,7 @@ modules:
       - "NEC Code Reading Fundamentals"
 
   - title: "Motor and Panel Code Application"
-    url: "/training/nec-application/motor-panel-code-application/"
+    url: "/fundamentals/nec-application/motor-panel-code-application/"
     group: "nec-application"
     group_label: "NEC for Machines and Panels"
     sidebar_bucket: "Motors & Article 430"
@@ -698,7 +698,7 @@ modules:
     featured: true
 
   - title: "Branch Circuits vs. Feeders for Motor Loads"
-    url: "/training/nec-application/branch-circuits-vs-feeders/"
+    url: "/fundamentals/nec-application/branch-circuits-vs-feeders/"
     group: "nec-application"
     group_label: "NEC for Machines and Panels"
     sidebar_bucket: "Motors & Article 430"
@@ -713,7 +713,7 @@ modules:
     featured: true
 
   - title: "Disconnecting Means for Machinery"
-    url: "/training/nec-application/disconnecting-means/"
+    url: "/fundamentals/nec-application/disconnecting-means/"
     group: "nec-application"
     group_label: "NEC for Machines and Panels"
     sidebar_bucket: "Machine-Side Wiring"
@@ -727,7 +727,7 @@ modules:
       - "NEC Code Reading Fundamentals"
 
   - title: "Grounding and Bonding for Control Panels"
-    url: "/training/nec-application/grounding-bonding-panels/"
+    url: "/fundamentals/nec-application/grounding-bonding-panels/"
     group: "nec-application"
     group_label: "NEC for Machines and Panels"
     sidebar_bucket: "Machine-Side Wiring"
@@ -742,7 +742,7 @@ modules:
     featured: true
 
   - title: "SCCR Workflow for Industrial Control Panels"
-    url: "/training/nec-application/sccr-workflow/"
+    url: "/fundamentals/nec-application/sccr-workflow/"
     group: "nec-application"
     group_label: "NEC for Machines and Panels"
     sidebar_bucket: "Panels & Article 409"
@@ -758,7 +758,7 @@ modules:
     featured: true
 
   - title: "Conductor and OCPD Sizing Worked Examples"
-    url: "/training/nec-application/conductor-ocpd-sizing/"
+    url: "/fundamentals/nec-application/conductor-ocpd-sizing/"
     group: "nec-application"
     group_label: "NEC for Machines and Panels"
     sidebar_bucket: "Panels & Article 409"
@@ -774,7 +774,7 @@ modules:
     featured: true
 
   - title: "Class 1, Class 2, and Remote-Control Circuits"
-    url: "/training/nec-application/class1-class2-circuits/"
+    url: "/fundamentals/nec-application/class1-class2-circuits/"
     group: "nec-application"
     group_label: "NEC for Machines and Panels"
     sidebar_bucket: "Machine-Side Wiring"
@@ -788,7 +788,7 @@ modules:
       - "NEC Code Reading Fundamentals"
 
   - title: "Practical Article 430 Workflow"
-    url: "/training/nec-application/article-430-workflow/"
+    url: "/fundamentals/nec-application/article-430-workflow/"
     group: "nec-application"
     group_label: "NEC for Machines and Panels"
     sidebar_bucket: "Motors & Article 430"
@@ -807,10 +807,10 @@ modules:
         url: "/design/workflows/motor-selection/"
     related_checklists:
       - title: "Motor Nameplate and Overload Setting"
-        url: "/implementation/commissioning-templates/motor-nameplate-overload/"
+        url: "/lifecycle/guides/commissioning-templates/motor-nameplate-overload/"
 
   - title: "Practical Article 409 Workflow"
-    url: "/training/nec-application/article-409-workflow/"
+    url: "/fundamentals/nec-application/article-409-workflow/"
     group: "nec-application"
     group_label: "NEC for Machines and Panels"
     sidebar_bucket: "Panels & Article 409"
@@ -825,7 +825,7 @@ modules:
       - "SCCR Workflow for Industrial Control Panels"
     related_checklists:
       - title: "Pre-Power Panel and Incoming Supply Check"
-        url: "/implementation/commissioning-templates/pre-power-panel/"
+        url: "/lifecycle/guides/commissioning-templates/pre-power-panel/"
 
   # ── Control Systems ──────────────────────────────────────────────────────────
   - title: "Control Theory Overview"

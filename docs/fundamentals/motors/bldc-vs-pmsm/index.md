@@ -4,7 +4,7 @@ title: "BLDC vs PMSM — Motors, Drives, and Scenarios"
 description: "Head-to-head engineering comparison of BLDC and PMSM systems, with 10 real-world scenario walkthroughs and a decision matrix."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/bldc_vs_pmsm_comparison.md"

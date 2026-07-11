@@ -4,15 +4,15 @@ title: "Machine State Model"
 description: "How to design structured control logic using finite state machines — states, transitions, entry conditions, and fault handling."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Control Systems"
     url: "/fundamentals/control/"
 related_standards:
   - name: "IEC 61131-3 (PLC Programming)"
     url: "/standards/"
 redirect_from:
-  - /training/control-systems/machine-state-model/
-  - /training/control-systems/machine-state-model/index.html
+  - /fundamentals/control-systems/machine-state-model/
+  - /fundamentals/control-systems/machine-state-model/index.html
 
 ---
 

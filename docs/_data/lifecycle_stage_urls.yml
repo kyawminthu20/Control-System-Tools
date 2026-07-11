@@ -1,19 +1,16 @@
-# Lifecycle stage slug → canonical URL (post-Phase-26 migration).
-# Stages are split across three top-level groups:
-#   /verification/lifecycle/…     — analysis/design stages
-#   /verification/…               — stages that are fundamentally verification gates
-#   /implementation/lifecycle-…   — build/install/commissioning stages
-concept:                  /verification/lifecycle/concept/
-standards-selection:      /verification/lifecycle/standards-selection/
-risk-assessment:          /verification/risk-assessment/
-safety-requirements-spec: /verification/safety-requirements-spec/
-safety-architecture:      /verification/safety-architecture/
-detailed-design:          /verification/lifecycle/detailed-design/
-draft-documentation:      /verification/lifecycle/draft-documentation/
-safety-wiring:            /verification/safety-wiring/
-build:                    /implementation/lifecycle-build/
-pre-commissioning:        /implementation/lifecycle-pre-commissioning/
-installation:             /implementation/lifecycle-installation/
-commissioning:            /implementation/lifecycle-commissioning/
-maintenance:              /verification/maintenance/
-management-of-change:     /verification/management-of-change/
+# Lifecycle stage slug → canonical URL (post-Phase-31 IA unification).
+# All lifecycle stages live under /lifecycle/, in chronological order.
+concept:                  /lifecycle/concept/
+standards-selection:      /lifecycle/standards-selection/
+risk-assessment:          /lifecycle/risk-assessment/
+safety-requirements-spec: /lifecycle/safety-requirements-spec/
+safety-architecture:      /lifecycle/safety-architecture/
+detailed-design:          /lifecycle/detailed-design/
+draft-documentation:      /lifecycle/draft-documentation/
+safety-wiring:            /lifecycle/safety-wiring/
+build:                    /lifecycle/build/
+pre-commissioning:        /lifecycle/pre-commissioning/
+installation:             /lifecycle/installation/
+commissioning:            /lifecycle/commissioning/
+maintenance:              /lifecycle/maintenance/
+management-of-change:     /lifecycle/management-of-change/

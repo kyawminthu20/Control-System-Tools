@@ -4,7 +4,7 @@ title: "PID Heater Control with Contactor"
 description: "Practical heater-control design for a PI controller driving a contactor — time-proportioning output scheduling, minimum on/off time enforcement, state machine, and safety interlocks."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Control Systems"
     url: "/fundamentals/control/"
 repo_path: "control-standards/rag/training_modules/control_systems/pid_heater_control_with_contactor.md"
@@ -14,8 +14,8 @@ related_standards:
   - name: "NFPA 79"
     url: "/standards/us-electrical/nfpa-79/"
 redirect_from:
-  - /training/control-systems/pid-heater-control/
-  - /training/control-systems/pid-heater-control/index.html
+  - /fundamentals/control-systems/pid-heater-control/
+  - /fundamentals/control-systems/pid-heater-control/index.html
 
 ---
 

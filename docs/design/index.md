@@ -19,15 +19,15 @@ redirect_from:
 
 <div class="workflow-card-grid">
   <div class="workflow-card">
-    <h3><a href="{{ '/verification/lifecycle/' | relative_url }}">Machine Lifecycle</a></h3>
+    <h3><a href="{{ '/lifecycle/' | relative_url }}">Machine Lifecycle</a></h3>
     <p>11-stage structured progression from concept through maintenance, with standards and decision gates at each step.</p>
   </div>
   <div class="workflow-card">
-    <h3><a href="{{ '/verification/safety-architecture/' | relative_url }}">Safety Architecture</a></h3>
+    <h3><a href="{{ '/lifecycle/safety-architecture/' | relative_url }}">Safety Architecture</a></h3>
     <p>Functional layer separation, E-stop chain design, SIL/PL selection, and safety architecture constraints.</p>
   </div>
   <div class="workflow-card">
-    <h3><a href="{{ '/verification/lifecycle/detailed-design/' | relative_url }}">Detailed Design</a></h3>
+    <h3><a href="{{ '/lifecycle/detailed-design/' | relative_url }}">Detailed Design</a></h3>
     <p>Electrical design stage: schematics, IO lists, panel layout, conductor sizing, and protection coordination.</p>
   </div>
 </div>
@@ -49,15 +49,15 @@ redirect_from:
 
 <div class="workflow-card-grid">
   <div class="workflow-card">
-    <h3><a href="{{ '/implementation/commissioning-templates/' | relative_url }}">Commissioning Templates</a></h3>
+    <h3><a href="{{ '/lifecycle/guides/commissioning-templates/' | relative_url }}">Commissioning Templates</a></h3>
     <p>Printable field checklists for panel energization, motor commissioning, drive startup, and circuit verification.</p>
   </div>
   <div class="workflow-card">
-    <h3><a href="{{ '/implementation/vfd-commissioning/' | relative_url }}">VFD Commissioning</a></h3>
+    <h3><a href="{{ '/lifecycle/guides/vfd-commissioning/' | relative_url }}">VFD Commissioning</a></h3>
     <p>Step-by-step VFD startup: parameter entry, motor data, rotation check, and protection verification.</p>
   </div>
   <div class="workflow-card">
-    <h3><a href="{{ '/implementation/servo-commissioning/' | relative_url }}">Servo Commissioning</a></h3>
+    <h3><a href="{{ '/lifecycle/guides/servo-commissioning/' | relative_url }}">Servo Commissioning</a></h3>
     <p>Servo drive startup: feedback configuration, homing, tuning, and safety function verification.</p>
   </div>
 </div>
@@ -66,7 +66,7 @@ redirect_from:
 
 <div class="workflow-card-grid">
   <div class="workflow-card">
-    <h3><a href="{{ '/troubleshooting/motors/' | relative_url }}">Motor Troubleshooting</a></h3>
+    <h3><a href="{{ '/tools/troubleshooting/motors/' | relative_url }}">Motor Troubleshooting</a></h3>
     <p>Decision tree for motor faults: thermal, mechanical, electrical, and drive-related fault branches.</p>
   </div>
 </div>
@@ -77,7 +77,7 @@ Industry and application scenarios showing how standards, lifecycle stages, and 
 
 <div class="workflow-card-grid">
   <div class="workflow-card">
-    <h3><a href="{{ '/implementation/scenarios/' | relative_url }}">All Scenarios</a></h3>
+    <h3><a href="{{ '/tools/scenarios/' | relative_url }}">All Scenarios</a></h3>
     <p>9 machine and industry scenarios — from US control panels and global machinery to semiconductor fab tools and offshore platforms.</p>
   </div>
 </div>

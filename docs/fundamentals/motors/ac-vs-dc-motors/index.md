@@ -4,13 +4,13 @@ title: "AC vs DC Motors"
 description: "This module compares AC and DC motor concepts at a practical engineering level so the reader can reason about supply type, commutation method, maintenance burden, and control architecture."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/ac_vs_dc_motor_comparison.md"
 redirect_from:
-  - /training/electrical-machines/ac-vs-dc-motors/
-  - /training/electrical-machines/ac-vs-dc-motors/index.html
+  - /fundamentals/electrical-machines/ac-vs-dc-motors/
+  - /fundamentals/electrical-machines/ac-vs-dc-motors/index.html
 
 ---
 

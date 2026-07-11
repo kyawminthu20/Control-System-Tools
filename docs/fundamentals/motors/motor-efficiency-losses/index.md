@@ -4,13 +4,13 @@ title: "Motor Efficiency, Power Factor, and Losses"
 description: "This module explains three motor concepts that are often mentioned together but should not be confused: efficiency, power factor, and loss mechanisms."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/motor_efficiency_power_factor_and_losses.md"
 redirect_from:
-  - /training/electrical-machines/motor-efficiency-losses/
-  - /training/electrical-machines/motor-efficiency-losses/index.html
+  - /fundamentals/electrical-machines/motor-efficiency-losses/
+  - /fundamentals/electrical-machines/motor-efficiency-losses/index.html
 
 ---
 

@@ -229,5 +229,5 @@ These documents must exist before commissioning. They are also the baseline for 
 - [Bulk Specialty Gas Systems](/industries/semiconductor/facility/bulk-specialty-gas/) — control philosophy applied to gas systems
 - [Bulk Chemical Distribution](/industries/semiconductor/facility/bulk-chemical/) — control philosophy applied to chemical transfer
 - [UPW and Wastewater Systems](/industries/semiconductor/facility/upw-wastewater/) — control philosophy applied to water systems
-- [Safety Architecture (Lifecycle Stage 04)](/verification/safety-architecture/) — functional safety design methodology
+- [Safety Architecture (Lifecycle Stage 04)](/lifecycle/safety-architecture/) — functional safety design methodology
 - [Software Stack](/design/software-stack/) — PLC, DCS, and SIS platform selection

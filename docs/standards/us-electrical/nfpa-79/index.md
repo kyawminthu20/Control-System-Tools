@@ -207,12 +207,12 @@ Every machine carries a permanent nameplate near the main disconnect listing: ma
 
 | Stage | NFPA 79 activity |
 |-------|------------------|
-| [Standards Selection]({{ '/verification/lifecycle/standards-selection/' | relative_url }}) | Confirm scope (≤ 600 V, machine electrical equipment); decide NFPA 79 vs. IEC 60204-1 by destination market; identify required UL listing path (508A) |
-| [Detailed Design]({{ '/verification/lifecycle/detailed-design/' | relative_url }}) | Disconnect type and sizing (Ch 5); branch-circuit OCP and machine SCCR (Ch 6); shock-protection scheme (Ch 7); PE bus and bonding plan (Ch 8); stop categories and E-stop architecture (Ch 9 + ISO 13849-1 handoff); control transformer (Ch 15); wiring and colour scheme (Ch 16) |
-| [Build]({{ '/implementation/lifecycle-build/' | relative_url }}) | Panel construction per design; UL 508A panel listing if required; wire labels and reference designations; bonding jumpers; line-side guarding |
-| [Installation]({{ '/implementation/lifecycle-installation/' | relative_url }}) | NEC Article 670 governs at the site: feeder sizing, building disconnect, available fault current verification ≤ machine SCCR |
-| [Pre-Commissioning]({{ '/implementation/lifecycle-pre-commissioning/' | relative_url }}) | PE continuity test; insulation resistance; OCPD ratings audit; disconnect interlock function check; nameplate and documentation review |
-| [Commissioning]({{ '/implementation/lifecycle-commissioning/' | relative_url }}) | Power-on verification; safety-function validation per ISO 13849-1 / IEC 62061; SCCR calculation record signed off; operator and maintenance documentation handoff |
+| [Standards Selection]({{ '/lifecycle/standards-selection/' | relative_url }}) | Confirm scope (≤ 600 V, machine electrical equipment); decide NFPA 79 vs. IEC 60204-1 by destination market; identify required UL listing path (508A) |
+| [Detailed Design]({{ '/lifecycle/detailed-design/' | relative_url }}) | Disconnect type and sizing (Ch 5); branch-circuit OCP and machine SCCR (Ch 6); shock-protection scheme (Ch 7); PE bus and bonding plan (Ch 8); stop categories and E-stop architecture (Ch 9 + ISO 13849-1 handoff); control transformer (Ch 15); wiring and colour scheme (Ch 16) |
+| [Build]({{ '/lifecycle/build/' | relative_url }}) | Panel construction per design; UL 508A panel listing if required; wire labels and reference designations; bonding jumpers; line-side guarding |
+| [Installation]({{ '/lifecycle/installation/' | relative_url }}) | NEC Article 670 governs at the site: feeder sizing, building disconnect, available fault current verification ≤ machine SCCR |
+| [Pre-Commissioning]({{ '/lifecycle/pre-commissioning/' | relative_url }}) | PE continuity test; insulation resistance; OCPD ratings audit; disconnect interlock function check; nameplate and documentation review |
+| [Commissioning]({{ '/lifecycle/commissioning/' | relative_url }}) | Power-on verification; safety-function validation per ISO 13849-1 / IEC 62061; SCCR calculation record signed off; operator and maintenance documentation handoff |
 
 ---
 

@@ -17,7 +17,7 @@ related_standards:
   - name: "IEC 61511 (process safety)"
     url: "/standards/functional-safety/iec-61511/"
   - name: "Networked Safety PLC Scenario"
-    url: "/implementation/scenarios/networked-safety-plc/"
+    url: "/tools/scenarios/networked-safety-plc/"
 lifecycle_stage:
   - name: "Safety Architecture"
     slug: "safety-architecture/"

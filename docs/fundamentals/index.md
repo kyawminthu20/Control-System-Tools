@@ -13,7 +13,7 @@ breadcrumb:
 </div>
 
 <blockquote>
-<strong>Scope:</strong> Prerequisite concepts before doing design work or field engineering. For applied workflows see <a href="{{ '/design/' | relative_url }}">Design</a>, <a href="{{ '/implementation/scenarios/' | relative_url }}">Implementation</a>, and <a href="{{ '/verification/lifecycle/' | relative_url }}">Verification</a>.
+<strong>Scope:</strong> Prerequisite concepts before doing design work or field engineering. For applied workflows see <a href="{{ '/design/' | relative_url }}">Design</a>, <a href="{{ '/tools/scenarios/' | relative_url }}">Implementation</a>, and <a href="{{ '/lifecycle/' | relative_url }}">Verification</a>.
 </blockquote>
 
 ## Sub-groups
@@ -36,6 +36,6 @@ breadcrumb:
 ## Related Sections
 
 - [Design]({{ '/design/' | relative_url }}) — apply fundamentals to architecture, motor selection, and design workflows
-- [Implementation]({{ '/implementation/' | relative_url }}) — commissioning templates and scenario references that use these concepts during build and install
-- [Verification]({{ '/verification/' | relative_url }}) — lifecycle stages, risk assessment, and safety architecture that build on safety-relevant fundamentals
+- [Implementation]({{ '/lifecycle/' | relative_url }}) — commissioning templates and scenario references that use these concepts during build and install
+- [Verification]({{ '/lifecycle/' | relative_url }}) — lifecycle stages, risk assessment, and safety architecture that build on safety-relevant fundamentals
 - [Tools]({{ '/tools/reference-hub/' | relative_url }}) — glossary, crosswalks, RAG browser

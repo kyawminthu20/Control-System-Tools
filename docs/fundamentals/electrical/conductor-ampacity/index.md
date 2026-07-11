@@ -4,13 +4,13 @@ title: "Conductor Ampacity and Termination Temperature"
 description: "This module explains why conductor sizing is not just a table lookup — it requires ampacity correction, bundling adjustment, and terminal temperature checks."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Electrical Fundamentals"
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/conductor_ampacity_and_termination_temperature.md"
 redirect_from:
-  - /training/fundamentals/conductor-ampacity/
-  - /training/fundamentals/conductor-ampacity/index.html
+  - /fundamentals/fundamentals/conductor-ampacity/
+  - /fundamentals/fundamentals/conductor-ampacity/index.html
 
 ---
 

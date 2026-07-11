@@ -4,7 +4,7 @@ title: "Industrial PID Implementation"
 description: "How PID appears in real industrial control systems — SP/PV/CV signals, bias, output limits, anti-windup, Rockwell PIDE and Siemens PID_Compact conventions."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Control Systems"
     url: "/fundamentals/control/"
 repo_path: "control-standards/rag/training_modules/control_systems/industrial_pid_implementation.md"
@@ -14,8 +14,8 @@ related_standards:
   - name: "IEC 62443"
     url: "/standards/cybersecurity/iec-62443/"
 redirect_from:
-  - /training/control-systems/industrial-pid/
-  - /training/control-systems/industrial-pid/index.html
+  - /fundamentals/control-systems/industrial-pid/
+  - /fundamentals/control-systems/industrial-pid/index.html
 
 ---
 

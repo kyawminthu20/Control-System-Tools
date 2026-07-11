@@ -4,13 +4,13 @@ title: "Electrical Quantities and Circuit Language"
 description: "This module establishes the core vocabulary used in electrical analysis and practical control-panel reasoning."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Electrical Fundamentals"
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/electrical_quantities_and_circuit_language.md"
 redirect_from:
-  - /training/fundamentals/electrical-quantities/
-  - /training/fundamentals/electrical-quantities/index.html
+  - /fundamentals/fundamentals/electrical-quantities/
+  - /fundamentals/fundamentals/electrical-quantities/index.html
 
 ---
 

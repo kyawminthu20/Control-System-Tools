@@ -4,7 +4,7 @@ title: "Control Theory Overview"
 description: "A map of the control-engineering workflow — plant, feedback, controller families, state estimation, and verification — before going deeper into PID."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Control Systems"
     url: "/fundamentals/control/"
 repo_path: "control-standards/rag/training_modules/control_systems/control_theory_overview.md"
@@ -14,8 +14,8 @@ related_standards:
   - name: "IEC 62443"
     url: "/standards/cybersecurity/iec-62443/"
 redirect_from:
-  - /training/control-systems/control-theory-overview/
-  - /training/control-systems/control-theory-overview/index.html
+  - /fundamentals/control-systems/control-theory-overview/
+  - /fundamentals/control-systems/control-theory-overview/index.html
 
 ---
 
@@ -229,7 +229,7 @@ flowchart LR
 | Topic | Page |
 |---|---|
 | PID intuition and tuning | [PID Foundation]({{ '/fundamentals/control/pid-foundation/' | relative_url }}) · [PID in Practice]({{ '/fundamentals/control/pid-intuition/' | relative_url }}) |
-| Servo and VFD commissioning | [Servo Commissioning]({{ '/implementation/servo-commissioning/' | relative_url }}) · [VFD Commissioning]({{ '/implementation/vfd-commissioning/' | relative_url }}) |
+| Servo and VFD commissioning | [Servo Commissioning]({{ '/lifecycle/guides/servo-commissioning/' | relative_url }}) · [VFD Commissioning]({{ '/lifecycle/guides/vfd-commissioning/' | relative_url }}) |
 | Safety instrumented systems | [IEC 61511]({{ '/standards/functional-safety/iec-61511/' | relative_url }}) · [IEC 62443]({{ '/standards/cybersecurity/iec-62443/' | relative_url }}) |
 
 ---
@@ -242,7 +242,7 @@ flowchart LR
 | See P, I, and D terms in practice | [PID Intuition — P, I, and D in Practice]({{ '/fundamentals/control/pid-intuition/' | relative_url }}) |
 | Understand industrial PID implementation | [Industrial PID Implementation]({{ '/fundamentals/control/industrial-pid/' | relative_url }}) |
 | See loop architecture patterns | [Control Loop Architectures]({{ '/fundamentals/control/control-loop-architectures/' | relative_url }}) |
-| Commission a VFD or servo | [VFD Commissioning]({{ '/implementation/vfd-commissioning/' | relative_url }}) · [Servo Commissioning]({{ '/implementation/servo-commissioning/' | relative_url }}) |
+| Commission a VFD or servo | [VFD Commissioning]({{ '/lifecycle/guides/vfd-commissioning/' | relative_url }}) · [Servo Commissioning]({{ '/lifecycle/guides/servo-commissioning/' | relative_url }}) |
 | Understand safety instrumented systems | [IEC 61511]({{ '/standards/functional-safety/iec-61511/' | relative_url }}) |
 
 ---

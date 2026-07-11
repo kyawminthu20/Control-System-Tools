@@ -86,6 +86,6 @@ Dry running a vertical turbine pump destroys the pump within seconds. The Low-Lo
 ## Cross-Links
 
 - [Filtration & Clarification](../filtration-clarification/) — downstream of intake
-- [Lifecycle — Detailed Design](/verification/lifecycle/detailed-design/)
-- [Lifecycle — Commissioning](/implementation/lifecycle-commissioning/)
+- [Lifecycle — Detailed Design](/lifecycle/detailed-design/)
+- [Lifecycle — Commissioning](/lifecycle/commissioning/)
 - [IEC 61511](/standards/functional-safety/iec-61511/)

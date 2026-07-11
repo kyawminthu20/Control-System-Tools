@@ -4,13 +4,13 @@ title: "Motor Control Methods and Operating Regions"
 description: "This module explains the main motor-control methods discussed in industrial drives and servo systems, including field weakening and regeneration."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/motor_control_methods_and_operating_regions.md"
 redirect_from:
-  - /training/electrical-machines/motor-control-methods/
-  - /training/electrical-machines/motor-control-methods/index.html
+  - /fundamentals/electrical-machines/motor-control-methods/
+  - /fundamentals/electrical-machines/motor-control-methods/index.html
 
 ---
 

@@ -4,13 +4,13 @@ title: "Servo Tuning Strategy"
 description: "Loop-by-loop servo tuning from mechanical validation through current, velocity, and position loop commissioning — including resonance detection and feedforward."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Control Systems"
     url: "/fundamentals/control/"
 related_standards: []
 redirect_from:
-  - /training/control-systems/servo-tuning/
-  - /training/control-systems/servo-tuning/index.html
+  - /fundamentals/control-systems/servo-tuning/
+  - /fundamentals/control-systems/servo-tuning/index.html
 
 ---
 

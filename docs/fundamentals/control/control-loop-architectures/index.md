@@ -4,7 +4,7 @@ title: "Industrial Control Loop Architectures"
 description: "How PID-related control is arranged in common industrial loops — why most are PI not PID, VFD speed-loop structure, servo cascade control, and process-loop examples."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Control Systems"
     url: "/fundamentals/control/"
 repo_path: "control-standards/rag/training_modules/control_systems/industrial_control_loop_architectures.md"
@@ -12,8 +12,8 @@ related_standards:
   - name: "IEC 61511"
     url: "/standards/functional-safety/iec-61511/"
 redirect_from:
-  - /training/control-systems/control-loop-architectures/
-  - /training/control-systems/control-loop-architectures/index.html
+  - /fundamentals/control-systems/control-loop-architectures/
+  - /fundamentals/control-systems/control-loop-architectures/index.html
 
 ---
 

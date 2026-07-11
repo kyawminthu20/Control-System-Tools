@@ -4,13 +4,13 @@ title: "PID in Drone and Motion Control"
 description: "How PID stabilizes a quadcopter — nested rate, attitude, altitude, and position loops, motor mixing, sensor feedback, and why a drone is a strong teaching example for cascade PID."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Control Systems"
     url: "/fundamentals/control/"
 repo_path: "control-standards/rag/training_modules/control_systems/pid_drone_control.md"
 redirect_from:
-  - /training/control-systems/pid-drone-control/
-  - /training/control-systems/pid-drone-control/index.html
+  - /fundamentals/control-systems/pid-drone-control/
+  - /fundamentals/control-systems/pid-drone-control/index.html
 
 ---
 

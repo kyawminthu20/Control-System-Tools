@@ -11,7 +11,7 @@ related_standards:
   - name: "Functional Safety"
     url: "/standards/functional-safety/"
   - name: "Networked Safety PLC"
-    url: "/implementation/scenarios/networked-safety-plc/"
+    url: "/tools/scenarios/networked-safety-plc/"
   - name: "Software Stack"
     url: "/design/software-stack/"
 ---
@@ -58,7 +58,7 @@ Cybersecurity and functional safety are separate but interdependent disciplines 
 
 | See also | Link |
 |----------|------|
-| Networked Safety PLC scenario | [Scenario 04]({{ '/implementation/scenarios/networked-safety-plc/' | relative_url }}) |
+| Networked Safety PLC scenario | [Scenario 04]({{ '/tools/scenarios/networked-safety-plc/' | relative_url }}) |
 | Software Stack and routing guide | [Software Stack]({{ '/design/software-stack/' | relative_url }}) |
 | Functional safety family | [Functional Safety]({{ '/standards/functional-safety/' | relative_url }}) |
 

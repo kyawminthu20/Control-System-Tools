@@ -4,13 +4,13 @@ title: "Diodes, Transistors, and Switching Basics"
 description: "This module gives a practical introduction to one-way devices and basic semiconductor switching elements."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Electrical Fundamentals"
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/diodes_transistors_and_switching_basics.md"
 redirect_from:
-  - /training/fundamentals/diodes-transistors/
-  - /training/fundamentals/diodes-transistors/index.html
+  - /fundamentals/fundamentals/diodes-transistors/
+  - /fundamentals/fundamentals/diodes-transistors/index.html
 
 ---
 

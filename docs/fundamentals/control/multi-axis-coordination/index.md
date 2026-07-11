@@ -4,13 +4,13 @@ title: "Multi-Axis Coordination"
 description: "How coordinated motion controllers synchronize multiple axes — master-slave coupling, electronic gearing, interpolation, and the architecture decisions that determine accuracy and safety."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Control Systems"
     url: "/fundamentals/control/"
 related_standards: []
 redirect_from:
-  - /training/control-systems/multi-axis-coordination/
-  - /training/control-systems/multi-axis-coordination/index.html
+  - /fundamentals/control-systems/multi-axis-coordination/
+  - /fundamentals/control-systems/multi-axis-coordination/index.html
 
 ---
 

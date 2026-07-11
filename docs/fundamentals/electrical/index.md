@@ -4,11 +4,11 @@ title: "Electrical Fundamentals — Training"
 description: "9 modules covering electrical quantities, circuit analysis methods, passive components, switching devices, conductor sizing, and IEC earthing systems."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Electrical Fundamentals"
 redirect_from:
-  - /training/fundamentals/
-  - /training/fundamentals/index.html
+  - /fundamentals/fundamentals/
+  - /fundamentals/fundamentals/index.html
 
 ---
 
@@ -61,4 +61,4 @@ redirect_from:
 
 ---
 
-<a href="{{ '/training/' | relative_url }}">&larr; All Training Modules</a>
+<a href="{{ '/fundamentals/' | relative_url }}">&larr; All Training Modules</a>

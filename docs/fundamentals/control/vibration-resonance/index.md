@@ -4,13 +4,13 @@ title: "Vibration and Resonance in Control Systems"
 description: "Physical causes of vibration and resonance in controlled mechanical systems, and the control and mechanical strategies used to mitigate them."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Control Systems"
     url: "/fundamentals/control/"
 related_standards: []
 redirect_from:
-  - /training/control-systems/vibration-resonance/
-  - /training/control-systems/vibration-resonance/index.html
+  - /fundamentals/control-systems/vibration-resonance/
+  - /fundamentals/control-systems/vibration-resonance/index.html
 
 ---
 

@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-10 21:43:24
+**Last Auto-Updated:** 2026-07-10 22:12:23
 
 ```text
 ├── .claude/
@@ -634,6 +634,8 @@
 │   │   ├── home.html
 │   │   ├── rag-browser.html
 │   │   └── training-module.html
+│   ├── about/
+│   │   └── index.md
 │   ├── assets/
 │   │   ├── css/
 │   │   │   └── main.css
@@ -1055,92 +1057,70 @@
 │   │   │   └── series-parallel-dividers/
 │   │   │       └── index.md
 │   │   ├── index.md
-│   │   └── motors/
-│   │       ├── ac-vs-dc-motors/
+│   │   ├── motors/
+│   │   │   ├── ac-vs-dc-motors/
+│   │   │   │   └── index.md
+│   │   │   ├── bldc-ev-drone-motors/
+│   │   │   │   └── index.md
+│   │   │   ├── bldc-pmsm-implementation/
+│   │   │   │   └── index.md
+│   │   │   ├── bldc-reference/
+│   │   │   │   └── index.md
+│   │   │   ├── bldc-vs-pmsm/
+│   │   │   │   └── index.md
+│   │   │   ├── dc-motor-basics/
+│   │   │   │   └── index.md
+│   │   │   ├── index.md
+│   │   │   ├── induction-motor-basics/
+│   │   │   │   └── index.md
+│   │   │   ├── motor-control-methods/
+│   │   │   │   └── index.md
+│   │   │   ├── motor-efficiency-losses/
+│   │   │   │   └── index.md
+│   │   │   ├── motor-family-comparison/
+│   │   │   │   └── index.md
+│   │   │   ├── motor-nameplates-slip-torque/
+│   │   │   │   └── index.md
+│   │   │   ├── motor-selection-scenarios/
+│   │   │   │   └── index.md
+│   │   │   ├── motor-vfd-equations/
+│   │   │   │   └── index.md
+│   │   │   ├── pmsm-reference/
+│   │   │   │   └── index.md
+│   │   │   ├── servo-drive-fundamentals/
+│   │   │   │   └── index.md
+│   │   │   ├── servo-feedback-inertia/
+│   │   │   │   └── index.md
+│   │   │   ├── vfd-fundamentals/
+│   │   │   │   └── index.md
+│   │   │   └── vfd-servo-architecture/
+│   │   │       └── index.md
+│   │   └── nec-application/
+│   │       ├── article-409-workflow/
 │   │       │   └── index.md
-│   │       ├── bldc-ev-drone-motors/
+│   │       ├── article-430-workflow/
 │   │       │   └── index.md
-│   │       ├── bldc-pmsm-implementation/
+│   │       ├── branch-circuits-vs-feeders/
 │   │       │   └── index.md
-│   │       ├── bldc-reference/
+│   │       ├── class1-class2-circuits/
 │   │       │   └── index.md
-│   │       ├── bldc-vs-pmsm/
+│   │       ├── conductor-ocpd-sizing/
 │   │       │   └── index.md
-│   │       ├── dc-motor-basics/
+│   │       ├── disconnecting-means/
+│   │       │   └── index.md
+│   │       ├── grounding-bonding-panels/
 │   │       │   └── index.md
 │   │       ├── index.md
-│   │       ├── induction-motor-basics/
+│   │       ├── motor-panel-code-application/
 │   │       │   └── index.md
-│   │       ├── motor-control-methods/
+│   │       ├── nec-code-reading/
 │   │       │   └── index.md
-│   │       ├── motor-efficiency-losses/
+│   │       ├── sccr-workflow/
 │   │       │   └── index.md
-│   │       ├── motor-family-comparison/
-│   │       │   └── index.md
-│   │       ├── motor-nameplates-slip-torque/
-│   │       │   └── index.md
-│   │       ├── motor-selection-scenarios/
-│   │       │   └── index.md
-│   │       ├── motor-vfd-equations/
-│   │       │   └── index.md
-│   │       ├── pmsm-reference/
-│   │       │   └── index.md
-│   │       ├── servo-drive-fundamentals/
-│   │       │   └── index.md
-│   │       ├── servo-feedback-inertia/
-│   │       │   └── index.md
-│   │       ├── vfd-fundamentals/
-│   │       │   └── index.md
-│   │       └── vfd-servo-architecture/
+│   │       └── working-space-table-navigation/
 │   │           └── index.md
 │   ├── implementation/
-│   │   ├── commissioning-templates/
-│   │   │   ├── basic-circuit-polarity/
-│   │   │   │   └── index.md
-│   │   │   ├── capacitor-discharge/
-│   │   │   │   └── index.md
-│   │   │   ├── drive-commissioning/
-│   │   │   │   └── index.md
-│   │   │   ├── index.md
-│   │   │   ├── motor-nameplate-overload/
-│   │   │   │   └── index.md
-│   │   │   ├── motor-rotation-verification/
-│   │   │   │   └── index.md
-│   │   │   └── pre-power-panel/
-│   │   │       └── index.md
-│   │   ├── index.md
-│   │   ├── lifecycle-build/
-│   │   │   └── index.md
-│   │   ├── lifecycle-commissioning/
-│   │   │   └── index.md
-│   │   ├── lifecycle-installation/
-│   │   │   └── index.md
-│   │   ├── lifecycle-pre-commissioning/
-│   │   │   └── index.md
-│   │   ├── scenarios/
-│   │   │   ├── global-machine/
-│   │   │   │   └── index.md
-│   │   │   ├── index.md
-│   │   │   ├── machine-safety-implementation/
-│   │   │   │   └── index.md
-│   │   │   ├── networked-safety-plc/
-│   │   │   │   └── index.md
-│   │   │   ├── offshore-platform-control/
-│   │   │   │   └── index.md
-│   │   │   ├── oil-gas-process-skid/
-│   │   │   │   └── index.md
-│   │   │   ├── process-skid/
-│   │   │   │   └── index.md
-│   │   │   ├── semiconductor-equipment/
-│   │   │   │   └── index.md
-│   │   │   ├── semiconductor-fab-tool/
-│   │   │   │   └── index.md
-│   │   │   └── us-industrial-control-panel/
-│   │   │       └── index.md
-│   │   ├── servo-commissioning/
-│   │   │   └── index.md
-│   │   └── vfd-commissioning/
-│   │       └── index.md
+│   │   └── index.md
 │   ├── index.md
 │   ├── industries/
 │   │   ├── commercial/
@@ -1210,6 +1190,55 @@
 │   │       │   └── index.md
 │   │       └── treatment-discharge/
 │   │           └── index.md
+│   ├── lifecycle/
+│   │   ├── build/
+│   │   │   └── index.md
+│   │   ├── commissioning/
+│   │   │   └── index.md
+│   │   ├── concept/
+│   │   │   └── index.md
+│   │   ├── detailed-design/
+│   │   │   └── index.md
+│   │   ├── draft-documentation/
+│   │   │   └── index.md
+│   │   ├── guides/
+│   │   │   ├── commissioning-templates/
+│   │   │   │   ├── basic-circuit-polarity/
+│   │   │   │   │   └── index.md
+│   │   │   │   ├── capacitor-discharge/
+│   │   │   │   │   └── index.md
+│   │   │   │   ├── drive-commissioning/
+│   │   │   │   │   └── index.md
+│   │   │   │   ├── index.md
+│   │   │   │   ├── motor-nameplate-overload/
+│   │   │   │   │   └── index.md
+│   │   │   │   ├── motor-rotation-verification/
+│   │   │   │   │   └── index.md
+│   │   │   │   └── pre-power-panel/
+│   │   │   │       └── index.md
+│   │   │   ├── servo-commissioning/
+│   │   │   │   └── index.md
+│   │   │   └── vfd-commissioning/
+│   │   │       └── index.md
+│   │   ├── index.md
+│   │   ├── installation/
+│   │   │   └── index.md
+│   │   ├── maintenance/
+│   │   │   └── index.md
+│   │   ├── management-of-change/
+│   │   │   └── index.md
+│   │   ├── pre-commissioning/
+│   │   │   └── index.md
+│   │   ├── risk-assessment/
+│   │   │   └── index.md
+│   │   ├── safety-architecture/
+│   │   │   └── index.md
+│   │   ├── safety-requirements-spec/
+│   │   │   └── index.md
+│   │   ├── safety-wiring/
+│   │   │   └── index.md
+│   │   └── standards-selection/
+│   │       └── index.md
 │   ├── plans/
 │   │   ├── 2026-03-05-phase2-design.md
 │   │   ├── 2026-03-05-phase2-implementation.md
@@ -1244,8 +1273,6 @@
 │   │   ├── 2026-03-13-phase19-engineering-workflow-navigation.md
 │   │   └── 2026-04-20-phase27-motors-bldc-pmsm-implementation.md
 │   ├── repository/
-│   │   ├── about/
-│   │   │   └── index.md
 │   │   └── index.md
 │   ├── software-stack/
 │   ├── standards/
@@ -1330,62 +1357,39 @@
 │   │   │   └── index.md
 │   │   ├── reference-hub/
 │   │   │   └── index.md
-│   │   └── standards-finder/
-│   │       └── index.md
-│   ├── training/
-│   │   ├── index.md
-│   │   └── nec-application/
-│   │       ├── article-409-workflow/
-│   │       │   └── index.md
-│   │       ├── article-430-workflow/
-│   │       │   └── index.md
-│   │       ├── branch-circuits-vs-feeders/
-│   │       │   └── index.md
-│   │       ├── class1-class2-circuits/
-│   │       │   └── index.md
-│   │       ├── conductor-ocpd-sizing/
-│   │       │   └── index.md
-│   │       ├── disconnecting-means/
-│   │       │   └── index.md
-│   │       ├── grounding-bonding-panels/
-│   │       │   └── index.md
+│   │   ├── scenarios/
+│   │   │   ├── global-machine/
+│   │   │   │   └── index.md
+│   │   │   ├── index.md
+│   │   │   ├── machine-safety-implementation/
+│   │   │   │   └── index.md
+│   │   │   ├── networked-safety-plc/
+│   │   │   │   └── index.md
+│   │   │   ├── offshore-platform-control/
+│   │   │   │   └── index.md
+│   │   │   ├── oil-gas-process-skid/
+│   │   │   │   └── index.md
+│   │   │   ├── process-skid/
+│   │   │   │   └── index.md
+│   │   │   ├── semiconductor-equipment/
+│   │   │   │   └── index.md
+│   │   │   ├── semiconductor-fab-tool/
+│   │   │   │   └── index.md
+│   │   │   └── us-industrial-control-panel/
+│   │   │       └── index.md
+│   │   ├── standards-finder/
+│   │   │   └── index.md
+│   │   └── troubleshooting/
 │   │       ├── index.md
-│   │       ├── motor-panel-code-application/
-│   │       │   └── index.md
-│   │       ├── nec-code-reading/
-│   │       │   └── index.md
-│   │       ├── sccr-workflow/
-│   │       │   └── index.md
-│   │       └── working-space-table-navigation/
+│   │       └── motors/
 │   │           └── index.md
+│   ├── training/
+│   │   └── index.md
 │   ├── troubleshooting/
-│   │   ├── index.md
-│   │   └── motors/
-│   │       └── index.md
+│   │   └── index.md
 │   └── verification/
 │       ├── index.md
-│       ├── lifecycle/
-│       │   ├── concept/
-│       │   │   └── index.md
-│       │   ├── detailed-design/
-│       │   │   └── index.md
-│       │   ├── draft-documentation/
-│       │   │   └── index.md
-│       │   ├── index.md
-│       │   └── standards-selection/
-│       │       └── index.md
-│       ├── maintenance/
-│       │   └── index.md
-│       ├── management-of-change/
-│       │   └── index.md
-│       ├── risk-assessment/
-│       │   └── index.md
-│       ├── safety-architecture/
-│       │   └── index.md
-│       ├── safety-requirements-spec/
-│       │   └── index.md
-│       └── safety-wiring/
-│           └── index.md
+│       └── lifecycle/
 ├── lifecycle-build-page.png
 ├── main.py
 ├── project_state/

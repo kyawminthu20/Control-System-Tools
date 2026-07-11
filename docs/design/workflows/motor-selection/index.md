@@ -88,15 +88,15 @@ Before finalizing the design, confirm the path for:
 | [Motor Nameplates, Slip, and Torque]({{ '/fundamentals/motors/motor-nameplates-slip-torque/' | relative_url }}) | Nameplate reading and torque curves |
 | [Motor Family Comparison]({{ '/fundamentals/motors/motor-family-comparison/' | relative_url }}) | AC, DC, servo, stepper comparison |
 | [VFD Fundamentals]({{ '/fundamentals/motors/vfd-fundamentals/' | relative_url }}) | Drive-driven motor selection considerations |
-| [Branch Circuits vs. Feeders]({{ '/training/nec-application/branch-circuits-vs-feeders/' | relative_url }}) | NEC conductor and OCPD sizing |
-| [Art. 430 Practical Workflow]({{ '/training/nec-application/article-430-workflow/' | relative_url }}) | NEC motor code application |
+| [Branch Circuits vs. Feeders]({{ '/fundamentals/nec-application/branch-circuits-vs-feeders/' | relative_url }}) | NEC conductor and OCPD sizing |
+| [Art. 430 Practical Workflow]({{ '/fundamentals/nec-application/article-430-workflow/' | relative_url }}) | NEC motor code application |
 
 ## Related workflows
 
 | Workflow | When to use |
 |---|---|
-| [VFD Commissioning Workflow]({{ '/implementation/vfd-commissioning/' | relative_url }}) | After selection, when a VFD is in the design |
-| [Motor Troubleshooting Decision Tree]({{ '/troubleshooting/motors/' | relative_url }}) | During field startup or fault investigation |
+| [VFD Commissioning Workflow]({{ '/lifecycle/guides/vfd-commissioning/' | relative_url }}) | After selection, when a VFD is in the design |
+| [Motor Troubleshooting Decision Tree]({{ '/tools/troubleshooting/motors/' | relative_url }}) | During field startup or fault investigation |
 
 ## Related standards
 
@@ -108,7 +108,7 @@ Before finalizing the design, confirm the path for:
 
 ## Related Checklists
 
-- [Motor Nameplate and Overload Setting]({{ '/implementation/commissioning-templates/motor-nameplate-overload/' | relative_url }})
+- [Motor Nameplate and Overload Setting]({{ '/lifecycle/guides/commissioning-templates/motor-nameplate-overload/' | relative_url }})
 
 ## Related References
 

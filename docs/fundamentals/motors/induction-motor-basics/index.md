@@ -4,13 +4,13 @@ title: "Induction Motor Basics"
 description: "This module explains the basic operating chain of a three-phase induction motor in plain engineering language."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/induction_motor_basics.md"
 redirect_from:
-  - /training/electrical-machines/induction-motor-basics/
-  - /training/electrical-machines/induction-motor-basics/index.html
+  - /fundamentals/electrical-machines/induction-motor-basics/
+  - /fundamentals/electrical-machines/induction-motor-basics/index.html
 
 ---
 

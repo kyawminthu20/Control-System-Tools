@@ -14,8 +14,8 @@ description: "Route from your project, lifecycle stage, or market to the standar
   </p>
   <div class="home-hero__ctas">
     <a href="{{ '/tools/standards-finder/' | relative_url }}" class="hero__cta">Find applicable standards &rarr;</a>
-    <a href="{{ '/implementation/scenarios/' | relative_url }}" class="hero__cta hero__cta--secondary">Start with a scenario &rarr;</a>
-    <a href="{{ '/training/' | relative_url }}" class="hero__cta hero__cta--secondary">Learn fundamentals &rarr;</a>
+    <a href="{{ '/tools/scenarios/' | relative_url }}" class="hero__cta hero__cta--secondary">Start with a scenario &rarr;</a>
+    <a href="{{ '/fundamentals/' | relative_url }}" class="hero__cta hero__cta--secondary">Learn fundamentals &rarr;</a>
   </div>
 </section>
 
@@ -31,35 +31,35 @@ description: "Route from your project, lifecycle stage, or market to the standar
       <span class="start-card__next">Open the Standards Finder &rarr;</span>
     </a>
 
-    <a class="start-card" href="{{ '/implementation/scenarios/us-industrial-control-panel/' | relative_url }}">
+    <a class="start-card" href="{{ '/tools/scenarios/us-industrial-control-panel/' | relative_url }}">
       <span class="start-card__label">Scenario 01</span>
       <span class="start-card__title">I'm building a US control panel</span>
       <span class="start-card__desc">UL 508A + NEC Article 409 + NFPA 79. Construction, listing, and legal baseline in one walk-through.</span>
       <span class="start-card__next">Open the scenario &rarr;</span>
     </a>
 
-    <a class="start-card" href="{{ '/implementation/scenarios/global-machine/' | relative_url }}">
+    <a class="start-card" href="{{ '/tools/scenarios/global-machine/' | relative_url }}">
       <span class="start-card__label">Scenario 02</span>
       <span class="start-card__title">I'm designing a machine for US + EU</span>
       <span class="start-card__desc">NFPA 79 for the US, IEC 60204-1 for the EU, ISO 12100 as the risk-assessment foundation. Where they overlap and where they don't.</span>
       <span class="start-card__next">Open the scenario &rarr;</span>
     </a>
 
-    <a class="start-card" href="{{ '/verification/safety-architecture/' | relative_url }}">
+    <a class="start-card" href="{{ '/lifecycle/safety-architecture/' | relative_url }}">
       <span class="start-card__label">Safety</span>
       <span class="start-card__title">I need safety architecture guidance</span>
       <span class="start-card__desc">PL (ISO 13849-1) vs SIL (IEC 62061 / 61511), dual-channel patterns, STO/SS1/SLS, category selection.</span>
       <span class="start-card__next">Open the safety architecture stage &rarr;</span>
     </a>
 
-    <a class="start-card" href="{{ '/troubleshooting/' | relative_url }}">
+    <a class="start-card" href="{{ '/tools/troubleshooting/' | relative_url }}">
       <span class="start-card__label">Field</span>
       <span class="start-card__title">I'm troubleshooting or commissioning</span>
       <span class="start-card__desc">Motor, VFD, and servo troubleshooting trees; commissioning checklists; field-engineering references.</span>
       <span class="start-card__next">Open troubleshooting &rarr;</span>
     </a>
 
-    <a class="start-card" href="{{ '/training/' | relative_url }}">
+    <a class="start-card" href="{{ '/fundamentals/' | relative_url }}">
       <span class="start-card__label">Learning</span>
       <span class="start-card__title">I want training and fundamentals</span>
       <span class="start-card__desc">50+ modules across electrical fundamentals, motors and drives, NEC application, control systems, and safety.</span>
@@ -78,7 +78,7 @@ description: "Route from your project, lifecycle stage, or market to the standar
       <span class="scenario-card__title">US Industrial Control Panel</span>
       <p class="scenario-card__start"><strong>Start with:</strong> UL 508A + NEC Article 409 + NFPA 79</p>
       <p style="font-size:0.78rem;color:var(--color-text-muted);">US market, UL listing required. NEC is the legal baseline, UL 508A governs panel construction and listing, NFPA 79 applies when the panel sits on a machine.</p>
-      <a href="{{ '/implementation/scenarios/us-industrial-control-panel/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
+      <a href="{{ '/tools/scenarios/us-industrial-control-panel/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
     </div>
 
     <div class="scenario-card">
@@ -86,7 +86,7 @@ description: "Route from your project, lifecycle stage, or market to the standar
       <span class="scenario-card__title">Global Machine (US + EU)</span>
       <p class="scenario-card__start"><strong>Start with:</strong> NFPA 79 (US) + IEC 60204-1 (EU) + ISO 12100</p>
       <p style="font-size:0.78rem;color:var(--color-text-muted);">Machine sold in both markets — design to the most restrictive rule from each. CE marking requires an ISO 12100 risk assessment as the foundation.</p>
-      <a href="{{ '/implementation/scenarios/global-machine/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
+      <a href="{{ '/tools/scenarios/global-machine/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
     </div>
 
     <div class="scenario-card">
@@ -94,7 +94,7 @@ description: "Route from your project, lifecycle stage, or market to the standar
       <span class="scenario-card__title">Process Skid Shutdown System</span>
       <p class="scenario-card__start"><strong>Start with:</strong> IEC 61511 + IEC 61508 foundation</p>
       <p style="font-size:0.78rem;color:var(--color-text-muted);">SIS / ESD for process industry. IEC 61511 is the application standard; IEC 61508 is the lifecycle foundation. <span class="badge badge--complete">CORPUS COMPLETE</span></p>
-      <a href="{{ '/implementation/scenarios/process-skid/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
+      <a href="{{ '/tools/scenarios/process-skid/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
     </div>
 
     <div class="scenario-card">
@@ -102,7 +102,7 @@ description: "Route from your project, lifecycle stage, or market to the standar
       <span class="scenario-card__title">Networked Safety PLC Architecture</span>
       <p class="scenario-card__start"><strong>Start with:</strong> ISO 13849-1 or IEC 62061 + IEC 62443</p>
       <p style="font-size:0.78rem;color:var(--color-text-muted);">Safety PLC with network connectivity. Safety function design per PL or SIL path; cybersecurity overlay per IEC 62443.</p>
-      <a href="{{ '/implementation/scenarios/networked-safety-plc/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
+      <a href="{{ '/tools/scenarios/networked-safety-plc/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
     </div>
 
     <div class="scenario-card">
@@ -110,11 +110,11 @@ description: "Route from your project, lifecycle stage, or market to the standar
       <span class="scenario-card__title">Semiconductor Equipment Compliance</span>
       <p class="scenario-card__start"><strong>Start with:</strong> 15-Standard Minimum Compliance Stack</p>
       <p style="font-size:0.78rem;color:var(--color-text-muted);">Complex compliance stack for fab equipment. SEMI S2/S8/S14 in the local corpus alongside the industry overlay.</p>
-      <a href="{{ '/implementation/scenarios/semiconductor-equipment/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
+      <a href="{{ '/tools/scenarios/semiconductor-equipment/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
     </div>
   </div>
 
-  <p style="margin-top:1rem;"><a href="{{ '/implementation/scenarios/' | relative_url }}">All scenarios &rarr;</a></p>
+  <p style="margin-top:1rem;"><a href="{{ '/tools/scenarios/' | relative_url }}">All scenarios &rarr;</a></p>
 </section>
 
 <section class="home-section">
@@ -172,57 +172,57 @@ description: "Route from your project, lifecycle stage, or market to the standar
   <p class="home-section__intro">11 stages from concept through maintenance — each page lists the standards and outputs that apply.</p>
 
   <div class="lifecycle-ribbon">
-    <a href="{{ '/verification/lifecycle/concept/' | relative_url }}" class="lifecycle-stage">
+    <a href="{{ '/lifecycle/concept/' | relative_url }}" class="lifecycle-stage">
       <span class="lifecycle-stage__num">01</span>
       <span class="lifecycle-stage__name">Concept</span>
       <span class="lifecycle-stage__std">ISO 12100</span>
     </a>
-    <a href="{{ '/verification/lifecycle/standards-selection/' | relative_url }}" class="lifecycle-stage">
+    <a href="{{ '/lifecycle/standards-selection/' | relative_url }}" class="lifecycle-stage">
       <span class="lifecycle-stage__num">02</span>
       <span class="lifecycle-stage__name">Standards Selection</span>
       <span class="lifecycle-stage__std">Decision map</span>
     </a>
-    <a href="{{ '/verification/risk-assessment/' | relative_url }}" class="lifecycle-stage">
+    <a href="{{ '/lifecycle/risk-assessment/' | relative_url }}" class="lifecycle-stage">
       <span class="lifecycle-stage__num">03</span>
       <span class="lifecycle-stage__name">Risk Assessment</span>
       <span class="lifecycle-stage__std">ISO 12100 · 61511</span>
     </a>
-    <a href="{{ '/verification/safety-architecture/' | relative_url }}" class="lifecycle-stage">
+    <a href="{{ '/lifecycle/safety-architecture/' | relative_url }}" class="lifecycle-stage">
       <span class="lifecycle-stage__num">04</span>
       <span class="lifecycle-stage__name">Safety Architecture</span>
       <span class="lifecycle-stage__std">13849 · 62061</span>
     </a>
-    <a href="{{ '/verification/lifecycle/detailed-design/' | relative_url }}" class="lifecycle-stage">
+    <a href="{{ '/lifecycle/detailed-design/' | relative_url }}" class="lifecycle-stage">
       <span class="lifecycle-stage__num">05</span>
       <span class="lifecycle-stage__name">Detailed Design</span>
       <span class="lifecycle-stage__std">NFPA 79 · UL 508A</span>
     </a>
-    <a href="{{ '/verification/lifecycle/draft-documentation/' | relative_url }}" class="lifecycle-stage">
+    <a href="{{ '/lifecycle/draft-documentation/' | relative_url }}" class="lifecycle-stage">
       <span class="lifecycle-stage__num">06</span>
       <span class="lifecycle-stage__name">Documentation</span>
       <span class="lifecycle-stage__std">All applicable</span>
     </a>
-    <a href="{{ '/implementation/lifecycle-build/' | relative_url }}" class="lifecycle-stage">
+    <a href="{{ '/lifecycle/build/' | relative_url }}" class="lifecycle-stage">
       <span class="lifecycle-stage__num">07</span>
       <span class="lifecycle-stage__name">Build</span>
       <span class="lifecycle-stage__std">UL 508A · NFPA 79</span>
     </a>
-    <a href="{{ '/implementation/lifecycle-installation/' | relative_url }}" class="lifecycle-stage">
+    <a href="{{ '/lifecycle/installation/' | relative_url }}" class="lifecycle-stage">
       <span class="lifecycle-stage__num">08</span>
       <span class="lifecycle-stage__name">Installation</span>
       <span class="lifecycle-stage__std">NEC · NFPA 79</span>
     </a>
-    <a href="{{ '/implementation/lifecycle-pre-commissioning/' | relative_url }}" class="lifecycle-stage">
+    <a href="{{ '/lifecycle/pre-commissioning/' | relative_url }}" class="lifecycle-stage">
       <span class="lifecycle-stage__num">09</span>
       <span class="lifecycle-stage__name">Pre-Commissioning</span>
       <span class="lifecycle-stage__std">13849 Annex K</span>
     </a>
-    <a href="{{ '/implementation/lifecycle-commissioning/' | relative_url }}" class="lifecycle-stage">
+    <a href="{{ '/lifecycle/commissioning/' | relative_url }}" class="lifecycle-stage">
       <span class="lifecycle-stage__num">10</span>
       <span class="lifecycle-stage__name">Commissioning</span>
       <span class="lifecycle-stage__std">FAT / SAT / V&amp;V</span>
     </a>
-    <a href="{{ '/verification/maintenance/' | relative_url }}" class="lifecycle-stage">
+    <a href="{{ '/lifecycle/maintenance/' | relative_url }}" class="lifecycle-stage">
       <span class="lifecycle-stage__num">11</span>
       <span class="lifecycle-stage__name">Maintenance</span>
       <span class="lifecycle-stage__std">13849 §10</span>

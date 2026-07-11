@@ -4,13 +4,13 @@ title: "Series, Parallel, and Divider Methods"
 description: "This module covers the first simplification patterns most engineers and technicians should recognize before moving to more formal analysis methods."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Electrical Fundamentals"
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/series_parallel_and_divider_methods.md"
 redirect_from:
-  - /training/fundamentals/series-parallel-dividers/
-  - /training/fundamentals/series-parallel-dividers/index.html
+  - /fundamentals/fundamentals/series-parallel-dividers/
+  - /fundamentals/fundamentals/series-parallel-dividers/index.html
 
 ---
 

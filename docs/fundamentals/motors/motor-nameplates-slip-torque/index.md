@@ -4,13 +4,13 @@ title: "Motor Nameplates, Slip, and Torque"
 description: "This module turns common motor-training concepts into a practical review note for selection and troubleshooting."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/motor_nameplates_slip_and_torque.md"
 redirect_from:
-  - /training/electrical-machines/motor-nameplates-slip-torque/
-  - /training/electrical-machines/motor-nameplates-slip-torque/index.html
+  - /fundamentals/electrical-machines/motor-nameplates-slip-torque/
+  - /fundamentals/electrical-machines/motor-nameplates-slip-torque/index.html
 
 ---
 

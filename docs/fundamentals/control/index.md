@@ -4,11 +4,11 @@ title: "Control Systems — Training"
 description: "Modules covering control theory, PID intuition, industrial PLC implementation, loop architectures, and applied examples."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Control Systems"
 redirect_from:
-  - /training/control-systems/
-  - /training/control-systems/index.html
+  - /fundamentals/control-systems/
+  - /fundamentals/control-systems/index.html
 
 ---
 
@@ -61,4 +61,4 @@ redirect_from:
 
 ---
 
-<a href="{{ '/training/' | relative_url }}">&larr; All Training Modules</a>
+<a href="{{ '/fundamentals/' | relative_url }}">&larr; All Training Modules</a>

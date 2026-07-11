@@ -4,13 +4,13 @@ title: "PID Intuition — P, I, and D in Practice"
 description: "Plain-language explanation of the proportional, integral, and derivative terms — what each contributes, why P-only leaves steady-state error, and how tuning changes response behavior."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Control Systems"
     url: "/fundamentals/control/"
 repo_path: "control-standards/rag/training_modules/control_systems/pid_control_intuition.md"
 redirect_from:
-  - /training/control-systems/pid-intuition/
-  - /training/control-systems/pid-intuition/index.html
+  - /fundamentals/control-systems/pid-intuition/
+  - /fundamentals/control-systems/pid-intuition/index.html
 
 ---
 

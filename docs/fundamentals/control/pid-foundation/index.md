@@ -4,7 +4,7 @@ title: "PID Control — Intuitive Foundation"
 description: "Entry point for the PID content — what PID means at a high level, how the three terms differ, and which module to read for intuition, implementation, or applied examples."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Control Systems"
     url: "/fundamentals/control/"
 repo_path: "control-standards/rag/training_modules/control_systems/pid_control_intuitive_foundation.md"
@@ -12,8 +12,8 @@ related_standards:
   - name: "IEC 61511"
     url: "/standards/functional-safety/iec-61511/"
 redirect_from:
-  - /training/control-systems/pid-foundation/
-  - /training/control-systems/pid-foundation/index.html
+  - /fundamentals/control-systems/pid-foundation/
+  - /fundamentals/control-systems/pid-foundation/index.html
 
 ---
 

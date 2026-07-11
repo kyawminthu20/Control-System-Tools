@@ -4,13 +4,13 @@ title: "Servo Drive Fundamentals"
 description: "This module explains the basic control structure of servo systems and the practical ideas that matter when precise motion is required."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/servo_drive_fundamentals.md"
 redirect_from:
-  - /training/electrical-machines/servo-drive-fundamentals/
-  - /training/electrical-machines/servo-drive-fundamentals/index.html
+  - /fundamentals/electrical-machines/servo-drive-fundamentals/
+  - /fundamentals/electrical-machines/servo-drive-fundamentals/index.html
 
 ---
 

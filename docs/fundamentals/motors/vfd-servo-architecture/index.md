@@ -4,13 +4,13 @@ title: "VFD and Servo Architecture"
 description: "This module compares the internal architecture of a VFD system and a servo-drive system so the reader can see why the two are related but not interchangeable."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/vfd_and_servo_architecture_diagrams.md"
 redirect_from:
-  - /training/electrical-machines/vfd-servo-architecture/
-  - /training/electrical-machines/vfd-servo-architecture/index.html
+  - /fundamentals/electrical-machines/vfd-servo-architecture/
+  - /fundamentals/electrical-machines/vfd-servo-architecture/index.html
 
 ---
 

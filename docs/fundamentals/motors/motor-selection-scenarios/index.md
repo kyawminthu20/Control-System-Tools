@@ -4,7 +4,7 @@ title: "Motor Selection Scenarios — Fan/Pump, Precision Axis, AGV"
 description: "Three engineering-grade motor selection archetypes with per-scenario drive, wiring, control, tuning, measurement, and failure-mode detail. Covers a clearly BLDC-favored case, a clearly PMSM-favored case, and an ambiguous tradeoff case."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/bldc_pmsm_scenarios.md"

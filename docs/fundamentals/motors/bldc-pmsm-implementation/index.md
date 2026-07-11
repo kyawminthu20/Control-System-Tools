@@ -4,7 +4,7 @@ title: "BLDC and PMSM Implementation Guide"
 description: "Production-grade implementation reference: system architecture, control methods, drive selection, wiring, failure modes, and a full commissioning checklist."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/bldc_pmsm_implementation_guide.md"

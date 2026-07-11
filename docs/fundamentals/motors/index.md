@@ -4,11 +4,11 @@ title: "Motors, Drives, and Motion — Training"
 description: "18 modules covering induction and DC motors, VFDs, servo drives, motor selection, efficiency, and equations reference."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
 redirect_from:
-  - /training/electrical-machines/
-  - /training/electrical-machines/index.html
+  - /fundamentals/electrical-machines/
+  - /fundamentals/electrical-machines/index.html
 
 ---
 
@@ -71,4 +71,4 @@ redirect_from:
 
 ---
 
-<a href="{{ '/training/' | relative_url }}">&larr; All Training Modules</a>
+<a href="{{ '/fundamentals/' | relative_url }}">&larr; All Training Modules</a>

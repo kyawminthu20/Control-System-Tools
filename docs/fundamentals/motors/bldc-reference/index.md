@@ -4,7 +4,7 @@ title: "BLDC Motor Reference"
 description: "Deep reference on brushless DC motors: construction, 6-step commutation, inverter operation, feedback, wiring, and specification review."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/bldc_motor_reference.md"

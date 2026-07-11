@@ -4,15 +4,15 @@ title: "Deterministic vs Non-Deterministic Control"
 description: "Why real-time control systems require deterministic timing — and how to separate time-critical control from monitoring, analytics, and UI layers."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Control Systems"
     url: "/fundamentals/control/"
 related_standards:
   - name: "IEC 61131-3 (PLC Programming)"
     url: "/standards/"
 redirect_from:
-  - /training/control-systems/deterministic-nondeterministic-control/
-  - /training/control-systems/deterministic-nondeterministic-control/index.html
+  - /fundamentals/control-systems/deterministic-nondeterministic-control/
+  - /fundamentals/control-systems/deterministic-nondeterministic-control/index.html
 
 ---
 

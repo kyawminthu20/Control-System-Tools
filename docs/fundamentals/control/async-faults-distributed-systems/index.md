@@ -4,7 +4,7 @@ title: "Async Faults in Distributed Systems"
 description: "How to detect, classify, and respond to faults that arrive out of sequence across multi-device control architectures — PLCs, drives, sensors, and IPCs."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Control Systems"
     url: "/fundamentals/control/"
 related_standards:
@@ -13,8 +13,8 @@ related_standards:
   - name: "IEC 61511"
     url: "/standards/functional-safety/iec-61511/"
 redirect_from:
-  - /training/control-systems/async-faults-distributed-systems/
-  - /training/control-systems/async-faults-distributed-systems/index.html
+  - /fundamentals/control-systems/async-faults-distributed-systems/
+  - /fundamentals/control-systems/async-faults-distributed-systems/index.html
 
 ---
 

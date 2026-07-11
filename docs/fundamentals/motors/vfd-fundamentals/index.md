@@ -4,13 +4,13 @@ title: "VFD Fundamentals"
 description: "This module explains what a VFD does, how it is built internally, and what practical issues matter when connecting a drive to a real motor system."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/vfd_fundamentals.md"
 redirect_from:
-  - /training/electrical-machines/vfd-fundamentals/
-  - /training/electrical-machines/vfd-fundamentals/index.html
+  - /fundamentals/electrical-machines/vfd-fundamentals/
+  - /fundamentals/electrical-machines/vfd-fundamentals/index.html
 
 ---
 

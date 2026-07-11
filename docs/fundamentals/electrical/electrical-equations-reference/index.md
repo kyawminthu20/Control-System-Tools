@@ -4,13 +4,13 @@ title: "Electrical Equations Reference"
 description: "A compact reference card for the most-used relationships from the fundamentals training set."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Electrical Fundamentals"
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/electrical_equations_reference.md"
 redirect_from:
-  - /training/fundamentals/electrical-equations-reference/
-  - /training/fundamentals/electrical-equations-reference/index.html
+  - /fundamentals/fundamentals/electrical-equations-reference/
+  - /fundamentals/fundamentals/electrical-equations-reference/index.html
 
 ---
 

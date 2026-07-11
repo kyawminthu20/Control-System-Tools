@@ -4,13 +4,13 @@ title: "Kirchhoff's Laws and Systematic Analysis"
 description: "This module explains the two bookkeeping laws that make complex circuit solving systematic rather than guess-based."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Electrical Fundamentals"
     url: "/fundamentals/electrical/"
 repo_path: "control-standards/rag/training_modules/fundamentals/kirchhoff_laws_and_systematic_analysis.md"
 redirect_from:
-  - /training/fundamentals/kirchhoff-laws/
-  - /training/fundamentals/kirchhoff-laws/index.html
+  - /fundamentals/fundamentals/kirchhoff-laws/
+  - /fundamentals/fundamentals/kirchhoff-laws/index.html
 
 ---
 

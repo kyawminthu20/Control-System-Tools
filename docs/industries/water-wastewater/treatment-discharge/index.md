@@ -90,4 +90,4 @@ The aeration basin blowers run on a cascaded DO PID loop:
 - [Equalization & Neutralization](../equalization-neutralization/) — upstream
 - [Instrumentation Reference](../instrumentation/) — DO and TSS analyzer selection
 - [IEC 61511](/standards/functional-safety/iec-61511/)
-- [Lifecycle — Commissioning](/implementation/lifecycle-commissioning/)
+- [Lifecycle — Commissioning](/lifecycle/commissioning/)

@@ -112,6 +112,6 @@ SIL 2 SIFs can typically be achieved with 1oo2 or 2oo3 voted architectures using
 
 ---
 
-<a href="{{ '/implementation/scenarios/oil-gas-process-skid/' | relative_url }}" class="card__link">See Oil &amp; Gas Process Skid scenario &rarr;</a>
+<a href="{{ '/tools/scenarios/oil-gas-process-skid/' | relative_url }}" class="card__link">See Oil &amp; Gas Process Skid scenario &rarr;</a>
 
 <a href="{{ '/industries/' | relative_url }}" class="card__link">&larr; Industry matrix</a>

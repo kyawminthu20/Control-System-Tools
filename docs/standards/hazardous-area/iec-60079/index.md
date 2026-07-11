@@ -332,12 +332,12 @@ All four entity checks pass. Po ≤ Pi must also be verified from the certificat
 
 | Stage | IEC 60079 activity |
 |-------|-------------------|
-| [Standards Selection]({{ '/verification/lifecycle/standards-selection/' | relative_url }}) | Decide IEC 60079 (Zone) vs. NEC Art. 500 (Class/Division) for the project; identify substances and confirm gas groups; preliminary area classification feasibility |
-| [Detailed Design]({{ '/verification/lifecycle/detailed-design/' | relative_url }}) | Area classification drawing per 60079-10-1; protection-method choice per equipment (Ex d for sparking power devices, Ex i for instruments); IS loop entity calculations; cable and bonding scheme per 60079-14 |
-| [Build]({{ '/implementation/lifecycle-build/' | relative_url }}) | Equipment register populated; certificates archived; cable glands, stopping plugs, and flame-path surfaces preserved; IS earth and equipotential bonding installed |
-| [Installation]({{ '/implementation/lifecycle-installation/' | relative_url }}) | 60079-14 installation rules at the site; cable segregation enforced; bonding continuity verified; IS earth measured |
-| [Pre-Commissioning]({{ '/implementation/lifecycle-pre-commissioning/' | relative_url }}) | Initial verification per 60079-14: certificate validity, gland integrity, flame-path condition, IS entity-check sign-off, classified-area drawing matches installed equipment |
-| [Commissioning]({{ '/implementation/lifecycle-commissioning/' | relative_url }}) | Commissioning certificate issued; first periodic-inspection schedule defined per 60079-17 (visual / close / detailed) and competent person assigned |
+| [Standards Selection]({{ '/lifecycle/standards-selection/' | relative_url }}) | Decide IEC 60079 (Zone) vs. NEC Art. 500 (Class/Division) for the project; identify substances and confirm gas groups; preliminary area classification feasibility |
+| [Detailed Design]({{ '/lifecycle/detailed-design/' | relative_url }}) | Area classification drawing per 60079-10-1; protection-method choice per equipment (Ex d for sparking power devices, Ex i for instruments); IS loop entity calculations; cable and bonding scheme per 60079-14 |
+| [Build]({{ '/lifecycle/build/' | relative_url }}) | Equipment register populated; certificates archived; cable glands, stopping plugs, and flame-path surfaces preserved; IS earth and equipotential bonding installed |
+| [Installation]({{ '/lifecycle/installation/' | relative_url }}) | 60079-14 installation rules at the site; cable segregation enforced; bonding continuity verified; IS earth measured |
+| [Pre-Commissioning]({{ '/lifecycle/pre-commissioning/' | relative_url }}) | Initial verification per 60079-14: certificate validity, gland integrity, flame-path condition, IS entity-check sign-off, classified-area drawing matches installed equipment |
+| [Commissioning]({{ '/lifecycle/commissioning/' | relative_url }}) | Commissioning certificate issued; first periodic-inspection schedule defined per 60079-17 (visual / close / detailed) and competent person assigned |
 
 ---
 

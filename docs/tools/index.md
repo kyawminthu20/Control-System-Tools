@@ -13,7 +13,7 @@ breadcrumb:
 </div>
 
 <blockquote>
-<strong>Scope:</strong> Cross-cutting utilities that apply across Fundamentals, Design, Implementation, and Verification. They do not replace authoritative standards text — see the <a href="{{ '/repository/about/' | relative_url }}">trust boundary</a>.
+<strong>Scope:</strong> Cross-cutting utilities that apply across Fundamentals, Design, Implementation, and Verification. They do not replace authoritative standards text — see the <a href="{{ '/about/' | relative_url }}">trust boundary</a>.
 </blockquote>
 
 ## Tool Pages
@@ -41,4 +41,4 @@ breadcrumb:
 
 - [Standards]({{ '/standards/' | relative_url }}) — full per-standard pages and the interactive relationship graph
 - [Design]({{ '/design/' | relative_url }}) — architecture models, motor selection, design workflows
-- [Repository]({{ '/repository/' | relative_url }}) — build stack, trust boundary, source links
+- [Repository]({{ '/about/' | relative_url }}) — build stack, trust boundary, source links

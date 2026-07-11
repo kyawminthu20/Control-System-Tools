@@ -4,13 +4,13 @@ title: "Motor and VFD Equations Reference"
 description: "This module collects the most useful motor and VFD equations into one reference note for training and first-pass engineering review."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/motor_and_vfd_equations_reference.md"
 redirect_from:
-  - /training/electrical-machines/motor-vfd-equations/
-  - /training/electrical-machines/motor-vfd-equations/index.html
+  - /fundamentals/electrical-machines/motor-vfd-equations/
+  - /fundamentals/electrical-machines/motor-vfd-equations/index.html
 
 ---
 

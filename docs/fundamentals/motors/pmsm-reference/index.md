@@ -4,7 +4,7 @@ title: "PMSM Motor Reference"
 description: "Deep reference on permanent-magnet synchronous motors: SPM vs IPM, sinusoidal back-EMF, field-oriented control, field weakening, and commissioning."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/pmsm_motor_reference.md"
@@ -492,7 +492,7 @@ STO is the entry-level safety function on every industrial servo drive. Wiring r
 - STO is NOT an emergency stop on its own — it removes torque but does not dissipate kinetic energy. Combine with a mechanical brake or SS1 (Safe Stop 1) ramp-down for loads with significant inertia
 - STO wiring is separate from the E-stop chain even if both are triggered by the same safety relay — the drive's safety inputs are on a dedicated terminal block
 
-For the operational walkthrough (commissioning, testing, validation), see the [Servo Commissioning Workflow]({{ '/implementation/servo-commissioning/' | relative_url }}).
+For the operational walkthrough (commissioning, testing, validation), see the [Servo Commissioning Workflow]({{ '/lifecycle/guides/servo-commissioning/' | relative_url }}).
 
 ---
 

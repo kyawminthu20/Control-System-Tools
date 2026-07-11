@@ -4,7 +4,7 @@ title: "Interlocks, Permissives & Safety Trips"
 description: "Three distinct layers of protective logic — what each one is, how they differ, and how they must be separated in control system design."
 breadcrumb:
   - name: "Training"
-    url: "/training/"
+    url: "/fundamentals/"
   - name: "Control Systems"
     url: "/fundamentals/control/"
 related_standards:
@@ -15,8 +15,8 @@ related_standards:
   - name: "IEC 61511"
     url: "/standards/functional-safety/iec-61511/"
 redirect_from:
-  - /training/control-systems/interlocks-permissives-safety-trips/
-  - /training/control-systems/interlocks-permissives-safety-trips/index.html
+  - /fundamentals/control-systems/interlocks-permissives-safety-trips/
+  - /fundamentals/control-systems/interlocks-permissives-safety-trips/index.html
 
 ---
 

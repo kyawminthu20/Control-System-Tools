@@ -1,7 +1,25 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-11 (Tools Suite Phase 4 COMPLETE — PLC utils, diagnostics, docgen; suite roadmap done)
+**Last Updated:** 2026-07-11 (Phase 31 — IA restructure: 7 unified sections, lifecycle reunified)
 **Status:** Active
+
+## 2026-07-11 — Phase 31 — Information-architecture restructure (user-approved)
+
+**Type:** Site IA / navigation re-architecture
+**Status:** Complete on `feat/phase31-ia-restructure`.
+**Reason:** User feedback: "layout and contents are not really organized." Diagnosis confirmed: top nav and sidebar disagreed (7 grab-bag deep links vs 11 sections), the 14 lifecycle stages were split across Implementation and Verification (the data file even documented the split apologetically), Training vs Fundamentals was one content class with two homes, and stub sections (Troubleshooting 2 pages, Repository 2) held top-level rank.
+
+**New taxonomy (7 intent-based sections, top nav = sidebar):** Home · Fundamentals · Standards · Design · Lifecycle · Industries · Tools.
+
+**Moves (49 pages, all with redirect_from; old section indexes are redirect_to stubs):**
+- All lifecycle stages → `/lifecycle/` in chronological order (concept → standards-selection → risk-assessment → SRS → safety-architecture → detailed-design → draft-documentation → safety-wiring → build → installation → pre-commissioning → commissioning → maintenance → MoC); journey page is the section index; commissioning guides (templates/VFD/servo) under `/lifecycle/guides/`
+- `/training/nec-application/` → `/fundamentals/nec-application/` (Training section dissolved)
+- `/implementation/scenarios/` → `/tools/scenarios/`; `/troubleshooting/` → `/tools/troubleshooting/`
+- `/repository/about/` → `/about/` (linked under Tools)
+
+**Mechanics:** migration script (Phase 26 pattern) — git mv, docs-wide ordered link sweep (133 files), then redirect_from insertion; 16 self-redirect conflicts stripped (pages returning to pre-Phase-26 URLs); `lifecycle_stage_urls.yml` now all `/lifecycle/*`; navigation.yml and topnav.html rewritten to the same 7 sections.
+
+**Validation:** clean Jekyll build (306 output files), zero broken internal links, zero built pages referencing old URLs, all 8 old-section redirects verified in `_site`, NEC-course local sidebar renders at its new home.
 
 ## Purpose
 
