@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-12 02:13:01
+**Last Auto-Updated:** 2026-07-12 08:12:13
 
 ```text
 ├── .claude/
@@ -457,10 +457,14 @@
 │   │   │   │   ├── sccr_workflow.md
 │   │   │   │   └── working_space_and_table_navigation.md
 │   │   │   ├── plc_software/
+│   │   │   │   ├── algorithms_equipment_staging.md
+│   │   │   │   ├── ladder_logic.md
 │   │   │   │   ├── languages_overview.md
+│   │   │   │   ├── packml_isa88_isa95.md
 │   │   │   │   ├── program_structure.md
 │   │   │   │   ├── safety_application_patterns.md
-│   │   │   │   └── state_machines.md
+│   │   │   │   ├── state_machines.md
+│   │   │   │   └── vendor_architectures.md
 │   │   │   └── semiconductor_facility/
 │   │   │       ├── README.md
 │   │   │       └── hf_handling_controls_materials_and_shutdowns.md
@@ -577,7 +581,8 @@
 │       │       └── voltage_drop_recommended_feeder_and_branch_guidance.md
 │       ├── general/
 │       │   ├── 00_inbox_notes.md
-│       │   └── README.md
+│       │   ├── README.md
+│       │   └── plc_software_intake_2026-07.md
 │       └── research/
 │           └── ai-ml-control-systems/
 │               ├── README.md
@@ -1024,10 +1029,14 @@
 │   │   │   │   │   ├── sccr_workflow.md
 │   │   │   │   │   └── working_space_and_table_navigation.md
 │   │   │   │   ├── plc_software/
+│   │   │   │   │   ├── algorithms_equipment_staging.md
+│   │   │   │   │   ├── ladder_logic.md
 │   │   │   │   │   ├── languages_overview.md
+│   │   │   │   │   ├── packml_isa88_isa95.md
 │   │   │   │   │   ├── program_structure.md
 │   │   │   │   │   ├── safety_application_patterns.md
-│   │   │   │   │   └── state_machines.md
+│   │   │   │   │   ├── state_machines.md
+│   │   │   │   │   └── vendor_architectures.md
 │   │   │   │   └── semiconductor_facility/
 │   │   │   │       └── hf_handling_controls_materials_and_shutdowns.md
 │   │   │   └── troubleshooting_engine/
@@ -1283,14 +1292,22 @@
 │   │   │   └── working-space-table-navigation/
 │   │   │       └── index.md
 │   │   └── plc-software/
+│   │       ├── algorithms-equipment-staging/
+│   │       │   └── index.md
 │   │       ├── index.md
+│   │       ├── ladder-logic/
+│   │       │   └── index.md
 │   │       ├── languages-overview/
+│   │       │   └── index.md
+│   │       ├── packml-isa88-isa95/
 │   │       │   └── index.md
 │   │       ├── program-structure/
 │   │       │   └── index.md
 │   │       ├── safety-application-patterns/
 │   │       │   └── index.md
-│   │       └── state-machines/
+│   │       ├── state-machines/
+│   │       │   └── index.md
+│   │       └── vendor-architectures/
 │   │           └── index.md
 │   ├── implementation/
 │   │   └── index.md
@@ -1655,7 +1672,6 @@
 │   │   ├── research-map.md
 │   │   ├── scientific-domain-integration.md
 │   │   └── source-register.md
-│   ├── plc_software.md
 │   ├── plcs.md
 │   └── wire-color-coding-web-assets/
 │       ├── 00-wire-color-coding-title-banner.png

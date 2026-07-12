@@ -2108,10 +2108,28 @@
         "type": "dir",
         "children": [
           {
+            "name": "algorithms_equipment_staging.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/plc_software/algorithms_equipment_staging.md",
+            "serve_path": "training_modules/plc_software/algorithms_equipment_staging.md"
+          },
+          {
+            "name": "ladder_logic.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/plc_software/ladder_logic.md",
+            "serve_path": "training_modules/plc_software/ladder_logic.md"
+          },
+          {
             "name": "languages_overview.md",
             "type": "file",
             "path": "control-standards/rag/training_modules/plc_software/languages_overview.md",
             "serve_path": "training_modules/plc_software/languages_overview.md"
+          },
+          {
+            "name": "packml_isa88_isa95.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/plc_software/packml_isa88_isa95.md",
+            "serve_path": "training_modules/plc_software/packml_isa88_isa95.md"
           },
           {
             "name": "program_structure.md",
@@ -2130,6 +2148,12 @@
             "type": "file",
             "path": "control-standards/rag/training_modules/plc_software/state_machines.md",
             "serve_path": "training_modules/plc_software/state_machines.md"
+          },
+          {
+            "name": "vendor_architectures.md",
+            "type": "file",
+            "path": "control-standards/rag/training_modules/plc_software/vendor_architectures.md",
+            "serve_path": "training_modules/plc_software/vendor_architectures.md"
           }
         ]
       },

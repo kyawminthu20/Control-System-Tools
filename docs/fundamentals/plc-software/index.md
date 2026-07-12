@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "PLC Software"
-description: "Programming industrial controllers — IEC 61131-3 languages, program structure, state machines, and safety application patterns."
+description: "Programming industrial controllers — IEC 61131-3 languages, ladder logic, program structure, state machines, application algorithms, PackML/ISA-88/ISA-95, vendor architectures, and safety application patterns."
 breadcrumb:
   - name: "Fundamentals"
     url: "/fundamentals/"
@@ -31,12 +31,28 @@ documentation.
     <p>The five IEC 61131-3 languages — LD, FBD, ST, SFC, IL — and when each is the right tool.</p>
   </div>
   <div class="workflow-card">
+    <h3><a href="{{ '/fundamentals/plc-software/ladder-logic/' | relative_url }}">Ladder Logic</a></h3>
+    <p>Contacts, coils, seal-ins, one-shots, scan order, and the discipline — I/O mapping, command vs feedback, alarm hysteresis — that keeps ladder maintainable.</p>
+  </div>
+  <div class="workflow-card">
     <h3><a href="{{ '/fundamentals/plc-software/program-structure/' | relative_url }}">Program Structure</a></h3>
     <p>POUs, tasks, variable scope, and modular reusable design — structuring for maintainability.</p>
   </div>
   <div class="workflow-card">
     <h3><a href="{{ '/fundamentals/plc-software/state-machines/' | relative_url }}">State Machines</a></h3>
     <p>Why explicit state machines beat sprawling ad-hoc logic, and three ways to implement them.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/fundamentals/plc-software/algorithms-equipment-staging/' | relative_url }}">Algorithms &amp; Equipment Staging</a></h3>
+    <p>FIFOs, queues, shift registers, and the staging family — lead-lag, runtime equalization, demand staging, load shedding — for multi-unit equipment.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/fundamentals/plc-software/packml-isa88-isa95/' | relative_url }}">PackML, ISA-88 &amp; ISA-95</a></h3>
+    <p>The standard state, procedural, and enterprise-integration models — and how they wrap, not replace, the machine's own sequence.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/fundamentals/plc-software/vendor-architectures/' | relative_url }}">Vendor Architectures</a></h3>
+    <p>How Siemens OB/FB/DB, Rockwell tags and AOIs, and Beckhoff TwinCAT each implement the shared IEC 61131-3 model — a translation guide.</p>
   </div>
   <div class="workflow-card">
     <h3><a href="{{ '/fundamentals/plc-software/safety-application-patterns/' | relative_url }}">Safety Application Patterns</a></h3>

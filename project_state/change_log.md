@@ -1,7 +1,68 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-12 (Phase 46.1 — design-page triage; AI/ML plan recorded)
+**Last Updated:** 2026-07-12 (Phase 47 — PLC software expansion)
 **Status:** Active
+
+## 2026-07-12 — Phase 47 — PLC software expansion (4 pages + 4 corpus notes)
+
+**Type:** Content expansion (corpus-first)
+**Status:** Complete on `feat/phase47-plc-software-expansion`.
+
+The `/fundamentals/plc-software/` section doubled from 4 to 8 pages, executed corpus-first per
+CONTENT_STANDARDS §1: each topic landed as a deep corpus note in
+`control-standards/rag/training_modules/plc_software/`, then as a site distillation. Written by
+four parallel writer agents under one shared spec (AI_WORKFLOW §4); every page starts at
+**Review pending**.
+
+**New pages / corpus notes** (site lines / corpus lines):
+
+- **Ladder Logic Fundamentals** (257/509) — element set, seal-in walkthrough, fail-safe
+  NC-wired stops, I/O mapping at the edges, command vs status vs feedback, constructed
+  motor-control example with failed-to-start detection, scan-order effects, last-write-wins,
+  one-shots, retentive data, alarm delay + hysteresis, analog scaling, 9 numbered design
+  mistakes with root causes.
+- **PLC Algorithms & Equipment Staging** (232/482) — FIFO/circular buffers, conveyor shift
+  registers, queue records, sorting at PLC scale (index-array pattern), and the staging family:
+  lead-lag, demand staging with dead-band/anti-hunting, runtime accumulation/equalization,
+  start-count balancing, round-robin, first-available, priority- and capacity-based selection,
+  start-delay sequencing, failed-to-start replacement, load-shedding and alarm queues.
+  Cross-links water/wastewater intake-pumping (the lead-lag field application).
+- **PackML, ISA-88 & ISA-95** (242/459) — the deep treatment the machine-state-model page's
+  one-row summary was pointing at: PackML state/mode models (acting/wait, state-complete),
+  PackTags at concept level, the wrapper-vs-sequence distinction, ISA-88 physical + procedural
+  models and EM/CM decomposition, ISA-TR88.95.01 bridge, ISA-95/IEC 62264 levels 0–4, brief
+  pharma (GAMP 5, Part 11) and semiconductor (SECS/GEM) mappings. No state-transition tables or
+  tag lists reproduced (copyright boundary).
+- **Vendor Programming Architectures** (234/515) — how Siemens TIA Portal (OB/FC/FB/DB,
+  instance DBs, process image), Rockwell Logix (task→program→routine, tag-centric memory, UDTs,
+  AOIs, RPI-asynchronous I/O), and Beckhoff TwinCAT 3 (PC-based runtime, OO extensions, linked
+  I/O layer, EtherCAT) each implement the shared IEC 61131-3 model; 13-row concept-translation
+  table; the same FIFO and staging skeleton three ways. All market-position language from the
+  source reframed to neutral fit language per CONTENT_STANDARDS §6.
+
+**Source discipline (roadmap Phase 47 requirements, all met):**
+
+- `temp/plc_software.md` (4,976 lines, 4 concatenated source docs) relocated to
+  `control-standards/work/general/plc_software_intake_2026-07.md` with every `utm_source`
+  param stripped (28 occurrences → 0).
+- All 31 cited URLs liveness-checked after stripping: 24 return 200/206; the 7 failures are
+  bot-gated portals (Siemens Industry Support ×5, ISA blog, SEMI), not dead links. Site pages
+  cite by document name/publication ID only; cleaned URLs live in the corpus notes' Sources
+  sections.
+- One citation defect found and fixed: the source attributed the Logix tasks/programs/routines
+  manual to the URL of 1756-PM006 (Sequential Function Charts); the correct reference
+  1756-PM005 is cited in prose and the PM006 URL is now labelled accurately.
+- Paraphrase-only throughout; illustrative code labelled, invented tags, constructed examples
+  marked; platform-specific raw-count endpoints dropped rather than asserted.
+
+**Wiring:** navigation.yml + section index carry all 8 pages in learning order (Languages →
+Ladder Logic → Program Structure → State Machines → Algorithms & Staging → PackML/ISA-88/ISA-95
+→ Vendor Architectures → Safety Application Patterns). RAG mirror regenerated
+(`generate_rag_tree.py`, 314 files, 4 new).
+
+**Validation:** Jekyll build clean (1.656 s); `check_internal_links.py` zero broken links
+(368 files); `validate_ai_boundaries.py` 2 failures = pre-existing baseline
+(`process_safety_details/`), no new regressions.
 
 ## 2026-07-12 — Phase 46.1 — Design-page review triage + AI/ML presentation plan
 

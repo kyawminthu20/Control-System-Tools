@@ -22,10 +22,18 @@
       children:
         - label: "Languages Overview"
           url: "/fundamentals/plc-software/languages-overview/"
+        - label: "Ladder Logic"
+          url: "/fundamentals/plc-software/ladder-logic/"
         - label: "Program Structure"
           url: "/fundamentals/plc-software/program-structure/"
         - label: "State Machines"
           url: "/fundamentals/plc-software/state-machines/"
+        - label: "Algorithms &amp; Staging"
+          url: "/fundamentals/plc-software/algorithms-equipment-staging/"
+        - label: "PackML / ISA-88 / ISA-95"
+          url: "/fundamentals/plc-software/packml-isa88-isa95/"
+        - label: "Vendor Architectures"
+          url: "/fundamentals/plc-software/vendor-architectures/"
         - label: "Safety Application Patterns"
           url: "/fundamentals/plc-software/safety-application-patterns/"
 
