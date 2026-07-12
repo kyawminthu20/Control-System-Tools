@@ -1,7 +1,64 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-12 (Phase 46 — visual assets complete)
+**Last Updated:** 2026-07-12 (Phase 46.1 — design-page triage; AI/ML plan recorded)
 **Status:** Active
+
+## 2026-07-12 — Phase 46.1 — Design-page review triage + AI/ML presentation plan
+
+**Type:** Correctness fixes (site consistency) + planning record
+**Status:** Complete on `fix/phase-46.1-design-page-defects`.
+
+**A fourth external review was found untriaged.** `prompt.md` — 1,068 lines, untracked at the
+repo root — was never part of the `temp/` intake batch. It is a review of the `/design/` page,
+and it is also the **upstream source of the wire-colour and design-package assets published in
+Phase 46**: that phase shipped from its downstream artifacts without the source document ever
+being read. Now relocated to `planning/2026-07-12-design-page-review.md` with a triage record.
+
+**Three defects verified against the repo and fixed:**
+
+- **Lifecycle stage count — wrong in three places, and worse than the review said.** `/design/`
+  and the homepage claimed **11 stages**; `/lifecycle/` claimed **13**; the lifecycle index
+  actually publishes **14**. Neither number was correct. Adopted the review's own better
+  recommendation and **dropped the count** rather than restating a number that keeps rotting as
+  stages are added.
+- **The "through decommissioning" endpoint was also false** (found while fixing the above):
+  **there is no decommissioning stage page.** The claim is corrected, and an explicit
+  coverage-gap note added to `/lifecycle/` — the functional-safety standards (IEC 61508, 61511,
+  62061) all define a lifecycle through decommissioning, so the gap is now stated rather than
+  papered over.
+- **Duplicate sidebar entry** — "Motor Selection" appeared twice (navigation.yml:133 and :145).
+  Disambiguated to *Motor Selection Fundamentals* (section) and *Motor Selection Workflow*.
+- **"Standards Atlas" branding survived on live pages** — the standards-finder rendered a card
+  titled "Standards Atlas" and the nav read "About this Atlas". (Phase 45's review flagged the
+  same leak on the NEC page; that pass fixed the status labels but missed the branding.) Card →
+  *Standards Library*; nav → *About this Field Guide*. Site identity is now **Control Systems
+  Engineering Field Guide** throughout.
+
+**AI/ML for Control Systems — presentation plan recorded (Phase 49, still gated).**
+Research relocated `temp/ai-ml-control-systems-research/` →
+`control-standards/work/research/ai-ml-control-systems/` (work tier, non-authoritative — the
+intake loop's capture tier, which `temp/` is not). Plan at
+`planning/2026-07-12-ai-ml-control-systems-presentation-plan.md`. **No site or corpus content
+authored** — the workspace carries the owner's explicit do-not-build-yet posture, which stands.
+
+Two substantive decisions in the plan:
+- **Placement:** one subsection under Design (`/design/ai-integration/`), **not** split across
+  Fundamentals and Design. Co-location is a *safety property*: a reader landing on "CNNs" or
+  "LLMs" from a search engine must not meet the capability with the authority gate seven entries
+  away.
+- **Authority-first, not topic-first.** The research's own provisional tree put safety **8th of
+  9**. Reordered so the least-authority ladder (offline → read-only → advisory →
+  operator-approved → bounded supervisory → closed-loop) and the safety boundary are pages 1 and
+  2, with model families, the digital-twin spine, interfaces/handshakes, validation & drift, and
+  worked architectures hanging off them. The scientific-domain track is deferred — real, large,
+  and currently unsourced.
+
+Promotion remains gated on the source-register's own "still needed" list — most importantly
+*current standards or guidance for AI in machinery and functional safety*, without which the
+safety page would be inventing a position — and on re-checking the two 2024 arXiv preprints
+against the publisher, per the Phase 45 precedent.
+
+**Validation:** clean build (364 files), zero broken internal links.
 
 ## 2026-07-12 — Phase 46 — Visual assets (wire colour coding gallery + design-package poster)
 

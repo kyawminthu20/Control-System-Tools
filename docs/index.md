@@ -170,7 +170,7 @@ description: "Route from your project, lifecycle stage, or market to the standar
 
 <section class="home-section">
   <h2>Browse by lifecycle stage</h2>
-  <p class="home-section__intro">11 stages from concept through maintenance — each page lists the standards and outputs that apply.</p>
+  <p class="home-section__intro">A structured lifecycle from concept through operation and management of change — each page lists the standards and outputs that apply.</p>
 
   <div class="lifecycle-ribbon">
     <a href="{{ '/lifecycle/concept/' | relative_url }}" class="lifecycle-stage">

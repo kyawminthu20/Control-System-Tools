@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-12 01:46:40
+**Last Auto-Updated:** 2026-07-12 02:13:01
 
 ```text
 ├── .claude/
@@ -575,9 +575,16 @@
 │       │       ├── voltage_drop_fire_pump_notes.md
 │       │       ├── voltage_drop_general_basis.md
 │       │       └── voltage_drop_recommended_feeder_and_branch_guidance.md
-│       └── general/
-│           ├── 00_inbox_notes.md
-│           └── README.md
+│       ├── general/
+│       │   ├── 00_inbox_notes.md
+│       │   └── README.md
+│       └── research/
+│           └── ai-ml-control-systems/
+│               ├── README.md
+│               ├── digital-twin-integration.md
+│               ├── research-map.md
+│               ├── scientific-domain-integration.md
+│               └── source-register.md
 ├── control-theory-final.png
 ├── control-theory-mobile-top.png
 ├── control-theory-overview-full.png
@@ -1595,7 +1602,6 @@
 │   ├── environment.md
 │   ├── how_to.md
 │   └── project_state.md
-├── prompt.md
 ├── pyproject.toml
 ├── rag -> control-standards/rag
 ├── src/

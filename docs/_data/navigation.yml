@@ -130,7 +130,7 @@
           url: "/design/architecture/machine-safety-architecture/"
         - label: "Compliance Stack"
           url: "/design/architecture/compliance-stack/"
-    - label: "Motor Selection"
+    - label: "Motor Selection Fundamentals"
       url: "/design/motor-selection/"
       children:
         - label: "Motor Selection Matrix"
@@ -142,7 +142,7 @@
       children:
         - label: "Electrical Review"
           url: "/design/workflows/electrical-review/"
-        - label: "Motor Selection"
+        - label: "Motor Selection Workflow"
           url: "/design/workflows/motor-selection/"
 
 - label: "Lifecycle"
@@ -340,5 +340,5 @@
       url: "/tools/rag-browser/"
     - label: "Reference Hub"
       url: "/tools/reference-hub/"
-    - label: "About this Atlas"
+    - label: "About this Field Guide"
       url: "/about/"

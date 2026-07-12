@@ -20,7 +20,7 @@ redirect_from:
 <div class="workflow-card-grid">
   <div class="workflow-card">
     <h3><a href="{{ '/lifecycle/' | relative_url }}">Machine Lifecycle</a></h3>
-    <p>11-stage structured progression from concept through maintenance, with standards and decision gates at each step.</p>
+    <p>A structured progression from concept through operation and management of change, with standards and decision gates at each step.</p>
   </div>
   <div class="workflow-card">
     <h3><a href="{{ '/lifecycle/safety-architecture/' | relative_url }}">Safety Architecture</a></h3>

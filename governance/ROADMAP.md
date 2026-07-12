@@ -58,25 +58,59 @@ below records the relocation so nothing is lost.
 | 46 | **Visual assets** — wire-colour-coding gallery at `/design/wiring/wire-color-coding/` (15 diagrams, 8 groups) + design-package poster on `/tools/templates/`. Image 14 (legacy-panel photographs) WITHHELD — unverifiable provenance, see change_log. | `docs/assets/images/` | **DONE 2026-07-12** |
 | 47 | **PLC software expansion** — 4 new pages + corpus notes in `/fundamentals/plc-software/`: Ladder Logic Fundamentals (primitives, seal-in, one-shots, scan order, alarm hysteresis, analog scaling) · PLC Algorithms & Equipment Staging (FIFO/queues, lead-lag, runtime/capacity staging, load shedding; cross-links water-wastewater) · PackML/ISA-88/ISA-95 (deepens machine-state/architecture models, no duplication) · Vendor Programming Architectures (Siemens OB/FB/DB vs Logix tags/AOI vs TwinCAT OO — consolidates both source docs' philosophy comparison, written once). Source discipline: strip `utm_source` params, re-verify all citations, paraphrase only. Source doc relocates to `control-standards/work/` (intake-loop capture tier). | `temp/plc_software.md` | Planned |
 | 48 | **PLC/IPC hardware reference + vendor documentation index** — xlsx → `docs/_data/manufacturers/vendor_doc_links.yml` → `/tools/manufacturers/vendor-documentation/` (~130 official-manual links: portal/manual/pub-ID/URL/notes); `/tools/manufacturers/plc-hardware-families/` from plcs.md (data-driven family tables, Mermaid selection flowchart, suffix decoding; ALL lifecycle/market claims dated "as of July 2026" and marked verify-current; positioning language softened). NOTE: `docs/vendor/` is the Jekyll Ruby bundle, not a content home. Sources relocate to `control-standards/work/` (md) and `planning/` (xlsx). | `temp/plcs.md`, `temp/PLC_IPC_Official_Reference_Links.xlsx` | Planned |
+| 46.1 | **Design-page review triage** — the fourth external review (`prompt.md`, untracked at the repo root, never part of the `temp/` intake batch; also the upstream source of the Phase 46 assets). Verified and fixed its three confirmed defects: the lifecycle stage count (`/design/` said 11, `/lifecycle/` said 13, the site actually publishes **14** — count dropped rather than restated, and the false "through decommissioning" endpoint corrected with a coverage-gap note); the duplicate "Motor Selection" sidebar entry; and the residual "Standards Atlas" branding on live pages. Review relocated to `planning/2026-07-12-design-page-review.md` with a triage record appended. | `planning/2026-07-12-design-page-review.md` | **DONE 2026-07-12** |
 
-### Research Tracks (recorded, deliberately not scheduled)
+### Research Tracks
 
-**AI/ML for Control Systems** — the owner's staging workspace
-(`temp/ai-ml-control-systems-research/`, 5 files: digital-twin integration
-spine, 6-level authority model, model-family capability map, source register,
-scientific-domain mapping). Self-labeled non-authoritative with an explicit
-do-not-build-yet posture, which this roadmap honors.
+**AI/ML for Control Systems — Phase 49, PLANNED (presentation architecture
+decided; build still gated).**
 
-- **Relocation (when touched next):** → `control-standards/work/research/ai-ml-control-systems/` (work tier)
+- **Source material:** `control-standards/work/research/ai-ml-control-systems/`
+  (relocated 2026-07-12 from `temp/`; work tier = non-authoritative capture).
+  5 files: digital-twin integration spine, 6-rung authority ladder, model-family
+  capability map, source register, scientific-domain mapping. Self-labeled
+  non-authoritative with an explicit do-not-build-yet posture, which this
+  roadmap honors.
+- **Presentation plan:** `planning/2026-07-12-ai-ml-control-systems-presentation-plan.md`
+- **Placement (recommended, owner to confirm):** one new subsection under Design,
+  `/design/ai-integration/`. **Not** split across Fundamentals and Design —
+  co-location is a safety property here: a reader landing on "CNNs" or "LLMs"
+  from a search engine must not meet the capability without the authority gate
+  attached.
+- **Structure: authority-first, not topic-first.** The research's own provisional
+  tree put safety 8th of 9. Reordered so the ladder (offline → read-only →
+  advisory → operator-approved → bounded supervisory → closed-loop) and the
+  safety boundary are pages 1 and 2, with the model families, digital-twin spine,
+  interfaces/handshakes, validation & drift, and worked architectures hanging off
+  them.
+- **Deferred within the track:** the scientific-domain mapping (physics /
+  chemistry / biology / microbiology / space) — real, large, and unsourced. It
+  earns a page only once the coupled-interface and time/length-scale questions
+  have evidence behind them.
 - **Promotion criteria before ANY site/corpus content:** the source-register
-  "still needed" gaps filled; the two arXiv preprints re-checked for
-  supersession; peer-reviewed vs vendor claims separated; the owner decides
-  taxonomy placement (candidates: Fundamentals or Design); corpus-first
-  authoring via the promotion checklist; least-authority framing (offline →
-  read-only → advisory → … → closed-loop) preserved; safety functions stay
-  independent of any AI path.
+  "still needed" gaps filled (including — load-bearing — *current standards or
+  guidance for AI in machinery and functional safety*, without which the safety
+  page would be inventing a position); the two arXiv preprints (2401.05443,
+  2409.18009) re-checked against the publisher for peer review / supersession
+  (Phase 45 precedent); peer-reviewed vs vendor claims visibly separated;
+  corpus-first authoring via the promotion checklist; least-authority framing
+  preserved on every page, not just the index; safety functions stay independent
+  of any AI path; pages ship at *Review pending*; original diagrams only.
+- **Explicitly out of scope:** no `cst` toolkit code, no ML dependencies in the
+  Python package, no closed-loop-learned-control how-to, and no claim of a
+  standards basis until that standards-guidance source gap is actually closed.
+- **Sequencing:** after Phases 47 and 48. Those build from verified sources; this
+  one is gated on research the owner has not finished.
 
 ### Backlog (recorded from the third review, not scheduled)
+
+- **`/design/` page restructure** (from the fourth review) — turn `/design/` from a
+  link directory into an end-to-end design workflow; separate general controls
+  engineering from functional safety; add the missing design disciplines. The
+  worked pump & VFD example it asks for already landed as the Phase 46
+  design-package poster. **Evaluate together with the three-level page
+  architecture proposal below — they overlap and conflict in places.**
+
 
 - **Standards-family expansion wishlist** (robotics ISO 10218-1/-2 + ISO/TS
   15066, B11, NFPA 70E, IEEE 1584, ISA-18.2/IEC 62682, ISA-5.1/88/95,

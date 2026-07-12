@@ -156,9 +156,9 @@ breadcrumb:
     </div>
     <div class="card">
       <span class="card__label">Browse</span>
-      <span class="card__title">Standards Atlas</span>
-      <p class="card__desc">Every standards family in the corpus, organized by region and topic. Use this when you already know which standard you need.</p>
-      <a href="{{ '/standards/' | relative_url }}" class="card__link">Open atlas &rarr;</a>
+      <span class="card__title">Standards Library</span>
+      <p class="card__desc">Every standards family in the reference library, organized by region and topic. Use this when you already know which standard you need.</p>
+      <a href="{{ '/standards/' | relative_url }}" class="card__link">Open the standards library &rarr;</a>
     </div>
   </div>
 </section>

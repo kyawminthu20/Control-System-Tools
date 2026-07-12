@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Engineering Lifecycle"
-description: "Safety engineering lifecycle — 13 stages from concept through decommissioning, with standards overlay, roles, and entry/exit criteria at each stage."
+description: "Safety engineering lifecycle — from concept through operation and management of change, with standards overlay, roles, and entry/exit criteria at each stage."
 redirect_from:
   - /verification/lifecycle/
 breadcrumb:
@@ -21,7 +21,7 @@ related_standards:
 <div class="page-header">
   <span class="page-header__label">Engineering Lifecycle</span>
   <h1>Functional-Safety Engineering Lifecycle</h1>
-  <p>13 stages from concept through decommissioning — with standards overlay, roles, and entry/exit criteria at each stage.</p>
+  <p>A structured lifecycle from concept through operation and management of change — with standards overlay, roles, and entry/exit criteria at each stage.</p>
 </div>
 
 > **Two lifecycles, one project.** This page defines the **functional-safety
@@ -55,9 +55,21 @@ flowchart LR
 
 This document defines the **Safety Engineering Lifecycle** — the structured sequence of stages, deliverables, and decision gates required to identify, design, implement, verify, and maintain safety-related controls for machinery and process systems.
 
-It exists to ensure that every project involving safeguarding — whether a new machine build, a retrofit, an integration, or a controls upgrade — follows a repeatable, standards-compliant process from initial concept through decommissioning. It is not a substitute for engineering judgment; it is the framework within which that judgment is applied and documented.
+It exists to ensure that every project involving safeguarding — whether a new machine build, a retrofit, an integration, or a controls upgrade — follows a repeatable, standards-compliant process from initial concept through operation and management of change. (Decommissioning is not yet covered as a stage — see the gap note below.) It is not a substitute for engineering judgment; it is the framework within which that judgment is applied and documented.
 
 This lifecycle governs all work where the outcome includes one or more **safety functions** — any function of a machine or process whose failure would directly result in an increase in risk to persons.
+
+> **Coverage gap — decommissioning.** This lifecycle currently runs from concept
+> through operation, maintenance, and management of change. **There is no
+> decommissioning stage page yet**, although the functional-safety standards this
+> site follows (IEC 61508, IEC 61511, IEC 62061) all define a lifecycle that
+> extends through decommissioning — including the requirement to keep safety
+> functions effective until the hazard itself is removed. Until that stage is
+> written, treat decommissioning as governed by the published standard, not by
+> this site. Earlier versions of this page and the homepage asserted a stage
+> *count* ("11 stages", "13 stages"); those numbers were inconsistent with each
+> other and with the stages actually published, so the count has been dropped
+> rather than restated.
 
 ---
 
