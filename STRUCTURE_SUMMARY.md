@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-12 01:35:30
+**Last Auto-Updated:** 2026-07-12 01:46:40
 
 ```text
 ├── .claude/
@@ -639,6 +639,26 @@
 │   │   │   └── main.css
 │   │   ├── data/
 │   │   │   └── search.json
+│   │   ├── images/
+│   │   │   ├── design-package/
+│   │   │   │   └── control-system-design-package-example.png
+│   │   │   └── wire-color-coding/
+│   │   │       ├── 00-wire-color-coding-title-banner.png
+│   │   │       ├── 01-reference-standards.png
+│   │   │       ├── 02-nfpa79-machinery-panel-us.png
+│   │   │       ├── 03-iec60204-machinery-panel.png
+│   │   │       ├── 04-us-facility-power-distribution.png
+│   │   │       ├── 05-plc-24vdc-io-wiring.png
+│   │   │       ├── 06-120vac-control-circuit.png
+│   │   │       ├── 07-4-20ma-transmitter-hookup.png
+│   │   │       ├── 08-intrinsically-safe-wiring.png
+│   │   │       ├── 09-vfd-to-motor-wiring.png
+│   │   │       ├── 10-servo-motion-system-wiring.png
+│   │   │       ├── 11-hvac-building-automation.png
+│   │   │       ├── 12-semiconductor-facility-color-map.png
+│   │   │       ├── 13-industrial-ethernet-cable-identification.png
+│   │   │       ├── 15-important-wiring-notes.png
+│   │   │       └── 16-symbol-legend.png
 │   │   ├── img/
 │   │   │   └── favicon.svg
 │   │   ├── js/
@@ -1128,6 +1148,8 @@
 │   │   │   ├── servo-drive/
 │   │   │   │   └── index.md
 │   │   │   ├── vfd/
+│   │   │   │   └── index.md
+│   │   │   ├── wire-color-coding/
 │   │   │   │   └── index.md
 │   │   │   └── wire-sizing/
 │   │   │       └── index.md

@@ -119,6 +119,8 @@
           url: "/design/wiring/motor-starter/"
         - label: "RTD &amp; Thermocouple"
           url: "/design/wiring/rtd-thermocouple/"
+        - label: "Wire Colour Coding"
+          url: "/design/wiring/wire-color-coding/"
     - label: "Architecture"
       url: "/design/architecture/"
       children:

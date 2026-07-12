@@ -64,8 +64,9 @@ For each topic area:
 
 | Aspect | US (NFPA 79) | EU (IEC 60204-1) | Resolution |
 |--------|-------------|------------------|-----------|
-| PE wire color | Green or bare | **Yellow-green required** | Use yellow-green |
-| Voltage scope | 600 V max | 1000 V AC / 1500 V DC | IEC 60204-1 covers higher voltages |
+| PE wire color | Green or green-with-yellow | **Green-and-yellow required** | Use green-and-yellow |
+| Conductor identification | Black power, red AC control, blue DC control, orange external-live | Brown/black/grey phases, light blue neutral, red AC control, dark blue DC control | The two conventions collide on almost every conductor except PE — see the [wire colour gallery]({{ '/design/wiring/wire-color-coding/' | relative_url }}) |
+| Voltage scope | 1000 V or less (the older 600 V ceiling is superseded) | 1000 V AC / 1500 V DC | Both now reach 1000 V AC; IEC additionally covers 1500 V DC |
 | Documentation requirements | Chapter 19 | Clause 17 (more prescriptive) | Follow IEC 60204-1 Clause 17 |
 | Neutral conductor | Less explicit | More explicit treatment | Follow IEC 60204-1 |
 

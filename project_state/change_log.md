@@ -1,7 +1,57 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-12 (Phase 45 — standards accuracy pass complete)
+**Last Updated:** 2026-07-12 (Phase 46 — visual assets complete)
 **Status:** Active
+
+## 2026-07-12 — Phase 46 — Visual assets (wire colour coding gallery + design-package poster)
+
+**Type:** New content (reference gallery) + first image assets on the site
+**Status:** Complete on `feat/phase-46-visual-assets`.
+
+- **New page** `/design/wiring/wire-color-coding/` — 15 reference diagrams in 8 groups (reference
+  standards · machinery & facility power · PLC and control circuits · instrumentation & IS ·
+  VFD/servo/motion · HVAC & semiconductor · industrial networks · field notes). Written around two
+  things colour actually does: **orange = may still be live with the disconnect OFF**, and
+  **green/green-yellow = protective earth, never anything else**. Everything else is convention in
+  service of traceability — colour narrows the *kind* of circuit; the wire number and drawing identify
+  *which*. AHJ/customer-drawings precedence caveat at the top, per the asset README's own instruction.
+- **Two collisions called out explicitly** (not in the source assets — added from the diagrams read
+  side by side): **orange** is the L2 phase in a US 277/480 V facility *and* the
+  external-live-with-disconnect-off marker in NFPA 79 machinery — and a machine panel fed from a 480 V
+  facility can contain both. **Light blue** is simultaneously the IEC neutral, an IEC DC common, and
+  the intrinsic-safety marking colour.
+- **Design-package poster** embedded on `/tools/templates/` — a pump & VFD skid carried through all ten
+  deliverables (P&ID → network → SLD → I/O list → cause & effect → panel layout → sequence → ladder →
+  HMI → hookup), showing how they reference each other. Carries the required
+  *products-shown-are-examples* caption (the poster depicts named vendor hardware as generic icons).
+- **Cross-links:** wiring index (new "Reference Gallery" group), sidebar nav, US industrial control
+  panel scenario, global machine scenario.
+- **CSS:** `.diagram-grid` / `.diagram-card` added to `main.css`, remapped from the source README's
+  MkDocs variables onto this site's design tokens. Images keep a white ground in dark mode so the
+  PNGs' own white background does not fight the panel.
+
+**One asset withheld.** `14-legacy-panel-before-after.png` is **not published**. It is the only asset
+containing **photographs of real control panels**, and their provenance is unknown — the repo's
+copyright posture is original diagrams only, never third-party photos or vendor screenshots, and
+Phase 45 is a fresh reminder of what unverified source material costs. It stays in `temp/` pending the
+author confirming he shot those photos himself. (It is also clipped on its right edge.)
+
+**Asset defects recorded, not hidden:** `15-important-wiring-notes.png` carries a sliver of an
+adjacent panel on its left edge, and `06-120vac-control-circuit.png` is slightly clipped at the right.
+Both are cropping artifacts in the source deck; the 15 note is disclosed in its caption rather than
+silently shipped.
+
+**Also fixed:** the global-machine scenario still carried the stale **NFPA 79 "600 V max"** scope — a
+Phase 45 correction this page was missed by. Now 1000 V, with the conductor-identification row
+expanded and pointed at the new gallery.
+
+**Alt text was written from the diagrams, not from `assets.json`** — the shipped alt strings were
+auto-generated filename echoes ("05 Plc 24Vdc Io Wiring") and are useless to a screen reader. Every
+diagram was opened and described.
+
+**Validation:** clean build (364 files), zero broken internal links, both pages rendered and checked in
+a browser (gallery grid, poster, dark mode, nav entry, review-meta). The 2 AI-boundary violations in
+`control-standards/rag/process_safety_details/` remain **pre-existing on `master`**.
 
 ## 2026-07-12 — Phase 45 — Standards accuracy pass (safety-significant)
 

@@ -215,6 +215,8 @@ Audit reminder: enclosure label ≠ panel listing mark ≠ external nameplate. A
 2. [NEC Article 409 and 430]({{ '/standards/us-electrical/nec/' | relative_url }})
 3. [NFPA 79 Chapter 9 — control circuits]({{ '/standards/us-electrical/nfpa-79/' | relative_url }})
 4. [UL 508A / NEC / NFPA 79 overlap crosswalk]({{ '/tools/crosswalks/ul508a-nec-nfpa79/' | relative_url }})
+5. [Wire colour coding reference gallery]({{ '/design/wiring/wire-color-coding/' | relative_url }}) — the NFPA 79 conductor identification convention this panel is wired to
+6. [What a design package contains]({{ '/tools/templates/' | relative_url }}) — the full set of drawings and documents this scenario produces
 
 ---
 

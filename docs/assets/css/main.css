@@ -2619,3 +2619,46 @@ tr:nth-child(even) td {
   color: var(--color-text-muted);
   font-size: 0.75rem;
 }
+
+/* --- Diagram gallery (Phase 46) --------------------------------------------
+   Responsive grid for reference diagram sets. The source assets shipped with
+   MkDocs variables (--md-default-fg-color--lightest etc.); those are remapped
+   here onto this site's tokens so the gallery themes with everything else. */
+.diagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+  align-items: start;
+  margin: 1.25rem 0;
+}
+
+.diagram-grid figure,
+.diagram-card {
+  margin: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+}
+
+.diagram-grid img,
+.diagram-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Diagrams are authored on white; keep that ground in dark mode rather than
+     letting a dark panel show through the PNG's own white background. */
+  background: #ffffff;
+}
+
+.diagram-grid figcaption,
+.diagram-card figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+}
+
+.diagram-card {
+  max-width: 100%;
+  overflow-x: auto;
+}

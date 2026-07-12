@@ -26,6 +26,31 @@ related_standards:
 > worked example I/O list — regenerate them from your own list to get real
 > project documents instead of blank forms.
 
+## What a Design Package Actually Contains
+
+Before the templates, the shape of the thing they add up to. This is one worked
+example — a pump and VFD control skid — carried through every document a
+controls package normally produces, so you can see how they reference each
+other rather than meeting them one blank form at a time.
+
+<div class="diagram-card">
+  <a href="{{ '/assets/images/design-package/control-system-design-package-example.png' | relative_url }}">
+    <img src="{{ '/assets/images/design-package/control-system-design-package-example.png' | relative_url }}"
+         alt="Control system design package example for a pump and VFD control skid, showing ten linked deliverables: a process and instrumentation diagram with tank, pump P-101, control valve and instruments LT-101, PT-101, FT-101; a network architecture diagram with engineering workstation, HMI, SCADA client, managed Ethernet switch, PLC, VFD and remote I/O; an electrical single line diagram from a 3-phase 480 VAC supply through a main disconnect and MCCB to the VFD, control power supply and panel heater; an I/O list mapping each tag to I/O type, signal type and PLC address; a cause and effect matrix mapping conditions such as high-high level and VFD fault to actions such as stop and trip; a panel layout drawing with dimensions; a written control sequence; PLC ladder logic showing a start/stop seal-in rung with permissives and a scale-and-move block for the speed reference; an HMI screen mockup; and a typical 4-20 mA instrument hookup detail."
+         loading="lazy">
+  </a>
+  <figcaption>
+    <strong>Example design package — pump &amp; VFD control skid.</strong>
+    Ten deliverables that reference one another: the P&amp;ID names the tags, the
+    I/O list addresses them, the cause &amp; effect matrix defines what they do,
+    the ladder implements it, and the panel layout houses it. Click to enlarge.
+    <br><br>
+    <em>Products and part numbers shown are examples only</em> — they illustrate
+    a typical architecture and are not a recommendation, endorsement, or
+    statement of compatibility. Substitute your own vendor selections.
+  </figcaption>
+</div>
+
 ## Design
 
 | Template | Format | Origin |

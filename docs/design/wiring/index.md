@@ -110,6 +110,15 @@ mistakes → verification checks → standards references.
   </div>
 </div>
 
+## Reference Gallery
+
+<div class="workflow-card-grid">
+  <div class="workflow-card">
+    <h3><a href="{{ '/design/wiring/wire-color-coding/' | relative_url }}">Wire Colour Coding</a></h3>
+    <p>15 diagrams across NFPA 79, IEC 60204-1, facility power, PLC I/O, instrumentation, IS circuits, VFD/servo, HVAC, fabs and networks — plus the two colours that actually hurt people.</p>
+  </div>
+</div>
+
 ## Related
 
 - [Engineering toolkit]({{ '/tools/engineering-toolkit/' | relative_url }}) — the sizing calculators these guides use
