@@ -51,7 +51,3 @@ NFPA 79 is critical for control system design because it dictates specific requi
 * **Stop Functions:** Defines Category 0 (immediate power removal), Category 1 (controlled stop then power removal), and Category 2 (controlled stop with power left available).
 * **Operating States:** Requirements for "Safe State" and protection against unintended startup after a power loss.
 * **Operator Interface:** Color coding for pushbuttons and indicator lights (e.g., Red for Emergency Stop, Green for Start).
-
----
-
-### Would you like me to expand on Section 2 with a more detailed breakdown of **NEC Article 670** vs. **NFPA 79** requirements?

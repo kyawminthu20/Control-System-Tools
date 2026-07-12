@@ -29,7 +29,7 @@ standards_editions:
   - "NEC 2023"
   - "NFPA 79 2024"
   - "UL 508A 2022"
-  - "IEC 60204-1 2018"
+  - "IEC 60204-1:2016+AMD1:2021"
   - "ISO 12100 2010"
   - "ISO 13849-1 2023"
 breadcrumb:
@@ -307,7 +307,7 @@ For a standard US industrial machine with safety functions, the full compliance 
 | Facility electrical installation | NEC | 2023 |
 | Final inspection | AHJ jurisdiction | — |
 
-> For EU/CE markets, add **IEC 60204-1 (2018)** alongside NFPA 79 and design to the more restrictive requirement at each point.
+> For EU/CE markets, add **IEC 60204-1 (2016+AMD1:2021)** alongside NFPA 79 and design to the more restrictive requirement at each point.
 
 ---
 ```

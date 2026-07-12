@@ -44,7 +44,3 @@ To comply with the 2024 edition, lighting systems must adhere to specific electr
 
 * 2026-01-15 — Initial draft created.
 * 2026-01-16 — Added details regarding line-side taps for maintenance lighting and the prevention of stroboscopic effects.
-
----
-
-### Would you like me to move on to **Chapter 15**, which covers **Marking and Safety Signs** (the critical requirements for labels, warnings, and machine nameplates)?

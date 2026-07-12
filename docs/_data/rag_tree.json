@@ -880,94 +880,112 @@
                     "serve_path": "standards_intelligence/international/machinery/iec_60204_1/GENERATION_SUMMARY.md"
                   },
                   {
-                    "name": "IEC60204_1_2018__Clause01__scope.md",
+                    "name": "IEC60204_1_2016A1__Clause01__scope.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause01__scope.md",
-                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause01__scope.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause01__scope.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause01__scope.md"
                   },
                   {
-                    "name": "IEC60204_1_2018__Clause02__normative_references.md",
+                    "name": "IEC60204_1_2016A1__Clause02__normative_references.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause02__normative_references.md",
-                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause02__normative_references.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause02__normative_references.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause02__normative_references.md"
                   },
                   {
-                    "name": "IEC60204_1_2018__Clause03__terms_and_definitions.md",
+                    "name": "IEC60204_1_2016A1__Clause03__terms_and_definitions.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause03__terms_and_definitions.md",
-                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause03__terms_and_definitions.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause03__terms_and_definitions.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause03__terms_and_definitions.md"
                   },
                   {
-                    "name": "IEC60204_1_2018__Clause04__general_requirements.md",
+                    "name": "IEC60204_1_2016A1__Clause04__general_requirements.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause04__general_requirements.md",
-                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause04__general_requirements.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause04__general_requirements.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause04__general_requirements.md"
                   },
                   {
-                    "name": "IEC60204_1_2018__Clause05__incoming_supply.md",
+                    "name": "IEC60204_1_2016A1__Clause05__incoming_supply.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause05__incoming_supply.md",
-                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause05__incoming_supply.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause05__incoming_supply.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause05__incoming_supply.md"
                   },
                   {
-                    "name": "IEC60204_1_2018__Clause06__protection_against_electric_shock.md",
+                    "name": "IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md",
-                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md"
                   },
                   {
-                    "name": "IEC60204_1_2018__Clause07__protection_of_equipment.md",
+                    "name": "IEC60204_1_2016A1__Clause07__protection_of_equipment.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause07__protection_of_equipment.md",
-                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause07__protection_of_equipment.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause07__protection_of_equipment.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause07__protection_of_equipment.md"
                   },
                   {
-                    "name": "IEC60204_1_2018__Clause08__equipotential_bonding.md",
+                    "name": "IEC60204_1_2016A1__Clause08__equipotential_bonding.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md",
-                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause08__equipotential_bonding.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause08__equipotential_bonding.md"
                   },
                   {
-                    "name": "IEC60204_1_2018__Clause09__control_circuits_and_functions.md",
+                    "name": "IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md",
-                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md"
                   },
                   {
-                    "name": "IEC60204_1_2018__Clause10__operator_interface.md",
+                    "name": "IEC60204_1_2016A1__Clause10__operator_interface.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md",
-                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause10__operator_interface.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause10__operator_interface.md"
                   },
                   {
-                    "name": "IEC60204_1_2018__Clause11__control_equipment.md",
+                    "name": "IEC60204_1_2016A1__Clause11__controlgear.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause11__control_equipment.md",
-                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause11__control_equipment.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause11__controlgear.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause11__controlgear.md"
                   },
                   {
-                    "name": "IEC60204_1_2018__Clause12__motors_and_drives.md",
+                    "name": "IEC60204_1_2016A1__Clause12__conductors_and_cables.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md",
-                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause12__conductors_and_cables.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause12__conductors_and_cables.md"
                   },
                   {
-                    "name": "IEC60204_1_2018__Clause13__accessories_and_lighting.md",
+                    "name": "IEC60204_1_2016A1__Clause13__wiring_practices.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause13__accessories_and_lighting.md",
-                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause13__accessories_and_lighting.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause13__wiring_practices.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause13__wiring_practices.md"
                   },
                   {
-                    "name": "IEC60204_1_2018__Clause14__marking_and_documentation.md",
+                    "name": "IEC60204_1_2016A1__Clause14__electric_motors.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md",
-                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause14__electric_motors.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause14__electric_motors.md"
                   },
                   {
-                    "name": "IEC60204_1_2018__Clause15__verification.md",
+                    "name": "IEC60204_1_2016A1__Clause15__socket_outlets_and_lighting.md",
                     "type": "file",
-                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md",
-                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md"
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause15__socket_outlets_and_lighting.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause15__socket_outlets_and_lighting.md"
+                  },
+                  {
+                    "name": "IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md",
+                    "type": "file",
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md"
+                  },
+                  {
+                    "name": "IEC60204_1_2016A1__Clause17__technical_documentation.md",
+                    "type": "file",
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause17__technical_documentation.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause17__technical_documentation.md"
+                  },
+                  {
+                    "name": "IEC60204_1_2016A1__Clause18__verification.md",
+                    "type": "file",
+                    "path": "control-standards/rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause18__verification.md",
+                    "serve_path": "standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause18__verification.md"
                   },
                   {
                     "name": "IEC60204_OVERVIEW.md",

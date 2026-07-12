@@ -47,7 +47,3 @@ Designers must organize the internal layout of the control cabinet to maintain "
 * **Finger-Safe Components:** Modern design favors components where terminals are recessed, preventing accidental contact during troubleshooting.
 * **Separation of Voltages:** High-voltage power distribution (e.g., 480V) should be physically separated or partitioned from low-voltage control signals (e.g., 24V) to prevent induction and accidental cross-contact.
 * **Warning Signs:** Any enclosure that cannot be fully de-energized by the main disconnect (e.g., external interlocking signals) must have a yellow warning label stating: **"WARNING: Hazard of Electric Shock — More than one disconnect switch may be required to de-energize the equipment."**
-
----
-
-### Would you like me to proceed to **Chapter 8**, which covers the **Protective Bonding Circuit** (Grounding), which is the primary mechanism for clearing faults?

@@ -26,7 +26,7 @@ requirements:
     verification_method: power_cycle_test
     standard_refs:
       - "us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#1-startstop-behavior"
-      - "international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#1-startstop-behavior"
+      - "international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md#1-startstop-behavior"
     industry_tags: [all]
 
   - id: MMD-004
@@ -36,7 +36,7 @@ requirements:
     verification_method: functional_test
     standard_refs:
       - "us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#2-emergency-stop-concepts"
-      - "international/machinery/iec_60204_1/IEC60204_1_2018__Clause03__terms_and_definitions.md#2-common-misinterpretations"
+      - "international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause03__terms_and_definitions.md#2-common-misinterpretations"
     industry_tags: [all]
 
   - id: MMD-005
@@ -46,7 +46,7 @@ requirements:
     verification_method: architecture_review_and_functional_test
     standard_refs:
       - "us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#3-safety-vs-standard-control-separation"
-      - "international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#3-safety-vs-standard-control-separation"
+      - "international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md#3-safety-vs-standard-control-separation"
     industry_tags: [all]
 
   - id: MMD-006
@@ -56,7 +56,7 @@ requirements:
     verification_method: inspection_and_functional_test
     standard_refs:
       - "us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#2-ergonomics-and-safety"
-      - "international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md#2-ergonomic-considerations"
+      - "international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause10__operator_interface.md#2-ergonomic-considerations"
     industry_tags: [all]
 
   - id: MMD-007
@@ -66,7 +66,7 @@ requirements:
     verification_method: inspection
     standard_refs:
       - "us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#2-ergonomics-and-safety"
-      - "international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md#2-ergonomic-considerations"
+      - "international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause10__operator_interface.md#2-ergonomic-considerations"
     industry_tags: [all]
 
   - id: MMD-008
@@ -168,7 +168,7 @@ requirements:
     verification_method: residual_voltage_test_and_label_inspection
     standard_refs:
       - "us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#1-protective-measures"
-      - "international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md#1-protective-measures"
+      - "international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md#1-protective-measures"
     industry_tags: [all]
 
   - id: MMD-019
@@ -178,7 +178,7 @@ requirements:
     verification_method: layout_review
     standard_refs:
       - "us/nfpa79/NFPA79_2024__Ch11__control_equipment.md#1-panel-construction-implications"
-      - "international/machinery/iec_60204_1/IEC60204_1_2018__Clause11__control_equipment.md#1-enclosures-and-layout"
+      - "international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause11__controlgear.md#1-enclosures-and-layout"
     industry_tags: [all]
 
   - id: MMD-020
@@ -188,7 +188,7 @@ requirements:
     verification_method: document_review_and_inspection
     standard_refs:
       - "us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#1-labeling-requirements"
-      - "international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md#1-identification-and-labels"
+      - "international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md#1-identification-and-labels"
     industry_tags: [all]
 
   - id: MMD-021
@@ -237,7 +237,7 @@ requirements:
     subsystem: network_logging
     verification_method: architecture_review_and_protocol_review
     standard_refs:
-      - "international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#3-safety-vs-standard-control-separation"
+      - "international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md#3-safety-vs-standard-control-separation"
     industry_tags: [all]
 
   - id: MMD-026
@@ -265,7 +265,7 @@ requirements:
     subsystem: documentation
     verification_method: document_package_review
     standard_refs:
-      - "international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md#2-documentation-set"
+      - "international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md#2-documentation-set"
       - "us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#2-documentation-expectations"
-      - "international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md#0-purpose"
+      - "international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause18__verification.md#0-purpose"
     industry_tags: [all]

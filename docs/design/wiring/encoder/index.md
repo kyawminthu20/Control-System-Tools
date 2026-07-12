@@ -11,7 +11,7 @@ breadcrumb:
 repo_path: "control-standards/rag/design_framework/wiring_practices/"
 review:
   standard: "RS-422/RS-423 line-driver convention; NFPA 79 / IEC 60204-1 (wiring-practice chapters)"
-  edition: "NFPA 79:2024, IEC 60204-1:2018"
+  edition: "NFPA 79:2024, IEC 60204-1:2016+AMD1:2021"
   status: "Review pending"
   coverage: "Output-type selection (differential vs single-ended), input-card matching, A/B/Z signal wiring and twisted-pair grouping, supply voltage drop, termination, and single-end shielding at chapter/article level; vendor terminal designations, logic thresholds, remote-sense and termination values, and servo/absolute feedback protocols deliberately excluded."
   last_reviewed: "July 2026"
@@ -252,7 +252,7 @@ sheets in [templates]({{ '/tools/templates/' | relative_url }})):
 - **NFPA 79:2024** — machine wiring-practice chapters: conductor
   identification, routing, and separation of sensitive signal circuits from
   power (chapter-level citation).
-- **IEC 60204-1:2018** — wiring practices for machine electrical equipment,
+- **IEC 60204-1:2016+AMD1:2021** — wiring practices for machine electrical equipment,
   the international counterpart; clause-level citation only.
 - Device manuals are the authority for terminal designations, output
   electrical type, supply and remote-sense wiring, logic thresholds, and

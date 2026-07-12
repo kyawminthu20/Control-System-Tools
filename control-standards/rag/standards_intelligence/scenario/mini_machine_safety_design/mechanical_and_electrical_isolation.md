@@ -38,16 +38,16 @@ The local corpus strongly supports electrical isolation and stored electrical en
 
 ## E-Stop Categories and Isolation
 
-1. The design shall allocate each stop function to Stop Category 0, 1, or 2 based on the hazard and the required stopping behavior. [LOCAL: us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#1-startstop-behavior] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#1-startstop-behavior]
-2. Emergency stop shall use only Category 0 or Category 1; Category 2 shall not be used for an emergency stop function. [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#2-emergency-stop-concepts]
+1. The design shall allocate each stop function to Stop Category 0, 1, or 2 based on the hazard and the required stopping behavior. [LOCAL: us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#1-startstop-behavior] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md#1-startstop-behavior]
+2. Emergency stop shall use only Category 0 or Category 1; Category 2 shall not be used for an emergency stop function. [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md#2-emergency-stop-concepts]
 3. The selected stop category for hydraulic motion shall be justified in the risk assessment and safety-function register. Detailed motion-stopping calculations are NOT FOUND IN LOCAL CORPUS – TO VERIFY. [TO VERIFY: ISO 13849-1] [TO VERIFY: ISO 4413]
 
 ## Stored Energy Discharge Requirements
 
 ### Electrical Stored Energy
 
-1. Stored electrical energy shall discharge below 60 V within 5 seconds after isolation, or the enclosure shall carry a warning label stating the required wait time. [LOCAL: us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#1-protective-measures] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md#1-protective-measures]
-2. Residual-voltage warning labels shall be included in machine markings and documentation where discharge time exceeds immediate touch-safe conditions. [LOCAL: us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#1-labeling-requirements] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md#1-identification-and-labels]
+1. Stored electrical energy shall discharge below 60 V within 5 seconds after isolation, or the enclosure shall carry a warning label stating the required wait time. [LOCAL: us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#1-protective-measures] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md#1-protective-measures]
+2. Residual-voltage warning labels shall be included in machine markings and documentation where discharge time exceeds immediate touch-safe conditions. [LOCAL: us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#1-labeling-requirements] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md#1-identification-and-labels]
 
 ### Hydraulic and Chemical Stored Energy
 
@@ -60,6 +60,6 @@ The maintenance isolation verification procedure shall include at least:
 
 1. apply lockout to the main electrical disconnect [LOCAL: us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md#3-lockout--tagout-loto-implications]
 2. verify that hazardous live parts are inaccessible or line-side terminals remain guarded and labeled [LOCAL: us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md#4-control-panel-design-rules]
-3. wait the documented residual-voltage discharge time or measure touch-safe voltage [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md#1-required-tests]
+3. wait the documented residual-voltage discharge time or measure touch-safe voltage [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause18__verification.md#1-required-tests]
 4. close mechanical isolation valves and open bleed or dump points until zero pressure is confirmed. Mechanical method details are NOT FOUND IN LOCAL CORPUS – TO VERIFY. [TO VERIFY: ISO 4413]
 5. confirm chemical isolation and drain or flush status before opening lines. NOT FOUND IN LOCAL CORPUS – TO VERIFY. [TO VERIFY: application-specific chemical handling standard]

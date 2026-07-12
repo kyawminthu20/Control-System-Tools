@@ -16,7 +16,6 @@ related_standards:
 <div class="page-header">
   <span class="page-header__label">Industry Reference — Water and Wastewater</span>
   <h1>Water and Wastewater Systems</h1>
-  <span class="badge badge--complete">Phase 25</span>
 </div>
 
 <blockquote>

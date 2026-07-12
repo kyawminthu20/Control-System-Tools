@@ -303,10 +303,11 @@ validation follows the machine's validation plan (ISO 13849-2 principle).
   (determination is upstream of this guide)
 - **IEC 62061** — functional safety of machine control systems: SIL/SILCL,
   architecture, and diagnostics (the IEC route to the same architecture inputs)
-- **IEC 60204-1** — electrical equipment of machines: **stop categories 0, 1,
-  and 2**, the emergency-stop function and its reset requirement (e-stop clause
-  at chapter level), earth-fault behavior, and the principle that a stop
-  function is not an isolation function
+- **IEC 60204-1** — electrical equipment of machines: **stop categories 0, 1 and 2**
+  for stop functions generally, of which **only Category 0 and Category 1 are valid
+  for an emergency stop** (Category 2 leaves power on the actuators); the
+  emergency-stop function and its reset requirement, earth-fault behavior, and the
+  principle that a stop function is not an isolation function
 - **ISO 13850** — emergency stop as a machinery-level function: dual-channel,
   direct-opening actuation, latched until deliberately reset
 - **NFPA 79:2024** — Ch. 7 (control-circuit protection), Ch. 8 (grounding and

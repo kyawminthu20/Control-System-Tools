@@ -45,7 +45,3 @@ Overcurrent protection directly influences how the control system is wired and h
 * **Common Control Feed:** If a single OCPD protects multiple control circuits, a minor fault in one sensor could take down the entire safety system. Chapter 7 encourages (and in some cases requires) "selective coordination" or individual circuit protection to maintain machine uptime and safety monitoring.
 * **Transformers and Power Supplies:** Specific rules apply to the protection of the primary and secondary sides of control transformers and DC power supplies to prevent "nuisance tripping" during the high inrush current of firing up the machine.
 * **Grounded Circuits:** Overcurrent devices must **not** be placed in the grounded conductor (the neutral or common), as opening that circuit could leave the rest of the system "hot" even though it appears dead.
-
----
-
-### Would you like me to assist with **Chapter 8**, which covers **Grounding and Bonding**—the most critical section for preventing electrical shock and noise interference?

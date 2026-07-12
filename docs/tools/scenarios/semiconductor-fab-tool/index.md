@@ -29,7 +29,6 @@ redirect_from:
 <div class="page-header">
   <span class="page-header__label">Scenario 08</span>
   <h1>Semiconductor Fab Tool — Etch / CVD Process Equipment</h1>
-  <span class="badge badge--complete">SEMI Corpus Complete — Phase 11</span>
 </div>
 
 ## Project Summary

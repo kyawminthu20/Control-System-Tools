@@ -53,9 +53,16 @@ Each safety function must be specified before any SIL determination or subsystem
 
 ## 2. SIL Determination from Risk Parameters
 
-IEC 62061 uses the same S/F/P risk parameters as ISO 12100 and ISO 13849-1, but applies them through a different quantitative route to arrive at a SIL rather than a PL.
+IEC 62061 provides **its own method** for determining the required SIL. It is not the
+ISO 13849-1 Annex A risk graph, and it is not "the ISO 12100 risk graph" — ISO 12100
+supplies the risk assessment methodology, and each design standard then applies its own
+parameterisation on top of it. IEC 62061's method estimates the severity of harm and the
+probability of its occurrence (exposure frequency/duration, probability of the hazardous
+event, and possibility of avoidance), combines them into a class, and reads a required SIL
+from that. The risk concepts are shared with ISO 13849-1; the parameters and arithmetic are
+not interchangeable.
 
-**Risk parameters (same definitions as ISO 12100):**
+**Risk parameters (conceptually parallel to the ISO 13849-1 set, but scored differently):**
 
 - **S — Severity of injury:** S1 = reversible injury; S2 = irreversible injury or death.
 - **F — Frequency/duration of exposure:** F1 = infrequent or short duration; F2 = frequent, continuous, or long duration.

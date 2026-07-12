@@ -64,7 +64,7 @@ Engineers and technicians still need to recognize:
 ## Related standards
 
 - NFPA 79 2024, Chapter 12 — Motors and Associated Equipment
-- IEC 60204-1 2018, Clause 12 — Motors and Drives
+- IEC 60204-1:2016+AMD1:2021, Clause 12 — Motors and Drives
 
 These standards govern application, protection, and integration, not the full internal motor-construction theory.
 

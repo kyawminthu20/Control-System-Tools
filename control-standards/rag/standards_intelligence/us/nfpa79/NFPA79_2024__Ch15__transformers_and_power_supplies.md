@@ -40,7 +40,3 @@ This is one of the most technical safety areas in the standard. How you ground t
 
 * 2026-01-15 — Initial draft created.
 * 2026-01-16 — Updated with 2024 specifics on DC power supply Class 2 requirements and magnetizing inrush protection.
-
----
-
-### Would you like me to move on to **Chapter 16**, which details **Marking and Safety Signs** (the critical requirements for labels, warnings, and machine nameplates)?

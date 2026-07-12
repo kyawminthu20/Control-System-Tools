@@ -190,13 +190,13 @@ Neither system is inherently safer than the other — the hazardous-area boundar
 
 | Topic | Standards | Corpus Status |
 |-------|-----------|---------------|
-| Zone classification (gas/vapor) | IEC 60079-10-1 | <span class="badge badge--complete">Reviewed</span> |
-| Flameproof enclosures | IEC 60079-1 | <span class="badge badge--complete">Reviewed</span> |
-| Intrinsic safety | IEC 60079-11 | <span class="badge badge--complete">Reviewed</span> |
-| Installation — Zone system | IEC 60079-14 | <span class="badge badge--complete">Reviewed</span> |
-| Inspection and maintenance | IEC 60079-17 | <span class="badge badge--complete">Reviewed</span> |
-| US Division system | NEC Art. 500, 501, 502, 503, 504, 505 | <span class="badge badge--complete">Reviewed</span> |
-| NEC Zone system | NEC Art. 505 (2023 ed.) | <span class="badge badge--complete">Reviewed</span> |
+| Zone classification (gas/vapor) | IEC 60079-10-1 | <span class="badge badge--reviewed">Reviewed</span> |
+| Flameproof enclosures | IEC 60079-1 | <span class="badge badge--reviewed">Reviewed</span> |
+| Intrinsic safety | IEC 60079-11 | <span class="badge badge--reviewed">Reviewed</span> |
+| Installation — Zone system | IEC 60079-14 | <span class="badge badge--reviewed">Reviewed</span> |
+| Inspection and maintenance | IEC 60079-17 | <span class="badge badge--reviewed">Reviewed</span> |
+| US Division system | NEC Art. 500, 501, 502, 503, 504, 505 | <span class="badge badge--reviewed">Reviewed</span> |
+| NEC Zone system | NEC Art. 505 (2023 ed.) | <span class="badge badge--reviewed">Reviewed</span> |
 | Area classification (dust) | IEC 60079-10-2 | <span class="badge badge--verify">Not in corpus</span> |
 
 ---

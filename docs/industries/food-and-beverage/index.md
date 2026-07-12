@@ -78,8 +78,8 @@ Is the machine shipped globally?
 
 | Category | Standards | Corpus Status |
 |----------|-----------|---------------|
-| US electrical | NEC, NFPA 79, UL 508A | <span class="badge badge--complete">Reviewed</span> |
-| International electrical | IEC 60204-1 | <span class="badge badge--complete">Reviewed</span> |
+| US electrical | NEC, NFPA 79, UL 508A | <span class="badge badge--reviewed">Reviewed</span> |
+| International electrical | IEC 60204-1 | <span class="badge badge--reviewed">Reviewed</span> |
 | Risk assessment | ISO 12100 | Planned <span class="badge badge--verify">Review pending</span> |
 | Safety functions (guarding, E-stop) | ISO 13849-1 (PLd common) | Planned <span class="badge badge--verify">Review pending</span> |
 | Hygienic design | EHEDG, NSF, or 3-A standards | Not in corpus |

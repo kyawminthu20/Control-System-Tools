@@ -1,7 +1,78 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-11 (Phase 38 — Wiring & Installation Guides, Wave 1 complete)
+**Last Updated:** 2026-07-12 (Phase 45 — standards accuracy pass complete)
 **Status:** Active
+
+## 2026-07-12 — Phase 45 — Standards accuracy pass (safety-significant)
+
+**Type:** Correctness fixes to published standards content + corpus structure
+**Status:** Complete on `fix/phase-45-standards-accuracy`.
+
+Claim-by-claim triage of the third external review (`planning/2026-07-11-standards-accuracy-review.md`,
+with the full triage record appended to it). **Every edition claim was verified against the official
+publisher before adoption** — IEC webstore, ISO catalogue/OBP, NFPA, UL Standards, EUR-Lex. Claims the
+publisher's free text could not settle are marked UNVERIFIABLE and carry a verify badge on the page
+rather than a confident assertion.
+
+**Safety-significant corrections (site + corpus):**
+- **ISO 12100 → PLr misattribution.** The S/F/P risk graph that yields PLr is in **ISO 13849-1 Annex A**,
+  not ISO 12100 (which supplies the risk-assessment methodology); IEC 62061 has its own SIL method.
+  Corrected in the corpus (ISO 12100 Cl.5/Cl.7, ISO 13849-1 Cl.4/Annex A, IEC 62061 Cl.6) and on the
+  ISO 12100, ISO 13849-1, IEC 62061 and functional-safety family pages.
+- **ISO 13849-1 / IEC 62061 are alternative routes**, not a ladder. Removed the false rule that IEC 62061
+  is "required when SIL > 2 is not achievable with ISO 13849-1".
+- **IEC 60204-1 edition, scope, clause structure, emergency stop.** Edition corrected to
+  **2016+AMD1:2021** (no "2018" edition exists). The **"applies above 25 V AC / 60 V DC" lower threshold
+  was fabricated** — the official scope sets only an upper limit (1 000 V AC / 1 500 V DC, ≤200 Hz).
+  Clause table rebuilt to the real **18 clauses** (Clause 18 Verification was missing entirely).
+  Emergency stop restricted to **Stop Category 0 or 1** (Category 2 is not an e-stop category).
+- **CE marking.** Replaced "CE marking requires an ISO 12100 risk assessment" with the legally correct
+  statement: EU machinery law requires a documented risk assessment and conformity with the applicable
+  EHSRs; harmonised standards are **voluntary** and confer presumption of conformity. Added the
+  **Machinery Regulation transition** — 2006/42/EC through **19 Jan 2027**, (EU) 2023/1230 from
+  **20 Jan 2027** (note: the original OJ text says 14 January; only the corrigendum OJ L 169 makes it the 20th).
+- **IEC 62443.** Part editions updated (**2-1:2024**, **2-4:2023**); **zones/conduits and SL-T moved to
+  62443-3-2** (3-3 defines system security requirements and SLs); **removed the default SL prescriptions**
+  ("most zones SL 2, safety zones SL 3") — SL-T must be derived from the documented risk assessment.
+- **IEC 61511 SIL range — the review itself was wrong, and so were we.** IEC 61511-1:2016 Clause 1
+  explicitly defines a maximum of **SIL 4** and a minimum of SIL 1. The page claimed "SIL 1–3 only; SIL 4
+  is excluded" (an Edition-1 belief). Corrected to SIL 1–4.
+- **UL 508A.** There is **no "UL 508A:2022"** — UL designates by edition + revision date. Corrected to
+  **3rd Edition (2018-04-24), revisions through 2025-06-26**. Removed the implication that every
+  industrial control panel must be UL listed (NEC Art. 409 mandates *marking* incl. SCCR, not Listing;
+  the requirement comes from AHJ / customer spec / insurance / contract).
+- **NFPA 79 ↔ UL 508A** scopes are **complementary and overlap** at the machine control panel — they do
+  not merely "interlock". UL's own guidance says reference to NFPA 79 may be needed for additional requirements.
+- **NEC** now carries three separate fields (edition covered / latest published / legally applicable),
+  supported by a new optional `edition_latest` + `edition_enforceable` in `_includes/review-meta.html`.
+
+**Found independently, not in the review:**
+- **NFPA 79 scope voltage was stale site-wide** — pages said 600 V; the current scope is **1000 V or less**.
+- **The IEC 60204-1 corpus module had been drafted against the superseded 2005 edition** — its Clause 15
+  carried the Ed. 5.0 title ("Accessories and lighting"), and it cited 9.2.5.4.2, which does not exist in
+  Ed. 6. It had 15 clause files, **skipped Clauses 12 (Conductors and cables) and 13 (Wiring practices)
+  entirely**, merged 16 and 17, and mis-numbered everything from 12 onward. Module renumbered against the
+  official contents (files re-prefixed `IEC60204_1_2016A1__`, ~600 cross-references rewritten); Clauses
+  12, 13 and 17 created (principles only — depth pass pending); `_index.yaml` rebuilt to 18 documents.
+- **22 corpus files ended with an AI drafting artifact** ("Would you like me to move on to Clause 15?"),
+  published through the RAG browser. All stripped.
+
+**Status vocabulary sweep (CONTENT_STANDARDS §3):** removed every internal label from the presentation
+layer ("Phase N Complete", "Corpus Complete", "Status in Corpus", shouty "REVIEWED"). Added real CSS for
+the five governed badges (`badge--reviewed/partial/pending/revalidate/planned`) — `badge--complete` was
+never even defined in CSS. **The review's proposed 6-term replacement vocabulary is REJECTED** (conflicts
+with the binding 5-term vocabulary); the substance of the complaint was fixed using the existing terms.
+
+**Page statuses:** every page whose technical content or edition metadata an agent touched dropped to
+**Review pending** — per governance, an agent never marks its own work Reviewed. **IEC 62061 → Needs
+revalidation**: its current reference is **2021+AMD1:2024+AMD2:2026 (CSV Ed. 2.2, published 2026-03-20)**;
+the page was written against the base 2021 edition and must be rebuilt from the consolidated text, not
+patched (SILCL → subsystem *maximum SIL*; scope extended beyond E/E/PE). 18 SILCL references remain by
+design, flagged at the top of the page.
+
+**Validation:** clean Jekyll build (363 files); **zero broken internal links**; RAG mirror re-synced
+(310 files). The AI-boundary validator reports 2 violations in
+`control-standards/rag/process_safety_details/` — **pre-existing on `master`, not introduced here**.
 
 ## 2026-07-11 — Phase 38 — Wiring & Installation Guides program + Wave 1
 

@@ -64,6 +64,6 @@ Engineers and technicians still need to recognize:
 ## Related standards
 
 - [NFPA79_2024__Ch12__motors_and_associated_equipment.md](../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch12__motors_and_associated_equipment.md)
-- [IEC60204_1_2018__Clause12__motors_and_drives.md](../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md)
+- [IEC60204_1_2016A1__Clause14__electric_motors.md](../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause14__electric_motors.md)
 
 These standards govern application, protection, and integration, not the full internal motor-construction theory.

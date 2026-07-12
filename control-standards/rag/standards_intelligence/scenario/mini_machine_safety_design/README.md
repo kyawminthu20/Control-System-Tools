@@ -17,7 +17,7 @@ This package defines a small skid-mounted machine concept that combines:
 - mechanical shutoff and bleed points for hydraulic and chemical circuits
 - electrical isolation, emergency stop, guard interlocks, and documented verification points
 
-The baseline concept is intended for industrial indoor machinery installations at 1000 V AC or less and is structured so it can be adapted to multiple industries through overlay files. [LOCAL: us/nfpa79/NFPA79_2024__Ch01__administration.md#0-scope-and-intent] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause01__scope.md#1-in-scope-machinery]
+The baseline concept is intended for industrial indoor machinery installations at 1000 V AC or less and is structured so it can be adapted to multiple industries through overlay files. [LOCAL: us/nfpa79/NFPA79_2024__Ch01__administration.md#0-scope-and-intent] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause01__scope.md#1-in-scope-machinery]
 
 The baseline package assumes:
 
@@ -41,9 +41,9 @@ The concept machine performs these functions:
 
 The package addresses these hazards:
 
-- electrical shock and residual voltage [LOCAL: us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#1-protective-measures] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md#1-protective-measures]
-- unexpected startup and failure to stop [LOCAL: us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#1-startstop-behavior] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#1-startstop-behavior]
-- operator access to hazardous motion [LOCAL: us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#2-ergonomics-and-safety] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md#2-ergonomic-considerations]
+- electrical shock and residual voltage [LOCAL: us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#1-protective-measures] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md#1-protective-measures]
+- unexpected startup and failure to stop [LOCAL: us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#1-startstop-behavior] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md#1-startstop-behavior]
+- operator access to hazardous motion [LOCAL: us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#2-ergonomics-and-safety] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause10__operator_interface.md#2-ergonomic-considerations]
 - hydraulic stored energy, pressure release, and fluid injection hazards. Detailed hydraulic normative requirements are NOT FOUND IN LOCAL CORPUS – TO VERIFY. [TO VERIFY: ISO 4413]
 - chemical exposure, spill, overfill, and dosing errors. Detailed chemical-handling normative requirements are NOT FOUND IN LOCAL CORPUS – TO VERIFY. [TO VERIFY: application-specific chemical handling standard]
 

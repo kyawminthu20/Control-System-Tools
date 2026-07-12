@@ -813,19 +813,19 @@ Legend
 Use these as canonical cross-links between the chapter/clause templates you already generated:
 
 * NFPA 79 Ch.5 ↔ IEC Clause 5
-  `NFPA79_2024__Ch05__disconnecting_means.md` ↔ `IEC60204_1_2018__Clause05__incoming_supply.md` ([Gt-Engineering][2])
+  `NFPA79_2024__Ch05__disconnecting_means.md` ↔ `IEC60204_1_2016A1__Clause05__incoming_supply.md` ([Gt-Engineering][2])
 
 * NFPA 79 Ch.8 ↔ IEC Clause 8
-  `NFPA79_2024__Ch08__grounding_and_bonding.md` ↔ `IEC60204_1_2018__Clause08__equipotential_bonding.md` ([NFPA Link][1])
+  `NFPA79_2024__Ch08__grounding_and_bonding.md` ↔ `IEC60204_1_2016A1__Clause08__equipotential_bonding.md` ([NFPA Link][1])
 
 * NFPA 79 Ch.9 ↔ IEC Clause 9
-  `NFPA79_2024__Ch09__control_circuits_and_control_functions.md` ↔ `IEC60204_1_2018__Clause09__control_circuits_and_functions.md` ([NFPA Link][1])
+  `NFPA79_2024__Ch09__control_circuits_and_control_functions.md` ↔ `IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md` ([NFPA Link][1])
 
 * NFPA 79 Ch.19 ↔ IEC Clause 14
-  `NFPA79_2024__Ch19__marking_and_documentation.md` ↔ `IEC60204_1_2018__Clause14__marking_and_documentation.md` ([NFPA Link][1])
+  `NFPA79_2024__Ch19__marking_and_documentation.md` ↔ `IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md` ([NFPA Link][1])
 
 * IEC Scope boundary note (important for your “scope router”)
-  `IEC60204_1_2018__Clause01__scope.md` should explicitly include: “machine electrical equipment begins at the point of supply connection” as an **approved paraphrase note**. ([Certifico][3])
+  `IEC60204_1_2016A1__Clause01__scope.md` should explicitly include: “machine electrical equipment begins at the point of supply connection” as an **approved paraphrase note**. ([Certifico][3])
 
 ---
 
@@ -882,7 +882,7 @@ TOPIC_ID: scope_boundary
 
 ## Cross-links
 - NFPA 79: `NFPA79_2024__Ch01__administration.md`
-- IEC 60204-1: `IEC60204_1_2018__Clause01__scope.md`
+- IEC 60204-1: `IEC60204_1_2016A1__Clause01__scope.md`
 ```
 
 ---
@@ -913,7 +913,7 @@ TOPIC_ID: definitions
 
 ## Cross-links
 - NFPA 79: `NFPA79_2024__Ch02__definitions.md`
-- IEC 60204-1: `IEC60204_1_2018__Clause03__terms_and_definitions.md`
+- IEC 60204-1: `IEC60204_1_2016A1__Clause03__terms_and_definitions.md`
 ```
 
 ---
@@ -944,7 +944,7 @@ TOPIC_ID: general_requirements
 
 ## Cross-links
 - NFPA 79: `NFPA79_2024__Ch03__general_requirements.md`
-- IEC 60204-1: `IEC60204_1_2018__Clause04__general_requirements.md`
+- IEC 60204-1: `IEC60204_1_2016A1__Clause04__general_requirements.md`
 ```
 
 ---
@@ -977,7 +977,7 @@ TOPIC_ID: incoming_supply_disconnect
 
 ## Cross-links
 - NFPA 79: `NFPA79_2024__Ch05__disconnecting_means.md`
-- IEC 60204-1: `IEC60204_1_2018__Clause05__incoming_supply.md`
+- IEC 60204-1: `IEC60204_1_2016A1__Clause05__incoming_supply.md`
 ```
 
 ---
@@ -1009,7 +1009,7 @@ TOPIC_ID: electric_shock_protection
 
 ## Cross-links
 - NFPA 79: `NFPA79_2024__Ch07__protection_against_electric_shock.md`
-- IEC 60204-1: `IEC60204_1_2018__Clause06__protection_against_electric_shock.md`
+- IEC 60204-1: `IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md`
 ```
 
 ---
@@ -1040,7 +1040,7 @@ TOPIC_ID: equipment_protection
 
 ## Cross-links
 - NFPA 79: `NFPA79_2024__Ch06__overcurrent_protection.md`
-- IEC 60204-1: `IEC60204_1_2018__Clause07__protection_of_equipment.md`
+- IEC 60204-1: `IEC60204_1_2016A1__Clause07__protection_of_equipment.md`
 ```
 
 ---
@@ -1072,7 +1072,7 @@ TOPIC_ID: grounding_bonding
 
 ## Cross-links
 - NFPA 79: `NFPA79_2024__Ch08__grounding_and_bonding.md`
-- IEC 60204-1: `IEC60204_1_2018__Clause08__equipotential_bonding.md`
+- IEC 60204-1: `IEC60204_1_2016A1__Clause08__equipotential_bonding.md`
 ```
 
 ---
@@ -1104,7 +1104,7 @@ TOPIC_ID: control_functions
 
 ## Cross-links
 - NFPA 79: `NFPA79_2024__Ch09__control_circuits_and_control_functions.md`
-- IEC 60204-1: `IEC60204_1_2018__Clause09__control_circuits_and_functions.md`
+- IEC 60204-1: `IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md`
 ```
 
 ---
@@ -1136,7 +1136,7 @@ TOPIC_ID: operator_interface
 
 ## Cross-links
 - NFPA 79: `NFPA79_2024__Ch10__operator_interface_devices.md`
-- IEC 60204-1: `IEC60204_1_2018__Clause10__operator_interface.md`
+- IEC 60204-1: `IEC60204_1_2016A1__Clause10__operator_interface.md`
 ```
 
 ---
@@ -1167,7 +1167,7 @@ TOPIC_ID: control_equipment
 
 ## Cross-links
 - NFPA 79: `NFPA79_2024__Ch11__control_equipment.md`
-- IEC 60204-1: `IEC60204_1_2018__Clause11__control_equipment.md`
+- IEC 60204-1: `IEC60204_1_2016A1__Clause11__controlgear.md`
 ```
 
 ---
@@ -1198,7 +1198,7 @@ TOPIC_ID: motors_drives
 
 ## Cross-links
 - NFPA 79: `NFPA79_2024__Ch12__motors_and_associated_equipment.md`
-- IEC 60204-1: `IEC60204_1_2018__Clause12__motors_and_drives.md`
+- IEC 60204-1: `IEC60204_1_2016A1__Clause14__electric_motors.md`
 ```
 
 ---
@@ -1230,7 +1230,7 @@ TOPIC_ID: accessories_lighting
 ## Cross-links
 - NFPA 79: `NFPA79_2024__Ch13__appliances_and_accessories.md`
 - NFPA 79: `NFPA79_2024__Ch14__lighting.md`
-- IEC 60204-1: `IEC60204_1_2018__Clause13__accessories_and_lighting.md`
+- IEC 60204-1: `IEC60204_1_2016A1__Clause15__socket_outlets_and_lighting.md`
 ```
 
 ---
@@ -1261,7 +1261,7 @@ TOPIC_ID: marking_documentation
 
 ## Cross-links
 - NFPA 79: `NFPA79_2024__Ch19__marking_and_documentation.md`
-- IEC 60204-1: `IEC60204_1_2018__Clause14__marking_and_documentation.md`
+- IEC 60204-1: `IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md`
 ```
 
 ---
@@ -1293,7 +1293,7 @@ TOPIC_ID: verification
 
 ## Cross-links
 - NFPA 79: `NFPA79_2024__Ch20__system_integration.md`
-- IEC 60204-1: `IEC60204_1_2018__Clause15__verification.md`
+- IEC 60204-1: `IEC60204_1_2016A1__Clause18__verification.md`
 ```
 
 ---

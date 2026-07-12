@@ -27,7 +27,6 @@ review:
   <h1>SEMI S2 / S8 / S14 — Semiconductor Equipment Safety</h1>
 </div>
 
-<span class="badge badge--complete">Phase 10 Complete</span>
 
 ## Standard Overview
 

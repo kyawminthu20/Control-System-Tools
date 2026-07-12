@@ -51,7 +51,3 @@ Article 300 covers the general requirements for all wiring methods. For industri
 ## 4. Change log
 
 * 2026-01-15 — Initial draft created; added requirements for conductor grouping and inductive heating prevention.
-
----
-
-**Would you like me to finish the "Core Articles" by drafting Article 310 (Conductors for General Wiring) to cover wire ampacity and derating?**

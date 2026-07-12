@@ -11,7 +11,7 @@ breadcrumb:
 repo_path: "control-standards/rag/design_framework/wiring_practices/"
 review:
   standard: "NFPA 79 / IEC 60204-1 (wiring-practice chapters); IEC 61000 series at overview level"
-  edition: "NFPA 79:2024, IEC 60204-1:2018"
+  edition: "NFPA 79:2024, IEC 60204-1:2016+AMD1:2021"
   status: "Review pending"
   coverage: "Coupling mechanisms, separation classes, coil suppression, shield/twisted-pair practice, and panel EMC layout; separation distances and filter selections are deliberately not tabulated — verify against vendor and cabling-standard tables"
   last_reviewed: "July 2026"
@@ -177,7 +177,7 @@ All items in this section are generally accepted practice — verify against you
 ## Standards References
 
 - **NFPA 79:2024, Chapter 13** — wiring practices: routing, ducts, and separation of circuits (chapter-level citation; consult the current text). Chapter 8 for the grounding/bonding basis.
-- **IEC 60204-1:2018, Clause 13** — wiring practices; Clause 4 lists EMC among the physical-environment considerations (clause-level citation).
+- **IEC 60204-1:2016+AMD1:2021, Clause 13** — wiring practices; Clause 4 lists EMC among the physical-environment considerations (clause-level citation).
 - **IEC 61000 series** — the international EMC framework (emission and immunity levels, test methods) that product standards reference. Cited here at overview level only; no clause claims.
 - **Drive-vendor EMC installation guides** — the practical authority for drive-related separation distances, filter selection, and shield termination. Treated as a category; consult the manual for the specific drive.
 - **EN 50174-2 / TIA-569** — separation tables for information-technology cabling vs. power; referenced from the communications section.

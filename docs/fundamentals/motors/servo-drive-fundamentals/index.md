@@ -118,8 +118,8 @@ They are motion-control systems that combine:
 
 - NFPA 79 2024, Chapter 9 — Control Circuits and Control Functions
 - NFPA 79 2024, Chapter 12 — Motors and Associated Equipment
-- IEC 60204-1 2018, Clause 9 — Control Circuits and Functions
-- IEC 60204-1 2018, Clause 12 — Motors and Drives
+- IEC 60204-1:2016+AMD1:2021, Clause 9 — Control Circuits and Functions
+- IEC 60204-1:2016+AMD1:2021, Clause 12 — Motors and Drives
 
 ---
 

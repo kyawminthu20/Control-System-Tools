@@ -410,8 +410,8 @@ The local corpus already contains usable routing content for this layer in:
 
 - `us/nfpa79/NFPA79_2024__Ch16__wiring_methods.md`
 - `us/nec/NEC_2023__Art300__general_wiring_methods.md`
-- `international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md`
-- `international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md`
+- `international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause08__equipotential_bonding.md`
+- `international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md`
 
 ## Intrinsic Safety and Hazardous-Area IO
 

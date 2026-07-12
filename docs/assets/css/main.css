@@ -601,6 +601,39 @@ tr:nth-child(even) td {
   background: #fdfae8;
 }
 
+/* Status vocabulary badges — the five terms in CONTENT_STANDARDS §3. These are
+   the only status labels permitted on site pages; internal authoring flags
+   ("Complete", "Phase N Complete") must never reach the presentation layer. */
+.badge--reviewed {
+  color: #1a6b1a;
+  border-color: #4a9a4a;
+  background: #f0faf0;
+}
+
+.badge--partial {
+  color: #5a3a00;
+  border-color: #8a6a00;
+  background: #fdfae8;
+}
+
+.badge--pending {
+  color: var(--color-warn);
+  border-color: var(--color-warn);
+  background: var(--color-warn-bg);
+}
+
+.badge--revalidate {
+  color: #7a1a1a;
+  border-color: #aa4a4a;
+  background: #fdf0f0;
+}
+
+.badge--planned {
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+  background: transparent;
+}
+
 /* --- Standards Cards ------------------------------------------------------- */
 .card-grid {
   display: grid;

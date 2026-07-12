@@ -7,7 +7,7 @@ standards_editions:
   - "NEC 2023"
   - "NFPA 79 2024"
   - "UL 508A 2022"
-  - "IEC 60204-1 2018"
+  - "IEC 60204-1:2016+AMD1:2021"
   - "ISO 12100 2010"
   - "ISO 13849-1 2023"
 breadcrumb:
@@ -155,7 +155,7 @@ flowchart TD
 | Safety functions present (machine guards, E-stop) | ISO 13849-1 (PL path) or IEC 62061 (SIL path) |
 | Process safety instrumented function | IEC 61511 |
 | Networked / connected control system | IEC 62443 (cybersecurity) |
-| Hazardous area (classified locations) | IEC 60079 family <span class="badge badge--complete">Reviewed</span> |
+| Hazardous area (classified locations) | IEC 60079 family <span class="badge badge--reviewed">Reviewed</span> |
 | Safety PLC software | IEC 61508-3 (via IEC 62061 or IEC 61511) |
 
 ---
@@ -178,18 +178,18 @@ Many engineers confuse these three overlapping standards. The table below clarif
 
 | Standard | Corpus Status |
 |----------|--------------|
-| NEC 2023 | Complete |
-| NFPA 79 2024 | Complete |
-| UL 508A 2022 | Complete |
-| IEC 60204-1 2018 | Complete |
-| ISO 12100 2010 | Complete <span class="badge badge--complete">Reviewed</span> |
-| ISO 13849-1 2023 | Complete <span class="badge badge--complete">Reviewed</span> |
-| IEC 62061 2021 | Complete <span class="badge badge--complete">Reviewed</span> |
-| IEC 61508 2010 | Complete <span class="badge badge--complete">Reviewed</span> |
-| IEC 61511 2016 | Complete <span class="badge badge--complete">Reviewed</span> |
+| NEC (NFPA 70) | <span class="badge badge--pending">Review pending</span> |
+| NFPA 79 2024 | <span class="badge badge--pending">Review pending</span> |
+| UL 508A (Ed. 3) | <span class="badge badge--pending">Review pending</span> |
+| IEC 60204-1:2016+AMD1:2021 | <span class="badge badge--pending">Review pending</span> |
+| ISO 12100 2010 | <span class="badge badge--pending">Review pending</span> |
+| ISO 13849-1 2023 | <span class="badge badge--pending">Review pending</span> |
+| IEC 62061 2021 | <span class="badge badge--revalidate">Needs revalidation</span> |
+| IEC 61508 2010 | <span class="badge badge--reviewed">Reviewed</span> |
+| IEC 61511 2016 | <span class="badge badge--reviewed">Reviewed</span> |
 | IEC 62443 | Routing reference only <span class="badge badge--verify">Review pending</span> |
-| IEC 60079 family | Complete <span class="badge badge--complete">Reviewed</span> |
-| SEMI S2/S8/S14 | Complete <span class="badge badge--complete">Reviewed</span> |
+| IEC 60079 family | <span class="badge badge--reviewed">Reviewed</span> |
+| SEMI S2/S8/S14 | <span class="badge badge--reviewed">Reviewed</span> |
 
 ---
 
@@ -217,7 +217,7 @@ For a standard US industrial machine with safety functions, the full compliance 
 | Facility electrical installation | NEC | 2023 |
 | Final inspection | AHJ jurisdiction | — |
 
-> For EU/CE markets, add **IEC 60204-1 (2018)** alongside NFPA 79 and design to the more restrictive requirement at each point.
+> For EU/CE markets, add **IEC 60204-1 (2016+AMD1:2021)** alongside NFPA 79 and design to the more restrictive requirement at each point.
 
 ---
 

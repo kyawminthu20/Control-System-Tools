@@ -19,13 +19,13 @@ This package defines a compact enclosed CNC machining-center concept that combin
 - one main control panel with drives, PLC or CNC logic, safety logic, HMI, and local event logging
 - optional coolant, lubrication, chip handling, and pneumatic or hydraulic workholding support
 
-The baseline concept is intended for indoor industrial metal-cutting machinery at 1000 V AC or less. It is treated as machinery rather than building-service equipment. [LOCAL: us/nfpa79/NFPA79_2024__Ch01__administration.md#0-scope-and-intent] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause01__scope.md#1-in-scope-machinery]
+The baseline concept is intended for indoor industrial metal-cutting machinery at 1000 V AC or less. It is treated as machinery rather than building-service equipment. [LOCAL: us/nfpa79/NFPA79_2024__Ch01__administration.md#0-scope-and-intent] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause01__scope.md#1-in-scope-machinery]
 
 The baseline package assumes:
 
 - an enclosed CNC machine with powered spindle and servo axes
 - operator loading and unloading through an interlocked access door
-- safety-related stopping handled by safety-rated logic and drive-safe interfaces rather than by ordinary CNC or HMI commands alone [LOCAL: us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#3-safety-vs-standard-control-separation] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#3-safety-vs-standard-control-separation]
+- safety-related stopping handled by safety-rated logic and drive-safe interfaces rather than by ordinary CNC or HMI commands alone [LOCAL: us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#3-safety-vs-standard-control-separation] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md#3-safety-vs-standard-control-separation]
 - machine electrical compliance driven by NFPA 79 and NEC for US use, or IEC 60204-1 plus machine-safety standards for international use [LOCAL: us/nfpa79/NFPA79_2024__Ch01__administration.md#2-boundaries-with-other-standards] [LOCAL: _standards_map.md#Market-Based Selection]
 
 The baseline package does not close machine-tool-specific type-C requirements, detailed stop-time-based guard unlocking, or formal PL or SIL target calculations because those methods are not populated in the local corpus. These remain `TO VERIFY`. [TO VERIFY: ISO 16090-1] [TO VERIFY: ISO 13849-1] [TO VERIFY: IEC 62061]
@@ -48,8 +48,8 @@ This package addresses these hazards:
 - rotating spindle or tool entanglement and contact [LOCAL: us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#1-startstop-behavior]
 - chip, coolant, tool, or workpiece ejection from the machining zone. Detailed machine-tool-specific measures are `TO VERIFY`. [TO VERIFY: ISO 16090-1]
 - pinch or crush hazards from moving axes or the tool changer [LOCAL: us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#2-ergonomics-and-safety]
-- unexpected startup or failure to stop [LOCAL: us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#1-startstop-behavior] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#1-startstop-behavior]
-- electrical shock and residual voltage after isolation [LOCAL: us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#1-protective-measures] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md#1-protective-measures]
+- unexpected startup or failure to stop [LOCAL: us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#1-startstop-behavior] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md#1-startstop-behavior]
+- electrical shock and residual voltage after isolation [LOCAL: us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#1-protective-measures] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md#1-protective-measures]
 - stored pneumatic or hydraulic energy where tool clamping, workholding, or automatic doors use fluid power. Detailed fluid-power requirements are `TO VERIFY`. [TO VERIFY: ISO 4413]
 
 ## How To Use This Package

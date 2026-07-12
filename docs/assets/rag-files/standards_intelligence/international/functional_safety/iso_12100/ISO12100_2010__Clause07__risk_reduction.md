@@ -55,7 +55,7 @@ Major categories of safeguarding:
 | Safe-direction / safe-speed control | PLC-based speed/direction monitoring | Safety-rated drive functions (STO, SS1, SLS); IEC 61800-5-2 applies |
 | Pressure-sensitive devices | Safety edges, bumpers on AGVs | Contact detection |
 
-Step 2 measures introduce a safety function — a function of the machine whose failure results in an immediate increase in risk. Safety functions must be designed to a PL or SIL commensurate with the PLr or SIL target from the ISO 12100 risk estimation.
+Step 2 measures introduce a safety function — a function of the machine whose failure results in an immediate increase in risk. Safety functions must be designed to a PL or SIL commensurate with the PLr or SIL target derived for them — PLr from the ISO 13849-1 Annex A risk graph, or a SIL target from the IEC 62061 method — using the risk estimation performed under ISO 12100.
 
 ## 3. Step 3 — Information for use
 
@@ -87,7 +87,7 @@ In practice, most machines require all three steps applied to different hazards 
 
 ## 5. Relationship to ISO 13849-1 and IEC 62061
 
-Step 2 safety devices introduce safety functions. Each safety function must be designed and validated to achieve a PL or SIL that meets or exceeds the PLr or SIL target established by the ISO 12100 risk estimation.
+Step 2 safety devices introduce safety functions. Each safety function must be designed and validated to achieve a PL or SIL that meets or exceeds its target. The target is established by the design standard being applied (PLr via ISO 13849-1 Annex A, or a SIL via the IEC 62061 method), informed by the ISO 12100 risk estimation.
 
 The design pathway:
 

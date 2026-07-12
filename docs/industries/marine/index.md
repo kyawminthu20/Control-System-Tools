@@ -53,9 +53,9 @@ Marine vessels operate under a layered regulatory system unlike any onshore indu
 |----------|----------|--------|
 | Electrical installations on ships | IEC 60092 series | Not in corpus — consult directly |
 | Machinery control automation | IEC 60092-504 | Not in corpus |
-| Process safety (SIS on tankers) | IEC 61511 | <span class="badge badge--complete">Reviewed</span> |
-| Hazardous area (tankers, gas carriers) | IEC 60079 series | <span class="badge badge--complete">Reviewed</span> |
-| Functional safety (machinery) | IEC 62061 / ISO 13849-1 | <span class="badge badge--complete">Reviewed</span> |
+| Process safety (SIS on tankers) | IEC 61511 | <span class="badge badge--reviewed">Reviewed</span> |
+| Hazardous area (tankers, gas carriers) | IEC 60079 series | <span class="badge badge--reviewed">Reviewed</span> |
+| Functional safety (machinery) | IEC 62061 / ISO 13849-1 | <span class="badge badge--reviewed">Reviewed</span> |
 | IMO fire safety | SOLAS Chapter II-2 | Not in corpus |
 
 ---

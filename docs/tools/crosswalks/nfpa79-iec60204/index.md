@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "NFPA 79 ↔ IEC 60204-1 Crosswalk"
-description: "Topic-by-topic equivalency matrix between NFPA 79:2024 and IEC 60204-1:2018 for dual-market machinery."
+description: "Topic-by-topic equivalency matrix between NFPA 79:2024 and IEC 60204-1:2016+AMD1:2021 for dual-market machinery."
 breadcrumb:
   - name: "Crosswalks"
     url: "/tools/crosswalks/"
@@ -19,7 +19,7 @@ redirect_from:
 
 <div class="page-header">
   <span class="page-header__label">Crosswalk</span>
-  <h1>NFPA 79:2024 ↔ IEC 60204-1:2018</h1>
+  <h1>NFPA 79:2024 ↔ IEC 60204-1:2016+AMD1:2021</h1>
   <p>Equivalency matrix for dual-market machinery (US + EU). Source: <code>rag/tools/crosswalks/overlap_matrix/nfpa79_iec60204_overlap.md</code></p>
 </div>
 
@@ -69,7 +69,7 @@ Use this crosswalk when designing machinery for both US and EU markets. Both sta
 
 | Aspect | NFPA 79 | IEC 60204-1 |
 |--------|---------|-------------|
-| AC voltage ceiling | 600 V | 1000 V |
+| AC voltage ceiling | 1000 V (current edition; the 600 V figure is out of date) | 1000 V (1500 V DC) |
 | DC voltage ceiling | — | 1500 V |
 
 **Implication:** IEC 60204-1 covers higher voltages. For standard 480V / 400V machinery, both apply equally.

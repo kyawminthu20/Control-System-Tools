@@ -30,7 +30,6 @@ redirect_from:
 <div class="page-header">
   <span class="page-header__label">Scenario 05</span>
   <h1>Semiconductor Equipment Compliance</h1>
-  <span class="badge badge--complete">SEMI S2/S8/S14 — Phase 10 Complete</span>
 </div>
 
 ## Project Summary
@@ -53,15 +52,15 @@ Source: `rag/reference_models/15-Standard Minimum Compliance Stack.md`
 | 1 | ISO 12100 | Risk assessment foundation | Planned <span class="badge badge--verify">Review pending</span> |
 | 2 | ISO 13849-1 | Performance Level safety design | Planned <span class="badge badge--verify">Review pending</span> |
 | 3 | ISO 13850 | Emergency stop requirements | Not separately covered |
-| 4 | IEC 60204-1 | Electrical machine design | Complete |
+| 4 | IEC 60204-1 | Electrical machine design | <span class="badge badge--pending">Review pending</span> |
 
 ### Domain 2 — US Electrical Compliance
 
 | # | Standard | Purpose | Corpus Status |
 |---|----------|---------|---------------|
-| 5 | NFPA 79 | US machine electrical | Complete |
-| 6 | NEC (NFPA 70) | US installation code | Complete |
-| 7 | UL 508A | US control panel listing | Complete |
+| 5 | NFPA 79 | US machine electrical | <span class="badge badge--pending">Review pending</span> |
+| 6 | NEC (NFPA 70) | US installation code | <span class="badge badge--pending">Review pending</span> |
+| 7 | UL 508A | US control panel listing | <span class="badge badge--pending">Review pending</span> |
 
 ### Domain 3 — Functional Safety
 
@@ -76,9 +75,9 @@ Source: `rag/reference_models/15-Standard Minimum Compliance Stack.md`
 
 | # | Standard | Purpose | Corpus Status |
 |---|----------|---------|---------------|
-| 10 | SEMI S2 | Semiconductor equipment safety | <span class="badge badge--complete">Reviewed</span> |
-| 11 | SEMI S8 | Operator safety | <span class="badge badge--complete">Reviewed</span> |
-| 12 | SEMI S14 | Fire hazards in tools | <span class="badge badge--complete">Reviewed</span> |
+| 10 | SEMI S2 | Semiconductor equipment safety | <span class="badge badge--reviewed">Reviewed</span> |
+| 11 | SEMI S8 | Operator safety | <span class="badge badge--reviewed">Reviewed</span> |
+| 12 | SEMI S14 | Fire hazards in tools | <span class="badge badge--reviewed">Reviewed</span> |
 | — | NFPA 318 | Fab safety requirements | Not confirmed in corpus |
 
 ### Domain 5 — Cybersecurity

@@ -71,8 +71,8 @@ Does the equipment need seismic or environmental qualification?
 
 | Category | Standards | Corpus Status |
 |----------|-----------|---------------|
-| US electrical baseline | NEC | <span class="badge badge--complete">Reviewed</span> |
-| International electrical baseline | IEC 60204-1 | <span class="badge badge--complete">Reviewed</span> |
+| US electrical baseline | NEC | <span class="badge badge--reviewed">Reviewed</span> |
+| International electrical baseline | IEC 60204-1 | <span class="badge badge--reviewed">Reviewed</span> |
 | Nuclear QA | 10 CFR 50 Appendix B | Not in corpus |
 | Nuclear I&C | IEEE 603, IEEE 7-4.3.2 | Not in corpus |
 | IEC nuclear I&C | IEC 61513, IEC 62138 | Not in corpus |

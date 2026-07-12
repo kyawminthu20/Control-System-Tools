@@ -25,7 +25,6 @@ redirect_from:
 <div class="page-header">
   <span class="page-header__label">Scenario 04</span>
   <h1>Networked Safety PLC Architecture</h1>
-  <span class="badge badge--complete">Phase 5 — IEC 62443 corpus complete</span>
 </div>
 
 ## Project Summary
@@ -43,7 +42,7 @@ redirect_from:
 |----------|------|--------|
 | **ISO 13849-1 2023** | PL design for safety functions | Planned <span class="badge badge--verify">Review pending</span> |
 | **IEC 62061 2021** | SIL design for safety functions (alternative) | Planned <span class="badge badge--verify">Review pending</span> |
-| **IEC 62443** | Industrial cybersecurity | <span class="badge badge--complete">Phase 5 Complete</span> — [detail page]({{ '/standards/cybersecurity/iec-62443/' | relative_url }}) |
+| **IEC 62443** | Industrial cybersecurity | <span class="badge badge--pending">Review pending</span> — [detail page]({{ '/standards/cybersecurity/iec-62443/' | relative_url }}) |
 | **IEC 61131-3** | PLC programming | Routing reference |
 
 ## Two-Layer Architecture

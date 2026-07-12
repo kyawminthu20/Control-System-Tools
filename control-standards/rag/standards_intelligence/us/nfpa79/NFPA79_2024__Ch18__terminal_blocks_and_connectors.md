@@ -42,7 +42,3 @@ How a technician interacts with these devices determines the long-term safety of
 
 * 2026-01-15 — Initial draft created.
 * 2026-01-16 — Updated with 2024 requirements for keyed connectors and "first-make, last-break" grounding rules for power plugs.
-
----
-
-### Would you like me to proceed to **Chapter 19**, which covers **Marking and Safety Signs** (the critical requirements for nameplates, warning labels, and technical documentation)?

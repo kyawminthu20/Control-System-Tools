@@ -19,7 +19,7 @@ Semiconductor manufacturing equipment (tools) operates in cleanroom environments
 
 | Standard | Scope | Corpus Status |
 |----------|-------|--------------|
-| [SEMI S2/S8/S14]({{ '/standards/semiconductor/semi/' | relative_url }}) | Equipment safety, ergonomics, fire risk | <span class="badge badge--complete">Reviewed</span> |
+| [SEMI S2/S8/S14]({{ '/standards/semiconductor/semi/' | relative_url }}) | Equipment safety, ergonomics, fire risk | <span class="badge badge--reviewed">Reviewed</span> |
 
 ---
 

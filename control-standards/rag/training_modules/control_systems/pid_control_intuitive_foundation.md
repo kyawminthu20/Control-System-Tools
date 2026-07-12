@@ -107,4 +107,4 @@ Jump to the heater-control file if the question is "how do I control temperature
 Use these when the PID loop is part of machine control implementation rather than pure theory:
 
 - [NFPA79_2024__Ch09__control_circuits_and_control_functions.md](../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md)
-- [IEC60204_1_2018__Clause09__control_circuits_and_functions.md](../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md)
+- [IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md](../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md)

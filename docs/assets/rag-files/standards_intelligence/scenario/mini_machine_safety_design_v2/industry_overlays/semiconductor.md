@@ -11,7 +11,7 @@ INDUSTRY: semiconductor
 ## What changes vs baseline
 
 - Chemical compatibility, leak containment, purge logic, and clean-material selection become higher priority than in the baseline skid; the local corpus does not contain SEMI or semiconductor chemical-handling standards, so these controls are NOT FOUND IN LOCAL CORPUS - TO VERIFY. [TO VERIFY: SEMI standards] [TO VERIFY: chemical handling standard]
-- Single-point ground and EMC discipline become more stringent because the skid will likely coexist with sensitive instrumentation and networked tooling. The local corpus supports PE and functional-ground separation only at a general level. [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md#2. Noise vs. Safety Bonding] [TO VERIFY: semiconductor EMC standard]
+- Single-point ground and EMC discipline become more stringent because the skid will likely coexist with sensitive instrumentation and networked tooling. The local corpus supports PE and functional-ground separation only at a general level. [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause08__equipotential_bonding.md#2. Noise vs. Safety Bonding] [TO VERIFY: semiconductor EMC standard]
 - Documentation and interlock validation shall be deeper than baseline because tool integration often requires interface qualification and host handshake records. Local corpus supports documentation structure, but semiconductor acceptance artifacts are NOT FOUND IN LOCAL CORPUS - TO VERIFY. [LOCAL: us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#2. Documentation Expectations] [TO VERIFY: SEMI standards]
 
 ## Standards to prioritize
@@ -24,5 +24,5 @@ INDUSTRY: semiconductor
 
 - Chemical P and ID with valve lineup and spill sensors. [TO VERIFY: semiconductor chemical standard]
 - Tool interface and interlock cause-and-effect matrix. [LOCAL: us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#2. Documentation Expectations]
-- EMC bonding layout and cable segregation record. [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md#2. Noise vs. Safety Bonding]
+- EMC bonding layout and cable segregation record. [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause08__equipotential_bonding.md#2. Noise vs. Safety Bonding]
 - SEMI compliance checklist or gap register. [TO VERIFY: SEMI standards]

@@ -10,6 +10,19 @@
   <div class="review-meta__title">Page review information</div>
   <dl class="review-meta__grid">
     <dt>Edition covered</dt><dd>{{ page.review.standard }} — {{ page.review.edition }}</dd>
+    {% comment %}
+      Phase 45: a standard's *latest published* edition and its *legally enforceable*
+      edition are different questions from the edition this page covers. Codes adopted
+      by an AHJ (the NEC above all) are routinely enforced several cycles behind the
+      newest publication — so a single "edition" field silently implies currency it
+      cannot promise. Pages declare these two fields only where the distinction bites.
+    {% endcomment %}
+    {% if page.review.edition_latest %}
+    <dt>Latest published edition</dt><dd>{{ page.review.edition_latest }}</dd>
+    {% endif %}
+    {% if page.review.edition_enforceable %}
+    <dt>Legally applicable edition</dt><dd>{{ page.review.edition_enforceable }}</dd>
+    {% endif %}
     <dt>Content status</dt><dd>{{ page.review.status }}</dd>
     {% if page.review.coverage %}<dt>Coverage</dt><dd>{{ page.review.coverage }}</dd>{% endif %}
     {% if page.review.status == "Reviewed" %}

@@ -47,7 +47,7 @@ rules:
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md
       - us/ul_508a/UL508A_2022__grounding_and_bonding.md
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause08__equipotential_bonding.md
 
   - id: GND-003
     title: EGC path shall be intentional and traceable
@@ -96,7 +96,7 @@ rules:
       - confirm safety grounding remains complete if signal shields are modified
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause08__equipotential_bonding.md
 
   - id: GND-006
     title: Multi-standard designs need one documented grounding basis
@@ -115,7 +115,7 @@ rules:
       - us/nec/NEC_2023__Art250__grounding_and_bonding.md
       - us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md
       - us/ul_508a/UL508A_2022__grounding_and_bonding.md
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause08__equipotential_bonding.md
 
 changelog:
   - date: "2026-03-09"

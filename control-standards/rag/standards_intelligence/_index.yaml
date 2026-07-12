@@ -26,7 +26,7 @@ standards:
       element_type: "chapters"
       status: "complete"
 
-    - standard_id: "UL_508A_2022"
+    - standard_id: "UL_508A_Ed3"
       standard_name: "Industrial Control Panels"
       folder: "us/ul_508a"
       edition: "2022"
@@ -37,7 +37,7 @@ standards:
 
   international:
     machinery:
-      - standard_id: "IEC_60204_1_2018"
+      - standard_id: "IEC_60204_1_2016A1"
         standard_name: "Electrical Equipment of Machines"
         folder: "international/machinery/iec_60204_1"
         edition: "2018"
@@ -116,38 +116,38 @@ topic_routing:
   grounding_bonding:
     us_standards:
       - "NEC_2023 Article 250"
-      - "UL_508A_2022 Section 7"
+      - "UL_508A_Ed3 Section 7"
       - "NFPA_79_2024 Chapter 8"
     international_standards:
-      - "IEC_60204_1_2018 Clause 8"
+      - "IEC_60204_1_2016A1 Clause 8"
 
   emergency_stop:
     us_standards:
       - "NFPA_79_2024 Chapter 9"
     international_standards:
-      - "IEC_60204_1_2018 Clause 9"
+      - "IEC_60204_1_2016A1 Clause 9"
       - "ISO_13849_1_2023"
 
   control_panels:
     us_standards:
       - "NEC_2023 Article 409"
-      - "UL_508A_2022 All Sections"
+      - "UL_508A_Ed3 All Sections"
       - "NFPA_79_2024 Chapter 11"
     international_standards:
-      - "IEC_60204_1_2018 Clause 11"
+      - "IEC_60204_1_2016A1 Clause 11"
 
   motor_protection:
     us_standards:
       - "NEC_2023 Article 430"
       - "NFPA_79_2024 Chapter 12"
     international_standards:
-      - "IEC_60204_1_2018 Clause 12"
+      - "IEC_60204_1_2016A1 Clause 12"
 
   disconnect_isolation:
     us_standards:
       - "NFPA_79_2024 Chapter 5"
     international_standards:
-      - "IEC_60204_1_2018 Clause 5"
+      - "IEC_60204_1_2016A1 Clause 5"
 
   safety_functions:
     international_standards:
@@ -191,15 +191,15 @@ topic_routing:
 regional_routing:
   us_only:
     description: "US-specific installations"
-    standards: ["NEC_2023", "NFPA_79_2024", "UL_508A_2022"]
+    standards: ["NEC_2023", "NFPA_79_2024", "UL_508A_Ed3"]
 
   eu_ce_marking:
     description: "EU/CE marking requirements"
-    standards: ["IEC_60204_1_2018", "ISO_13849_1_2023", "ISO_12100_2010"]
+    standards: ["IEC_60204_1_2016A1", "ISO_13849_1_2023", "ISO_12100_2010"]
 
   dual_us_eu:
     description: "Global machinery (US + EU markets)"
-    standards: ["NFPA_79_2024", "IEC_60204_1_2018", "ISO_13849_1_2023", "UL_508A_2022"]
+    standards: ["NFPA_79_2024", "IEC_60204_1_2016A1", "ISO_13849_1_2023", "UL_508A_Ed3"]
 
   process_industry:
     description: "Process industry functional safety"

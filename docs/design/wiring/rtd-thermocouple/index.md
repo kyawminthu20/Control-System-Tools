@@ -11,7 +11,7 @@ breadcrumb:
 repo_path: "control-standards/rag/design_framework/wiring_practices/"
 review:
   standard: "IEC 60751 (RTD) / IEC 60584 (thermocouple); NFPA 79 / IEC 60204-1 (wiring-practice chapters)"
-  edition: "NFPA 79:2024, IEC 60204-1:2018"
+  edition: "NFPA 79:2024, IEC 60204-1:2016+AMD1:2021"
   status: "Review pending"
   coverage: "RTD 2/3/4-wire lead compensation, thermocouple matched extension and cold-junction compensation, single-end shielding and signal-injection verification at category/chapter level; vendor terminal designations, region color codes and card configuration deliberately excluded."
   last_reviewed: "July 2026"
@@ -234,7 +234,7 @@ Before handing the point to the process (evidence-retaining sheets in
 - **IEC 60584** — thermocouples: TC types (J, K, T, E, N, R, S, B), reference
   tables and tolerances; region color codes per the applicable part
   (category-level).
-- **NFPA 79:2024 / IEC 60204-1:2018** — machine electrical wiring-practice
+- **NFPA 79:2024 / IEC 60204-1:2016+AMD1:2021** — machine electrical wiring-practice
   chapters: conductor identification, routing, and separation of low-level
   signal from power (chapter-level).
 - Device manuals and the applicable TC color-code standard are the authority

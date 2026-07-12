@@ -67,5 +67,5 @@ It does not replace:
 - [NEC_2023__Art250__grounding_and_bonding.md](../../standards_intelligence/us/nec/NEC_2023__Art250__grounding_and_bonding.md)
 - [NFPA79_2024__Ch05__disconnecting_means.md](../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md)
 - [NFPA79_2024__Ch07__protection_against_electric_shock.md](../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md)
-- [IEC60204_1_2018__Clause05__incoming_supply.md](../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause05__incoming_supply.md)
-- [IEC60204_1_2018__Clause06__protection_against_electric_shock.md](../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md)
+- [IEC60204_1_2016A1__Clause05__incoming_supply.md](../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause05__incoming_supply.md)
+- [IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md](../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md)

@@ -119,85 +119,85 @@ wizard:
         note_file: "overlap_nfpa79_iec60204__scope_boundary.md"
         anchors:
           us: ["NFPA79_2024__Ch01__administration.md"]
-          eu: ["IEC60204_1_2018__Clause01__scope.md"]
+          eu: ["IEC60204_1_2016A1__Clause01__scope.md"]
 
       - topic_id: definitions
         note_file: "overlap_nfpa79_iec60204__definitions.md"
         anchors:
           us: ["NFPA79_2024__Ch02__definitions.md"]
-          eu: ["IEC60204_1_2018__Clause03__terms_and_definitions.md"]
+          eu: ["IEC60204_1_2016A1__Clause03__terms_and_definitions.md"]
 
       - topic_id: general_requirements
         note_file: "overlap_nfpa79_iec60204__general_requirements.md"
         anchors:
           us: ["NFPA79_2024__Ch03__general_requirements.md"]
-          eu: ["IEC60204_1_2018__Clause04__general_requirements.md"]
+          eu: ["IEC60204_1_2016A1__Clause04__general_requirements.md"]
 
       - topic_id: incoming_supply_disconnect
         note_file: "overlap_nfpa79_iec60204__incoming_supply_disconnect.md"
         anchors:
           us: ["NFPA79_2024__Ch05__disconnecting_means.md"]
-          eu: ["IEC60204_1_2018__Clause05__incoming_supply.md"]
+          eu: ["IEC60204_1_2016A1__Clause05__incoming_supply.md"]
 
       - topic_id: electric_shock_protection
         note_file: "overlap_nfpa79_iec60204__electric_shock_protection.md"
         anchors:
           us: ["NFPA79_2024__Ch07__protection_against_electric_shock.md"]
-          eu: ["IEC60204_1_2018__Clause06__protection_against_electric_shock.md"]
+          eu: ["IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md"]
 
       - topic_id: equipment_protection
         note_file: "overlap_nfpa79_iec60204__equipment_protection.md"
         anchors:
           us: ["NFPA79_2024__Ch06__overcurrent_protection.md"]
-          eu: ["IEC60204_1_2018__Clause07__protection_of_equipment.md"]
+          eu: ["IEC60204_1_2016A1__Clause07__protection_of_equipment.md"]
 
       - topic_id: grounding_bonding
         note_file: "overlap_nfpa79_iec60204__grounding_bonding.md"
         anchors:
           us: ["NFPA79_2024__Ch08__grounding_and_bonding.md"]
-          eu: ["IEC60204_1_2018__Clause08__equipotential_bonding.md"]
+          eu: ["IEC60204_1_2016A1__Clause08__equipotential_bonding.md"]
 
       - topic_id: control_functions
         note_file: "overlap_nfpa79_iec60204__control_functions.md"
         anchors:
           us: ["NFPA79_2024__Ch09__control_circuits_and_control_functions.md"]
-          eu: ["IEC60204_1_2018__Clause09__control_circuits_and_functions.md"]
+          eu: ["IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md"]
 
       - topic_id: operator_interface
         note_file: "overlap_nfpa79_iec60204__operator_interface.md"
         anchors:
           us: ["NFPA79_2024__Ch10__operator_interface_devices.md"]
-          eu: ["IEC60204_1_2018__Clause10__operator_interface.md"]
+          eu: ["IEC60204_1_2016A1__Clause10__operator_interface.md"]
 
       - topic_id: control_equipment
         note_file: "overlap_nfpa79_iec60204__control_equipment.md"
         anchors:
           us: ["NFPA79_2024__Ch11__control_equipment.md"]
-          eu: ["IEC60204_1_2018__Clause11__control_equipment.md"]
+          eu: ["IEC60204_1_2016A1__Clause11__controlgear.md"]
 
       - topic_id: motors_drives
         note_file: "overlap_nfpa79_iec60204__motors_drives.md"
         anchors:
           us: ["NFPA79_2024__Ch12__motors_and_associated_equipment.md"]
-          eu: ["IEC60204_1_2018__Clause12__motors_and_drives.md"]
+          eu: ["IEC60204_1_2016A1__Clause14__electric_motors.md"]
 
       - topic_id: accessories_lighting
         note_file: "overlap_nfpa79_iec60204__accessories_lighting.md"
         anchors:
           us: ["NFPA79_2024__Ch13__appliances_and_accessories.md", "NFPA79_2024__Ch14__lighting.md"]
-          eu: ["IEC60204_1_2018__Clause13__accessories_and_lighting.md"]
+          eu: ["IEC60204_1_2016A1__Clause15__socket_outlets_and_lighting.md"]
 
       - topic_id: marking_documentation
         note_file: "overlap_nfpa79_iec60204__marking_documentation.md"
         anchors:
           us: ["NFPA79_2024__Ch19__marking_and_documentation.md"]
-          eu: ["IEC60204_1_2018__Clause14__marking_and_documentation.md"]
+          eu: ["IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md"]
 
       - topic_id: verification
         note_file: "overlap_nfpa79_iec60204__verification.md"
         anchors:
           us: ["NFPA79_2024__Ch20__system_integration.md"]
-          eu: ["IEC60204_1_2018__Clause15__verification.md"]
+          eu: ["IEC60204_1_2016A1__Clause18__verification.md"]
 
   routing_logic:
     market_owner_rules:
@@ -260,7 +260,7 @@ REPORT_ID: US_EU_DELTA
 **Cross-links:**  
 - Overlap note: `rag/standards_intelligence/crosswalks/overlap_notes/overlap_nfpa79_iec60204__scope_boundary.md`
 - NFPA 79 anchor(s): `rag/standards_intelligence/us/nfpa79/NFPA79_2024__Ch01__administration.md`
-- IEC anchor(s): `rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause01__scope.md`
+- IEC anchor(s): `rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause01__scope.md`
 
 (Repeat sections for each topic_id…)
 

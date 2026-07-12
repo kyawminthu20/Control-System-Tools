@@ -41,7 +41,3 @@ A cable is only as safe as its connection points. Chapter 17 outlines how to pre
 
 * 2026-01-15 — Initial draft created.
 * 2026-01-16 — Updated to include specific requirements for continuous-flex (drag chain) rating and torsion limits for robotic applications.
-
----
-
-### Would you like me to move on to **Chapter 18**, which covers **Marking and Safety Signs** (the critical requirements for labels, warnings, and machine nameplates)?

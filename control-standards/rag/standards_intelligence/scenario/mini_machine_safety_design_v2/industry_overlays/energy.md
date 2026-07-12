@@ -10,7 +10,7 @@ INDUSTRY: energy
 
 ## What changes vs baseline
 
-- Outdoor, corrosive, or utility-yard conditions may replace the baseline indoor assumption, so enclosure selection, temperature control, and contamination control become more demanding. [LOCAL: us/nfpa79/NFPA79_2024__Ch04__general_conditions_of_installation.md#0. Environmental Considerations] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause07__protection_of_equipment.md#2. Environmental Protection]
+- Outdoor, corrosive, or utility-yard conditions may replace the baseline indoor assumption, so enclosure selection, temperature control, and contamination control become more demanding. [LOCAL: us/nfpa79/NFPA79_2024__Ch04__general_conditions_of_installation.md#0. Environmental Considerations] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause07__protection_of_equipment.md#2. Environmental Protection]
 - If the skid shutdown functions are credited as independent protection layers for utility or process hazards, they shall move from machine-only documentation into a process-safety route. [LOCAL: routing/standards_applicability.md#Special Cases] [TO VERIFY: IEC 61511]
 - Cybersecurity, remote access control, and event retention become more important because the skid is likely to connect into plant or utility monitoring systems; detailed cybersecurity controls are NOT FOUND IN LOCAL CORPUS - TO VERIFY. [TO VERIFY: IEC 62443] [TO VERIFY: NIST SP 800-82]
 

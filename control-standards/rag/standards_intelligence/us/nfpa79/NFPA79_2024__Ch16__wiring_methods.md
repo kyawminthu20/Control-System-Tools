@@ -51,7 +51,3 @@ One of the most critical aspects of Chapter 16 is the physical separation of dif
 
 * 2026-01-15 — Initial draft created.
 * 2026-01-16 — Added 2024 updates regarding the use of "listed" cable ties and expanded requirements for EMI segregation between power and safety-signal cabling.
-
----
-
-### Would you like me to move on to **Chapter 17**, which covers **Marking and Safety Signs** (the final requirements for labels, warnings, and machine nameplates)?

@@ -43,9 +43,9 @@ redirect_from:
 
 | Standard | Role | Status |
 |----------|------|--------|
-| **UL 508A 2022** | Panel construction and UL listing | Complete in corpus |
-| **NEC 2023** | Installation code — legally enforced | Complete in corpus |
-| **NFPA 79 2024** | Machine electrical design (if machine context) | Complete in corpus |
+| **UL 508A 2022** | Panel construction and UL listing | Reviewed |
+| **NEC 2023** | Installation code — legally enforced | Reviewed |
+| **NFPA 79 2024** | Machine electrical design (if machine context) | Reviewed |
 
 ---
 

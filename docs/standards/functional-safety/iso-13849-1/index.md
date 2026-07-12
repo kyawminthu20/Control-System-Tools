@@ -25,24 +25,23 @@ lifecycle_stage:
     slug: "commissioning/"
 review:
   standard: "ISO 13849-1"
-  edition: "2023"
-  status: "Reviewed"
-  coverage: "Clauses 4-7 plus Annex A and CCF; worked example included"
-  last_reviewed: "April 2026"
+  edition: "2023 (Ed. 4)"
+  status: "Review pending"
+  coverage: "Clauses 4-7 plus Annex A and CCF; worked example included. PLr attribution, PL e band and validation-method claims corrected July 2026. Numeric PL/PFH bands still to be checked against the published Table 2"
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">
   <span class="page-header__label">Functional Safety · ISO 13849-1</span>
   <h1>ISO 13849-1:2023 — Safety-Related Parts of Control Systems (PL)</h1>
-  <span class="badge badge--complete">Phase 3 Complete</span>
 </div>
 
 ## Quick Start
 
-- **Get PLr before starting** — obtain the required Performance Level from an ISO 12100 S/F/P risk analysis before selecting any architecture or components
+- **Get PLr before starting** — determine the required Performance Level from the ISO 13849-1 Annex A risk graph, applied to a completed ISO 12100 risk assessment, before selecting any architecture or components
 - **Three decisions drive everything:** Category (architecture/fault tolerance), MTTFd (component reliability), and DC (diagnostic coverage) together determine the achieved PL
 - **PLd is the most common target** for industrial guarding, E-stop, and light curtain applications — most industrial machinery land here
-- **Category 3 + MTTFd High + DC Medium achieves PLd** — this is the standard dual-channel safety relay or safety PLC topology for PLd
+- **Category 3 with high MTTFd and medium DCavg can achieve PLd** — the standard dual-channel safety relay or safety PLC topology. It is not automatic: the achieved PL depends on the complete calculation (MTTFd, DCavg, CCF measures) and on the systematic requirements being met, and it must be verified and validated, not assumed from the architecture alone
 - **If complex electronics or software are in the safety path**, consider [IEC 62061]({{ '/standards/functional-safety/iec-62061/' | relative_url }}) (SIL path) as an alternative or complementary approach
 
 ---
@@ -57,15 +56,20 @@ review:
 | **Jurisdiction** | Global; harmonized under EU Machinery Directive and Machinery Regulation 2023/1230 |
 | **Scope** | Safety-related parts of control systems — PL determination and verification |
 | **Repository** | `rag/international/functional_safety/iso_13849_1/` |
-| **Status in Corpus** | Phase 3 Complete <span class="badge badge--complete">COMPLETE</span> |
-
 **Purpose:** ISO 13849-1 provides requirements for design and validation of safety-related parts of control systems (SRP/CS). The standard uses Performance Levels (PLa–PLe) to quantify the ability of a safety-related control system to perform a safety function. It covers electromechanical, electronic, and programmable electronic systems, as well as pneumatic and hydraulic safety elements (via ISO 13849-2 for validation methods).
 
 ---
 
-## PLr Determination — From ISO 12100 Risk Assessment
+## PLr Determination — ISO 13849-1 Annex A Risk Graph
 
-PLr (required Performance Level) is determined from the ISO 12100 Annex A risk graph using three parameters: **S** (severity), **F** (frequency/exposure), **P** (possibility of avoidance). Perform this analysis before starting any ISO 13849-1 design work.
+PLr (required Performance Level) is determined from the risk graph in **ISO 13849-1
+Annex A** — this standard, not ISO 12100 — using three parameters: **S** (severity),
+**F** (frequency/exposure), **P** (possibility of avoidance).
+
+Carry out the machinery risk assessment per ISO 12100 first: it identifies the hazards and
+supplies the risk estimation the S/F/P parameters encode. ISO 12100 does not itself output
+a PLr. (Designs taking the IEC 62061 route determine a required SIL by that standard's own
+method instead.)
 
 | S | F | P | PLr |
 |---|---|---|-----|
@@ -90,7 +94,7 @@ PLr (required Performance Level) is determined from the ISO 12100 Annex A risk g
 | PLb | ≥ 3×10⁻⁶ /hr to < 10⁻⁵ /hr | Low–medium risk; simple single-channel protections |
 | PLc | ≥ 10⁻⁶ /hr to < 3×10⁻⁶ /hr | Medium risk; infrequent-access guarding, basic interlocks |
 | PLd | ≥ 10⁻⁷ /hr to < 10⁻⁶ /hr | High risk; E-stop, light curtains, guard interlocks on most industrial machinery |
-| PLe | < 10⁻⁷ /hr | Highest risk; collaborative robot nearest-person zones, some specialized press guarding |
+| PLe | ≥ 10⁻⁸ /hr to < 10⁻⁷ /hr | Highest risk; collaborative robot nearest-person zones, some specialized press guarding |
 
 PLd is the level most industrial machinery designers target. PLe adds significant architecture cost (Category 4) and should be confirmed by risk assessment before committing.
 
@@ -132,7 +136,7 @@ For Category 2: test frequency must be ≥ 100× the demand rate. For Categories
 
 **Hazard:** Robot arm contact — potential for serious crushing or fracture injury.
 
-**PLr determination (ISO 12100 Annex A):**
+**PLr determination (ISO 13849-1 Annex A risk graph):**
 - S = S2 — irreversible injury (crush, fracture) if robot arm strikes operator
 - F = F2 — operator enters zone every cycle; frequent exposure
 - P = P1 — operator can hear the restart warning signal and has a clear sightline to the hazard zone; avoidance is possible under specific conditions
@@ -149,7 +153,7 @@ For Category 2: test frequency must be ≥ 100× the demand rate. For Categories
 | Achieved PL | PLd | Category 3 + MTTFd High + DC Medium → PLd (Clause 5 table) |
 | CCF | ≥ 65 points | Separate cable routing (15 pts) + diverse input devices (20 pts) + independent supplies + competence records |
 
-**Validation:** FMEA at component level; functional test of E-stop initiation; cross-fault injection test; SISTEMA calculation report retained in Technical File.
+**Validation:** validation methods must suit the design and its safety requirements — for this example, fault analysis of the subsystem, functional test of E-stop initiation, cross-fault detection testing, and a documented PFHd/PL calculation retained in the Technical File. SISTEMA is a convenient tool for that calculation, not a requirement; any documented and validated calculation satisfies the standard.
 
 ---
 
@@ -195,12 +199,12 @@ See [IEC 62061]({{ '/standards/functional-safety/iec-62061/' | relative_url }}) 
 - [ ] MTTFd calculated per channel using B10d datasheet data or Annex C/D defaults
 - [ ] DC level identified and supported by specific diagnostic measures (Annex E reference)
 - [ ] CCF scored using Annex F; score ≥ 65 documented for Categories 2, 3, 4
-- [ ] Achieved PL confirmed from Category + MTTFd + DC lookup (Clause 5 table) or SISTEMA calculation
+- [ ] Achieved PL confirmed from Category + MTTFd + DC lookup (Clause 5 table) or an equivalent documented calculation
 - [ ] Achieved PL ≥ PLr confirmed for every safety function
 - [ ] Validation plan established before testing begins
-- [ ] FMEA completed at component level; fault injection analysis documented
+- [ ] Fault analysis and validation testing completed, using methods appropriate to the design and its safety requirements
 - [ ] Functional test of each safety function performed and recorded
-- [ ] SISTEMA calculation report (or equivalent) included in Technical File
+- [ ] Documented PL/PFHd calculation (SISTEMA report or equivalent) included in Technical File
 - [ ] Validation report completed and retained in Technical File
 
 ---
@@ -209,13 +213,13 @@ See [IEC 62061]({{ '/standards/functional-safety/iec-62061/' | relative_url }}) 
 
 | Stage | ISO 13849-1 Activity |
 |-------|---------------------|
-| **Risk Assessment** | ISO 12100 Annex A analysis outputs PLr for each safety function; Annex A risk graph applied |
+| **Risk Assessment** | ISO 12100 risk assessment performed; ISO 13849-1 Annex A risk graph then applied to output PLr for each safety function |
 | **Safety Function Specification** | Clause 4: specify initiation event, response, PLr, response time for each function |
 | **Safety Architecture Design** | Clause 6: select Category (B, 1, 2, 3, or 4) based on PLr and fault tolerance needed |
 | **Detailed Design** | Clause 5: select components (MTTFd), implement diagnostics (DC), design CCF measures |
-| **PL Verification** | Clause 5 + SISTEMA: confirm achieved PL ≥ PLr; iterate if not |
+| **PL Verification** | Clause 5: confirm achieved PL ≥ PLr by documented calculation (SISTEMA or equivalent); iterate if not |
 | **Validation Planning** | Clause 7: establish validation plan before testing; define scope, methods, acceptance criteria |
-| **Validation Execution** | Clause 7: FMEA, fault injection analysis, functional testing; CCF score sheet completed |
+| **Validation Execution** | Clause 7: validation by analysis and testing, using methods appropriate to the design; CCF score sheet completed |
 | **Documentation** | Clause 7: validation report assembled; Technical File prepared for CE marking |
 | **Commissioning** | Final validation test on installed machine; confirm response times and reset behavior |
 | **Maintenance** | Periodic re-validation per validation plan; re-verification after any design change |

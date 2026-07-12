@@ -16,7 +16,7 @@ INDUSTRY: medical
 
 ## Standards To Prioritize
 
-- baseline machine electrical requirements and documentation [LOCAL: us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#2-documentation-expectations] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md#2-documentation-set]
+- baseline machine electrical requirements and documentation [LOCAL: us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#2-documentation-expectations] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md#2-documentation-set]
 - risk assessment and machinery safety methodology if the skid remains machinery [LOCAL: crosswalks/overlap_matrix/nfpa79_iec60204_overlap.md#safety-framework]
 - regulated records and medical quality system requirements: `NOT FOUND IN LOCAL CORPUS – TO VERIFY` [TO VERIFY: 21 CFR Part 11] [TO VERIFY: medical quality standard]
 

@@ -75,7 +75,7 @@ breadcrumb:
       <span class="scenario-card__num">Scenario 02</span>
       <span class="scenario-card__title">Global Machine (US + EU)</span>
       <p class="scenario-card__start"><strong>Stack:</strong> NFPA 79 (US) + IEC 60204-1 (EU) + ISO 12100</p>
-      <p style="font-size:0.78rem;color:var(--color-text-muted);">Same machine for both markets. CE marking requires an ISO 12100 risk assessment as the foundation; the rest layers on top.</p>
+      <p style="font-size:0.78rem;color:var(--color-text-muted);">Same machine for both markets. EU machinery law requires a documented risk assessment and compliance with the applicable essential health and safety requirements. EN ISO 12100 is the harmonized methodology commonly used to perform and document it — voluntary, but conferring presumption of conformity for the requirements it covers.</p>
       <a href="{{ '/tools/scenarios/global-machine/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
     </div>
   </div>
@@ -89,7 +89,7 @@ breadcrumb:
       <span class="scenario-card__num">Scenario 03</span>
       <span class="scenario-card__title">Process Skid Shutdown System</span>
       <p class="scenario-card__start"><strong>Stack:</strong> IEC 61511 + IEC 61508 foundation</p>
-      <p style="font-size:0.78rem;color:var(--color-text-muted);">SIS / ESD for general process industry. <span class="badge badge--complete">REVIEWED</span></p>
+      <p style="font-size:0.78rem;color:var(--color-text-muted);">SIS / ESD for general process industry. <span class="badge badge--reviewed">Reviewed</span></p>
       <a href="{{ '/tools/scenarios/process-skid/' | relative_url }}" style="font-size:0.8rem;">Open scenario &rarr;</a>
     </div>
     <div class="scenario-card" data-finder-region="us" data-finder-domain="process hazloc">

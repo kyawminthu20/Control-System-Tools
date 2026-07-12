@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "UL 508A — Industrial Control Panels"
-description: "UL 508A:2022 — panel construction, SCCR, listing requirements, and relationship to NEC and NFPA 79."
+description: "UL 508A, 3rd Edition — panel construction, SCCR, listing, and relationship to NEC and NFPA 79."
 breadcrumb:
   - name: "Standards"
     url: "/standards/"
@@ -24,15 +24,15 @@ lifecycle_stage:
     slug: "build/"
 review:
   standard: "UL 508A"
-  edition: "2022"
-  status: "Reviewed"
-  coverage: "12 topical sections including SCCR Supplement SB"
-  last_reviewed: "April 2026"
+  edition: "3rd Edition, published 2018-04-24, revisions through 2025-06-26"
+  status: "Review pending"
+  coverage: "12 topical sections including SCCR Supplement SB. Edition metadata corrected July 2026 — there is no UL 508A:2022 edition; UL identifies the standard by edition plus revision date"
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">
   <span class="page-header__label">US Electrical Standards · UL 508A</span>
-  <h1>UL 508A:2022 — Industrial Control Panels</h1>
+  <h1>UL 508A, 3rd Edition — Industrial Control Panels</h1>
 </div>
 
 ## Standard Overview
@@ -40,25 +40,41 @@ review:
 | Field | Value |
 |-------|-------|
 | **Standard ID** | UL 508A |
-| **Edition** | 2022 |
+| **Edition** | 3rd Edition, published 2018-04-24; revisions through 2025-06-26 (ANSI-approved) |
 | **Publisher** | UL (Underwriters Laboratories) |
 | **Jurisdiction** | United States |
-| **Scope** | Construction and performance of industrial control panels |
+| **Scope** | Construction and performance of industrial control panels for general industrial use, operating at 1000 V or less, for installation in ordinary locations per ANSI/NFPA 70 |
 | **Repository** | `rag/us/ul_508a/` — 11 sections |
-| **Status in Corpus** | Complete |
+**Purpose:** UL 508A defines requirements for the construction, materials, and performance of
+industrial control panels. A UL-listed panel is one evaluated and certified to meet those
+requirements.
 
-**Purpose:** UL 508A defines requirements for the construction, materials, and performance of industrial control panels. A UL-listed panel means it has been evaluated and certified to meet UL 508A requirements. Insurance requirements and many AHJs require UL-listed panels for industrial installations.
+> **Naming note.** There is **no "UL 508A:2022"**. UL identifies this standard by *edition
+> number plus revision date*, not by an ISO/IEC-style `:year` suffix. The correct citation is
+> **UL 508A, 3rd Edition (April 24, 2018), revisions through June 26, 2025** (or ANSI/UL 508A).
+> Revisions issued in 2022 are revisions to the 3rd Edition — not a new edition.
 
 ---
 
-## Why UL Listing Matters
+## Is UL Listing Required?
 
-| Driver | Requirement |
+**Not universally.** There is no blanket legal rule that every industrial control panel in the
+US must be UL listed. The obligation, where it exists, comes from one of the drivers below —
+and unlisted panels are a normal condition that the AHJ handles by applying the NEC directly
+(and may require a third-party field evaluation to UL 508A).
+
+| Driver | What it actually imposes |
 |--------|------------|
-| Insurance | Often requires UL-listed panels |
-| AHJ approval | Many jurisdictions require listed equipment |
-| NEC compliance | NEC Article 409 references listed equipment |
-| Customer specification | OEM customers frequently specify UL listing |
+| AHJ | May require listed equipment, or may accept an unlisted panel evaluated in the field |
+| Customer or OEM specification | Frequently specifies UL listing contractually |
+| Insurance / facility standards | Often require listed panels as a condition of cover |
+| Contract requirements | Commonly specify a listing path |
+
+**What the NEC does require of every industrial control panel** is the Article 409 **marking**
+— including the panel's **Short-Circuit Current Rating (SCCR)**. UL 508A **Supplement SB** is
+the method the NEC recognises for establishing that SCCR. So the code leans on UL 508A as a
+*method* without mandating third-party Listing of the panel itself. Note also NEC 110.3(B): if
+equipment *is* listed, it must be installed in accordance with that listing.
 
 ---
 

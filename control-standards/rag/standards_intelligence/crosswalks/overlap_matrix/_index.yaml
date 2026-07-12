@@ -14,7 +14,7 @@ matrices:
   - matrix_id: "UL508A_NEC_NFPA79"
     file: "ul508a_nec_nfpa79_overlap.md"
     standards:
-      - "UL_508A_2022"
+      - "UL_508A_Ed3"
       - "NEC_2023"
       - "NFPA_79_2024"
     jurisdiction: "US"
@@ -25,7 +25,7 @@ matrices:
     file: "nfpa79_iec60204_overlap.md"
     standards:
       - "NFPA_79_2024"
-      - "IEC_60204_1_2018"
+      - "IEC_60204_1_2016A1"
     jurisdiction: "US + International"
     description: "US vs International machinery standards"
     use_case: "Dual-market machinery (US + EU)"

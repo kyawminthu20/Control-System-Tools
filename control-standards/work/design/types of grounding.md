@@ -158,8 +158,8 @@ For machine and control-system work, the practical implication is that the earth
 
 ## Related repo references
 
-- [IEC60204_1_2018__Clause05__incoming_supply.md](../../rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause05__incoming_supply.md)
-- [IEC60204_1_2018__Clause08__equipotential_bonding.md](../../rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md)
+- [IEC60204_1_2016A1__Clause05__incoming_supply.md](../../rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause05__incoming_supply.md)
+- [IEC60204_1_2016A1__Clause08__equipotential_bonding.md](../../rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause08__equipotential_bonding.md)
 - [ABS_offshore_electrical_control.md](../../rag/standards_intelligence/international/offshore/ABS_offshore_electrical_control.md)
 
 ## Important caution

@@ -30,10 +30,12 @@ companion_standards:
   - "IEC 60204-1"
 review:
   standard: "NEC (NFPA 70)"
-  edition: "2023"
-  status: "Reviewed"
-  coverage: "19 articles relevant to machines and panels"
-  last_reviewed: "April 2026"
+  edition: "2023 — the edition this page covers"
+  edition_latest: "NFPA 70, 2026 Edition (published 2025)"
+  edition_enforceable: "Whichever edition your AHJ has adopted — verify before applying. Many jurisdictions remain on 2020 or 2023, and some far older"
+  status: "Review pending"
+  coverage: "19 articles relevant to machines and panels; 2026 change summary included"
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">
@@ -70,7 +72,6 @@ review:
 | **Jurisdiction** | United States (adopted by most states and local jurisdictions) |
 | **Scope** | All electrical installations in the US |
 | **Repository** | `rag/us/nec/` — 19 articles |
-| **Status in Corpus** | Complete |
 | **Legal status** | Adopted as law in most US jurisdictions; enforced by AHJ |
 
 The National Electrical Code (NEC), published as **NFPA 70**, is the primary electrical installation code used in the United States. It defines minimum safety requirements for **installation of electrical systems and equipment** in buildings and industrial facilities.

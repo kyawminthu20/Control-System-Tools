@@ -14,7 +14,7 @@ Successfully generated a complete **IEC 60204-1 - Electrical Equipment of Machin
 3. **GENERATION_SUMMARY.md** - This file
 
 ### Clause Files (15 total)
-All following the naming convention: `IEC60204_1_2018__Clause<NN>__<slug>.md`
+All following the naming convention: `IEC60204_1_2016A1__Clause<NN>__<slug>.md`
 
 | Clause | Title | Priority | NFPA 79 Equiv | Status |
 |--------|-------|----------|---------------|--------|

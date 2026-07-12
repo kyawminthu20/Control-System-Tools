@@ -86,7 +86,7 @@ description: "Route from your project, lifecycle stage, or market to the standar
       <span class="scenario-card__num">Scenario 02</span>
       <span class="scenario-card__title">Global Machine (US + EU)</span>
       <p class="scenario-card__start"><strong>Start with:</strong> NFPA 79 (US) + IEC 60204-1 (EU) + ISO 12100</p>
-      <p style="font-size:0.78rem;color:var(--color-text-muted);">Machine sold in both markets — design to the most restrictive rule from each. CE marking requires an ISO 12100 risk assessment as the foundation.</p>
+      <p style="font-size:0.78rem;color:var(--color-text-muted);">Machine sold in both markets — design to the most restrictive rule from each. EU machinery law requires a documented risk assessment and compliance with the applicable essential health and safety requirements. EN ISO 12100 is the harmonized methodology commonly used to perform and document it — voluntary, but conferring presumption of conformity for the requirements it covers.</p>
       <a href="{{ '/tools/scenarios/global-machine/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
     </div>
 
@@ -94,7 +94,7 @@ description: "Route from your project, lifecycle stage, or market to the standar
       <span class="scenario-card__num">Scenario 03</span>
       <span class="scenario-card__title">Process Skid Shutdown System</span>
       <p class="scenario-card__start"><strong>Start with:</strong> IEC 61511 + IEC 61508 foundation</p>
-      <p style="font-size:0.78rem;color:var(--color-text-muted);">SIS / ESD for process industry. IEC 61511 is the application standard; IEC 61508 is the lifecycle foundation. <span class="badge badge--complete">REVIEWED</span></p>
+      <p style="font-size:0.78rem;color:var(--color-text-muted);">SIS / ESD for process industry. IEC 61511 is the application standard; IEC 61508 is the lifecycle foundation. <span class="badge badge--reviewed">Reviewed</span></p>
       <a href="{{ '/tools/scenarios/process-skid/' | relative_url }}" style="font-size:0.8rem;">Full scenario &rarr;</a>
     </div>
 
@@ -142,7 +142,7 @@ description: "Route from your project, lifecycle stage, or market to the standar
       <span class="card__title">ISO 12100 · 13849-1 · IEC 62061 · 61508 · 61511</span>
       <p class="card__desc">Risk assessment and safety function design. PL path via ISO 13849-1; SIL path via IEC 62061 or IEC 61511 for process.</p>
       <a href="{{ '/standards/functional-safety/' | relative_url }}" class="card__link">View family &rarr;</a>
-      <span class="badge badge--complete">Reviewed</span>
+      <span class="badge badge--reviewed">Reviewed</span>
     </div>
 
     <div class="card">

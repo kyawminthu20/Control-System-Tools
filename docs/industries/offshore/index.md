@@ -18,7 +18,6 @@ related_standards:
 <div class="page-header">
   <span class="page-header__label">Industry Overlay — Offshore</span>
   <h1>Offshore Industry Standards</h1>
-  <span class="badge badge--complete">Phase 12 — DNV + ABS Corpus Complete</span>
 </div>
 
 ## Industry Profile
@@ -76,11 +75,11 @@ Is the platform dynamically positioned (DP)?
 
 | Category | Standards | Corpus Status |
 |----------|-----------|---------------|
-| Class society — DNV | DNV-OS-D201 | <span class="badge badge--complete">Reviewed</span> |
-| Class society — ABS | ABS Offshore Electrical (Part 4) | <span class="badge badge--complete">Reviewed</span> |
-| Process safety (SIS) | IEC 61511 | <span class="badge badge--complete">Reviewed</span> |
-| Hazardous area equipment | IEC 60079 series | <span class="badge badge--complete">Reviewed</span> |
-| Machine electrical design | IEC 60204-1 | <span class="badge badge--complete">Reviewed</span> |
+| Class society — DNV | DNV-OS-D201 | <span class="badge badge--reviewed">Reviewed</span> |
+| Class society — ABS | ABS Offshore Electrical (Part 4) | <span class="badge badge--reviewed">Reviewed</span> |
+| Process safety (SIS) | IEC 61511 | <span class="badge badge--reviewed">Reviewed</span> |
+| Hazardous area equipment | IEC 60079 series | <span class="badge badge--reviewed">Reviewed</span> |
+| Machine electrical design | IEC 60204-1 | <span class="badge badge--reviewed">Reviewed</span> |
 | Marine electrical (ships) | IEC 60092 series | Not in corpus |
 | Offshore fire code | NFPA 306 | Not in corpus |
 

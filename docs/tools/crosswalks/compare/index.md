@@ -61,7 +61,7 @@ redirect_from:
 <!-- Pair: NFPA 79 vs IEC 60204-1 -->
 <div class="compare-result" id="pair-nfpa79-iec60204" hidden>
 
-## NFPA 79:2024 vs IEC 60204-1:2018
+## NFPA 79:2024 vs IEC 60204-1:2016+AMD1:2021
 
 Both cover electrical equipment of machines. Use when designing for US + EU markets. Design to the **most restrictive** requirement from each standard.
 

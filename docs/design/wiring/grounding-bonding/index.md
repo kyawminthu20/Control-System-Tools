@@ -11,7 +11,7 @@ breadcrumb:
 repo_path: "control-standards/rag/design_framework/wiring_practices/"
 review:
   standard: "NEC Art. 250 / NFPA 79 Ch. 8 / IEC 60204-1 Cl. 8"
-  edition: "NEC 2023, NFPA 79:2024, IEC 60204-1:2018"
+  edition: "NEC 2023, NFPA 79:2024, IEC 60204-1:2016+AMD1:2021"
   status: "Review pending"
   coverage: "Panel-level PE bus, bonding, shield-landing policy, separately derived sources, and verification; does not cover grounding-electrode system design, lightning protection systems, or hazardous-location grounding"
   last_reviewed: "July 2026"
@@ -164,7 +164,7 @@ Panel-level specifics — the deep treatment of separation classes and suppressi
 
 - **NEC (NFPA 70) 2023, Art. 250** — grounding and bonding: purposes (250.4), EGC sizing (Table 250.122), bonding jumpers (250.102), separately derived systems (250.30), isolated ground concept (250.146(D))
 - **NFPA 79:2024, Ch. 8** — machine grounding and bonding: single PE terminal, continuity, no hinges/slides as bonding paths, conductor sizing basis (Table 8.2.2.3), color reservation
-- **IEC 60204-1:2018, Cl. 5, Cl. 8, Cl. 18** — external PE terminal and conductor sizing (Table 1), equipotential bonding circuit, verification tests including protective-bonding continuity
+- **IEC 60204-1:2016+AMD1:2021, Cl. 5, Cl. 8, Cl. 18** — external PE terminal and conductor sizing (Table 1), equipotential bonding circuit, verification tests including protective-bonding continuity
 - **IEC 60364-5-54** — referenced by IEC 60204-1 for detailed protective-conductor cross-section methodology
 - **NEC 2023, Art. 409 / Art. 670** — industrial control panels and industrial machinery: where the panel meets the premises wiring system
 - **UL 508A:2022** — panel-shop construction practice for grounding and bonding within listed industrial control panels

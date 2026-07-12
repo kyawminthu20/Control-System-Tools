@@ -58,8 +58,8 @@ requirements:
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#1. Start/Stop Behavior
       - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#2. Emergency Stop Concepts
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#1. Start/Stop Behavior
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#2. Emergency Stop Concepts
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md#1. Start/Stop Behavior
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md#2. Emergency Stop Concepts
     industry_tags:
       - all_industries
 
@@ -73,7 +73,7 @@ requirements:
     verification_method: Test each E-stop station and verify stop plus restart behavior.
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#2. Emergency Stop Concepts
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#2. Emergency Stop Concepts
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md#2. Emergency Stop Concepts
     industry_tags:
       - all_industries
 
@@ -86,7 +86,7 @@ requirements:
     verification_method: Review architecture and simulate standard PLC or HMI fault conditions.
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#3. Safety vs. Standard Control Separation
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#3. Safety vs. Standard Control Separation
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md#3. Safety vs. Standard Control Separation
     industry_tags:
       - all_industries
 
@@ -99,7 +99,7 @@ requirements:
     verification_method: Review HMI and hardwired control design against safety functions.
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#2. Ergonomics and Safety
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md#2. Ergonomic Considerations
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause10__operator_interface.md#2. Ergonomic Considerations
     industry_tags:
       - all_industries
 
@@ -114,7 +114,7 @@ requirements:
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md#1. Protective Bonding Rules
       - us/nec/NEC_2023__Art250__grounding_and_bonding.md#2. Bonding of enclosures and doors
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md#1. Bonding Strategy
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause08__equipotential_bonding.md#1. Bonding Strategy
     industry_tags:
       - all_industries
 
@@ -167,7 +167,7 @@ requirements:
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#1. Control Device Requirements
       - us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#2. Ergonomics and Safety
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md#2. Ergonomic Considerations
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause10__operator_interface.md#2. Ergonomic Considerations
     industry_tags:
       - all_industries
 
@@ -180,7 +180,7 @@ requirements:
     verification_method: Review panel layout and inspect installed cabinet.
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch11__control_equipment.md#1. Panel Construction Implications
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause11__control_equipment.md#1. Enclosures and Layout
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause11__controlgear.md#1. Enclosures and Layout
     industry_tags:
       - all_industries
 
@@ -194,7 +194,7 @@ requirements:
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch04__general_conditions_of_installation.md#0. Environmental Considerations
       - us/nfpa79/NFPA79_2024__Ch04__general_conditions_of_installation.md#2. Enclosure Implications
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause07__protection_of_equipment.md#2. Environmental Protection
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause07__protection_of_equipment.md#2. Environmental Protection
     industry_tags:
       - all_industries
 
@@ -208,7 +208,7 @@ requirements:
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch16__wiring_methods.md#1. Internal Machine Wiring
       - us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#1. Labeling Requirements
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md#1. Identification and Labels
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md#1. Identification and Labels
     industry_tags:
       - all_industries
 
@@ -222,8 +222,8 @@ requirements:
     verification_method: Review turnover package.
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#2. Documentation Expectations
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md#2. Documentation Set
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md#0. Purpose
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md#2. Documentation Set
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause18__verification.md#0. Purpose
     industry_tags:
       - all_industries
 
@@ -236,8 +236,8 @@ requirements:
     subsystem: verification
     verification_method: Execute FAT and SAT checklist and retain records.
     standard_refs:
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md#1. Required Tests
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md#2. Commissioning Alignment
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause18__verification.md#1. Required Tests
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause18__verification.md#2. Commissioning Alignment
     industry_tags:
       - all_industries
 
@@ -263,7 +263,7 @@ requirements:
     verification_method: Measure post-disconnect residual voltage decay.
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#1. Protective Measures
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md#1. Protective Measures
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md#1. Protective Measures
     industry_tags:
       - all_industries
 
@@ -276,7 +276,7 @@ requirements:
     verification_method: Review drive package data, conductor calculations, and field isolation points.
     standard_refs:
       - us/nec/NEC_2023__Art430__motors_motor_circuits_and_controllers.md#2. VFD considerations (Part X)
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md#1. Motor Protection and Control
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause14__electric_motors.md#1. Motor Protection and Control
     industry_tags:
       - all_industries
 
@@ -289,7 +289,7 @@ requirements:
     verification_method: Simulate high-pressure trip and observe pump stop plus safe-state action.
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#0. Control Philosophy
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md#1. Motor Protection and Control
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause14__electric_motors.md#1. Motor Protection and Control
       - "TO VERIFY: ISO 4413"
     industry_tags:
       - all_industries
@@ -361,7 +361,7 @@ requirements:
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch04__general_conditions_of_installation.md#2. Enclosure Implications
       - us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#1. Control Device Requirements
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause07__protection_of_equipment.md#2. Environmental Protection
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause07__protection_of_equipment.md#2. Environmental Protection
     industry_tags:
       - food_and_beverage
 
@@ -428,7 +428,7 @@ requirements:
     subsystem: project_governance
     verification_method: Review QA plan and turnover dossier.
     standard_refs:
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md#0. Purpose
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause18__verification.md#0. Purpose
       - "TO VERIFY: nuclear QA standard"
     industry_tags:
       - nuclear

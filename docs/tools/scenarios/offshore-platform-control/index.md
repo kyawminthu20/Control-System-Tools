@@ -25,7 +25,6 @@ redirect_from:
 <div class="page-header">
   <span class="page-header__label">Scenario 09</span>
   <h1>Offshore Platform — ESD / F&amp;G / Power Management</h1>
-  <span class="badge badge--complete">DNV + ABS Corpus Complete — Phase 12</span>
 </div>
 
 ## Project Summary

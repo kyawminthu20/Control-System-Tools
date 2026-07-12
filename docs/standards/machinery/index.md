@@ -29,7 +29,7 @@ crosswalk_refs:
 
 | Standard | Edition | Scope | Status |
 |----------|---------|-------|--------|
-| [IEC 60204-1]({{ '/standards/machinery/iec-60204-1/' | relative_url }}) | 2018 | Electrical equipment of machines | Complete |
+| [IEC 60204-1]({{ '/standards/machinery/iec-60204-1/' | relative_url }}) | 2016+AMD1:2021 | Electrical equipment of machines | <span class="badge badge--pending">Review pending</span> |
 | ISO 12100 | 2010 | Risk assessment foundation | See [Functional Safety]({{ '/standards/functional-safety/' | relative_url }}) |
 | ISO 13849-1 | 2023 | Safety-related control systems (PL) | See [Functional Safety]({{ '/standards/functional-safety/' | relative_url }}) |
 | IEC 62061 | 2021 | Safety-related control systems (SIL) | See [Functional Safety]({{ '/standards/functional-safety/' | relative_url }}) |

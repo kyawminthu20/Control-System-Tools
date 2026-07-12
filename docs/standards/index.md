@@ -44,9 +44,9 @@ Global (US + EU)?            → NFPA 79 + IEC 60204-1 + ISO 13849-1 (design to 
 
 | Standard | Edition | Scope | Status |
 |----------|---------|-------|--------|
-| [NEC (NFPA 70)]({{ '/standards/us-electrical/nec/' | relative_url }}) | 2023 | US electrical installation code, legally enforced | Complete |
-| [NFPA 79]({{ '/standards/us-electrical/nfpa-79/' | relative_url }}) | 2024 | Electrical standard for industrial machinery | Complete |
-| [UL 508A]({{ '/standards/us-electrical/ul-508a/' | relative_url }}) | 2022 | Industrial control panel construction and listing | Complete |
+| [NEC (NFPA 70)]({{ '/standards/us-electrical/nec/' | relative_url }}) | 2023 covered; 2026 latest published — AHJ adoption governs | US electrical installation code, legally enforced | <span class="badge badge--pending">Review pending</span> |
+| [NFPA 79]({{ '/standards/us-electrical/nfpa-79/' | relative_url }}) | 2024 | Electrical standard for industrial machinery | <span class="badge badge--pending">Review pending</span> |
+| [UL 508A]({{ '/standards/us-electrical/ul-508a/' | relative_url }}) | 3rd Ed. (2018), rev. through 2025-06-26 | Industrial control panel construction and listing | <span class="badge badge--pending">Review pending</span> |
 
 <p><a href="{{ '/standards/us-electrical/' | relative_url }}">View US Electrical family page &rarr;</a></p>
 
@@ -56,7 +56,7 @@ Global (US + EU)?            → NFPA 79 + IEC 60204-1 + ISO 13849-1 (design to 
 
 | Standard | Edition | Scope | Status |
 |----------|---------|-------|--------|
-| [IEC 60204-1]({{ '/standards/machinery/iec-60204-1/' | relative_url }}) | 2018 | Electrical equipment of machines, global / CE | Complete |
+| [IEC 60204-1]({{ '/standards/machinery/iec-60204-1/' | relative_url }}) | 2016+AMD1:2021 | Electrical equipment of machines, global / CE | <span class="badge badge--pending">Review pending</span> |
 
 <p><a href="{{ '/standards/machinery/' | relative_url }}">View International Machinery family page &rarr;</a></p>
 
@@ -66,11 +66,11 @@ Global (US + EU)?            → NFPA 79 + IEC 60204-1 + ISO 13849-1 (design to 
 
 | Standard | Edition | Scope | Status |
 |----------|---------|-------|--------|
-| [ISO 12100]({{ '/standards/functional-safety/iso-12100/' | relative_url }}) | 2010 | Risk assessment and risk reduction | <span class="badge badge--complete">Reviewed</span> |
-| [ISO 13849-1]({{ '/standards/functional-safety/iso-13849-1/' | relative_url }}) | 2023 | Safety of machinery — PL approach | <span class="badge badge--complete">Reviewed</span> |
-| [IEC 62061]({{ '/standards/functional-safety/iec-62061/' | relative_url }}) | 2021 | Functional safety — machinery SIL approach | <span class="badge badge--complete">Reviewed</span> |
-| [IEC 61508]({{ '/standards/functional-safety/iec-61508/' | relative_url }}) | 2010 | Functional safety of E/E/PE systems | <span class="badge badge--complete">Reviewed</span> |
-| [IEC 61511]({{ '/standards/functional-safety/iec-61511/' | relative_url }}) | 2016 | Functional safety — process industry | <span class="badge badge--complete">Reviewed</span> |
+| [ISO 12100]({{ '/standards/functional-safety/iso-12100/' | relative_url }}) | 2010 | Risk assessment and risk reduction | <span class="badge badge--pending">Review pending</span> |
+| [ISO 13849-1]({{ '/standards/functional-safety/iso-13849-1/' | relative_url }}) | 2023 | Safety of machinery — PL approach | <span class="badge badge--pending">Review pending</span> |
+| [IEC 62061]({{ '/standards/functional-safety/iec-62061/' | relative_url }}) | 2021+AMD1:2024+AMD2:2026 | Functional safety — machinery SIL approach | <span class="badge badge--revalidate">Needs revalidation</span> |
+| [IEC 61508]({{ '/standards/functional-safety/iec-61508/' | relative_url }}) | 2010 | Functional safety of E/E/PE systems | <span class="badge badge--reviewed">Reviewed</span> |
+| [IEC 61511]({{ '/standards/functional-safety/iec-61511/' | relative_url }}) | 2016 | Functional safety — process industry | <span class="badge badge--pending">Review pending</span> |
 
 <p><a href="{{ '/standards/functional-safety/' | relative_url }}">View Functional Safety family page &rarr;</a></p>
 
@@ -80,7 +80,7 @@ Global (US + EU)?            → NFPA 79 + IEC 60204-1 + ISO 13849-1 (design to 
 
 | Standard | Edition | Scope | Status |
 |----------|---------|-------|--------|
-| [IEC 62443]({{ '/standards/cybersecurity/iec-62443/' | relative_url }}) | Series | IACS security — Zone/Conduit, Security Levels, FRs, lifecycle | <span class="badge badge--complete">Phase 5 Complete</span> |
+| [IEC 62443]({{ '/standards/cybersecurity/iec-62443/' | relative_url }}) | Series | IACS security — Zone/Conduit, Security Levels, FRs, lifecycle | <span class="badge badge--pending">Review pending</span> |
 
 <p><a href="{{ '/standards/cybersecurity/' | relative_url }}">View Cybersecurity family page &rarr;</a></p>
 
@@ -90,7 +90,7 @@ Global (US + EU)?            → NFPA 79 + IEC 60204-1 + ISO 13849-1 (design to 
 
 | Standard | Publisher | Scope | Status |
 |----------|-----------|-------|--------|
-| [IEC 60079 (6 parts)]({{ '/standards/hazardous-area/iec-60079/' | relative_url }}) | IEC | Explosive atmosphere equipment and installation | <span class="badge badge--complete">Reviewed</span> |
+| [IEC 60079 (6 parts)]({{ '/standards/hazardous-area/iec-60079/' | relative_url }}) | IEC | Explosive atmosphere equipment and installation | <span class="badge badge--reviewed">Reviewed</span> |
 
 <p><a href="{{ '/standards/hazardous-area/' | relative_url }}">View Hazardous Area family page &rarr;</a></p>
 
@@ -100,7 +100,7 @@ Global (US + EU)?            → NFPA 79 + IEC 60204-1 + ISO 13849-1 (design to 
 
 | Standard | Publisher | Scope | Status |
 |----------|-----------|-------|--------|
-| [SEMI S2 / S8 / S14]({{ '/standards/semiconductor/semi/' | relative_url }}) | SEMI | Semiconductor equipment safety, ergonomics, fire risk | <span class="badge badge--complete">Reviewed</span> |
+| [SEMI S2 / S8 / S14]({{ '/standards/semiconductor/semi/' | relative_url }}) | SEMI | Semiconductor equipment safety, ergonomics, fire risk | <span class="badge badge--reviewed">Reviewed</span> |
 
 <p><a href="{{ '/standards/semiconductor/' | relative_url }}">View Semiconductor family page &rarr;</a></p>
 

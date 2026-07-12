@@ -30,7 +30,7 @@ Each safety function must be fully specified before design begins. A complete sp
 |----------------------|-------------|
 | **Initiation event** | The signal or condition that triggers the safety function (e.g., E-stop pressed, guard door opened, light curtain beam broken) |
 | **Response action** | The controlled action taken to remove or reduce the hazard (e.g., remove drive enable, apply brake, de-energize actuator) |
-| **Required PL (PLr)** | Determined from ISO 12100 Annex A risk graph using S/F/P parameters |
+| **Required PL (PLr)** | Determined from the ISO 13849-1 Annex A risk graph, using S/F/P parameters estimated during the ISO 12100 risk assessment |
 | **Response time requirement** | Maximum time from initiation to completed safe state (e.g., ≤ 500 ms stop time) |
 | **Reset requirement** | Whether manual reset is required before the machine can restart after the safety function activates |
 
@@ -40,7 +40,7 @@ One safety function specification sheet must exist per distinct safety function.
 
 The ISO 13849-1 design strategy is a structured iterative loop:
 
-1. **Specify PLr** — Use ISO 12100 Annex A S/F/P risk graph to determine the required Performance Level for each safety function.
+1. **Specify PLr** — Carry out the machinery risk assessment per ISO 12100, then use the ISO 13849-1 Annex A S/F/P risk graph to determine the required Performance Level for each safety function.
 2. **Select Category architecture** — Choose B, 1, 2, 3, or 4 based on the fault tolerance needed to achieve PLr (Clause 6).
 3. **Determine MTTFd, DC, CCF** — For the selected architecture, calculate or look up component reliability data (Clause 5).
 4. **Calculate achieved PL** — Use the Category + MTTFd + DC combination table (Clause 5) to determine the achieved PL.
@@ -59,16 +59,27 @@ Performance Levels are defined by PFHd (Probability of dangerous Failure per Hou
 | PLb | ≥ 3×10⁻⁶ /hr to < 10⁻⁵ /hr | Low–medium risk applications |
 | PLc | ≥ 10⁻⁶ /hr to < 3×10⁻⁶ /hr | Medium risk; simple guarding where exposure is occasional |
 | PLd | ≥ 10⁻⁷ /hr to < 10⁻⁶ /hr | High risk; most industrial E-stop, light curtains, interlocks |
-| PLe | < 10⁻⁷ /hr | Highest requirement; rare in standard machinery |
+| PLe | ≥ 10⁻⁸ /hr to < 10⁻⁷ /hr | Highest requirement; rare in standard machinery |
 
 Note: PLa is not the same as "no requirement." Even PLa requires that the safety function works; it just tolerates a higher probability of failure than PLb–PLe.
 
 ## 4. Relationship to ISO 12100
 
-PLr comes from ISO 12100 Annex A, not from ISO 13849-1 itself. The relationship is:
+ISO 12100 and ISO 13849-1 do different jobs, and the boundary between them matters:
 
-- ISO 12100 performs the risk assessment and outputs PLr for each identified hazard / safety function.
-- ISO 13849-1 Clause 4 is the first design step after PLr is determined.
-- ISO 13849-1 Annex A (risk graph) is the normative bridge: it converts the S/F/P parameters from ISO 12100 into a PLr number.
+- **ISO 12100** provides the machinery risk assessment and three-step risk reduction
+  methodology. It identifies the hazards and the need for safety functions. It does
+  not itself output a PLr.
+- **ISO 13849-1 Annex A** contains the S/F/P risk graph that estimates the required
+  Performance Level (PLr) for each safety-related control function. This is the
+  normative source of PLr.
+- **IEC 62061** provides its own method for determining a required SIL, for designs
+  taking that route instead.
 
-Design practitioners who jump directly to ISO 13849-1 without an ISO 12100 risk assessment are not following either standard correctly. The PLr must be justified by risk assessment, not assumed.
+So the sequence is: assess risk per ISO 12100 → for each safety function designed under
+ISO 13849-1, estimate PLr with the ISO 13849-1 Annex A risk graph → ISO 13849-1 Clause 4
+is the first design step after PLr is determined.
+
+Design practitioners who jump straight to a PLr without an ISO 12100 risk assessment are
+not following either standard correctly. The PLr must be justified by risk assessment,
+not assumed.

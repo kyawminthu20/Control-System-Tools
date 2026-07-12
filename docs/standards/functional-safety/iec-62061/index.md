@@ -23,25 +23,33 @@ lifecycle_stage:
     slug: "detailed-design/"
 review:
   standard: "IEC 62061"
-  edition: "2021"
-  status: "Reviewed"
-  coverage: "Core clauses plus Annex A SILCL tables; worked example included"
-  last_reviewed: "April 2026"
+  edition: "IEC 62061:2021+AMD1:2024+AMD2:2026 (CSV Ed. 2.2, 2026-03-20)"
+  status: "Needs revalidation"
+  coverage: "Written against the base 2021 edition. Must be rebuilt against the current consolidated edition — SILCL superseded by subsystem maximum SIL; scope extended beyond E/E/PE technologies"
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">
   <span class="page-header__label">Functional Safety · IEC 62061</span>
-  <h1>IEC 62061:2021 — Functional Safety of Machinery (SIL)</h1>
-  <span class="badge badge--complete">Phase 3 Complete</span>
+  <h1>IEC 62061 — Functional Safety of Machinery (SIL)</h1>
 </div>
+
+> **⚠ This page needs revalidation against the current consolidated edition.**
+> The current reference is **IEC 62061:2021+AMD1:2024+AMD2:2026 (CSV, Edition 2.2,
+> published 2026-03-20)**. The content below was written against the base 2021 edition and
+> has not yet been rebuilt against the amendments. Two changes in the 2021 edition in
+> particular are only partly reflected here: the subsystem **SILCL** concept was replaced by
+> the subsystem's **maximum SIL**, and the standard's scope was **extended beyond electrical,
+> electronic and programmable electronic technologies**. Revalidate from the consolidated
+> edition before relying on the detail below.
 
 ## Quick Start
 
 - IEC 62061 applies the SIL approach to machinery — use it when your SRECS includes a programmable safety controller (safety PLC) or when integrating certified safety devices from multiple suppliers.
-- Start with [ISO 12100]({{ '/standards/functional-safety/iso-12100/' | relative_url }}) to identify hazards and determine the required SIL for each safety function — IEC 62061 uses the same S/F/P risk parameters as ISO 12100.
+- Start with [ISO 12100]({{ '/standards/functional-safety/iso-12100/' | relative_url }}) to assess risk and identify the safety functions. The **required SIL is then determined by IEC 62061's own method** — ISO 12100 supplies the risk assessment, not the SIL target. IEC 62061 and [ISO 13849-1]({{ '/standards/functional-safety/iso-13849-1/' | relative_url }}) are **alternative routes** for machinery, chosen on project, architecture, customer and methodology grounds.
 - Decompose the SRECS into three subsystems: input (sensor or initiator) → logic (safety PLC or safety relay) → output (actuator or contactor). Each subsystem has its own PFHd contribution.
 - Total SRECS PFHd = sum of subsystem PFHd values. This total must be less than or equal to the SIL target PFHd limit. The additive nature makes budget allocation straightforward.
-- Check SILCL (SIL Claim Limit) for every subsystem. A low PFHd calculation does not override the SILCL architectural cap — if your subsystem architecture only supports SILCL 2, you cannot use it in a SIL 3 application regardless of the calculated PFHd.
+- Check the **maximum SIL** each subsystem can claim (the 2021 edition's replacement for the older **SILCL** term). A low PFHd calculation does not override this architectural cap — if a subsystem's architecture only supports a maximum SIL of 2, it cannot be used in a SIL 3 application regardless of the calculated PFHd.
 
 ---
 
@@ -50,15 +58,14 @@ review:
 | Field | Value |
 |-------|-------|
 | **Standard ID** | IEC 62061 |
-| **Edition** | 2021 |
+| **Edition** | IEC 62061:2021+AMD1:2024+AMD2:2026 (CSV, Ed. 2.2, 2026-03-20) |
 | **Publisher** | International Electrotechnical Commission (IEC) |
 | **Jurisdiction** | Global; harmonized under EU Machinery Directive and Machinery Regulation 2023/1230 |
-| **Scope** | Safety-related electrical control systems (SRECS) on machines — SIL 1 through SIL 3 |
+| **Scope** | Safety-related control systems on machines. The 2021 edition extended the scope beyond electrical/electronic/programmable electronic technologies. Machinery applications conventionally use SIL 1 to SIL 3 <span class="badge badge--verify">verify against the published edition</span> |
 | **Repository** | `rag/international/functional_safety/iec_62061/` |
-| **Status in Corpus** | <span class="badge badge--complete">Phase 3 Complete</span> — 4 clause files + index |
 | **Derived from** | [IEC 61508]({{ '/standards/functional-safety/iec-61508/' | relative_url }}) — sector-specific application for machinery |
 
-**Purpose:** IEC 62061 provides requirements for the design, integration, and validation of safety-related electrical, electronic, and programmable electronic control systems (SRECS) on machinery. It is derived from IEC 61508 but is scoped specifically to machinery, eliminating the most complex IEC 61508 requirements (SIL 4, full software safety lifecycle for certified subsystems) that do not apply to typical machinery contexts.
+**Purpose:** IEC 62061 provides requirements for the design, integration, and validation of safety-related control systems on machinery. It is derived from IEC 61508 but is scoped specifically to machinery. The 2005 edition was confined to safety-related *electrical* control systems (SRECS); the 2021 edition broadened this to safety-related control systems generally, extending to non-electrical technologies. SIL 4 — defined by IEC 61508 — is not used in machinery.
 
 ---
 
@@ -133,9 +140,15 @@ The architecture of each subsystem determines its Hardware Fault Tolerance (HFT)
 
 ---
 
-## SILCL — Architectural Limits
+## Maximum SIL — Architectural Limits
 
-SILCL (SIL Claim Limit) is the maximum SIL a subsystem can claim, determined by its Hardware Fault Tolerance (HFT) and Safe Failure Fraction (SFF). It is independent of the PFHd calculation.
+> **Terminology:** IEC 62061:2021 replaced the subsystem **SILCL** (SIL Claim Limit) concept
+> with the subsystem's **maximum SIL**. "SILCL" is 2005-edition language and still appears on
+> device datasheets and certificates. This section retains the older term where it reflects
+> what is printed on real hardware, but the standard's current term is *maximum SIL*, and this
+> section is one of the parts that must be rebuilt against the consolidated edition.
+
+The maximum SIL is the highest SIL a subsystem can claim, determined by its Hardware Fault Tolerance (HFT) and Safe Failure Fraction (SFF). It is independent of the PFHd calculation.
 
 **SFF definition:** SFF = (safe failure rate + dangerous detected failure rate) / total failure rate. A higher SFF means a greater proportion of failures either produce a safe state or are detected, leaving fewer undetected dangerous failures.
 
@@ -165,7 +178,7 @@ SILCL (SIL Claim Limit) is the maximum SIL a subsystem can claim, determined by 
 
 **Subsystem decomposition:**
 
-| Subsystem | Device | Architecture | PFHd (from datasheet or calculation) | SILCL |
+| Subsystem | Device | Architecture | PFHd (from datasheet or calculation) | Maximum SIL (formerly SILCL) |
 |-----------|--------|--------------|---------------------------------------|-------|
 | Input | Safety light curtain (dual OSSD outputs) | 1oo2 (HFT 1) | 3.0 × 10⁻⁸ /hr | SIL 3 (per manufacturer certification) |
 | Logic | Safety PLC (e.g., Pilz PNOZ m B0 or equivalent) | 1oo2 internal | 1.5 × 10⁻⁸ /hr | SIL 3 (per device certification) |
@@ -175,17 +188,31 @@ SILCL (SIL Claim Limit) is the maximum SIL a subsystem can claim, determined by 
 
 PFHd_total = 3.0 × 10⁻⁸ + 1.5 × 10⁻⁸ + 4.0 × 10⁻⁸ = 8.5 × 10⁻⁸ /hr
 
-**SIL 2 verification:**
-- PFHd requirement: less than 1.0 × 10⁻⁶ /hr
+**PFHd verification against the SIL 2 target:**
+- SIL 2 band: 10⁻⁷ ≤ PFHd < 10⁻⁶ /hr — so the SIL 2 target is met by any PFHd below 10⁻⁶ /hr
 - Calculated PFHd: 8.5 × 10⁻⁸ /hr
-- Result: PASS — 8.5 × 10⁻⁸ is well below 1.0 × 10⁻⁶ /hr. The SRECS meets the SIL 2 PFHd requirement.
+- Result: PASS — the calculated PFHd satisfies the SIL 2 requirement with margin.
 
-**SILCL verification:**
+> **Read the bands in both directions.** 8.5 × 10⁻⁸ /hr does not merely sit "below 10⁻⁶" —
+> it falls **inside the numerical SIL 3 band** (10⁻⁸ ≤ PFHd < 10⁻⁷). It does **not** follow
+> that this safety function is SIL 3. The achievable SIL claim is capped by the maximum SIL
+> of the subsystems, by the architectural constraints, and by the systematic requirements —
+> here the output subsystem caps the claim at SIL 2. Quoting only the upper bound
+> ("below 10⁻⁶, therefore SIL 2") hides both the real numerical position and the real
+> limiting factor.
+
+**Architectural constraint verification (maximum SIL):**
 - Required SIL: SIL 2
-- Minimum subsystem SILCL: SIL 2 (output subsystem is the limiting element)
-- Result: PASS — minimum SILCL equals or exceeds the required SIL 2.
+- Lowest subsystem maximum SIL: SIL 2 (the output subsystem is the limiting element)
+- Result: PASS — the lowest subsystem maximum SIL equals the required SIL 2. This, not the
+  PFHd figure, is what limits the claim to SIL 2.
 
-**Conclusion:** The SRECS satisfies both the PFHd numerical requirement and the SILCL architectural requirement for SIL 2. Documentation should include the manufacturer datasheet references for all PFHd values, the proof test interval assumed for the contactor B10D calculation, and the SILCL certification references.
+**Conclusion:** The safety function satisfies the PFHd numerical requirement and the
+architectural constraint for SIL 2, and the claim is capped at SIL 2 by the output
+subsystem. Documentation should include the manufacturer datasheet references for all PFHd
+values, the proof test interval assumed for the contactor B10D calculation, and the
+subsystem certification references. Systematic capability must also be demonstrated — the
+numbers alone do not establish the SIL.
 
 ---
 

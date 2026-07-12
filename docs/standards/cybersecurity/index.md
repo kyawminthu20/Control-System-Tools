@@ -38,7 +38,7 @@ Safety system with network interface?   → IEC 62443 + IEC 61511 (or IEC 62061)
 
 | Standard | Scope | Status |
 |----------|-------|--------|
-| [IEC 62443 (full page)]({{ '/standards/cybersecurity/iec-62443/' | relative_url }}) | IACS security — Zone/Conduit, Security Levels, FRs, lifecycle | <span class="badge badge--complete">Phase 5 Complete</span> |
+| [IEC 62443 (full page)]({{ '/standards/cybersecurity/iec-62443/' | relative_url }}) | IACS security — Zone/Conduit, Security Levels, FRs, lifecycle | <span class="badge badge--pending">Review pending</span> |
 | IEC 62443-2-1 | Security management system (CSMS) | Covered in IEC 62443 page |
 | IEC 62443-3-3 | System security requirements and SL levels | Covered in IEC 62443 page |
 | IEC 62443-4-1 | Secure product development lifecycle | Covered in IEC 62443 page |

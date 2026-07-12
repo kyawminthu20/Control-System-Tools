@@ -30,13 +30,12 @@ review:
 <div class="page-header">
   <span class="page-header__label">Functional Safety · IEC 61508</span>
   <h1>IEC 61508:2010 — Functional Safety of E/E/PE Safety-Related Systems</h1>
-  <span class="badge badge--complete">Phase 3 Complete</span>
 </div>
 
 ## Quick Start
 
 - IEC 61508 is the **parent/foundational standard** — use [IEC 62061]({{ '/standards/functional-safety/iec-62061/' | relative_url }}) (machinery) or [IEC 61511]({{ '/standards/functional-safety/iec-61511/' | relative_url }}) (process) instead for application work
-- All SIL 1–SIL 3 applications ultimately trace back to IEC 61508 requirements; the sector standards are derived from it
+- All SIL-rated applications ultimately trace back to IEC 61508 requirements; the sector standards are derived from it
 - SIL 4 exists in the standard but is almost never used in industrial automation — it is designed for nuclear and aviation
 - Understanding Part 2 (hardware) and Clause 7 (lifecycle) explains why IEC 62061 and IEC 61511 are structured the way they are
 - Certified safety PLCs shift the Part 3 software burden to the manufacturer — this is why they dominate safety applications
@@ -53,8 +52,6 @@ review:
 | **Jurisdiction** | Global |
 | **Scope** | Generic E/E/PE safety-related systems across all industries |
 | **Repository** | `rag/international/functional_safety/iec_61508/` |
-| **Status in Corpus** | Complete <span class="badge badge--complete">Phase 3</span> |
-
 **Purpose:** IEC 61508 is the umbrella standard for functional safety of electrical, electronic, and programmable electronic (E/E/PE) safety-related systems. It defines the SIL framework, hardware integrity concepts, software requirements, and 16-phase safety lifecycle that IEC 62061 and IEC 61511 both derive from.
 
 ---

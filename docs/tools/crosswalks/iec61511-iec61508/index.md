@@ -159,10 +159,10 @@ Engineers working under IEC 61511 need to invoke IEC 61508 in these situations:
 
 | Topic | Standards | Corpus Status |
 |-------|-----------|---------------|
-| Functional safety foundation | IEC 61508 (4 files) | <span class="badge badge--complete">Reviewed</span> |
-| Process SIS lifecycle | IEC 61511 (4 files) | <span class="badge badge--complete">Reviewed</span> |
-| Machinery functional safety | ISO 13849-1, IEC 62061 | <span class="badge badge--complete">Reviewed</span> |
-| LOPA methodology | (within IEC 61511 corpus) | <span class="badge badge--complete">Reviewed</span> |
+| Functional safety foundation | IEC 61508 (4 files) | <span class="badge badge--reviewed">Reviewed</span> |
+| Process SIS lifecycle | IEC 61511 (4 files) | <span class="badge badge--reviewed">Reviewed</span> |
+| Machinery functional safety | ISO 13849-1, IEC 62061 | <span class="badge badge--reviewed">Reviewed</span> |
+| LOPA methodology | (within IEC 61511 corpus) | <span class="badge badge--reviewed">Reviewed</span> |
 | Notified body assessment process | External to corpus | <span class="badge badge--verify">Not in corpus</span> |
 
 ---

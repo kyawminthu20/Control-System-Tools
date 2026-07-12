@@ -36,7 +36,7 @@ Successfully generated **FOUR complete standards modules** for the Standards Int
 - **Location**: `rag/standards_intelligence/us/ul_508a/`
 - **Status**: COMPLETE - 11 sections covering UL listing
 
-### 4. IEC 60204-1 (2018) - Global Machinery ✅
+### 4. IEC 60204-1 (2016+AMD1:2021) - Global Machinery ✅
 - **Files**: 18 total (15 clauses + 3 supporting)
 - **Edition**: 2018 (6th Edition)
 - **Jurisdiction**: Global/International
@@ -330,7 +330,7 @@ rag/standards_intelligence/
 │       ├── _index.yaml
 │       ├── IEC60204_OVERVIEW.md
 │       ├── GENERATION_SUMMARY.md
-│       └── IEC60204_1_2018__Clause*__.md
+│       └── IEC60204_1_2016A1__Clause*__.md
 │
 ├── clause_index/                       (Existing simple indexes)
 ├── rules_engine/                       (Existing design rules)

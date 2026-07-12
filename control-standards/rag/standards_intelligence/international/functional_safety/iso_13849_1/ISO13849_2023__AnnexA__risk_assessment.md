@@ -20,11 +20,12 @@ INDEX_TAGS:
 
 ## 0. Why this annex matters
 
-Annex A is the normative bridge between ISO 12100 (risk assessment) and ISO 13849-1 (safety system design). It converts the qualitative risk parameters estimated in ISO 12100 Clause 5 — severity (S), frequency (F), and avoidance probability (P) — into a required Performance Level (PLr) that the safety system must achieve. Without Annex A, there is no structured basis for specifying PLr, and the design has no verified safety objective. Every ISO 13849-1 design must be traceable back to a PLr established through this annex (or an equivalent documented risk assessment method).
+Annex A is the normative bridge between ISO 12100 (risk assessment) and ISO 13849-1 (safety system design). Working from the hazards and risk estimation produced by the ISO 12100 process, it applies three risk parameters — severity (S), frequency/exposure (F), and possibility of avoidance (P) — to a risk graph that yields a required Performance Level (PLr) for each safety function. The S/F/P risk graph is defined here, in ISO 13849-1 Annex A; ISO 12100 supplies the risk assessment methodology, not the PLr. Without Annex A, there is no structured basis for specifying PLr, and the design has no verified safety objective. Every ISO 13849-1 design must be traceable back to a PLr established through this annex (or an equivalent documented risk assessment method).
 
 ## 1. Risk parameters
 
-Annex A uses the same three parameters as ISO 12100 Annex A:
+Annex A defines the three risk-graph parameters (IEC 62061 uses its own, differently
+parameterised method to arrive at a SIL):
 
 | Parameter | Values | Definition |
 |-----------|--------|------------|

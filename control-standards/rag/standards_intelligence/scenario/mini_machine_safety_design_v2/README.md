@@ -33,7 +33,7 @@ Primary hazard themes:
 - chemical overfill, spill, or exposure
 - pinch, crush, and motion hazards
 - electric shock, residual voltage, and arc flash exposure
-- loss of control integrity across integrated panels or networks [LOCAL: us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#0. Control Philosophy] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md#1. Protective Measures] [LOCAL: us/nec/NEC_2023__Art110__requirements_for_electrical_installations.md#1. Installation & listing requirements (field rules)]
+- loss of control integrity across integrated panels or networks [LOCAL: us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#0. Control Philosophy] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md#1. Protective Measures] [LOCAL: us/nec/NEC_2023__Art110__requirements_for_electrical_installations.md#1. Installation & listing requirements (field rules)]
 
 Environments assumed by the baseline:
 

@@ -25,23 +25,28 @@ lifecycle_stage:
     slug: "detailed-design/"
 review:
   standard: "IEC 62443 series"
-  edition: "parts 2-1, 3-3, 4-2"
-  status: "Partial coverage"
-  coverage: "Zones/conduits, SLs, FRs; worked example and common mistakes pending"
-  last_reviewed: "April 2026"
+  edition: "2-1:2024, 2-4:2023, 3-2:2020, 3-3:2013, 4-1:2018, 4-2:2019+COR1:2022"
+  status: "Review pending"
+  coverage: "Zones/conduits, SLs, FRs. Part editions, zone/conduit ownership (3-2) and SL-T derivation corrected July 2026. Corpus for parts 2-1 and 2-4 still reflects the superseded editions"
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">
   <span class="page-header__label">Cybersecurity · IEC 62443</span>
   <h1>IEC 62443 — Industrial Automation and Control System Security</h1>
-  <span class="badge badge--complete">Phase 5 Complete</span>
 </div>
 
 ## Quick Start
 
 - IEC 62443 applies to any networked Industrial Automation and Control System (IACS) — PLCs, DCS, HMIs, historians, SCADA systems, and safety systems with network interfaces.
-- Start with the **Zone and Conduit model** (IEC 62443-3-3): group assets by trust level, define all communication paths as explicit Conduits.
-- Assign a **Security Level Target (SL-T)** to each Zone from a security risk assessment. Most industrial Zones target SL 2; safety-critical Zones may require SL 3.
+- Start with the **Zone and Conduit model** (**IEC 62443-3-2**): define the System under
+  Consideration, partition it into Zones by trust level, and define all communication paths
+  as explicit Conduits. IEC 62443-3-2 is also the part that establishes the target security
+  level; IEC 62443-3-3 defines the system security requirements and the Security Levels
+  themselves.
+- Derive a **Security Level Target (SL-T)** for each Zone **from the documented
+  cybersecurity risk assessment**. There is no default SL by zone type — see the warning
+  below.
 - **SL levels (1–4) measure cybersecurity capability — they are not equivalent to SIL levels (1–4) from IEC 62061 / IEC 61511, which measure functional safety probability.** Never substitute one for the other.
 - IEC 61511 (2016) requires a security assessment as part of the functional safety lifecycle. Use IEC 62443 to satisfy that requirement.
 
@@ -51,12 +56,18 @@ review:
 
 | Standard | Scope | Audience |
 |----------|-------|----------|
-| **IEC 62443-2-1** (2010) | IACS security management system (CSMS) — risk assessment, policy, asset inventory | Asset Owner |
-| **IEC 62443-2-4** (2015) | Security requirements for System Integrators | System Integrator |
-| **IEC 62443-3-2** (2020) | Security risk assessment for system design | System Integrator, Asset Owner |
-| **IEC 62443-3-3** (2013) | System security requirements and Security Levels | System Integrator |
-| **IEC 62443-4-1** (2018) | Secure product development lifecycle | Product Supplier |
-| **IEC 62443-4-2** (2019) | Technical component security requirements | Product Supplier |
+| **IEC 62443-2-1:2024** (Ed. 2.0) | IACS security programme requirements for asset owners | Asset Owner |
+| **IEC 62443-2-4:2023** (Ed. 2.0) | Security requirements for IACS service providers | System Integrator |
+| **IEC 62443-3-2:2020** (Ed. 1.0) | Security risk assessment for system design — **zones and conduits, SL-T** | System Integrator, Asset Owner |
+| **IEC 62443-3-3:2013** (Ed. 1.0) | System security requirements and Security Levels | System Integrator |
+| **IEC 62443-4-1:2018** (Ed. 1.0) | Secure product development lifecycle | Product Supplier |
+| **IEC 62443-4-2:2019** (Ed. 1.0, incl. COR1:2022) | Technical component security requirements | Product Supplier |
+
+> **Edition note (verified July 2026):** IEC 62443-2-1:2024 superseded the 2010 edition
+> (withdrawn 2024-08-07) and IEC 62443-2-4:2023 superseded the 2015 edition. The corpus
+> behind this page was written against the older editions of 2-1 and 2-4 and has not yet
+> been rebuilt against the current ones — treat those two parts as **needing
+> revalidation**. IEC TS 62443-1-1 remains at its 2009 edition.
 
 **Corpus coverage in this site:** IEC 62443-2-1, 3-3, 4-2, and lifecycle guidance — the parts most directly applicable to an Asset Owner designing and operating an IACS.
 
@@ -68,12 +79,20 @@ IEC 62443 defines four Security Levels for Zones. Each level targets a progressi
 
 | Level | Attacker profile | Typical IACS application |
 |-------|-----------------|--------------------------|
-| **SL 1** | Unintentional or untargeted attack — basic malware, accidental misconfiguration | Enterprise DMZ, low-consequence operational zones |
-| **SL 2** | Intentional attack with simple means — phishing, script-kiddie, generic exploits | Most industrial control and safety Zones |
-| **SL 3** | Sophisticated, targeted attack with IACS knowledge — skilled attacker, targeted malware | Critical infrastructure, high-consequence safety systems |
-| **SL 4** | Nation-state level, advanced persistent threat — extended resources, insider capability | Reserved for the most critical national infrastructure |
+| **SL 1** | Protection against casual or coincidental violation | — |
+| **SL 2** | Protection against intentional violation using simple means, low resources, generic skills, low motivation | — |
+| **SL 3** | Protection against intentional violation using sophisticated means, moderate resources, IACS-specific skills, moderate motivation | — |
+| **SL 4** | Protection against intentional violation using sophisticated means, extended resources, IACS-specific skills, high motivation | — |
 
-**SL 2 is the standard target for industrial control system Zones.** SL 3 is required when a successful attack would have high-consequence safety or environmental effects.
+> **⚠ SL-T is derived, never defaulted.** The target security level for each Zone and
+> Conduit **shall be derived from the documented cybersecurity risk assessment**
+> (IEC 62443-3-2, ZCR 5). IEC 62443 prescribes **no** default assignments — there is no rule
+> that a control zone is SL 2 or a safety zone is SL 3. As the standard's own introduction
+> puts it, there is no simple recipe, because every IACS presents a different risk and every
+> organisation has a different risk tolerance. Any SL values shown on this page are
+> **illustrative only** and must not be applied as defaults. (IEC 62443-3-2 does require that
+> safety-related assets be placed in their **own zone** — but it attaches no SL value to that
+> requirement.)
 
 ### SL-T vs. SL-C vs. SL-A
 
@@ -95,7 +114,7 @@ This is one of the most common points of confusion when functional safety and cy
 |-----------|---------------------------|----------------|
 | **Standard family** | Functional safety | Industrial cybersecurity |
 | **What it measures** | Probability of dangerous failure per hour (PFHd) | Resistance to cyberattack by a defined threat actor |
-| **Range** | SIL 1–4 | SL 1–4 |
+| **Range** | SIL 1–4 is defined by IEC 61508, and IEC 61511-1:2016 likewise spans SIL 1–4 for process SIS. Machinery applications under IEC 62061 are conventionally SIL 1–3 <span class="badge badge--verify">verify against the published edition</span> | SL 1–4 |
 | **Methodology** | Quantitative (PFHd calculation, architecture, proof test) | Qualitative/semi-quantitative (threat model, control gap analysis) |
 | **Interchangeable?** | **No** — a safety PLC rated SIL 2 does not imply SL 2 cybersecurity capability. These are entirely separate assessments. |
 

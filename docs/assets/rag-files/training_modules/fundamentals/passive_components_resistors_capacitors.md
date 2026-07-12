@@ -82,4 +82,4 @@ Always check:
 ## Related standards
 
 - [NFPA79_2024__Ch07__protection_against_electric_shock.md](../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md)
-- [IEC60204_1_2018__Clause06__protection_against_electric_shock.md](../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md)
+- [IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md](../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md)

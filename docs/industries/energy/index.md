@@ -76,8 +76,8 @@ Is the package installed outdoors or in a substation / yard environment?
 
 | Category | Standards | Corpus Status |
 |----------|-----------|---------------|
-| US electrical | NEC, NFPA 79, UL 508A | <span class="badge badge--complete">Reviewed</span> |
-| International electrical | IEC 60204-1 | <span class="badge badge--complete">Reviewed</span> |
+| US electrical | NEC, NFPA 79, UL 508A | <span class="badge badge--reviewed">Reviewed</span> |
+| International electrical | IEC 60204-1 | <span class="badge badge--reviewed">Reviewed</span> |
 | Risk assessment | ISO 12100 | Planned <span class="badge badge--verify">Review pending</span> |
 | Process safety | IEC 61511 | Limited coverage <span class="badge badge--verify">Review pending</span> |
 | Cybersecurity | IEC 62443 | Routing reference <span class="badge badge--verify">Review pending</span> |

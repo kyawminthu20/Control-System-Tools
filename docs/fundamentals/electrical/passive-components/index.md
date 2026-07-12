@@ -80,7 +80,7 @@ For both parts, value alone is not enough. Always check:
 ## Related standards
 
 - NFPA 79-2024, Chapter 7 — Protection against electric shock
-- IEC 60204-1:2018, Clause 6 — Protection against electric shock
+- IEC 60204-1:2016+AMD1:2021, Clause 6 — Protection against electric shock
 
 ---
 

@@ -29,9 +29,9 @@ lifecycle_stage:
 review:
   standard: "NFPA 79"
   edition: "2024"
-  status: "Reviewed"
-  coverage: "All 20 chapters at chapter level; worked example and common mistakes"
-  last_reviewed: "May 2026"
+  status: "Review pending"
+  coverage: "All 20 chapters at chapter level. Scope voltage (1000 V, not 600 V) and the UL 508A relationship corrected July 2026"
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">
@@ -41,11 +41,11 @@ review:
 
 ## Quick Start
 
-- **Scope cutoff.** NFPA 79 covers a machine's electrical and electronic equipment up to **600 V nominal**, starting at the supply-conductor connection point. Above that voltage or upstream of that point, you are in NEC territory.
+- **Scope cutoff.** NFPA 79 covers a machine's electrical and electronic equipment operating at **1000 V or less**, starting at the supply-conductor connection point. Above that voltage or upstream of that point, you are in NEC territory. (The older 600 V ceiling is out of date — the current edition's scope is 1000 V.)
 - **NEC handoff.** NEC Article 670 references NFPA 79 for industrial-machinery design but governs the **site installation** (feeder, raceway runs, building disconnect, available-fault-current verification). NEC Article 409 governs UL-listed industrial control panels at the site.
 - **NFPA 79 vs. IEC 60204-1.** Choose NFPA 79 for US/North-American markets; choose [IEC 60204-1]({{ '/standards/machinery/iec-60204-1/' | relative_url }}) for CE-marked machines under the Machinery Directive. Wire-color rules, voltage scope, and Technical Construction File requirements differ — pick the destination market early; a clean swap mid-design is rare.
 - **Where Chapter 9 stops.** NFPA 79 specifies stop-category architecture (0/1/2) and E-stop device requirements, but the **safety-function reliability metrics** (Performance Level, SIL) come from [ISO 13849-1]({{ '/standards/functional-safety/iso-13849-1/' | relative_url }}) or [IEC 62061]({{ '/standards/functional-safety/iec-62061/' | relative_url }}). A Cat-1 controlled stop on PLd / SIL 2 dual-channel architecture is a typical pairing.
-- **UL 508A overlay.** When the machine ships with a UL-listed control panel, [UL 508A]({{ '/standards/us-electrical/ul-508a/' | relative_url }}) governs panel construction (component selection, spacing, SCCR documentation per Supplement SB4). NFPA 79 governs the electrical design; the two interlock rather than overlap.
+- **UL 508A overlay.** [UL 508A]({{ '/standards/us-electrical/ul-508a/' | relative_url }}) primarily addresses industrial control **panel construction** (component selection, spacing, SCCR documentation per Supplement SB); NFPA 79 addresses the electrical equipment of industrial **machinery**. Their scopes are **complementary and can overlap** around the machine control panel — they do not neatly interlock. Building a panel to UL 508A does not by itself discharge every NFPA 79 machinery requirement: UL's own guidance states that UL 508A may not cover all the current requirements for industrial machinery panels, and that reference to NFPA 79 may be needed for additional requirements.
 
 ---
 
@@ -59,9 +59,7 @@ review:
 | **Jurisdiction** | United States |
 | **Scope** | Electrical/electronic equipment for industrial machines |
 | **Repository** | `control-standards/rag/standards_intelligence/us/nfpa79/` — 20 chapters |
-| **Status in Corpus** | Complete |
-
-**Purpose.** NFPA 79 covers the electrical and electronic equipment, apparatus, and wiring of industrial machinery operating at a nominal voltage not exceeding 600 V. It applies to the point of connection of the supply conductor(s) to the machine and covers all electrical equipment after that point.
+**Purpose.** NFPA 79 provides detailed information for the application of electrical/electronic equipment, apparatus, and systems supplied as part of industrial machines. Per its Clause 1 scope it applies to industrial machines **operating at 1000 volts or less**, with the requirements commencing at the point where the supply circuit conductors connect to the electrical equipment of the machine.
 
 ---
 
@@ -177,7 +175,7 @@ Every machine carries a permanent nameplate near the main disconnect listing: ma
 
 #### Design
 
-- [ ] Confirm the machine falls within NFPA 79 scope (≤ 600 V; up to point-of-supply-connection).
+- [ ] Confirm the machine falls within NFPA 79 scope (≤ 1000 V; from the point of supply connection onward).
 - [ ] Pick NFPA 79 vs. IEC 60204-1 by destination market — do not hybridise wire colours or PE rules.
 - [ ] Calculate machine SCCR from worst-case component combination; verify expected available fault current at the install site is ≤ machine SCCR.
 - [ ] Single main disconnect specified, padlockable in OFF only, ≤ 2.0 m handle height, door-interlocked.
@@ -213,7 +211,7 @@ Every machine carries a permanent nameplate near the main disconnect listing: ma
 
 | Stage | NFPA 79 activity |
 |-------|------------------|
-| [Standards Selection]({{ '/lifecycle/standards-selection/' | relative_url }}) | Confirm scope (≤ 600 V, machine electrical equipment); decide NFPA 79 vs. IEC 60204-1 by destination market; identify required UL listing path (508A) |
+| [Standards Selection]({{ '/lifecycle/standards-selection/' | relative_url }}) | Confirm scope (≤ 1000 V, machine electrical equipment); decide NFPA 79 vs. IEC 60204-1 by destination market; identify required UL listing path (508A) |
 | [Detailed Design]({{ '/lifecycle/detailed-design/' | relative_url }}) | Disconnect type and sizing (Ch 5); branch-circuit OCP and machine SCCR (Ch 6); shock-protection scheme (Ch 7); PE bus and bonding plan (Ch 8); stop categories and E-stop architecture (Ch 9 + ISO 13849-1 handoff); control transformer (Ch 15); wiring and colour scheme (Ch 16) |
 | [Build]({{ '/lifecycle/build/' | relative_url }}) | Panel construction per design; UL 508A panel listing if required; wire labels and reference designations; bonding jumpers; line-side guarding |
 | [Installation]({{ '/lifecycle/installation/' | relative_url }}) | NEC Article 670 governs at the site: feeder sizing, building disconnect, available fault current verification ≤ machine SCCR |

@@ -12,7 +12,7 @@ INDUSTRY: medical
 
 - Validation, software change control, audit trail, and electronic-record integrity requirements are usually much stricter than the baseline machine package. Those detailed rules are NOT FOUND IN LOCAL CORPUS - TO VERIFY. [TO VERIFY: 21 CFR Part 11] [TO VERIFY: medical device validation standard]
 - Dose accuracy, alarm escalation, user access, and batch or patient record retention may require regulated workflows beyond ordinary historian logging. [TO VERIFY: 21 CFR Part 11] [TO VERIFY: ISA-18.2]
-- The local baseline remains useful for electrical safety, E-stop behavior, bonding, and documentation structure. [LOCAL: us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#2. Emergency Stop Concepts] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md#2. Documentation Set]
+- The local baseline remains useful for electrical safety, E-stop behavior, bonding, and documentation structure. [LOCAL: us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#2. Emergency Stop Concepts] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md#2. Documentation Set]
 
 ## Standards to prioritize
 

@@ -21,7 +21,6 @@ redirect_from:
 <div class="page-header">
   <span class="page-header__label">Scenario 03</span>
   <h1>Process Skid Shutdown System</h1>
-  <span class="badge badge--complete">Corpus Complete</span>
 </div>
 
 ## Project Summary
@@ -39,10 +38,10 @@ redirect_from:
 
 | Standard | Role | Status |
 |----------|------|--------|
-| **IEC 61511 2016** | SIS application standard for process industry | <span class="badge badge--complete">Reviewed</span> |
-| **IEC 61508 2010** | Foundation safety lifecycle standard | <span class="badge badge--complete">Reviewed</span> |
-| **NEC / local code** | Electrical installation | Complete for US |
-| **IEC 60204-1** | Machine electrical (if machine elements present) | Complete |
+| **IEC 61511 2016** | SIS application standard for process industry | <span class="badge badge--reviewed">Reviewed</span> |
+| **IEC 61508 2010** | Foundation safety lifecycle standard | <span class="badge badge--reviewed">Reviewed</span> |
+| **NEC / local code** | Electrical installation | <span class="badge badge--pending">Review pending</span> |
+| **IEC 60204-1** | Machine electrical (if machine elements present) | <span class="badge badge--pending">Review pending</span> |
 
 ## Standards Decision Logic
 

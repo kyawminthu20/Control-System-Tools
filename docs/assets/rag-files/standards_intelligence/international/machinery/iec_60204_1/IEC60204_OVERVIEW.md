@@ -4,7 +4,7 @@
 
 ## Overview
 
-This module contains clause-by-clause guidance for **IEC 60204-1 - Electrical Equipment of Machines (2018 Edition)**, the **international/global equivalent of NFPA 79**. This standard is used worldwide for machinery electrical design, particularly in EU/CE-marked equipment.
+This module contains clause-by-clause guidance for **IEC 60204-1 - Electrical Equipment of Machines (2016+AMD1:2021, consolidated Ed. 6.1)**, the **international/global equivalent of NFPA 79**. This standard is used worldwide for machinery electrical design, particularly in EU/CE-marked equipment.
 
 Each clause file follows a consistent template designed for:
 - RAG-safe AI indexing
@@ -17,7 +17,7 @@ Each clause file follows a consistent template designed for:
 
 All files follow the naming convention:
 ```
-IEC60204_1_2018__Clause<NN>__<descriptive_slug>.md
+IEC60204_1_2016A1__Clause<NN>__<descriptive_slug>.md
 ```
 
 ## Clause Index
@@ -25,20 +25,23 @@ IEC60204_1_2018__Clause<NN>__<descriptive_slug>.md
 | Clause | Title | Priority | NFPA 79 Equivalent | Focus Area |
 |--------|-------|----------|-------------------|------------|
 | 1 | Scope | Standard | Ch 1 | Applicability, machinery types |
-| 2 | Normative References | Standard | Ch 1 | Required companion standards |
-| 3 | Terms and Definitions | Standard | Ch 2 | Terminology |
-| 4 | General Requirements | Standard | Ch 3 | Safety philosophy, baseline |
-| 5 | Incoming Supply | **HIGH** | Ch 5 | Disconnect, isolation |
-| 6 | Protection Against Electric Shock | **HIGH** | Ch 7 | Touch-safe design |
-| 7 | Protection of Equipment | Standard | Ch 6 | Overcurrent protection |
-| 8 | Equipotential Bonding | **CRITICAL** | Ch 8 | Grounding strategy |
-| 9 | Control Circuits and Control Functions | **CRITICAL** | Ch 9 | E-stop, start/stop, safety |
-| 10 | Operator Interface | Standard | Ch 10 | HMI, pushbuttons, ergonomics |
-| 11 | Control Equipment | **HIGH** | Ch 11 | Enclosures, panel design |
-| 12 | Motors and Drives | Standard | Ch 12 | Motor control, VFD |
-| 13 | Accessories and Lighting | Standard | Ch 13/14 | Lighting, auxiliary devices |
-| 14 | Marking and Documentation | **HIGH** | Ch 19 | Labels, schematics, manuals |
-| 15 | Verification | **HIGH** | - | Testing, commissioning |
+| 2 | Normative references | Standard | Ch 1 | Required companion standards |
+| 3 | Terms, definitions and abbreviated terms | Standard | Ch 2 | Terminology |
+| 4 | General requirements | Standard | Ch 4 | Safety philosophy, baseline |
+| 5 | Incoming supply conductor terminations and devices for disconnecting and switching off | **HIGH** | Ch 5 | Disconnect, isolation |
+| 6 | Protection against electric shock | **HIGH** | Ch 7 | Touch-safe design |
+| 7 | Protection of equipment | Standard | Ch 6 | Overcurrent protection |
+| 8 | Equipotential bonding | **CRITICAL** | Ch 8 | Grounding strategy |
+| 9 | Control circuits and control functions | **CRITICAL** | Ch 9 | E-stop, start/stop, safety |
+| 10 | Operator interface and machine-mounted control devices | Standard | Ch 10 | HMI, pushbuttons, ergonomics |
+| 11 | Controlgear: location, mounting, and enclosures | **HIGH** | Ch 11 | Enclosures, panel design |
+| 12 | Conductors and cables | **HIGH** | Ch 12 | Conductor selection, ampacity |
+| 13 | Wiring practices | **HIGH** | Ch 13 | Routing, segregation, terminations |
+| 14 | Electric motors and associated equipment | **HIGH** | Ch 14 | Motor control, VFD |
+| 15 | Socket-outlets and lighting | Standard | Ch 15 | Lighting, socket-outlets |
+| 16 | Marking, warning signs and reference designations | **HIGH** | Ch 16 | Labels, nameplate, designations |
+| 17 | Technical documentation | **HIGH** | Ch 19 | Schematics, manuals, parts list |
+| 18 | Verification | **HIGH** | - | Testing, commissioning |
 
 ## Priority Clauses
 
@@ -47,8 +50,8 @@ For international machinery design, focus on these clauses first:
 1. **Clause 8 - Equipotential Bonding**: Safety-critical grounding requirements
 2. **Clause 9 - Control Circuits and Functions**: E-stop, safety circuits
 3. **Clause 5 - Incoming Supply**: Disconnect and isolation
-4. **Clause 14 - Marking and Documentation**: Required for CE marking
-5. **Clause 15 - Verification**: Testing and validation requirements
+4. **Clause 16/17 - Marking and technical documentation**: feeds the EU technical file
+5. **Clause 18 - Verification**: Testing and validation requirements
 
 ## IEC 60204-1 ↔ NFPA 79 Direct Mapping
 
@@ -60,7 +63,7 @@ For international machinery design, focus on these clauses first:
 | Grounding/Bonding | Clause 8 | Chapter 8 | IEC uses "equipotential bonding" |
 | Control Circuits | Clause 9 | Chapter 9 | Nearly identical |
 | Control Equipment | Clause 11 | Chapter 11 | Same scope |
-| Marking & Docs | Clause 14 | Chapter 19 | Similar, format differs |
+| Marking & Docs | Clause 16 & 17 | Chapter 16 & 19 | Similar, format differs |
 
 ### Key Differences
 
@@ -79,7 +82,7 @@ For international machinery design, focus on these clauses first:
 - **Must use**: IEC 60204-1
 - **Safety**: ISO 13849-1 or IEC 62061 for safety functions
 - **Risk**: ISO 12100 for risk assessment
-- **Marking**: CE marking required
+- **Marking**: CE marking applied by the manufacturer on completion of conformity assessment
 - **Components**: IEC/EN certified components
 
 ### For US Markets
@@ -118,7 +121,7 @@ Each clause file contains:
 ### Metadata Header (HTML Comment)
 - CONTENT_CLASS, AI_READ_ACCESS, STATUS
 - STANDARD_FAMILY: IEC, STANDARD_ID: IEC_60204_1
-- EDITION: 2018, JURISDICTION: GLOBAL
+- EDITION: 2016+AMD1:2021 (CSV Ed. 6.1), JURISDICTION: GLOBAL
 - IEC_HIERARCHY: clause + clause_title
 - INDEX_TAGS: topics, systems
 
@@ -142,12 +145,12 @@ Always purchase legitimate copies of IEC 60204-1 for authoritative reference.
 
 | Metric | Count/Value |
 |--------|------------|
-| Total clauses documented | 15 |
+| Total clauses documented | 18 |
 | Clauses marked CRITICAL | 2 (8, 9) |
-| Clauses marked HIGH | 5 (5, 6, 11, 14, 15) |
-| Clauses marked Standard | 8 |
+| Clauses marked HIGH | 9 (5, 6, 11, 12, 13, 14, 16, 17, 18) |
+| Clauses marked Standard | 7 |
 | NFPA 79 equivalents mapped | 8 |
-| Edition | 2018 (6th Edition) |
+| Edition | 2016+AMD1:2021 (consolidated CSV Ed. 6.1) |
 | Jurisdiction | Global/International |
 
 ## Usage Workflow

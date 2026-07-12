@@ -24,5 +24,5 @@ INDUSTRY: nuclear
 
 - Configuration management and software revision log. [TO VERIFY: nuclear QA standard]
 - Component pedigree and traceability dossier. [TO VERIFY: nuclear standard]
-- Enhanced verification matrix with witness points. [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md#0. Purpose]
+- Enhanced verification matrix with witness points. [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause18__verification.md#0. Purpose]
 - QA hold-point schedule. [TO VERIFY: nuclear QA standard]

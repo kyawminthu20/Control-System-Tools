@@ -41,8 +41,8 @@ redirect_from:
 
 | Standard | Market | Status |
 |----------|--------|--------|
-| **NFPA 79 2024** | US | Complete in corpus |
-| **IEC 60204-1 2018** | EU / International | Complete in corpus |
+| **NFPA 79 2024** | US | Reviewed |
+| **IEC 60204-1:2016+AMD1:2021** | EU / International | Reviewed |
 | **ISO 12100 2010** | EU (CE marking foundation) | Planned <span class="badge badge--verify">Review pending</span> |
 | **ISO 13849-1 2023** | Both (if safety functions) | Planned <span class="badge badge--verify">Review pending</span> |
 
@@ -71,12 +71,26 @@ For each topic area:
 
 ## CE Marking Foundation
 
-CE marking under the Machinery Directive (2006/42/EC) requires:
+**What the law requires.** EU machinery legislation requires the manufacturer to perform and
+document a risk assessment, identify the applicable essential health and safety requirements
+(EHSRs), implement suitable risk reduction, and complete the appropriate conformity-assessment
+procedure. It does not mandate any particular standard.
 
-1. **ISO 12100 risk assessment** (first, always) <span class="badge badge--verify">Review pending</span>
-2. **IEC 60204-1** for electrical equipment requirements
-3. **ISO 13849-1 or IEC 62061** if safety functions exist <span class="badge badge--verify">Review pending</span>
-4. Technical file and Declaration of Conformity
+**How that is normally satisfied.** Applying a harmonized standard is **voluntary**, but where
+one is properly applied and cited, it confers **presumption of conformity** for the EHSRs within
+its scope:
+
+1. **EN ISO 12100** — risk assessment and risk reduction (the usual route to the required, documented risk assessment)
+2. **IEC 60204-1** — electrical equipment requirements
+3. **ISO 13849-1 or IEC 62061** — where safety functions exist (alternative routes, chosen on project and architecture grounds)
+4. Technical file and Declaration of Conformity — required by the legislation itself
+
+> **⚠ Machinery Regulation transition.** Machinery Directive **2006/42/EC applies through
+> 19 January 2027**. Machinery Regulation **(EU) 2023/1230 applies from 20 January 2027**, when
+> the Directive is repealed. Note that the Regulation as first published in the OJ said
+> *14 January 2027*; a **corrigendum (OJ L 169, 4.7.2023)** changed that date to **20 January
+> 2027**. Cite Article 54 as corrected. Machines placed on the EU market from that date must
+> conform to the Regulation.
 
 ## Repository Paths
 

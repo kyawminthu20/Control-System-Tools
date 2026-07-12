@@ -91,7 +91,7 @@ Real motor review must also consider:
 
 - NEC 2023, Article 430 — Motors, Motor Circuits, and Controllers
 - NFPA 79 2024, Chapter 12 — Motors and Associated Equipment
-- IEC 60204-1 2018, Clause 12 — Motors and Drives
+- IEC 60204-1:2016+AMD1:2021, Clause 12 — Motors and Drives
 
 ---
 

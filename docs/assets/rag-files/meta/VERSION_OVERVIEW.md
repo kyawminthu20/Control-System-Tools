@@ -48,21 +48,21 @@ This document explains the contents of the standards library in simple language.
 | File | Last Modified | Description |
 | :--- | :--- | :--- |
 | `GENERATION_SUMMARY.md` | 2026-03-05 | IEC 60204-1 Module Generation Summary |
-| `IEC60204_1_2018__Clause01__scope.md` | 2026-03-05 | Electrical Equipment of Machines |
-| `IEC60204_1_2018__Clause02__normative_references.md` | 2026-03-05 | <!-- |
-| `IEC60204_1_2018__Clause03__terms_and_definitions.md` | 2026-03-05 | <!-- |
-| `IEC60204_1_2018__Clause04__general_requirements.md` | 2026-03-05 | <!-- |
-| `IEC60204_1_2018__Clause05__incoming_supply.md` | 2026-03-05 | <!-- |
-| `IEC60204_1_2018__Clause06__protection_against_electric_shock.md` | 2026-03-05 | <!-- |
-| `IEC60204_1_2018__Clause07__protection_of_equipment.md` | 2026-03-05 | <!-- |
-| `IEC60204_1_2018__Clause08__equipotential_bonding.md` | 2026-03-05 | <!-- |
-| `IEC60204_1_2018__Clause09__control_circuits_and_functions.md` | 2026-03-05 | <!-- |
-| `IEC60204_1_2018__Clause10__operator_interface.md` | 2026-03-05 | <!-- |
-| `IEC60204_1_2018__Clause11__control_equipment.md` | 2026-03-05 | <!-- |
-| `IEC60204_1_2018__Clause12__motors_and_drives.md` | 2026-03-05 | <!-- |
-| `IEC60204_1_2018__Clause13__accessories_and_lighting.md` | 2026-03-05 | <!-- |
-| `IEC60204_1_2018__Clause14__marking_and_documentation.md` | 2026-03-05 | <!-- |
-| `IEC60204_1_2018__Clause15__verification.md` | 2026-03-05 | <!-- |
+| `IEC60204_1_2016A1__Clause01__scope.md` | 2026-03-05 | Electrical Equipment of Machines |
+| `IEC60204_1_2016A1__Clause02__normative_references.md` | 2026-03-05 | <!-- |
+| `IEC60204_1_2016A1__Clause03__terms_and_definitions.md` | 2026-03-05 | <!-- |
+| `IEC60204_1_2016A1__Clause04__general_requirements.md` | 2026-03-05 | <!-- |
+| `IEC60204_1_2016A1__Clause05__incoming_supply.md` | 2026-03-05 | <!-- |
+| `IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md` | 2026-03-05 | <!-- |
+| `IEC60204_1_2016A1__Clause07__protection_of_equipment.md` | 2026-03-05 | <!-- |
+| `IEC60204_1_2016A1__Clause08__equipotential_bonding.md` | 2026-03-05 | <!-- |
+| `IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md` | 2026-03-05 | <!-- |
+| `IEC60204_1_2016A1__Clause10__operator_interface.md` | 2026-03-05 | <!-- |
+| `IEC60204_1_2016A1__Clause11__controlgear.md` | 2026-03-05 | <!-- |
+| `IEC60204_1_2016A1__Clause14__electric_motors.md` | 2026-03-05 | <!-- |
+| `IEC60204_1_2016A1__Clause15__socket_outlets_and_lighting.md` | 2026-03-05 | <!-- |
+| `IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md` | 2026-03-05 | <!-- |
+| `IEC60204_1_2016A1__Clause18__verification.md` | 2026-03-05 | <!-- |
 | `IEC60204_OVERVIEW.md` | 2026-03-05 | IEC 60204-1 Standards Intelligence Module |
 | `README.md` | 2026-03-05 | **AI_READ_ACCESS: ALLOWED** |
 | `_index.yaml` | 2026-03-05 | IEC 60204-1 RAG Index |

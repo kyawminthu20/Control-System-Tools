@@ -71,8 +71,8 @@ Does the project need formal risk management traceability?
 
 | Category | Standards | Corpus Status |
 |----------|-----------|---------------|
-| US electrical baseline | NEC | <span class="badge badge--complete">Reviewed</span> |
-| International electrical baseline | IEC 60204-1 | <span class="badge badge--complete">Reviewed</span> |
+| US electrical baseline | NEC | <span class="badge badge--reviewed">Reviewed</span> |
+| International electrical baseline | IEC 60204-1 | <span class="badge badge--reviewed">Reviewed</span> |
 | Medical electrical safety | IEC 60601-1 / 60601 series | Not in corpus |
 | Risk management | ISO 14971 | Not in corpus |
 | Software lifecycle | IEC 62304 | Not in corpus |

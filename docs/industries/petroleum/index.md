@@ -20,7 +20,6 @@ related_standards:
 <div class="page-header">
   <span class="page-header__label">Industry Overlay — Petroleum / Oil and Gas</span>
   <h1>Petroleum and Oil and Gas Standards</h1>
-  <span class="badge badge--complete">Phase 11 — Corpus Complete</span>
 </div>
 
 ## Industry Profile
@@ -75,11 +74,11 @@ Is the SIL target ≥ SIL 3, or is the logic solver a custom design?
 
 | Category | Standards | Corpus Status |
 |----------|-----------|---------------|
-| US electrical installation | NEC Art. 240, 250, 300, 500, 504, 505 | <span class="badge badge--complete">Reviewed</span> |
-| Machine electrical design | IEC 60204-1 | <span class="badge badge--complete">Reviewed</span> |
-| Process safety (SIS) | IEC 61511 | <span class="badge badge--complete">Reviewed</span> |
-| SIS foundation | IEC 61508 | <span class="badge badge--complete">Reviewed</span> |
-| Hazardous area equipment | IEC 60079 (6 parts) | <span class="badge badge--complete">Reviewed</span> |
+| US electrical installation | NEC Art. 240, 250, 300, 500, 504, 505 | <span class="badge badge--reviewed">Reviewed</span> |
+| Machine electrical design | IEC 60204-1 | <span class="badge badge--reviewed">Reviewed</span> |
+| Process safety (SIS) | IEC 61511 | <span class="badge badge--reviewed">Reviewed</span> |
+| SIS foundation | IEC 61508 | <span class="badge badge--reviewed">Reviewed</span> |
+| Hazardous area equipment | IEC 60079 (6 parts) | <span class="badge badge--reviewed">Reviewed</span> |
 | API standards | API 14C, API 670 | Not in corpus |
 
 ---

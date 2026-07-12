@@ -47,7 +47,3 @@ During field evaluations (UL/FEB), Chapter 8 is where many machines fail. Common
 * **Painting Over Connections:** Bolting a ground lug to a painted surface. The paint acts as an insulator; the surface must be scraped to bare metal or use "star washers" that bite through the finish.
 * **Sizing the Conductor:** Using a ground wire that is too small. The grounding conductor must be sized based on the largest upstream overcurrent device (refer to **Table 8.2.2.3** in NFPA 79).
 * **Daisy-Chaining:** Wiring the ground from one motor to the next in a series. If one motor is disconnected for repair, the downstream motors lose their safety ground. Each device should have a direct path back to the sub-panel ground bar.
-
----
-
-### Would you like me to move on to **Chapter 9**, which covers **Control Circuits and Control Functions** (the logic and safety categories of the machine)?

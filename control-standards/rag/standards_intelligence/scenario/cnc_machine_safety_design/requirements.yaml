@@ -31,7 +31,7 @@ requirements:
     verification_method: Perform power-cycle and reset functional tests.
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#1-startstop-behavior
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#1-startstop-behavior
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md#1-startstop-behavior
     industry_tags:
       - cnc
       - all
@@ -45,7 +45,7 @@ requirements:
     verification_method: Functional test.
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#2-emergency-stop-concepts
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#2-emergency-stop-concepts
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md#2-emergency-stop-concepts
     industry_tags:
       - cnc
       - all
@@ -59,7 +59,7 @@ requirements:
     verification_method: Architecture review and simulated fault test.
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md#3-safety-vs-standard-control-separation
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md#3-safety-vs-standard-control-separation
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md#3-safety-vs-standard-control-separation
     industry_tags:
       - cnc
       - all
@@ -73,7 +73,7 @@ requirements:
     verification_method: Inspection and functional test.
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#2-ergonomics-and-safety
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md#2-ergonomic-considerations
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause10__operator_interface.md#2-ergonomic-considerations
     industry_tags:
       - cnc
       - all
@@ -101,7 +101,7 @@ requirements:
     verification_method: Drive safety functional test.
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch12__motors_and_associated_equipment.md#2-drive-protection-considerations
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md#2-drive-integration
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause14__electric_motors.md#2-drive-integration
       - TO VERIFY: drive STO certification
     industry_tags:
       - cnc
@@ -116,7 +116,7 @@ requirements:
     subsystem: axes
     verification_method: Safety functional test and hold-behavior review.
     standard_refs:
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md#2-drive-integration
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause14__electric_motors.md#2-drive-integration
       - TO VERIFY: machine-tool-specific safety standard
     industry_tags:
       - cnc
@@ -176,7 +176,7 @@ requirements:
     standard_refs:
       - us/nec/NEC_2023__Art250__grounding_and_bonding.md#2-bonding-of-enclosures-and-doors
       - us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md#1-protective-bonding-rules
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md#1-bonding-strategy
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause08__equipotential_bonding.md#1-bonding-strategy
     industry_tags:
       - cnc
       - all
@@ -234,7 +234,7 @@ requirements:
     verification_method: Control review and functional test.
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md#2-ergonomics-and-safety
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md#2-ergonomic-considerations
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause10__operator_interface.md#2-ergonomic-considerations
     industry_tags:
       - cnc
       - all
@@ -262,7 +262,7 @@ requirements:
     verification_method: Residual-voltage test and label inspection.
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch07__protection_against_electric_shock.md#1-protective-measures
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md#1-protective-measures
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md#1-protective-measures
     industry_tags:
       - cnc
       - all
@@ -290,7 +290,7 @@ requirements:
     verification_method: Document review.
     standard_refs:
       - us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#2-documentation-expectations
-      - international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md#0-purpose
+      - international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause18__verification.md#0-purpose
     industry_tags:
       - cnc
       - all

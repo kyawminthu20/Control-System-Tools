@@ -39,7 +39,3 @@ In modern industrial machinery, several specific accessories fall under these ru
 
 * 2026-01-15 — Initial draft created.
 * 2026-01-16 — Expanded use cases to include enclosure cooling and maintenance receptacle requirements for the 2024 edition.
-
----
-
-### Would you like me to draft **Chapter 14**, which details **Cabling and Wiring Practices** (the specific rules for wire colors, tray fill, and routing)?

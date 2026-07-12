@@ -116,5 +116,5 @@ They are motion-control systems that combine:
 
 - [NFPA79_2024__Ch09__control_circuits_and_control_functions.md](../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md)
 - [NFPA79_2024__Ch12__motors_and_associated_equipment.md](../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch12__motors_and_associated_equipment.md)
-- [IEC60204_1_2018__Clause09__control_circuits_and_functions.md](../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md)
-- [IEC60204_1_2018__Clause12__motors_and_drives.md](../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md)
+- [IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md](../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md)
+- [IEC60204_1_2016A1__Clause14__electric_motors.md](../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause14__electric_motors.md)

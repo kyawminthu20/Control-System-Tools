@@ -26,15 +26,14 @@ lifecycle_stage:
 review:
   standard: "ISO 12100"
   edition: "2010"
-  status: "Reviewed"
-  coverage: "Risk-assessment methodology; worked example pending"
-  last_reviewed: "April 2026"
+  status: "Review pending"
+  coverage: "Risk-assessment methodology; worked example pending. PLr attribution and CE-marking wording corrected July 2026"
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">
   <span class="page-header__label">Functional Safety · ISO 12100</span>
   <h1>ISO 12100:2010 — Risk Assessment and Risk Reduction</h1>
-  <span class="badge badge--complete">Phase 3 Complete</span>
 </div>
 
 ## Quick Start
@@ -42,8 +41,8 @@ review:
 For practitioners new to ISO 12100:
 
 - **Apply ISO 12100 first** — before ISO 13849-1, IEC 62061, or any other safety standard. Those standards require ISO 12100 risk assessment outputs as inputs.
-- **The risk assessment gives you PLr** — the S/F/P parameters from Clause 5 feed directly into the ISO 13849-1 Annex A risk graph to determine required Performance Level.
-- **The three-step method is legally required for CE marking** — inherently safe design, then safeguarding, then information for use. Steps cannot be skipped or reordered.
+- **ISO 12100 does not give you PLr** — it gives you the risk assessment. The required Performance Level is estimated from the risk graph in **ISO 13849-1 Annex A**; a required SIL is determined by the method in **IEC 62061**. Cite the design standard, not ISO 12100, as the normative source of PLr or SIL.
+- **The three-step method is the harmonized route, not the legal text itself** — EU machinery law requires a documented risk assessment and compliance with the applicable essential health and safety requirements. Applying EN ISO 12100 is voluntary but confers presumption of conformity for the requirements it covers.
 - **The process is iterative** — after any risk reduction measure is applied, return to hazard identification and verify no new hazards have been introduced.
 - **Document everything** — a risk assessment without adequate written records is non-compliant, even if the engineering decisions were correct.
 
@@ -59,8 +58,6 @@ For practitioners new to ISO 12100:
 | **Jurisdiction** | Global; Type A standard under EU Machinery Directive and EU Machinery Regulation 2023/1230 |
 | **Scope** | Risk assessment and risk reduction for machinery |
 | **Repository** | `rag/international/functional_safety/iso_12100/` |
-| **Status in Corpus** | Phase 3 Complete |
-
 **Purpose:** ISO 12100 is the foundation standard for machinery safety. It provides the principles and methodology for risk assessment and risk reduction. All other machinery safety standards (ISO 13849-1, IEC 62061, IEC 60204-1) assume ISO 12100 has been applied first.
 
 ---
@@ -80,9 +77,16 @@ The loop is exited only when all identified hazards have been evaluated as accep
 
 ---
 
-## Risk Parameters (Clause 5)
+## Risk Estimation Elements (Clause 5)
 
-The S/F/P parameters from Clause 5 feed directly into ISO 13849-1 Annex A to determine PLr, and into IEC 62061 Annex A to determine SIL target.
+ISO 12100 Clause 5 estimates risk from the **severity of harm** and the **probability of
+its occurrence** (exposure, occurrence of a hazardous event, and the possibility of
+avoiding or limiting harm). Clause 5 does not itself produce a PLr or a SIL.
+
+The coded **S/F/P parameters and the risk graph** below belong to **ISO 13849-1 Annex A**,
+which is the normative source of PLr. IEC 62061 has its own, differently parameterised
+method for determining a required SIL. The ISO 12100 risk estimation is the engineering
+judgement those methods encode — the table maps one to the other.
 
 | Parameter | Symbol | Level | Definition |
 |-----------|--------|-------|-----------|
@@ -93,7 +97,7 @@ The S/F/P parameters from Clause 5 feed directly into ISO 13849-1 Annex A to det
 | **Possibility of avoiding or limiting harm** | P | P1 | Possible under specific conditions (hazard visible, sufficient reaction time) |
 | | | P2 | Scarcely possible (sudden action, high speed, person constrained) |
 
-**PLr lookup:** The combination of S, F, and P determines PLr via the ISO 13849-1 Annex A risk graph. S2/F2/P2 yields PLr e (the highest requirement); S1/F1/P1 yields PLr a (the lowest).
+**PLr lookup:** The combination of S, F, and P determines PLr via the **ISO 13849-1 Annex A** risk graph — that annex, not ISO 12100, is the normative source. S2/F2/P2 yields PLr e (the highest requirement); S1/F1/P1 yields PLr a (the lowest).
 
 ---
 
@@ -128,10 +132,10 @@ The three-step method is mandatory in the order shown. A lower-priority step can
 | Situation | Use ISO 12100? |
 |-----------|---------------|
 | Starting a new machine design | Yes — required before any other safety standard |
-| Determining PLr for a safety function | Yes — provides S/F/P inputs for ISO 13849-1 Annex A |
-| Determining SIL target for a safety function | Yes — provides Se/Fr/Av inputs for IEC 62061 Annex A |
+| Determining PLr for a safety function | As an input — the PLr itself comes from the ISO 13849-1 Annex A risk graph |
+| Determining SIL target for a safety function | As an input — the SIL target itself comes from the IEC 62061 SIL determination method |
 | Modifying an existing machine | Yes — reassess affected hazards; verify no new hazards introduced |
-| Preparing CE marking technical file | Yes — risk assessment per ISO 12100 is required by Machinery Directive |
+| Preparing CE marking technical file | Yes — EU machinery law requires a documented risk assessment; EN ISO 12100 is the standard methodology used to produce it |
 | Machine-type-specific standard exists (Type C) | Recommended — use ISO 12100 to fill gaps not addressed by Type C |
 | Product already has full Type C standard coverage | Conditional — ISO 12100 still governs hazards not covered by the Type C standard |
 | Electrical safety design (wiring, enclosures) | Indirect — ISO 12100 identifies electrical hazards; IEC 60204-1 implements protective measures |
@@ -140,7 +144,7 @@ The three-step method is mandatory in the order shown. A lower-priority step can
 
 ## Common Mistakes
 
-1. **Starting with ISO 13849-1 instead of ISO 12100.** ISO 13849-1 cannot assign a PLr without first completing a risk assessment. Skipping ISO 12100 produces PLr values that are not grounded in a systematic hazard analysis.
+1. **Starting with ISO 13849-1 instead of ISO 12100.** The ISO 13849-1 Annex A risk graph cannot be applied meaningfully without a completed risk assessment behind it. Skipping ISO 12100 produces PLr values that are not grounded in a systematic hazard analysis.
 
 2. **Incomplete lifecycle coverage.** Hazard identification limited to normal production operation misses maintenance, cleaning, setup, and decommissioning — where a disproportionate share of serious accidents occur.
 
@@ -191,5 +195,5 @@ Work through these items for each machine project:
 
 After completing the risk assessment, use the following standards to design and validate the safety functions identified in Step 2:
 
-- [ISO 13849-1]({{ '/standards/functional-safety/iso-13849-1/' | relative_url }}) — Performance Level methodology for safety-related parts of control systems; uses S/F/P from ISO 12100 Clause 5 as inputs
+- [ISO 13849-1]({{ '/standards/functional-safety/iso-13849-1/' | relative_url }}) — Performance Level methodology for safety-related parts of control systems; its Annex A risk graph determines PLr, informed by the ISO 12100 risk estimation
 - [IEC 62061]({{ '/standards/functional-safety/iec-62061/' | relative_url }}) — SIL methodology for electrical/electronic/programmable safety-related control systems; parallel path to ISO 13849-1

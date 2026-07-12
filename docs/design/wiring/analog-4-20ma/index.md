@@ -11,7 +11,7 @@ breadcrumb:
 repo_path: "control-standards/rag/design_framework/wiring_practices/"
 review:
   standard: "ISA analog signal practice; NFPA 79 / IEC 60204-1 (wiring-practice chapters)"
-  edition: "NFPA 79:2024, IEC 60204-1:2018"
+  edition: "NFPA 79:2024, IEC 60204-1:2016+AMD1:2021"
   status: "Review pending"
   coverage: "Transmitter types, active/passive matching, loop-resistance budget, grounding/shield policy and loop calibration at chapter/article level; vendor terminal designations, torque and HART configuration deliberately excluded."
   last_reviewed: "July 2026"
@@ -246,7 +246,7 @@ in [templates]({{ '/tools/templates/' | relative_url }})):
 - **NFPA 79:2024** — machine wiring-practice chapters: conductor
   identification, routing, and separation of signal from power (chapter-level
   citation).
-- **IEC 60204-1:2018** — wiring practices for machine electrical equipment,
+- **IEC 60204-1:2016+AMD1:2021** — wiring practices for machine electrical equipment,
   the international counterpart; clause-level citation only.
 - Device manuals are the authority for terminal designations, minimum
   operating voltage, active/passive designation, and torque.

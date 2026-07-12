@@ -72,63 +72,63 @@ anchors:
     us:
       - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch01__administration.md"
     eu:
-      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause01__scope.md"
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause01__scope.md"
   definitions:
     us:
       - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch02__definitions.md"
     eu:
-      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause03__terms_and_definitions.md"
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause03__terms_and_definitions.md"
   incoming_supply_disconnect:
     us:
       - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch05__disconnecting_means.md"
     eu:
-      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause05__incoming_supply.md"
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause05__incoming_supply.md"
   equipment_protection:
     us:
       - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch06__overcurrent_protection.md"
     eu:
-      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause07__protection_of_equipment.md"
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause07__protection_of_equipment.md"
   grounding_bonding:
     us:
       - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md"
     eu:
-      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md"
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause08__equipotential_bonding.md"
   control_functions:
     us:
       - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md"
     eu:
-      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md"
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md"
   operator_interface:
     us:
       - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch10__operator_interface_devices.md"
     eu:
-      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause10__operator_interface.md"
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause10__operator_interface.md"
   control_equipment:
     us:
       - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch11__control_equipment.md"
     eu:
-      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause11__control_equipment.md"
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause11__controlgear.md"
   motors_drives:
     us:
       - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch12__motors_and_associated_equipment.md"
     eu:
-      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md"
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause14__electric_motors.md"
   accessories_lighting:
     us:
       - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch13__appliances_and_accessories.md"
       - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch14__lighting.md"
     eu:
-      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause13__accessories_and_lighting.md"
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause15__socket_outlets_and_lighting.md"
   marking_documentation:
     us:
       - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md"
     eu:
-      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md"
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md"
   verification:
     us:
       - "../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch20__system_integration.md"
     eu:
-      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md"
+      - "../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause18__verification.md"
 
 routing_logic:
   market_owner_rules:

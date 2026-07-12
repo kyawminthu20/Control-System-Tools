@@ -4,7 +4,7 @@ AI_READ_ACCESS: ALLOWED
 STATUS: DRAFT
 
 MATRIX_ID: NFPA79_IEC60204_OVERLAP
-STANDARDS: NFPA_79_2024, IEC_60204_1_2018
+STANDARDS: NFPA_79_2024, IEC_60204_1_2016A1
 JURISDICTION: US + International
 -->
 
@@ -14,7 +14,7 @@ JURISDICTION: US + International
 
 This matrix maps equivalent requirements between US and International machinery electrical standards:
 - **NFPA 79 (2024)**: Electrical Standard for Industrial Machinery (US)
-- **IEC 60204-1 (2018)**: Electrical Equipment of Machines (International/Global)
+- **IEC 60204-1 (2016+AMD1:2021)**: Electrical Equipment of Machines (International/Global)
 
 Use this matrix for:
 - Dual-market machinery (US + EU sales)
@@ -59,7 +59,7 @@ These are VERY HIGH equivalence mappings:
 
 **Files**:
 - [NFPA79_2024__Ch05__disconnecting_means.md](../nfpa79/NFPA79_2024__Ch05__disconnecting_means.md)
-- [IEC60204_1_2018__Clause05__incoming_supply.md](../iec_60204_1/IEC60204_1_2018__Clause05__incoming_supply.md)
+- [IEC60204_1_2016A1__Clause05__incoming_supply.md](../iec_60204_1/IEC60204_1_2016A1__Clause05__incoming_supply.md)
 
 ### 2. Grounding and Bonding / Equipotential Bonding
 - **NFPA 79**: Chapter 8 - Grounding and Bonding
@@ -69,7 +69,7 @@ These are VERY HIGH equivalence mappings:
 
 **Files**:
 - [NFPA79_2024__Ch08__grounding_and_bonding.md](../nfpa79/NFPA79_2024__Ch08__grounding_and_bonding.md)
-- [IEC60204_1_2018__Clause08__equipotential_bonding.md](../iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md)
+- [IEC60204_1_2016A1__Clause08__equipotential_bonding.md](../iec_60204_1/IEC60204_1_2016A1__Clause08__equipotential_bonding.md)
 
 ### 3. Control Circuits and Control Functions
 - **NFPA 79**: Chapter 9 - Control Circuits and Control Functions
@@ -79,7 +79,7 @@ These are VERY HIGH equivalence mappings:
 
 **Files**:
 - [NFPA79_2024__Ch09__control_circuits_and_control_functions.md](../nfpa79/NFPA79_2024__Ch09__control_circuits_and_control_functions.md)
-- [IEC60204_1_2018__Clause09__control_circuits_and_functions.md](../iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md)
+- [IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md](../iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md)
 
 ### 4. Control Equipment
 - **NFPA 79**: Chapter 11 - Control Equipment
@@ -89,7 +89,7 @@ These are VERY HIGH equivalence mappings:
 
 **Files**:
 - [NFPA79_2024__Ch11__control_equipment.md](../nfpa79/NFPA79_2024__Ch11__control_equipment.md)
-- [IEC60204_1_2018__Clause11__control_equipment.md](../iec_60204_1/IEC60204_1_2018__Clause11__control_equipment.md)
+- [IEC60204_1_2016A1__Clause11__controlgear.md](../iec_60204_1/IEC60204_1_2016A1__Clause11__controlgear.md)
 
 ### 5. Marking and Documentation
 - **NFPA 79**: Chapter 19 - Marking and Documentation
@@ -99,7 +99,7 @@ These are VERY HIGH equivalence mappings:
 
 **Files**:
 - [NFPA79_2024__Ch19__marking_and_documentation.md](../nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md)
-- [IEC60204_1_2018__Clause14__marking_and_documentation.md](../iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md)
+- [IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md](../iec_60204_1/IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md)
 
 ## Key Differences (US vs International)
 
@@ -326,7 +326,7 @@ For detailed decision rules, evidence requirements, and checklists for each topi
 
 This matrix is based on:
 - NFPA 79-2024 Edition
-- IEC 60204-1:2018 (6th Edition)
+- IEC 60204-1:2016+AMD1:2021 (Ed. 6.1 consolidated)
 
 For authoritative requirements, always purchase official standards from NFPA and IEC.
 

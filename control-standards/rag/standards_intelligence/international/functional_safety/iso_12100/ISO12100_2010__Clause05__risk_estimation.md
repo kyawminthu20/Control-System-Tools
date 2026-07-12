@@ -83,13 +83,23 @@ Key guidance points:
 
 ## 5. Relationship to ISO 13849-1
 
-The S/F/P parameters from ISO 12100 Clause 5 feed directly into ISO 13849-1 Annex A. The Annex A graph (risk graph) accepts these three parameters and outputs a required Performance Level (PLr):
+ISO 12100 Clause 5 estimates risk from the severity of harm and the probability of its
+occurrence (exposure, occurrence of a hazardous event, and the possibility of avoiding or
+limiting harm). It does not assign a Performance Level.
 
-| ISO 12100 Parameter | ISO 13849-1 Annex A Input |
+The S1/S2, F1/F2, P1/P2 parameter set and the risk graph that turns them into a required
+Performance Level (PLr) are defined in **ISO 13849-1 Annex A**, not here. The ISO 12100
+risk estimation supplies the engineering judgement that the Annex A parameters encode:
+
+| ISO 12100 Clause 5 risk element | ISO 13849-1 Annex A parameter |
 |--------------------|--------------------------|
-| S1 or S2 | Severity branch of risk graph |
-| F1 or F2 | Frequency/exposure branch |
-| P1 or P2 | Possibility of avoidance branch |
+| Severity of harm | S1 or S2 — severity branch of the risk graph |
+| Frequency and duration of exposure | F1 or F2 — frequency/exposure branch |
+| Possibility of avoiding or limiting harm | P1 or P2 — avoidance branch |
+
+Designs taking the IEC 62061 route instead use that standard's own method to determine a
+required SIL. Cite the normative source correctly: PLr comes from ISO 13849-1 Annex A;
+a SIL target comes from IEC 62061.
 
 The six possible combinations of S, F, P yield PLr values from PLr a through PLr e:
 

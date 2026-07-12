@@ -16,7 +16,7 @@
 | **NEC 2023** | 10 articles | ✅ COMPLETE | **100%** |
 | **NFPA 79 2024** | 20 chapters | ❌ TODO placeholders | **0%** |
 | **UL 508A 2022** | 12 sections | ❌ TODO placeholders | **0%** |
-| **IEC 60204-1 2018** | 15 clauses | ❌ TODO placeholders | **0%** |
+| **IEC 60204-1:2016+AMD1:2021** | 15 clauses | ❌ TODO placeholders | **0%** |
 
 **Overall Repository:** 10 of 57 content files complete (~18%)
 
@@ -84,7 +84,7 @@ All 10 article files contain substantive, well-structured content with:
 
 ---
 
-### 4. IEC 60204-1 2018 — ❌ 0% COMPLETE
+### 4. IEC 60204-1:2016+AMD1:2021 — ❌ 0% COMPLETE
 
 **Location:** `iec_60204_1/`
 **Status:** SKELETON ONLY (TODO placeholders)

@@ -29,7 +29,6 @@ redirect_from:
 <div class="page-header">
   <span class="page-header__label">Scenario 07</span>
   <h1>Oil &amp; Gas Onshore Process Skid — ESD / F&amp;G / HIPPS</h1>
-  <span class="badge badge--complete">Corpus Complete — Phase 11</span>
 </div>
 
 ## Project Summary

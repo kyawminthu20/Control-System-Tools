@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-11 15:43:14
+**Last Auto-Updated:** 2026-07-12 01:35:30
 
 ```text
 ├── .claude/
@@ -20,7 +20,6 @@
 │       │   └── SKILL.md
 │       └── validate-rag/
 │           └── SKILL.md
-├── .gemini/
 ├── .github/
 │   └── workflows/
 │       └── pages.yml
@@ -40,14 +39,8 @@
 │   ├── STRUCTURE_SUMMARY.md
 │   ├── exports/
 │   │   ├── README.md
-│   │   ├── docx/
-│   │   ├── legacy_root/
-│   │   │   ├── README.md
-│   │   │   ├── csv/
-│   │   │   ├── pdf/
-│   │   │   └── snapshots/
-│   │   ├── pdf/
-│   │   └── reports/
+│   │   └── legacy_root/
+│   │       └── README.md
 │   ├── governance/
 │   │   ├── README.md
 │   │   ├── decision_log.md
@@ -58,25 +51,20 @@
 │   │   ├── commissioning_checklists/
 │   │   │   ├── README.md
 │   │   │   ├── _index.yaml
-│   │   │   ├── checklists/
-│   │   │   │   ├── README.md
-│   │   │   │   ├── _index.yaml
-│   │   │   │   ├── basic_circuit_polarity_and_power_checks.md
-│   │   │   │   ├── capacitor_discharge_awareness_check.md
-│   │   │   │   ├── drive_commissioning.md
-│   │   │   │   ├── motor_nameplate_and_overload_setting.md
-│   │   │   │   ├── motor_rotation_and_overload_verification.md
-│   │   │   │   └── pre_power_panel_and_incoming_supply_check.md
-│   │   │   ├── dry_run/
-│   │   │   ├── handover/
-│   │   │   ├── live_run/
-│   │   │   └── pre_power/
+│   │   │   └── checklists/
+│   │   │       ├── README.md
+│   │   │       ├── _index.yaml
+│   │   │       ├── basic_circuit_polarity_and_power_checks.md
+│   │   │       ├── capacitor_discharge_awareness_check.md
+│   │   │       ├── drive_commissioning.md
+│   │   │       ├── motor_nameplate_and_overload_setting.md
+│   │   │       ├── motor_rotation_and_overload_verification.md
+│   │   │       └── pre_power_panel_and_incoming_supply_check.md
 │   │   ├── design_framework/
 │   │   │   ├── README.md
 │   │   │   ├── _index.yaml
 │   │   │   ├── constraints/
 │   │   │   │   └── grounding_bonding_rules.yaml
-│   │   │   ├── control_system_design/
 │   │   │   ├── design_guides/
 │   │   │   │   └── 02_power_distribution_guide.md
 │   │   │   ├── electrical_review/
@@ -86,7 +74,6 @@
 │   │   │   │   ├── component_selection_basics.md
 │   │   │   │   ├── ohms_law_and_power_check_workflow.md
 │   │   │   │   └── simple_signal_and_interface_circuit_notes.md
-│   │   │   ├── io_architecture/
 │   │   │   ├── motor_systems/
 │   │   │   │   ├── README.md
 │   │   │   │   ├── _index.yaml
@@ -105,9 +92,6 @@
 │   │   │   │   ├── star_delta_and_supply_matching_notes.md
 │   │   │   │   ├── vfd_commissioning_workflow.md
 │   │   │   │   └── vfd_motor_integration_review.md
-│   │   │   ├── network_architecture/
-│   │   │   ├── power_distribution/
-│   │   │   ├── safety_architecture/
 │   │   │   ├── semiconductor_facility/
 │   │   │   │   ├── _index.yaml
 │   │   │   │   ├── alarm_and_measurement_strategy.md
@@ -240,21 +224,24 @@
 │   │   │   │   ├── machinery/
 │   │   │   │   │   └── iec_60204_1/
 │   │   │   │   │       ├── GENERATION_SUMMARY.md
-│   │   │   │   │       ├── IEC60204_1_2018__Clause01__scope.md
-│   │   │   │   │       ├── IEC60204_1_2018__Clause02__normative_references.md
-│   │   │   │   │       ├── IEC60204_1_2018__Clause03__terms_and_definitions.md
-│   │   │   │   │       ├── IEC60204_1_2018__Clause04__general_requirements.md
-│   │   │   │   │       ├── IEC60204_1_2018__Clause05__incoming_supply.md
-│   │   │   │   │       ├── IEC60204_1_2018__Clause06__protection_against_electric_shock.md
-│   │   │   │   │       ├── IEC60204_1_2018__Clause07__protection_of_equipment.md
-│   │   │   │   │       ├── IEC60204_1_2018__Clause08__equipotential_bonding.md
-│   │   │   │   │       ├── IEC60204_1_2018__Clause09__control_circuits_and_functions.md
-│   │   │   │   │       ├── IEC60204_1_2018__Clause10__operator_interface.md
-│   │   │   │   │       ├── IEC60204_1_2018__Clause11__control_equipment.md
-│   │   │   │   │       ├── IEC60204_1_2018__Clause12__motors_and_drives.md
-│   │   │   │   │       ├── IEC60204_1_2018__Clause13__accessories_and_lighting.md
-│   │   │   │   │       ├── IEC60204_1_2018__Clause14__marking_and_documentation.md
-│   │   │   │   │       ├── IEC60204_1_2018__Clause15__verification.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause01__scope.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause02__normative_references.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause03__terms_and_definitions.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause04__general_requirements.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause05__incoming_supply.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause07__protection_of_equipment.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause08__equipotential_bonding.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause10__operator_interface.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause11__controlgear.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause12__conductors_and_cables.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause13__wiring_practices.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause14__electric_motors.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause15__socket_outlets_and_lighting.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause17__technical_documentation.md
+│   │   │   │   │       ├── IEC60204_1_2016A1__Clause18__verification.md
 │   │   │   │   │       ├── IEC60204_OVERVIEW.md
 │   │   │   │   │       ├── README.md
 │   │   │   │   │       └── _index.yaml
@@ -412,7 +399,6 @@
 │   │   ├── training_modules/
 │   │   │   ├── README.md
 │   │   │   ├── _index.yaml
-│   │   │   ├── commissioning/
 │   │   │   ├── control_systems/
 │   │   │   │   ├── README.md
 │   │   │   │   ├── _index.yaml
@@ -475,23 +461,18 @@
 │   │   │   │   ├── program_structure.md
 │   │   │   │   ├── safety_application_patterns.md
 │   │   │   │   └── state_machines.md
-│   │   │   ├── safety/
-│   │   │   ├── semiconductor_facility/
-│   │   │   │   ├── README.md
-│   │   │   │   └── hf_handling_controls_materials_and_shutdowns.md
-│   │   │   └── troubleshooting/
+│   │   │   └── semiconductor_facility/
+│   │   │       ├── README.md
+│   │   │       └── hf_handling_controls_materials_and_shutdowns.md
 │   │   └── troubleshooting_engine/
 │   │       ├── analog_io/
 │   │       │   └── analog_signal_faults.md
 │   │       ├── decision_trees.yaml
-│   │       ├── digital_io/
 │   │       ├── motion_drives/
 │   │       │   ├── motor_wont_start.md
 │   │       │   └── vfd_faults.md
-│   │       ├── motion_servo/
-│   │       ├── networks/
-│   │       │   └── comms_dropouts.md
-│   │       └── pid_control/
+│   │       └── networks/
+│   │           └── comms_dropouts.md
 │   ├── templates/
 │   │   ├── README.md
 │   │   ├── checklists/
@@ -508,37 +489,25 @@
 │   │       └── work_note_template.md
 │   ├── tools/
 │   │   ├── audit_tool/
-│   │   │   ├── README.md
-│   │   │   ├── outputs/
-│   │   │   └── report_templates/
+│   │   │   └── README.md
 │   │   ├── business_metrics_profit_engine/
-│   │   │   ├── README.md
-│   │   │   └── exports/
+│   │   │   └── README.md
 │   │   ├── design_package_generator/
-│   │   │   ├── README.md
-│   │   │   └── kits/
-│   │   │       ├── conveyor_control_kit/
-│   │   │       ├── pump_skid_control_kit/
-│   │   │       └── robotic_cell_control_kit/
+│   │   │   └── README.md
 │   │   ├── ip_library_licensing/
-│   │   │   ├── README.md
-│   │   │   └── export_packages/
+│   │   │   └── README.md
 │   │   ├── knowledge_platform/
 │   │   │   └── README.md
 │   │   ├── retainer_support_engine/
-│   │   │   ├── README.md
-│   │   │   └── outputs/
+│   │   │   └── README.md
 │   │   └── ul508a_panel_automation/
-│   │       ├── README.md
-│   │       ├── outputs/
-│   │       └── ul_documentation_templates/
+│   │       └── README.md
 │   └── work/
 │       ├── README.md
 │       ├── design/
 │       │   ├── README.md
 │       │   ├── conductor_protection_and_ampacity_transcript_summary.md
 │       │   ├── control theory.md
-│       │   ├── diagrams/
 │       │   ├── equipment_grounding_conductor_topics/
 │       │   │   ├── README.md
 │       │   │   ├── egc_cable_methods_ac_and_mc.md
@@ -546,7 +515,6 @@
 │       │   │   ├── egc_other_listed_systems.md
 │       │   │   ├── egc_sizing_and_250_122_notes.md
 │       │   │   └── egc_wire_and_raceway_methods.md
-│       │   ├── experiments/
 │       │   ├── mermaid_diagrams_to_reference.md
 │       │   ├── nec_2026_changes_topics/
 │       │   │   ├── 2026_nec_codewide_editorial_and_90_3_changes.md
@@ -609,12 +577,7 @@
 │       │       └── voltage_drop_recommended_feeder_and_branch_guidance.md
 │       └── general/
 │           ├── 00_inbox_notes.md
-│           ├── README.md
-│           ├── commissioning_notes/
-│           ├── design_working/
-│           ├── experiments/
-│           ├── standards_notes/
-│           └── troubleshooting_logs/
+│           └── README.md
 ├── control-theory-final.png
 ├── control-theory-mobile-top.png
 ├── control-theory-overview-full.png
@@ -622,9 +585,6 @@
 │   ├── README.md
 │   ├── examples/
 │   │   └── io_list_example.csv
-│   ├── historian_exports/
-│   ├── network_captures/
-│   ├── plc_exports/
 │   └── standards_tables/
 │       ├── README.md
 │       ├── samples/
@@ -833,21 +793,24 @@
 │   │   │   │   │   ├── machinery/
 │   │   │   │   │   │   └── iec_60204_1/
 │   │   │   │   │   │       ├── GENERATION_SUMMARY.md
-│   │   │   │   │   │       ├── IEC60204_1_2018__Clause01__scope.md
-│   │   │   │   │   │       ├── IEC60204_1_2018__Clause02__normative_references.md
-│   │   │   │   │   │       ├── IEC60204_1_2018__Clause03__terms_and_definitions.md
-│   │   │   │   │   │       ├── IEC60204_1_2018__Clause04__general_requirements.md
-│   │   │   │   │   │       ├── IEC60204_1_2018__Clause05__incoming_supply.md
-│   │   │   │   │   │       ├── IEC60204_1_2018__Clause06__protection_against_electric_shock.md
-│   │   │   │   │   │       ├── IEC60204_1_2018__Clause07__protection_of_equipment.md
-│   │   │   │   │   │       ├── IEC60204_1_2018__Clause08__equipotential_bonding.md
-│   │   │   │   │   │       ├── IEC60204_1_2018__Clause09__control_circuits_and_functions.md
-│   │   │   │   │   │       ├── IEC60204_1_2018__Clause10__operator_interface.md
-│   │   │   │   │   │       ├── IEC60204_1_2018__Clause11__control_equipment.md
-│   │   │   │   │   │       ├── IEC60204_1_2018__Clause12__motors_and_drives.md
-│   │   │   │   │   │       ├── IEC60204_1_2018__Clause13__accessories_and_lighting.md
-│   │   │   │   │   │       ├── IEC60204_1_2018__Clause14__marking_and_documentation.md
-│   │   │   │   │   │       ├── IEC60204_1_2018__Clause15__verification.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause01__scope.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause02__normative_references.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause03__terms_and_definitions.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause04__general_requirements.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause05__incoming_supply.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause07__protection_of_equipment.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause08__equipotential_bonding.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause10__operator_interface.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause11__controlgear.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause12__conductors_and_cables.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause13__wiring_practices.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause14__electric_motors.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause15__socket_outlets_and_lighting.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause17__technical_documentation.md
+│   │   │   │   │   │       ├── IEC60204_1_2016A1__Clause18__verification.md
 │   │   │   │   │   │       └── IEC60204_OVERVIEW.md
 │   │   │   │   │   ├── offshore/
 │   │   │   │   │   │   ├── ABS_offshore_electrical_control.md
@@ -1174,7 +1137,6 @@
 │   │       ├── index.md
 │   │       └── motor-selection/
 │   │           └── index.md
-│   ├── engineering-workflow/
 │   ├── field-engineering/
 │   │   └── index.md
 │   ├── fundamentals/
@@ -1458,7 +1420,6 @@
 │   │   └── 2026-04-20-phase27-motors-bldc-pmsm-implementation.md
 │   ├── repository/
 │   │   └── index.md
-│   ├── software-stack/
 │   ├── standards/
 │   │   ├── cybersecurity/
 │   │   │   ├── iec-62443/
@@ -1668,7 +1629,6 @@
 │   │   └── source-register.md
 │   ├── plc_software.md
 │   ├── plcs.md
-│   ├── standards_check.md
 │   └── wire-color-coding-web-assets/
 │       ├── 00-wire-color-coding-title-banner.png
 │       ├── 01-reference-standards.png

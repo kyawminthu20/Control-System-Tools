@@ -1,189 +1,308 @@
 # IEC 60204-1 RAG Index
-# Auto-generated index for IEC 60204-1 (2018) Clause files
+# Index for IEC 60204-1:2016+AMD1:2021 (CSV Ed. 6.1) clause files
 # AI_READ_ACCESS: ALLOWED
+#
+# Phase 45 (2026-07-12) — clause structure corrected against the official IEC contents.
+# The module previously claimed edition "2018" (no such edition exists), had only 15
+# clause files, skipped Clauses 12 and 13 entirely, merged 16 and 17 into one file, and
+# mis-numbered everything from 12 onward. It also carried an Ed. 5.0 (2005) clause title
+# ("Accessories and lighting", now "Socket-outlets and lighting"), indicating the module
+# was originally drafted against the superseded 2005 text.
 
-version: "1.0"
+version: "2.0"
 standard_family: "IEC"
 standard_id: "IEC_60204_1"
-standard_title: "Electrical Equipment of Machines"
-edition: "2018"
+standard_title: "Safety of machinery - Electrical equipment of machines - Part 1: General requirements"
+edition: "2016+AMD1:2021 (CSV Ed. 6.1)"
+edition_note: "Base IEC 60204-1:2016 (Ed. 6.0, 2016-10-13) + AMD1:2021; consolidated CSV Ed. 6.1, 2021-09-15. No later edition or amendment as of July 2026."
 jurisdiction: "GLOBAL"
-last_updated: "2026-01-15"
+last_updated: "2026-07-12"
 
-note: "IEC 60204-1 is the international/global equivalent of NFPA 79 (US)"
+scope_limits:
+  upper_voltage: "1 000 V AC / 1 500 V DC nominal supply"
+  upper_frequency: "200 Hz nominal supply"
+  lower_voltage: "None. The scope sets no lower voltage threshold."
+
+note: "IEC 60204-1 is the international counterpart of NFPA 79 (US)"
 
 documents:
-  - doc_id: "IEC60204-1-2018-Clause01"
-    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause01__scope.md"
+  - doc_id: "IEC60204-1-Clause01"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause01__scope.md"
     content_class: "RAG_APPROVED"
     ai_read_access: "ALLOWED"
     iec_hierarchy:
       clause: "1"
       clause_title: "Scope"
     tags:
-      topics: ["scope", "applicability"]
-      systems: ["machine", "robot_cell", "conveyor"]
+      topics: ['scope', 'applicability']
     priority: "standard"
     us_equivalent: "NFPA79_Ch01"
-
-  - doc_id: "IEC60204-1-2018-Clause05"
-    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause05__incoming_supply.md"
+  - doc_id: "IEC60204-1-Clause02"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause02__normative_references.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "2"
+      clause_title: "Normative references"
+    tags:
+      topics: ['normative_references']
+    priority: "standard"
+  - doc_id: "IEC60204-1-Clause03"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause03__terms_and_definitions.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "3"
+      clause_title: "Terms, definitions and abbreviated terms"
+    tags:
+      topics: ['terminology']
+    priority: "standard"
+  - doc_id: "IEC60204-1-Clause04"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause04__general_requirements.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "4"
+      clause_title: "General requirements"
+    tags:
+      topics: ['general', 'operating_conditions']
+    priority: "standard"
+    us_equivalent: "NFPA79_Ch04"
+  - doc_id: "IEC60204-1-Clause05"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause05__incoming_supply.md"
     content_class: "RAG_APPROVED"
     ai_read_access: "ALLOWED"
     iec_hierarchy:
       clause: "5"
-      clause_title: "Incoming Supply"
+      clause_title: "Incoming supply conductor terminations and devices for disconnecting and switching off"
     tags:
-      topics: ["incoming_supply", "supply_disconnect"]
+      topics: ['incoming_supply', 'supply_disconnect']
     priority: "high"
-    us_equivalent: "NFPA79_Ch05"  # Disconnecting Means
-
-  - doc_id: "IEC60204-1-2018-Clause06"
-    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause06__protection_against_electric_shock.md"
+    us_equivalent: "NFPA79_Ch05"
+  - doc_id: "IEC60204-1-Clause06"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause06__protection_against_electric_shock.md"
     content_class: "RAG_APPROVED"
     ai_read_access: "ALLOWED"
     iec_hierarchy:
       clause: "6"
-      clause_title: "Protection Against Electric Shock"
+      clause_title: "Protection against electric shock"
     tags:
-      topics: ["electric_shock", "touch_safe"]
+      topics: ['electric_shock', 'pelv', 'touch_safe']
     priority: "high"
     us_equivalent: "NFPA79_Ch07"
-
-  - doc_id: "IEC60204-1-2018-Clause08"
-    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause08__equipotential_bonding.md"
+  - doc_id: "IEC60204-1-Clause07"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause07__protection_of_equipment.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "7"
+      clause_title: "Protection of equipment"
+    tags:
+      topics: ['overcurrent', 'thermal', 'earth_fault']
+    priority: "standard"
+    us_equivalent: "NFPA79_Ch06"
+  - doc_id: "IEC60204-1-Clause08"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause08__equipotential_bonding.md"
     content_class: "RAG_APPROVED"
     ai_read_access: "ALLOWED"
     iec_hierarchy:
       clause: "8"
-      clause_title: "Equipotential Bonding"
+      clause_title: "Equipotential bonding"
     tags:
-      topics: ["bonding", "protective_earth"]
-    priority: "critical"  # Safety critical
-    us_equivalent: "NFPA79_Ch08"  # Grounding and Bonding
-
-  - doc_id: "IEC60204-1-2018-Clause09"
-    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause09__control_circuits_and_functions.md"
+      topics: ['bonding', 'protective_earth']
+    priority: "critical"
+    us_equivalent: "NFPA79_Ch08"
+  - doc_id: "IEC60204-1-Clause09"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause09__control_circuits_and_functions.md"
     content_class: "RAG_APPROVED"
     ai_read_access: "ALLOWED"
     iec_hierarchy:
       clause: "9"
-      clause_title: "Control Circuits and Control Functions"
+      clause_title: "Control circuits and control functions"
     tags:
-      topics: ["control_circuits", "stop_functions", "emergency_stop"]
-    priority: "critical"  # Safety critical
+      topics: ['control_circuits', 'stop_functions', 'emergency_stop']
+    priority: "critical"
     us_equivalent: "NFPA79_Ch09"
-
-  - doc_id: "IEC60204-1-2018-Clause11"
-    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause11__control_equipment.md"
+  - doc_id: "IEC60204-1-Clause10"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause10__operator_interface.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "10"
+      clause_title: "Operator interface and machine-mounted control devices"
+    tags:
+      topics: ['operator_interface', 'control_devices']
+    priority: "standard"
+    us_equivalent: "NFPA79_Ch10"
+  - doc_id: "IEC60204-1-Clause11"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause11__controlgear.md"
     content_class: "RAG_APPROVED"
     ai_read_access: "ALLOWED"
     iec_hierarchy:
       clause: "11"
-      clause_title: "Control Equipment"
+      clause_title: "Controlgear: location, mounting, and enclosures"
     tags:
-      topics: ["control_equipment", "enclosures"]
+      topics: ['controlgear', 'enclosures', 'mounting']
     priority: "high"
     us_equivalent: "NFPA79_Ch11"
-
-  - doc_id: "IEC60204-1-2018-Clause14"
-    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md"
+  - doc_id: "IEC60204-1-Clause12"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause12__conductors_and_cables.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "12"
+      clause_title: "Conductors and cables"
+    tags:
+      topics: ['conductors', 'cables', 'cross_section']
+    priority: "high"
+    us_equivalent: "NFPA79_Ch12"
+  - doc_id: "IEC60204-1-Clause13"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause13__wiring_practices.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "13"
+      clause_title: "Wiring practices"
+    tags:
+      topics: ['wiring_practices', 'routing', 'segregation', 'terminations']
+    priority: "high"
+    us_equivalent: "NFPA79_Ch13"
+  - doc_id: "IEC60204-1-Clause14"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause14__electric_motors.md"
     content_class: "RAG_APPROVED"
     ai_read_access: "ALLOWED"
     iec_hierarchy:
       clause: "14"
-      clause_title: "Marking and Documentation"
+      clause_title: "Electric motors and associated equipment"
     tags:
-      topics: ["marking", "documentation"]
+      topics: ['motors', 'drives']
     priority: "high"
-    us_equivalent: "NFPA79_Ch19"
-
-  - doc_id: "IEC60204-1-2018-Clause15"
-    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause15__verification.md"
+    us_equivalent: "NFPA79_Ch14"
+  - doc_id: "IEC60204-1-Clause15"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause15__socket_outlets_and_lighting.md"
     content_class: "RAG_APPROVED"
     ai_read_access: "ALLOWED"
     iec_hierarchy:
       clause: "15"
+      clause_title: "Socket-outlets and lighting"
+    tags:
+      topics: ['socket_outlets', 'lighting']
+    priority: "standard"
+    us_equivalent: "NFPA79_Ch15"
+  - doc_id: "IEC60204-1-Clause16"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "16"
+      clause_title: "Marking, warning signs and reference designations"
+    tags:
+      topics: ['marking', 'warning_signs', 'reference_designations']
+    priority: "high"
+    us_equivalent: "NFPA79_Ch16"
+  - doc_id: "IEC60204-1-Clause17"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause17__technical_documentation.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "17"
+      clause_title: "Technical documentation"
+    tags:
+      topics: ['documentation', 'schematics']
+    priority: "high"
+    us_equivalent: "NFPA79_Ch19"
+  - doc_id: "IEC60204-1-Clause18"
+    path: "rag/standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause18__verification.md"
+    content_class: "RAG_APPROVED"
+    ai_read_access: "ALLOWED"
+    iec_hierarchy:
+      clause: "18"
       clause_title: "Verification"
     tags:
-      topics: ["verification", "testing", "inspection"]
+      topics: ['verification', 'testing', 'inspection']
     priority: "high"
 
-# Priority clauses for IEC 60204-1
+# Clauses created in the Phase 45 accuracy pass — structure correct, depth pass pending
+coverage_gaps:
+  - clause: "12"
+    note: "Conductors and cables — file created 2026-07-12; principles only, no depth pass, not verified against the purchased text"
+  - clause: "13"
+    note: "Wiring practices — file created 2026-07-12; principles only, no depth pass, not verified against the purchased text"
+  - clause: "17"
+    note: "Technical documentation — split out of the old merged marking/documentation file 2026-07-12; depth pass pending"
+
 priority_clauses:
   critical:
-    - clause: "8"   # Equipotential Bonding - Safety critical
-    - clause: "9"   # Control Circuits - Safety critical
+    - clause: "8"
+    - clause: "9"
   high:
-    - clause: "5"   # Incoming Supply - Disconnect requirements
-    - clause: "6"   # Electric Shock Protection
-    - clause: "11"  # Control Equipment - Panel design
-    - clause: "14"  # Marking and Documentation
-    - clause: "15"  # Verification - Testing
+    - clause: "5"
+    - clause: "6"
+    - clause: "11"
+    - clause: "12"
+    - clause: "13"
+    - clause: "14"
+    - clause: "16"
+    - clause: "17"
+    - clause: "18"
   standard:
-    - clause: "1"   # Scope
-    - clause: "2"   # Normative References
-    - clause: "3"   # Terms and Definitions
-    - clause: "4"   # General Requirements
-    - clause: "7"   # Protection of Equipment
-    - clause: "10"  # Operator Interface
-    - clause: "12"  # Motors and Drives
-    - clause: "13"  # Accessories and Lighting
+    - clause: "1"
+    - clause: "2"
+    - clause: "3"
+    - clause: "4"
+    - clause: "7"
+    - clause: "10"
+    - clause: "15"
 
-# IEC 60204-1 ↔ NFPA 79 Direct Equivalents
+# IEC 60204-1 <-> NFPA 79 direct equivalents
 iec_to_nfpa_mapping:
   - iec_clause: "5"
     nfpa_chapter: "5"
-    topic: "Disconnecting Means / Incoming Supply"
+    topic: "Disconnecting means / incoming supply"
     notes: "Similar requirements, terminology differs"
-
   - iec_clause: "8"
     nfpa_chapter: "8"
-    topic: "Equipotential Bonding / Grounding and Bonding"
-    notes: "Direct equivalent, IEC uses 'equipotential bonding' term"
-
+    topic: "Equipotential bonding / grounding and bonding"
+    notes: "Direct equivalent; IEC uses the term 'equipotential bonding'"
   - iec_clause: "9"
     nfpa_chapter: "9"
-    topic: "Control Circuits and Control Functions"
+    topic: "Control circuits and control functions"
     notes: "Nearly identical requirements"
-
-  - iec_clause: "11"
-    nfpa_chapter: "11"
-    topic: "Control Equipment"
-    notes: "Same scope, some construction detail differences"
-
-  - iec_clause: "14"
+  - iec_clause: "16"
+    nfpa_chapter: "16"
+    topic: "Marking and safety signs"
+    notes: "Similar requirements, format differences"
+  - iec_clause: "17"
     nfpa_chapter: "19"
-    topic: "Marking and Documentation"
+    topic: "Technical documentation"
     notes: "Similar requirements, format differences"
 
-# Regional differences (IEC vs NFPA 79)
 regional_considerations:
-  voltage_levels:
-    iec: "Based on IEC voltage standards (230V, 400V typical)"
-    nfpa: "Based on US voltage standards (120V, 480V typical)"
-
+  voltage_ceiling:
+    iec: "1 000 V AC / 1 500 V DC"
+    nfpa: "1 000 V (the older 600 V ceiling is superseded)"
   color_codes:
-    iec: "IEC 60446 color standards"
-    nfpa: "US color standards (different from IEC)"
-
+    iec: "IEC identification rules; PE is green-and-yellow"
+    nfpa: "US color conventions; differ from IEC"
   component_standards:
-    iec: "IEC component standards (contactors, relays, etc.)"
+    iec: "IEC component standards"
     nfpa: "UL/NEMA component standards"
-
   safety_approach:
-    iec: "Risk assessment per ISO 12100, safety functions per ISO 13849/IEC 62061"
-    nfpa: "NFPA 79 safety requirements, OSHA compliance"
+    iec: "Risk assessment per ISO 12100; safety functions per ISO 13849-1 or IEC 62061"
+    nfpa: "NFPA 79 requirements; OSHA compliance"
 
 notes: |
-  IEC 60204-1 is the international standard for electrical equipment of machines.
-  It is the direct equivalent of NFPA 79 for global/EU markets.
+  IEC 60204-1 is the international standard for the electrical equipment of machines and
+  the counterpart of NFPA 79 for global/EU markets.
 
-  Key differences from NFPA 79:
-  - Uses "clauses" instead of "chapters"
-  - Global jurisdiction vs US-specific
-  - Different voltage standards
-  - Different component certification (CE vs UL)
-  - Pairs with ISO 13849/IEC 62061 for safety (vs NFPA 79 standalone)
+  Scope: applies to electrical equipment operating at nominal supply voltages not exceeding
+  1 000 V AC or 1 500 V DC, at nominal supply frequencies not exceeding 200 Hz. Requirements
+  commence at the point of connection of the supply to the electrical equipment of the
+  machine. THERE IS NO LOWER VOLTAGE THRESHOLD in the scope — an earlier version of this
+  corpus and the site page wrongly stated "above 25 V AC or 60 V DC".
 
-  All files are in DRAFT status and ready for content development.
+  Stop functions (Clause 9) may be Category 0, 1 or 2. An EMERGENCY STOP function is
+  restricted to Category 0 or Category 1, selected by risk assessment; Category 2 leaves
+  power on the actuators and is not an emergency-stop category. (Flagged for confirmation
+  against the purchased Clause 9.2.2/9.2.3 text — the free IEC preview truncates before it.)
+

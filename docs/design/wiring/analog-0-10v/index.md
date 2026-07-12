@@ -11,7 +11,7 @@ breadcrumb:
 repo_path: "control-standards/rag/design_framework/wiring_practices/"
 review:
   standard: "ISA analog signal practice; NFPA 79 / IEC 60204-1 (wiring-practice chapters)"
-  edition: "NFPA 79:2024, IEC 60204-1:2018"
+  edition: "NFPA 79:2024, IEC 60204-1:2016+AMD1:2021"
   status: "Review pending"
   coverage: "Voltage-signal reference dependence, distance limitation, single-ended vs differential inputs, shield policy and injection check at chapter/article level; vendor input impedance, drive capability and terminal designations deliberately excluded."
   last_reviewed: "July 2026"
@@ -210,7 +210,7 @@ in [templates]({{ '/tools/templates/' | relative_url }})):
 - **NFPA 79:2024** — machine wiring-practice chapters: conductor
   identification, routing, and separation of signal from power circuits
   (chapter-level citation).
-- **IEC 60204-1:2018** — wiring practices for machine electrical equipment;
+- **IEC 60204-1:2016+AMD1:2021** — wiring practices for machine electrical equipment;
   the international counterpart, cited at clause level only.
 - Device manuals are the authority for input impedance, drive capability,
   single-ended vs differential input type, and terminal designations.

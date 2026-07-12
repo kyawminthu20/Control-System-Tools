@@ -16,7 +16,7 @@ INDUSTRY: nuclear
 
 ## Standards To Prioritize
 
-- baseline machine electrical and documentation requirements as a minimum [LOCAL: us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#2-documentation-expectations] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2018__Clause14__marking_and_documentation.md#2-documentation-set]
+- baseline machine electrical and documentation requirements as a minimum [LOCAL: us/nfpa79/NFPA79_2024__Ch19__marking_and_documentation.md#2-documentation-expectations] [LOCAL: international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause16__marking_and_warning_signs.md#2-documentation-set]
 - nuclear QA, software, and cybersecurity standards: `NOT FOUND IN LOCAL CORPUS – TO VERIFY` [TO VERIFY: nuclear QA standard] [TO VERIFY: IEC 62443]
 - IEC 61511/61508 only if used as part of a non-nuclear process-safety function, subject to plant rules [LOCAL: _standards_map.md#applicability-matrix-by-project-type]
 

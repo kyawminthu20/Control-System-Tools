@@ -185,7 +185,7 @@ This is exceptional - the NEC module is production-ready with real, usable conte
 | **NEC 2023** | 10 | **10** | **100%** ✅ |
 | NFPA 79 2024 | 20 | ? | TBD |
 | UL 508A 2022 | 12 | ? | TBD |
-| IEC 60204-1 2018 | 15 | ? | TBD |
+| IEC 60204-1:2016+AMD1:2021 | 15 | ? | TBD |
 
 **NEC is the ONLY standard with 100% content completion!**
 

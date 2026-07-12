@@ -25,16 +25,15 @@ lifecycle_stage:
     slug: "commissioning/"
 review:
   standard: "IEC 61511"
-  edition: "2016"
-  status: "Reviewed"
-  coverage: "SIS lifecycle and key clauses; worked example pending"
-  last_reviewed: "April 2026"
+  edition: "2016 (Ed. 2)"
+  status: "Review pending"
+  coverage: "Process SIS lifecycle. SIL range corrected July 2026 — Ed. 2 spans SIL 1-4, not SIL 1-3"
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">
   <span class="page-header__label">Functional Safety · IEC 61511</span>
   <h1>IEC 61511:2016 — Safety Instrumented Systems, Process Industry</h1>
-  <span class="badge badge--complete">Phase 3 Complete</span>
 </div>
 
 ## Quick Start
@@ -57,8 +56,6 @@ review:
 | **Jurisdiction** | Global; oil and gas, chemical, pharmaceutical, power |
 | **Scope** | Safety instrumented systems in the process industry |
 | **Repository** | `rag/international/functional_safety/iec_61511/` |
-| **Status in Corpus** | Complete <span class="badge badge--complete">Phase 3</span> |
-
 **Purpose:** IEC 61511 is the process industry application of IEC 61508. It covers the complete lifecycle of Safety Instrumented Systems (SIS) and Safety Instrumented Functions (SIF) — from hazard identification and SIL determination through design, commissioning, proof testing, and decommissioning.
 
 ---
@@ -93,7 +90,15 @@ One SIS typically implements multiple SIFs, each evaluated independently.
 
 ### SIL in Low-Demand Mode (PFDavg)
 
-IEC 61511 uses **SIL 1–3 only**. SIL 4 is excluded from the process industry domain.
+IEC 61511-1:2016 Clause 1 **defines SIL 4 as the maximum** level of functional safety
+performance achievable for a SIF implemented to the standard, and SIL 1 as the minimum
+below which the standard does not apply — so its range is **SIL 1 to SIL 4**.
+
+The common belief that "IEC 61511 is SIL 1–3 only" comes from **Edition 1**, which pushed
+SIL 4 out to special treatment. It is not correct for the current edition. In practice SIL 4
+is vanishingly rare in the process industries — a SIL 4 requirement is normally a signal to
+revisit the risk reduction strategy rather than to build a SIL 4 SIF — but it is not
+excluded by the standard.
 
 | SIL | PFDavg | Risk reduction factor |
 |-----|--------|-----------------------|
@@ -190,7 +195,7 @@ Proof testing is the functional test that detects dangerous undetected (DU) fail
 | Domain | Process industry SIS | Industrial machinery |
 | Demand mode | Low-demand | High-demand |
 | Metric | PFDavg | PL (PFHd) or SIL (PFHd) |
-| SIL range | SIL 1–3 | PLa–e or SIL 1–3 |
+| SIL range | SIL 1–4 (SIL 4 rare in practice) | PLa–e, or SIL 1–3 under IEC 62061 |
 | Proof testing | Central; drives PFDavg | Less prominent |
 | SIL determination | LOPA, risk graph | Risk assessment → PLr graph or LOPA |
 | Field device certification | Prior use clause permits non-certified devices | Certified devices expected for safety functions |

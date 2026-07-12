@@ -87,7 +87,7 @@ For the most relevant files, that section should point to:
 
 - `NEC_2023__Art430__motors_motor_circuits_and_controllers.md`
 - `NFPA79_2024__Ch12__motors_and_associated_equipment.md`
-- `IEC60204_1_2018__Clause12__motors_and_drives.md`
+- `IEC60204_1_2016A1__Clause14__electric_motors.md`
 - `UL508A_2022__motor_controllers_and_drives.md`
 
 This improves discoverability without pretending the transcript files are authoritative.
@@ -202,7 +202,7 @@ The current `motors_topics` notes should route to these canonical anchors:
   motor branch circuits, overloads, short-circuit and ground-fault protection, VFD feeder/disconnect rules
 - `NFPA 79 2024 Chapter 12`
   machine motor integration, restart behavior, drive safety expectations, STO context
-- `IEC 60204-1:2018 Clause 12`
+- `IEC 60204-1:2016+AMD1:2021 Clause 12`
   motor suitability, isolation, over-speed, drive integration, EMC-related motor cable practices
 - `UL 508A motor/drives content`
   panel assembly rules, listed combinations, internal wiring and group-motor issues

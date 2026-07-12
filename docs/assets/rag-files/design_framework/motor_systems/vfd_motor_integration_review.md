@@ -45,5 +45,5 @@ Review whether the machine-level behavior is safe and intentional for:
 
 - [NEC_2023__Art430__motors_motor_circuits_and_controllers.md](../../standards_intelligence/us/nec/NEC_2023__Art430__motors_motor_circuits_and_controllers.md)
 - [NFPA79_2024__Ch12__motors_and_associated_equipment.md](../../standards_intelligence/us/nfpa79/NFPA79_2024__Ch12__motors_and_associated_equipment.md)
-- [IEC60204_1_2018__Clause12__motors_and_drives.md](../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2018__Clause12__motors_and_drives.md)
+- [IEC60204_1_2016A1__Clause14__electric_motors.md](../../standards_intelligence/international/machinery/iec_60204_1/IEC60204_1_2016A1__Clause14__electric_motors.md)
 - [UL508A_2022__motor_controllers_and_drives.md](../../standards_intelligence/us/ul_508a/UL508A_2022__motor_controllers_and_drives.md)

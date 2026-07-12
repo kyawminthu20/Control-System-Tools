@@ -20,7 +20,6 @@ related_standards:
 <div class="page-header">
   <span class="page-header__label">Industry Overlay — Semiconductor</span>
   <h1>Semiconductor Equipment Standards</h1>
-  <span class="badge badge--complete">Phase 11 — SEMI Corpus Complete</span>
 </div>
 
 ## Industry Profile
@@ -78,12 +77,12 @@ Is the tool connected to fab host or remote network?
 
 | Category | Standards | Corpus Status |
 |----------|-----------|---------------|
-| Risk assessment | ISO 12100 | <span class="badge badge--complete">Reviewed</span> |
-| Safety functions | ISO 13849-1 (PLd typical for tools) | <span class="badge badge--complete">Reviewed</span> |
-| Machine electrical (international) | IEC 60204-1 | <span class="badge badge--complete">Reviewed</span> |
-| US electrical | NEC, NFPA 79, UL 508A | <span class="badge badge--complete">Reviewed</span> |
-| Semiconductor-specific | SEMI S2, S8, S14 | <span class="badge badge--complete">Reviewed</span> |
-| Cybersecurity | IEC 62443 | <span class="badge badge--complete">Reviewed</span> |
+| Risk assessment | ISO 12100 | <span class="badge badge--reviewed">Reviewed</span> |
+| Safety functions | ISO 13849-1 (PLd typical for tools) | <span class="badge badge--reviewed">Reviewed</span> |
+| Machine electrical (international) | IEC 60204-1 | <span class="badge badge--reviewed">Reviewed</span> |
+| US electrical | NEC, NFPA 79, UL 508A | <span class="badge badge--reviewed">Reviewed</span> |
+| Semiconductor-specific | SEMI S2, S8, S14 | <span class="badge badge--reviewed">Reviewed</span> |
+| Cybersecurity | IEC 62443 | <span class="badge badge--reviewed">Reviewed</span> |
 | Fab fire code | NFPA 318 | Not in corpus |
 
 ---
