@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-12 22:52:44
+**Last Auto-Updated:** 2026-07-12 22:57:13
 
 ```text
 ├── .claude/
@@ -1520,7 +1520,8 @@
 │   │   │   ├── 2026-04-11-phase23-facility-build-phases-3-4.md
 │   │   │   ├── 2026-04-14-phase26-nav-restructure.md
 │   │   │   ├── 2026-04-14-water-wastewater-section.md
-│   │   │   └── 2026-04-16-control-theory-overview-rebuild.md
+│   │   │   ├── 2026-04-16-control-theory-overview-rebuild.md
+│   │   │   └── 2026-07-12-phase49a-ai-ml-source-closure.md
 │   │   └── specs/
 │   │       ├── 2026-03-12-doc-support-design.md
 │   │       ├── 2026-03-13-field-engineering-design.md
