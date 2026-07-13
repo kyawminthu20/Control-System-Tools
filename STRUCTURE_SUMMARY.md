@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-12 17:39:14
+**Last Auto-Updated:** 2026-07-12 22:52:44
 
 ```text
 ├── .claude/
@@ -1528,7 +1528,8 @@
 │   │       ├── 2026-03-15-software-safety-stack-phase20-design.md
 │   │       ├── 2026-03-27-control-systems-training-expansion-design.md
 │   │       ├── 2026-04-14-phase26-nav-restructure-design.md
-│   │       └── 2026-04-14-water-wastewater-section-design.md
+│   │       ├── 2026-04-14-water-wastewater-section-design.md
+│   │       └── 2026-07-12-ai-ml-methods-register-design.md
 │   ├── tools/
 │   │   ├── crosswalks/
 │   │   │   ├── compare/
