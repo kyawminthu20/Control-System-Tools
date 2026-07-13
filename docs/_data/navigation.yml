@@ -329,6 +329,10 @@
           url: "/tools/manufacturers/scada-hmi/"
         - label: "Instrumentation"
           url: "/tools/manufacturers/process-instrumentation/"
+        - label: "PLC / IPC Hardware Families"
+          url: "/tools/manufacturers/plc-hardware-families/"
+        - label: "Vendor Documentation"
+          url: "/tools/manufacturers/vendor-documentation/"
     - label: "Troubleshooting"
       url: "/tools/troubleshooting/"
       children:

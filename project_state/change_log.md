@@ -1,7 +1,73 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-12 (Phase 47 — PLC software expansion)
+**Last Updated:** 2026-07-12 (Phase 48 — PLC/IPC hardware reference + vendor documentation index)
 **Status:** Active
+
+## 2026-07-12 — Phase 48 — PLC/IPC hardware reference + vendor documentation index
+
+**Type:** Content expansion (data-driven reference pages)
+**Status:** Complete on `feat/phase48-plc-hardware-vendor-docs`. Both pages at **Review pending**.
+
+Two new pages under `/tools/manufacturers/`, both rendered from committed YAML data files rather
+than hand-maintained tables, so the reference set can be re-verified and updated without touching
+page prose.
+
+**New data files**
+
+- `docs/_data/manufacturers/vendor_doc_links.yml` (1,078 ln) — 129 curated official-documentation
+  links plus 8 master portals across Siemens, Allen-Bradley/Rockwell, and Beckhoff. `utm_source`
+  params stripped. Liveness-checked 2026-07-12: **101/129 return 200/206**; all 28 failures are
+  `sieportal.siemens.com` / `support.industry.siemens.com`, which are bot-gated to `curl` and
+  expected to resolve in a browser — not dead links. The **publication ID is carried as the stable
+  reference** precisely because URLs move.
+- `docs/_data/manufacturers/plc_hardware_families.yml` (390 ln) — 38 controller and IPC families.
+  **Every `status` value carries an `as_of: July 2026` field** and a file-level lifecycle warning:
+  these are vendor market/lifecycle claims with a shelf life, not durable facts.
+
+**New pages**
+
+- **Official Vendor Documentation Index** (`/tools/manufacturers/vendor-documentation/`) — master
+  portals, per-vendor manual tables, and the exact-model lookup method (nameplate order number →
+  vendor portal → current manual → firmware compatibility → archive the revision you designed
+  against). Carries a safety-documentation caveat: a safety function is never designed from a
+  general product manual.
+- **PLC & IPC Hardware Families** (`/tools/manufacturers/plc-hardware-families/`) — the three
+  architectural models (Siemens separates PLC and PC platforms; Rockwell centres on a dedicated
+  Logix controller; Beckhoff treats the IPC-plus-TwinCAT-runtime *as* the controller), a Mermaid
+  selection flowchart driven by application requirement rather than brand, cross-vendor mapping by
+  system size, Siemens suffix decoding (F/T/TF/R/H/S/V/D-TF), an "industrial PCs are not
+  controllers" section, 7 numbered common mistakes with root causes, and a practical checklist.
+
+**Editorial discipline applied to the source**
+
+- The source document's market-positioning language was softened per CONTENT_STANDARDS §6 — no
+  "clearest", "best", or ranking claims survive; families are named as examples.
+- Every lifecycle claim is dated and marked verify-current. The **CompactLogix 5390 is recorded as
+  announced, not shipping** (vendor-published availability Q4 2026), and is called out as a common
+  mistake rather than presented as an available option.
+- Cross-vendor size rows are explicitly labelled equivalences of *role*, not of performance.
+- Safety framing hardened beyond the source: reaching "integrated safety" in the selection flow
+  tells you which families *offer* a safety variant, not which integrity level the application
+  needs — that comes from the risk assessment, and the certification documents for the exact
+  hardware revision govern the claim.
+
+**Source relocation** (per PROJECT_ORGANIZATION — `temp/` is intake only)
+
+- `temp/plcs.md` → `control-standards/work/general/plc_ipc_hardware_intake_2026-07.md` (work tier =
+  non-authoritative capture), with all `utm_source=chatgpt.com` params stripped and the dead
+  `sandbox:/mnt/data/` download link replaced with the workbook's real location.
+- `temp/PLC_IPC_Official_Reference_Links.xlsx` → `planning/`.
+
+**Wiring:** both pages added to `docs/_data/navigation.yml` under Manufacturers and to the
+`/tools/manufacturers/` section index under a new "Deep Dives" group — no orphan pages.
+
+**Gates:** Jekyll build clean (2.074 s); `check_internal_links.py` — zero broken links across 370
+files (up from 368); `validate_ai_boundaries.py` at the pre-existing 2-failure baseline, no new
+regressions.
+
+**Known limits:** family-level only — no per-CPU specifications, performance figures, or prices;
+the vendor ordering documentation stays authoritative. Lifecycle statuses will go stale and are
+labelled as such on the page itself.
 
 ## 2026-07-12 — Phase 47 — PLC software expansion (4 pages + 4 corpus notes)
 

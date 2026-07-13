@@ -51,6 +51,19 @@ review:
   </div>
 </div>
 
+## Deep Dives
+
+<div class="workflow-card-grid">
+  <div class="workflow-card">
+    <h3><a href="{{ '/tools/manufacturers/plc-hardware-families/' | relative_url }}">PLC &amp; IPC Hardware Families</a></h3>
+    <p>Siemens, Allen-Bradley/Rockwell, and Beckhoff controller and industrial-PC ranges — family roles, the three architectural models, suffix decoding, and a selection flow.</p>
+  </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/tools/manufacturers/vendor-documentation/' | relative_url }}">Official Vendor Documentation</a></h3>
+    <p>Curated index of official manuals, portals, and publication numbers for the same three vendors — and the exact-model lookup method.</p>
+  </div>
+</div>
+
 ## How to Use This Directory (and How Not To)
 
 A manufacturer should never be selected merely because it appears here.

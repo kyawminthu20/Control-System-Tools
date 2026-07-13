@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-12 08:12:13
+**Last Auto-Updated:** 2026-07-12 17:39:14
 
 ```text
 ├── .claude/
@@ -582,6 +582,7 @@
 │       ├── general/
 │       │   ├── 00_inbox_notes.md
 │       │   ├── README.md
+│       │   ├── plc_ipc_hardware_intake_2026-07.md
 │       │   └── plc_software_intake_2026-07.md
 │       └── research/
 │           └── ai-ml-control-systems/
@@ -617,10 +618,12 @@
 │   │   ├── lifecycle_stage_urls.yml
 │   │   ├── lifecycle_stages.yml
 │   │   ├── manufacturers/
+│   │   │   ├── plc_hardware_families.yml
 │   │   │   ├── plc_pac.yml
 │   │   │   ├── process_instrumentation.yml
 │   │   │   ├── scada_hmi.yml
 │   │   │   ├── servo_motion.yml
+│   │   │   ├── vendor_doc_links.yml
 │   │   │   └── vfd.yml
 │   │   ├── navigation.yml
 │   │   ├── phase26_migration_map.yml
@@ -1548,6 +1551,8 @@
 │   │   ├── index.md
 │   │   ├── manufacturers/
 │   │   │   ├── index.md
+│   │   │   ├── plc-hardware-families/
+│   │   │   │   └── index.md
 │   │   │   ├── plc-pac/
 │   │   │   │   └── index.md
 │   │   │   ├── process-instrumentation/
@@ -1555,6 +1560,8 @@
 │   │   │   ├── scada-hmi/
 │   │   │   │   └── index.md
 │   │   │   ├── servo-motion/
+│   │   │   │   └── index.md
+│   │   │   ├── vendor-documentation/
 │   │   │   │   └── index.md
 │   │   │   └── vfd-drives/
 │   │   │       └── index.md
@@ -1665,14 +1672,12 @@
 │           ├── comms.py
 │           └── tag_db.py
 ├── temp/
-│   ├── PLC_IPC_Official_Reference_Links.xlsx
 │   ├── ai-ml-control-systems-research/
 │   │   ├── README.md
 │   │   ├── digital-twin-integration.md
 │   │   ├── research-map.md
 │   │   ├── scientific-domain-integration.md
 │   │   └── source-register.md
-│   ├── plcs.md
 │   └── wire-color-coding-web-assets/
 │       ├── 00-wire-color-coding-title-banner.png
 │       ├── 01-reference-standards.png
