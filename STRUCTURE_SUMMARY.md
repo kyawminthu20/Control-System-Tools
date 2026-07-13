@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-12 22:57:13
+**Last Auto-Updated:** 2026-07-13 00:32:55
 
 ```text
 ├── .claude/
@@ -586,8 +586,12 @@
 │       │   └── plc_software_intake_2026-07.md
 │       └── research/
 │           └── ai-ml-control-systems/
+│               ├── 49a-findings.md
 │               ├── README.md
+│               ├── adversarial-verdicts.md
+│               ├── authority-ceilings.md
 │               ├── digital-twin-integration.md
+│               ├── evidence-table.md
 │               ├── research-map.md
 │               ├── scientific-domain-integration.md
 │               └── source-register.md

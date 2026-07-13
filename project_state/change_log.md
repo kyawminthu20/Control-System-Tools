@@ -1,7 +1,78 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-12 (Phase 48 — PLC/IPC hardware reference + vendor documentation index)
+**Last Updated:** 2026-07-13 (Phase 49a — AI/ML source-closure sprint)
 **Status:** Active
+
+## 2026-07-13 — Phase 49a — AI/ML source-closure research sprint
+
+**Type:** Research (work tier). **No site or corpus content was written.**
+**Status:** Complete on `feat/phase49a-ai-ml-source-closure`.
+**Spec:** `docs/superpowers/specs/2026-07-12-ai-ml-methods-register-design.md`
+**Plan:** `docs/superpowers/plans/2026-07-12-phase49a-ai-ml-source-closure.md`
+
+Executed as a multi-agent workflow (owner-authorised): six parallel research workstreams under
+publisher-verification rules, then an adversarial stage that attacked every proposed authority ceiling.
+**98 claims — 72 VERIFIED_AT_PUBLISHER, 21 SECONDARY_ONLY (paywall), 3 UNVERIFIABLE, 2 NOT_FOUND.**
+**80 authority ceilings attacked; 76 refuted** — and essentially every refutation pushed the ceiling
+**down**, which is the intended asymmetry.
+
+**New (work tier):** `evidence-table.md` (98 claims, each with a *"what this source does NOT support"*
+column) · `authority-ceilings.md` (written to read as a list of what could **not** be justified) ·
+`adversarial-verdicts.md` (raw) · `49a-findings.md` (go/no-go) · `source-register.md` extended.
+
+**The governing finding.** ISO/IEC TR 5469:2024 is real (Ed. 1.0, 2024-01-08, verified at the IEC
+webstore) — but it is a **Technical Report: guidance, not a certifiable requirement set**, and its
+requirement-bearing successor ISO/IEC TS 22440 is still a committee draft. **There is therefore no
+published normative standard against which a learned closed-loop safety function could be certified.**
+Meanwhile the law has moved ahead of the standards: **Regulation (EU) 2023/1230** Annex I Part A items
+5–6 list ML-based self-evolving safety components (mandatory notified body; no self-declaration), and
+Annex III EHSR 1.2.1 codifies an authority ceiling — no action beyond the defined task/movement space,
+correctable at all times, no hazardous self-modification of safety rules *including during learning*.
+The AI Act binds to the same route ~6 months later. **The convergent architecture, found independently
+in the standards, the law, and every documented deployment: the learned policy holds operational
+authority inside an envelope; a verified non-learned layer holds the safety function and the veto.**
+Write *"learned control is used in the loop; it is never given the safety function"* — **not** "learned
+control is never used in the loop", which is false.
+
+**Also confirmed:** Phase 45's **20 Jan 2027** Machinery Regulation date is correct — but only via the
+Corrigendum of 4.7.2023; the uncorrected OJ text says 14 January.
+
+**Three orchestrator errors the sprint caught** (the design was built to survive exactly this):
+1. **"kHz signals cannot pass through OPC UA" is FALSE as a protocol claim** — PubSub/UADP over TSN has
+   been measured at a 250 µs cycle. The edge-inference conclusion survives, but on four *different*
+   constraints (server-imposed sampling floor; the server has no knowledge of a decoupled source's update
+   logic, so a waveform cannot be recovered by oversampling a scan-rate tag; historians compress by
+   design; segmentation). **The argument must be rewritten before it goes on the site.**
+2. **The standard is ISO/IEC TR 5469, not "IEC TR 5469"** — and it is guidance, not requirements.
+3. **The accelerometer-vs-drive-current question is answerable, and the answer went against drive
+   current** — Paderborn carries both signals synchronously at 64 kHz on the same 32 bearings, and
+   vibration beat motor-current in every case (98.3% vs 93.3%; 75.0% vs 45.9% train-artificial/test-real).
+
+**Other load-bearing negatives:** PINNs lose to FEM at equal accuracy (5–6 orders of magnitude on
+Allen-Cahn) and revert to a plausible-but-wrong steady state when the data flow stops — while the PDE
+residual can stay small, so a residual-based health monitor can be fooled. The CNN fault-diagnosis
+literature is contaminated by train/test leakage: under a strict bearing-wise split, performance
+collapses to near chance (Paderborn AUROC 99.9 → 53.2). **No source measures learned fault diagnosis on
+a real industrial fleet.** **No standard says how good an ML model must be to hold any safety
+authority** — that void is itself a finding. **Licences:** Paderborn is CC BY-NC (NonCommercial); CWRU
+has *no licence of any kind* — cite and link it, never redistribute.
+
+**Go/no-go:** **GO** for core AI/ML, interfaces (with the mandatory kHz rewrite), and classical
+baselines. **PARTIAL** for chemical and biological — their *structure* and *reality check* may be
+written, but **their authority ceilings received no adversarial coverage** (the run hit a session limit)
+and no authority claims may be made until re-run.
+
+**Run limits, recorded honestly:** the workflow hit a session limit during the refute stage — 82 of 178
+agents errored, and the synthesis agent died. The research (the expensive part) survived and was
+salvaged from the run journal; the four documents were written by the orchestrator from that data. Only
+2 of 80 ceilings received all three adversarial lenses; most received one. **The workflow's own printed
+tally ("29 refuted") was wrong** — it applied a ≥2-refutation majority rule to claims that had only one
+surviving verdict. Recomputed against returned verdicts: **76 of 80 refuted.**
+
+**Blocked / next:** buy **ISO/IEC TR 5469:2024** (its Usage-Level × Technology-Class matrix is the single
+highest-value missing artefact); check **IEC 62061** for ML content; re-run adversarial coverage for
+chemical/biological. **Phase 49b remains gated** on that and on the owner confirming the
+`/design/ai-integration/` placement.
 
 ## 2026-07-12 — Phase 48 — PLC/IPC hardware reference + vendor documentation index
 
