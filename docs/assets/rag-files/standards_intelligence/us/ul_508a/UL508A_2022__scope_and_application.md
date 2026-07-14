@@ -6,7 +6,7 @@ STATUS: DRAFT
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
 TITLE: Industrial Control Panels
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 JURISDICTION: US
 
 UL_HIERARCHY:
@@ -64,5 +64,6 @@ In practice, inspectors and buyers often look for:
 That is why UL 508A scope is not just about component selection. It defines how the finished panel is judged as a product.
 
 ## 4. Change log
+- 2026-07-13 — CORRECTION: Normalized edition metadata to UL 508A, 3rd Ed. (2018), revised 2025-06-26; legacy filename retained for link stability.
 - 2026-01-15 — Initial draft created
 * 2026-03-09 — Populated scope and application guidance using migrated control-panel walkthrough notes and existing NEC 409 alignment.

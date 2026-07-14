@@ -131,6 +131,7 @@ def test_weakest_link() -> None:
     r = panel_sccr(parts)
     assert r.value == 5.0
     assert "contactor" in r.assumptions[0]
+    assert any("3rd Ed. (2018), rev. 2025-06-26" in str(c) for c in r.citations)
 
 
 def test_sccr_below_available_fault_warns() -> None:

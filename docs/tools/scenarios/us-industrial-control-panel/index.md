@@ -7,6 +7,12 @@ breadcrumb:
     url: "/tools/scenarios/"
   - name: "US Control Panel"
 repo_path: "control-standards/rag/standards_intelligence/us/"
+review:
+  standard: "NEC / NFPA 79 / UL 508A"
+  edition: "NEC 2023; NFPA 79:2024; UL 508A, 3rd Ed. (2018), revised 2025-06-26"
+  status: "Review pending"
+  coverage: "Constructed standards-routing scenario for a US industrial control panel; project-specific AHJ and listing-body determinations remain outside scope."
+  last_reviewed: "July 2026"
 related_standards:
   - name: "UL 508A"
     url: "/standards/us-electrical/ul-508a/"
@@ -43,7 +49,7 @@ redirect_from:
 
 | Standard | Role | Status |
 |----------|------|--------|
-| **UL 508A 2022** | Panel construction and UL listing | Reviewed |
+| **UL 508A, 3rd Ed. (2018), revised 2025-06-26** | Panel construction and UL listing | Review pending |
 | **NEC 2023** | Installation code — legally enforced | Reviewed |
 | **NFPA 79 2024** | Machine electrical design (if machine context) | Reviewed |
 

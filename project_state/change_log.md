@@ -1,7 +1,44 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-13 (Phase 49a — AI/ML source-closure sprint)
+**Last Updated:** 2026-07-13 (Phase 49b — AI/ML method register complete)
 **Status:** Active
+
+## 2026-07-13 — Phase 49b — AI/ML method register complete
+
+Completed the hardening gate and the authority-first AI/ML register. The canonical Draft register is
+under `control-standards/rag/design_framework/ai_integration/`; a dependency-free validator/generator
+publishes exact data to `docs/_data/ai_methods/`, and the rendered page is
+`/design/ai-integration/` at Review pending. Forty method rows span deterministic baselines, learned
+methods, interfaces, chemical models, and biological models. Every row carries the complete decision
+and safety schema. Learned methods receive no level-5 or safety authority; chemical and biological
+rows remain Planned because Phase 49a did not complete adversarial authority coverage for them.
+
+Added register tests and an exact generated-data check to the governed release gate. The page rewrites
+the kHz statement around the conventional acquisition path rather than falsely constraining OPC UA as
+a protocol, and distinguishes transport semantics from application-defined AI-result meaning.
+
+Validation: the full governed release gate passed — 155 tests, 10 doctests, 374 boundary checks,
+exact corpus mirror, exact generated register data, clean Jekyll build, and zero broken internal links
+across 371 rendered files. The gate reports only the recorded non-regression debt: 22 corpus files
+without `CONTENT_CLASS`, 37 without `STATUS`, and 166 site pages without review blocks.
+
+## 2026-07-13 — Phase 49b — whole-project architecture recommendation accepted
+
+**Type:** Planning and next-phase handoff.
+**Status:** Recommendation recorded; no implementation changes in this entry.
+**Plan:** `planning/2026-07-13-whole-project-architecture-recommendations.md`
+
+Recorded the whole-project assessment as the Phase 49b hardening gate without replacing the existing
+AI/ML method-register scope. Three P0 prerequisites now precede AI/ML implementation: preserve I/O
+direction through the PLC module and fix the confirmed `YL-301` Modbus mapping defect; normalize stale
+`UL 508A:2022` provenance across code/site/corpus; and regenerate plus compare the two drifted RAG
+mirror files. A governed release-check module and CI adoption are required before the Phase 49b merge.
+The remaining table-validation, validated-I/O, CLI/package, site-metadata, and project-state work is
+sequenced as bounded hardening slices in the plan.
+
+**Evidence recorded in the plan:** 145 tests passed; 10 doctests passed; Jekyll build clean; zero broken
+internal links across 370 rendered HTML files; 372 AI-boundary files passed. This change added planning
+and tracking documentation only, so code/site/corpus validation gates were not rerun for the edit.
 
 ## 2026-07-13 — Phase 49a — AI/ML source-closure research sprint
 

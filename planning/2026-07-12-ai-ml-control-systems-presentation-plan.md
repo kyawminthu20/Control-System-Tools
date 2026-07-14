@@ -1,7 +1,7 @@
 # AI/ML for Control Systems — Presentation Plan (Phase 49)
 
 **Recorded:** 2026-07-12
-**Status:** **Plan only. No site or corpus content is authorised by this document.**
+**Status:** **Superseded for Phase 49b by the approved method-register design. Phases 49a and 49b completed 2026-07-13; Phase 49c is not authorised.**
 **Source material:** `control-standards/work/research/ai-ml-control-systems/`
 (relocated 2026-07-12 from `temp/`; work tier = non-authoritative capture)
 
@@ -130,8 +130,9 @@ Carried over from the roadmap, plus the Phase 45 lessons:
       figures from papers. (The Phase 46 withheld-photograph decision is the
       standing precedent.)
 
-**Owner decision still outstanding:** confirm the `/design/ai-integration/`
-placement above, or overrule it. Nothing proceeds without that.
+**Owner decision resolved 2026-07-13:** `/design/ai-integration/` is confirmed as
+the single home. The owner directed implementation to continue after the
+placement question and recommendation were presented.
 
 ---
 

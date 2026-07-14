@@ -64,7 +64,12 @@ at `/tools/templates/` on the site).
 uv run pytest
 ```
 
-65 tests (cst package + fe_study extraction pipeline) must pass.
+The normal suite currently contains 155 tests. Calculator doctests are a
+separate governed check:
+
+```bash
+uv run pytest --doctest-modules src/cst
+```
 
 ## Refresh Project Automation
 
@@ -75,6 +80,17 @@ python3 tools/project_automator.py
 ```
 
 ## Validate Repository State
+
+Run the complete read-only release gate:
+
+```bash
+uv run python tools/release_check.py --profile full
+```
+
+Focused profiles are `toolkit`, `corpus`, `site`, and `metadata`. The full
+profile runs pytest, toolkit doctests, the AI-boundary validator, exact RAG
+mirror comparison, metadata non-regression checks, a temporary Jekyll build,
+and the rendered-link checker. CI runs the same profile before deployment.
 
 Validate AI-readable content boundaries:
 
@@ -88,11 +104,14 @@ Fix common AI-boundary issues:
 python3 tools/fix_ai_boundaries.py
 ```
 
-Validate the repository reorganization state:
+Audit the historical repository reorganization state when specifically needed:
 
 ```bash
 bash tools/validate_reorg.sh all
 ```
+
+This is a legacy migration audit, not the release gate; several checks target
+superseded artifacts and it invokes `project_automator.py`.
 
 ## Update Project Tracking
 

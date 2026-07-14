@@ -5,7 +5,7 @@ STATUS: DRAFT
 
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 
 UL_HIERARCHY:
   section: "6"
@@ -48,5 +48,6 @@ Common mistakes include:
 - using a generic breaker when the assembly's rating basis depends on a specific current-limiting fuse combination
 
 ## 4. Change log
+- 2026-07-13 — CORRECTION: Normalized edition metadata to UL 508A, 3rd Ed. (2018), revised 2025-06-26; legacy filename retained for link stability.
 - 2026-01-15 — Initial draft created
 * 2026-03-09 — Added practical branch-protection and fuse/disconnect coordination guidance from migrated UL 508A-adjacent notes.

@@ -64,9 +64,9 @@ def panel_sccr(
         value=sccr,
         unit="kA",
         citations=[
-            Citation("UL 508A:2022", "SB4.2 / SB4.3",
+            Citation("UL 508A, 3rd Ed. (2018), rev. 2025-06-26", "SB4.2 / SB4.3",
                      "panel SCCR = lowest component SCCR or OCPD interrupting rating"),
-            Citation("UL 508A:2022", "Table SB4.1",
+            Citation("UL 508A, 3rd Ed. (2018), rev. 2025-06-26", "Table SB4.1",
                      "component defaults — user-supplied from licensed copy"),
             Citation("NEC 2023", "409.22 / 670.5",
                      "panel SCCR must be >= available fault current at installation"),

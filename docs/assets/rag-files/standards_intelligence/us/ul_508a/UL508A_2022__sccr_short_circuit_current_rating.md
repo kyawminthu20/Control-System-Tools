@@ -5,7 +5,7 @@ STATUS: DRAFT
 
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 
 UL_HIERARCHY:
   section: "SB"
@@ -59,5 +59,6 @@ Common SCCR errors include:
 The final SCCR must be permanently marked on the completed panel nameplate or equivalent required marking. It should be visible as part of the external identification of the assembly so the installer or inspector can compare it with site available fault current.
 
 ## 5. Change log
+- 2026-07-13 — CORRECTION: Normalized edition metadata to UL 508A, 3rd Ed. (2018), revised 2025-06-26; legacy filename retained for link stability.
 - 2026-01-15 — Initial draft created
 * 2026-03-09 — Added weakest-link and panel-marking guidance from migrated practical panel notes and aligned with NEC 409 concepts.

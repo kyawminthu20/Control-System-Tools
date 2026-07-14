@@ -1,0 +1,18 @@
+# AI_READ_ACCESS: ALLOWED
+version: "1.0"
+content_class: "RAG_APPROVED"
+status: "DRAFT"
+module_id: "ai_integration"
+last_updated: "2026-07-13"
+purpose: "Authority-first selection and governance of deterministic, learned, and domain models."
+files:
+  - file: "README.md"
+    description: "Register scope, ladder, and generation workflow"
+  - file: "methods.yml"
+    description: "Canonical method rows"
+  - file: "sources.yml"
+    description: "Source labels and verified links used by register rows"
+changelog:
+  - date: "2026-07-13"
+    action: "Added the Phase 49b AI integration method register"
+    status: "review pending"

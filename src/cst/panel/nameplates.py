@@ -22,7 +22,7 @@ from cst.panel.io_list import IOList
 
 CITATIONS = [
     Citation("NFPA 79:2024", "Chapter 19", "machine marking and documentation items"),
-    Citation("UL 508A:2022", "marking requirements incl. SCCR (SB5)",
+    Citation("UL 508A, 3rd Ed. (2018), rev. 2025-06-26", "marking requirements incl. SCCR (SB5)",
              "verify exact required items against the listing report"),
 ]
 

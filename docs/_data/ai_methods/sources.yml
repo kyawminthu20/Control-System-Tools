@@ -1,0 +1,23 @@
+{
+  "AI_READ_ACCESS": "ALLOWED",
+  "CONTENT_CLASS": "RAG_APPROVED",
+  "STATUS": "DRAFT",
+  "sources": [
+    {"id": "nist_ai_rmf", "title": "NIST AI Risk Management Framework 1.0", "publisher": "NIST", "url": "https://www.nist.gov/itl/ai-risk-management-framework"},
+    {"id": "nist_sp80082", "title": "NIST SP 800-82 Rev. 3: Guide to Operational Technology Security", "publisher": "NIST", "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"},
+    {"id": "iec_tr_5469", "title": "IEC TR 5469:2024 — Functional safety and AI systems", "publisher": "IEC", "url": "https://webstore.iec.ch/en/publication/90977"},
+    {"id": "eu_machinery", "title": "Regulation (EU) 2023/1230 on machinery", "publisher": "EUR-Lex", "url": "https://eur-lex.europa.eu/eli/reg/2023/1230/oj"},
+    {"id": "eu_ai_act", "title": "Regulation (EU) 2024/1689 — Artificial Intelligence Act", "publisher": "EUR-Lex", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"},
+    {"id": "opcua_part1", "title": "OPC UA Part 1: Overview and Concepts", "publisher": "OPC Foundation", "url": "https://reference.opcfoundation.org/Core/Part1/v105/docs/"},
+    {"id": "opcua_part9", "title": "OPC UA Part 9: Alarms and Conditions", "publisher": "OPC Foundation", "url": "https://reference.opcfoundation.org/Core/Part9/v105/docs/"},
+    {"id": "opcua_part18", "title": "OPC UA Part 18: Role-Based Security", "publisher": "OPC Foundation", "url": "https://reference.opcfoundation.org/Core/Part18/v105/docs/"},
+    {"id": "sparkplug", "title": "Sparkplug Specification 3.0", "publisher": "Eclipse Foundation", "url": "https://sparkplug.eclipse.org/specification/version/3.0/documents/sparkplug-specification-3.0.0.pdf"},
+    {"id": "pinn_raissi", "title": "Physics-informed neural networks", "publisher": "Journal of Computational Physics", "url": "https://doi.org/10.1016/j.jcp.2018.10.045"},
+    {"id": "pinn_failure", "title": "Characterizing possible failure modes in physics-informed neural networks", "publisher": "NeurIPS", "url": "https://arxiv.org/abs/2109.01050"},
+    {"id": "pinn_numerics", "title": "Experience report of physics-informed neural networks in fluid simulations", "publisher": "arXiv preprint", "url": "https://arxiv.org/abs/2306.00230"},
+    {"id": "llm4plc", "title": "LLM4PLC: Harnessing large language models for verifiable PLC code generation", "publisher": "arXiv preprint", "url": "https://arxiv.org/abs/2401.05443"},
+    {"id": "nist_kinetics", "title": "NIST Chemical Kinetics Database", "publisher": "NIST", "url": "https://kinetics.nist.gov/kinetics/"},
+    {"id": "cst_control", "title": "Control Theory Field Guide", "publisher": "Control System Tools", "url": "/fundamentals/control/"},
+    {"id": "phase49a", "title": "Phase 49a adversarial evidence findings (internal evidence record; not published)", "publisher": "Control System Tools"}
+  ]
+}

@@ -5,7 +5,7 @@ STATUS: DRAFT
 
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 
 UL_HIERARCHY:
   section: "11"
@@ -52,5 +52,6 @@ The key practical point is that the control-power design should be deliberate:
 - make sure the grounding/bonding strategy and device selection are compatible with the rest of the panel
 
 ## 4. Change log
+- 2026-07-13 — CORRECTION: Normalized edition metadata to UL 508A, 3rd Ed. (2018), revised 2025-06-26; legacy filename retained for link stability.
 - 2026-01-15 — Initial draft created
 * 2026-03-09 — Added control transformer, direct DC power-supply, and surge-protection guidance from migrated panel note content.

@@ -18,7 +18,7 @@ from __future__ import annotations
 import csv
 import io
 
-from cst.plc.tag_db import TagDatabase
+from cst.plc.tag_db import Tag, TagDatabase
 
 REGISTERS_PER_TYPE = {"BOOL": 1, "INT": 1, "DINT": 2, "REAL": 2}
 
@@ -32,21 +32,35 @@ def _table_for(tag_datatype: str, address_hint: str, writable: bool) -> str:
     return "holding_register" if writable else "input_register"
 
 
+def _default_writable(tag: Tag) -> bool:
+    """Use canonical I/O direction, falling back to a naming convention."""
+    if tag.io_type:
+        if tag.io_type in ("DO", "AO"):
+            return True
+        if tag.io_type in ("DI", "AI", "RTD", "TC"):
+            return False
+        raise ValueError(
+            f"{tag.name}: unknown io_type {tag.io_type!r}; "
+            "expected DI/DO/AI/AO/RTD/TC"
+        )
+    return any(
+        marker in tag.name.upper()
+        for marker in ("CMD", "_SP", "OUT", "SOL", "FCV")
+    )
+
+
 def modbus_map(
     tag_db: TagDatabase,
     writable_names: set[str] | None = None,
 ) -> list[dict[str, str | int]]:
     """Assign sequential Modbus addresses per table.
 
-    ``writable_names``: tag names that are commands/setpoints (coils/holding
-    registers). Default heuristic: names containing CMD, SP, OUT, or SOL are
-    writable — pass an explicit set for production maps.
+    ``writable_names``: explicit tag names that are commands/setpoints
+    (coils/holding registers). When omitted, canonical I/O direction wins;
+    tags without an I/O type fall back to the legacy name convention.
     """
     if writable_names is None:
-        writable_names = {
-            t.name for t in tag_db.tags
-            if any(k in t.name.upper() for k in ("CMD", "_SP", "OUT", "SOL", "FCV"))
-        }
+        writable_names = {t.name for t in tag_db.tags if _default_writable(t)}
     next_offset = {k: 0 for k in _TABLE_BASE}
     rows: list[dict[str, str | int]] = []
     for tag in tag_db.tags:

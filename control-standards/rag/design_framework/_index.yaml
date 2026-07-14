@@ -5,13 +5,17 @@ version: "1.0"
 content_class: "RAG_APPROVED"
 status: "DRAFT"
 module_id: "design_framework"
-last_updated: "2026-03-09"
+last_updated: "2026-07-13"
 
 purpose: >
   Applied engineering workflows, reusable design guides, and automation-friendly
   rules that translate standards intelligence into design execution.
 
 seeded_content:
+  - category: "ai_integration"
+    file: "ai_integration/README.md"
+    description: "Authority-first AI/ML method register and generated-site source"
+
   - category: "design_guides"
     file: "design_guides/02_power_distribution_guide.md"
     description: "Applied power-distribution and conductor/OCPD review workflow"
@@ -64,6 +68,10 @@ integration_points:
   troubleshooting_engine: "../troubleshooting_engine/"
 
 changelog:
+  - date: "2026-07-13"
+    action: "Added the Phase 49b AI integration method register"
+    status: "review pending"
+
   - date: "2026-03-09"
     action: "Seeded minimum viable design framework"
     status: "initial content added"

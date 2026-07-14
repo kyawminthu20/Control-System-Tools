@@ -145,6 +145,8 @@
           url: "/design/motor-selection/motor-selection-matrix/"
     - label: "Software Stack"
       url: "/design/software-stack/"
+    - label: "AI &amp; ML Integration"
+      url: "/design/ai-integration/"
     - label: "Design Workflows"
       url: "/design/workflows/"
       children:
