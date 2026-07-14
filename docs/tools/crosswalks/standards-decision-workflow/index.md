@@ -6,7 +6,7 @@ last_reviewed: "2026-03-08"
 standards_editions:
   - "NEC 2023"
   - "NFPA 79 2024"
-  - "UL 508A 2022"
+  - "UL 508A, 3rd Ed. (2018), revised 2025-06-26"
   - "IEC 60204-1:2016+AMD1:2021"
   - "ISO 12100 2010"
   - "ISO 13849-1 2023"
@@ -15,6 +15,12 @@ breadcrumb:
     url: "/tools/crosswalks/"
   - name: "Decision Workflow"
 repo_path: "control-standards/rag/standards_intelligence/routing/standards_applicability.md"
+review:
+  standard: "NEC / NFPA 79 / UL 508A / IEC 60204-1 / ISO 12100 / ISO 13849-1"
+  edition: "NEC 2023; NFPA 79:2024; UL 508A, 3rd Ed. (2018), revised 2025-06-26; IEC 60204-1:2016+AMD1:2021; ISO 12100:2010; ISO 13849-1:2023"
+  status: "Review pending"
+  coverage: "High-level standards-selection routing; final applicability remains a project, jurisdiction, and conformity-assessment decision."
+  last_reviewed: "July 2026"
 related_standards:
   - name: "US Electrical Standards"
     url: "/standards/us-electrical/"
@@ -234,7 +240,7 @@ The following traces a US-market conveyor through the full workflow.
 | 3 | Risk assessment identifies pinch hazard at access door | ISO 12100 |
 | 4 | Safety function required: guard door interlock (Category 3, PLd) | ISO 13849-1 |
 | 5 | Machine wiring designed to NFPA 79 | NFPA 79 2024 |
-| 6 | Control panel built and listed to UL 508A | UL 508A 2022 |
+| 6 | Control panel built and listed to UL 508A | UL 508A, 3rd Ed. (2018), revised 2025-06-26 |
 | 7 | Machine installed per NEC, SCCR verified against available fault current | NEC 2023 |
 | 8 | AHJ inspection completed, permit issued | AHJ |
 

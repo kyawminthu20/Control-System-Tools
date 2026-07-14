@@ -183,12 +183,13 @@ For detailed decision rules, evidence requirements, and checklists for each topi
 This matrix is based on:
 - NEC 2023 Edition (NFPA 70)
 - NFPA 79-2024 Edition
-- UL 508A 2022 Edition (7th Edition)
+- UL 508A, 3rd Ed. (2018), revised 2025-06-26
 
 For authoritative requirements, always purchase official standards from NFPA and UL.
 
 ## Changelog
 
+- 2026-07-13 — CORRECTION: Replaced the nonexistent 2022/7th-edition label with the verified third-edition publication and revision date.
 - 2026-01-15 — Initial UL 508A ↔ NEC ↔ NFPA 79 overlap matrix created
   - Topic-based routing established
   - Critical cross-references documented

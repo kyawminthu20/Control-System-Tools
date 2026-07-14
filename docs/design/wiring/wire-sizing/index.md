@@ -236,7 +236,7 @@ consult the device manual and record actual torques.
 - **NEC (NFPA 70) 2023** — Art. 430 (430.6, 430.22, 430.32, 430.52, Tables 430.250 and 430.52(C)(1)); Art. 310 (Table 310.16, 310.15(B) equation, Table 310.15(C)(1)); 110.14(C) termination provisions; 240.6(A) standard ratings; 240.4 conductor protection; 210.19(A)/215.2(A) informational notes on voltage drop; Ch. 9 Tables 8–9; Table 250.122 EGC basis
 - **NFPA 79:2024** — Ch. 7 (overcurrent/overload protection), Ch. 12 (machine conductors and ampacity)
 - **IEC 60204-1:2016** — Cl. 7 (protection of equipment), Cl. 12 (conductors and cables)
-- **UL 508A:2022** — panel-internal wire sizing and SCCR interaction for listed panels
+- **UL 508A, 3rd Ed. (2018), revised 2025-06-26** — panel-internal wire sizing and SCCR interaction for listed panels
 
 ## Related Pages
 

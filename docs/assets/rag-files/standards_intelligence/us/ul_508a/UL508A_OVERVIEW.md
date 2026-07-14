@@ -1,10 +1,12 @@
 # UL 508A Standards Intelligence Module
 **AI_READ_ACCESS: ALLOWED**
+**CONTENT_CLASS:** RAG_APPROVED
+**STATUS:** DRAFT
 **Status:** Foundation Complete - Ready for Content Development
 
 ## Overview
 
-This module contains section-by-section guidance for **UL 508A - Industrial Control Panels (2022 Edition)**, the definitive standard for UL-listed industrial control panels in North America. Each section file follows a consistent template designed for:
+This module contains section-by-section guidance for **UL 508A — Industrial Control Panels, 3rd Ed. (2018), revised 2025-06-26**, the construction standard used for UL-listed industrial control panels in North America. Each section file follows a consistent template designed for:
 
 - RAG-safe AI indexing
 - Copyright compliance (no copyrighted UL text)
@@ -291,6 +293,7 @@ Current Status: **All sections are DRAFT** - templates ready for content develop
 
 ## Changelog
 
+- 2026-07-13 — CORRECTION: Normalized edition metadata to UL 508A, 3rd Ed. (2018), revised 2025-06-26; legacy filenames remain unchanged for link stability.
 - 2026-01-15 — Initial UL 508A module structure created
   - 11 section files generated with templates (8 core + 3 optional)
   - _index.yaml created with complete document registry
@@ -301,6 +304,6 @@ Current Status: **All sections are DRAFT** - templates ready for content develop
 
 ---
 
-**Edition Note**: This module uses UL 508A 2022 Edition (7th Edition). Earlier editions (2018, 2013) have some differences in SCCR calculation methods and spacing tables.
+**Edition Note**: Displayed provenance is normalized to UL 508A, 3rd Ed. (2018), revised 2025-06-26. The `UL508A_2022__*.md` filenames are retained as legacy identifiers only and do not assert a 2022 edition.
 
 **UL Listing Note**: Content in this module supports UL 508A compliance but does not replace official UL listing process. Panels seeking UL listing must be submitted to UL for certification.

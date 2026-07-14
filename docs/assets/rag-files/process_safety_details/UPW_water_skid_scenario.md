@@ -1,3 +1,9 @@
+<!--
+CONTENT_CLASS: RAG_APPROVED
+AI_READ_ACCESS: ALLOWED
+STATUS: DRAFT
+-->
+
 Below is a **worked scenario** for a **UPW system** showing:
 
 * what the **regular control system** does

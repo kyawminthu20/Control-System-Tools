@@ -1,5 +1,7 @@
 **AI_READ_ACCESS: ALLOWED**
 
+**Edition correction (2026-07-13):** Displayed provenance is UL 508A, 3rd Ed. (2018), revised 2025-06-26. Template filenames containing `UL508A_2022` are legacy identifiers retained for link stability; they do not identify a 2022 edition.
+
 Below are **UL 508A clause Markdown templates** purpose-built for **industrial control panels**, with **pre-filled headers**, **RAG-safe metadata**, **no copyrighted UL text**, and **audit-ready structure**.
 
 These drop directly into:
@@ -52,7 +54,7 @@ STATUS: DRAFT
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
 TITLE: Industrial Control Panels
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 JURISDICTION: US
 
 UL_HIERARCHY:
@@ -94,7 +96,7 @@ STATUS: DRAFT
 
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 
 UL_HIERARCHY:
   section: "2"
@@ -137,7 +139,7 @@ STATUS: DRAFT
 
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 
 UL_HIERARCHY:
   section: "3"
@@ -177,7 +179,7 @@ STATUS: DRAFT
 
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 
 UL_HIERARCHY:
   section: "4"
@@ -218,7 +220,7 @@ STATUS: DRAFT
 
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 
 UL_HIERARCHY:
   section: "5"
@@ -258,7 +260,7 @@ STATUS: DRAFT
 
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 
 UL_HIERARCHY:
   section: "6"
@@ -298,7 +300,7 @@ STATUS: DRAFT
 
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 
 UL_HIERARCHY:
   section: "7"
@@ -340,7 +342,7 @@ STATUS: DRAFT
 
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 
 UL_HIERARCHY:
   section: "SB"
@@ -384,7 +386,7 @@ STATUS: DRAFT
 
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 
 UL_HIERARCHY:
   section: "8"

@@ -167,7 +167,7 @@ Panel-level specifics — the deep treatment of separation classes and suppressi
 - **IEC 60204-1:2016+AMD1:2021, Cl. 5, Cl. 8, Cl. 18** — external PE terminal and conductor sizing (Table 1), equipotential bonding circuit, verification tests including protective-bonding continuity
 - **IEC 60364-5-54** — referenced by IEC 60204-1 for detailed protective-conductor cross-section methodology
 - **NEC 2023, Art. 409 / Art. 670** — industrial control panels and industrial machinery: where the panel meets the premises wiring system
-- **UL 508A:2022** — panel-shop construction practice for grounding and bonding within listed industrial control panels
+- **UL 508A, 3rd Ed. (2018), revised 2025-06-26** — panel-shop construction practice for grounding and bonding within listed industrial control panels
 
 ## Related Pages
 

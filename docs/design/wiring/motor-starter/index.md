@@ -11,7 +11,7 @@ breadcrumb:
 repo_path: "control-standards/rag/design_framework/wiring_practices/"
 review:
   standard: "NEC Art. 430 / NFPA 79 / UL 508A"
-  edition: "NEC 2023, NFPA 79:2024, UL 508A:2022"
+  edition: "NEC 2023; NFPA 79:2024; UL 508A, 3rd Ed. (2018), revised 2025-06-26"
   status: "Review pending"
   coverage: "DOL/reversing/star-delta power and control wiring, the Article 430 protection chain, interlocks and the seal-in circuit at chapter/article level; vendor terminal designations, coil voltages and torque deliberately excluded."
   last_reviewed: "July 2026"
@@ -245,7 +245,7 @@ Before and during first energization (evidence-retaining checklists in
   ground-fault protection), Part IX (disconnecting means)
 - **NFPA 79:2024** — machine electrical wiring practice, protection, and
   conductor/grounding chapters (chapter-level)
-- **UL 508A:2022** — industrial control panel construction and the SCCR
+- **UL 508A, 3rd Ed. (2018), revised 2025-06-26** — industrial control panel construction and the SCCR
   methodology for the starter combination (section-level)
 - **IEC 60947-4-1 / utilization categories** — AC-3, AC-4 contactor duty as a
   concept

@@ -5,7 +5,7 @@ STATUS: DRAFT
 
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 
 UL_HIERARCHY:
   section: "7"
@@ -47,5 +47,6 @@ Protective bonding and functional/noise grounding are not the same thing.
 Informal shop advice such as "ground it just in case" is not a substitute for a deliberate protective-earth strategy. Safety grounding must be based on the protective requirements of the assembly, while functional grounding must not compromise that safety path.
 
 ## 4. Change log
+- 2026-07-13 — CORRECTION: Normalized edition metadata to UL 508A, 3rd Ed. (2018), revised 2025-06-26; legacy filename retained for link stability.
 - 2026-01-15 — Initial draft created
 * 2026-03-09 — Added practical grounding and bonding guidance using migrated control-panel notes while filtering out non-authoritative shop advice.

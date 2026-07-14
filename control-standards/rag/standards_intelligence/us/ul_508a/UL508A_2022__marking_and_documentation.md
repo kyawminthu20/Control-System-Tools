@@ -5,7 +5,7 @@ STATUS: DRAFT
 
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 
 UL_HIERARCHY:
   section: "8"
@@ -55,5 +55,6 @@ Two practical distinctions are important during audit or inspection:
 Good audit readiness also includes conductor identification and documentation traceability so a technician can connect the physical panel back to the drawings without reconstructing the entire build from scratch.
 
 ## 4. Change log
+- 2026-07-13 — CORRECTION: Normalized edition metadata to UL 508A, 3rd Ed. (2018), revised 2025-06-26; legacy filename retained for link stability.
 - 2026-01-15 — Initial draft created
 * 2026-03-09 — Added marking, nameplate, and documentation guidance using migrated panel note content and NEC 409 alignment.

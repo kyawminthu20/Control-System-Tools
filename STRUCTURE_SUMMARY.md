@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-13 06:43:44
+**Last Auto-Updated:** 2026-07-13 22:09:05
 
 ```text
 ├── .claude/
@@ -63,6 +63,11 @@
 │   │   ├── design_framework/
 │   │   │   ├── README.md
 │   │   │   ├── _index.yaml
+│   │   │   ├── ai_integration/
+│   │   │   │   ├── README.md
+│   │   │   │   ├── _index.yaml
+│   │   │   │   ├── methods.yml
+│   │   │   │   └── sources.yml
 │   │   │   ├── constraints/
 │   │   │   │   └── grounding_bonding_rules.yaml
 │   │   │   ├── design_guides/
@@ -617,6 +622,9 @@
 │   ├── Gemfile.lock
 │   ├── _config.yml
 │   ├── _data/
+│   │   ├── ai_methods/
+│   │   │   ├── methods.yml
+│   │   │   └── sources.yml
 │   │   ├── field_checklists.yml
 │   │   ├── glossary.yml
 │   │   ├── lifecycle_stage_urls.yml
@@ -1125,6 +1133,8 @@
 │   │   └── wireshark-methodology/
 │   │       └── index.md
 │   ├── design/
+│   │   ├── ai-integration/
+│   │   │   └── index.md
 │   │   ├── architecture/
 │   │   │   ├── compliance-stack/
 │   │   │   │   └── index.md
@@ -1721,11 +1731,13 @@
 │   │   └── test_voltage_drop.py
 │   └── tools/
 │       ├── __init__.py
-│       └── fe_study/
-│           ├── __init__.py
-│           ├── test_common.py
-│           ├── test_extract_fe_study.py
-│           └── test_inventory_fe_study.py
+│       ├── fe_study/
+│       │   ├── __init__.py
+│       │   ├── test_common.py
+│       │   ├── test_extract_fe_study.py
+│       │   └── test_inventory_fe_study.py
+│       ├── test_generate_ai_method_register.py
+│       └── test_release_check.py
 ├── tools/
 │   ├── README.md
 │   ├── check_internal_links.py
@@ -1738,10 +1750,12 @@
 │   │   ├── quality_check_fe_study.py
 │   │   └── summarize_fe_study.py
 │   ├── fix_ai_boundaries.py
+│   ├── generate_ai_method_register.py
 │   ├── generate_rag_tree.py
 │   ├── generate_site_templates.py
 │   ├── generate_standards_overview.py
 │   ├── project_automator.py
+│   ├── release_check.py
 │   ├── setup_hooks.sh
 │   ├── validate_ai_boundaries.py
 │   └── validate_reorg.sh

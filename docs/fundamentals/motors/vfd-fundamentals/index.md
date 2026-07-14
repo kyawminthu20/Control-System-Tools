@@ -8,6 +8,12 @@ breadcrumb:
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/vfd_fundamentals.md"
+review:
+  standard: "General drive engineering references / UL 508A"
+  edition: "UL 508A, 3rd Ed. (2018), revised 2025-06-26; other exact governing revisions not yet recorded"
+  status: "Review pending"
+  coverage: "Introductory VFD power conversion, control, application, and installation concepts; vendor-specific design values remain outside scope."
+  last_reviewed: "July 2026"
 redirect_from:
   - /fundamentals/electrical-machines/vfd-fundamentals/
   - /fundamentals/electrical-machines/vfd-fundamentals/index.html
@@ -147,7 +153,7 @@ In practice, the drive changes:
 - NEC 2023, Article 430 — Motors, Motor Circuits, and Controllers
 - NFPA 79 2024, Chapter 12 — Motors and Associated Equipment
 - IEC 60204-1:2016+AMD1:2021, Clause 12 — Motors and Drives
-- UL 508A 2022 — Motor Controllers and Drives
+- UL 508A, 3rd Ed. (2018), revised 2025-06-26 — Motor Controllers and Drives
 
 ---
 

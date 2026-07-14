@@ -28,9 +28,9 @@ Successfully generated **FOUR complete standards modules** for the Standards Int
 - **Location**: `rag/standards_intelligence/us/nec/`
 - **Status**: COMPLETE - 10 control panel focused articles
 
-### 3. UL 508A (2022) - US Panel Certification ✅
+### 3. UL 508A, 3rd Ed. (2018), revised 2025-06-26 - US Panel Certification ✅
 - **Files**: 15 total (11 sections + 4 supporting)
-- **Edition**: 2022 (7th Edition)
+- **Edition**: 3rd Ed. (2018), revised 2025-06-26
 - **Jurisdiction**: United States
 - **Scope**: Industrial Control Panels
 - **Location**: `rag/standards_intelligence/us/ul_508a/`
@@ -355,3 +355,7 @@ The Standards Intelligence Tool now has a complete, RAG-safe, copyright-complian
 **Timeline:** Estimated 12 weeks to full content completion and tool integration
 
 **Business Impact:** Enables all 12 planned tools, provides complete US and international market coverage, creates licensable IP portfolio
+
+## Changelog
+
+- 2026-07-13 — CORRECTION: Normalized UL 508A edition metadata in this retained portfolio snapshot.

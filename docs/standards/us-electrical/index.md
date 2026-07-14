@@ -7,6 +7,12 @@ breadcrumb:
     url: "/standards/"
   - name: "US Electrical"
 repo_path: "control-standards/rag/standards_intelligence/us/"
+review:
+  standard: "NEC / NFPA 79 / UL 508A"
+  edition: "NEC 2023; NFPA 79:2024; UL 508A, 3rd Ed. (2018), revised 2025-06-26"
+  status: "Review pending"
+  coverage: "Family-level relationship and routing overview; use each detail page and the governing adopted edition for project decisions."
+  last_reviewed: "July 2026"
 related_standards:
   - name: "IEC 60204-1 (International equivalent)"
     url: "/standards/machinery/iec-60204-1/"
@@ -77,7 +83,7 @@ The three US electrical standards are not alternatives — they work together:
 
 ---
 
-### UL 508A — 2022 Edition
+### UL 508A — 3rd Edition (2018), Revised 2025-06-26
 
 **Scope:** Standard for Industrial Control Panels. Governs the construction, marking, and listing of industrial control panels for the US market. Addresses short-circuit current rating (SCCR), wiring methods, and component spacing.
 

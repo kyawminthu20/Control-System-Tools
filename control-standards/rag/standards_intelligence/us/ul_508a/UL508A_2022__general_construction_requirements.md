@@ -5,7 +5,7 @@ STATUS: DRAFT
 
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 
 UL_HIERARCHY:
   section: "2"
@@ -65,5 +65,6 @@ Frequent construction failures include:
 - failing to leave a clear path between field terminations, protective devices, and controlled equipment inside the panel
 
 ## 5. Change log
+- 2026-07-13 — CORRECTION: Normalized edition metadata to UL 508A, 3rd Ed. (2018), revised 2025-06-26; legacy filename retained for link stability.
 - 2026-01-15 — Initial draft created
 * 2026-03-09 — Added construction, layout, and workmanship guidance from migrated control-panel practice notes.

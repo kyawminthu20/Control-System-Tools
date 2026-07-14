@@ -54,6 +54,8 @@ def test_tags_from_example_io_list() -> None:
     by_name = {t.name: t for t in db.tags}
     assert by_name["PT_401"].datatype == "REAL"
     assert by_name["XV_101_SOL"].datatype == "BOOL"
+    assert by_name["XV_101_SOL"].io_type == "DO"
+    assert by_name["PT_401"].io_type == "AI"
     assert by_name["PT_401"].address == "0/3/0"
     assert db.to_csv().splitlines()[0].startswith("name,datatype")
 
@@ -64,9 +66,10 @@ def test_modbus_tables_and_widths() -> None:
     db = tags_from_io_list(load_io_list(EXAMPLE))
     rows = {r["tag"]: r for r in modbus_map(db)}
     assert rows["XV_101_ZSO"]["table"] == "discrete_input"      # DI status
-    assert rows["XV_101_SOL"]["table"] == "coil"                # SOL -> writable
+    assert rows["XV_101_SOL"]["table"] == "coil"                # DO -> writable
+    assert rows["YL_301"]["table"] == "coil"                    # DO without name hint
     assert rows["PT_401"]["table"] == "input_register"          # AI
-    assert rows["FCV_404"]["table"] == "holding_register"       # FCV -> writable analog
+    assert rows["FCV_404"]["table"] == "holding_register"       # AO -> writable analog
     assert rows["PT_401"]["registers"] == 2                     # REAL = 2 regs
     assert "word order" in rows["PT_401"]["note"]
 
@@ -84,6 +87,20 @@ def test_explicit_writable_set_overrides_heuristic() -> None:
     db = TagDatabase([Tag("STATUS_WORD", "INT")])
     rows = modbus_map(db, writable_names={"STATUS_WORD"})
     assert rows[0]["table"] == "holding_register"
+
+
+def test_io_direction_overrides_misleading_name_heuristic() -> None:
+    db = TagDatabase([
+        Tag("PUMP_CMD_FEEDBACK", "BOOL", io_type="DI"),
+        Tag("PLAIN_OUTPUT", "BOOL", io_type="DO"),
+        Tag("SP_MONITOR", "REAL", io_type="AI"),
+        Tag("PLAIN_SETPOINT", "REAL", io_type="AO"),
+    ])
+    rows = {r["tag"]: r for r in modbus_map(db)}
+    assert rows["PUMP_CMD_FEEDBACK"]["table"] == "discrete_input"
+    assert rows["PLAIN_OUTPUT"]["table"] == "coil"
+    assert rows["SP_MONITOR"]["table"] == "input_register"
+    assert rows["PLAIN_SETPOINT"]["table"] == "holding_register"
 
 
 # --- comms (pycomm3 optional) ---------------------------------------------------

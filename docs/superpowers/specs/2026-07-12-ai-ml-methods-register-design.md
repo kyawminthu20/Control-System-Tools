@@ -1,7 +1,7 @@
 # AI/ML Methods Register for Control Systems — Design
 
 **Date:** 2026-07-12
-**Status:** Design approved. Phase 49a (source-closure sprint) authorised. 49b and 49c are NOT.
+**Status:** Design approved. Phases 49a and 49b complete 2026-07-13; Phase 49c is not authorised.
 **Supersedes scope of:** `planning/2026-07-12-ai-ml-control-systems-presentation-plan.md` (that plan's
 authority-first principle is retained; its 7-page topic structure is replaced by the register + layer pages)
 **Source material:** `control-standards/work/research/ai-ml-control-systems/` (work tier, non-authoritative)
@@ -34,18 +34,18 @@ without its gate, because the gate is a field.
 
 ## 3. Decomposition
 
-Three sub-projects. Each has its own gate. **Only 49a is authorised by this design.**
+Three sub-projects. Each has its own gate. **Phase 49b is authorised after its project-hardening gate.**
 
 | Phase | Deliverable | Gate to start |
 |---|---|---|
-| **49a — Source closure** | Updated `source-register.md` + per-claim evidence table with strength grades, in `control-standards/work/research/`. Nothing ships to the site. | **Authorised now.** |
-| **49b — Method register** | `docs/_data/ai-methods/*.yml` (~40–60 methods) → rendered catalogue page. | 49a done, and its written recommendation says proceed. It is allowed to say no for a given domain. |
+| **49a — Source closure** | Updated `source-register.md` + per-claim evidence table with strength grades, in `control-standards/work/research/`. Nothing ships to the site. | **Complete 2026-07-13.** |
+| **49b — Method register** | Corpus-owned register → generated `docs/_data/ai_methods/*.yml` (40 methods) → rendered catalogue page. | **Complete 2026-07-13.** P0.1–P0.3 and the governed release gate passed first; chemical/biological authority remains Planned. The underscore path corrects the draft hyphenated name to satisfy repository naming rules. |
 | **49c — Layer design pages** | SCADA/interface · digital twin · PINN/hybrid · chemical · biological. How to set each layer up, how its methods compose, what it hands to the layer above. | 49b done. |
 
 Placement stays as the presentation plan recommends: **one subsection under Design**
 (`/design/ai-integration/`), not split across Fundamentals and Design — co-location of capability and
-gate is a safety property, not a filing preference. **Owner confirmation of this placement is still
-outstanding** and is a precondition for 49b, not 49a.
+gate is a safety property, not a filing preference. **The owner confirmed this placement on
+2026-07-13 by directing implementation to continue after the placement question was presented.**
 
 ## 4. Scope of the enumeration
 

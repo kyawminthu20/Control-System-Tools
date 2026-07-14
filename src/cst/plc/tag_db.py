@@ -54,9 +54,11 @@ class Tag:
     scope: str = "controller"
     address: str = ""
     initial_value: str = ""
+    io_type: str = ""
 
     def __post_init__(self) -> None:
         self.datatype = self.datatype.strip().upper()
+        self.io_type = self.io_type.strip().upper()
 
 
 @dataclass
@@ -84,7 +86,10 @@ class TagDatabase:
         buffer = io.StringIO()
         writer = csv.DictWriter(
             buffer,
-            fieldnames=["name", "datatype", "description", "scope", "address", "initial_value"],
+            fieldnames=[
+                "name", "datatype", "description", "scope", "address",
+                "initial_value", "io_type",
+            ],
         )
         writer.writeheader()
         for t in self.tags:
@@ -111,5 +116,6 @@ def tags_from_io_list(io_list: IOList, prefix: str = "") -> TagDatabase:
             datatype=IO_TYPE_DATATYPE.get(p.io_type, "BOOL"),
             description=p.description,
             address=p.address,
+            io_type=p.io_type,
         ))
     return TagDatabase(tags)

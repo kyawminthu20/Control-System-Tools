@@ -2662,3 +2662,61 @@ tr:nth-child(even) td {
   max-width: 100%;
   overflow-x: auto;
 }
+
+/* --- AI/ML method register ------------------------------------------------ */
+.method-register-entry {
+  margin: 0.65rem 0;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+}
+
+.method-register-entry > summary {
+  padding: 0.75rem 0.9rem;
+  cursor: pointer;
+  color: var(--color-text);
+  background: var(--color-bg-panel);
+}
+
+.method-register-entry[open] > summary {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.method-register-entry dl {
+  display: grid;
+  grid-template-columns: minmax(9rem, 0.28fr) 1fr;
+  gap: 0;
+  margin: 0;
+}
+
+.method-register-entry dt,
+.method-register-entry dd {
+  padding: 0.55rem 0.8rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.method-register-entry dt {
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.method-register-entry dd {
+  margin: 0;
+}
+
+.method-register-entry dt:last-of-type,
+.method-register-entry dd:last-of-type {
+  border-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .method-register-entry dl {
+    display: block;
+  }
+  .method-register-entry dt {
+    padding-bottom: 0.1rem;
+    border-bottom: 0;
+  }
+  .method-register-entry dd {
+    padding-top: 0.1rem;
+  }
+}

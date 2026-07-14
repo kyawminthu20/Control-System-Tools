@@ -5,7 +5,7 @@ STATUS: DRAFT
 
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 
 UL_HIERARCHY:
   section: "10"
@@ -52,5 +52,6 @@ Practical implications include:
 Motor branch design inside UL 508A panels should also be reviewed together with NEC Article 430 and NFPA 79 Chapter 12 when the panel is part of a machine or motor-control system.
 
 ## 4. Change log
+- 2026-07-13 — CORRECTION: Normalized edition metadata to UL 508A, 3rd Ed. (2018), revised 2025-06-26; legacy filename retained for link stability.
 - 2026-01-15 — Initial draft created
 * 2026-03-09 — Added starter, overload, contactor, and drive-integration guidance from migrated panel walkthrough content.

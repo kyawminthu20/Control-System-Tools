@@ -1,0 +1,98 @@
+[
+  {
+    "file": "01-reference-standards.png",
+    "width": 272,
+    "height": 269,
+    "alt": "01 Reference Standards"
+  },
+  {
+    "file": "02-nfpa79-machinery-panel-us.png",
+    "width": 466,
+    "height": 269,
+    "alt": "02 Nfpa79 Machinery Panel Us"
+  },
+  {
+    "file": "03-iec60204-machinery-panel.png",
+    "width": 367,
+    "height": 269,
+    "alt": "03 Iec60204 Machinery Panel"
+  },
+  {
+    "file": "04-us-facility-power-distribution.png",
+    "width": 403,
+    "height": 269,
+    "alt": "04 Us Facility Power Distribution"
+  },
+  {
+    "file": "05-plc-24vdc-io-wiring.png",
+    "width": 399,
+    "height": 248,
+    "alt": "05 Plc 24Vdc Io Wiring"
+  },
+  {
+    "file": "06-120vac-control-circuit.png",
+    "width": 337,
+    "height": 248,
+    "alt": "06 120Vac Control Circuit"
+  },
+  {
+    "file": "07-4-20ma-transmitter-hookup.png",
+    "width": 372,
+    "height": 248,
+    "alt": "07 4 20Ma Transmitter Hookup"
+  },
+  {
+    "file": "08-intrinsically-safe-wiring.png",
+    "width": 403,
+    "height": 248,
+    "alt": "08 Intrinsically Safe Wiring"
+  },
+  {
+    "file": "09-vfd-to-motor-wiring.png",
+    "width": 361,
+    "height": 247,
+    "alt": "09 Vfd To Motor Wiring"
+  },
+  {
+    "file": "10-servo-motion-system-wiring.png",
+    "width": 388,
+    "height": 247,
+    "alt": "10 Servo Motion System Wiring"
+  },
+  {
+    "file": "11-hvac-building-automation.png",
+    "width": 358,
+    "height": 247,
+    "alt": "11 Hvac Building Automation"
+  },
+  {
+    "file": "12-semiconductor-facility-color-map.png",
+    "width": 403,
+    "height": 247,
+    "alt": "12 Semiconductor Facility Color Map"
+  },
+  {
+    "file": "13-industrial-ethernet-cable-identification.png",
+    "width": 397,
+    "height": 188,
+    "alt": "13 Industrial Ethernet Cable Identification"
+  },
+  {
+    "file": "14-legacy-panel-before-after.png",
+    "width": 423,
+    "height": 188,
+    "alt": "14 Legacy Panel Before After"
+  },
+  {
+    "file": "15-important-wiring-notes.png",
+    "width": 529,
+    "height": 188,
+    "alt": "15 Important Wiring Notes"
+  },
+  {
+    "file": "16-symbol-legend.png",
+    "width": 162,
+    "height": 188,
+    "alt": "16 Symbol Legend"
+  }
+]

@@ -5,7 +5,7 @@ STATUS: DRAFT
 
 STANDARD_FAMILY: UL
 STANDARD_ID: UL_508A
-EDITION: 2022
+EDITION: 3rd Ed. (2018), revised 2025-06-26
 
 UL_HIERARCHY:
   section: "4"
@@ -93,5 +93,6 @@ Common spacing and creepage failures at inspection include:
 **Use pattern:** Treat spacing as a layout problem, a wiring problem, and a device-selection problem simultaneously. Apply conservative separation early. Let the final UL 508A tables and component listing instructions confirm the real minimums before closing the panel.
 
 ## 4. Change log
+- 2026-07-13 — CORRECTION: Normalized edition metadata to UL 508A, 3rd Ed. (2018), revised 2025-06-26; legacy filename retained for link stability.
 - 2026-01-15 — Initial draft created
 - 2026-03-08 — Populated from project working note: core definitions, voltage-based heuristics, live parts review logic, mitigation methods, and field inspection failure patterns. Authoritative minimums remain subject to UL 508A tables and component listing conditions.

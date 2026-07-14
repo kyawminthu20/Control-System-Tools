@@ -1,14 +1,15 @@
 # UL 508A RAG Index
-# Auto-generated index for UL 508A (2022) Section files
+# Index for UL 508A, 3rd Ed. (2018), revised 2025-06-26
 # AI_READ_ACCESS: ALLOWED
+# Legacy document IDs and filenames containing 2022 are retained for link stability.
 
 version: "1.0"
 standard_family: "UL"
 standard_id: "UL_508A"
 standard_title: "Industrial Control Panels"
-edition: "2022"
+edition: "3rd Ed. (2018), revised 2025-06-26"
 jurisdiction: "US"
-last_updated: "2026-01-15"
+last_updated: "2026-07-13"
 
 documents:
   - doc_id: "UL508A-2022-Section1"

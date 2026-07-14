@@ -30,6 +30,10 @@ redirect_from:
     <h3><a href="{{ '/lifecycle/detailed-design/' | relative_url }}">Detailed Design</a></h3>
     <p>Electrical design stage: schematics, IO lists, panel layout, conductor sizing, and protection coordination.</p>
   </div>
+  <div class="workflow-card">
+    <h3><a href="{{ '/design/ai-integration/' | relative_url }}">AI &amp; ML Integration</a></h3>
+    <p>An authority-first register for deciding when classical, learned, interface, chemical, and biological methods are justified—and when to keep them offline.</p>
+  </div>
 </div>
 
 ## Select &amp; Size
