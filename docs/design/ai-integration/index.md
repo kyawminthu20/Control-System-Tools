@@ -252,6 +252,17 @@ page so it can be scanned by problem type without scrolling past the gate above.
 Every row is scored against the ladder and the envelope architecture on this page: no learned method
 is assigned level 5 or a safety function, and chemical and biological rows remain Planned.
 
+## Model families and fit
+
+The register scores individual methods; the families behind them — convolutional/temporal perception,
+physics-informed networks, and large language models — each have a genuine fit and a poor fit that is
+easy to miss. A CNN belongs on an advisory, not a trip; a PINN belongs on inverse problems, not a
+control-loop estimator; an LLM belongs behind a compiler and a human owner, not in the loop.
+
+**→ [Model Families &amp; Fit]({{ '/design/ai-integration/model-families/' | relative_url }})** shows
+each family as capability *and* poor fit, including the train/test-leakage trap in the fault-diagnosis
+literature and the FP64/FP32 precision trap that can break a PINN on edge hardware.
+
 ## Interfaces and high-rate data
 
 Analyse the fast signal where it is measured; send the verdict — not the waveform — across the

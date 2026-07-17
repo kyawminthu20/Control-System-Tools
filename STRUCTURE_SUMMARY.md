@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-17 11:30:52
+**Last Auto-Updated:** 2026-07-17 13:13:27
 
 ```text
 ├── .claude/
@@ -68,6 +68,7 @@
 │   │   │   │   ├── _index.yaml
 │   │   │   │   ├── interfaces_edge.md
 │   │   │   │   ├── methods.yml
+│   │   │   │   ├── model_families.md
 │   │   │   │   ├── safety_boundary.md
 │   │   │   │   └── sources.yml
 │   │   │   ├── constraints/
@@ -705,6 +706,7 @@
 │   │   │   ├── design_framework/
 │   │   │   │   ├── ai_integration/
 │   │   │   │   │   ├── interfaces_edge.md
+│   │   │   │   │   ├── model_families.md
 │   │   │   │   │   └── safety_boundary.md
 │   │   │   │   ├── design_guides/
 │   │   │   │   │   └── 02_power_distribution_guide.md
@@ -1143,6 +1145,8 @@
 │   │   │   ├── interfaces/
 │   │   │   │   └── index.md
 │   │   │   ├── method-register/
+│   │   │   │   └── index.md
+│   │   │   ├── model-families/
 │   │   │   │   └── index.md
 │   │   │   └── safety-boundaries/
 │   │   │       └── index.md

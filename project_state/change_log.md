@@ -1,7 +1,42 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (AI-integration expansion — Slice C: Interfaces & Handshakes page)
+**Last Updated:** 2026-07-17 (AI-integration expansion — Slice D: Model Families & Fit page)
 **Status:** Active
+
+## 2026-07-17 — AI-integration 7-page build, Slice D (Model Families & Fit)
+
+**Type:** Site content (Design section) + corpus note + register correction.
+**Branch:** `feat/phase51-ai-integration-model-families`.
+
+Added the model-families explainer, corpus-first, covering the three learned families the register
+leans on — CNN/temporal perception, PINN, and LLM — each shown as **capability *and* poor fit**.
+
+- **Source gaps closed at the publisher** (the build plan named these as blockers for Slice D):
+  - **FP64/PINN:** verified as Xu et al., "FP64 is All You Need," **NeurIPS 2025** (arXiv:2505.10949) —
+    several canonical PINN failures are FP32-precision-induced stalls rescued by FP64. Control-systems
+    implication carried onto the page: embedded FP32/fixed-point hardware can break a
+    workstation-validated PINN, so validate at the deployment precision.
+  - **LLM4PLC** (arXiv:2401.05443) — confirmed **peer-reviewed, ICSE 2024 SEIP track** (not just a
+    preprint). **Xia et al.** (arXiv:2409.18009) — confirmed **peer-reviewed, IEEE ETFA 2025**
+    (DOI 10.1109/ETFA65518.2025.11205539). Both remain proof-of-concept demonstrations, not production
+    evidence, and are labelled as such.
+- **Corpus note:** `control-standards/rag/design_framework/ai_integration/model_families.md`
+  (RAG_APPROVED/DRAFT) — the "name the deterministic alternative first" rule; CNN advisory ceiling with
+  the train/test-leakage collapse (CWRU 100.0→66.4, Paderborn 99.9→53.2) and the vibration-beats-motor-
+  current sensor result; PINN loses-to-FEM / silent-failure / steady-state-reversion / no-error-bound
+  case plus the FP64 caveat; LLM draft-then-verify (47%→72%) and why raw output/agentic control stay out
+  of the loop; dataset-licence note (Paderborn CC BY-NC; CWRU undefined — cite, never redistribute).
+- **Register correction:** `methods.yml` `llm_plc_code_draft` `evidence_strength` `preprint → peer-reviewed`
+  and its `authority_basis` reworded (LLM4PLC now peer-reviewed ICSE 2024 SEIP). `sources.yml` gained
+  Grossmann (PINN-vs-FEM), Xu et al. (FP64), the bearing-leakage and Paderborn sources, and the
+  Xia et al. ETFA entry; LLM4PLC relabelled peer-reviewed. Register data regenerated to `docs/_data/ai_methods/`.
+- **Site page:** `/design/ai-integration/model-families/` distils the note (fit/poor-fit summary table,
+  per-family sections, an original ladder diagram, FP64 and licence callouts). Gate page gained a
+  "Model families and fit" pointer section; nav child added; cross-linked. Mirror regenerated
+  (317 files, byte-identical). Full release gate green (180 tests, 10 doctests, clean build, 0 broken
+  links, 377 AI-boundary files, corpus-quality clean).
+
+Slice E next: Digital twin (re-verify the research note `digital-twin-integration.md` first).
 
 ## 2026-07-17 — AI-integration 7-page build, Slice C (Interfaces & Handshakes)
 

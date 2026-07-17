@@ -152,6 +152,8 @@
           url: "/design/ai-integration/safety-boundaries/"
         - label: "Interfaces &amp; Handshakes"
           url: "/design/ai-integration/interfaces/"
+        - label: "Model Families &amp; Fit"
+          url: "/design/ai-integration/model-families/"
         - label: "Method Register"
           url: "/design/ai-integration/method-register/"
     - label: "Design Workflows"
