@@ -222,10 +222,66 @@ Full detail in `evidence-table.md`; ceilings in `authority-ceilings.md`; go/no-g
   highest-value missing artefact in the entire programme.
 - Smith & Randall 2015; Hendriks et al. 2022; Naser 2025 (PINNs in an engineering-systems framing);
   the lab-to-field transfer-learning assessment — all paywalled, all carrying load-bearing numbers.
-- **The FP64 question** — a 2025 preprint reportedly argues canonical PINN failures are FP32 artefacts.
-  Sharp implication: embedded targets run FP32, so a PINN healthy on a workstation could fail on the
-  deployment hardware.
-- Adversarial coverage for the **chemical and biological** families (they have none).
+- ~~**The FP64 question**~~ **CLOSED (Phase 51, Slice D):** verified as Xu et al., "FP64 is All You
+  Need," NeurIPS 2025 (arXiv:2505.10949). Embedded FP32/fixed-point targets can break a PINN healthy in
+  FP64 — validate at the deployment precision.
+- ~~Adversarial coverage for the **chemical and biological** families~~ **CLOSED (Phase 49c):** see
+  `49c-findings.md`. First adversarial coverage performed (single-lens, refute-by-default); the
+  equilibrium/thermodynamics gap closed (NIST Chemistry WebBook VERIFIED_AT_PUBLISHER) and transport
+  phenomena upgraded to VERIFIED_AT_PUBLISHER.
 - An ISO-verified vibration sample-rate/bandwidth figure (ISO's platform refused retrieval).
-- **The two 2024 arXiv preprints (LLM4PLC; Xia et al.) remain PREPRINTS** — every claim resting on them
-  inherits `preprint` strength.
+- ~~**The two 2024 arXiv preprints (LLM4PLC; Xia et al.) remain PREPRINTS**~~ **CLOSED (Phase 51, Slice
+  D):** LLM4PLC is peer-reviewed (ICSE 2024 SEIP); Xia et al. is peer-reviewed (IEEE ETFA 2025). Both
+  remain proof-of-concept.
+
+# Phase 49c Additions (2026-07-17) — chemical & biological source closure
+
+Full detail and per-source verification tags in `49c-findings.md` §2. Highlights:
+
+## Chemical equilibrium / thermodynamics (the 49a gap — was unsourced)
+
+- **NIST Chemistry WebBook (SRD 69)** — VERIFIED_AT_PUBLISHER (read at NIST). Equilibrium is fixed by
+  Gibbs-energy minimisation / ΔrG° with activities as the exact variable — the hard leg.
+- **IUPAC Gold Book, standard equilibrium constant (S05915)** — existence VERIFIED_VIA_DOI_REGISTRY
+  (Crossref); K°=exp(−ΔG°/RT). Term-page HTML 403'd.
+- **Kontogeorgis & Folas, *Thermodynamic Models for Industrial Applications*, ch. 5 (Wiley)** —
+  VERIFIED_VIA_DOI_REGISTRY. Activity-coefficient models (NRTL/Wilson/UNIQUAC/UNIFAC) are fitted
+  closures with documented failure modes (Wilson can't predict LLE; UNIFAC overpredicts strong H-bonding,
+  fails for electrolytes/large molecules). **EoS-parameters-fitted (PR/SRK) is engineering judgement, not
+  independently verified.**
+- **Bird, Stewart & Lightfoot, *Transport Phenomena*, Rev. 2nd ed. (Wiley)** — UNVERIFIABLE → **VERIFIED
+  _AT_PUBLISHER** (Wiley companion domain). Conservation scaffold hard; constitutive closures empirical.
+- **ML in thermodynamics** — UNIFAC 2.0 (arXiv + IECR/ACS via Crossref) and Gibbs–Helmholtz GNN (ACS via
+  NIH PMC): learned models are **property-prediction closures**, warn about extrapolation/thermodynamic
+  inconsistency, hold **no control authority**.
+
+## Process-safety and pharma/bio regulatory frame
+
+- **IEC 61511 Ed. 2.0 (2016)** — VERIFIED_AT_PUBLISHER (IEC webstore): no AI/ML provisions — the
+  process-sector analogue of the machinery finding. **IEC 61508-3 "AI not recommended ≥ SIL 2":
+  SECONDARY_ONLY — DO NOT PUBLISH the table ratings.**
+- **CCPS/AIChE, ISA** — advisory-only guidance; ISA is the ANSI adopter of 61511 (same deterministic text).
+- **FDA** AI-in-drug-manufacturing discussion paper (2023) and AI-for-regulatory-decisions draft guidance
+  (Jan 2025) — SECONDARY_ONLY; non-binding, human-oversight. **FDA PAT framework (2004)** —
+  VERIFIED_AT_PUBLISHER via Federal Register doc 04-22203; raises the justification bar for model-based
+  control. **EMA reflection paper on AI** — VERIFIED_AT_PUBLISHER (finalised 2024-09-09); risk-based,
+  human-centric.
+- **Yokogawa+JSR RL distillation (840 h, 2022)** — VERIFIED_AT_PUBLISHER: RL held supervisory authority
+  above **untouched** interlocks/ESD/F&G — confirms the ceiling, does not raise it. ENEOS follow-on
+  adoption SECONDARY_ONLY.
+- **Adversarial sweep for a higher ceiling** (certified ML controller / permitting standard /
+  installed-base survey): **NOT_FOUND** — absence of evidence, not proof of absence.
+
+## Bio/microbio governing models (re-verified)
+
+- **VERIFIED_AT_PUBLISHER:** Narayanan 2023 & Brunner 2021 (Frontiers, open access); Rathore 2021 (NIH
+  PMC version of record) — PI/PID + open-loop feeds dominate, MPC/ANN research/pilot, soft-sensor fault
+  tolerance the dominant blocker.
+- **VERIFIED_VIA_DOI_REGISTRY:** Monod 1949 (Annual Reviews); Droop–Monod comparison (Ecological
+  Modelling 2022); ADM1 (Wat. Sci. Technol. 2002); von Stosch 2014 (Comput. Chem. Eng.); Gibbons 2023
+  Raman/CHO (Biotechnology Progress — **pin the exact paper before use**).
+- **Still SECONDARY_ONLY:** IWA ASM "STR No. 9" and biofilm "STR No. 18" print designations (books/DOIs
+  confirmed; cite those, not the STR numbers).
+- **Central result:** no source supports a learned model above **soft-sensor/estimator** authority in
+  bioprocess; hybrid models stop at monitoring/optimisation/decision-support; the Raman model is a PLS
+  **sensor** feeding a conventional loop.

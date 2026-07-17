@@ -9,7 +9,9 @@ stated", and almost always resulted in a **lower** recommended ceiling, not a hi
 
 **Coverage caveat:** the run hit a session limit partway through the refute stage. Only
 2 of 80 ceilings received all three lenses;
-most received one. **The chemical and biological families received none.**
+most received one. **The chemical and biological families received none** — *in 49a.* **Phase 49c
+(2026-07-17) added the first chem/bio adversarial coverage** (single-lens, refute-by-default) against
+publisher-verified evidence; the verdicts and adjudicated ceilings are in `49c-findings.md` §4–5.
 
 | Ceiling claim | Verdicts | Refuted | Method family | Recommended ceiling after attack |
 |---|---|---|---|---|

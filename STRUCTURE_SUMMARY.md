@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-17 15:23:19
+**Last Auto-Updated:** 2026-07-17 15:41:04
 
 ```text
 ├── .claude/
@@ -598,6 +598,7 @@
 │       └── research/
 │           └── ai-ml-control-systems/
 │               ├── 49a-findings.md
+│               ├── 49c-findings.md
 │               ├── README.md
 │               ├── adversarial-verdicts.md
 │               ├── authority-ceilings.md

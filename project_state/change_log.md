@@ -1,7 +1,42 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (Phase 50.6 — CLI + citation test coverage)
+**Last Updated:** 2026-07-17 (Phase 49c — chem/bio evidence closure + adversarial coverage)
 **Status:** Active
+
+## 2026-07-17 — Phase 49c (Chemical & biological evidence closure + adversarial pass)
+
+**Type:** Work-tier research only — **no site, corpus, or register change.** Owner-authorised
+2026-07-17 (authorisation covered the work, not the ceiling).
+**Outputs (under `control-standards/work/research/ai-ml-control-systems/`):** new `49c-findings.md`;
+`source-register.md` extended with a Phase 49c additions section; pointer notes added to
+`authority-ceilings.md` and `adversarial-verdicts.md` so the "unattacked / no coverage" caveats no
+longer read as current.
+
+Closed the two gaps 49a left open for the chemical/biological families, via three parallel
+publisher-verification research workstreams plus a single-lens adversarial synthesis.
+
+- **Gap 1 closed — equilibrium/thermodynamics had no verified source.** Now anchored on the **NIST
+  Chemistry WebBook (VERIFIED_AT_PUBLISHER)** for the hard leg (equilibrium by Gibbs-energy minimisation),
+  with IUPAC + the Wiley activity-model chapter DOI-registry-verified for the soft leg (NRTL/UNIQUAC/
+  UNIFAC/EoS are fitted closures). **Transport phenomena (Bird, Stewart & Lightfoot) upgraded
+  UNVERIFIABLE → VERIFIED_AT_PUBLISHER.** ML in thermo (UNIFAC 2.0, GH-GNN) confirmed as property-
+  prediction closures with no control authority.
+- **Gap 2 closed — no adversarial coverage.** First chem/bio adversarial pass performed (refute-by-
+  default). Every attempt to raise the ceiling was refuted; safety-function participation pushed to 0.
+  **Adjudicated ceilings:** learned/hybrid chem/bio methods ≤ Level 2 (advisory/soft-sensor), default 1
+  where transferability/fault-tolerance unproven, **0** for any safety function; deterministic governing
+  models are the hard-constraint layer, but a fitted closure inside them is not; supervisory RL (the
+  Yokogawa pattern) bounded behind an independent non-learned veto.
+- **Regulatory frame verified:** IEC 61511 (VERIFIED_AT_PUBLISHER) has no AI/ML provisions; EMA reflection
+  paper and FDA PAT verified at publisher/government record; the Yokogawa+JSR 840 h RL run re-verified
+  (protection untouched — confirms the ceiling). Adversarial sweep for a certified ML controller or a
+  permitting standard: **NOT_FOUND**.
+- **Recommendation (OWNER DECISION, not applied):** the chem/bio rows may now move **off `Planned`** to
+  the conservative evidenced ceilings above, and the 50.13 chem/bio `safety_relevance` values may drop
+  their *provisional* tag — every one staying `safety-adjacent`/`non-safety`, never `safety-related`.
+  This is a safety-significant register change held for owner approval; if approved it is a bounded slice.
+- **Do-not-publish (carried):** IEC 61508-3 "AI not recommended ≥ SIL 2" table ratings (SECONDARY_ONLY);
+  IWA STR series numbers; the Raman/CHO paper must be pinned before use. Full detail: `49c-findings.md` §7.
 
 ## 2026-07-17 — Phase 50.6 (CLI + citation test coverage)
 

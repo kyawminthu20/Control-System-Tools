@@ -133,6 +133,14 @@ recurring pattern across every workstream: the deterministic method is faster, b
 frequently more accurate. Where a learned method is proposed, **the burden of proof sits with the
 proposer.**
 
+> **Updated 2026-07-17 (Phase 49c):** the chemical and biological families below are **no longer
+> unattacked.** `49c-findings.md` closes the source gaps (the equilibrium/thermodynamics family now has a
+> VERIFIED_AT_PUBLISHER anchor in the NIST Chemistry WebBook; transport phenomena upgraded to
+> VERIFIED_AT_PUBLISHER) and performs the first adversarial pass (single-lens, refute-by-default). Result:
+> learned/hybrid chem/bio methods cap at **advisory / soft-sensor (≤2, default 1)**, **0** for any safety
+> function; deterministic governing models are the hard-constraint layer but a fitted closure inside them
+> is not. See `49c-findings.md` §4–6 for the adjudicated ceilings and the register recommendation.
+
 ### Chemical governing models — **UNATTACKED. Research proposal only.**
 
 The key structural finding (which *is* well sourced): **conservation laws are hard constraints;
