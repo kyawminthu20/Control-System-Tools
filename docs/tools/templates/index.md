@@ -100,6 +100,16 @@ section — the capture log in particular supports the
 [baseline-comparison step]({{ '/communications/wireshark-methodology/' | relative_url }})
 of the diagnostics methodology.
 
+## AI & Model Lifecycle
+
+| Template | Format | Origin |
+|---|---|---|
+| [AI / model evidence ledger]({{ '/assets/templates/ai_model_evidence_ledger.md' | relative_url }}) | Markdown | Original template (NIST AI RMF Govern/Map/Measure/Manage aligned) |
+
+Pairs with [Validation &amp; Lifecycle]({{ '/design/ai-integration/validation-lifecycle/' | relative_url }})
+in the AI &amp; ML Integration section — one ledger per learned component, kept from design time through
+retirement. It structures the evidence behind a model's allowed authority; it does not grant authority.
+
 ## Documentation
 
 | Template | Format | Origin |

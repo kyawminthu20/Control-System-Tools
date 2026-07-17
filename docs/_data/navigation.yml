@@ -156,6 +156,8 @@
           url: "/design/ai-integration/model-families/"
         - label: "The Digital Twin"
           url: "/design/ai-integration/digital-twin/"
+        - label: "Validation &amp; Lifecycle"
+          url: "/design/ai-integration/validation-lifecycle/"
         - label: "Method Register"
           url: "/design/ai-integration/method-register/"
     - label: "Design Workflows"

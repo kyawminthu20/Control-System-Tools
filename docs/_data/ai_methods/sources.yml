@@ -3,7 +3,8 @@
   "CONTENT_CLASS": "RAG_APPROVED",
   "STATUS": "DRAFT",
   "sources": [
-    {"id": "nist_ai_rmf", "title": "NIST AI Risk Management Framework 1.0", "publisher": "NIST", "url": "https://www.nist.gov/itl/ai-risk-management-framework"},
+    {"id": "nist_ai_rmf", "title": "NIST AI Risk Management Framework 1.0 (NIST AI 100-1)", "publisher": "NIST", "url": "https://www.nist.gov/itl/ai-risk-management-framework"},
+    {"id": "nist_genai_profile", "title": "NIST AI RMF: Generative AI Profile (NIST AI 600-1, 2024-07-26) — companion to AI RMF 1.0", "publisher": "NIST", "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"},
     {"id": "nist_sp80082", "title": "NIST SP 800-82 Rev. 3: Guide to Operational Technology Security", "publisher": "NIST", "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"},
     {"id": "iec_tr_5469", "title": "ISO/IEC TR 5469:2024 — Functional safety and AI systems (Technical Report: guidance, not certifiable requirements)", "publisher": "ISO/IEC", "url": "https://webstore.iec.ch/en/publication/90977"},
     {"id": "eu_machinery", "title": "Regulation (EU) 2023/1230 on machinery", "publisher": "EUR-Lex", "url": "https://eur-lex.europa.eu/eli/reg/2023/1230/oj"},

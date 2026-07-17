@@ -1,7 +1,41 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (AI-integration expansion — Slice E: Digital Twin page)
+**Last Updated:** 2026-07-17 (AI-integration expansion — Slice F: Validation & Lifecycle page)
 **Status:** Active
+
+## 2026-07-17 — AI-integration 7-page build, Slice F (Validation, Drift & Model Lifecycle)
+
+**Type:** Site content (Design section) + corpus note + downloadable template + register annotation.
+**Branch:** `feat/phase51-ai-integration-validation-lifecycle`.
+
+Added the validation-and-lifecycle explainer, corpus-first — the "authority is perishable" page — and
+closed the NIST AI RMF GenAI-Profile item deferred from Phase 50.12.
+
+- **Source verified & added:** **NIST AI RMF Generative AI Profile (NIST AI 600-1)** confirmed at the
+  publisher — designation, publication date **2024-07-26**, and companion-not-replacement status
+  (*"cross-sectoral profile of and companion resource for the AI RMF 1.0"*). Added as
+  `nist_genai_profile` and framed as the LLM-relevant companion; the base AI RMF 1.0 relabelled with its
+  `NIST AI 100-1` designation. NIST AI RMF is framed throughout as **process vocabulary, not safety
+  permission** (consistent with the Phase 49a WS1 finding that governance frameworks confer no
+  functional-safety authority).
+- **Corpus note:** `control-standards/rag/design_framework/ai_integration/validation_lifecycle.md`
+  (RAG_APPROVED/DRAFT) — why the lifecycle (not commissioning) is the point; the Govern/Map/Measure/
+  Manage mapping of the lifecycle demands (owner + MoC + audit; data lineage + envelope; leakage-free
+  component-wise test sets + uncertainty + deployment-condition validation; drift/OOD + hazard-derived
+  failure response + rollback + human review); the model-evidence ledger.
+- **Downloadable template:** `docs/assets/templates/ai_model_evidence_ledger.md` — an original,
+  per-component fill-in ledger (NIST AI RMF Govern/Map/Measure/Manage-aligned; grants no authority),
+  promoted from the `scientific-domain-integration.md` research note. Linked from a new "AI & Model
+  Lifecycle" section on `/tools/templates/`.
+- **Register annotation:** `llm_engineering_copilot` sources gained `nist_genai_profile`. Data
+  regenerated to `docs/_data/ai_methods/`.
+- **Site page:** `/design/ai-integration/validation-lifecycle/` distils the note (the four-function
+  table, an original failure-response/`on_fail` diagram, the ledger with a download link). Gate page
+  gained a "validation, drift, and the model lifecycle" pointer; nav child added; cross-linked. Mirror
+  regenerated (319 files, byte-identical). Full release gate green (180 tests, 10 doctests, clean build,
+  0 broken links, 379 AI-boundary files, corpus-quality clean).
+
+**Only Slice G (Worked architectures) remains** in the 7-page build; it depends on B–F, now all shipped.
 
 ## 2026-07-17 — AI-integration 7-page build, Slice E (Digital Twin)
 

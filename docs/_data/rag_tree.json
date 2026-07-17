@@ -78,6 +78,12 @@
             "type": "file",
             "path": "control-standards/rag/design_framework/ai_integration/safety_boundary.md",
             "serve_path": "design_framework/ai_integration/safety_boundary.md"
+          },
+          {
+            "name": "validation_lifecycle.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/ai_integration/validation_lifecycle.md",
+            "serve_path": "design_framework/ai_integration/validation_lifecycle.md"
           }
         ]
       },

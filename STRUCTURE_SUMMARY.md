@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-17 13:34:24
+**Last Auto-Updated:** 2026-07-17 14:30:09
 
 ```text
 ├── .claude/
@@ -71,7 +71,8 @@
 │   │   │   │   ├── methods.yml
 │   │   │   │   ├── model_families.md
 │   │   │   │   ├── safety_boundary.md
-│   │   │   │   └── sources.yml
+│   │   │   │   ├── sources.yml
+│   │   │   │   └── validation_lifecycle.md
 │   │   │   ├── constraints/
 │   │   │   │   └── grounding_bonding_rules.yaml
 │   │   │   ├── design_guides/
@@ -709,7 +710,8 @@
 │   │   │   │   │   ├── digital_twin.md
 │   │   │   │   │   ├── interfaces_edge.md
 │   │   │   │   │   ├── model_families.md
-│   │   │   │   │   └── safety_boundary.md
+│   │   │   │   │   ├── safety_boundary.md
+│   │   │   │   │   └── validation_lifecycle.md
 │   │   │   │   ├── design_guides/
 │   │   │   │   │   └── 02_power_distribution_guide.md
 │   │   │   │   ├── electrical_review/
@@ -1072,6 +1074,7 @@
 │   │   │       └── networks/
 │   │   │           └── comms_dropouts.md
 │   │   └── templates/
+│   │       ├── ai_model_evidence_ledger.md
 │   │       ├── alarm_rationalization.csv
 │   │       ├── bom_example.csv
 │   │       ├── cause_and_effect_matrix.csv
@@ -1152,7 +1155,9 @@
 │   │   │   │   └── index.md
 │   │   │   ├── model-families/
 │   │   │   │   └── index.md
-│   │   │   └── safety-boundaries/
+│   │   │   ├── safety-boundaries/
+│   │   │   │   └── index.md
+│   │   │   └── validation-lifecycle/
 │   │   │       └── index.md
 │   │   ├── architecture/
 │   │   │   ├── compliance-stack/

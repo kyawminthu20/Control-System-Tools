@@ -274,6 +274,18 @@ different problem from letting the twin act *out*.
 vs data-mirror distinction in ISO 23247, treats the physical-to-digital and digital-to-physical
 directions as separate problems, and shows the device-communication seam still gated by the envelope.
 
+## Validation, drift, and the model lifecycle
+
+The authority a method holds is perishable: a learned model degrades as the plant drifts away from what
+it learned, and nothing about its output announces the change. So authority must be re-earned — data
+lineage, honest test sets, uncertainty, drift detection, a defined failure response, rollback, and
+change control — or dropped when the evidence lapses.
+
+**→ [Validation &amp; Lifecycle]({{ '/design/ai-integration/validation-lifecycle/' | relative_url }})**
+maps those demands onto the NIST AI RMF Govern/Map/Measure/Manage functions (with the Generative AI
+Profile for LLM components) and provides a downloadable
+[model-evidence ledger]({{ '/assets/templates/ai_model_evidence_ledger.md' | relative_url }}).
+
 ## Interfaces and high-rate data
 
 Analyse the fast signal where it is measured; send the verdict — not the waveform — across the
