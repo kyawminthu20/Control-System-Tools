@@ -154,6 +154,11 @@ Level 4 is not permission for learned safety control. It means bounded superviso
 independently implemented constraints and vetoes. Project risk assessment, applicable standards,
 verification, cybersecurity, and management of change still apply.
 
+Level 4 here is an architectural **ceiling** for a learned method placed behind an independently
+verified envelope — not an authority any learned row is currently assigned. Every method presently
+at level 4 in the register (Kalman filter, model predictive control, first-principles numerical
+model) is deterministic or model-based; no learned row in this register exceeds level 3.
+
 ### One task up the ladder
 
 To make the levels concrete, here is the same job — condition monitoring and control on a critical
@@ -185,12 +190,12 @@ and the veto. The safety-function path never routes through the learned layer.
 <pre class="mermaid">
 flowchart LR
     S["Sensors /<br/>process state"]
-    subgraph LL["Learned layer — operational authority ≤ 4"]
+    subgraph LL["Learned layer — operational authority ≤ 4 (architectural ceiling)"]
       M["Learned policy<br/>(model, optimiser, soft sensor)"]
     end
     subgraph VL["Verified non-learned layer — holds the safety function"]
       ENV["Envelope check<br/>range · rate · task space<br/>freshness · plausibility"]
-      VETO["Veto / clamp /<br/>deterministic fallback"]
+      VETO["Veto / clamp /<br/>defined failure response"]
     end
     SIS["Safety functions<br/>ISO 13849-1 · IEC 62061 · IEC 61511<br/>(independent of everything above)"]
     ACT["Actuators"]
@@ -212,18 +217,24 @@ flowchart LR
 </pre>
 </div>
 
-The veto layer as code. On any failed check it falls back to the deterministic baseline the method
-had to beat — the register guarantees one exists for every entry:
+The veto layer as code. On a failed check it applies the application's **hazard-analysis-derived
+failure response** — which may be bumpless transfer to a base controller, a controlled hold with a
+bounded lifetime, manual takeover, a defined safe state, or shutdown. A deterministic fallback is
+more amenable to specification and verification, but it is not automatically safe: the correct
+response is whatever the risk assessment requires for that loop.
 
 ```python
 # Verified, non-learned layer. Runs unchanged when the model misbehaves.
+# on_fail() is the application's hazard-analysis-derived response, NOT a
+# universal default — bumpless transfer, bounded-lifetime hold, manual
+# takeover, a defined safe state, or shutdown, per the risk assessment.
 def gate(proposal: Setpoint, state: PlantState) -> Setpoint:
     if not fresh(proposal, max_age_ms=500):
         alarm("model result stale")
-        return baseline.compute(state)      # deterministic fallback, not hold-last
+        return on_fail(state, reason="stale")
     if not in_task_space(proposal, ENVELOPE):
-        alarm("proposal outside envelope")  # the envelope vetoes every
-        return baseline.compute(state)      # unsafe or out-of-scope action
+        alarm("proposal outside envelope")          # the envelope vetoes every
+        return on_fail(state, reason="out_of_envelope")  # unsafe or out-of-scope action
     return clamp(proposal, RATE_LIMIT, RANGE_LIMIT)
 # The safety functions (e-stop, interlocks, SIF) do not pass through here.
 # They act on the actuators regardless of what this gate returns.

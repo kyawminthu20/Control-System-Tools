@@ -27,6 +27,33 @@ worktree changes for the active Phase 50.1/50.2 corpus-quality slice were not to
 this planning-only edit: Markdown/diff inspection and whitespace check; implementation gates are
 defined per slice in the plan.
 
+## 2026-07-16 — Phase 50.12 — AI/ML page correctness & safety-language pass
+
+**Type:** Corpus source metadata + site presentation. Fixes live errors on the deployed page.
+**Branch:** `feat/phase50-corpus-quality-validator` (stacked after 50.2 + Workstream-E plan).
+
+Three verified-live defects corrected; no new authority claims, chemical/biological rows stay Planned:
+
+- **Factual: source identity.** `sources.yml` titled the standard `IEC TR 5469:2024`; corrected to
+  **`ISO/IEC TR 5469:2024`** (joint identity; publisher `ISO/IEC`) with "Technical Report: guidance,
+  not certifiable requirements" inline — matching the Phase 49a governing finding, which had already
+  flagged this exact error. Register data regenerated (site title synced).
+- **Safety language: veto-gate code.** The example returned `baseline.compute(state)` on every failed
+  check ("deterministic fallback"), implying a deterministic fallback is automatically safe. Replaced
+  with `on_fail(state, reason=…)` and prose stating the response is the application's
+  hazard-analysis-derived policy (bumpless transfer, bounded-lifetime hold, manual takeover, defined
+  safe state, or shutdown) — deterministic ≠ automatically safe. Envelope diagram's VETO node
+  relabelled "defined failure response".
+- **Ceiling clarity.** Added a paragraph by the ladder: level 4 is an architectural *ceiling* for a
+  learned method behind a verified envelope, not an authority any learned row currently holds — the
+  three level-4 rows (Kalman, MPC, first-principles) are deterministic/model-based; no learned row
+  exceeds level 3. Envelope subgraph relabelled "operational authority ≤ 4 (architectural ceiling)".
+
+**Deferred within 50.12:** adding the NIST AI RMF Generative AI Profile as an evidence source and
+re-evaluating the language/agentic rows — that is an evidence/claim change needing judgment, not a
+rush job. Full release gate PASSED. **Workstream E remaining:** 50.13 selector, 50.14 deployment-gate
+worksheet + versioned result contract, 50.15 evidence provenance + machinery/AI checklist.
+
 ## 2026-07-16 — Phase 50.2 — corpus-quality validator + metadata completeness
 
 **Type:** Tooling + governance + corpus metadata. Structural prevention for the 50.1 defect classes.
