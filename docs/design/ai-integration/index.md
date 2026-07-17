@@ -27,6 +27,43 @@ review:
 > (level 5) or a safety function. “Planned” means the evidence supports discussing the method, but
 > does not yet support an operational authority claim.
 
+## The idea in plain terms
+
+“AI/ML integration” in industrial automation means putting a model — something that classifies,
+estimates, predicts, or optimises from data — somewhere in the path between plant measurements and
+plant actions. The engineering question is not whether the model is impressive; it is how much the
+plant is allowed to act on the model’s output without a person or an independent check in between.
+This page calls that permission **authority**, and grades every method by the highest authority the
+evidence currently supports.
+
+Two kinds of method appear throughout:
+
+- A **deterministic method** computes the same answer from the same inputs by an explicit,
+  inspectable rule — PID control, a Kalman filter, an interlock, a mass balance. Its behaviour can
+  be verified.
+- A **learned method** gets its behaviour from training data — a neural network, a boosted tree, a
+  reinforcement-learning policy, an LLM. Its behaviour can be tested, but not exhaustively
+  verified, and it can fail in unfamiliar conditions without signalling that it has.
+
+That difference is why this page keeps repeating three demands: a method must **beat a named
+deterministic alternative** (otherwise use the simpler thing), it must **survive validation**
+designed to catch its specific failure modes, and **independent protection** must keep the plant
+safe when it is wrong.
+
+### Terms used throughout
+
+| Term | Meaning here |
+|---|---|
+| Authority | The highest level of plant action allowed on a method’s output. |
+| Deterministic method | Rule-based, verifiable computation (PID, interlock, balance, solver). |
+| Learned method | Behaviour comes from training data; testable, not exhaustively verifiable. |
+| Must beat | The named simpler method a candidate has to demonstrably outperform. |
+| Envelope | Hard limits (range, rate, task space) enforced outside the learned method. |
+| Veto | The non-learned check that can reject or replace any proposed action. |
+| Independent protection | Interlocks and safety functions that still work when the model is wrong. |
+| Safety function | Risk reduction implemented and verified per ISO 13849-1 / IEC 62061 / IEC 61511. |
+| Planned | Evidence supports discussing the method, not an operational authority claim. |
+
 ## The question to answer before proceeding
 
 **What decision will this method influence, at what maximum authority, and what independent
@@ -96,11 +133,32 @@ Level 4 is not permission for learned safety control. It means bounded superviso
 independently implemented constraints and vetoes. Project risk assessment, applicable standards,
 verification, cybersecurity, and management of change still apply.
 
+### One task up the ladder
+
+To make the levels concrete, here is the same job — condition monitoring and control on a critical
+pump — at every level. The scenario is illustrative; each level names a method that can actually
+hold that level in this register.
+
+<div class="table-scroll" markdown="1">
+
+| Level | What it looks like on the pump |
+|---:|---|
+| 0 · Offline | Exported vibration data is analysed at a desk; findings go into a report. Nothing on the plant changes. |
+| 1 · Read-only | A live dashboard shows spectra and health indicators. People look; nothing acts. |
+| 2 · Advisory | A diagnosis model (a 1D CNN, for example) flags “bearing wear likely — inspect at next stop.” A person decides. This is the register’s current ceiling for learned diagnosis. |
+| 3 · Operator-approved | The system prepares a specific action — reduce speed to 80 % — and it runs only after the operator confirms it. |
+| 4 · Bounded supervisory | A model predictive controller trims the flow setpoint on its own, but only inside hard limits and rate clamps enforced by logic it cannot modify. |
+| 5 · Direct closed-loop | The PID loop holding the flow — deterministic, verified control acting every scan. No learned method is assigned this level here. |
+
+</div>
+
 ## The envelope architecture
 
-The pattern the register's placement and independent-protection fields point at: the learned policy
-holds operational authority inside an envelope; a verified non-learned layer holds the safety
-function and the veto. The safety-function path never routes through the learned layer.
+In plain terms: the model may adjust how the plant runs, inside a fence it cannot move — and
+keeping the plant safe does not depend on the model at any point. This is the pattern the
+register's placement and independent-protection fields point at: the learned policy holds
+operational authority inside an envelope; a verified non-learned layer holds the safety function
+and the veto. The safety-function path never routes through the learned layer.
 
 <div class="mermaid-wrap">
 <pre class="mermaid">
@@ -156,6 +214,12 @@ Use the family sections to scan by problem type. Each family opens with a compar
 entries below it put the poor-fit and failure cases beside the claimed value so method selection
 does not become a capability catalogue.
 
+**How to read an entry.** Every entry answers the same eleven questions, in the same order: what
+it computes; where it runs; the simpler method it must beat; when it earns its place; when it does
+not; how much data it needs; why its authority is capped where it is; the tests it must pass; how
+it fails; what keeps the plant safe anyway; and how strong the evidence is. If an entry's "poor
+fit" line describes your situation, the answer is usually the entry's own "must beat" method.
+
 **Maturity** describes deployment reality: *industrially routine* (widely deployed practice),
 *piloted* (documented industrial pilots), *research* (literature and lab evidence only).
 **Evidence strength** names the best available source class for the row: *standards body*,
@@ -209,8 +273,9 @@ does not become a capability catalogue.
 
 ## Interface rule for high-rate data
 
-Do not assume a conventional PLC scan → embedded OPC UA server → historian polling path can
-reconstruct a kHz waveform. Perform high-rate acquisition and inference where the signal is sampled,
+In plain terms: analyse the fast signal where it is measured, and send the verdict — not the
+waveform — across the network. Do not assume a conventional PLC scan → embedded OPC UA server →
+historian polling path can reconstruct a kHz waveform. Perform high-rate acquisition and inference where the signal is sampled,
 then publish the lower-rate result with its class or estimate, confidence or uncertainty, model
 version, timestamp, quality, and freshness. OPC UA PubSub/TSN can support different architectures;
 the limitation is the chosen acquisition path, not OPC UA as a whole.

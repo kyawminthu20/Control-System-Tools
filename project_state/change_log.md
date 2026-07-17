@@ -3,6 +3,24 @@
 **Last Updated:** 2026-07-16 (Phase 50 recorded — whole-project hardening & hygiene)
 **Status:** Active
 
+## 2026-07-16 — Phase 50 site slice — plain-language pass on the AI integration page
+
+**Type:** Site presentation change only; register data untouched; page remains **Review pending**.
+**Branch:** `feat/phase50-ai-integration-plain-language`. Owner feedback: the deployed page was hard
+to understand for readers coming from industrial automation / OT without a functional-safety
+background.
+
+Added comprehension scaffolding with no new authority claims: (1) "The idea in plain terms" —
+what AI/ML integration means in an OT path, the deterministic-vs-learned distinction, and why the
+page's three demands (beat a deterministic alternative, survive validation, independent protection)
+follow from it; (2) a nine-term glossary (authority, envelope, veto, independent protection, safety
+function, Planned, …) so load-bearing vocabulary is defined before first use; (3) "One task up the
+ladder" — one pump condition-monitoring scenario shown at every authority level, each level naming
+a method that can actually hold it in the register (1D CNN at 2, MPC at 4, PID at 5); (4) a
+"how to read an entry" key for the eleven register fields; (5) one-sentence plain-terms leads on
+the envelope-architecture and high-rate-data sections. Gates: site profile PASSED (clean build,
+zero broken links); rendered page verified.
+
 ## 2026-07-16 — Phase 50 site slice — AI integration page visualization pass
 
 **Type:** Site presentation change only. The corpus register and `docs/_data/ai_methods/` are untouched.
