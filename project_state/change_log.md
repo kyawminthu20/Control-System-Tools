@@ -1,7 +1,25 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (Phase 50.4 — validated-I/O application seam)
+**Last Updated:** 2026-07-17 (Phase 50.4 merged to master; 50.13 vocabulary drafted)
 **Status:** Active
+
+## 2026-07-17 — Phase 50.4 merged to master + 50.13 classification vocabulary drafted
+
+**50.4 shipped:** `feat/phase50-validated-io-seam` fast-forward merged to `master` (full release
+gate green: 175 tests, 10 doctests, clean build, 0 broken links, both validators clean) and the
+branch deleted. Toolkit-only change — no site content moves — but master pushed so the deploy stays
+in lockstep.
+
+**50.13 vocabulary drafted (owner review pending):**
+`planning/2026-07-17-phase50-13-classification-vocabulary.md` proposes the four new canonical
+classification fields the interactive method selector needs — `method_class` (deterministic/learned/
+hybrid), `decision_type` (7 values), `data_availability` (5-level measured-data ladder), and
+`safety_relevance` (safety-related / safety-adjacent / non-safety). Includes crisp inclusion tests,
+four generator-enforced cross-field invariants (chief among them **safety-related ⟹ deterministic**,
+so no learned/hybrid method can ever be classed into the protective layer), a full 42-row proposed
+assignment table, and five flagged judgement calls for sign-off. Chemical/biological
+`safety_relevance` is marked provisional, mirroring their Planned authority. **No canonical row,
+generator, or site data changed** — implementation of 50.13 is gated on approval of this draft.
 
 ## 2026-07-17 — Phase 50 corpus/AI stack shipped to master
 
