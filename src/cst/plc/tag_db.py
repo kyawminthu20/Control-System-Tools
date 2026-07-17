@@ -108,6 +108,7 @@ def sanitize_tag_name(raw: str) -> str:
 
 def tags_from_io_list(io_list: IOList, prefix: str = "") -> TagDatabase:
     """Generate a tag per I/O point using the sanitized field tag as the name."""
+    io_list.raise_for_problems()
     tags = []
     for p in io_list.points:
         name = sanitize_tag_name(f"{prefix}{p.tag}")

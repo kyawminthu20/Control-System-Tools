@@ -50,13 +50,13 @@ class DesignPackage:
         )
 
     def add_io_summary(self, io_list: IOList) -> None:
+        # A design package is a deliverable: refuse to assemble one from an I/O
+        # list that fails validation rather than emitting tables from bad data.
+        io_list.raise_for_problems()
         counts = io_list.counts_by_type()
         rows = [{"I/O type": t, "points": n} for t, n in counts.items()]
         rows.append({"I/O type": "TOTAL", "points": sum(counts.values())})
-        problems = io_list.validate()
-        body = _md_table(rows, ["I/O type", "points"])
-        body += ("\n\nValidation: clean." if not problems else
-                 "\n\nValidation problems:\n" + "\n".join(f"- {p}" for p in problems))
+        body = _md_table(rows, ["I/O type", "points"]) + "\n\nValidation: clean."
         self.add_section("I/O Summary", body)
 
     def add_bom(self, io_list: IOList, **bom_kwargs) -> None:

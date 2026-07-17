@@ -83,5 +83,10 @@ def loop_sheet(point: IOPoint, project: str = "", loop_ref: str = "") -> str:
 
 
 def generate_loop_sheets(io_list: IOList, project: str = "") -> dict[str, str]:
-    """{tag: markdown} for every point in the list."""
+    """{tag: markdown} for every point in the list.
+
+    Rejects invalid or colliding I/O first: duplicate tags would otherwise
+    collapse into one sheet (the dict is keyed by tag), silently losing points.
+    """
+    io_list.raise_for_problems()
     return {p.tag: loop_sheet(p, project=project) for p in io_list.points}

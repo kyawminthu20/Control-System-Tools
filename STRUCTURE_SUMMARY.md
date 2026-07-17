@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-17 07:12:44
+**Last Auto-Updated:** 2026-07-17 09:36:30
 
 ```text
 ├── .claude/
@@ -1723,6 +1723,7 @@
 │   │   ├── test_docgen.py
 │   │   ├── test_enclosure_thermal.py
 │   │   ├── test_encoder.py
+│   │   ├── test_io_validation_seam.py
 │   │   ├── test_panel.py
 │   │   ├── test_phase2_calcs.py
 │   │   ├── test_plc.py

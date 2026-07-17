@@ -66,6 +66,7 @@ def legend_plates(io_list: IOList, max_chars_per_line: int = 24) -> list[dict[st
     """
     if max_chars_per_line < 8:
         raise ValueError(f"max_chars_per_line unreasonably small: {max_chars_per_line}")
+    io_list.raise_for_problems()
     entries = []
     for p in io_list.points:
         flag = "" if len(p.description) <= max_chars_per_line else (

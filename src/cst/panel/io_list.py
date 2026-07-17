@@ -22,6 +22,23 @@ from pathlib import Path
 
 IO_TYPES = ("DI", "DO", "AI", "AO", "RTD", "TC")
 
+
+class IOListError(ValueError):
+    """Raised when a generator is asked to work from an invalid I/O list.
+
+    Carries the full :meth:`IOList.validate` problem list so callers (and the
+    CLI) can report every defect, not just the first. Subclasses ``ValueError``
+    so existing error handling keeps working.
+    """
+
+    def __init__(self, problems: list[str]) -> None:
+        self.problems = list(problems)
+        summary = "; ".join(self.problems)
+        super().__init__(
+            f"I/O list has {len(self.problems)} problem(s) — fix before generating: "
+            f"{summary}"
+        )
+
 DEFAULT_SIGNALS = {
     "DI": "24VDC", "DO": "24VDC",
     "AI": "4-20mA", "AO": "4-20mA",
@@ -101,6 +118,16 @@ class IOList:
                     f"{where}: unknown io_type {p.io_type!r} (expected {'/'.join(IO_TYPES)})"
                 )
         return problems
+
+    def raise_for_problems(self) -> None:
+        """The generator seam: raise :class:`IOListError` if the list is invalid.
+
+        Every artifact generator calls this before producing output so malformed
+        or colliding source data cannot silently yield a wrong deliverable.
+        """
+        problems = self.validate()
+        if problems:
+            raise IOListError(problems)
 
 
 def _normalize_header(name: str) -> str:

@@ -33,6 +33,7 @@ def fat_template(
     """Render a FAT/SAT protocol skeleton as markdown."""
     if test_type not in ("FAT", "SAT"):
         raise ValueError(f"test_type must be 'FAT' or 'SAT', got {test_type!r}")
+    io_list.raise_for_problems()
     counts = io_list.counts_by_type()
     total = sum(counts.values())
 

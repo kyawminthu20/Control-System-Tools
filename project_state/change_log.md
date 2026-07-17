@@ -1,7 +1,43 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (Phase 50.3 — `_index.yaml` reconciliation)
+**Last Updated:** 2026-07-17 (Phase 50.4 — validated-I/O application seam)
 **Status:** Active
+
+## 2026-07-17 — Phase 50 corpus/AI stack shipped to master
+
+The stacked branch `feat/phase50-corpus-quality-validator` (50.2 corpus-quality validator → Workstream-E
+plan → 50.12 AI correctness/safety → 50.3 `_index.yaml` reconciliation) was fast-forward merged to
+`master` and deployed. Full release gate green before merge (165 tests, 10 doctests, clean Jekyll build,
+0 broken links across 371 files, AI-boundary + corpus-quality validators clean). GitHub Pages deploy run
+`29595960732` green (build + deploy); live `/design/ai-integration/` verified carrying the
+`ISO/IEC TR 5469` source-identity fix. Merged branch deleted.
+
+## 2026-07-17 — Phase 50.4 — validated-I/O application seam
+
+**Type:** Toolkit correctness / data-integrity gate (Workstream B).
+**Branch:** `feat/phase50-validated-io-seam` (off `master`).
+
+Closed the confirmed defect where every panel/commissioning generator consumed `IOList.points`
+directly without ever calling `validate()` — so malformed or colliding source data produced
+plausible-looking, wrong deliverables. The worst symptom: `generate_loop_sheets` keyed its result
+dict by tag, so **duplicate tags silently overwrote each other and points vanished** from the sheet set.
+
+- **The seam (deep module, small interface):** new `IOListError(ValueError)` carrying the full
+  `validate()` problem list, and `IOList.raise_for_problems()` which raises it when the list is
+  invalid. Subclassing `ValueError` means the CLI gate comes for free — `cli.main()` already maps
+  `ValueError` to exit code 2 with the message on stderr.
+- **Every generator now rejects before emitting:** `generate_bom`, `generate_wire_schedule`,
+  `generate_loop_sheets`, `legend_plates`, `fat_template`, and `tags_from_io_list` (which protects the
+  Modbus map — duplicate tags would otherwise double-map registers) all call `raise_for_problems()`
+  at entry. `DesignPackage.add_io_summary` now aborts instead of rendering a "Validation problems:"
+  note and proceeding to emit BOM/wire tables from the same bad data (the flagged
+  `design_package.py:56-58` behaviour); its dead reporting branch was removed.
+- **Division of responsibility preserved:** `cst io-check` stays the advisory reporter (exit 1 with a
+  friendly problem list); the generators are the hard gate (exit 2). Valid input is unaffected.
+- **Tests (TDD, red→green per slice):** new `tests/cst/test_io_validation_seam.py` — 10 tests over the
+  collision fixture (shared tag + shared rack/slot/channel): each generator raises, the error carries
+  every problem, clean input still generates, the CLI writes no files and exits 2 on an invalid CSV,
+  and the design package aborts. Suite: **175 passed** (was 165). Full release gate green.
 
 ## 2026-07-17 — Phase 50.3 — `_index.yaml` reconciliation + index-vs-disk validator
 

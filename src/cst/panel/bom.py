@@ -41,6 +41,7 @@ def generate_bom(
     interposing_relays_for_do: bool = False,
 ) -> list[dict[str, str | int]]:
     """Return BOM lines: {item, description, qty, part_number(blank), basis}."""
+    io_list.raise_for_problems()
     if not 0 <= spare_fraction < 1:
         raise ValueError(f"spare_fraction must be in [0, 1), got {spare_fraction}")
     density = {**DEFAULT_MODULE_DENSITY, **(module_density or {})}

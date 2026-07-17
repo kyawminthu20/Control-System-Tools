@@ -57,6 +57,7 @@ def generate_wire_schedule(
     Terminals are assigned sequentially on ``strip_prefix`` starting at
     ``terminal_start`` in I/O-list order — reorder the list to control layout.
     """
+    io_list.raise_for_problems()
     if terminal_start < 1:
         raise ValueError(f"terminal_start must be >= 1, got {terminal_start}")
     rows: list[dict[str, str]] = []
