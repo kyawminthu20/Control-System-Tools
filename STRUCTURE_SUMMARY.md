@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-17 10:02:02
+**Last Auto-Updated:** 2026-07-17 10:45:08
 
 ```text
 ├── .claude/
@@ -1134,7 +1134,9 @@
 │   │       └── index.md
 │   ├── design/
 │   │   ├── ai-integration/
-│   │   │   └── index.md
+│   │   │   ├── index.md
+│   │   │   └── method-register/
+│   │   │       └── index.md
 │   │   ├── architecture/
 │   │   │   ├── compliance-stack/
 │   │   │   │   └── index.md

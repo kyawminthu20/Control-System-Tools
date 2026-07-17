@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI & ML Integration Method Register"
-description: "Authority-first comparison of classical, learned, interface, chemical, and biological methods for control-system work."
+title: "AI & ML Integration"
+description: "The authority gate for putting a model in a control system: how much the plant may act on a model's output, and what independent protection stays effective when it is wrong."
 breadcrumb:
   - name: "Design"
     url: "/design/"
@@ -36,12 +36,11 @@ lifecycle_stage:
 ---
 
 {% assign register = site.data.ai_methods.methods %}
-{% assign sources = site.data.ai_methods.sources.sources %}
 
 <div class="page-header">
   <span class="page-header__label">Authority-first design</span>
-  <h1>AI &amp; ML Integration Method Register</h1>
-  <p>Start with the decision and its allowed authority—not the model. Every method must beat a named deterministic alternative, survive validation, and fail without defeating independent protection.</p>
+  <h1>AI &amp; ML Integration — the authority gate</h1>
+  <p>Start with the decision and its allowed authority—not the model. Every method must beat a named deterministic alternative, survive validation, and fail without defeating independent protection. This page is the gate; the <a href="{{ '/design/ai-integration/method-register/' | relative_url }}">method register</a> and the pages below are scored against it.</p>
 </div>
 
 > **Safety boundary:** no learned method in this register is assigned direct closed-loop authority
@@ -242,69 +241,14 @@ def gate(proposal: Setpoint, state: PlantState) -> Setpoint:
 
 ## Method register
 
-Use the family sections to scan by problem type. Each family opens with a comparison table; the
-entries below it put the poor-fit and failure cases beside the claimed value so method selection
-does not become a capability catalogue.
+The full comparison — **42 methods across nine families**, each with the deterministic alternative
+it must beat, its authority ceiling, required validation, and failure modes — now lives on its own
+page so it can be scanned by problem type without scrolling past the gate above.
 
-**How to read an entry.** Every entry answers the same questions, in the same order: what
-it computes; a concrete example; where it runs; the simpler method it must beat; when it earns its
-place; when it does not; how much data it needs; why its authority is capped where it is; the tests
-it must pass; how it fails; what keeps the plant safe anyway; and how strong the evidence is. If an
-entry's "poor fit" line describes your situation, the answer is usually the entry's own "must beat"
-method. The example lines are illustrative — a typical use that stays within the method's stated
-scope, not a documented deployment or an endorsement of a specific product.
+**→ [Open the AI &amp; ML Method Register]({{ '/design/ai-integration/method-register/' | relative_url }})** — the full family-by-family comparison.
 
-**Maturity** describes deployment reality: *industrially routine* (widely deployed practice),
-*piloted* (documented industrial pilots), *research* (literature and lab evidence only).
-**Evidence strength** names the best available source class for the row: *standards body*,
-*peer-reviewed*, *preprint*, *mixed*, or *engineering judgement*.
-
-{% assign families = "classical-deterministic,estimation,optimisation,perception,physics-informed,language/agentic,interface,chemical-kinetic,biological" | split: "," %}
-{% for family in families %}
-### {{ family | replace: "-", " " | capitalize }}
-
-{% assign family_methods = register.methods | where: "family", family %}
-<div class="table-scroll" markdown="1">
-
-| Method | Max authority | Must beat | Maturity |
-|---|---|---|---|
-{% for item in family_methods %}| [{{ item.method }}](#{{ item.method | slugify }}) | {% if item.max_authority == "Planned" %}Planned{% else %}≤ {{ item.max_authority }}{% endif %} | {{ item.deterministic_alternative }} | {{ item.maturity }} |
-{% endfor %}
-</div>
-{% if family == "perception" %}
-> **Split your data the way the plant is split.** Random train/test splits overstate perception
-> performance. Leakage in some form — label, future, or normal-data contamination — appears in
-> this family's failure modes, and each row's validation names the matching leakage-aware split:
-> asset-held-out, lot-held-out, or a temporal split with a leakage audit.
-{% endif %}
-{% for item in family_methods %}
-<details class="method-register-entry" id="{{ item.method | slugify }}">
-  <summary><strong>{{ item.method }}</strong> — authority {% if item.max_authority == "Planned" %}Planned{% else %}≤ {{ item.max_authority }}{% endif %} · {{ item.maturity }}</summary>
-
-  <dl>
-    <dt>Computes</dt><dd>{{ item.does }}</dd>
-    <dt>Example</dt><dd><em>{{ item.example }}</em></dd>
-    <dt>Placement</dt><dd>{{ item.layer }}</dd>
-    <dt>Must beat</dt><dd>{{ item.deterministic_alternative }}</dd>
-    <dt>Use when</dt><dd>{{ item.justified_when }}</dd>
-    <dt>Poor fit when</dt><dd>{{ item.poor_fit_when }}</dd>
-    <dt>Data burden</dt><dd>{{ item.data_requirement }}</dd>
-    <dt>Authority basis</dt><dd>{{ item.authority_basis }}</dd>
-    <dt>Validation</dt><dd>{{ item.validation_required }}</dd>
-    <dt>Failure modes</dt><dd>{{ item.failure_modes }}</dd>
-    <dt>Independent protection</dt><dd>{{ item.safety_independence }}</dd>
-    <dt>Evidence / maturity</dt><dd>{{ item.evidence_strength }} / {{ item.maturity }}</dd>
-    <dt>Sources</dt>
-    <dd>
-      {% for source_id in item.sources %}
-        {% assign matched = sources | where: "id", source_id | first %}
-        {% if matched.url %}{% if matched.url contains "://" %}<a href="{{ matched.url }}">{{ matched.title }}</a>{% else %}<a href="{{ matched.url | relative_url }}">{{ matched.title }}</a>{% endif %}{% else %}{{ matched.title }}{% endif %}{% unless forloop.last %}; {% endunless %}
-      {% endfor %}
-    </dd>
-  </dl>
-</details>
-{% endfor %}
-{% endfor %}
+Every row is scored against the ladder and the envelope architecture on this page: no learned method
+is assigned level 5 or a safety function, and chemical and biological rows remain Planned.
 
 ## Interface rule for high-rate data
 

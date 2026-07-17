@@ -147,6 +147,9 @@
       url: "/design/software-stack/"
     - label: "AI &amp; ML Integration"
       url: "/design/ai-integration/"
+      children:
+        - label: "Method Register"
+          url: "/design/ai-integration/method-register/"
     - label: "Design Workflows"
       url: "/design/workflows/"
       children:

@@ -1,7 +1,28 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (Phase 50.5 — licensed-table module + packaging cleanup)
+**Last Updated:** 2026-07-17 (AI-integration expansion — Slice A: register split into its own page)
 **Status:** Active
+
+## 2026-07-17 — AI-integration 7-page build, Slice A (skeleton split)
+
+**Type:** Site information architecture (Design section).
+**Branch:** `feat/phase51-ai-integration-expansion`.
+
+Owner authorised expanding the single `/design/ai-integration/` page into the authority-first
+7-page structure the Phase 49 presentation plan designed (the one page crammed the gate, authority
+ladder, envelope architecture, the full 42-method register, the interface rule, and domain limits).
+Build plan recorded at `planning/2026-07-17-ai-integration-7page-build-plan.md` — sequences the seven
+pages into corpus-first slices with per-page evidence status and the source gaps to close first
+(IEC 62061 ML check, FP64/PINN, arXiv preprint status).
+
+Slice A is presentation-only (no new technical claims): the 42-method register moved to its own page
+`/design/ai-integration/method-register/` (dir + `index.md`, matching the site's child-page
+convention so the pretty URL resolves — a first `.md` build produced `method-register.html`, which
+GitHub Pages would not serve at the trailing-slash URL). The index is now the **authority gate** —
+plain-terms intro, the pre-flight question, authority ladder, envelope architecture, interface rule,
+domain limits — and links out to the register. Both pages restate the safety-independence boundary;
+both stay Review pending. Nav gains a Method Register child. Full release gate green (build, 0 broken
+links across 372 files, 180 tests). Slice B next: the corpus-first Safety & Security Boundaries page.
 
 ## 2026-07-17 — Phase 50.5 — licensed-table module + packaging cleanup
 
