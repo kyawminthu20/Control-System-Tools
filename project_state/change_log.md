@@ -1,7 +1,36 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (AI-integration expansion — Slice G: Worked Architectures — 7-page build COMPLETE)
+**Last Updated:** 2026-07-17 (Phase 52 UI/UX and content-upgrade recommendation recorded)
 **Status:** Active
+
+## 2026-07-17 — Phase 52 UI/UX and content-upgrade recommendation
+
+**Type:** Planning + project-state correction.
+
+**Branch:** `docs/phase52-ui-ux-content-recommendations`.
+
+Recorded `planning/2026-07-17-phase52-ui-ux-content-upgrade-recommendations.md`, converting the
+current-project audit into five bounded follow-up slices:
+
+1. state accuracy and reconciliation of six repeated navigation URLs;
+2. mobile search, responsive page context, accessible drawers, and wide-table handling;
+3. task-first homepage routes and local-section navigation over the governed taxonomy;
+4. IEC 62061 Ed. 2.2 rebuild, risk-ordered `review:` rollout, honest aggregate status, content
+   layering, and field-guide-to-`cst` integration; and
+5. reusable UI components plus an accessibility release gate.
+
+The plan records the measured baseline: 180 tests and 10 doctests green, clean Jekyll build, zero
+broken links across 378 rendered files, 248 reader-facing index pages, 166 legacy pages without a
+`review:` block, six repeated navigation URLs, and a growing 2,722-line CSS / 579-line JavaScript
+surface. It recommends trust and discovery work before another broad content expansion.
+
+Corrected the first-page project status to reflect reality: Phase 51 is the current completed
+delivery; Phase 52 is proposed and not implemented; Phase 50.5 is already merged in `ed85dac`; and
+the remaining Phase 50 follow-ups are carried forward explicitly. Phase 49c remains unauthorised,
+and this planning change raises no AI/ML authority ceiling.
+
+Validation for this documentation-only change: full release check passed (180 tests, 10 doctests,
+clean Jekyll build, zero broken links, AI-boundary and corpus-quality checks green).
 
 ## 2026-07-17 — AI-integration 7-page build, Slice G (Worked Architectures) — build COMPLETE
 
