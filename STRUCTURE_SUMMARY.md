@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-17 15:16:46
+**Last Auto-Updated:** 2026-07-17 15:23:19
 
 ```text
 ├── .claude/
@@ -1746,6 +1746,7 @@
 │   ├── __init__.py
 │   ├── cst/
 │   │   ├── __init__.py
+│   │   ├── test_cli.py
 │   │   ├── test_commissioning.py
 │   │   ├── test_diagnostics.py
 │   │   ├── test_docgen.py

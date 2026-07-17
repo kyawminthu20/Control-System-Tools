@@ -64,7 +64,7 @@ at `/tools/templates/` on the site).
 uv run pytest
 ```
 
-The normal suite currently contains 180 tests. Calculator doctests are a
+The normal suite currently contains 202 tests. Calculator doctests are a
 separate governed check (10 doctests):
 
 ```bash

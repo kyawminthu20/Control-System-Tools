@@ -1,7 +1,32 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (Phase 50.13a — selector-classification vocabulary)
+**Last Updated:** 2026-07-17 (Phase 50.6 — CLI + citation test coverage)
 **Status:** Active
+
+## 2026-07-17 — Phase 50.6 (CLI + citation test coverage)
+
+**Type:** Test coverage for the toolkit's two previously-untested modules. No behaviour change.
+**Branch:** `feat/phase50-6-cli-tests`.
+
+Closes the Phase 50 "thin CLI + tests" gap. On inspection the CLI is **already a thin dispatch
+layer** — `main(argv)` parses, calls `args.func(args)`, and catches `ValueError` → prints `error: …`
+to stderr and returns exit code 2; each `_cmd_*` handler is a few lines calling a calc function and
+printing. No adapter refactor was warranted, so this slice adds the missing tests rather than
+restructuring working code.
+
+- **New `tests/cst/test_cli.py` (14 tests).** Exercises the dispatch/exit-code contract, not the
+  numerics (calculators are covered by their own tests + doctests):
+  - `cst.common.cite`: `Citation.__str__` with and without a note; `CalcResult.report()` renders
+    value/detail/warnings/assumptions/citations; the minimal single-line case.
+  - `cst.cli` happy paths via `main([...])` for five **table-free** commands (encoder, enclosure, fan,
+    fault-current, sccr) — chosen so the suite never depends on the gitignored licensed standards tables.
+  - Error handling: a `ValueError` (non-positive heat load; malformed `--component`) returns **2** and
+    writes `error:` to stderr; an unknown subcommand, a missing required subcommand, and a missing
+    required argument each raise `SystemExit` (argparse).
+- **Suite 188 → 202.** `environment.md` and `how_to.md` test counts updated to 202. Full release gate
+  green (202 tests, 10 doctests, clean build, 0 broken links, corpus checks clean).
+
+Remaining Phase 50: project-state history split (50.8). Every `cst` module now has test coverage.
 
 ## 2026-07-17 — Phase 50.13a (Selector-classification vocabulary + invariants)
 
