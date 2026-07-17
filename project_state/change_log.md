@@ -1,7 +1,66 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-16 (Phase 50 recorded — whole-project hardening & hygiene)
+**Last Updated:** 2026-07-17 (Phase 50.3 — `_index.yaml` reconciliation)
 **Status:** Active
+
+## 2026-07-17 — Phase 50.3 — `standards_intelligence/_index.yaml` reconciliation
+
+**Type:** Corpus manifest correction. No corpus content, calculators, or site pages changed.
+**Branch:** `fix/phase50.3-index-reconciliation`.
+
+`control-standards/rag/standards_intelligence/_index.yaml` did not match what is actually on
+disk. Every change below was verified against real files with `find`/`grep` before being made —
+nothing was invented:
+
+- **`international/cybersecurity/iec_62443/` added to the `standards:` inventory.** The module
+  (4 files: `IEC62443_2_1__security_management.md`, `IEC62443_3_3__system_security_requirements.md`,
+  `IEC62443_4_2__component_requirements.md`, `IEC62443_lifecycle.md`, confirmed via `find`) was
+  previously reachable only through `topic_routing` entries, not the inventory itself. New
+  `standards.international.cybersecurity` entry (`standard_id: IEC_62443`, `elements: 4`,
+  `element_type: documents`, `status: complete`), matching the field shape of the other
+  `international` entries, with edition text taken from the module's own local `_index.yaml`.
+- **`international/offshore/` added to the `standards:` inventory.** The module (ABS + DNV,
+  2 files: `ABS_offshore_electrical_control.md`, `DNV_OS_D201__electrical_installations.md`,
+  confirmed via `find`) was entirely absent from the master index. New
+  `standards.international.offshore` entry (`standard_id: OFFSHORE_MARINE`, `elements: 2`,
+  `element_type: documents`, `status: complete`), fields and title drawn from the module's own
+  local `_index.yaml`.
+- **Case-mismatch fixed (6 references).** The index referenced
+  `reference_models/software_safety_and_intrinsic_safety_standards.md` (lowercase); the file on
+  disk is `reference_models/Software_Safety_and_Intrinsic_Safety_Standards.md` (confirmed via
+  `ls`). All 6 occurrences (4× `topic_routing.*.guidance_file`, 1× `guidance_documents`, 1× the
+  `notes` block) corrected to the real, case-exact filename — this was silently working only on
+  case-insensitive filesystems (macOS default) and would break on case-sensitive ones (Linux CI).
+- **Two on-disk guidance documents added to `guidance_documents`.**
+  `reference_models/15-Standard Minimum Compliance Stack.md` and
+  `reference_models/standards_atlas_diagrams_reference.md` exist on disk (confirmed via `find`)
+  but were not listed.
+- **`crosswalks/overlap_notes/GENERATION_STATUS.md` corrected.** The tracker was frozen at
+  "19% / IN PROGRESS" dated 2026-01-15. Verified against disk: still only 3 of 28 overlap notes
+  exist (`overlap__sccr.md`, `overlap__motors_drives.md`,
+  `overlap_nfpa79_iec60204__motors_drives.md`); the 3 core files remain complete. Added a
+  "Last reconciled" line, a clarifying "Overlap Notes Only" row (3/28, 11%) alongside the original
+  "TOTAL incl. core" row (6/31, 19%) so the two counts can't be conflated again, and a 2026-07-17
+  changelog entry. **No overlap notes were written** — this is a tracker correction only, per the
+  Phase 50.3 scope; writing the 25 missing notes stays backlog.
+
+**Side effect:** regenerating the RAG mirror (`python3 tools/generate_rag_tree.py`, the sanctioned
+tool per `PROJECT_ORGANIZATION.md` — never hand-edited) was required to keep
+`docs/assets/rag-files/` in sync with the `GENERATION_STATUS.md` text edit; the release-check
+corpus profile fails on mirror drift otherwise.
+
+**Validation:** `python3 tools/release_check.py --profile corpus` — **PASSED** (374/374 RAG files
+pass `validate_ai_boundaries.py`; pre-existing metadata warnings unchanged at 22 missing
+`CONTENT_CLASS` / 37 missing `STATUS`, same baseline as Phase 50.1 — that's 50.2 scope, not
+touched here). `--profile full` also run: `validate_ai_boundaries.py` PASSED, `uv run pytest`
+156 passed, doctests 10 passed; the Jekyll build step failed with `bundler: command not found:
+jekyll` — the Ruby/Jekyll toolchain is not installed in this environment, which is expected and
+unrelated to this corpus-only change (nothing under `docs/` content changed).
+
+**Not reconciled — left for the owner:** none of the 5 requested items remain outstanding; all
+five are done. The only intentionally-deferred work is the 25 still-missing overlap notes
+(explicitly out of Phase 50.3 scope) and the Jekyll/site profile, which needs a working Ruby
+toolchain to actually execute in this environment.
 
 ## 2026-07-16 — Phase 50.1 — corpus correctness (authoritative-tier defect fixes)
 

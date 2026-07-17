@@ -2,6 +2,7 @@
 **AI_READ_ACCESS: ALLOWED**
 
 **Generated:** 2026-01-15
+**Last reconciled:** 2026-07-17 (Phase 50.3 — verified against files on disk; still only 3 of 28 overlap notes exist, tracker corrected accordingly)
 **Location:** `rag/standards_intelligence/crosswalks/overlap_notes/`
 
 ## Purpose
@@ -64,7 +65,8 @@ Per-topic overlap notes provide detailed:
 | **Core Files** | 3 | 3 | 0 | ✅ Complete |
 | **US Overlap Notes** | 14 | 2 | 12 | 🔄 In Progress |
 | **International Notes** | 14 | 1 | 13 | 🔄 In Progress |
-| **TOTAL** | 31 | 6 | 25 | **19% Complete** |
+| **Overlap Notes Only** | 28 | 3 | 25 | **11% Complete** |
+| **TOTAL (incl. core)** | 31 | 6 | 25 | 19% Complete |
 
 ## Priority for Next Phase
 
@@ -207,9 +209,15 @@ Before marking complete, verify:
   - Motor and drive overlap notes completed for US and NFPA79/IEC routing
   - Priority order established
   - Status: IN PROGRESS
+- 2026-07-17 — Phase 50.3 reconciliation: tracker was frozen at "19% / IN PROGRESS"
+  since 2026-01-15 with no overlap notes added since. Verified against disk: still
+  only 3 of 28 overlap notes exist (`overlap__sccr.md`, `overlap__motors_drives.md`,
+  `overlap_nfpa79_iec60204__motors_drives.md`); the 3 core files remain complete.
+  No new notes were written — this entry only corrects the stated count. Status
+  remains IN PROGRESS.
 
 ---
 
-**Current Status**: 19% Complete (6 of 31 files)
+**Current Status**: 3 of 28 overlap notes complete (11%); 3 of 3 core files complete (6 of 31 files overall, 19%)
 **Next Step**: Create 3 remaining critical priority files
-**Estimated Completion**: Requires systematic generation of 25 remaining files
+**Estimated Completion**: Requires systematic generation of 25 remaining overlap notes
