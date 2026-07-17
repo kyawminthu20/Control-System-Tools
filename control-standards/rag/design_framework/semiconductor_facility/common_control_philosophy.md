@@ -2,6 +2,7 @@
 AI_READ_ACCESS: ALLOWED
 CONTENT_CLASS: DERIVED_REFERENCE
 CATEGORY: SEMI_FACILITY
+STATUS: DRAFT
 -->
 
 # Common Control Philosophy for Semiconductor Facility Utility Systems

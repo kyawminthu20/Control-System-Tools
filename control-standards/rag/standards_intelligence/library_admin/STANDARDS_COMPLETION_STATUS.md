@@ -1,3 +1,9 @@
+<!--
+CONTENT_CLASS: DERIVED_REFERENCE
+AI_READ_ACCESS: ALLOWED
+STATUS: DRAFT
+-->
+
 # Standards Intelligence - Completion Status Report
 
 **AI_READ_ACCESS: ALLOWED**

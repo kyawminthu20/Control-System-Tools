@@ -1,3 +1,8 @@
+<!--
+AI_READ_ACCESS: ALLOWED
+STATUS: DRAFT
+-->
+
 # Authoritative Standards Overview
 
 **AI_READ_ACCESS: ALLOWED**

@@ -1,3 +1,9 @@
+<!--
+CONTENT_CLASS: DERIVED_REFERENCE
+AI_READ_ACCESS: ALLOWED
+STATUS: DRAFT
+-->
+
 **AI_READ_ACCESS: ALLOWED**
 
 Semiconductor equipment builders such as ASML and Applied Materials do not rely on a single machine-safety standard. Instead they maintain an internal **minimum compliance stack**.

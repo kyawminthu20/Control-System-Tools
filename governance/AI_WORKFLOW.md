@@ -18,6 +18,23 @@ bind agents to this document.
 `archive/` is context; **`control-standards/restricted/` and any
 `drafts_DO_NOT_READ/` path are AI-forbidden** — do not read, cite, or track.
 
+**Corpus file headers.** Every `.md` in `control-standards/rag/` (except
+`README.md`) carries a metadata header — either an HTML comment block at the top
+or inline `**FIELD: value**` lines. Required fields, enforced by
+`tools/release_check.py` (corpus profile):
+
+| Field | Allowed values | Meaning |
+|---|---|---|
+| `AI_READ_ACCESS` | `ALLOWED` | The file may be read/ingested by AI tooling. Anything else (or a forbidden keyword) fails `validate_ai_boundaries.py`. |
+| `CONTENT_CLASS` | `RAG_APPROVED` · `DERIVED_REFERENCE` | `RAG_APPROVED` = paraphrased standards/engineering content; `DERIVED_REFERENCE` = overviews, reference models, admin/tracking, generation notes. |
+| `STATUS` | `DRAFT` · `COMPLETE` · `PROMOTED` | Authoring state of the file itself. Default new files to `DRAFT`. (This is the corpus authoring flag, distinct from the site's 5-term `review:` status vocabulary in CONTENT_STANDARDS §3.) |
+
+Optional: `STANDARD_FAMILY`, `CATEGORY`, and similar routing tags. Two content
+defects are also hard-failed by `tools/validate_corpus_quality.py`:
+conversational AI artifacts ("Would you like…", "If you want, I can…") and empty
+numeric placeholders ("between \*\* and \*\*", "typically  to "). New corpus files
+must carry all three required fields and neither defect, or the gate blocks merge.
+
 ## 2. Branch, Commit, Merge
 
 - Never commit directly to `master`. One phase = one branch:

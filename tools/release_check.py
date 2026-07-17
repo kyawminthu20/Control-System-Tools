@@ -52,11 +52,13 @@ ALLOWED_SITE_STATUSES = {
 }
 REVIEW_FIELDS = {"standard", "edition", "status", "coverage", "last_reviewed"}
 
-# Phase 49b baseline. Reduce these as the legacy metadata rollout proceeds;
-# increases are release failures.
+# Reduce these as the legacy metadata rollout proceeds; increases are release
+# failures. Corpus header debt was driven to zero in Phase 50.2, so any RAG file
+# missing CONTENT_CLASS/STATUS is now a hard failure. Site review-block rollout
+# (Phase 50.9) is still in progress.
 MAX_SITE_PAGES_WITHOUT_REVIEW = 166
-MAX_RAG_WITHOUT_CONTENT_CLASS = 25
-MAX_RAG_WITHOUT_STATUS = 37
+MAX_RAG_WITHOUT_CONTENT_CLASS = 0
+MAX_RAG_WITHOUT_STATUS = 0
 
 
 def _run(command: list[str], cwd: Path = ROOT) -> list[str]:
@@ -219,6 +221,7 @@ def run_toolkit() -> list[str]:
 
 def run_corpus() -> tuple[list[str], list[str]]:
     errors = _run([sys.executable, "tools/validate_ai_boundaries.py"])
+    errors += _run([sys.executable, "tools/validate_corpus_quality.py"])
     errors += check_rag_mirror()
     errors += check_ai_register_generated()
     metadata_errors, warnings = check_rag_metadata()

@@ -1,3 +1,9 @@
+<!--
+CONTENT_CLASS: DERIVED_REFERENCE
+AI_READ_ACCESS: ALLOWED
+STATUS: DRAFT
+-->
+
 # NEC Module - Content Completion Status
 **AI_READ_ACCESS: ALLOWED**
 

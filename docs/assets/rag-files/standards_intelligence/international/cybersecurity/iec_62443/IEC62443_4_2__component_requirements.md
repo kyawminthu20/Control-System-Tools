@@ -1,3 +1,9 @@
+<!--
+CONTENT_CLASS: RAG_APPROVED
+AI_READ_ACCESS: ALLOWED
+STATUS: DRAFT
+-->
+
 # IEC 62443-4-2 — Component Security Requirements
 
 **AI_READ_ACCESS: ALLOWED**

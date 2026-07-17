@@ -3,6 +3,36 @@
 **Last Updated:** 2026-07-16 (Phase 50 recorded — whole-project hardening & hygiene)
 **Status:** Active
 
+## 2026-07-16 — Phase 50.2 — corpus-quality validator + metadata completeness
+
+**Type:** Tooling + governance + corpus metadata. Structural prevention for the 50.1 defect classes.
+**Branch:** `feat/phase50-corpus-quality-validator`.
+
+Root-cause fix so the 50.1 defects cannot recur silently:
+
+- **New `tools/validate_corpus_quality.py`** — hard-fails on conversational AI artifacts
+  ("Would you like…", "If you want, I can…", "Shall I…") and empty numeric placeholders
+  ("between ** and **", "typically  to ", "of  to  times"). Wired into `release_check.py`'s corpus
+  and full profiles; four self-tests in `tests/tools/test_validate_corpus_quality.py` prove it
+  catches both classes, ignores READMEs, and passes clean content (including legitimate ranges like
+  "`PL c` to `PL d`", which an earlier draft pattern false-flagged and was corrected).
+- **Corpus metadata debt driven to zero.** Backfilled `CONTENT_CLASS` and/or `STATUS` on 37 files
+  that lacked them (22 missing CONTENT_CLASS, 37 missing STATUS): iec_62443 clause files →
+  `RAG_APPROVED`; overviews, reference models, admin/tracking, and generation notes →
+  `DERIVED_REFERENCE`; all missing `STATUS` → `DRAFT` (the corpus's conservative default). The
+  `release_check.py` ratchet baselines dropped from 25/37 to **0/0**, so any future RAG file missing
+  a header is now a hard release failure (verified with a probe file).
+- **Header schema documented** in `governance/AI_WORKFLOW.md` §1 — the `AI_READ_ACCESS` /
+  `CONTENT_CLASS` / `STATUS` fields, their allowed values, and the two content defect classes were
+  previously an undocumented convention (the reason authors omitted them); now a governed table with
+  an enforcing validator.
+
+Verification: full release gate PASSED — 160 tests (4 new), 10 doctests, clean build, zero broken
+links, exact mirror and register equality; the two RAG metadata warnings are **gone** (only the
+site review-block backlog warning remains, tracked as 50.9). Mirror regenerated (37 files).
+**Workstream A remaining:** 50.3 `_index.yaml` reconciliation (iec_62443 + offshore absent from the
+standards inventory; case-mismatched software-safety reference).
+
 ## 2026-07-16 — Phase 50.1 — corpus correctness (authoritative-tier defect fixes)
 
 **Type:** Corpus (source-of-truth) correction; site mirror regenerated to match. No toolkit change.

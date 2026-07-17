@@ -1,3 +1,9 @@
+<!--
+CONTENT_CLASS: DERIVED_REFERENCE
+AI_READ_ACCESS: ALLOWED
+STATUS: DRAFT
+-->
+
 # NFPA 79 Standards Intelligence Module
 **AI_READ_ACCESS: ALLOWED**
 **Status:** Foundation Complete - Ready for Content Development

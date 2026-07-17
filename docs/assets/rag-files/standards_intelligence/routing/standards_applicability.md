@@ -1,3 +1,8 @@
+<!--
+AI_READ_ACCESS: ALLOWED
+STATUS: DRAFT
+-->
+
 # Standards Applicability
 
 **AI_READ_ACCESS: ALLOWED**

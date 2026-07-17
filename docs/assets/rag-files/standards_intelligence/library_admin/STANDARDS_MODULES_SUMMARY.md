@@ -1,3 +1,9 @@
+<!--
+CONTENT_CLASS: DERIVED_REFERENCE
+AI_READ_ACCESS: ALLOWED
+STATUS: DRAFT
+-->
+
 # Standards Intelligence Modules - Complete Summary
 **AI_READ_ACCESS: ALLOWED**
 

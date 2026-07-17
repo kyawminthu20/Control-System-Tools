@@ -1,3 +1,9 @@
+<!--
+CONTENT_CLASS: DERIVED_REFERENCE
+AI_READ_ACCESS: ALLOWED
+STATUS: DRAFT
+-->
+
 # IEC 60204-1 Standards Intelligence Module
 **AI_READ_ACCESS: ALLOWED**
 **Status:** Foundation Complete - Ready for Content Development

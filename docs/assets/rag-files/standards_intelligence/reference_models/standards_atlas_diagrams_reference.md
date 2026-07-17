@@ -1,3 +1,9 @@
+<!--
+CONTENT_CLASS: DERIVED_REFERENCE
+AI_READ_ACCESS: ALLOWED
+STATUS: DRAFT
+-->
+
 # Standards Atlas — Diagram Reference Pack
 
 **AI_READ_ACCESS: ALLOWED**

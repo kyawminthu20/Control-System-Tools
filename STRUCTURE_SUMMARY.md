@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-16 23:18:48
+**Last Auto-Updated:** 2026-07-16 23:27:45
 
 ```text
 ├── .claude/
@@ -1738,7 +1738,8 @@
 │       │   ├── test_extract_fe_study.py
 │       │   └── test_inventory_fe_study.py
 │       ├── test_generate_ai_method_register.py
-│       └── test_release_check.py
+│       ├── test_release_check.py
+│       └── test_validate_corpus_quality.py
 ├── tools/
 │   ├── README.md
 │   ├── check_internal_links.py
@@ -1759,6 +1760,7 @@
 │   ├── release_check.py
 │   ├── setup_hooks.sh
 │   ├── validate_ai_boundaries.py
+│   ├── validate_corpus_quality.py
 │   └── validate_reorg.sh
 └── uv.lock
 ```

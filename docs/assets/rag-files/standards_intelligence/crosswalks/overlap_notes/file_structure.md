@@ -1,3 +1,9 @@
+<!--
+CONTENT_CLASS: DERIVED_REFERENCE
+AI_READ_ACCESS: ALLOWED
+STATUS: DRAFT
+-->
+
 **AI_READ_ACCESS: ALLOWED**
 
 rag/standards_intelligence/crosswalks/overlap_notes/

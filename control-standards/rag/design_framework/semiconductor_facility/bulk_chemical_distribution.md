@@ -2,6 +2,7 @@
 AI_READ_ACCESS: ALLOWED
 CONTENT_CLASS: DERIVED_REFERENCE
 CATEGORY: SEMI_FACILITY
+STATUS: DRAFT
 -->
 
 # Bulk Chemical Distribution and Wet Process Systems

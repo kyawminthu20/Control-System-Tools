@@ -1,3 +1,8 @@
+<!--
+AI_READ_ACCESS: ALLOWED
+STATUS: DRAFT
+-->
+
 # Standards Purchase Tracker
 **AI_READ_ACCESS: ALLOWED**
 **CONTENT_CLASS: RAG_APPROVED**
