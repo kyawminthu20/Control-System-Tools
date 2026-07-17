@@ -1,7 +1,77 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-13 (Phase 49b — AI/ML method register complete)
+**Last Updated:** 2026-07-16 (Phase 50 recorded — whole-project hardening & hygiene)
 **Status:** Active
+
+## 2026-07-16 — Phase 50 site slice — AI integration page visualization pass
+
+**Type:** Site presentation change only. The corpus register and `docs/_data/ai_methods/` are untouched.
+**Branch:** `feat/phase50-ai-integration-page-design`. Page remains **Review pending**.
+
+Redesigned `/design/ai-integration/` from a text-and-collapsed-entries register into a visual
+decision path, per the owner-approved proposal (layout approved; content fact-checked against
+`methods.yml` and the Phase 49a findings before build). Added, using the site's existing
+`mermaid-wrap` pattern: (1) the gate question as a decision flowchart — with the corrected logic
+that a deterministic alternative meeting the requirement is *preferred unless* a specific validated
+advantage is demonstrated, and "keep the method offline" as an explicit terminal; (2) the authority
+ladder as a Liquid-generated diagram whose node labels are emitted from `register.authority_levels`
+(cannot drift from data), with the level 4→5 boundary scoped exactly as the register states it
+("no learned method is assigned level 5 in this register"); (3) a new envelope-architecture section
+drawing the Phase 49a convergent pattern (learned policy inside the envelope; verified non-learned
+layer holds the safety function and veto; the safety-function path never routes through the learned
+layer) plus a veto-gate code block whose failure fallback is the register-guaranteed deterministic
+baseline; (4) a two-lane acquisition-path diagram for the kHz rule carrying the four 49a constraints
+(sampling floor, no source-update knowledge, historian compression, segmentation) and blaming the
+path, not OPC UA; and a result-contract JSON showing exactly the page's six required fields, with
+training-set id and authority tag noted as optional strengtheners. Register usability: per-family
+comparison tables (method, max authority, must-beat, maturity) generated from the same data, anchor
+ids on every entry, a maturity/evidence-strength legend, and a leakage-aware validation-split
+callout for the perception family that restates only the rows' own failure-mode/validation fields.
+
+**Content corrections made during fact-check, before build:** removed an invented "ISO 10816"
+baseline and an invented "10–100 ms" scan figure from the draft; replaced paraphrased ladder labels
+with register text; corrected maturity vocabulary to *industrially routine · piloted · research*;
+narrowed the perception callout after verifying all four rows' actual leakage variants.
+
+Gates: full release profile PASSED (155 tests, 10 doctests, 374 boundary files, exact mirror and
+register data, clean Jekyll build, zero broken internal links across 371 files; pre-existing
+non-regression warnings unchanged). Rendered page verified: 4 mermaid blocks, 9 family tables,
+anchors resolve, ladder labels verbatim from data.
+
+## 2026-07-16 — Phase 50 recorded — whole-project audit and next-phase plan
+
+**Type:** Planning and next-phase handoff. No code, site, or corpus changes in this entry.
+**Plan:** `planning/2026-07-16-phase50-hardening-hygiene-plan.md`
+
+Ran a four-track whole-project audit (toolkit, site, corpus/governance, repo hygiene) and reconciled
+it against the accepted `planning/2026-07-13-whole-project-architecture-recommendations.md`.
+
+**Verified complete (execution-sequence rows 1–4):** P0.1 I/O direction (`Tag.io_type` structural,
+heuristic fallback only, `YL-301` → coil with regression tests), P0.2 UL 508A provenance (zero
+`508A:2022` in committed code/site/corpus; only a stale git-ignored local `docs/_site` remains),
+P0.3 mirror (byte-identical, 314 files), release-check module (`tools/release_check.py`, 5 profiles)
+running `--profile full` in CI on push and PR. Audit-day gates all green: 155 tests, 10 doctests,
+clean Jekyll build (3.22 s), zero broken internal links (371 files), 374/374 AI-boundary files,
+`.git` 21 MB, no secrets/PII, no licensed values committed.
+
+**Verified NOT started (rows 5–7):** licensed-table validation + packaging (presence-only key check;
+pymupdf/pypdf still unconditional core deps; wheel ships no schemas/samples), validated-I/O seam
+(duplicate tags silently overwrite loop sheets; generators and most CLI commands skip validation),
+thin CLI + tests (`cli.py` 486 lines and `cite.py` are the only untested modules), site metadata
+rollout and project_state split.
+
+**New findings folded into Phase 50:** unfixed factual defects in the authoritative corpus (NFPA 79
+Ch06 "Chapter 7" numbering, Ch15 "Table 7.2.7" suspect citation, 3 empty placeholders incl.
+IEC 60204-1 Cl05, 3 conversational AI artifacts in reference_models + Cl18) with no validator
+covering these defect classes; undocumented `CONTENT_CLASS`/`STATUS` header schema; `_index.yaml`
+omits iec_62443 and offshore and carries a case-mismatched reference; tracked `temp/` intake (24
+files) violating PROJECT_ORGANIZATION; dead `main.py`; stray tracked root binaries; 34 stale local
+branches; environment.md drift (Python 3.13 pin vs 3.12.7 interpreter; stale test counts);
+283/360 site pages without `review:` blocks (vendor/ and industries/ at zero); 6 duplicate nav
+URLs; 28/129 vendor links dead (all bot-gated Siemens portals).
+
+Phase 49c authorisation state and all AI/ML gates are unchanged. Outstanding owner actions carried
+forward in the plan's "Explicitly Out of Scope" section.
 
 ## 2026-07-13 — Phase 49b — AI/ML method register complete
 
