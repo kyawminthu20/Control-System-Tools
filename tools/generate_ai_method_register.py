@@ -25,6 +25,7 @@ REQUIRED_METHOD_FIELDS = {
     "method",
     "family",
     "does",
+    "example",
     "layer",
     "deterministic_alternative",
     "justified_when",

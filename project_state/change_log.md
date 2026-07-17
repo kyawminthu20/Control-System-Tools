@@ -3,6 +3,32 @@
 **Last Updated:** 2026-07-16 (Phase 50 recorded — whole-project hardening & hygiene)
 **Status:** Active
 
+## 2026-07-16 — Phase 50 slice — per-method examples + context panel on AI integration page
+
+**Type:** Corpus register schema addition + site presentation. Page remains **Review pending**.
+**Branch:** `feat/phase50-register-examples`.
+
+Added a concrete example to every method in the canonical register. Corpus:
+`control-standards/rag/design_framework/ai_integration/methods.yml` gains an `example` field on all
+42 rows, inserted after `does`, each an illustrative typical use kept strictly inside that row's
+own `does`/`justified_when` scope (no new capability or authority claims, no product endorsement).
+Generator: `example` added to `REQUIRED_METHOD_FIELDS` in `tools/generate_ai_method_register.py`
+(enforced, not merely tolerated) with a new `test_register_requires_example` and the fixture
+updated; site data regenerated to `docs/_data/ai_methods/` (exact-equality gate green). Page:
+entry template renders `<dt>Example</dt>`; the how-to-read key documents the field and labels the
+examples illustrative.
+
+Context panel: the page previously showed only the generic status note. Added topic-appropriate
+frontmatter — `related_standards` (ISO 13849-1, IEC 62061, IEC 61511, IEC 61508, IEC 62443, and the
+Software Stack routing page — the functional-safety and OT-cyber standards the register references),
+`lifecycle_stage` (Risk Assessment, Safety Architecture, Detailed Design), and `repo_path` to the
+canonical register — so the right rail now routes to the standards and lifecycle stages the topic
+depends on.
+
+Gates: full release profile PASSED (155→156 tests incl. the new example test, 10 doctests, 374
+boundary files, exact mirror and register data, clean Jekyll build, zero broken internal links);
+rendered page verified — 42 example rows, populated Related Standards and Lifecycle Stage panels.
+
 ## 2026-07-16 — Phase 50 site slice — plain-language pass on the AI integration page
 
 **Type:** Site presentation change only; register data untouched; page remains **Review pending**.

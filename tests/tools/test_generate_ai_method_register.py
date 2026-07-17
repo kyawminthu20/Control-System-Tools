@@ -13,7 +13,8 @@ def _write_register(root: Path, methods: list[dict], sources: list[dict]) -> Non
 def _method(index: int) -> dict:
     return {
         "id": f"method_{index}", "method": f"Method {index}", "family": "estimation",
-        "does": "Estimates a state.", "layer": "edge", "deterministic_alternative": "Observer",
+        "does": "Estimates a state.", "example": "Estimating tank level from noisy sensors.",
+        "layer": "edge", "deterministic_alternative": "Observer",
         "justified_when": "Validated evidence supports it.", "poor_fit_when": "Inputs are unobservable.",
         "data_requirement": "Representative labelled data.", "max_authority": 2,
         "authority_basis": "Conservative advisory ceiling.", "validation_required": "Held-out tests.",
@@ -45,3 +46,9 @@ def test_register_rejects_invalid_authority(tmp_path: Path) -> None:
     methods = [_method(i) for i in range(40)]; methods[0]["max_authority"] = 6
     _write_register(tmp_path, methods, [{"id": "source"}])
     assert any("max_authority" in error for error in validate(tmp_path))
+
+
+def test_register_requires_example(tmp_path: Path) -> None:
+    methods = [_method(i) for i in range(40)]; del methods[0]["example"]
+    _write_register(tmp_path, methods, [{"id": "source"}])
+    assert any("example" in error for error in validate(tmp_path))

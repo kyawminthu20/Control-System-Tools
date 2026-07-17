@@ -12,6 +12,27 @@ review:
   status: "Review pending"
   coverage: "Phase 49b method register; chemical and biological authority evidence remains open"
   last_reviewed: "2026-07-13"
+repo_path: "control-standards/rag/design_framework/ai_integration/methods.yml"
+related_standards:
+  - name: "ISO 13849-1 — safety functions"
+    url: "/standards/functional-safety/iso-13849-1/"
+  - name: "IEC 62061 — safety functions"
+    url: "/standards/functional-safety/iec-62061/"
+  - name: "IEC 61511 — process safety (SIS)"
+    url: "/standards/functional-safety/iec-61511/"
+  - name: "IEC 61508 — E/E/PE lifecycle"
+    url: "/standards/functional-safety/iec-61508/"
+  - name: "IEC 62443 — OT cybersecurity"
+    url: "/standards/cybersecurity/iec-62443/"
+  - name: "Software Stack & Cybersecurity"
+    url: "/design/software-stack/"
+lifecycle_stage:
+  - name: "Risk Assessment"
+    slug: "risk-assessment"
+  - name: "Safety Architecture"
+    slug: "safety-architecture"
+  - name: "Detailed Design"
+    slug: "detailed-design"
 ---
 
 {% assign register = site.data.ai_methods.methods %}
@@ -214,11 +235,13 @@ Use the family sections to scan by problem type. Each family opens with a compar
 entries below it put the poor-fit and failure cases beside the claimed value so method selection
 does not become a capability catalogue.
 
-**How to read an entry.** Every entry answers the same eleven questions, in the same order: what
-it computes; where it runs; the simpler method it must beat; when it earns its place; when it does
-not; how much data it needs; why its authority is capped where it is; the tests it must pass; how
-it fails; what keeps the plant safe anyway; and how strong the evidence is. If an entry's "poor
-fit" line describes your situation, the answer is usually the entry's own "must beat" method.
+**How to read an entry.** Every entry answers the same questions, in the same order: what
+it computes; a concrete example; where it runs; the simpler method it must beat; when it earns its
+place; when it does not; how much data it needs; why its authority is capped where it is; the tests
+it must pass; how it fails; what keeps the plant safe anyway; and how strong the evidence is. If an
+entry's "poor fit" line describes your situation, the answer is usually the entry's own "must beat"
+method. The example lines are illustrative — a typical use that stays within the method's stated
+scope, not a documented deployment or an endorsement of a specific product.
 
 **Maturity** describes deployment reality: *industrially routine* (widely deployed practice),
 *piloted* (documented industrial pilots), *research* (literature and lab evidence only).
@@ -249,6 +272,7 @@ fit" line describes your situation, the answer is usually the entry's own "must 
 
   <dl>
     <dt>Computes</dt><dd>{{ item.does }}</dd>
+    <dt>Example</dt><dd><em>{{ item.example }}</em></dd>
     <dt>Placement</dt><dd>{{ item.layer }}</dd>
     <dt>Must beat</dt><dd>{{ item.deterministic_alternative }}</dd>
     <dt>Use when</dt><dd>{{ item.justified_when }}</dd>
