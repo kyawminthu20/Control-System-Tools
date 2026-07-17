@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-17 13:13:27
+**Last Auto-Updated:** 2026-07-17 13:34:24
 
 ```text
 ├── .claude/
@@ -66,6 +66,7 @@
 │   │   │   ├── ai_integration/
 │   │   │   │   ├── README.md
 │   │   │   │   ├── _index.yaml
+│   │   │   │   ├── digital_twin.md
 │   │   │   │   ├── interfaces_edge.md
 │   │   │   │   ├── methods.yml
 │   │   │   │   ├── model_families.md
@@ -705,6 +706,7 @@
 │   │   │   │       └── pre_power_panel_and_incoming_supply_check.md
 │   │   │   ├── design_framework/
 │   │   │   │   ├── ai_integration/
+│   │   │   │   │   ├── digital_twin.md
 │   │   │   │   │   ├── interfaces_edge.md
 │   │   │   │   │   ├── model_families.md
 │   │   │   │   │   └── safety_boundary.md
@@ -1141,6 +1143,8 @@
 │   │       └── index.md
 │   ├── design/
 │   │   ├── ai-integration/
+│   │   │   ├── digital-twin/
+│   │   │   │   └── index.md
 │   │   │   ├── index.md
 │   │   │   ├── interfaces/
 │   │   │   │   └── index.md

@@ -56,6 +56,12 @@
         "type": "dir",
         "children": [
           {
+            "name": "digital_twin.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/ai_integration/digital_twin.md",
+            "serve_path": "design_framework/ai_integration/digital_twin.md"
+          },
+          {
             "name": "interfaces_edge.md",
             "type": "file",
             "path": "control-standards/rag/design_framework/ai_integration/interfaces_edge.md",

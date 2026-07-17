@@ -18,6 +18,8 @@ files:
     description: "Corpus source for the Interfaces & Handshakes page: edge inference, transport semantics, result contract"
   - file: "model_families.md"
     description: "Corpus source for the Model Families & Fit page: CNN/perception, PINN, LLM — capability and poor fit"
+  - file: "digital_twin.md"
+    description: "Corpus source for the Digital Twin page: twin vs data mirror (ISO 23247), physical/digital directions, authority gate"
 changelog:
   - date: "2026-07-13"
     action: "Added the Phase 49b AI integration method register"
@@ -30,4 +32,7 @@ changelog:
     status: "review pending"
   - date: "2026-07-17"
     action: "Added the model-families corpus note (Slice D); FP64/PINN gap closed (Xu et al. NeurIPS 2025); LLM4PLC and Xia et al. verified as peer-reviewed (ICSE 2024 SEIP; IEEE ETFA 2025)"
+    status: "review pending"
+  - date: "2026-07-17"
+    action: "Added the digital-twin corpus note (Slice E); twin definition and four-domain reference model grounded in ISO 23247 (verified via NIST government publication; ISO body not read)"
     status: "review pending"

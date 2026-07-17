@@ -1,7 +1,45 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (AI-integration expansion — Slice D: Model Families & Fit page)
+**Last Updated:** 2026-07-17 (AI-integration expansion — Slice E: Digital Twin page)
 **Status:** Active
+
+## 2026-07-17 — AI-integration 7-page build, Slice E (Digital Twin)
+
+**Type:** Site content (Design section) + corpus note + register annotation.
+**Branch:** `feat/phase51-ai-integration-digital-twin`.
+
+Added the digital-twin explainer, corpus-first — the "integration spine" page — after re-verifying the
+Phase 49a research note `digital-twin-integration.md` before promotion.
+
+- **Definition grounded in a published framework.** The note's unsourced working definition was replaced
+  with **ISO 23247 (Digital Twin Framework for Manufacturing)**: a *"fit for purpose digital
+  representation of an observable manufacturing element with synchronization between the element and its
+  digital representation."* Four-part series (2021: overview, reference architecture, digital
+  representation, information exchange) + Part 5:2026 (digital thread); four-domain reference model
+  (observable manufacturing / device communication / digital twin / user, plus a cross-system entity).
+  **Verified via a NIST government publication that cites the standard** ("Digital Twins for Advanced
+  Manufacturing: The Standardized Approach"); the ISO body itself was **not read** (ISO catalogue blocks
+  automated retrieval), and the note/page say so.
+- **The load-bearing distinction is now anchored, not asserted:** a live data **mirror** (one-way
+  synchronization — "receives data but gives no control feedback," per the jet-engine example) is not a
+  **behavioural** twin, and physical-to-digital (data integrity) and digital-to-physical (gated action)
+  are separate problems. The digital-to-physical authority ladder is the register's; the twin grants no
+  authority and no safety function routes through it.
+- **Corpus note:** `control-standards/rag/design_framework/ai_integration/digital_twin.md`
+  (RAG_APPROVED/DRAFT) — twin vs mirror; ISO 23247 reference model with the device-communication seam as
+  the authority-critical junction; the two synchronization directions; the twin↔control data contract;
+  the CNN/PINN/LLM families inside the twin at their register ceilings.
+- **Register annotation:** `digital_twin_state_sync` authority_basis notes "ISO 23247 frames the twin
+  but confers no safety authority"; `iso_23247` and `nist_dt_manufacturing` added to `sources.yml` and
+  the row's sources. Data regenerated to `docs/_data/ai_methods/`.
+- **Site page:** `/design/ai-integration/digital-twin/` distils the note (twin-vs-mirror, an original
+  four-domain reference-model diagram, both direction workflows, the digital-to-physical ladder, the
+  data contract). Gate page gained a "digital twin as integration spine" pointer; nav child added;
+  cross-linked. Mirror regenerated (318 files, byte-identical). Full release gate green (180 tests,
+  10 doctests, clean build, 0 broken links, 378 AI-boundary files, corpus-quality clean).
+
+Slice F next: Validation, drift & model lifecycle (+ NIST AI RMF GenAI Profile, deferred from 50.12; +
+model-evidence-ledger template under /tools/templates/).
 
 ## 2026-07-17 — AI-integration 7-page build, Slice D (Model Families & Fit)
 

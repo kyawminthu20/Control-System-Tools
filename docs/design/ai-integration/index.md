@@ -263,6 +263,17 @@ control-loop estimator; an LLM belongs behind a compiler and a human owner, not 
 each family as capability *and* poor fit, including the train/test-leakage trap in the fault-diagnosis
 literature and the FP64/FP32 precision trap that can break a PINN on edge hardware.
 
+## The digital twin as integration spine
+
+The working architecture is a synchronized twin with these model families hanging off it — not "AI
+wired to a PLC." The twin is where the models live; it grants none of them authority. A live data
+mirror (one-way synchronization) is not a behavioural twin, and getting data *in* honestly is a
+different problem from letting the twin act *out*.
+
+**→ [The Digital Twin]({{ '/design/ai-integration/digital-twin/' | relative_url }})** grounds the twin
+vs data-mirror distinction in ISO 23247, treats the physical-to-digital and digital-to-physical
+directions as separate problems, and shows the device-communication seam still gated by the envelope.
+
 ## Interfaces and high-rate data
 
 Analyse the fast signal where it is measured; send the verdict — not the waveform — across the
