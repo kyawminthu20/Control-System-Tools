@@ -26,13 +26,17 @@
 
           {% assign child_active = false %}
           {% if child.children %}
-            {% if page.url contains child.url and child_has_active_gc == false %}{% assign child_active = true %}{% endif %}
+            {% if child.url and page.url contains child.url and child_has_active_gc == false %}{% assign child_active = true %}{% endif %}
           {% else %}
-            {% if page.url contains child.url %}{% assign child_active = true %}{% endif %}
+            {% if child.url and page.url contains child.url %}{% assign child_active = true %}{% endif %}
           {% endif %}
 
           <li>
-            <a href="{{ child.url | relative_url }}" class="sub{% if child_active %} active{% endif %}"{% if child_active %} aria-current="page"{% endif %}>{{ child.label }}</a>
+            {% if child.url %}
+              <a href="{{ child.url | relative_url }}" class="sub{% if child_active %} active{% endif %}"{% if child_active %} aria-current="page"{% endif %}>{{ child.label }}</a>
+            {% else %}
+              <span class="sub sub--group">{{ child.label }}</span>
+            {% endif %}
           </li>
 
           {% if child.children %}

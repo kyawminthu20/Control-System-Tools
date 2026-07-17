@@ -1,7 +1,37 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (Phase 52 UI/UX and content-upgrade recommendation recorded)
+**Last Updated:** 2026-07-17 (Phase 52.1 — state accuracy + navigation hygiene)
 **Status:** Active
+
+## 2026-07-17 — Phase 52.1 (State accuracy and navigation hygiene)
+
+**Type:** Project-state correction + site navigation hygiene (no technical content change).
+**Branch:** `feat/phase52-1-state-nav-hygiene`.
+
+First implementation slice of Phase 52. Validated all four `project_state/` files against reality and
+reconciled the six duplicate navigation URLs flagged in the recommendation.
+
+- **State-file drift fixed.** `how_to.md` claimed "155 tests" — corrected to **180** (+ noted the 10
+  doctests); `how_to.md` and `environment.md` "Last Updated" refreshed to 2026-07-17. Verified accurate
+  and left as-is: `environment.md` runtime baseline (`.python-version` = 3.13, `requires-python >=3.12`,
+  stdlib-only core install, 180 tests) and the `project_state.md` header the owner refreshed in `10177a2`
+  (current delivery / phase / next action / authorization gate all in the first 40 lines). No tracking
+  statement now contradicts `git log` (the earlier stale "Phase 50.5 awaiting owner merge" was already
+  corrected in `10177a2`; 50.5 is on `master` at `ed85dac`).
+- **Six duplicate navigation URLs reconciled.** Each was a group-header parent
+  (`Fundamentals`, `Ethernet Protocols`, `Serial & Device Networks`, `Utility & Substation`,
+  `Diagnostics`, `Guides`) reusing its first child's URL. Removed the `url:` from those six headers so
+  they are now **non-link category labels**; every underlying page stays reachable via its own child
+  entry (e.g. "Ethernet Fundamentals", "DNP3", "Commissioning Templates"). Canonical data now drives the
+  presentation rather than a header standing in for a page.
+- **Template + style.** `docs/_includes/sidebar-global.html` renders a child with no `url` as
+  `<span class="sub sub--group">` instead of an `<a href="">`, and guards the active-state computation
+  against a nil url (Liquid's `contains nil` would otherwise match every page). A minimal
+  `.sub--group` rule in `main.css` styles the header as a non-interactive group label.
+- **Verification.** Duplicate-URL scan of `navigation.yml`: **0**. Built site: the six headers render as
+  `<span>` labels with **0** empty `href` attributes; all pages still build. Full release gate green
+  (180 tests, 10 doctests, clean build, 0 broken links, corpus checks clean). The 166-legacy-page
+  `review:` warning is unchanged (that is Phase 52.4b work).
 
 ## 2026-07-17 — Phase 52 UI/UX and content-upgrade recommendation
 

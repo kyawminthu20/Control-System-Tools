@@ -1,6 +1,6 @@
 # How To
 
-**Last Updated:** 2026-07-10
+**Last Updated:** 2026-07-17
 **Status:** Active
 
 ## Purpose
@@ -64,8 +64,8 @@ at `/tools/templates/` on the site).
 uv run pytest
 ```
 
-The normal suite currently contains 155 tests. Calculator doctests are a
-separate governed check:
+The normal suite currently contains 180 tests. Calculator doctests are a
+separate governed check (10 doctests):
 
 ```bash
 uv run pytest --doctest-modules src/cst

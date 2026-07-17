@@ -291,6 +291,14 @@ tr:nth-child(even) td {
 .sidebar__links .sub:hover {
   color: var(--color-text);
 }
+/* Non-link category header (nav group with children but no page of its own). */
+.sidebar__links .sub--group {
+  display: block;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: default;
+  margin-top: 0.2rem;
+}
 
 /* --- Local Section Sidebar (sidebar-training-group.html) ------------------ */
 /*

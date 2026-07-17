@@ -206,7 +206,6 @@
     - label: "Management of Change"
       url: "/lifecycle/management-of-change/"
     - label: "Guides"
-      url: "/lifecycle/guides/commissioning-templates/"
       children:
         - label: "Commissioning Templates"
           url: "/lifecycle/guides/commissioning-templates/"
@@ -221,7 +220,6 @@
     - "/communications/"
   children:
     - label: "Fundamentals"
-      url: "/communications/ethernet-fundamentals/"
       children:
         - label: "Ethernet Fundamentals"
           url: "/communications/ethernet-fundamentals/"
@@ -234,7 +232,6 @@
         - label: "RS-485 Physical Layer"
           url: "/communications/rs485-physical-layer/"
     - label: "Ethernet Protocols"
-      url: "/communications/ethernet-ip/"
       children:
         - label: "EtherNet/IP"
           url: "/communications/ethernet-ip/"
@@ -249,7 +246,6 @@
         - label: "EtherCAT"
           url: "/communications/ethercat/"
     - label: "Serial &amp; Device Networks"
-      url: "/communications/modbus-rtu-rs485/"
       children:
         - label: "Modbus RTU / RS-485"
           url: "/communications/modbus-rtu-rs485/"
@@ -260,14 +256,12 @@
         - label: "HART"
           url: "/communications/hart/"
     - label: "Utility &amp; Substation"
-      url: "/communications/dnp3/"
       children:
         - label: "DNP3"
           url: "/communications/dnp3/"
         - label: "IEC 61850"
           url: "/communications/iec-61850/"
     - label: "Diagnostics"
-      url: "/communications/wireshark-methodology/"
       children:
         - label: "Troubleshooting Methodology"
           url: "/communications/wireshark-methodology/"
