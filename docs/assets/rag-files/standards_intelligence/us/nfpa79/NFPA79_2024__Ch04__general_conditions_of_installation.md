@@ -20,7 +20,7 @@ INDEX_TAGS:
 
 The electrical equipment must be capable of operating correctly under the specific conditions of its intended installation site.
 
-* **Ambient Temperature:** Standard equipment must operate in air temperatures between ** and ** ( to ). If the environment is hotter (e.g., near a furnace) or colder (e.g., a cold storage facility), specialized cooling or heating systems must be integrated.
+* **Ambient Temperature:** Standard equipment must operate within the ambient air-temperature range specified in NFPA 79:2024 Chapter 4 [numeric range NOT IN LOCAL CORPUS — transcribe from the licensed text before use]. If the environment is hotter (e.g., near a furnace) or colder (e.g., a cold storage facility), specialized cooling or heating systems must be integrated.
 * **Altitude:** Equipment is generally rated for use up to **1000 meters** (3300 feet). Above this, the thinning air reduces the effectiveness of convection cooling and changes the dielectric properties of the air (arcing risk).
 * **Contaminants:** The design must account for "Expected Contaminants" such as oil mist, corrosive chemicals, or conductive dust. This directly dictates the required NEMA or IP rating of the enclosures.
 

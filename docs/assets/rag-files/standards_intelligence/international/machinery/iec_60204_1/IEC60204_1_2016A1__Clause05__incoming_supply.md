@@ -31,7 +31,7 @@ This clause specifies the requirements for the **incoming supply connection** an
 
 The machine builder must specify the electrical parameters required for the machine to operate safely.
 
-* **Voltage and Frequency:** The machine must be designed to withstand a steady-state voltage of  to  times the nominal voltage.
+* **Voltage and Frequency:** The machine must be designed to withstand the steady-state supply-voltage tolerance band about nominal specified in IEC 60204-1:2016+A1:2021 Clause 4.3.2 [numeric tolerance NOT IN LOCAL CORPUS — transcribe from the licensed text before use].
 * **Harmonics and Transients:** The equipment must be immune to specified levels of voltage dips, surges, and harmonic distortion common in industrial grids.
 * **Type of System:** The documentation must state whether the machine is compatible with **TN, TT, or IT** earthing systems.
 

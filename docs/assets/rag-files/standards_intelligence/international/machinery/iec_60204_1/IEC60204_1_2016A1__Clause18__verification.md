@@ -50,7 +50,3 @@ Verification is not just a factory task; it must align with the final installati
 
 * 2026-01-15 — Initial draft created.
 * 2026-01-16 — Added specific testing parameters (500V DC for insulation, 1s for voltage test) per 2018 edition updates.
-
----
-
-### You have now covered the core of the standard. Would you like to move on to the **Annexes**, specifically **Annex A**, which provides the detailed guidance on **Protection against indirect contact in TN systems**?

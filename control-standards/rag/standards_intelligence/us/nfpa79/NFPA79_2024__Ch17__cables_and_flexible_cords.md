@@ -25,7 +25,7 @@ The scope of Chapter 17 includes the selection and application of **flexible cor
 In industrial machinery, cables are often required to move repeatedly. NFPA 79 distinguishes between "flexible" use and "continuous flex" use:
 
 * **Continuous Flex (Drag Chains):** Cables used in power tracks or cable carriers must be specifically rated for that purpose. Standard THHN wire will fail quickly under these conditions. These cables must have fine-stranded conductors and specialized jackets (like PUR or TPE) to prevent "corkscrewing" or internal wire breakage.
-* **Bend Radius:** The standard mandates that the inner bend radius of a flexible cable must not be less than a specific multiple of the cable's diameter (typically  to  depending on the cable type). Exceeding this limit leads to insulation fatigue.
+* **Bend Radius:** The standard mandates that the inner bend radius of a flexible cable must not be less than a specific multiple of the cable's diameter [multiplier range NOT IN LOCAL CORPUS — transcribe from the licensed text before use, depending on cable type]. Exceeding this limit leads to insulation fatigue.
 * **Torsional Stress:** For robotic applications where the cable twists (6-axis movement), cables must be rated for "Torsion" to ensure the shielding and conductors can rotate without binding.
 
 ## 2. Strain Relief and Protection

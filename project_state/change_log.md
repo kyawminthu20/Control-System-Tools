@@ -3,6 +3,40 @@
 **Last Updated:** 2026-07-16 (Phase 50 recorded — whole-project hardening & hygiene)
 **Status:** Active
 
+## 2026-07-16 — Phase 50.1 — corpus correctness (authoritative-tier defect fixes)
+
+**Type:** Corpus (source-of-truth) correction; site mirror regenerated to match. No toolkit change.
+**Branch:** `fix/phase50-corpus-correctness`.
+
+Fixed the long-standing authoritative-tier defects catalogued in the 2026-07-16 audit, including two
+conversational artifacts the whole-tree grep found that earlier lists had missed:
+
+- **Conversational AI artifacts removed/neutralized (5).** Two lead-ins that precede real
+  cross-reference content were rewritten as neutral references (`reference_models/Universal Machine
+  Safety Architecture.md`, `7-Layer Industrial Machine Architecture Model.md`); three trailing
+  conversational offers were deleted (`crosswalks/overlap_matrix/standards_decision_workflow.md`,
+  `crosswalks/overlap_matrix/standards_overlap.md`, `iec_60204_1/…Clause18__verification.md`).
+- **NFPA 79 Ch06 numbering bug fixed.** The overcurrent-protection file called itself "Chapter 7"
+  twice in body text (metadata was already correct); both now read "Chapter 6".
+- **NFPA 79 Ch15 suspect citation flagged.** The unverifiable "Table 7.2.7" transformer-protection
+  citation is replaced with an inline "table reference unverified — confirm the exact number"
+  flag rather than a guessed number.
+- **Three empty placeholders gap-flagged, not fabricated.** NFPA 79 Ch04 ambient-temperature range,
+  Ch17 bend-radius multiplier, and IEC 60204-1 Clause 05 voltage-tolerance band carried blank
+  values (`between ** and **`, `typically  to `, `of  to  times`). Per the plan and the repo's
+  copyright posture (numeric table values are not stored) and because the licensed text is not
+  available to verify here, each is replaced with an explicit "NOT IN LOCAL CORPUS — transcribe from
+  the licensed text before use" flag pointing at the governing clause.
+- **`iec_60204_1/README.md` stub replaced** with a real module README (clause map, edition note,
+  copyright/placeholder policy).
+
+Verification: whole-tree grep shows zero residual conversational artifacts and zero empty
+placeholders; RAG mirror regenerated (314 files, byte-identical); full release gate PASSED (156
+tests, 10 doctests, clean build, zero broken links, exact mirror and register equality). Pre-existing
+metadata-completeness warnings (CONTENT_CLASS/STATUS) are unchanged — that is the separate 50.2 slice.
+Still open in Workstream A: the corpus-quality validator (50.2) and `_index.yaml` reconciliation
+(50.3).
+
 ## 2026-07-16 — Phase 50 slice — per-method examples + context panel on AI integration page
 
 **Type:** Corpus register schema addition + site presentation. Page remains **Review pending**.

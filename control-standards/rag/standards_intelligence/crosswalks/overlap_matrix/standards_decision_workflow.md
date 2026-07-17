@@ -333,5 +333,3 @@ doc_stage: design
   * Reads `us_eu_wizard_rules.yaml`
   * For each `topic_id`, pulls the overlap note + anchors
   * Writes `us_eu_delta_report.md` with **market-specific deltas**
-
-If you want, I can generate the **actual first-pass delta report** for a typical Amazon-style conveyor/robot cell profile (using reasonable defaults), so you can see what the wizard output looks like in practice.

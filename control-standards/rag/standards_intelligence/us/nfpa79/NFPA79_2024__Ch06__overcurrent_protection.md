@@ -17,7 +17,7 @@ INDEX_TAGS:
 
 ## 0. Intent
 
-The intent of Chapter 7 is to define the requirements for protecting machine conductors and equipment against the effects of excessive current. It aims to:
+The intent of Chapter 6 is to define the requirements for protecting machine conductors and equipment against the effects of excessive current. It aims to:
 
 * **Prevent Fire:** By ensuring wires do not reach temperatures that could ignite insulation.
 * **Minimize Damage:** By interrupting short circuits before they cause catastrophic failure of components like contactors or PLCs.
@@ -42,6 +42,6 @@ A major requirement in the 2024 edition is the calculation and labeling of the *
 
 Overcurrent protection directly influences how the control system is wired and how it behaves during a fault:
 
-* **Common Control Feed:** If a single OCPD protects multiple control circuits, a minor fault in one sensor could take down the entire safety system. Chapter 7 encourages (and in some cases requires) "selective coordination" or individual circuit protection to maintain machine uptime and safety monitoring.
+* **Common Control Feed:** If a single OCPD protects multiple control circuits, a minor fault in one sensor could take down the entire safety system. Chapter 6 encourages (and in some cases requires) "selective coordination" or individual circuit protection to maintain machine uptime and safety monitoring.
 * **Transformers and Power Supplies:** Specific rules apply to the protection of the primary and secondary sides of control transformers and DC power supplies to prevent "nuisance tripping" during the high inrush current of firing up the machine.
 * **Grounded Circuits:** Overcurrent devices must **not** be placed in the grounded conductor (the neutral or common), as opening that circuit could leave the rest of the system "hot" even though it appears dead.

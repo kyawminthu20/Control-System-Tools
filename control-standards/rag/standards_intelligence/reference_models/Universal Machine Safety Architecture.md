@@ -392,7 +392,7 @@ They maintain internal **machine architecture templates** like the one above.
 
 ---
 
-If you want, I can also show you something extremely useful for your project:
+A related reference model:
 
 **The 7-layer Industrial Machine Architecture Model**
 

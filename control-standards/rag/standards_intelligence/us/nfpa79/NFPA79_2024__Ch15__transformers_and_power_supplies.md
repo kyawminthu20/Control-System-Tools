@@ -34,7 +34,7 @@ This is one of the most technical safety areas in the standard. How you ground t
 
 * **Grounded Systems (Common):** One side of the secondary circuit (usually the "common" or X2 terminal) is bonded to the machine's protective earth (PE). This ensures that a ground fault on any signal wire will immediately trip the fuse or breaker, stopping the machine.
 * **Ungrounded Systems (Rare):** If the secondary is left "floating" (ungrounded), a ground-fault detection system must be installed to provide an alert or a stop command. This is usually only seen in specific continuous-process industries where an immediate trip is more hazardous than a single ground fault.
-* **Overcurrent Protection:** Every transformer must have overcurrent protection on the secondary side. Primary side protection is also required, and the sizing must follow the ratios specified in **Table 7.2.7**, which accounts for the high "magnetizing" inrush of the transformer itself.
+* **Overcurrent Protection:** Every transformer must have overcurrent protection on the secondary side. Primary side protection is also required, and the sizing must follow the primary/secondary overcurrent-protection ratios specified in NFPA 79:2024 Chapter 15 [table reference unverified against the licensed text — confirm the exact table number before citing], which account for the high "magnetizing" inrush of the transformer itself.
 
 ## 3. Change Log
 

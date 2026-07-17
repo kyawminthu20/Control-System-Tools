@@ -829,9 +829,6 @@ Use these as canonical cross-links between the chapter/clause templates you alre
 
 ---
 
-If you want, I can generate the **per-topic overlap notes** for **NFPA 79 ↔ IEC 60204-1** (like you did for UL↔NEC↔NFPA) so your tool can answer:
-“US build vs EU build—what changes?”
-
 [1]: https://link.nfpa.org/all-publications/79/2021?utm_source=chatgpt.com "NFPA 79 - Electrical Standard for Industrial Machinery"
 [2]: https://www.gt-engineering.it/en/technical-standards/ul-and-nfpa-standards/industrial-machinery/nfpa-79-2021-chapter-5-disconnecting-means/?utm_source=chatgpt.com "NFPA 79 - 2021, Chapter 5: Disconnecting Means"
 [3]: https://www.certifico.com/component/attachments/download/3856?utm_source=chatgpt.com "IEC 60204-1"

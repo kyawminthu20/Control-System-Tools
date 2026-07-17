@@ -329,7 +329,7 @@ This would allow your system to automatically answer:
 
 ---
 
-If you want, I can also show you the **much deeper model used by large automation companies**:
+A deeper, more granular reference model:
 
 **The 12-Layer Industrial Automation Stack**
 
