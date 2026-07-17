@@ -29,3 +29,23 @@ data/standards_tables/
 ├── samples/             (committed — structure examples with FAKE values)
 └── *.json               (NOT committed — your transcribed licensed values)
 ```
+
+## Where the loader looks
+
+`load_table(name)` (no explicit `tables_dir`) resolves the directory in order:
+
+1. **`CST_TABLES_DIR`** environment variable, if set — point this at your
+   licensed-table directory when using an installed wheel (no source checkout).
+2. This repo's `data/standards_tables/` when running from a checkout.
+3. Samples + schemas **bundled inside the installed package** (`cst/_bundled_tables/`)
+   — so a `pip install`'d toolkit runs the samples and validates rows out of the box.
+
+Licensed values are still never packaged; only the FAKE-valued samples and the
+schemas ship in the wheel.
+
+## Validation at load
+
+The loader rejects a file (with an actionable message naming the file) when its
+`source` block is missing any of `standard` / `edition` / `table`, when `data`
+is not a list of objects, or — for tables with a mapped schema — when a row is
+missing a schema-`required` field. Fix the file, don't work around the error.

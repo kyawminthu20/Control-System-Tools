@@ -52,14 +52,19 @@ If a dependency, version, environment variable, toolchain rule, or deployment ta
 
 ## Current Python Dependencies
 
-- `src/cst/` package: standard library only (by design)
-- `pymupdf`, `pypdf`: optional PDF extractors consumed only by `tools/fe_study/`
+- `src/cst/` package: standard library only (by design) — core install has **no runtime dependencies** (`pip show control-system-tools` → `Requires:` empty)
+- `pymupdf`, `pypdf`: PDF extractors for `tools/fe_study/` only, now an **optional extra** (`[project.optional-dependencies] fe-study`), no longer core deps. Install with `uv sync --extra fe-study`. The fe_study pipeline degrades gracefully when they are absent (lazy, ImportError-guarded).
+- `pycomm3`: optional extra `plc` (live PLC comms helpers)
 - Dev group: `pytest` (installed by `uv sync`)
-- Packaging: hatchling build backend; `uv sync` installs the project editable with the `cst` console script
+- Packaging: hatchling build backend; `uv sync` installs the project editable with the `cst` console script. The wheel force-includes `data/standards_tables/{samples,schemas}` as `cst/_bundled_tables/` so an installed toolkit finds samples/schemas without a source checkout.
 
 ## Environment Variables
 
-- none required currently
+- `CST_TABLES_DIR` (optional) — directory holding user-transcribed licensed
+  standards-table JSON. Highest-priority location for `cst.common.tables.load_table`;
+  lets an installed wheel find licensed data with no source checkout. When unset,
+  the loader falls back to the repo `data/standards_tables/` (checkout) then the
+  samples/schemas bundled in the package.
 
 ## Site Analytics
 
@@ -70,7 +75,7 @@ If a dependency, version, environment variable, toolchain rule, or deployment ta
 ## Validation And Automation Commands
 
 - `uv run python tools/release_check.py --profile full` (governed release/deployment gate)
-- `uv run pytest` (155 tests: cst package + repository tools)
+- `uv run pytest` (180 tests: cst package + repository tools)
 - `uv run pytest --doctest-modules src/cst` (calculator doctests)
 - `python3 tools/project_automator.py`
 - `python3 tools/validate_ai_boundaries.py`

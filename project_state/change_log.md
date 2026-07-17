@@ -1,7 +1,35 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (Phase 50.4 merged to master; 50.13 vocabulary drafted)
+**Last Updated:** 2026-07-17 (Phase 50.5 — licensed-table module + packaging cleanup)
 **Status:** Active
+
+## 2026-07-17 — Phase 50.5 — licensed-table module + packaging cleanup
+
+**Type:** Toolkit correctness + packaging (Workstream B).
+**Branch:** `feat/phase50-licensed-tables` (off `master`).
+
+Closed all three open defects the plan flagged for the licensed-table loader and packaging:
+
+- **Load-time validation (TDD):** `cst.common.tables._parse` now rejects, with an actionable
+  message naming the file, a `source` that is not an object or is missing any of
+  `standard`/`edition`/`table` (previously passed silently — `source_label` printed `?`), a `data`
+  value that is not a list of objects, and — for tables with a mapped committed schema
+  (`_SCHEMA_FOR`) — any row missing a schema-`required` field. Row validation reads the required
+  keys straight from `schemas/<name>.schema.json`, so it stays in lockstep with the schemas and adds
+  no dependency. 5 new loader tests (12 total in `test_tables.py`).
+- **Install without a checkout:** the wheel now force-includes `data/standards_tables/{samples,schemas}`
+  as `cst/_bundled_tables/`. `load_table` resolves its default directory as **`CST_TABLES_DIR` env
+  var → repo `data/` checkout → bundled package data**, and falls back to bundled samples when the
+  user dir has none. Verified by building the wheel, installing it in a clean venv, and loading a
+  sample + resolving its bundled schema from `/tmp` with no source tree present.
+- **Stdlib-only core install:** `pymupdf`/`pypdf` moved out of core `dependencies` into an optional
+  `fe-study` extra (they serve only `tools/fe_study/`, whose imports are already lazy +
+  ImportError-guarded). `pip show control-system-tools` → `Requires:` empty. `pycomm3` documented as
+  the `plc` extra. `uv sync` now yields a dependency-free core + pytest.
+
+README (`data/standards_tables/`) documents the resolution order and validation; `environment.md`
+updated for the dependency move, the new `CST_TABLES_DIR` variable, and the corrected test count
+(155 → 180). Full suite **180 passed**; full release gate green.
 
 ## 2026-07-17 — Phase 50.4 merged to master + 50.13 classification vocabulary drafted
 

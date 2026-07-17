@@ -15,12 +15,12 @@ wheels = [
 name = "control-system-tools"
 version = "0.2.0"
 source = { editable = "." }
-dependencies = [
+
+[package.optional-dependencies]
+fe-study = [
     { name = "pymupdf" },
     { name = "pypdf" },
 ]
-
-[package.optional-dependencies]
 plc = [
     { name = "pycomm3" },
 ]
@@ -33,10 +33,10 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "pycomm3", marker = "extra == 'plc'", specifier = ">=1.2" },
-    { name = "pymupdf", specifier = ">=1.27.2" },
-    { name = "pypdf", specifier = ">=6.8.0" },
+    { name = "pymupdf", marker = "extra == 'fe-study'", specifier = ">=1.27.2" },
+    { name = "pypdf", marker = "extra == 'fe-study'", specifier = ">=6.8.0" },
 ]
-provides-extras = ["plc"]
+provides-extras = ["plc", "fe-study"]
 
 [package.metadata.requires-dev]
 dev = [{ name = "pytest", specifier = ">=8.0" }]

@@ -4,16 +4,18 @@ version = "0.2.0"
 description = "Control systems engineering toolkit: standards-cited calculators, motion utilities, and panel/commissioning generators"
 readme = "README.md"
 requires-python = ">=3.12"
-# Core package (src/cst) is stdlib-only by design.
-# pymupdf/pypdf are consumed only by tools/fe_study/ document extraction.
-dependencies = [
-    "pymupdf>=1.27.2",
-    "pypdf>=6.8.0",
-]
+# Core package (src/cst) is stdlib-only by design — no runtime dependencies.
+dependencies = []
 
 [project.optional-dependencies]
 # Live PLC comms helpers (cst.plc.comms)
 plc = ["pycomm3>=1.2"]
+# PDF text extraction for the tools/fe_study/ intake pipeline (dev tooling only,
+# never imported by the cst package). Install with: uv sync --extra fe-study
+fe-study = [
+    "pymupdf>=1.27.2",
+    "pypdf>=6.8.0",
+]
 
 [project.scripts]
 cst = "cst.cli:main"
@@ -29,6 +31,14 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/cst"]
+
+# Ship the non-licensed sample + schema files inside the wheel so an installed
+# toolkit finds them without a source checkout (src/cst/common/tables.py resolves
+# cst/_bundled_tables when the repo data/ path is absent). Licensed table VALUES
+# are never packaged — users supply those via CST_TABLES_DIR.
+[tool.hatch.build.targets.wheel.force-include]
+"data/standards_tables/samples" = "cst/_bundled_tables/samples"
+"data/standards_tables/schemas" = "cst/_bundled_tables/schemas"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
