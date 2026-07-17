@@ -84,6 +84,12 @@
             "type": "file",
             "path": "control-standards/rag/design_framework/ai_integration/validation_lifecycle.md",
             "serve_path": "design_framework/ai_integration/validation_lifecycle.md"
+          },
+          {
+            "name": "worked_architectures.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/ai_integration/worked_architectures.md",
+            "serve_path": "design_framework/ai_integration/worked_architectures.md"
           }
         ]
       },

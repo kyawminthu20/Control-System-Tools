@@ -22,6 +22,8 @@ files:
     description: "Corpus source for the Digital Twin page: twin vs data mirror (ISO 23247), physical/digital directions, authority gate"
   - file: "validation_lifecycle.md"
     description: "Corpus source for the Validation & Lifecycle page: data lineage, drift/OOD, uncertainty, rollback, MoC, NIST AI RMF, model-evidence ledger"
+  - file: "worked_architectures.md"
+    description: "Corpus source for the Worked Architectures page: vision cell, predictive-maintenance, PINN soft sensor, read-only LLM copilot — each on the ladder"
 changelog:
   - date: "2026-07-13"
     action: "Added the Phase 49b AI integration method register"
@@ -40,4 +42,7 @@ changelog:
     status: "review pending"
   - date: "2026-07-17"
     action: "Added the validation-lifecycle corpus note (Slice F); NIST AI RMF Generative AI Profile (NIST AI 600-1) verified at publisher (deferred from 50.12); model-evidence ledger promoted to a downloadable template"
+    status: "review pending"
+  - date: "2026-07-17"
+    action: "Added the worked-architectures corpus note (Slice G, final page); four worked examples on the ladder, composing Slices B-F with no new technical claims"
     status: "review pending"

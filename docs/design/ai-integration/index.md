@@ -286,6 +286,16 @@ maps those demands onto the NIST AI RMF Govern/Map/Measure/Manage functions (wit
 Profile for LLM components) and provides a downloadable
 [model-evidence ledger]({{ '/assets/templates/ai_model_evidence_ledger.md' | relative_url }}).
 
+## Worked architectures
+
+Four end-to-end examples pull the whole section together — a vision inspection cell, a
+predictive-maintenance pipeline, a PINN soft sensor, and a read-only LLM copilot — each walked through
+the ladder: which rung the evidence supports, and what stays independent when the model is wrong.
+
+**→ [Worked Architectures]({{ '/design/ai-integration/worked-architectures/' | relative_url }})** shows
+the envelope pattern applied concretely: three of the four top out at advisory, none holds a safety
+function, and every result crosses as a gated contract.
+
 ## Interfaces and high-rate data
 
 Analyse the fast signal where it is measured; send the verdict — not the waveform — across the

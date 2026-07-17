@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-17 14:30:09
+**Last Auto-Updated:** 2026-07-17 14:35:59
 
 ```text
 ├── .claude/
@@ -72,7 +72,8 @@
 │   │   │   │   ├── model_families.md
 │   │   │   │   ├── safety_boundary.md
 │   │   │   │   ├── sources.yml
-│   │   │   │   └── validation_lifecycle.md
+│   │   │   │   ├── validation_lifecycle.md
+│   │   │   │   └── worked_architectures.md
 │   │   │   ├── constraints/
 │   │   │   │   └── grounding_bonding_rules.yaml
 │   │   │   ├── design_guides/
@@ -711,7 +712,8 @@
 │   │   │   │   │   ├── interfaces_edge.md
 │   │   │   │   │   ├── model_families.md
 │   │   │   │   │   ├── safety_boundary.md
-│   │   │   │   │   └── validation_lifecycle.md
+│   │   │   │   │   ├── validation_lifecycle.md
+│   │   │   │   │   └── worked_architectures.md
 │   │   │   │   ├── design_guides/
 │   │   │   │   │   └── 02_power_distribution_guide.md
 │   │   │   │   ├── electrical_review/
@@ -1157,7 +1159,9 @@
 │   │   │   │   └── index.md
 │   │   │   ├── safety-boundaries/
 │   │   │   │   └── index.md
-│   │   │   └── validation-lifecycle/
+│   │   │   ├── validation-lifecycle/
+│   │   │   │   └── index.md
+│   │   │   └── worked-architectures/
 │   │   │       └── index.md
 │   │   ├── architecture/
 │   │   │   ├── compliance-stack/

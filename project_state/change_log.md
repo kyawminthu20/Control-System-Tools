@@ -1,7 +1,36 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (AI-integration expansion — Slice F: Validation & Lifecycle page)
+**Last Updated:** 2026-07-17 (AI-integration expansion — Slice G: Worked Architectures — 7-page build COMPLETE)
 **Status:** Active
+
+## 2026-07-17 — AI-integration 7-page build, Slice G (Worked Architectures) — build COMPLETE
+
+**Type:** Site content (Design section) + corpus note. **Final page of the seven.**
+**Branch:** `feat/phase51-ai-integration-worked-architectures`.
+
+Added the closing page — four end-to-end worked architectures, each walked through the authority
+ladder. **Introduces no new technical claims**; it composes the positions verified across Slices B–F.
+
+- **Corpus note:** `control-standards/rag/design_framework/ai_integration/worked_architectures.md`
+  (RAG_APPROVED/DRAFT) — vision inspection cell (2-D CNN, advisory, PLC owns the reject action);
+  predictive-maintenance pipeline (1-D CNN, advisory, edge inference, the leakage + fleet caveats);
+  PINN soft sensor (level 1–2, never closes the loop, FP64 + silent-failure caveats, cross-checked
+  against measurements); read-only LLM copilot (advisory; offline for drafted code; GenAI Profile;
+  no write). Each answered in four beats — the job, the rung (and why not higher), what stays
+  independent, the seam and the gated contract.
+- **Site page:** `/design/ai-integration/worked-architectures/` distils the note (a summary table, the
+  four walkthroughs, an original shared-envelope diagram). Gate page gained a "worked architectures"
+  pointer; nav child added; cross-linked to every other page in the section. Mirror regenerated
+  (320 files, byte-identical); no register-data change this slice. Full release gate green (180 tests,
+  10 doctests, clean build, 0 broken links, 380 AI-boundary files, corpus-quality clean).
+
+**The seven-page AI-integration expansion is COMPLETE and deployed** (all pages Review pending):
+gate `/design/ai-integration/` · method-register · safety-boundaries · interfaces · model-families ·
+digital-twin · validation-lifecycle · worked-architectures, plus the downloadable model-evidence
+ledger. All corpus-first, all gates green, all deploy-verified. **Author review of the eight
+Review-pending pages is the outstanding follow-up.** Remaining Phase 50 backlog (Workstream D site
+editorial: `review:` rollout for 166 legacy pages; IEC 62061 Ed 2.2 rebuild) and Phase 49c
+(chem/bio authority, unauthorised) are unaffected by this build.
 
 ## 2026-07-17 — AI-integration 7-page build, Slice F (Validation, Drift & Model Lifecycle)
 
