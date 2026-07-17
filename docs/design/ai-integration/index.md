@@ -252,55 +252,16 @@ page so it can be scanned by problem type without scrolling past the gate above.
 Every row is scored against the ladder and the envelope architecture on this page: no learned method
 is assigned level 5 or a safety function, and chemical and biological rows remain Planned.
 
-## Interface rule for high-rate data
+## Interfaces and high-rate data
 
-In plain terms: analyse the fast signal where it is measured, and send the verdict — not the
-waveform — across the network. Do not assume a conventional PLC scan → embedded OPC UA server →
-historian polling path can reconstruct a kHz waveform. Perform high-rate acquisition and inference where the signal is sampled,
-then publish the lower-rate result with its class or estimate, confidence or uncertainty, model
-version, timestamp, quality, and freshness. OPC UA PubSub/TSN can support different architectures;
-the limitation is the chosen acquisition path, not OPC UA as a whole.
+Analyse the fast signal where it is measured; send the verdict — not the waveform — across the
+network. Neither OPC UA nor Sparkplug assigns an AI result a standard meaning or authority, so the
+inference service stays **publish-only** and you define the result contract explicitly.
 
-<div class="mermaid-wrap">
-<pre class="mermaid">
-flowchart LR
-    subgraph BAD["✗ This acquisition path cannot reconstruct a kHz waveform"]
-      direction LR
-      V1["Vibration sensor<br/>sampled at kHz"] --> P1["Conventional PLC scan<br/>(ms-class)"] --> O1["Embedded OPC UA server<br/>sampling floor · no knowledge of the<br/>source's update logic, so the waveform<br/>cannot be recovered by oversampling"] --> H1["Historian polling<br/>+ compression by design"]
-    end
-    subgraph GOOD["✓ Acquire and infer where the signal is sampled"]
-      direction LR
-      V2["Vibration sensor<br/>sampled at kHz"] --> EDGE["Edge acquisition<br/>+ inference at the source"] --> R["Result contract<br/>class · confidence · model version<br/>timestamp · quality · freshness"] --> O2["OPC UA / Sparkplug<br/>publish at process rate"] --> C2["PLC / SCADA /<br/>historian"]
-    end
-    classDef bad fill:#faeeec,stroke:#a33327,color:#1e1e1e
-    classDef good fill:#eef4ed,stroke:#3a6b35,color:#1e1e1e
-    classDef neutral fill:#f2f2ef,stroke:#a0a09a,color:#1e1e1e
-    class V1,P1,O1,H1 bad
-    class EDGE,R,O2 good
-    class V2,C2 neutral
-</pre>
-</div>
-
-Network segmentation between the cell and supervisory layers constrains the same path further:
-publishing a compact result crosses zone boundaries on terms a raw waveform stream does not.
-
-OPC UA and Sparkplug provide transport and state mechanisms, but neither gives an AI result a
-standard semantic meaning or authority. Define and test that application contract explicitly.
-As a payload, the required fields look like this:
-
-```json
-{
-  "result":        "bearing_outer_race_fault",
-  "confidence":    0.87,
-  "model_version": "vib-cnn 2.3.1",
-  "timestamp_utc": "2026-07-16T09:41:07Z",
-  "quality":       "GOOD",
-  "freshness_ms":  250
-}
-```
-
-Two optional fields strengthen the contract: a training-set identifier makes drift auditable, and
-an explicit authority tag lets consumers enforce the ceiling at the point of use.
+**→ [Interfaces &amp; Handshakes]({{ '/design/ai-integration/interfaces/' | relative_url }})** covers
+the four constraints that put inference at the edge (not "the protocol is too slow"), what OPC UA and
+Sparkplug do and do not give you, write-authority separation via the OPC UA Observer role, and the
+result-contract payload.
 
 ## Domain limits
 

@@ -1,7 +1,31 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (AI-integration expansion — Slice B: Safety & Security Boundaries page)
+**Last Updated:** 2026-07-17 (AI-integration expansion — Slice C: Interfaces & Handshakes page)
 **Status:** Active
+
+## 2026-07-17 — AI-integration 7-page build, Slice C (Interfaces & Handshakes)
+
+**Type:** Site content (Design section) + corpus note.
+**Branch:** `feat/phase51-ai-integration-interfaces`.
+
+Moved the interface material off the crowded gate page into its own page and expanded it, corpus-first.
+
+- **Corpus note:** `control-standards/rag/design_framework/ai_integration/interfaces_edge.md`
+  (RAG_APPROVED/DRAFT) — the rule (infer at the edge, publish the verdict); the **four constraints**
+  that put inference at the edge (server sampling floor; decoupled-source aliasing; historian
+  compression; segmentation) with the "kHz is not a protocol limit" correction; what OPC UA and
+  Sparkplug do/don't give (no AI companion spec, coarse StatusCode → Structured DataTypes, `Uncertain_*`,
+  Part 9 Alarms; Sparkplug per-metric properties + birth/death liveness); write-authority separation
+  via the OPC UA Observer role; the result contract; NIST SP 800-82r3 OT placement.
+- **Verification correction:** the Phase 49a note claimed Sparkplug B has a "first-class STALE quality."
+  That could **not** be confirmed against the Sparkplug specification during Slice C, so it was replaced
+  with the verified birth/death-certificate liveness mechanism — the page does not ship the unverified claim.
+- **Site page:** `/design/ai-integration/interfaces/` distils the note (two acquisition-path diagrams
+  moved from the gate, an OPC-UA-vs-Sparkplug capability table, the result-contract JSON). The gate
+  page's long "Interface rule" section is replaced by a two-sentence pointer. `_index.yaml` updated;
+  mirror regenerated (316 files); nav child added; cross-linked. Full release gate green.
+
+Slice D next: Model families & fit (close FP64/PINN + arXiv-preprint gaps first).
 
 ## 2026-07-17 — AI-integration 7-page build, Slice B (Safety & Security Boundaries)
 

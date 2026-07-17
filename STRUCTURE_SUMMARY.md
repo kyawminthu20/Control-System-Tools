@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-17 11:01:52
+**Last Auto-Updated:** 2026-07-17 11:30:52
 
 ```text
 ├── .claude/
@@ -66,6 +66,7 @@
 │   │   │   ├── ai_integration/
 │   │   │   │   ├── README.md
 │   │   │   │   ├── _index.yaml
+│   │   │   │   ├── interfaces_edge.md
 │   │   │   │   ├── methods.yml
 │   │   │   │   ├── safety_boundary.md
 │   │   │   │   └── sources.yml
@@ -703,6 +704,7 @@
 │   │   │   │       └── pre_power_panel_and_incoming_supply_check.md
 │   │   │   ├── design_framework/
 │   │   │   │   ├── ai_integration/
+│   │   │   │   │   ├── interfaces_edge.md
 │   │   │   │   │   └── safety_boundary.md
 │   │   │   │   ├── design_guides/
 │   │   │   │   │   └── 02_power_distribution_guide.md
@@ -1138,6 +1140,8 @@
 │   ├── design/
 │   │   ├── ai-integration/
 │   │   │   ├── index.md
+│   │   │   ├── interfaces/
+│   │   │   │   └── index.md
 │   │   │   ├── method-register/
 │   │   │   │   └── index.md
 │   │   │   └── safety-boundaries/

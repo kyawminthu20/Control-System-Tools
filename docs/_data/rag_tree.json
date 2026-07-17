@@ -56,6 +56,12 @@
         "type": "dir",
         "children": [
           {
+            "name": "interfaces_edge.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/ai_integration/interfaces_edge.md",
+            "serve_path": "design_framework/ai_integration/interfaces_edge.md"
+          },
+          {
             "name": "safety_boundary.md",
             "type": "file",
             "path": "control-standards/rag/design_framework/ai_integration/safety_boundary.md",
