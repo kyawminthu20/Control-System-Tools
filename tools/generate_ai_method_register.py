@@ -39,6 +39,11 @@ REQUIRED_METHOD_FIELDS = {
     "evidence_strength",
     "maturity",
     "sources",
+    # Phase 50.13 selector-classification vocabulary (validated, never inferred in page JS).
+    "method_class",
+    "decision_type",
+    "data_availability",
+    "safety_relevance",
 }
 ALLOWED_MATURITY = {"research", "piloted", "industrially routine"}
 ALLOWED_STRENGTH = {
@@ -48,6 +53,24 @@ ALLOWED_STRENGTH = {
     "engineering judgement",
     "mixed",
 }
+ALLOWED_METHOD_CLASS = {"deterministic", "learned", "hybrid"}
+ALLOWED_DECISION_TYPE = {
+    "regulatory-control",
+    "state-estimation",
+    "monitoring-detection",
+    "prediction-simulation",
+    "perception",
+    "engineering-support",
+    "data-transport",
+}
+ALLOWED_DATA_AVAILABILITY = {
+    "none-or-spec",
+    "commissioning-tests",
+    "operating-history",
+    "labelled-examples",
+    "pretrained-plus-context",
+}
+ALLOWED_SAFETY_RELEVANCE = {"safety-related", "safety-adjacent", "non-safety"}
 
 
 def _load(path: Path) -> dict[str, Any]:
@@ -120,6 +143,43 @@ def validate(source: Path = SOURCE) -> list[str]:
             errors.append(f"{label}: invalid maturity")
         if method.get("evidence_strength") not in ALLOWED_STRENGTH:
             errors.append(f"{label}: invalid evidence_strength")
+
+        # Phase 50.13 selector vocabulary — membership checks.
+        method_class = method.get("method_class")
+        safety_relevance = method.get("safety_relevance")
+        data_availability = method.get("data_availability")
+        if method_class not in ALLOWED_METHOD_CLASS:
+            errors.append(f"{label}: invalid method_class")
+        if method.get("decision_type") not in ALLOWED_DECISION_TYPE:
+            errors.append(f"{label}: invalid decision_type")
+        if data_availability not in ALLOWED_DATA_AVAILABILITY:
+            errors.append(f"{label}: invalid data_availability")
+        if safety_relevance not in ALLOWED_SAFETY_RELEVANCE:
+            errors.append(f"{label}: invalid safety_relevance")
+
+        # Cross-field invariants (Phase 50.13). These encode the register's governing
+        # architecture: a safety-related output must be deterministic and verifiable, and
+        # cannot ride on an undetermined authority ceiling.
+        if safety_relevance == "safety-related":
+            if method_class != "deterministic":
+                errors.append(
+                    f"{label}: safety-related methods must be deterministic "
+                    f"(method_class is {method_class!r})"
+                )
+            if authority == "Planned":
+                errors.append(
+                    f"{label}: safety-related methods cannot have Planned max_authority"
+                )
+        if data_availability == "pretrained-plus-context":
+            if method_class != "learned":
+                errors.append(
+                    f"{label}: pretrained-plus-context requires method_class 'learned'"
+                )
+            if safety_relevance == "safety-related":
+                errors.append(
+                    f"{label}: pretrained-plus-context cannot be safety-related"
+                )
+
         refs = method.get("sources")
         if not isinstance(refs, list) or not refs:
             errors.append(f"{label}: sources must be a non-empty list")

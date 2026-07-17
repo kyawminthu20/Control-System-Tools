@@ -1,7 +1,34 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (owner decisions recorded + analytics scoped)
+**Last Updated:** 2026-07-17 (Phase 50.13a — selector-classification vocabulary)
 **Status:** Active
+
+## 2026-07-17 — Phase 50.13a (Selector-classification vocabulary + invariants)
+
+**Type:** Canonical-schema extension + generator validation + tests (no site behaviour change yet).
+**Branch:** `feat/phase50-13a-classification-vocabulary`.
+
+Owner signed off the 50.13 vocabulary draft (`planning/2026-07-17-phase50-13-classification-vocabulary.md`);
+this slice implements the schema half. The interactive selector UI (50.13b) is deferred alongside the
+Phase 52.2 mobile/accessibility work (needs keyboard/screen-reader device verification).
+
+- **Four validated classification fields added to all 42 `methods.yml` rows** (proposed assignments
+  adopted as-is, including the five judgement-call rows): `method_class` (deterministic/learned/hybrid),
+  `decision_type` (7 values), `data_availability` (5-level measured-data burden), `safety_relevance`
+  (safety-related/safety-adjacent/non-safety). Backfill applied line-by-line so the compact
+  one-row-per-method format is preserved (42 insertions / 42 deletions, no reformat).
+- **Generator now enforces membership + three cross-field invariants** (`generate_ai_method_register.py`):
+  (1) `safety-related` ⟹ `method_class == deterministic` — the load-bearing guardrail encoding the Phase
+  49a finding; (2) `safety-related` ⟹ `max_authority != Planned`; (3) `pretrained-plus-context` ⟹
+  `learned` and not `safety-related`. Exactly two rows are `safety-related` — `rule_engine` and
+  `robust_mpc_safety_filter`, both deterministic with a real authority value.
+- **Tests: 5 → 13** in `test_generate_ai_method_register.py` (fixture extended with the four fields;
+  membership rejections; one test per invariant incl. a learned-marked-safety-related failing fixture;
+  and a regression test asserting the real 42-row register satisfies every rule). Suite **180 → 188**.
+- **Docs:** the vocabulary + invariants documented in the corpus register README; the plan marked
+  APPROVED / 50.13a implemented. Register data regenerated to `docs/_data/ai_methods/`.
+- **Verification:** full release gate green (188 tests, 10 doctests, clean build, 0 broken links,
+  corpus checks clean). Fields are present in the data but not yet rendered — the selector UI is 50.13b.
 
 ## 2026-07-17 — Owner decisions + analytics scoping
 

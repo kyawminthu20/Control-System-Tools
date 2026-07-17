@@ -1,9 +1,14 @@
 # Phase 50.13 — Classification Vocabulary for the Interactive Method Selector
 
-**Status:** DRAFT — owner approval required before any canonical-schema change.
+**Status:** APPROVED (owner sign-off 2026-07-17). **50.13a IMPLEMENTED** — the four
+canonical fields, generator vocabularies + invariants, tests, and the 42-row backfill are on
+`master` (proposed assignments adopted as-is, including all five judgement-call rows). **50.13b
+(the interactive selector UI) is the remaining follow-on slice** and is deferred alongside the
+Phase 52.2 mobile/accessibility work, since its acceptance requires keyboard/screen-reader
+verification that needs device testing.
 **Date:** 2026-07-17
-**Scope:** proposal only. No `methods.yml` row, generator, or site data is changed by
-this document. Implementation of 50.13 is gated on sign-off here.
+**Scope (original proposal, retained for the rationale):** the vocabularies, invariants, and per-row
+assignments below are the approved specification 50.13a implemented.
 
 ## Why this exists
 
