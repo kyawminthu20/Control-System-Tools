@@ -1,7 +1,35 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (AI-integration expansion — Slice A: register split into its own page)
+**Last Updated:** 2026-07-17 (AI-integration expansion — Slice B: Safety & Security Boundaries page)
 **Status:** Active
+
+## 2026-07-17 — AI-integration 7-page build, Slice B (Safety & Security Boundaries)
+
+**Type:** Site content (Design section) + corpus note + source-gap closure.
+**Branch:** `feat/phase51-ai-integration-safety-boundaries`.
+
+The load-bearing page of the section: **why a learned component cannot hold a machine's safety
+function today.** Corpus-first per the plan.
+
+- **Source gap closed (verified at the publisher):** IEC 62061 — flagged "never checked for
+  ML/self-evolving content" since Phase 49a — confirmed at the IEC webstore (publication 59927) as
+  **Ed. 2.0, 2021-03-22**, scope within the IEC 61508 framework with **no mention of AI/ML/self-evolving
+  components**. ISO/IEC TS 22440 status sharpened: **Committee Draft (Feb 2026), three parts** (ISO
+  catalogue 89535/89536/89537). Both recorded in the work-tier `source-register.md`. The page can now
+  *source* the "no certification route" position rather than assert it.
+- **Corpus note:** `control-standards/rag/design_framework/ai_integration/safety_boundary.md`
+  (headered RAG_APPROVED/DRAFT) — the deterministic FS standards (ISO 13849-1, IEC 62061, IEC 61508)
+  with no learned-component route; TR 5469 as guidance-not-certifiable; TS 22440 unpublished; EU
+  Machinery Reg 2023/1230 Annex I items 5–6 + Annex III EHSR 1.2.1 (statutory ≤4 ceiling) and AI Act
+  Art 6(1); the verified-non-learned-layer architecture; NIST SP 800-82r3 OT placement. `_index.yaml`
+  updated; mirror regenerated (315 files).
+- **Site page:** `/design/ai-integration/safety-boundaries/` distils the note — document-status table,
+  the EU-law ceiling, an original standards-track-vs-law-track Mermaid diagram, the independence rule,
+  and the cybersecurity boundary. Review pending; cross-linked from the gate's safety-boundary callout
+  and back to the gate/register; nav child added. Full release gate green (build, 0 broken links, 180
+  tests, corpus-quality + `_index.yaml` validators clean).
+
+Slice C next: Interfaces & handshakes (corpus-first; content largely already on the gate page).
 
 ## 2026-07-17 — AI-integration 7-page build, Slice A (skeleton split)
 

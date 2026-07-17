@@ -148,6 +148,8 @@
     - label: "AI &amp; ML Integration"
       url: "/design/ai-integration/"
       children:
+        - label: "Safety &amp; Security Boundaries"
+          url: "/design/ai-integration/safety-boundaries/"
         - label: "Method Register"
           url: "/design/ai-integration/method-register/"
     - label: "Design Workflows"

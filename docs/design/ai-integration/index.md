@@ -45,7 +45,9 @@ lifecycle_stage:
 
 > **Safety boundary:** no learned method in this register is assigned direct closed-loop authority
 > (level 5) or a safety function. “Planned” means the evidence supports discussing the method, but
-> does not yet support an operational authority claim.
+> does not yet support an operational authority claim. For *why* a learned component cannot hold a
+> safety function today — the deterministic standards, the guidance-only AI documents, and the EU law
+> that already caps it — see [Safety &amp; Security Boundaries]({{ '/design/ai-integration/safety-boundaries/' | relative_url }}).
 
 ## The idea in plain terms
 

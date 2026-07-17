@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-17 10:45:08
+**Last Auto-Updated:** 2026-07-17 11:01:52
 
 ```text
 ├── .claude/
@@ -67,6 +67,7 @@
 │   │   │   │   ├── README.md
 │   │   │   │   ├── _index.yaml
 │   │   │   │   ├── methods.yml
+│   │   │   │   ├── safety_boundary.md
 │   │   │   │   └── sources.yml
 │   │   │   ├── constraints/
 │   │   │   │   └── grounding_bonding_rules.yaml
@@ -701,6 +702,8 @@
 │   │   │   │       ├── motor_rotation_and_overload_verification.md
 │   │   │   │       └── pre_power_panel_and_incoming_supply_check.md
 │   │   │   ├── design_framework/
+│   │   │   │   ├── ai_integration/
+│   │   │   │   │   └── safety_boundary.md
 │   │   │   │   ├── design_guides/
 │   │   │   │   │   └── 02_power_distribution_guide.md
 │   │   │   │   ├── electrical_review/
@@ -1135,7 +1138,9 @@
 │   ├── design/
 │   │   ├── ai-integration/
 │   │   │   ├── index.md
-│   │   │   └── method-register/
+│   │   │   ├── method-register/
+│   │   │   │   └── index.md
+│   │   │   └── safety-boundaries/
 │   │   │       └── index.md
 │   │   ├── architecture/
 │   │   │   ├── compliance-stack/

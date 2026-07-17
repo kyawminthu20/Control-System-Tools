@@ -52,6 +52,18 @@
     "type": "dir",
     "children": [
       {
+        "name": "ai_integration",
+        "type": "dir",
+        "children": [
+          {
+            "name": "safety_boundary.md",
+            "type": "file",
+            "path": "control-standards/rag/design_framework/ai_integration/safety_boundary.md",
+            "serve_path": "design_framework/ai_integration/safety_boundary.md"
+          }
+        ]
+      },
+      {
         "name": "design_guides",
         "type": "dir",
         "children": [

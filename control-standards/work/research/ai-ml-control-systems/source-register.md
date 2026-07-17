@@ -199,11 +199,27 @@ Full detail in `evidence-table.md`; ceilings in `authority-ceilings.md`; go/no-g
 - **NOT VERIFIED:** the canonical chemical-engineering textbooks (publisher 403), so the
   **equilibrium/thermodynamics family currently has no verified source.**
 
+# Phase 51 Additions (2026-07-17) — Slice B safety-page verification
+
+- **IEC 62061:2021 — GAP CLOSED.** Verified at the IEC webstore (publication 59927): **Edition 2.0,
+  published 2021-03-22**, "Safety of machinery — Functional safety of safety-related control systems."
+  Scope specifies design/integration/validation of safety-related control systems for machines within
+  the **IEC 61508 framework**; **no mention of artificial intelligence, machine learning, or
+  self-evolving/adaptive components**. Corroborated by the IEC's own AI-safety communications
+  (etech.iec.ch node/629; iec.ch/blog "New standard to increase safety of AI"), which state existing
+  functional-safety standards do not recommend AI/statistical ML and that ISO/IEC TR 5469 was created
+  to fill that gap. The safety page may now state that the machinery functional-safety methodologies
+  (ISO 13849-1, IEC 62061, IEC 61508) are deterministic and do not provide a validation route for a
+  learned component — sourced, not asserted.
+- **ISO/IEC TS 22440 — status updated.** ISO catalogue (standards 89535/89536/89537): the
+  requirement-bearing successor is at **Committee Draft (CD)** stage as of **February 2026**, in
+  **three parts** — Part 1 Requirements, Part 2 Guidance, Part 3 Examples of application (ISO/IEC JTC 1/SC 42).
+  Not yet published; carries no certification route today. Confirms and sharpens the 49a "committee-draft" note.
+
 ## Still needed (carried forward)
 
 - **ISO/IEC TR 5469:2024 full text** (purchase) — its Usage Level × Technology Class matrix is the
   highest-value missing artefact in the entire programme.
-- **IEC 62061** — never checked for ML/self-evolving content.
 - Smith & Randall 2015; Hendriks et al. 2022; Naser 2025 (PINNs in an engineering-systems framing);
   the lab-to-field transfer-learning assessment — all paywalled, all carrying load-bearing numbers.
 - **The FP64 question** — a 2025 preprint reportedly argues canonical PINN failures are FP32 artefacts.
