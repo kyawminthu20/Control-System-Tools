@@ -1,6 +1,6 @@
 # Standards Intelligence Master Index
 # AI_READ_ACCESS: ALLOWED
-# Updated: 2026-03-05
+# Updated: 2026-07-17
 
 version: "2.0"
 content_class: "RAG_APPROVED"
@@ -29,7 +29,7 @@ standards:
     - standard_id: "UL_508A_Ed3"
       standard_name: "Industrial Control Panels"
       folder: "us/ul_508a"
-      edition: "2022"
+      edition: "3rd Ed. (2018), rev. 2025-06-26"
       jurisdiction: "United States"
       elements: 11
       element_type: "sections"
@@ -40,7 +40,7 @@ standards:
       - standard_id: "IEC_60204_1_2016A1"
         standard_name: "Electrical Equipment of Machines"
         folder: "international/machinery/iec_60204_1"
-        edition: "2018"
+        edition: "2016+AMD1:2021"
         jurisdiction: "Global"
         elements: 15
         element_type: "clauses"
@@ -112,6 +112,26 @@ standards:
         element_type: "standards"
         status: "complete"
 
+    cybersecurity:
+      - standard_id: "IEC_62443"
+        standard_name: "Industrial Automation and Control Systems Security"
+        folder: "international/cybersecurity/iec_62443"
+        edition: "Series (2-1:2010, 3-3:2013, 4-2:2019)"
+        jurisdiction: "Global"
+        elements: 4
+        element_type: "documents"
+        status: "complete"
+
+    offshore:
+      - standard_id: "OFFSHORE_MARINE"
+        standard_name: "Offshore and Marine Electrical and Control Standards (ABS, DNV-OS-D201)"
+        folder: "international/offshore"
+        edition: "2023"
+        jurisdiction: "International"
+        elements: 2
+        element_type: "documents"
+        status: "complete"
+
 topic_routing:
   grounding_bonding:
     us_standards:
@@ -155,7 +175,7 @@ topic_routing:
       - "IEC_62061_2021"
       - "IEC_61508_2010"
       - "IEC_61511_2016"
-    guidance_file: "reference_models/software_safety_and_intrinsic_safety_standards.md"
+    guidance_file: "reference_models/Software_Safety_and_Intrinsic_Safety_Standards.md"
 
   risk_assessment:
     international_standards:
@@ -168,14 +188,14 @@ topic_routing:
       - "IEC 62061:2021"
       - "ISO 13849-1:2023"
       - "IEC 61131-3:2025"
-    guidance_file: "reference_models/software_safety_and_intrinsic_safety_standards.md"
+    guidance_file: "reference_models/Software_Safety_and_Intrinsic_Safety_Standards.md"
 
   secure_development:
     international_standards:
       - "IEC 62443-4-1:2018"
       - "IEC 62443-4-2:2019"
       - "IEC 62443-3-3:2013"
-    guidance_file: "reference_models/software_safety_and_intrinsic_safety_standards.md"
+    guidance_file: "reference_models/Software_Safety_and_Intrinsic_Safety_Standards.md"
 
   intrinsic_safety:
     international_standards:
@@ -186,7 +206,7 @@ topic_routing:
       - "UL 60079-11"
       - "UL 698A"
       - "NEC hazardous location articles"
-    guidance_file: "reference_models/software_safety_and_intrinsic_safety_standards.md"
+    guidance_file: "reference_models/Software_Safety_and_Intrinsic_Safety_Standards.md"
 
 regional_routing:
   us_only:
@@ -217,13 +237,19 @@ routing_documents:
 
 guidance_documents:
   - title: "Software Safety, Redundancy, and Intrinsic Safety Standards"
-    file: "reference_models/software_safety_and_intrinsic_safety_standards.md"
+    file: "reference_models/Software_Safety_and_Intrinsic_Safety_Standards.md"
     status: "authoritative_reference"
   - title: "7-Layer Industrial Machine Architecture Model"
     file: "reference_models/7-Layer Industrial Machine Architecture Model.md"
     status: "authoritative_reference"
   - title: "Universal Machine Safety Architecture"
     file: "reference_models/Universal Machine Safety Architecture.md"
+    status: "authoritative_reference"
+  - title: "15-Standard Minimum Compliance Stack"
+    file: "reference_models/15-Standard Minimum Compliance Stack.md"
+    status: "authoritative_reference"
+  - title: "Standards Atlas — Diagram Reference Pack"
+    file: "reference_models/standards_atlas_diagrams_reference.md"
     status: "authoritative_reference"
 
 administrative_documents:
@@ -242,7 +268,7 @@ notes: |
     - Use ISO 13849-1 or IEC 62061 for safety functions
     - Use ISO 12100 for risk assessment
     - Use routing/standards_applicability.md for project and market routing
-    - Use reference_models/software_safety_and_intrinsic_safety_standards.md for safety PLC software, redundancy, and intrinsic-safety routing
+    - Use reference_models/Software_Safety_and_Intrinsic_Safety_Standards.md for safety PLC software, redundancy, and intrinsic-safety routing
 
   For hazardous-area projects:
     - Use IEC 60079 for Ex equipment, area classification, installation, and inspection
@@ -255,3 +281,10 @@ notes: |
 changelog:
   - date: "2026-03-05"
     action: "Reorganized standards into grouped us/international/crosswalks layout"
+  - date: "2026-07-17"
+    action: >-
+      Phase 50.3 reconciliation: added missing iec_62443 and offshore folders to
+      the standards inventory; fixed case-mismatched Software_Safety reference
+      (6 occurrences); added the two missing guidance documents; corrected the
+      UL 508A and IEC 60204-1 edition fields to the publisher-verified values
+      established in Phase 45

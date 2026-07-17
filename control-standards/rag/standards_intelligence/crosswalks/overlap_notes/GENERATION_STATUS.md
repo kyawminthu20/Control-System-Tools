@@ -8,7 +8,14 @@ STATUS: DRAFT
 **AI_READ_ACCESS: ALLOWED**
 
 **Generated:** 2026-01-15
+**Updated:** 2026-07-17 (Phase 50.3 — status corrected to reflect reality)
 **Location:** `rag/standards_intelligence/crosswalks/overlap_notes/`
+
+> **Current status (2026-07-17):** generation is **paused**. 3 of the 28
+> planned overlap notes exist (`overlap__sccr.md`, `overlap__motors_drives.md`,
+> `overlap_nfpa79_iec60204__motors_drives.md`); the remaining 25 are **backlog**
+> with no active phase assigned. The checklists below are the plan of record,
+> not work in progress.
 
 ## Purpose
 
@@ -68,11 +75,11 @@ Per-topic overlap notes provide detailed:
 | Category | Total | Created | Remaining | Status |
 |----------|-------|---------|-----------|--------|
 | **Core Files** | 3 | 3 | 0 | ✅ Complete |
-| **US Overlap Notes** | 14 | 2 | 12 | 🔄 In Progress |
-| **International Notes** | 14 | 1 | 13 | 🔄 In Progress |
-| **TOTAL** | 31 | 6 | 25 | **19% Complete** |
+| **US Overlap Notes** | 14 | 2 | 12 | ⏸ Backlog (paused) |
+| **International Notes** | 14 | 1 | 13 | ⏸ Backlog (paused) |
+| **TOTAL** | 31 | 6 | 25 | **3 of 28 notes exist — paused** |
 
-## Priority for Next Phase
+## Priority When Generation Resumes
 
 ### Critical Priority (Create First) 🔴
 1. ✅ `overlap__sccr.md` - SCCR determination (DONE)

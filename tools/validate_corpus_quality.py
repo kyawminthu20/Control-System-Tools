@@ -9,9 +9,13 @@ authoritative tier in earlier phases and had no automated guard:
   can...") — raw un-edited assistant output shipped as canonical content.
 - Empty numeric placeholders (e.g. "between ** and **", "typically  to ") —
   a value the author meant to fill and never did.
+- Master-index drift (``standards_intelligence/_index.yaml``): folders listed
+  in the index but absent on disk, corpus folders absent from the index, and
+  file references that only resolve on case-insensitive filesystems.
 
-Findings are hard errors: neither class should ever exist in ``control-standards/rag/``.
-Run standalone or via ``tools/release_check.py`` (corpus and full profiles).
+Findings are hard errors: none of these classes should ever exist in
+``control-standards/rag/``. Run standalone or via ``tools/release_check.py``
+(corpus and full profiles).
 """
 
 from __future__ import annotations
@@ -72,8 +76,72 @@ def check(rag_root: Path = RAG) -> list[str]:
     return errors
 
 
+# Path-bearing keys in the master index. Values are always double-quoted there;
+# the free-text notes block is deliberately out of scope for this parser.
+_INDEX_REFERENCE = re.compile(r'\s*(?:-\s*)?(folder|file|guidance_file):\s*"([^"]+)"')
+
+
+def _case_sensitive_exists(base: Path, relative: str) -> bool:
+    """True only if every path segment matches a directory entry byte-for-byte.
+
+    Path.exists() would accept wrong-case references on macOS (case-insensitive
+    filesystem) that then break on case-sensitive CI runners.
+    """
+    current = base
+    for part in Path(relative).parts:
+        if not current.is_dir() or part not in {entry.name for entry in current.iterdir()}:
+            return False
+        current = current / part
+    return True
+
+
+def _disk_standards_folders(intelligence_root: Path) -> set[str]:
+    """Directories under us/ and international/ that directly hold corpus files."""
+    folders: set[str] = set()
+    for region in ("us", "international"):
+        region_root = intelligence_root / region
+        if not region_root.is_dir():
+            continue
+        for md_file in region_root.rglob("*.md"):
+            if md_file.name == "README.md":
+                continue
+            folders.add(md_file.parent.relative_to(intelligence_root).as_posix())
+    return folders
+
+
+def check_index(rag_root: Path = RAG) -> list[str]:
+    """Validate standards_intelligence/_index.yaml against the on-disk corpus."""
+    intelligence_root = rag_root / "standards_intelligence"
+    index_path = intelligence_root / "_index.yaml"
+    if not index_path.exists():
+        return ["standards_intelligence/_index.yaml: master index is missing"]
+
+    errors: list[str] = []
+    indexed_folders: set[str] = set()
+    lines = index_path.read_text(encoding="utf-8", errors="ignore").splitlines()
+    for lineno, line in enumerate(lines, start=1):
+        match = _INDEX_REFERENCE.match(line)
+        if not match:
+            continue
+        key, value = match.groups()
+        if not _case_sensitive_exists(intelligence_root, value):
+            errors.append(
+                f"standards_intelligence/_index.yaml:{lineno}: "
+                f"{key} does not resolve case-sensitively on disk: {value}"
+            )
+        elif key == "folder":
+            indexed_folders.add(value)
+
+    for folder in sorted(_disk_standards_folders(intelligence_root) - indexed_folders):
+        errors.append(
+            f"standards_intelligence/_index.yaml: corpus folder missing from "
+            f"standards inventory: {folder}"
+        )
+    return errors
+
+
 def main() -> int:
-    errors = check()
+    errors = check() + check_index()
     if errors:
         print(f"❌ FAILED: {len(errors)} corpus-quality defect(s):", file=sys.stderr)
         for error in errors:

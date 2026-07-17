@@ -1,7 +1,43 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-16 (Phase 50 recorded — whole-project hardening & hygiene)
+**Last Updated:** 2026-07-17 (Phase 50.3 — `_index.yaml` reconciliation)
 **Status:** Active
+
+## 2026-07-17 — Phase 50.3 — `_index.yaml` reconciliation + index-vs-disk validator
+
+**Type:** Corpus manifest correctness (Workstream A) + validator extension.
+**Branch:** `feat/phase50-corpus-quality-validator` (stacked after 50.2 → E-plan → 50.12).
+
+The master index `standards_intelligence/_index.yaml` could not be trusted as a manifest; it now can,
+and a validator keeps it that way:
+
+- **Validator (TDD, stdlib-only):** `check_index()` added to `tools/validate_corpus_quality.py`
+  (5 new tests; 9 total in the module). Verifies: every indexed `folder:` exists on disk; every
+  corpus standards folder under `us/`/`international/` appears in the `standards:` inventory; and
+  every `folder:`/`file:`/`guidance_file:` reference resolves **case-sensitively** by comparing
+  directory listings — a plain `Path.exists()` passes wrong-case references on macOS and then breaks
+  on case-sensitive CI. Wired into the existing script `main()`, so the corpus and full release-check
+  profiles enforce it with no profile changes. Run against the real corpus before the data fix, it
+  reported exactly the 7 planned defects (5 case-mismatched references + 2 unindexed folders).
+- **Inventory completeness:** `international/cybersecurity/iec_62443` (4 files) and
+  `international/offshore` (ABS + DNV, 2 files) added to `standards:`.
+- **Case fix:** all 6 `reference_models/software_safety_and_intrinsic_safety_standards.md` references
+  (5 structured + 1 in the notes block) corrected to the on-disk
+  `Software_Safety_and_Intrinsic_Safety_Standards.md`.
+- **Guidance documents:** `15-Standard Minimum Compliance Stack.md` and
+  `standards_atlas_diagrams_reference.md` added to `guidance_documents`.
+- **Edition provenance:** UL 508A `edition: "2022"` → `"3rd Ed. (2018), rev. 2025-06-26"` and
+  IEC 60204-1 `edition: "2018"` → `"2016+AMD1:2021"`, matching Phase 45's publisher-verified findings
+  (a P0.2 residue — the sub-index header was fixed then, the master index field was not).
+- **Tracker honesty:** `crosswalks/overlap_notes/GENERATION_STATUS.md` re-stamped 2026-07-17 as
+  **paused/backlog — 3 of 28 overlap notes exist**; its checkboxes were already accurate, but the
+  "🔄 In Progress / 19%" framing had been frozen since 2026-01-15. Writing the 25 missing notes
+  remains backlog, not Phase 50 scope.
+
+Index changelog entry added inside `_index.yaml` itself (header date bumped to 2026-07-17). RAG site
+mirror regenerated (314 files). Gates: full release check green — corpus-quality validator (incl. the
+new index check), AI boundaries, Jekyll build, zero broken internal links, full pytest + doctests;
+the only warning is the pre-existing 166 legacy-page review-block count (Workstream D scope).
 
 ## 2026-07-16 — Phase 50 plan expanded — AI/ML decision-support upgrade
 

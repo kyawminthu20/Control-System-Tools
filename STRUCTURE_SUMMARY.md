@@ -2,14 +2,13 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-16 23:40:10
+**Last Auto-Updated:** 2026-07-17 07:12:44
 
 ```text
 ├── .claude/
 │   ├── agents/
 │   │   ├── rag-reviewer.md
 │   │   └── standards-lookup.md
-│   ├── scheduled_tasks.lock
 │   ├── settings.json
 │   ├── settings.local.json
 │   └── skills/
