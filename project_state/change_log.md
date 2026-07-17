@@ -1,7 +1,60 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (Phase 52.1 — state accuracy + navigation hygiene)
+**Last Updated:** 2026-07-17 (owner decisions recorded + analytics scoped)
 **Status:** Active
+
+## 2026-07-17 — Owner decisions + analytics scoping
+
+**Type:** Governance decisions recorded; one small site change (analytics scope). No technical/standards
+content changed.
+
+Owner answered the open-decision list. Rulings and the actions taken:
+
+- **Next Phase 52 slice → 52.3 (task-first IA).** 52.2 (mobile) deferred: its acceptance needs
+  real-device/browser verification the agent cannot perform. **52.4a IEC 62061 parked** — the Ed. 2.2
+  (2021+AMD1:2024+AMD2:2026) rebuild needs the licensed consolidated source, which is unavailable.
+- **50.13 classification vocabulary SIGNED OFF.** Implement the four canonical fields (`method_class`,
+  `decision_type`, `data_availability`, `safety_relevance`) + the four generator-enforced invariants
+  (chief: safety-related ⟹ deterministic), then the interactive method selector. Queued as a bounded
+  slice (fully build-verifiable, no device dependency).
+- **Phase 49c AUTHORISED.** The chem/bio evidence-closure + adversarial sprint may proceed. Authorisation
+  is for the *work only* — no authority ceiling is granted until the evidence supports it; rows stay
+  Planned and Level 5 / safety-function status stays unavailable to learned methods. Sprint queued.
+- **Analytics scoped to access logging only** (visitor / system / location; no behavioural or ad
+  tracking). Implemented in `docs/_layouts/default.html`: `gtag('config', …)` now passes
+  `allow_google_signals:false` and `allow_ad_personalization_signals:false`. **Two caveats surfaced to
+  the owner:** (a) an anonymous static site cannot identify *which user* — GA reports pseudonymous
+  visitors, approximate geo (IP), and device/browser/OS, not named individuals; (b) data-retention and
+  any Signals/demographics property settings must be minimised in the GA4 console (not controllable from
+  page code). A short public privacy note remains recommended but was not part of this ruling.
+- **Three UNVERIFIABLE purchased-text items → discarded as tracking items** (E-stop restricted to Stop
+  Category 0/1; IEC 62061 "conventionally SIL 1–3"; ISO 13849-1 PL band numbers incl. PL e ≥ 10⁻⁸).
+  **Interpreted conservatively for safety content:** the claims and their on-page **verify badges stay**
+  (removing a hedge on a paywalled safety number would over-assert and violate the governance honesty
+  posture); only the open author-action to chase publisher verification is closed. No page content was
+  edited. *If the owner instead meant delete the claims themselves, flag it — that was not done.*
+- **Withheld legacy-panel photographs stay out** — resolved; the repo publishes original diagrams only.
+- **Eight Review-pending AI-integration pages → remain pending** (owner will review later).
+
+### Recommendation for the Phase 45 / Phase 48 page re-reviews (owner requested)
+
+Rather than a full manual re-read, review in risk order and spot-check only the load-bearing claims:
+
+1. **Phase 45 standards pages (highest risk first):** IEC 60204-1, IEC 62061, ISO 13849-1, NEC, NFPA 79,
+   UL 508A. For each, verify only (a) the edition/date line, (b) any number that carries a verify badge,
+   and (c) the specific corrections logged in `planning/2026-07-11-standards-accuracy-review.md`. Those
+   corrections were publisher-verified where free text allowed; the residual risk is confined to the
+   badged paywalled numbers, which are now closed as "conservative + badged."
+2. **IEC 62061 is the exception** — it is at *Needs revalidation* and should be **rebuilt from the
+   consolidated Ed. 2.2**, not spot-checked. It stays parked until the licensed source is available; do
+   not mark it Reviewed on a spot-check.
+3. **Two Phase 48 pages** (Vendor Documentation Index, PLC/IPC Hardware Families): these are
+   data-driven and every lifecycle/market claim already carries an `as_of: July 2026` + verify-current
+   stamp. Re-review reduces to confirming the `as_of` stamps read correctly and re-running vendor-link
+   liveness (28/129 failures were all bot-gated Siemens portals, not dead links) — a mechanical check,
+   not a claim audit.
+4. **Do not bulk-mark Reviewed.** Approve page-by-page; an agent cannot set Reviewed, so these stay
+   owner-only regardless.
 
 ## 2026-07-17 — Phase 52.1 (State accuracy and navigation hygiene)
 

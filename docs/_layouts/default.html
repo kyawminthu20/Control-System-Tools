@@ -7,14 +7,20 @@
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) — scoped to access logging only (visitor, system, location).
+       Behavioural ad features are disabled: no Google Signals (cross-device/interest tracking)
+       and no ad-personalisation signals. Data-retention and any demographics/Signals property
+       settings must also be minimised in the GA4 console (not controllable from page code). -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPL3G47EFZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-RPL3G47EFZ');
+    gtag('config', 'G-RPL3G47EFZ', {
+      'allow_google_signals': false,
+      'allow_ad_personalization_signals': false
+    });
   </script>
   <script>
     (function () {
