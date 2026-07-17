@@ -124,6 +124,88 @@ Verified still open: `src/cst/cli.py` is 486 lines (next-largest module: 169) wi
 - Vendor doc links: 28/129 dead as of the 2026-07-12 liveness stamp (all bot-gated Siemens portals, publication IDs already carried as stable references) — re-run the liveness check and annotate rather than delete.
 - Consider splitting the 90 KB+ lifecycle pages (`commissioning` 95 KB, `maintenance` 91 KB) — low priority, only if editing friction is felt.
 
+## Workstream E — AI/ML register decision-support upgrade
+
+This workstream deepens the shipped `/design/ai-integration/` register without authorising Phase
+49c layer-design pages or raising any authority ceiling. The target is a gated engineering selection
+workspace rather than a larger catalogue. Technical additions remain corpus-first; interactive
+presentation derives from the canonical register and does not create new engineering claims.
+
+### 50.12 Correctness and safety-language pass
+
+- Correct the canonical and generated source-register title from `IEC TR 5469:2024` to
+  **`ISO/IEC TR 5469:2024`** and record the joint identity accurately. Keep its status clear: it is a
+  Technical Report providing guidance, not a certifiable requirements standard.
+- Replace the veto-gate example's universal `baseline.compute(state)` response with an explicitly
+  hazard-analysis-derived failure policy. Depending on the application, the response may be
+  bumpless transfer, a controlled hold with bounded lifetime, manual takeover, a defined safe state,
+  or shutdown; a deterministic fallback is not automatically safe.
+- Clarify that deterministic behaviour is more amenable to specification and verification but is
+  not automatically verified or safe.
+- State beside the ladder that level 4 is an architectural ceiling for a learned method behind an
+  independently verified envelope, not an authority currently assigned to a learned row. The
+  current level-4 rows are deterministic/model-based methods.
+- Add the NIST AI RMF Generative AI Profile to the canonical evidence register and evaluate it for
+  the language/agentic rows; change claims only where that source directly supports them.
+
+**Done when:** canonical and generated registers agree; the source title is accurate; no example
+implies a universally safe fallback; the rendered ladder distinguishes an architectural ceiling
+from a current assignment; full release gate green.
+
+### 50.13 Interactive method selector
+
+Add a dependency-light selector above the register, generated from the same 42 canonical rows.
+Filter by decision type, authority required, deployment layer, learned/deterministic class, maturity,
+evidence strength, data availability, and safety relevance. Results show a compact shortlist with
+`must beat`, authority ceiling, required validation, and disqualifying/poor-fit conditions. Preserve
+state in query parameters so a selection can be linked and reviewed; retain a fully usable
+no-JavaScript register and accessible keyboard/screen-reader behaviour.
+
+Do not infer missing classifications in page JavaScript. Add required classification fields to the
+canonical schema, validate them in `generate_ai_method_register.py`, regenerate site data, and test
+the filter vocabulary and URL round-trip.
+
+**Done when:** every filter derives from validated canonical fields; shared URLs reproduce the same
+selection; no-JavaScript reading and deep method anchors still work; site and full release gates
+green.
+
+### 50.14 Deployment-gate worksheet and result contract
+
+Turn the authority ladder into a worksheet for promotion through `offline → shadow → advisory →
+operator-approved → bounded supervisory`. Each transition records the decision owner, acceptance
+evidence, representative and abnormal-condition tests, cybersecurity review, runtime-monitoring
+limits, rollback/fallback procedure, management-of-change approval, and the independent protection
+that remains effective. This is a review aid, not certification evidence or deployment permission.
+
+Version the AI-result contract and define at least: `schema_version`, result/asset identity,
+immutable model identifier, input-window bounds, result timestamp and expiry, quality, uncertainty
+semantics, out-of-distribution/abstain state, requested and permitted authority, envelope/ruleset
+version, fallback state, and trace/decision ID. Replace the ambiguous bare `confidence` value with a
+field whose interpretation and calibration basis are explicit. Map an OPC UA example as an
+application-defined information model with schema/conformance tests; do not imply that OPC UA or
+Sparkplug grants AI semantics or authority.
+
+**Done when:** every promotion has explicit entry/exit evidence; result fields define type,
+units/meaning, stale behaviour, producer/consumer responsibility, and negative tests; the worked
+example fails according to its stated application policy; full release gate green.
+
+### 50.15 Evidence provenance and conformity checklist
+
+- Add row-level claim/evidence identifiers, source class and date, last verification date, evidence
+  limitations, adversarial-review outcome, and the reason an authority ceiling was accepted or
+  reduced. Surface these fields without presenting `engineering judgement` as equivalent to
+  publisher-verified evidence.
+- Add a scoped machinery/AI checklist covering lifecycle risk assessment, task and movement-space
+  boundaries, correctability, auditability, and applicability-dependent decision-data retention.
+  Distinguish statutory requirements, standards guidance, project policy, and examples.
+- Keep all ten chemical/biological `Planned` rows at `Planned`. Closing their evidence gaps,
+  adversarially reviewing authority ceilings, assigning operational authority, or creating
+  layer-design pages remains Phase 49c work and requires explicit owner authorisation.
+
+**Done when:** every displayed authority claim traces to a reviewable evidence record; legal claims
+carry exact applicability and primary-source provenance; Phase 49c gates and all existing authority
+ceilings remain unchanged unless separately authorised.
+
 ## Explicitly Out of Scope / Unchanged Gates
 
 - **Phase 49c stays not authorised.** Chemical/biological authority ceilings still have zero adversarial coverage; owner authorisation required before layer-design pages.
@@ -137,4 +219,7 @@ Verified still open: `src/cst/cli.py` is 486 lines (next-largest module: 169) wi
 3. Accepted slices 5–7 from the 2026-07-13 plan are implemented (validated-I/O seam, licensed-table module + stdlib-only core install, thin tested CLI, project_state split).
 4. Repo root matches PROJECT_ORGANIZATION; `temp/` gone; stale branches pruned.
 5. Corpus metadata debt at zero and the gate check hard-fails on regressions; `review:` rollout underway with an agreed exemption list.
-6. Full release gate green locally and in CI at every merge.
+6. AI/ML register correctness language is repaired and the method selector, deployment worksheet,
+   versioned result contract, and row-level evidence provenance are delivered without raising an
+   authority ceiling or bypassing the Phase 49c gate.
+7. Full release gate green locally and in CI at every merge.

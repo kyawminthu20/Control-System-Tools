@@ -3,6 +3,30 @@
 **Last Updated:** 2026-07-16 (Phase 50 recorded — whole-project hardening & hygiene)
 **Status:** Active
 
+## 2026-07-16 — Phase 50 plan expanded — AI/ML decision-support upgrade
+
+**Type:** Planning and next-phase handoff only. No code, site, corpus, authority, or deployment
+change in this entry.
+**Plan:** `planning/2026-07-16-phase50-hardening-hygiene-plan.md` Workstream E (50.12–50.15).
+
+Reviewed the deployed `/design/ai-integration/` page and its 42-row canonical register, then added a
+bounded Phase 50 workstream that evolves the method catalogue into a gated engineering selection
+workspace. The planned slices are: (1) correctness/safety language — correct `IEC TR 5469` to
+`ISO/IEC TR 5469`, replace the universal deterministic-fallback example with an
+application/hazard-analysis-derived failure policy, clarify deterministic-vs-verified language and
+the level-4 architectural ceiling, and evaluate the NIST Generative AI Profile for agentic rows;
+(2) a canonical-data-driven, accessible method selector with shareable URL state; (3) an explicit
+offline→shadow→advisory→operator-approved→bounded-supervisory promotion worksheet plus a versioned,
+semantically defined AI-result contract; and (4) row-level evidence provenance and a primary-source,
+applicability-scoped machinery/AI checklist.
+
+The plan explicitly preserves all authority gates: no authority ceiling is raised, all ten
+chemical/biological rows remain `Planned`, and evidence closure, adversarial authority review, or
+layer-design pages remain Phase 49c work requiring separate owner authorisation. Existing dirty
+worktree changes for the active Phase 50.1/50.2 corpus-quality slice were not touched. Validation for
+this planning-only edit: Markdown/diff inspection and whitespace check; implementation gates are
+defined per slice in the plan.
+
 ## 2026-07-16 — Phase 50.2 — corpus-quality validator + metadata completeness
 
 **Type:** Tooling + governance + corpus metadata. Structural prevention for the 50.1 defect classes.
