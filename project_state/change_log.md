@@ -1,7 +1,20 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-19 (Phase 53.3 — twin data-contract schema published; digital-twin arc COMPLETE)
+**Last Updated:** 2026-07-20 (digital-twin arc deployed and live-verified)
 **Status:** Active
+
+## 2026-07-20 — Digital-twin arc deployed (delivery tail)
+
+**Type:** Delivery only — no code or content change. The five arc commits (49d evidence closure,
+53.1 maturity ladder, 53.2 `src/cst/twin/`, 53.3 published contract schema, plus the fixed-point
+timestamp fix `a4d9c1c`) were pushed to `master` after a green full release gate (300 tests,
+10 doctests, clean Jekyll build, 378 files link-checked, boundary/quality checks green; legacy
+review-block warning at the pre-existing 166 baseline). GitHub Pages run `29746024901` completed
+**success**; live-verified 200 on `/design/ai-integration/digital-twin/`,
+`/assets/templates/twin_data_contract.schema.json`, and
+`/assets/templates/twin_payload_example.json` (schema content spot-checked). Outstanding items are
+unchanged: owner review of the Review-pending AI-integration pages, the 49c chem/bio register
+decision, and the Phase 52.3 task-first IA slice.
 
 ## 2026-07-19 — Phase 53.3 (Twin data-contract schema + worked payload on the site)
 
