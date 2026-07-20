@@ -369,3 +369,28 @@ def test_read_sample_csv_rejects_an_empty_file(tmp_path):
     f.write_text("source_ts,acquisition_ts\n", encoding="utf-8")
     with pytest.raises(ValueError, match="no numeric sample rows"):
         read_sample_csv(f)
+
+
+# --- published templates (regeneration-freshness guards) ----------------------
+
+PUBLISHED_SCHEMA = REPO_ROOT / "docs" / "assets" / "templates" / "twin_data_contract.schema.json"
+PUBLISHED_PAYLOAD = REPO_ROOT / "docs" / "assets" / "templates" / "twin_payload_example.json"
+
+
+def test_published_schema_matches_the_generated_one():
+    """The site's schema must not drift from FIELD_SPECS — regenerate if this fails."""
+    published = json.loads(PUBLISHED_SCHEMA.read_text(encoding="utf-8"))
+    published.pop("$comment", None)  # the generator's banner, not part of the contract
+    assert published == schema()
+
+
+def test_published_payload_satisfies_the_published_schema():
+    """A worked example that violated its own contract would be worse than none."""
+    payload = json.loads(PUBLISHED_PAYLOAD.read_text(encoding="utf-8"))
+    assert validate_payload(payload, authority_ceiling=2) == []
+
+
+def test_published_payload_carries_no_banner_key():
+    # additionalProperties is false, so a "$comment" here would break the example.
+    payload = json.loads(PUBLISHED_PAYLOAD.read_text(encoding="utf-8"))
+    assert "$comment" not in payload

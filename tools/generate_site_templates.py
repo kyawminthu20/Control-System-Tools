@@ -10,6 +10,7 @@ example I/O list:
 
 from __future__ import annotations
 
+import json
 import shutil
 from pathlib import Path
 
@@ -21,10 +22,18 @@ from cst.panel.bom import bom_to_csv, generate_bom
 from cst.panel.io_list import load_io_list
 from cst.panel.nameplates import PanelNameplate, legend_plates, legend_plates_to_csv
 from cst.panel.wire_schedule import generate_wire_schedule, wire_schedule_to_csv
+from cst.twin.contract import schema as twin_schema, validate_payload
 
 REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "docs" / "assets" / "templates"
 EXAMPLE_CSV = REPO / "data" / "examples" / "io_list_example.csv"
+TWIN_PAYLOAD = REPO / "data" / "examples" / "twin_payload_example.json"
+
+#: The register ceiling the worked twin payload is written against
+#: (digital_twin_state_sync). Asserted below so a contract change that orphans
+#: the example fails generation instead of shipping a schema its own example
+#: violates.
+TWIN_EXAMPLE_CEILING = 2
 
 BANNER = (
     "GENERATED EXAMPLE — demonstrates the format produced by the cst toolkit "
@@ -73,10 +82,41 @@ def main() -> None:
         f"<!-- {BANNER} -->\n\n" + package.render(), encoding="utf-8"
     )
 
+    _write_twin_contract()
+
     generated = sorted(p.name for p in OUT.glob("*_example.*"))
     print(f"wrote {len(generated)} generated examples to {OUT}:")
     for name in generated:
         print(f"  {name}")
+
+
+def _write_twin_contract() -> None:
+    """Publish the twin data contract as a schema plus a worked payload.
+
+    The schema is generated from ``cst.twin.contract.FIELD_SPECS`` — the same
+    definition the validator enforces — so the published file cannot drift from
+    the check. JSON has no comment syntax, hence ``$comment`` for the banner.
+    """
+    contract = twin_schema()
+    contract["$comment"] = BANNER
+    (OUT / "twin_data_contract.schema.json").write_text(
+        json.dumps(contract, indent=2) + "\n", encoding="utf-8"
+    )
+
+    payload = json.loads(TWIN_PAYLOAD.read_text(encoding="utf-8"))
+    problems = validate_payload(payload, authority_ceiling=TWIN_EXAMPLE_CEILING)
+    if problems:
+        raise SystemExit(
+            f"{TWIN_PAYLOAD} no longer satisfies the contract it illustrates:\n  - "
+            + "\n  - ".join(problems)
+        )
+    # Published verbatim, with no banner key: the schema sets
+    # additionalProperties=false, so a "$comment" here would make the worked
+    # example violate the very contract it demonstrates. The schema carries the
+    # banner instead, where $comment is a legal keyword rather than instance data.
+    (OUT / "twin_payload_example.json").write_text(
+        json.dumps(payload, indent=2) + "\n", encoding="utf-8"
+    )
 
 
 if __name__ == "__main__":

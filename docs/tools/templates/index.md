@@ -105,10 +105,18 @@ of the diagnostics methodology.
 | Template | Format | Origin |
 |---|---|---|
 | [AI / model evidence ledger]({{ '/assets/templates/ai_model_evidence_ledger.md' | relative_url }}) | Markdown | Original template (NIST AI RMF Govern/Map/Measure/Manage aligned) |
+| [Twin data-contract schema]({{ '/assets/templates/twin_data_contract.schema.json' | relative_url }}) | JSON Schema | *Generated* — draft 2020-12, from the same field definitions `cst twin-validate` enforces |
+| [Twin payload example]({{ '/assets/templates/twin_payload_example.json' | relative_url }}) | JSON | *Generated* — a worked advisory payload that satisfies the schema |
 
 Pairs with [Validation &amp; Lifecycle]({{ '/design/ai-integration/validation-lifecycle/' | relative_url }})
 in the AI &amp; ML Integration section — one ledger per learned component, kept from design time through
 retirement. It structures the evidence behind a model's allowed authority; it does not grant authority.
+
+The twin schema and payload pair with [The Digital Twin]({{ '/design/ai-integration/digital-twin/' | relative_url }}):
+they define what a payload must carry for a non-learned gate to be *able* to judge it — identity,
+both timestamps, model and calibration provenance, a freshness bound, and the requested authority level.
+Being schema-valid means a proposal is well-formed enough to evaluate; it is never a safety verdict, and
+the ceiling it is judged against comes from the method register, not from the payload's own claim.
 
 ## Documentation
 

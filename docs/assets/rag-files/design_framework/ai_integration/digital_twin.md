@@ -156,6 +156,11 @@ The last three lines are what let the non-learned gate do its job: a proposal th
 authority, carries a freshness bound, and records why it was accepted or rejected is one a verifiable
 layer can accept, clamp, or veto — and one an audit can reconstruct after the fact.
 
+The `cst` toolkit implements this contract as an executable check (`cst twin-validate`), and the site
+publishes a machine-readable schema generated from the same field definitions. The check reports and
+never acts: a clean result means the payload is well-formed enough for a gate to evaluate it, never that
+the proposal is safe or authorized.
+
 ## 6. The model families inside the twin
 
 The twin is a spine; the models hanging off it are the same families the register scores, at the same

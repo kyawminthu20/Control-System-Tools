@@ -1,7 +1,36 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-19 (Phase 53.2 — `cst twin` contract + sync-health module)
+**Last Updated:** 2026-07-19 (Phase 53.3 — twin data-contract schema published; digital-twin arc COMPLETE)
 **Status:** Active
+
+## 2026-07-19 — Phase 53.3 (Twin data-contract schema + worked payload on the site)
+
+**Type:** Site + tooling. **No authority ceiling, register value, or contract field changed.** Slice 4 of
+4 — **the digital-twin deepening arc is complete.** Suite **297 → 300 tests**.
+
+Published the data contract as a machine-readable artifact, generated from the same `FIELD_SPECS` the
+validator enforces so the two cannot drift.
+
+- **`tools/generate_site_templates.py`** gains `_write_twin_contract()`: writes
+  `docs/assets/templates/twin_data_contract.schema.json` (JSON Schema draft 2020-12, banner carried in
+  `$comment`) and `twin_payload_example.json`. The generator **asserts the worked payload still validates**
+  before writing it, so a contract change that orphans the example fails generation rather than shipping.
+- **Defect caught during the slice:** the first version prepended a `$comment` banner to the payload —
+  which, with `additionalProperties: false`, made the published example violate the very schema it
+  demonstrates. The payload is now published verbatim; the banner lives in the schema, where `$comment`
+  is a legal keyword rather than instance data. Three regression tests lock this down (published schema
+  equals generated schema; published payload validates; published payload carries no banner key).
+- **Corpus** `digital_twin.md` §5 gains one sentence recording that the contract is implemented as an
+  executable check with a generated schema, so the site change stays a distillation. Mirror regenerated.
+- **Site:** the digital-twin page's data-contract section gains a download block for both files plus the
+  `cst twin-sync` cross-link; `/tools/templates/` gains two rows under AI & Model Lifecycle. Both pages
+  state plainly that schema-validity is never a safety verdict and that the ceiling comes from the method
+  register, not the payload's own claim. Digital-twin page stays **Review pending**.
+
+**Arc summary (49d → 53.1 → 53.2 → 53.3):** evidence closure found a published NIST ladder that had been
+sitting unextracted in our own source list; the maturity ladder shipped with its citation split by axis;
+the prose contract became a runnable check; the check's field definitions became the published schema.
+**No ceiling moved at any point.** Full release gate green.
 
 ## 2026-07-19 — Phase 53.2 (`src/cst/twin/` — the data contract as an executable check)
 

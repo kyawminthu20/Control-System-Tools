@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-19 23:11:02
+**Last Auto-Updated:** 2026-07-19 23:13:52
 
 ```text
 ├── .claude/
@@ -1104,6 +1104,8 @@
 │   │       ├── standards_applicability_register.csv
 │   │       ├── switch_port_schedule.csv
 │   │       ├── test_instrument_record.csv
+│   │       ├── twin_data_contract.schema.json
+│   │       ├── twin_payload_example.json
 │   │       ├── vlan_register.csv
 │   │       └── wire_schedule_example.csv
 │   ├── communications/

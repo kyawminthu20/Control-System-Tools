@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Digital-twin data contract",
+  "description": "Payload crossing the device-communication seam between a digital twin and a control system. Structural validity only \u2014 satisfying this schema means a non-learned gate can evaluate the proposal, never that the proposal is safe or authorized.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "asset_id",
+    "signal_id",
+    "correlation_id",
+    "source_timestamp",
+    "inference_timestamp",
+    "input_quality",
+    "output_quality",
+    "value",
+    "value_kind",
+    "model_name",
+    "model_version",
+    "feature_pipeline_version",
+    "calibration_version",
+    "valid_until",
+    "sync_state",
+    "service_health",
+    "fallback_state",
+    "requested_authority",
+    "action_type"
+  ],
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "description": "which physical asset the payload speaks for"
+    },
+    "signal_id": {
+      "type": "string",
+      "description": "which signal or inferred quantity"
+    },
+    "correlation_id": {
+      "type": "string",
+      "description": "ties proposal, decision, and audit record together"
+    },
+    "source_timestamp": {
+      "type": "number",
+      "description": "when the underlying observation was taken (epoch seconds)"
+    },
+    "inference_timestamp": {
+      "type": "number",
+      "description": "when the model produced this output (epoch seconds)"
+    },
+    "input_quality": {
+      "type": "string",
+      "description": "quality of the data the model consumed"
+    },
+    "output_quality": {
+      "type": "string",
+      "description": "quality the model claims for its output"
+    },
+    "value": {
+      "type": [
+        "number",
+        "string",
+        "boolean"
+      ],
+      "description": "the payload's primary result"
+    },
+    "value_kind": {
+      "type": "string",
+      "description": "measured, derived, or predicted \u2014 a prediction must never read as a measurement",
+      "enum": [
+        "measured",
+        "derived",
+        "predicted"
+      ]
+    },
+    "model_name": {
+      "type": "string",
+      "description": "which model produced the value"
+    },
+    "model_version": {
+      "type": "string",
+      "description": "which version of it"
+    },
+    "feature_pipeline_version": {
+      "type": "string",
+      "description": "the feature pipeline is part of the model's identity"
+    },
+    "calibration_version": {
+      "type": "string",
+      "description": "which calibration the value rests on"
+    },
+    "valid_until": {
+      "type": "number",
+      "description": "freshness bound (epoch seconds) \u2014 past this, the proposal is stale by construction"
+    },
+    "sync_state": {
+      "type": "string",
+      "description": "the twin's synchronization state at inference time"
+    },
+    "service_health": {
+      "type": "string",
+      "description": "health of the service producing the payload"
+    },
+    "fallback_state": {
+      "type": "string",
+      "description": "what the plant falls back to if this is rejected"
+    },
+    "requested_authority": {
+      "type": "integer",
+      "description": "authority level 0-5 the proposal asks for \u2014 the gate's primary input",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "action_type": {
+      "type": "string",
+      "description": "what the proposal would do if accepted"
+    },
+    "uncertainty": {
+      "type": "number",
+      "description": "uncertainty on the value, in its own units"
+    },
+    "confidence": {
+      "type": "number",
+      "description": "model confidence, where the family defines one"
+    },
+    "prediction_horizon_s": {
+      "type": "number",
+      "description": "how far ahead a prediction reaches"
+    },
+    "value_class": {
+      "type": "string",
+      "description": "class label, for classification outputs"
+    },
+    "acknowledged": {
+      "type": "boolean",
+      "description": "whether the gate accepted the proposal"
+    },
+    "rejection_reason": {
+      "type": "string",
+      "description": "why the gate rejected it, if it did"
+    },
+    "audit_identity": {
+      "type": "string",
+      "description": "who or what committed the decision"
+    }
+  },
+  "$comment": "GENERATED EXAMPLE \u2014 demonstrates the format produced by the cst toolkit from the example I/O list. Adapt to your project and review before use."
+}

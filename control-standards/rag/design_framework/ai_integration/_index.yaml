@@ -49,3 +49,6 @@ changelog:
   - date: "2026-07-19"
     action: "Added the twin maturity ladder (M0-M4) to digital_twin.md, closing the Phase 49a research backlog item; citation split by axis per the Phase 49d verdict (functional progression cited to NIST's published five-category ladder; synchronization grading labelled project engineering judgement); M4 described-not-authorized; no authority ceiling changed"
     status: "review pending"
+  - date: "2026-07-19"
+    action: "digital_twin.md §5 notes that the data contract is implemented as an executable check (cst twin-validate) with a machine-readable schema generated from the same field definitions; no contract field, ceiling, or claim changed"
+    status: "review pending"

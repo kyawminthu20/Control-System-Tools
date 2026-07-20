@@ -1,10 +1,10 @@
 # Project State
 
-**Last Updated:** 2026-07-19 (Phase 53.2 — `cst twin` module; slice 3 of 4)
+**Last Updated:** 2026-07-19 (Phase 53.3 — twin contract schema published; digital-twin arc COMPLETE)
 **Digital-twin deepening arc (started 2026-07-19):** four approved slices — **49d evidence closure (COMPLETE)** →
 **53.1 twin maturity ladder (COMPLETE)** →
-**53.2 `src/cst/twin/` contract + sync-health (COMPLETE, 297 tests)** →
-generated data-contract schema/example templates. Plan: `~/.claude/plans/lucky-drifting-fountain.md`.
+**53.2 `src/cst/twin/` contract + sync-health (COMPLETE)** →
+**53.3 generated data-contract schema + worked payload (COMPLETE)**. **ARC COMPLETE** (300 tests). Plan: `~/.claude/plans/lucky-drifting-fountain.md`.
 **No authority ceiling changes anywhere in the arc** — `digital_twin_state_sync` stays at max_authority 2,
 PINN rows at 1, chemical/biological rows stay `Planned` (owner decision still pending from 49c).
 **49d result:** the maturity ladder is *better* grounded than assumed — the NIST DT publication already in

@@ -12,7 +12,7 @@ review:
   standard: "ISO 23247 (Digital Twin Framework for Manufacturing); NIST SP 800-82r3"
   edition: "ISO 23247 Parts 1–4:2021, Part 5:2026 (Part 5 existence/title/date re-confirmed at the ISO catalogue July 2026); definition and functional twin ladder verified via NIST government publication (ISO body not read)"
   status: "Review pending"
-  coverage: "Twin vs data mirror, physical/digital directions, digital-to-physical authority ladder, twin maturity ladder M0–M4 (functional progression cited to NIST; synchronization grading is project engineering judgement), data contract, model families in the twin. Chemical and biological twins out of scope."
+  coverage: "Twin vs data mirror, physical/digital directions, digital-to-physical authority ladder, twin maturity ladder M0–M4 (functional progression cited to NIST; synchronization grading is project engineering judgement), data contract with downloadable schema, model families in the twin. Chemical and biological twins out of scope."
   last_reviewed: "July 2026"
 repo_path: "control-standards/rag/design_framework/ai_integration/digital_twin.md"
 related_standards:
@@ -219,6 +219,17 @@ and calibration versions; a valid-until / maximum-age; twin synchronization stat
 fallback state; the **requested authority level and action type**; and acknowledgment, rejection
 reason, and audit identity. The last items are what let a verifiable non-learned layer accept, clamp,
 or veto a proposal — and let an audit reconstruct the decision afterwards.
+
+**→ [Download the twin data-contract schema]({{ '/assets/templates/twin_data_contract.schema.json' | relative_url }})**
+(JSON Schema draft 2020-12) · **[worked example payload]({{ '/assets/templates/twin_payload_example.json' | relative_url }})**
+
+Both are generated from the same field definitions the toolkit's `cst twin-validate` check enforces, so
+the published schema cannot drift from the check. The companion `cst twin-sync` measures whether the
+telemetry feeding the twin actually has the synchronization properties M1–M3 above claim — gaps,
+out-of-order arrivals, staleness, and clock drift. See the
+[engineering toolkit]({{ '/tools/engineering-toolkit/' | relative_url }}).
+**Neither tool acts:** a clean result means a proposal is well-formed enough for a gate to judge, never
+that it is safe or authorized. The gate itself is plant-side engineering.
 
 ## The model families inside the twin
 
