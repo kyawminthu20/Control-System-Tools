@@ -234,8 +234,10 @@ def validate_payload(
     valid_until = data.get("valid_until")
     if now is not None and isinstance(valid_until, (int, float)) and not isinstance(valid_until, bool):
         if now > valid_until:
+            # Epoch seconds need fixed-point: %g renders them as 1.75296e+09,
+            # which loses the very digits that identify the instant.
             problems.append(
-                f"payload is stale: valid_until {valid_until:g} passed at {now:g} "
+                f"payload is stale: valid_until {valid_until:.3f} passed at {now:.3f} "
                 f"({now - valid_until:g} s late) — a gate must reject it"
             )
 

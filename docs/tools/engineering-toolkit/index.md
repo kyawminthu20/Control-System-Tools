@@ -112,7 +112,7 @@ $ cst twin-validate payload.json --register methods.yml --method-id digital_twin
 3 problem(s):
   - missing required contract field "calibration_version" — which calibration the value rests on
   - requested_authority 3 exceeds the register ceiling 2 for this method
-  - payload is stale: valid_until 1752960302 passed at 1752960500 (198 s late) — a gate must reject it
+  - payload is stale: valid_until 1752960302.000 passed at 1752960500.000 (198 s late) — a gate must reject it
 
 $ cst twin-sync telemetry.csv --max-age 5
 Twin synchronization health: 60 samples over 70 s
@@ -123,7 +123,7 @@ Twin synchronization health: 60 samples over 70 s
   mean skew: 0.1922 s (max |skew| 0.204 s)
   skew drift: 0.000309 s/s
   Warnings:
-    ! 1 telemetry gap(s); longest 12 s at 1.75296e+09 — twin state was unsynchronized across it
+    ! 1 telemetry gap(s); longest 12 s at 1752960030.000 — twin state was unsynchronized across it
 ```
 
 The authority ceiling comes from the [AI method register]({{ '/design/ai-integration/' | relative_url }}),

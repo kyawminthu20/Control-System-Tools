@@ -76,7 +76,7 @@ class SyncHealth:
         if self.gaps:
             lines.append("  Gaps:")
             lines.extend(
-                f"    - {g.duration_s:g} s starting at {g.start_s:g}" for g in self.gaps
+                f"    - {g.duration_s:g} s starting at {g.start_s:.3f}" for g in self.gaps
             )
         if self.warnings:
             lines.append("  Warnings:")
@@ -183,7 +183,7 @@ def _warnings(
         worst = max(gaps, key=lambda g: g.duration_s)
         out.append(
             f"{len(gaps)} telemetry gap(s); longest {worst.duration_s:g} s at "
-            f"{worst.start_s:g} — twin state was unsynchronized across it"
+            f"{worst.start_s:.3f} — twin state was unsynchronized across it"
         )
     if out_of_order:
         out.append(
