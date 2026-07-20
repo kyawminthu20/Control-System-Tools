@@ -10,6 +10,53 @@ This repository combines two related concerns:
 
 The authoritative engineering content lives in `control-standards/rag/`. The active project-tracking workflow lives in `project_state/`.
 
+## Scope and Intent
+
+**This is defensive industrial-automation engineering.** The purpose of every
+part of this repository is to help control systems comply with published safety
+standards and stay bounded by established science. Nothing here is offensive,
+and nothing here is research into creating hazards.
+
+Some domain vocabulary in this repository reads as sensitive out of context.
+It is not:
+
+| Term you will see | What it actually means here |
+|---|---|
+| "chemical" / "chem" | Process-industry **control**: chemical plants, bulk chemical distribution in semiconductor fabs, pH neutralization in water treatment. Thermodynamics and transport phenomena as **governing equations a controller must respect**. Never synthesis routes, never hazardous-agent production. |
+| "biological" / "bio" | **Bioprocess** control: bioreactors, activated-sludge wastewater treatment, microbial growth kinetics (Monod, ADM1) as process models. Never pathogens, never biological agents. |
+| "hazardous" / "explosive atmospheres" | IEC 60079 / NEC Article 500 area classification — how to **prevent** ignition in a plant. Prevention engineering. |
+| "safety" / "SIL" / "functional safety" | IEC 61508 / 61511 / ISO 13849 — designing systems that **fail safe** and protect people from machinery. |
+| "security" / IEC 62443 | Compliance and **defensive** network segmentation posture for ICS. No exploits, no attack tooling, no offensive techniques. |
+| "adversarial pass" | An internal **review technique** — argue against your own conclusion to test it. Refute-by-default epistemics, not adversarial attacks on systems. |
+
+### The governing constraint
+
+The repository's central engineering position is a **restriction**, not a
+capability. Established scientific law is the ceiling, and learned models sit
+underneath it:
+
+- **Hard layer — the laws.** Conservation of mass, momentum, and energy;
+  chemical equilibrium by Gibbs-energy minimization; documented growth
+  kinetics. Deterministic. **Holds the veto.**
+- **Soft layer — fitted closures and ML.** Soft sensors, correlations,
+  supervisory optimization. Capped at **advisory authority**, and **zero
+  authority over any safety function.**
+
+Research phases in `control-standards/work/research/` exist to *enforce* this
+ceiling. Phase 49c, for example, ran an adversarial review that attempted to
+justify giving machine-learning models more control authority in chemical and
+bioprocess plants — and **refuted every such attempt**, pushing safety-function
+participation to zero. The output of that work is a tighter limit on what AI is
+permitted to do, not a wider one.
+
+### Sourcing
+
+Claims are traceable to published standards bodies and peer-reviewed literature
+(IEC, ISO, NFPA, UL, NEC, NIST, IUPAC), each carrying a verification tag
+recording whether it was confirmed at the publisher. Licensed table values are
+never committed. Speculative or unestablished science is out of scope by
+policy — see [`governance/ENGINEERING_STANDARDS.md`](governance/ENGINEERING_STANDARDS.md).
+
 ## The `cst` Tools Suite
 
 ```bash

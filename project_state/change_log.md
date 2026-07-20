@@ -1,7 +1,75 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-17 (Phase 49c — chem/bio evidence closure + adversarial coverage)
+**Last Updated:** 2026-07-19 (Phase 50.14 — `cst modbus-decode` offline capture analysis)
 **Status:** Active
+
+## 2026-07-19 — Phase 50.14: `cst modbus-decode` (offline Modbus TCP capture analysis)
+
+**Type:** Toolkit feature. New `cst` subcommand + module; no corpus, register, or AI-authority
+position changed.
+
+Added offline Modbus TCP capture decoding to the diagnostics module, closing the gap between the
+design-time register map (`cst modbus-map`) and what a link actually carries in the field.
+
+- **`src/cst/diagnostics/modbus_decode.py`** (new) — classic pcap and pcapng readers (stdlib only:
+  Ethernet, VLAN, Linux SLL, raw-IP, and loopback link types), TCP stream reassembly, Modbus TCP
+  ADU framing and PDU decode, request/response pairing, and a field-diagnostic summary
+  (exception responses, unanswered requests, response latency, polled register spans).
+- **`src/cst/cli.py`** — new `modbus-decode` subcommand with `--port`, `--addresses`,
+  `--exceptions`, `--unanswered`. Also widened `main`'s handler to catch `FileNotFoundError`
+  alongside `ValueError`: a missing input file (or an unsupplied licensed table, since
+  `TableDataMissingError` subclasses it) now exits 2 with a clean message instead of a traceback.
+  This fixed a pre-existing gap that also affected `io-check`, `saleae`, and the table-backed
+  calculators.
+- **`docs/tools/engineering-toolkit/index.md`** — command-table row, worked example, and a limits
+  note that capture itself must be passive (TAP or mirror port) on a live OT segment.
+- **`tests/cst/test_modbus_decode.py`** (new, 19 tests) + 5 CLI tests in `tests/cst/test_cli.py`.
+  Captures are synthesised in-test rather than committed as binary fixtures, so every byte under
+  test is visible and reviewable. Suite 202 → 226.
+
+**Provenance.** The TCP reassembly approach (32-bit sequence-space arithmetic, retransmission and
+gap handling, framing-violation resync, LRU stream eviction) is adapted from the owner's own
+`~/Dev/network_monitoring` project, which is intentionally private and has no remote. Only
+original code was carried across — the knowledge-base content there is derived from private
+source files and was deliberately **not** ported. The live-capture daemon was also left behind:
+`cst` stays a read-only offline analysis toolkit with no privileged network access.
+
+**Design notes.** Protocol constants (MBAP framing, function codes, exception codes) follow the
+openly published Modbus Application Protocol Specification V1.1b3 — no licensed table values are
+embedded. A wrong `--port` labels every frame a response, which would otherwise produce a
+silently meaningless summary; the CLI warns rather than fails, because a direction-filtered
+capture legitimately has no requests.
+
+Full release gate green at delivery (226 tests + 10 doctests, clean Jekyll build, zero broken
+internal links, AI-boundary and corpus-quality checks green).
+
+## 2026-07-19 — Repository scope-and-intent statement (documentation only)
+
+**Type:** Documentation / governance. **No technical, corpus, register, or site content changed.**
+
+Added an explicit, prominent statement of what this repository is and is not, because the
+process-engineering vocabulary here ("chemical", "biological", "hazardous", "adversarial pass")
+reads as sensitive when encountered without context — by human reviewers and automated review
+alike. The statement is descriptive of what the repository already does; it introduces no new
+position.
+
+- **`README.md`** — new **Scope and Intent** section directly after the intro: defensive
+  industrial-automation engineering; a term-by-term table mapping each ambiguous word to its
+  actual process-engineering meaning; the governing hard/soft-layer constraint (established
+  scientific law is the ceiling and holds the veto, ML capped at advisory with zero safety-function
+  authority); and the sourcing/verification posture.
+- **`governance/AI_WORKFLOW.md`** — new **§0 Scope of This Repository**, placed ahead of the read
+  order so any agent meets it first. Same vocabulary clarification, plus an explicit instruction
+  that work here is safety-compliance documentation, and that anything which would *increase*
+  rather than constrain hazard capability is out of scope for this repository.
+- **`control-standards/work/research/ai-ml-control-systems/README.md`** — blockquoted scope note
+  at the top, since this is where the chem/bio shorthand actually lives. Records that Phase 49c
+  attempted to justify greater ML authority in chemical and bioprocess plants and **refuted every
+  attempt** — the deliverable was a tighter limit, not a broader capability.
+
+Full release gate green at delivery (202 tests + 10 doctests, clean Jekyll build, zero broken
+internal links across 378 files, AI-boundary and corpus-quality checks clean). The 166-page
+legacy `review:`-block warning is the pre-existing baseline, unchanged.
 
 ## 2026-07-17 — Phase 49c (Chemical & biological evidence closure + adversarial pass)
 

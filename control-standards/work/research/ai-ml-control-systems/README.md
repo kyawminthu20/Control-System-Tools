@@ -4,6 +4,26 @@
 **Started:** 2026-07-11  
 **Destination:** Not yet decided. Nothing here is authoritative site or RAG content.
 
+> ## Scope note — read before interpreting the vocabulary here
+>
+> This workspace studies **how much control authority a learned model may hold
+> in an industrial control loop**. Its consistent finding is a **restriction**:
+> deterministic governing science (conservation laws, chemical equilibrium,
+> documented growth kinetics) is the hard ceiling and holds the veto, while ML
+> is capped at advisory/soft-sensor roles with **zero authority over any safety
+> function**.
+>
+> Domain terms are process-engineering terms. **"Chemical"** = chemical-plant
+> process control and thermodynamics; never synthesis routes. **"Biological" /
+> "microbiology"** = bioreactor and wastewater-treatment process models
+> (Monod, ADM1); never pathogens or agents. **"Adversarial pass"** = an internal
+> refute-by-default review of our own conclusions; not an attack on any system.
+>
+> Phase 49c is a representative example: it attempted to justify greater ML
+> authority in chemical and bioprocess plants and **refuted every attempt**.
+> The deliverable was a tighter limit, not a broader capability.
+> Full statement: [repository README](../../../../README.md#scope-and-intent).
+
 ## Research question
 
 How should digital twins combine real-world control-system data with scientific

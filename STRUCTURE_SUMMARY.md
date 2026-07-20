@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-17 15:41:04
+**Last Auto-Updated:** 2026-07-19 22:44:37
 
 ```text
 ├── .claude/
@@ -1697,6 +1697,7 @@
 │       │   └── units.py
 │       ├── diagnostics/
 │       │   ├── __init__.py
+│       │   ├── modbus_decode.py
 │       │   ├── saleae.py
 │       │   └── sbm.py
 │       ├── docgen/
@@ -1754,6 +1755,7 @@
 │   │   ├── test_enclosure_thermal.py
 │   │   ├── test_encoder.py
 │   │   ├── test_io_validation_seam.py
+│   │   ├── test_modbus_decode.py
 │   │   ├── test_panel.py
 │   │   ├── test_phase2_calcs.py
 │   │   ├── test_plc.py

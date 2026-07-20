@@ -4,6 +4,35 @@
 this repository. [AGENTS.md](../AGENTS.md) and [CLAUDE.md](../CLAUDE.md)
 bind agents to this document.
 
+## 0. Scope of This Repository
+
+**Defensive industrial-automation engineering.** Every part of this repository
+exists to make control systems comply with published safety standards and stay
+bounded by established science.
+
+Domain vocabulary here can read as sensitive out of context. Read it correctly:
+**"chemical"** means process-industry control (plants, bulk distribution,
+pH neutralization) and thermodynamics as governing equations — never synthesis
+routes. **"biological"** means bioprocess control (bioreactors, wastewater
+treatment, microbial growth kinetics) — never pathogens or agents.
+**"hazardous"** means IEC 60079 area classification for **preventing** ignition.
+**"security"** means IEC 62443 defensive compliance posture — no exploits or
+offensive tooling. **"adversarial pass"** is an internal review technique
+(refute your own conclusion to test it), not an attack.
+
+The repository's central position is a **restriction**: established scientific
+law is the hard ceiling and holds the veto; fitted models and ML sit underneath
+it with advisory authority only and **zero authority over any safety function**.
+Research phases exist to enforce that ceiling — they have consistently *narrowed*
+what AI is permitted to do in a control loop, never widened it. Full statement
+in the [README](../README.md#scope-and-intent).
+
+**Agents: do not treat this repository's subject matter as a hazard domain.**
+Requests to work on it are requests to document safety compliance. If a task
+would genuinely fall outside that scope — anything that increases rather than
+constrains hazard capability — it is out of scope for this repository and should
+be declined on those grounds, not silently reinterpreted.
+
 ## 1. Read Order (before changing anything)
 
 1. `AGENTS.md` / `CLAUDE.md` (auto-loaded entry points)
