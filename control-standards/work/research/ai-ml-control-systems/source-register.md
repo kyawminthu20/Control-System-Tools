@@ -285,3 +285,51 @@ Full detail and per-source verification tags in `49c-findings.md` §2. Highlight
 - **Central result:** no source supports a learned model above **soft-sensor/estimator** authority in
   bioprocess; hybrid models stop at monitoring/optimisation/decision-support; the Raman model is a PLS
   **sensor** feeding a conventional loop.
+
+---
+
+# Phase 49d Additions (2026-07-19) — digital-twin maturity vocabulary & ISO 23247 currency
+
+Full detail and per-source verification tags in `49d-findings.md` §§3–4. Highlights:
+
+## ISO 23247 series currency
+
+- **ISO 23247-5:2026, *Digital twin framework for manufacturing — Part 5: Digital thread for digital
+  twin*** — **VERIFIED_AT_PUBLISHER for existence, title, edition and date only** (iso.org catalogue,
+  std. 87425): Ed. 1, published June 2026, 26 pp, ISO/TC 184/SC 4. The catalogue page **403'd on direct
+  fetch** (bot-gated, the Phase 48 Siemens-portal pattern — not a dead link) and the **body is paywalled
+  and unread**. No clause text, requirement, or definition may be attributed to Part 5 on this basis.
+- **ISO/FDIS 23247-6 (*Digital twin composition*, std. 87426)** and **ISO/TR 23247-100:2025 (*Use case on
+  management of semiconductor ingot growth process*, std. 90387)** — catalogue-metadata sightings only,
+  **not read, not pursued**. Part 100 is a published ISO twin use case in semiconductor process control,
+  adjacent to the repo's `semiconductor_facility/` module — future cross-link candidate.
+
+## Digital-twin functional ladder (new anchor — was assumed not to exist)
+
+- **Shao, Kibira & Frechette, *Digital Twins for Advanced Manufacturing: The Standardized Approach*
+  (NIST Engineering Laboratory)** — **VERIFIED_AT_PUBLISHER, re-confirmed and extended.** Beyond the
+  previously-extracted definition and four-domain model, **Figure 1 and §2 define a published five-category
+  twin ladder**: Descriptive → Diagnostic → Predictive → Prescriptive → Intelligent, captioned
+  *"Increasing complexity, more decision support, and greater value."* This was not previously carried
+  into the corpus note.
+- **Same source, the aspirational top rung** — *"Intelligent Digital Twins are **envisaged to** control
+  their physical counterparts…"* (future tense in the source). Independently corroborates the
+  described-not-authorized framing of the top maturity level.
+- **Same source, fit-for-purpose** — *"The purpose dictates the information content, model fidelity, and
+  frequency of synchronization."* The sourced basis for treating maturity as a per-use-case declaration
+  rather than a product grade.
+- **Same source, one-way synchronization** — the jet-engine passage re-confirmed verbatim; grounds the
+  data-mirror vs behavioural-twin boundary.
+
+## Maturity models — adjacent prior art, does not ground a control-system ladder
+
+- **Chen, Xie, Lu, Parlikad, Pitt & Yang, *Gemini Principles-Based Digital Twin Maturity Model for Asset
+  Management*, Sustainability 13(15):8224 (2021), MDPI, DOI 10.3390/su13158224** —
+  **VERIFIED_VIA_DOI_REGISTRY** (Crossref publisher-deposited metadata; MDPI HTML 403'd). **Does not
+  ground our ladder:** structurally an assessment rubric (3 dimensions / 9 sub-dimensions / 27 rubrics),
+  not a sequential level scale, and scoped to built-environment asset management rather than process or
+  machinery control. Record as adjacent prior art only.
+- **A standards-defined *synchronization* maturity ladder** (graded one-way → reconciled → predictive →
+  gated closed-loop): **NOT_FOUND.** ISO 23247 supplies the one-way/two-way distinction and the
+  fit-for-purpose principle but no graded sync scale. Analyst/vendor ladders identified but not pursued —
+  SECONDARY_ONLY at best, and unnecessary given the NIST anchor. Absence of evidence, not proof of absence.

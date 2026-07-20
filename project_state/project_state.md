@@ -1,6 +1,18 @@
 # Project State
 
-**Last Updated:** 2026-07-19 (Phase 50.14 — `cst modbus-decode` offline Modbus TCP capture analysis)
+**Last Updated:** 2026-07-19 (Phase 49d — digital-twin evidence closure; slice 1 of 4)
+**Digital-twin deepening arc (started 2026-07-19):** four approved slices — **49d evidence closure
+(COMPLETE)** → twin maturity ladder (corpus + site) → `src/cst/twin/` contract + sync-health module →
+generated data-contract schema/example templates. Plan: `~/.claude/plans/lucky-drifting-fountain.md`.
+**No authority ceiling changes anywhere in the arc** — `digital_twin_state_sync` stays at max_authority 2,
+PINN rows at 1, chemical/biological rows stay `Planned` (owner decision still pending from 49c).
+**49d result:** the maturity ladder is *better* grounded than assumed — the NIST DT publication already in
+`sources.yml` carries a published five-rung functional ladder (Descriptive → Diagnostic → Predictive →
+Prescriptive → Intelligent) that had never been extracted into the corpus note, and NIST's own top rung is
+explicitly *envisaged*, corroborating the described-not-authorized framing. Content slice must **split the
+citation by axis**: cite NIST for the functional progression, label the synchronization grading as project
+working vocabulary. ISO 23247-5:2026 confirmed current (existence/title/date only — body paywalled, page
+bot-gated; the "ISO body not read" caveat stands).
 **Status:** Active
 **Scope statement (2026-07-19):** The repository now carries an explicit scope-and-intent statement in
 [`README.md`](../README.md#scope-and-intent), `governance/AI_WORKFLOW.md` §0, and the AI/ML research

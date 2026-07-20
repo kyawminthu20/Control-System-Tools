@@ -1,7 +1,45 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-19 (Phase 50.14 — `cst modbus-decode` offline capture analysis)
+**Last Updated:** 2026-07-19 (Phase 49d — digital-twin evidence closure)
 **Status:** Active
+
+## 2026-07-19 — Phase 49d (Digital-twin maturity vocabulary + ISO 23247 currency)
+
+**Type:** Work-tier research only — **no site, corpus, or register change.** First slice of the
+four-slice digital-twin deepening arc.
+**Outputs (under `control-standards/work/research/ai-ml-control-systems/`):** new `49d-findings.md`;
+`source-register.md` Phase 49d additions section; two verdicts appended to `adversarial-verdicts.md`.
+
+Ran the evidence closure the maturity-ladder content slice depends on. **The headline result inverted
+the expectation:** the ladder is *better* grounded than assumed.
+
+- **A published five-rung twin ladder exists and was already in our own source list, unextracted.** The
+  NIST publication (Shao, Kibira & Frechette, *Digital Twins for Advanced Manufacturing: The Standardized
+  Approach*) defines **Descriptive → Diagnostic → Predictive → Prescriptive → Intelligent** in Figure 1,
+  captioned "Increasing complexity, more decision support, and greater value". VERIFIED_AT_PUBLISHER.
+- **NIST's own top rung is aspirational** — "Intelligent Digital Twins are **envisaged to** control their
+  physical counterparts" (future tense in the source). This independently corroborates the planned
+  *described-not-authorized* framing of the top maturity level: two reasons now, one external, one internal.
+- **ISO 23247-5:2026 confirmed current** — Ed. 1, June 2026, 26 pp, ISO/TC 184/SC 4, Part 5 *Digital thread
+  for digital twin*. **Existence/title/edition/date only** — the catalogue page 403'd (bot-gated, the Phase
+  48 Siemens pattern) and the body is paywalled and unread. The corpus note's "ISO body not read" caveat
+  stands and must not be softened. Also sighted, not read: ISO/FDIS 23247-6 (twin composition) and
+  **ISO/TR 23247-100:2025** (semiconductor ingot-growth use case — adjacent to `semiconductor_facility/`,
+  flagged as a future cross-link).
+- **Maturity-model sweep:** the Gemini/CDBB line (Chen et al., *Sustainability* 13(15):8224, DOI
+  10.3390/su13158224, VERIFIED_VIA_DOI_REGISTRY) is an assessment **rubric** (3 dimensions / 9
+  sub-dimensions / 27 rubrics) scoped to built-environment asset management — adjacent prior art, does
+  **not** ground a control-system ladder. A standards-defined *synchronization* ladder: **NOT_FOUND**.
+- **Verdict for the content slice (§5 of the findings): split the citation by axis.** Cite NIST for the
+  functional progression; label the synchronization grading (no link / one-way / reconciled / validated
+  horizon / gated action path) explicitly as project working vocabulary; state that M0 sits *below*
+  NIST's scale, which presumes a live twin.
+- **Adversarial pass:** `twin-maturity-ladder-vocabulary` partially refuted (grounding better than
+  claimed — publish with the axis split). `twin-maturity-implies-authority` **flatly refuted** — maturity
+  never supports authority; `digital_twin_state_sync` stays at max_authority 2, PINN rows stay at 1,
+  level 5 remains unavailable to any learned method at any maturity.
+
+**No ceiling moved.** Full release gate green.
 
 ## 2026-07-19 — Phase 50.14: `cst modbus-decode` (offline Modbus TCP capture analysis)
 
