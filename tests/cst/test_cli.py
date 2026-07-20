@@ -160,3 +160,76 @@ def test_modbus_decode_no_frames_returns_2(tmp_path, capsys) -> None:
     )
     assert main(["modbus-decode", str(path)]) == 2
     assert "no Modbus TCP frames" in capsys.readouterr().err
+
+
+# --- twin-validate / twin-sync ------------------------------------------------
+
+_EXAMPLE_PAYLOAD = "data/examples/twin_payload_example.json"
+_EXAMPLE_SAMPLES = "data/examples/twin_sync_example.csv"
+_REGISTER = "control-standards/rag/design_framework/ai_integration/methods.yml"
+
+
+def test_twin_validate_example_payload_returns_0(capsys) -> None:
+    assert main(["twin-validate", _EXAMPLE_PAYLOAD, "--ceiling", "2"]) == 0
+    assert "payload OK" in capsys.readouterr().out
+
+
+def test_twin_validate_reports_problems_and_returns_1(tmp_path, capsys) -> None:
+    import json
+    from pathlib import Path
+
+    data = json.loads(Path(_EXAMPLE_PAYLOAD).read_text(encoding="utf-8"))
+    del data["model_version"]
+    broken = tmp_path / "broken.json"
+    broken.write_text(json.dumps(data), encoding="utf-8")
+
+    assert main(["twin-validate", str(broken), "--ceiling", "2"]) == 1
+    out = capsys.readouterr().out
+    assert "1 problem(s):" in out
+    assert "model_version" in out
+
+
+def test_twin_validate_reads_the_ceiling_from_the_register(capsys) -> None:
+    argv = ["twin-validate", _EXAMPLE_PAYLOAD,
+            "--register", _REGISTER, "--method-id", "digital_twin_state_sync"]
+    assert main(argv) == 0
+    assert "payload OK" in capsys.readouterr().out
+
+
+def test_twin_validate_rejects_both_ceiling_sources(capsys) -> None:
+    argv = ["twin-validate", _EXAMPLE_PAYLOAD, "--ceiling", "2",
+            "--register", _REGISTER, "--method-id", "digital_twin_state_sync"]
+    assert main(argv) == 2
+    assert "alternative ways" in capsys.readouterr().err
+
+
+def test_twin_validate_planned_method_id_explains_itself(capsys) -> None:
+    """A Planned row has no established ceiling; that must not read as a typo."""
+    argv = ["twin-validate", _EXAMPLE_PAYLOAD,
+            "--register", _REGISTER, "--method-id", "hybrid_chemical_closure"]
+    assert main(argv) == 2
+    assert "still Planned" in capsys.readouterr().err
+
+
+def test_twin_sync_reports_the_seeded_gap_and_returns_1(capsys) -> None:
+    assert main(["twin-sync", _EXAMPLE_SAMPLES, "--max-age", "5"]) == 1
+    out = capsys.readouterr().out
+    assert "Twin synchronization health" in out
+    assert "max gap: 12 s" in out
+    assert "References:" in out
+
+
+def test_twin_sync_clean_series_returns_0(tmp_path, capsys) -> None:
+    f = tmp_path / "clean.csv"
+    f.write_text(
+        "source_ts,acquisition_ts\n"
+        + "".join(f"{i}.0,{i}.2\n" for i in range(20)),
+        encoding="utf-8",
+    )
+    assert main(["twin-sync", str(f), "--max-age", "5"]) == 0
+    assert "0 gap(s) detected" in capsys.readouterr().out
+
+
+def test_twin_sync_missing_file_returns_2(capsys) -> None:
+    assert main(["twin-sync", "/nonexistent/samples.csv", "--max-age", "5"]) == 2
+    assert capsys.readouterr().err.startswith("error:")

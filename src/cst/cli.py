@@ -22,6 +22,8 @@ Usage examples:
     cst saleae capture.csv --channel "Channel 0"
     cst modbus-decode capture.pcap --addresses
     cst sbm --train normal.csv --score live.csv
+    cst twin-validate data/examples/twin_payload_example.json --ceiling 2
+    cst twin-sync data/examples/twin_sync_example.csv --max-age 5
     cst design-package data/examples/io_list_example.csv --project "Demo" --panel CP-01
 """
 
@@ -46,6 +48,11 @@ from cst.docgen.design_package import DesignPackage
 from cst.motion.encoder import EncoderScaling
 from cst.panel import bom, io_list as io_list_mod, nameplates, wire_schedule
 from cst.plc import address_map, tag_db
+from cst.twin import contract as twin_contract
+
+# Imported from the submodule, not the package: cst.twin re-exports a
+# sync_health *function*, which shadows the module of the same name.
+from cst.twin.sync_health import read_sample_csv, sync_health
 
 
 def _cmd_voltage_drop(args: argparse.Namespace) -> int:
@@ -362,6 +369,47 @@ def _cmd_sbm(args: argparse.Namespace) -> int:
     return 1 if flagged else 0
 
 
+def _cmd_twin_validate(args: argparse.Namespace) -> int:
+    if args.ceiling is not None and args.register:
+        raise ValueError(
+            "--ceiling and --register are alternative ways to set the same limit; "
+            "pass one or the other"
+        )
+    ceiling = args.ceiling
+    if args.register:
+        if not args.method_id:
+            raise ValueError("--register also needs --method-id to select a row")
+        ceilings = twin_contract.authority_ceilings(args.register)
+        if args.method_id not in ceilings:
+            # A Planned row is absent by design, so say which case this is
+            # rather than letting it read as a typo.
+            raise ValueError(
+                f"no established ceiling for method {args.method_id!r} in {args.register}; "
+                f"either the id is wrong or its authority is still Planned "
+                f"(known ids with a ceiling: {len(ceilings)})"
+            )
+        ceiling = ceilings[args.method_id]
+
+    payload = twin_contract.load_payload(args.payload)
+    problems = twin_contract.validate_payload(
+        payload, authority_ceiling=ceiling, now=args.now
+    )
+    if problems:
+        print(f"{len(problems)} problem(s):")
+        for p in problems:
+            print(f"  - {p}")
+        return 1
+    print("payload OK — well-formed enough for a gate to evaluate (not a safety verdict)")
+    return 0
+
+
+def _cmd_twin_sync(args: argparse.Namespace) -> int:
+    samples = read_sample_csv(args.csv)
+    health = sync_health(samples, max_age_s=args.max_age, gap_factor=args.gap_factor)
+    print(health.report())
+    return 1 if health.warnings else 0
+
+
 def _cmd_design_package(args: argparse.Namespace) -> int:
     loaded = io_list_mod.load_io_list(args.csv)
     package = DesignPackage(
@@ -532,6 +580,20 @@ def build_parser() -> argparse.ArgumentParser:
     sb.add_argument("--bandwidth", type=float, default=1.0)
     sb.add_argument("--threshold", type=float, default=3.0)
     sb.set_defaults(func=_cmd_sbm)
+
+    tv = sub.add_parser("twin-validate", help="validate a digital-twin payload against the data contract")
+    tv.add_argument("payload", help="JSON payload file")
+    tv.add_argument("--ceiling", type=int, help="max authority level the register permits")
+    tv.add_argument("--register", help="methods.yml to read the ceiling from (with --method-id)")
+    tv.add_argument("--method-id", help="method row id in --register")
+    tv.add_argument("--now", type=float, help="epoch seconds to test valid_until against")
+    tv.set_defaults(func=_cmd_twin_validate)
+
+    ts = sub.add_parser("twin-sync", help="synchronization health of twin telemetry")
+    ts.add_argument("csv", help="two-column CSV: source_ts, acquisition_ts")
+    ts.add_argument("--max-age", type=float, required=True, help="freshness bound in seconds")
+    ts.add_argument("--gap-factor", type=float, default=3.0)
+    ts.set_defaults(func=_cmd_twin_sync)
 
     dp = sub.add_parser("design-package", help="assemble a design package (markdown)")
     dp.add_argument("csv", help="I/O list CSV")

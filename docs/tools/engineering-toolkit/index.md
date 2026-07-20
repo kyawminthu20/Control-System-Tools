@@ -62,6 +62,8 @@ uv run cst --help
 | `cst saleae` | Pulse stats, glitch finder, quadrature decode from Logic 2 exports | — |
 | `cst modbus-decode` | Offline Modbus TCP capture analysis: exception responses, unanswered requests, response latency, polled register spans | Modbus Application Protocol Specification V1.1b3 |
 | `cst sbm` | Similarity-based anomaly scores for sensor data | SBM-family kernel autoassociative model |
+| `cst twin-validate` | Digital-twin payload against the data contract: required fields, requested authority vs the register ceiling, freshness | Corpus `digital_twin.md` §5; NIST SP 800-82r3 |
+| `cst twin-sync` | Synchronization health of twin telemetry: gaps, out-of-order arrivals, staleness, clock skew and drift | Corpus `digital_twin.md` §3 steps 2 and 4 |
 | `cst design-package` | One markdown design document stitching the above together | — |
 
 Example — the classic Article 430 chain for a 10 hp, 460 V motor:
@@ -102,10 +104,42 @@ unanswered requests: 1
 `--addresses` lists the register spans the client actually polls, which you can
 diff against the design-time map from `cst modbus-map`.
 
+Example — checking a digital-twin proposal before a gate would see it, and the
+synchronization health of the telemetry feeding it:
+
+```text
+$ cst twin-validate payload.json --register methods.yml --method-id digital_twin_state_sync
+3 problem(s):
+  - missing required contract field "calibration_version" — which calibration the value rests on
+  - requested_authority 3 exceeds the register ceiling 2 for this method
+  - payload is stale: valid_until 1752960302 passed at 1752960500 (198 s late) — a gate must reject it
+
+$ cst twin-sync telemetry.csv --max-age 5
+Twin synchronization health: 60 samples over 70 s
+  median interval: 1 s
+  max gap: 12 s (1 gap(s) detected)
+  out-of-order samples: 0
+  stale samples: 0 (0.0%)
+  mean skew: 0.1922 s (max |skew| 0.204 s)
+  skew drift: 0.000309 s/s
+  Warnings:
+    ! 1 telemetry gap(s); longest 12 s at 1.75296e+09 — twin state was unsynchronized across it
+```
+
+The authority ceiling comes from the [AI method register]({{ '/design/ai-integration/' | relative_url }}),
+never from the payload's own claim. See [The Digital Twin]({{ '/design/ai-integration/digital-twin/' | relative_url }})
+for the contract and the maturity ladder these checks implement.
+
 ## Limits
 
 - Screening and design-assist calculations — final designs need the official
   standards, project-specific data, and engineering review.
+- `cst twin-validate` and `cst twin-sync` **report and never act.** A clean
+  result means a proposal is well-formed enough for a non-learned gate to judge,
+  or that telemetry has the synchronization properties it claims — never that
+  anything is safe or authorized. The gate that clamps or vetoes a proposal is
+  plant-side engineering with its own integrity requirements, not a Python
+  library.
 - `cst modbus-decode` reads capture files offline and never opens a network
   interface. Taking the capture is a separate step: on a live OT segment use a
   passive method (a TAP or a switch mirror port) — active scanning or injected

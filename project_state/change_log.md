@@ -1,7 +1,44 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-19 (Phase 53.1 — twin maturity ladder)
+**Last Updated:** 2026-07-19 (Phase 53.2 — `cst twin` contract + sync-health module)
 **Status:** Active
+
+## 2026-07-19 — Phase 53.2 (`src/cst/twin/` — the data contract as an executable check)
+
+**Type:** Toolkit. Stdlib-only, no new dependency. **No authority ceiling or register value changed.**
+Slice 3 of the digital-twin deepening arc. Suite **226 → 297 tests** (+71), 10 doctests.
+
+Turned the corpus note's prose data contract (§5) and data-integrity steps (§3 steps 2 and 4) into code
+that can be run against a real payload and a real telemetry file.
+
+- **`src/cst/twin/contract.py`** — `FIELD_SPECS` (19 required + 7 optional fields) is the single
+  definition of the contract; `validate_payload()` returns every violation named by field, in the
+  `io_list.validate()` convention. Checks: missing/mistyped/unknown fields, closed `value_kind`
+  vocabulary, inference-cannot-precede-observation, authority within 0–5, **authority vs the register
+  ceiling naming both numbers**, and staleness against an injected `now`. **Level 5 is flagged
+  unconditionally** — no configured ceiling can authorize it, because the ladder assigns it to no
+  learned twin output. `bool` is explicitly excluded from integer fields so `True` cannot read as
+  authority level 1.
+- **`authority_ceilings()`** parses `methods.yml` (JSON-as-YAML — `json.loads` reads it, no PyYAML).
+  **`Planned` rows are excluded rather than treated as 0** — no ceiling established is a different claim
+  from a ceiling of zero, and the CLI says which case it hit rather than letting it read as a typo.
+- **`schema()`** generates JSON Schema draft 2020-12 from the same `FIELD_SPECS`, so the schema Slice 4
+  publishes cannot drift from the validator (tested both directions).
+- **`src/cst/twin/sync_health.py`** — measures gaps, out-of-order arrivals, staleness, mean/max clock
+  skew, and **skew drift** (stdlib least-squares) over `(source_ts, acquisition_ts)` pairs. Samples are
+  analysed in arrival order deliberately: sorting first would erase the out-of-order condition §3 step 4
+  requires be detected. `report()` follows `CalcResult.report()` and carries its corpus citation.
+- **CLI:** `cst twin-validate` and `cst twin-sync`, flat-hyphenated per existing convention; exit 1 on
+  problems/warnings, 2 on bad input. Worked examples committed at
+  `data/examples/twin_payload_example.json` and `twin_sync_example.csv` (60 samples with a seeded 12 s
+  dropout and slow clock drift).
+- **Design stance, stated in the module docstrings and on the toolkit page:** these **report and never
+  act.** A clean result means a proposal is well-formed enough for a gate to judge — never that it is
+  safe or authorized. The gate itself is plant-side engineering, not a Python library.
+- One real defect caught during integration: `cst.twin` re-exports a `sync_health` *function* that
+  shadows the submodule of the same name, so the CLI imports from the submodule directly (commented).
+
+Full release gate green.
 
 ## 2026-07-19 — Phase 53.1 (Twin maturity ladder — corpus + site)
 

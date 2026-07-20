@@ -27,7 +27,7 @@ Key directories:
 ```bash
 uv sync                                  # install (editable) incl. cst CLI + dev deps
 uv run pytest                            # full test suite (must be green before merge)
-uv run cst --help                        # the toolkit CLI (23 subcommands)
+uv run cst --help                        # the toolkit CLI (24 subcommands)
 python3 tools/project_automator.py       # refresh structure summary
 python3 tools/validate_ai_boundaries.py  # validate AI content boundaries
 python3 tools/generate_rag_tree.py       # sync corpus -> site mirror (manual, drifts!)
