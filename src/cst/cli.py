@@ -20,6 +20,7 @@ Usage examples:
     cst tags-from-io data/examples/io_list_example.csv
     cst modbus-map data/examples/io_list_example.csv
     cst saleae capture.csv --channel "Channel 0"
+    cst modbus-decode capture.pcap --addresses
     cst sbm --train normal.csv --score live.csv
     cst design-package data/examples/io_list_example.csv --project "Demo" --panel CP-01
 """
@@ -40,7 +41,7 @@ from cst.calc import (
     voltage_drop,
 )
 from cst.commissioning import fat_sat, loop_sheets
-from cst.diagnostics import saleae, sbm as sbm_mod
+from cst.diagnostics import modbus_decode, saleae, sbm as sbm_mod
 from cst.docgen.design_package import DesignPackage
 from cst.motion.encoder import EncoderScaling
 from cst.panel import bom, io_list as io_list_mod, nameplates, wire_schedule
@@ -277,6 +278,61 @@ def _cmd_saleae(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_modbus_decode(args: argparse.Namespace) -> int:
+    frames = modbus_decode.decode_frames(
+        modbus_decode.read_capture(args.pcap), server_port=args.port
+    )
+    if not frames:
+        raise ValueError(
+            f"no Modbus TCP frames found on port {args.port}; "
+            "check --port if the link uses a non-standard server port"
+        )
+    summary = modbus_decode.summarize(frames)
+    print(summary.report())
+
+    if summary.request_count == 0:
+        # Direction comes from the server port, so a wrong --port labels every
+        # frame a response and silently produces a meaningless summary. A
+        # direction-filtered capture can also look like this, so warn, not fail.
+        print(
+            f"warning: no requests seen — every frame was treated as a response. "
+            f"If the server does not listen on port {args.port}, re-run with "
+            f"--port; otherwise the capture may hold only one direction.",
+            file=sys.stderr,
+        )
+
+    if args.exceptions:
+        print("\nexception responses:")
+        for frame in summary.exceptions:
+            print(
+                f"  t={frame.timestamp:.6f} unit={frame.unit_id} "
+                f"txn={frame.transaction_id} {frame.function_name}: "
+                f"{frame.exception_name}"
+            )
+
+    if args.unanswered:
+        stalled = [
+            t for t in modbus_decode.pair_transactions(frames) if t.unanswered
+        ]
+        print(f"\nunanswered requests: {len(stalled)}")
+        for txn in stalled[:20]:
+            req = txn.request
+            print(
+                f"  t={req.timestamp:.6f} unit={req.unit_id} "
+                f"txn={req.transaction_id} {req.function_name} "
+                f"start={req.start_address} qty={req.quantity}"
+            )
+
+    if args.addresses:
+        print("\npolled address spans:")
+        for span in modbus_decode.polled_addresses(frames):
+            print(
+                f"  unit {span.unit_id} fc {span.function_code}: "
+                f"{span.start}..{span.end} ({span.count} regs, {span.polls} polls)"
+            )
+    return 0
+
+
 def _read_numeric_csv(path: str) -> list[list[float]]:
     import csv as _csv
     with open(path, newline="", encoding="utf-8-sig") as fh:
@@ -455,6 +511,20 @@ def build_parser() -> argparse.ArgumentParser:
                     help="report pulses shorter than this (microseconds)")
     sa.set_defaults(func=_cmd_saleae)
 
+    mdc = sub.add_parser(
+        "modbus-decode", help="decode Modbus TCP from a pcap/pcapng capture"
+    )
+    mdc.add_argument("pcap", help="capture file (pcap or pcapng), read offline")
+    mdc.add_argument("--port", type=int, default=modbus_decode.MODBUS_TCP_PORT,
+                     help="Modbus server port (default 502)")
+    mdc.add_argument("--addresses", action="store_true",
+                     help="list the register spans actually polled")
+    mdc.add_argument("--exceptions", action="store_true",
+                     help="list exception responses")
+    mdc.add_argument("--unanswered", action="store_true",
+                     help="list requests that got no response")
+    mdc.set_defaults(func=_cmd_modbus_decode)
+
     sb = sub.add_parser("sbm", help="SBM anomaly scores (train + score CSVs)")
     sb.add_argument("--train", required=True, help="known-normal numeric CSV")
     sb.add_argument("--score", required=True, help="numeric CSV to score")
@@ -477,7 +547,9 @@ def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
         return args.func(args)
-    except ValueError as exc:
+    except (ValueError, FileNotFoundError) as exc:
+        # A missing input file (or an unsupplied licensed table) is a condition
+        # the user can fix, not a defect — report it like any other bad input.
         print(f"error: {exc}", file=sys.stderr)
         return 2
 

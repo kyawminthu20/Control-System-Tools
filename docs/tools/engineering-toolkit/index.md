@@ -60,6 +60,7 @@ uv run cst --help
 | `cst loop-sheets` / `fat` | Per-point loop test sheets; FAT/SAT protocol skeleton | ISA-style loop-check practice |
 | `cst tags-from-io` / `modbus-map` | PLC tag database; Modbus register map | IEC 61131-3 identifier rules; Modbus data model |
 | `cst saleae` | Pulse stats, glitch finder, quadrature decode from Logic 2 exports | — |
+| `cst modbus-decode` | Offline Modbus TCP capture analysis: exception responses, unanswered requests, response latency, polled register spans | Modbus Application Protocol Specification V1.1b3 |
 | `cst sbm` | Similarity-based anomaly scores for sensor data | SBM-family kernel autoassociative model |
 | `cst design-package` | One markdown design document stitching the above together | — |
 
@@ -78,10 +79,37 @@ Motor branch circuit — 10 hp, 460 V, 3-phase: 17.5 A (min conductor ampacity)
     - NEC 2023 430.32(A)(1) — overload at 125 % of nameplate FLA
 ```
 
+Example — reading a Modbus TCP capture taken during an intermittent-dropout
+investigation:
+
+```text
+$ cst modbus-decode capture.pcap --exceptions --unanswered
+frames        : 13  (7 req / 6 resp)
+unit ids      : 1
+capture span  : 0.600 s
+  Read Holding Registers            13
+response time : mean 8.33 ms, max 10.00 ms
+exceptions    : 1
+unanswered    : 1
+
+exception responses:
+  t=1000.510000 unit=1 txn=6 Read Holding Registers: Illegal Data Address
+
+unanswered requests: 1
+  t=1000.600000 unit=1 txn=7 Read Holding Registers start=200 qty=2
+```
+
+`--addresses` lists the register spans the client actually polls, which you can
+diff against the design-time map from `cst modbus-map`.
+
 ## Limits
 
 - Screening and design-assist calculations — final designs need the official
   standards, project-specific data, and engineering review.
+- `cst modbus-decode` reads capture files offline and never opens a network
+  interface. Taking the capture is a separate step: on a live OT segment use a
+  passive method (a TAP or a switch mirror port) — active scanning or injected
+  traffic can disturb a process that is controlling plant.
 - Sample table data is for demonstration; transcribe licensed values before
   design use (the tool warns you until you do).
 - Live PLC helpers (`pycomm3` extra) read and verify only — they never write

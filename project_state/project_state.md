@@ -1,9 +1,29 @@
 # Project State
 
-**Last Updated:** 2026-07-17 (Phase 52.1 shipped — state-accuracy + navigation hygiene; recommendation `10177a2` recorded)
+**Last Updated:** 2026-07-19 (Phase 50.14 — `cst modbus-decode` offline Modbus TCP capture analysis)
 **Status:** Active
+**Scope statement (2026-07-19):** The repository now carries an explicit scope-and-intent statement in
+[`README.md`](../README.md#scope-and-intent), `governance/AI_WORKFLOW.md` §0, and the AI/ML research
+README. It records that this is **defensive industrial-automation engineering**, maps the ambiguous
+process vocabulary ("chemical", "biological", "hazardous", "security", "adversarial pass") to its
+actual engineering meaning, and states the governing constraint: **established scientific law is the
+hard ceiling and holds the veto; learned models are capped at advisory authority with zero authority
+over any safety function.** Descriptive only — no technical, corpus, register, or site position changed.
+Keep future phase and commit language aligned with it (prefer "chemical-process control" over the
+"chem/bio" shorthand, which reads as research into hazardous agents when seen without context).
 **Current Delivery:** **Phase 51 COMPLETE (2026-07-17).** The authority-first AI-integration expansion is shipped and deployed: gate, method register, safety boundaries, interfaces, model families, digital twin, validation/lifecycle, worked architectures, and the model-evidence-ledger template. All eight pages remain **Review pending** until author review. Full release gate at delivery: 180 tests, 10 doctests, clean Jekyll build, zero broken links, and corpus boundary/quality checks green.
 **Current Phase:** **Phase 52 UNDERWAY — UI/UX and content upgrade.** Recommendation: `planning/2026-07-17-phase52-ui-ux-content-upgrade-recommendations.md`. Sequence: state/navigation hygiene → mobile discovery and responsive context → high-risk editorial trust work → task-first information architecture → component consolidation and accessibility gate. **52.1 COMPLETE (2026-07-17):** state-file drift fixed (`how_to.md` test count 155→180; `environment.md`/`how_to.md` dates refreshed); the six duplicate navigation URLs reconciled — the group-header parents (Fundamentals, Ethernet Protocols, Serial & Device Networks, Utility & Substation, Diagnostics, Guides) are now non-link category labels (`sidebar-global.html` renders url-less children as `<span class="sub sub--group">`; each page stays reachable via its own child link). Full gate green; zero duplicate nav URLs; no empty hrefs. No AI/ML authority ceiling or technical content changed.
+**Phase 50.14 COMPLETE (2026-07-19):** `cst modbus-decode` — offline Modbus TCP capture analysis
+(pcap/pcapng → TCP reassembly → ADU decode → transactions → exception/unanswered/latency summary and
+polled register spans). New `src/cst/diagnostics/modbus_decode.py`, new CLI subcommand (23 total), 24
+new tests (suite 202 → 226), toolkit page row + worked example. Reassembly approach adapted from the
+owner's private `~/Dev/network_monitoring` project; only original code was carried across and the
+live-capture daemon was deliberately left behind, so `cst` stays a read-only offline toolkit with no
+privileged network access. Also fixed a pre-existing CLI gap: `main` now catches `FileNotFoundError`
+alongside `ValueError`, so a missing input file exits 2 with a clean message instead of a traceback
+(affects `io-check`, `saleae`, and the table-backed calculators too). Full release gate green.
+Follow-on candidate: diff `--addresses` output against `cst modbus-map` to flag design/field drift.
+
 **Next Action (owner-directed 2026-07-17):** **50.13a COMPLETE** — the four selector-classification fields + generator invariants + tests + 42-row backfill are on `master` (188 tests). Remaining: **50.13b** the interactive selector UI (deferred with 52.2 — needs keyboard/screen-reader device verification); **52.3 task-first IA** (next Phase 52 slice; 52.2 mobile deferred, 52.4a IEC 62061 parked); the **Phase 49c** chem/bio evidence sprint (authorised; ceiling still evidence-gated). **50.6 COMPLETE** — CLI + citation test coverage added (`tests/cst/test_cli.py`, 14 tests; suite 188 → 202); the CLI was already a thin dispatch layer, so no refactor was needed and every `cst` module now has coverage. Also outstanding from Phase 50: project-state history split (50.8). Author review of the eight Review-pending AI-integration pages remains owner-only (deferred by owner).
 **Authorization Gate:** **Phase 49c COMPLETE (2026-07-17, work-tier research).** The chem/bio evidence-closure + adversarial sprint ran: both 49a gaps closed (equilibrium/thermodynamics now VERIFIED_AT_PUBLISHER via NIST; transport upgraded; first chem/bio adversarial coverage done). Findings: `control-standards/work/research/ai-ml-control-systems/49c-findings.md`. **No register/site change was made** — per the authorisation (work, not ceiling). **OWNER DECISION PENDING:** 49c §6 recommends the chem/bio rows move **off `Planned`** to conservative evidenced ceilings (learned/hybrid ≤ 2 advisory, 0 for any safety function; deterministic governing models = hard-constraint layer; no fitted closure gets hard-constraint/safety-function status) and that the 50.13 chem/bio `safety_relevance` values drop their *provisional* tag (all staying safety-adjacent/non-safety, never safety-related). If approved, it is a bounded register slice. Level 5 / safety-function status remains unavailable to any learned method regardless.
 

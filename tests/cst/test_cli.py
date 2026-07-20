@@ -94,3 +94,69 @@ def test_missing_subcommand_exits() -> None:
 def test_missing_required_argument_exits() -> None:
     with pytest.raises(SystemExit):
         main(["encoder"])  # --ppr is required
+
+
+# --- cst modbus-decode -------------------------------------------------------
+
+def _demo_capture(tmp_path):
+    """A short healthy poll plus one exception response, as a classic pcap."""
+    from tests.cst.test_modbus_decode import (
+        CLIENT, SERVER, _exception, _pcap, _read_holding_request,
+        _read_holding_response, _tcp_segment,
+    )
+    request = _read_holding_request(1, 100, 2)
+    response = _read_holding_response(1, [7, 8])
+    bad = _read_holding_request(2, 9999, 1)
+    frames = [
+        (1.0, _tcp_segment(CLIENT, SERVER, 5, 502, 1, request)),
+        (1.01, _tcp_segment(SERVER, CLIENT, 502, 5, 1, response)),
+        (2.0, _tcp_segment(CLIENT, SERVER, 5, 502, 1 + len(request), bad)),
+        (2.01, _tcp_segment(SERVER, CLIENT, 502, 5, 1 + len(response), _exception(2, 3, 2))),
+    ]
+    path = tmp_path / "demo.pcap"
+    path.write_bytes(_pcap(frames))
+    return path
+
+
+def test_modbus_decode_reports_summary(tmp_path, capsys) -> None:
+    assert main(["modbus-decode", str(_demo_capture(tmp_path))]) == 0
+    out = capsys.readouterr().out
+    assert "frames        : 4" in out
+    assert "exceptions    : 1" in out
+
+
+def test_modbus_decode_optional_sections(tmp_path, capsys) -> None:
+    argv = ["modbus-decode", str(_demo_capture(tmp_path)),
+            "--addresses", "--exceptions", "--unanswered"]
+    assert main(argv) == 0
+    out = capsys.readouterr().out
+    assert "Illegal Data Address" in out
+    assert "100..101" in out
+    assert "unanswered requests: 0" in out
+
+
+def test_modbus_decode_missing_file_returns_2(capsys) -> None:
+    assert main(["modbus-decode", "/nonexistent/capture.pcap"]) == 2
+    assert capsys.readouterr().err.startswith("error:")
+
+
+def test_modbus_decode_wrong_port_warns(tmp_path, capsys) -> None:
+    """A wrong --port labels every frame a response; that must not pass silently."""
+    argv = ["modbus-decode", str(_demo_capture(tmp_path)), "--port", "5020"]
+    assert main(argv) == 0
+    captured = capsys.readouterr()
+    assert "(0 req / 4 resp)" in captured.out
+    assert "warning: no requests seen" in captured.err
+    assert "--port" in captured.err
+
+
+def test_modbus_decode_no_frames_returns_2(tmp_path, capsys) -> None:
+    """A capture with no Modbus at all is an error, not an empty report."""
+    from tests.cst.test_modbus_decode import CLIENT, SERVER, _pcap, _tcp_segment
+
+    path = tmp_path / "http.pcap"
+    path.write_bytes(
+        _pcap([(1.0, _tcp_segment(CLIENT, SERVER, 5, 502, 1, b"GET / HTTP/1.1\r\n\r\n"))])
+    )
+    assert main(["modbus-decode", str(path)]) == 2
+    assert "no Modbus TCP frames" in capsys.readouterr().err

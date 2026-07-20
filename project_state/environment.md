@@ -75,7 +75,7 @@ If a dependency, version, environment variable, toolchain rule, or deployment ta
 ## Validation And Automation Commands
 
 - `uv run python tools/release_check.py --profile full` (governed release/deployment gate)
-- `uv run pytest` (202 tests: cst package + repository tools)
+- `uv run pytest` (226 tests: cst package + repository tools)
 - `uv run pytest --doctest-modules src/cst` (calculator doctests)
 - `python3 tools/project_automator.py`
 - `python3 tools/validate_ai_boundaries.py`
