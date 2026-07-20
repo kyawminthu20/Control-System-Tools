@@ -1,7 +1,36 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-19 (Phase 49d — digital-twin evidence closure)
+**Last Updated:** 2026-07-19 (Phase 53.1 — twin maturity ladder)
 **Status:** Active
+
+## 2026-07-19 — Phase 53.1 (Twin maturity ladder — corpus + site)
+
+**Type:** Content. Corpus-first; **no authority ceiling, register row, or method value changed**
+(`generate_ai_method_register.py` re-run, zero diff). Slice 2 of the digital-twin deepening arc.
+
+Closed the Phase 49a research backlog item "define digital-twin maturity levels" (`research-map.md`
+line 144, now ticked) by adding **§4 Twin maturity — a synchronization ladder, not an authority ladder**
+to `digital_twin.md` (sections 4–6 renumbered to 5–7; no repo file linked the old anchors), with a
+distilled section and two new elements on the site page.
+
+- **M0 offline model → M1 connected shadow → M2 synchronized twin → M3 predictive twin → M4 bounded
+  closed-loop twin**, each graded by synchronization character, question answered, and the §3
+  data-integrity steps it presupposes.
+- **Citation split by axis, per the 49d verdict.** The functional progression is cited to NIST's
+  published five-category ladder (descriptive → diagnostic → predictive → prescriptive → intelligent);
+  the **synchronization grading is labelled this project's engineering judgement**, because no standard
+  read defines a graded sync scale. M0 is stated to sit *below* NIST's scale, which presumes a live twin.
+- **M4 is described, not authorized** — two independent reasons now on the page: no register row grants a
+  twin-composed learned output above advisory, and NIST's own top rung is *"envisaged to"* control, in the
+  future tense.
+- **Two design rules added:** declare target maturity per use case at concept design (ISO 23247's
+  fit-for-purpose principle in practice); a maturity claim never appears in an authority argument.
+- Site page gains the maturity table plus a second Mermaid diagram (`flowchart LR`, M0→M4 with M4 dashed
+  as described-not-authorized and a register-authority annotation). Frontmatter `edition`/`coverage`
+  refreshed; page stays **Review pending**.
+- `_index.yaml` description + changelog updated; RAG mirror regenerated (320 files, body byte-identical).
+
+Full release gate green.
 
 ## 2026-07-19 — Phase 49d (Digital-twin maturity vocabulary + ISO 23247 currency)
 

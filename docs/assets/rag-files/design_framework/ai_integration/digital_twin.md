@@ -96,7 +96,49 @@ fallback stay effective when the twin or its models are **wrong, stale, unavaila
 This is the same envelope architecture as the gate page — the twin is where the models live; the
 envelope is still what protects the plant.
 
-## 4. The data contract between twin and control system
+## 4. Twin maturity — a synchronization ladder, not an authority ladder
+
+Two different questions get confused whenever someone says a twin is "advanced". *Maturity* describes
+how much the twin actually computes and how tightly it tracks the plant. *Authority* describes what the
+plant lets its output do. **They are orthogonal, and only one of them is a permission.** A maximally
+mature twin holds exactly the authority the method register assigns its composing models — currently
+advisory for twin state synchronization, and read-only for the physics-informed families feeding it.
+Nothing in this section raises any ceiling.
+
+**Where this vocabulary comes from.** The functional progression is not ours — NIST publishes a
+five-category twin ladder (descriptive → diagnostic → predictive → prescriptive → intelligent, ordered by
+"increasing complexity, more decision support, and greater value"), and the levels below are aligned to
+it. What *is* ours is the **synchronization axis**: grading each level by what the data link and state
+estimation actually do. NIST grades by the question the twin answers; this project grades by the
+synchronization it owes, because that is what determines whether the answer can be trusted. No standard
+we have read defines a graded synchronization scale — that part is engineering judgement, labelled as
+such. Note also that M0 sits *below* NIST's scale, which presumes a live twin.
+
+| Level | Name | Synchronization character | What it can answer | Data-integrity prerequisites (§3) | NIST category |
+|---|---|---|---|---|---|
+| **M0** | Offline model | No live link; snapshot or historical data | "What would happen, in principle?" | Step 1 | *(below NIST's scale)* |
+| **M1** | Connected shadow | One-way, live telemetry inbound; no return path | "What happened, or is happening?" | Steps 1–4 | Descriptive |
+| **M2** | Synchronized twin | State estimation reconciles model with plant; measured / derived / predicted labelled distinctly | "What is wrong, and why?" | Steps 1–6 | Diagnostic |
+| **M3** | Predictive twin | Validated forward prediction over a stated horizon, with residual and drift monitoring | "What is likely to happen?" | Steps 1–7 | Predictive |
+| **M4** | Bounded closed-loop twin | Twin output crosses the device-communication seam under the full gated envelope | "How can we make it happen?" | Steps 1–7, plus the §5 contract and an independent non-learned gate | Prescriptive / Intelligent |
+
+**M4 is described here, not authorized.** No method row in the register grants a twin-composed learned
+output more than advisory authority, so reaching M4 requires a new evidence case at the register — not a
+reinterpretation of this note. The published ladder agrees: NIST states that intelligent twins are
+*envisaged to* control their physical counterparts, in the future tense. Both the internal register and
+the external source describe the top rung as somewhere the field intends to go, not somewhere it is.
+
+Two rules follow:
+
+- **Declare the target maturity per use case at concept design**, and refuse features that belong to a
+  higher level than the data-integrity work supports. A twin asked for M3 answers on M1 plumbing is not
+  an ambitious twin; it is an unvalidated one. This is what ISO 23247's fit-for-purpose principle means
+  in practice — purpose dictates information content, model fidelity, and synchronization frequency.
+- **A maturity claim never appears in an authority argument.** "The twin is mature enough to close the
+  loop" is not an engineering statement. The register row is the only authority statement, and it is
+  reached through evidence, not through capability.
+
+## 5. The data contract between twin and control system
 
 Because the device-communication seam can carry an action, the payload crossing it must be
 self-describing enough to be *gated*. Candidate fields:
@@ -114,7 +156,7 @@ The last three lines are what let the non-learned gate do its job: a proposal th
 authority, carries a freshness bound, and records why it was accepted or rejected is one a verifiable
 layer can accept, clamp, or veto — and one an audit can reconstruct after the fact.
 
-## 5. The model families inside the twin
+## 6. The model families inside the twin
 
 The twin is a spine; the models hanging off it are the same families the register scores, at the same
 ceilings (see [Model Families & Fit](model_families.md)):
@@ -128,7 +170,7 @@ ceilings (see [Model Families & Fit](model_families.md)):
   allow-listed tools — it consumes curated twin context, not raw tag streams, and its proposals need
   schema validation, authorization, and (where required) human confirmation.
 
-## 6. What this means for design
+## 7. What this means for design
 
 - **Say which state is measured, inferred, simulated, or manually entered** — and keep predictions
   visibly distinct from measurements in the twin's own state.
@@ -153,7 +195,12 @@ ceilings (see [Model Families & Fit](model_families.md)):
   publication) — source for the verified ISO 23247 definition (*"fit for purpose digital representation
   of an observable manufacturing element with synchronization between the element and its digital
   representation"*), the four-domain reference model, and the one-way-vs-two-way synchronization
-  distinction (jet-engine monitoring twins receive data but give no control feedback).
+  distinction (jet-engine monitoring twins receive data but give no control feedback). Also the source
+  for the **five-category functional ladder** in §4 — descriptive, diagnostic, predictive, prescriptive,
+  intelligent, ordered by *"increasing complexity, more decision support, and greater value"* — and for
+  the statement that intelligent twins are *"envisaged to"* control their physical counterparts, which is
+  why §4's top level is described rather than authorized. The **synchronization grading** in §4 is this
+  project's engineering judgement, not NIST's and not any standard's.
 - **NIST SP 800-82 Rev. 3** — OT security placement for the device-communication seam (read-only by
   default, least privilege, inside the existing zones/conduits).
 - Cross-references: [method register](README.md), [safety boundary](safety_boundary.md),
@@ -169,3 +216,13 @@ ceilings (see [Model Families & Fit](model_families.md)):
   mirror-vs-behavioural distinction is now anchored on ISO 23247's *synchronization* and the
   one-way/two-way sync distinction. No authority ceiling was changed; the digital-to-physical ladder is
   the register's. Review pending.
+- 2026-07-19 — **§4 twin maturity ladder added** (M0 offline model → M1 connected shadow → M2 synchronized
+  twin → M3 predictive twin → M4 bounded closed-loop twin), closing the Phase 49a research backlog item.
+  Sections 4–6 renumbered to 5–7. Per the **Phase 49d** evidence verdict the citation is **split by axis**:
+  the functional progression is NIST's published five-category ladder (VERIFIED_AT_PUBLISHER) and is cited
+  as such; the synchronization grading is this project's engineering judgement and is labelled as such;
+  M0 is noted as sitting below NIST's scale, which presumes a live twin. **M4 is described, not
+  authorized** — no register row grants a twin-composed learned output above advisory, and NIST's own top
+  rung is *envisaged*. ISO 23247-5:2026 re-confirmed current at the publisher for existence/title/date
+  only; the body remains unread and the caveat above is unchanged. **No authority ceiling was changed.**
+  Review pending.

@@ -141,7 +141,7 @@ AI & Machine Learning for Control Systems
 - [ ] Review LLM applications in PLC/DCS engineering and operator assistance
 - [ ] Compare OPC UA, MQTT/Sparkplug, APIs, historians, and file exchange
 - [ ] Define reference architectures for offline, advisory, and bounded online use
-- [ ] Define digital-twin maturity levels: offline model, connected shadow,
+- [x] Define digital-twin maturity levels: offline model, connected shadow,
       synchronized twin, predictive twin, and bounded closed-loop twin
 - [ ] Research state synchronization, time alignment, data quality, and model
       calibration between physical asset and twin
