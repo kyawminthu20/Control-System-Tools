@@ -58,7 +58,9 @@ REVIEW_FIELDS = {"standard", "edition", "status", "coverage", "last_reviewed"}
 # (Phase 50.9 / 52.4): tranche 1 (2026-07-20) covered the finder, scenarios,
 # crosswalks, standards family indexes, and commissioning guides, and exempted
 # redirect stubs and the homepage nav hub via `review_exempt: "<reason>"`.
-MAX_SITE_PAGES_WITHOUT_REVIEW = 128
+# Tranche 2 (2026-07-20) covered the 16 lifecycle stage pages and all 34
+# industries pages (overlays, water/wastewater, semiconductor facility).
+MAX_SITE_PAGES_WITHOUT_REVIEW = 78
 MAX_RAG_WITHOUT_CONTENT_CLASS = 0
 MAX_RAG_WITHOUT_STATUS = 0
 

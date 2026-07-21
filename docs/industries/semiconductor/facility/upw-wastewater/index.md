@@ -10,6 +10,12 @@ breadcrumb:
   - name: "Facility Reference"
     url: "/industries/semiconductor/facility/"
   - name: "UPW and Wastewater"
+review:
+  standard: "SEMI F61 / F63 / F75 / F116 context"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "UPW generation/distribution and wastewater handling reference; SEMI F-series cited at practice level."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

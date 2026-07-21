@@ -11,6 +11,12 @@ related_standards:
     url: "/standards/machinery/iec-60204-1/"
   - name: "IEC 61511"
     url: "/standards/functional-safety/iec-61511/"
+review:
+  standard: "IEC 60092 · class society rules (DNV, ABS, Lloyd's)"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Overlay routing for marine vessels; class-rule and flag-state specifics summarized at overview level."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

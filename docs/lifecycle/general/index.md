@@ -13,6 +13,12 @@ related_standards:
     url: "/standards/machinery/iec-60204-1/"
   - name: "ISO 12100"
     url: "/standards/functional-safety/iso-12100/"
+review:
+  standard: "General controls project practice — no single governing document"
+  edition: "n/a — practice-level stage guidance; editions are recorded on the standards pages"
+  status: "Review pending"
+  coverage: "General project lifecycle (requirements through handover) and how the functional-safety lifecycle overlays it; practice-level only."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

@@ -10,6 +10,12 @@ breadcrumb:
   - name: "Facility Reference"
     url: "/industries/semiconductor/facility/"
   - name: "Tool-Facility Interface"
+review:
+  standard: "Semiconductor facility engineering practice — SEMI facility standards, fire/building codes context"
+  edition: "n/a — facility-engineering reference; site codes and the AHJ govern editions"
+  status: "Review pending"
+  coverage: "Tool-facility boundary reference (handshakes, permit-to-run, battery limits); practice-level."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

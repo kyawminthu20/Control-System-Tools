@@ -1,7 +1,25 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-20 (Phase 52.4b tranche 1 — review-metadata rollout)
+**Last Updated:** 2026-07-20 (Phase 52.4b tranche 2 — lifecycle + industries review metadata)
 **Status:** Active
+
+## 2026-07-20 — Phase 52.4b tranche 2 (review metadata: lifecycle stages + industries)
+
+**Type:** Site metadata only. **No technical claim changed; no page marked Reviewed.**
+
+- **50 `Review pending` blocks added:** the 16 lifecycle pages (hub, general, and the 14 stage pages —
+  each `standard:` names the stage's governing standards, practice-level stages say so explicitly,
+  and coverage lines state "stage guidance, not a performed assessment/verification") and all 34
+  industries pages (the overlay matrix + 9 industry overviews — medical/nuclear/food-and-beverage
+  blocks preserve the pages' own corpus-gap flags; the 8 water/wastewater pages framed as control
+  patterns with "site design / permits govern"; the 16 semiconductor facility pages framed as
+  practice-level with "site codes and the AHJ govern", SEMI F-series and S6/NFPA 318 cited only where
+  the page cites them).
+- **Baseline ratcheted 128 → 78.** Remaining backlog: fundamentals 56, design 12, plus about,
+  communications landing, fundamentals/plc-software landing, glossary, rag-browser, reference-hub,
+  engineering-toolkit, troubleshooting pages.
+- Verified: full release gate PASSED (303 tests, clean build, zero broken links, zero metadata
+  errors).
 
 ## 2026-07-20 — Phase 52.4b tranche 1 (review-metadata rollout, risk order)
 

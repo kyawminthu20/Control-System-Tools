@@ -16,6 +16,12 @@ related_standards:
     url: "/standards/semiconductor/semi/"
   - name: "IEC 61511"
     url: "/standards/functional-safety/iec-61511/"
+review:
+  standard: "Semiconductor facility engineering practice — SEMI facility standards, fire/building codes context"
+  edition: "n/a — facility-engineering reference; site codes and the AHJ govern editions"
+  status: "Review pending"
+  coverage: "Gas cabinet architecture, purge sequencing, and interlock reference; illustrative sequences, OEM and site design govern."
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

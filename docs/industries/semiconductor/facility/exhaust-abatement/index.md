@@ -10,6 +10,12 @@ breadcrumb:
   - name: "Facility Reference"
     url: "/industries/semiconductor/facility/"
   - name: "Exhaust and Abatement"
+review:
+  standard: "SEMI S6 · NFPA 318 context"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Process exhaust and abatement reference; practice-level, fire code compliance is the AHJ's determination."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

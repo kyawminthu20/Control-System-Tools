@@ -15,6 +15,12 @@ related_standards:
     url: "/standards/functional-safety/iso-13849-1/"
   - name: "IEC 62061"
     url: "/standards/functional-safety/iec-62061/"
+review:
+  standard: "Management-of-change practice — safety-lifecycle re-entry"
+  edition: "n/a — practice-level stage guidance; editions are recorded on the standards pages"
+  status: "Review pending"
+  coverage: "Stage guidance for structured re-entry into the lifecycle on modification; the site MOC procedure governs."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

@@ -10,6 +10,12 @@ breadcrumb:
   - name: "Facility Reference"
     url: "/industries/semiconductor/facility/"
   - name: "Bulk Specialty Gas"
+review:
+  standard: "Semiconductor facility engineering practice — SEMI facility standards, fire/building codes context"
+  edition: "n/a — facility-engineering reference; site codes and the AHJ govern editions"
+  status: "Review pending"
+  coverage: "Facility gas infrastructure reference (bulk, gas rooms, VMBs); practice-level, code compliance is site-specific."
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

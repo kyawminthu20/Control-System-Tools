@@ -15,6 +15,12 @@ related_standards:
     url: "/standards/hazardous-area/iec-60079/"
   - name: "NEC (Art. 500–505)"
     url: "/standards/us-electrical/nec/"
+review:
+  standard: "IEC 61511 · IEC 60079 · NEC Art. 500–505 · IEC 60204-1"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Overlay routing for onshore oil and gas; SIS and hazardous-area routing at overview level."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

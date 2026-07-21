@@ -17,6 +17,12 @@ related_standards:
     url: "/standards/functional-safety/iec-61511/"
   - name: "IEC 61508"
     url: "/standards/functional-safety/iec-61508/"
+review:
+  standard: "ISO 13849-1 · IEC 62061"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Stage guidance for subsystem decomposition, category/architecture selection, and PL/SIL calculation; worked patterns, not project verification."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

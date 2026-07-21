@@ -11,6 +11,12 @@ related_standards:
     url: "/standards/functional-safety/iec-61511/"
   - name: "IEC 62443"
     url: "/standards/cybersecurity/iec-62443/"
+review:
+  standard: "Municipal water / industrial wastewater standards stack"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Section hub for water and wastewater treatment controls; standards stack and SCADA architecture at overview level."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

@@ -17,6 +17,12 @@ related_standards:
     url: "/standards/machinery/iec-60204-1/"
   - name: "NEC (NFPA 70)"
     url: "/standards/us-electrical/nec/"
+review:
+  standard: "NFPA 79 · UL 508A · NEC"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Stage guidance for circuit design, wire sizing, SCCR, grounding, and BOM; calculations must be performed against the governing editions."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

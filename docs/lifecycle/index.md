@@ -16,6 +16,12 @@ related_standards:
     url: "/standards/functional-safety/iec-62061/"
   - name: "IEC 61511"
     url: "/standards/functional-safety/iec-61511/"
+review:
+  standard: "ISO 12100 · ISO 13849-1 · IEC 62061 · IEC 61511 (lifecycle overlay)"
+  edition: "n/a — practice-level stage guidance; editions are recorded on the standards pages"
+  status: "Review pending"
+  coverage: "Lifecycle hub: stage sequence, roles, and entry/exit criteria; the standards overlay is summarized, clause detail lives on the standards pages."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

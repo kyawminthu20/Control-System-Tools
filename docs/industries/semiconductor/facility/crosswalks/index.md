@@ -10,6 +10,12 @@ breadcrumb:
   - name: "Facility Reference"
     url: "/industries/semiconductor/facility/"
   - name: "Crosswalks"
+review:
+  standard: "Semiconductor facility engineering practice — SEMI facility standards, fire/building codes context"
+  edition: "n/a — facility-engineering reference; site codes and the AHJ govern editions"
+  status: "Review pending"
+  coverage: "System dependency and standards-to-systems mapping; editorial mapping, verify against the cited standards."
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

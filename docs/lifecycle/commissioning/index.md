@@ -15,6 +15,12 @@ related_standards:
     url: "/standards/functional-safety/iec-61511/"
 redirect_from:
   - /implementation/lifecycle-commissioning/
+review:
+  standard: "FAT/SAT and validation practice — ISO 13849-1 · IEC 62061 · IEC 61511 context"
+  edition: "n/a — practice-level stage guidance; editions are recorded on the standards pages"
+  status: "Review pending"
+  coverage: "Stage guidance for FAT, SAT, and safety-function validation; protocol content is project-specific."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

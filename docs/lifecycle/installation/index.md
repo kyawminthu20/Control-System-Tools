@@ -15,6 +15,12 @@ related_standards:
     url: "/standards/machinery/iec-60204-1/"
 redirect_from:
   - /implementation/lifecycle-installation/
+review:
+  standard: "NEC · NFPA 79"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Stage guidance for field installation, cable segregation, and grounding continuity; the enforceable NEC edition and the AHJ govern."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

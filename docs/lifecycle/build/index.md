@@ -15,6 +15,12 @@ related_standards:
     url: "/standards/functional-safety/iec-62061/"
 redirect_from:
   - /implementation/lifecycle-build/
+review:
+  standard: "UL 508A · NFPA 79 (fabrication and pre-shipment test practice)"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Stage guidance for panel fabrication, safety PLC programming, and pre-shipment functional test; shop procedures govern."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

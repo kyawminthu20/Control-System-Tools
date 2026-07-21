@@ -15,6 +15,12 @@ related_standards:
     url: "/standards/machinery/iec-60204-1/"
   - name: "ISO 13849-1"
     url: "/standards/functional-safety/iso-13849-1/"
+review:
+  standard: "Safety-circuit wiring practice — NFPA 79 / IEC 60204-1 context"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Practical safety wiring reference (24 VDC rationale, NC logic, dual-channel inputs); practice-level, the governing standard and drawings control."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

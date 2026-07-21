@@ -14,6 +14,12 @@ related_standards:
   - name: "IEC 61508"
     url: "/standards/functional-safety/iec-61508/"
 repo_path: "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/nuclear.md"
+review:
+  standard: "NEC · IEC 60204-1 baseline; IEC 61513 / IEEE 603 gaps flagged"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Overlay routing for nuclear/important-to-safety controls; nuclear-specific standards are explicitly flagged as corpus gaps, not covered."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

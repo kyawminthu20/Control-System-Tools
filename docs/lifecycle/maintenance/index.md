@@ -15,6 +15,12 @@ related_standards:
     url: "/standards/functional-safety/iec-62061/"
   - name: "IEC 61511"
     url: "/standards/functional-safety/iec-61511/"
+review:
+  standard: "Proof-test and maintenance practice — ISO 13849-1 · IEC 61511 context"
+  edition: "n/a — practice-level stage guidance; editions are recorded on the standards pages"
+  status: "Review pending"
+  coverage: "Stage guidance for proof testing, preventive maintenance, and bypass management; intervals and procedures are design outputs, not set here."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

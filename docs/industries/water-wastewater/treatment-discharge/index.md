@@ -8,6 +8,12 @@ breadcrumb:
   - name: "Water/Wastewater"
     url: "/industries/water-wastewater/"
   - name: "Treatment & Discharge"
+review:
+  standard: "Water/wastewater controls practice — IEC 61511 · IEC 62443 · ISA-18.2 · AWWA/EPA context"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Control patterns for biological treatment and permit-limit trip logic; NPDES compliance is the operator's determination."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

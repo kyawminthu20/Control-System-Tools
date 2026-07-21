@@ -15,6 +15,12 @@ related_standards:
     url: "/standards/functional-safety/iec-61511/"
   - name: "ISO 13849-1"
     url: "/standards/functional-safety/iso-13849-1/"
+review:
+  standard: "ISO 13849-1 · IEC 62061 · IEC 61511 (SRS content)"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Stage guidance for specifying safety functions (PL/SIL, inputs, outputs, response time); template-level, project SRS content governs."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

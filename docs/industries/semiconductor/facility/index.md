@@ -8,6 +8,12 @@ breadcrumb:
   - name: "Semiconductor"
     url: "/industries/semiconductor/"
   - name: "Facility Reference"
+review:
+  standard: "Semiconductor facility engineering practice — SEMI facility standards, fire/building codes context"
+  edition: "n/a — facility-engineering reference; site codes and the AHJ govern editions"
+  status: "Review pending"
+  coverage: "Section hub for fab utility systems and control philosophy; practice-level reference."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

@@ -18,6 +18,12 @@ related_standards:
   - name: "IEC 62443"
     url: "/standards/cybersecurity/iec-62443/"
 repo_path: "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/energy.md"
+review:
+  standard: "NEC · NFPA 79 · IEC 60204-1 · IEC 61511 · IEC 62443; NERC CIP boundary noted"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Overlay routing for energy facilities; NERC CIP is boundary-noted only, not covered."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

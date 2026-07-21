@@ -12,6 +12,12 @@ breadcrumb:
   - name: "Instrumentation"
     url: "/industries/semiconductor/facility/instrumentation/"
   - name: "Alarm Strategy"
+review:
+  standard: "Semiconductor facility engineering practice — SEMI facility standards, fire/building codes context"
+  edition: "n/a — facility-engineering reference; site codes and the AHJ govern editions"
+  status: "Review pending"
+  coverage: "Alarm philosophy and safe-state design for utility systems; ISA-18.2-style practice, the site alarm philosophy governs."
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

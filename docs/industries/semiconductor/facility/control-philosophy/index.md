@@ -10,6 +10,12 @@ breadcrumb:
   - name: "Facility Reference"
     url: "/industries/semiconductor/facility/"
   - name: "Control Philosophy"
+review:
+  standard: "Semiconductor facility engineering practice — SEMI facility standards, fire/building codes context"
+  edition: "n/a — facility-engineering reference; site codes and the AHJ govern editions"
+  status: "Review pending"
+  coverage: "Shared control patterns (modes, permissives, interlocks, trips, shutdown ownership); practice-level vocabulary."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

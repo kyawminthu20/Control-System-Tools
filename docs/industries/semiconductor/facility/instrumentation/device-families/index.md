@@ -12,6 +12,12 @@ breadcrumb:
   - name: "Instrumentation"
     url: "/industries/semiconductor/facility/instrumentation/"
   - name: "Device Families"
+review:
+  standard: "Semiconductor facility engineering practice — SEMI facility standards, fire/building codes context"
+  edition: "n/a — facility-engineering reference; site codes and the AHJ govern editions"
+  status: "Review pending"
+  coverage: "Device families by engineering function with typical service and failure modes; datasheets govern."
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

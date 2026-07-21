@@ -15,6 +15,12 @@ related_standards:
     url: "/standards/functional-safety/iso-12100/"
   - name: "IEC 62443"
     url: "/standards/cybersecurity/iec-62443/"
+review:
+  standard: "SEMI S2/S8/S14 · IEC 60204-1 · ISO 12100 · NFPA 79 · IEC 62443"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Overlay routing for semiconductor fab equipment; the compliance stack is summarized, tool-specific evaluation is not performed."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

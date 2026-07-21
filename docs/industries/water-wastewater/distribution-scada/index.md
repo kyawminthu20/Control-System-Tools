@@ -11,6 +11,12 @@ breadcrumb:
 related_standards:
   - name: "IEC 62443"
     url: "/standards/cybersecurity/iec-62443/"
+review:
+  standard: "Water/wastewater controls practice — IEC 61511 · IEC 62443 · ISA-18.2 · AWWA/EPA context"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "SCADA/RTU architecture with IEC 62443 zoning for distribution systems; reference architecture, not a security assessment."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

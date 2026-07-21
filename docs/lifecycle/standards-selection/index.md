@@ -17,6 +17,12 @@ related_standards:
     url: "/standards/functional-safety/iec-62061/"
   - name: "IEC 61511"
     url: "/standards/functional-safety/iec-61511/"
+review:
+  standard: "Multiple — type-A/B/C hierarchy per ISO 12100"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Stage guidance for identifying applicable standards and choosing the PL or SIL pathway; jurisdiction and AHJ adoption must be verified per project."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

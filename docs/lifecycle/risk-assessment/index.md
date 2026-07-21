@@ -17,6 +17,12 @@ related_standards:
     url: "/standards/functional-safety/iec-62061/"
   - name: "IEC 61511"
     url: "/standards/functional-safety/iec-61511/"
+review:
+  standard: "ISO 12100; IEC 61511 for process"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Stage guidance for hazard identification and PLr/SIL target assignment; methodology summary, not a performed assessment."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

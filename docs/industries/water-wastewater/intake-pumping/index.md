@@ -8,6 +8,12 @@ breadcrumb:
   - name: "Water/Wastewater"
     url: "/industries/water-wastewater/"
   - name: "Intake & Pumping"
+review:
+  standard: "Water/wastewater controls practice — IEC 61511 · IEC 62443 · ISA-18.2 · AWWA/EPA context"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Control patterns for intake screens, wet wells, and pump stations; illustrative sequencing, site design governs."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

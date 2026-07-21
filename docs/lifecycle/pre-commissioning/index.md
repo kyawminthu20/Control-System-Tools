@@ -15,6 +15,12 @@ related_standards:
     url: "/standards/functional-safety/iec-61511/"
 redirect_from:
   - /implementation/lifecycle-pre-commissioning/
+review:
+  standard: "Verification practice — ISO 13849-1 / IEC 62061 context"
+  edition: "n/a — practice-level stage guidance; editions are recorded on the standards pages"
+  status: "Review pending"
+  coverage: "Stage guidance for wiring/I-O/calibration verification and safety-function response checks before startup; site procedures govern."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

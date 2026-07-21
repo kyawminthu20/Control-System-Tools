@@ -11,6 +11,12 @@ breadcrumb:
 related_standards:
   - name: "ISO 12100"
     url: "/standards/functional-safety/iso-12100/"
+review:
+  standard: "ISO 12100 (machine limits, intended use)"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Stage guidance for defining machine limits, intended use, and foreseeable misuse; not a completed risk assessment."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

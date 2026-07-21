@@ -14,6 +14,12 @@ related_standards:
   - name: "ISO 12100"
     url: "/standards/functional-safety/iso-12100/"
 repo_path: "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/medical.md"
+review:
+  standard: "NEC · IEC 60204-1 baseline; IEC 60601-1 / ISO 14971 gaps flagged"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Overlay routing for medical/regulated equipment; the medical-specific standards are explicitly flagged as corpus gaps, not covered."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

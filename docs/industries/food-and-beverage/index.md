@@ -20,6 +20,12 @@ related_standards:
   - name: "ISO 12100"
     url: "/standards/functional-safety/iso-12100/"
 repo_path: "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/food_and_beverage.md"
+review:
+  standard: "NFPA 79 · IEC 60204-1; hygienic-design gaps flagged"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Overlay routing for food and beverage machinery; hygienic design (EHEDG/3-A) is flagged as a corpus gap, not covered."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

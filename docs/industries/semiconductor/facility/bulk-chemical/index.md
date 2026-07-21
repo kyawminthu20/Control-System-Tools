@@ -10,6 +10,12 @@ breadcrumb:
   - name: "Facility Reference"
     url: "/industries/semiconductor/facility/"
   - name: "Bulk Chemical"
+review:
+  standard: "Semiconductor facility engineering practice — SEMI facility standards, fire/building codes context"
+  edition: "n/a — facility-engineering reference; site codes and the AHJ govern editions"
+  status: "Review pending"
+  coverage: "Facility liquid-chemical infrastructure reference; containment/segregation practice, site codes govern."
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

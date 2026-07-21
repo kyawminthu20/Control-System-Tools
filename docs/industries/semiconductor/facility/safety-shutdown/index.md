@@ -10,6 +10,12 @@ breadcrumb:
   - name: "Facility Reference"
     url: "/industries/semiconductor/facility/"
   - name: "Safety and Shutdown"
+review:
+  standard: "Semiconductor facility engineering practice — SEMI facility standards, fire/building codes context"
+  edition: "n/a — facility-engineering reference; site codes and the AHJ govern editions"
+  status: "Review pending"
+  coverage: "Facility safety interlock and ESD layering reference with cause-and-effect patterns; illustrative, site safety design governs."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

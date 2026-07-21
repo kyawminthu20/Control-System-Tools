@@ -16,6 +16,12 @@ related_standards:
   - name: "IEC 60204-1"
     url: "/standards/machinery/iec-60204-1/"
 repo_path: "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/commercial.md"
+review:
+  standard: "NEC · UL 508A · NFPA 79 · IBC context"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Overlay routing for commercial/BAS-connected equipment; scope boundaries summarized, building codes and the AHJ govern."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

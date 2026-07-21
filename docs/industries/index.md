@@ -5,6 +5,12 @@ description: "Standards matrix for 9 confirmed industry overlays: semiconductor,
 breadcrumb:
   - name: "Industries"
 repo_path: "control-standards/rag/standards_intelligence/scenario/mini_machine_safety_design_v2/industry_overlays/"
+review:
+  standard: "Multiple — industry overlay matrix"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Overlay matrix routing 9 industries to their standards stacks; overview level, not a compliance determination."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

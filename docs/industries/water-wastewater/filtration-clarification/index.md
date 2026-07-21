@@ -8,6 +8,12 @@ breadcrumb:
   - name: "Water/Wastewater"
     url: "/industries/water-wastewater/"
   - name: "Filtration & Clarification"
+review:
+  standard: "Water/wastewater controls practice — IEC 61511 · IEC 62443 · ISA-18.2 · AWWA/EPA context"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Control patterns for filtration and clarification (run/backwash state machine, turbidity control); illustrative, site design governs."
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

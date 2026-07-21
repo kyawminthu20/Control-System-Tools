@@ -13,6 +13,12 @@ related_standards:
     url: "/standards/hazardous-area/iec-60079/"
   - name: "IEC 61508"
     url: "/standards/functional-safety/iec-61508/"
+review:
+  standard: "DNV-OS-D201 · ABS · IEC 61511 · IEC 60079"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Overlay routing for offshore platforms and FPSOs; class-rule and SIS routing at overview level."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

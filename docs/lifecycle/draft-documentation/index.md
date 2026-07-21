@@ -15,6 +15,12 @@ related_standards:
     url: "/standards/functional-safety/iec-61511/"
   - name: "ISO 13849-1"
     url: "/standards/functional-safety/iso-13849-1/"
+review:
+  standard: "Documentation practice across the applicable standards"
+  edition: "n/a — practice-level stage guidance; editions are recorded on the standards pages"
+  status: "Review pending"
+  coverage: "Stage guidance for compiling formal document packages; deliverable lists at practice level."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">
