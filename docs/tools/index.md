@@ -12,6 +12,21 @@ breadcrumb:
   <p>Site-wide navigation and reference tools: browse the canonical reference library, look up terms, compare related standards side-by-side, or jump into the consolidated reference hub.</p>
 </div>
 
+<div class="section-guide">
+  <div class="section-guide__row">
+    <span class="section-guide__label">Use this when</span>
+    <p>You need a decision aid, a worked scenario, a downloadable template, a crosswalk between standards, or the Python toolkit.</p>
+  </div>
+  <div class="section-guide__row">
+    <span class="section-guide__label">Start here</span>
+    <p><a href="{{ '/tools/standards-finder/' | relative_url }}">Standards Finder</a> to establish what applies; <a href="{{ '/tools/scenarios/' | relative_url }}">Scenarios</a> for end-to-end worked examples.</p>
+  </div>
+  <div class="section-guide__row">
+    <span class="section-guide__label">Next step</span>
+    <p>Carry results into the matching <a href="{{ '/lifecycle/' | relative_url }}">lifecycle stage</a>, and produce deliverables from the <a href="{{ '/tools/templates/' | relative_url }}">engineering templates</a>.</p>
+  </div>
+</div>
+
 <blockquote>
 <strong>Scope:</strong> Cross-cutting utilities that apply across Fundamentals, Design, Implementation, and Verification. They do not replace authoritative standards text — see the <a href="{{ '/about/' | relative_url }}">trust boundary</a>.
 </blockquote>

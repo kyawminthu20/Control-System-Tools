@@ -18,6 +18,21 @@ related_standards:
   <p>Browse standards by family. Use the <a href="{{ '/tools/crosswalks/standards-decision-workflow/' | relative_url }}">decision workflow</a> if you're unsure which standard applies to your project.</p>
 </div>
 
+<div class="section-guide">
+  <div class="section-guide__row">
+    <span class="section-guide__label">Use this when</span>
+    <p>You need to know which published standard governs a machine, panel, safety function, or network — or what a specific standard actually covers.</p>
+  </div>
+  <div class="section-guide__row">
+    <span class="section-guide__label">Start here</span>
+    <p>Unsure what applies? Open the <a href="{{ '/tools/standards-finder/' | relative_url }}">Standards Finder</a>. Already know the family? Pick it from the sidebar or the quick-decision map below.</p>
+  </div>
+  <div class="section-guide__row">
+    <span class="section-guide__label">Next step</span>
+    <p>Record the selection at the <a href="{{ '/lifecycle/standards-selection/' | relative_url }}">Standards Selection lifecycle stage</a>, and use the <a href="{{ '/tools/crosswalks/' | relative_url }}">crosswalks</a> where US and international standards overlap.</p>
+  </div>
+</div>
+
 ## Quick Decision
 
 ```

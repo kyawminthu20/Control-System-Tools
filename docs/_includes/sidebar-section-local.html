@@ -1,0 +1,122 @@
+{% comment %}
+  Local section sidebar driven by _data/navigation.yml (Phase 52.3).
+  Caller passes: include.section  (a navigation entry with local_sidebar: true)
+
+  Extends the training-catalog pilot (sidebar-training-group.html) to plain
+  navigation sections. Reuses the same CSS classes and main.js hooks:
+  .sidebar--local + data-topic-group (bucket open-state persistence) and
+  [data-local-toc] (active-page outline injection).
+
+  Rendering rules:
+  - a child WITH grandchildren  -> collapsible bucket (details), its own
+    landing page (if any) as an "Overview" first link
+  - a child WITHOUT grandchildren -> flat sequenced link; consecutive flat
+    children share one <ul> so the page sequence reads as a single list
+  - active page = exact URL match; buckets containing the active page (by
+    prefix) start open so deep pages always reveal their context
+{% endcomment %}
+
+{% assign section = include.section %}
+{% assign section_slug = section.label | slugify | prepend: "section-" %}
+
+<nav class="sidebar sidebar--local" id="sidebar" data-topic-group="{{ section_slug }}">
+
+  <div class="sidebar__section-meta">
+    <a class="sidebar__section-title" href="{{ section.url | relative_url }}"{% if page.url == section.url %} aria-current="page"{% endif %}>{{ section.label }}</a>
+    {% if section.description %}
+      <p class="sidebar__section-desc">{{ section.description }}</p>
+    {% endif %}
+    {% if page.url == section.url %}
+      <ul class="sidebar__toc" data-local-toc aria-label="On this page"></ul>
+    {% endif %}
+  </div>
+
+  {% for child in section.children %}
+    {% if child.children %}
+
+      {% assign bucket_open = false %}
+      {% if child.url and page.url contains child.url %}{% assign bucket_open = true %}{% endif %}
+      {% for grandchild in child.children %}
+        {% if page.url contains grandchild.url %}{% assign bucket_open = true %}{% endif %}
+      {% endfor %}
+
+      <details class="sidebar__bucket" data-bucket="{{ child.label | slugify }}"{% if bucket_open %} open{% endif %}>
+        <summary class="sidebar__bucket-summary">
+          <span class="sidebar__bucket-label">{{ child.label }}</span>
+          <span class="sidebar__bucket-count">{{ child.children | size }}</span>
+        </summary>
+        <ul class="sidebar__links">
+          {% if child.url %}
+            {% assign overview_active = false %}
+            {% if page.url == child.url %}{% assign overview_active = true %}{% endif %}
+            <li class="sidebar__item{% if overview_active %} is-active{% endif %}">
+              <a href="{{ child.url | relative_url }}"{% if overview_active %} aria-current="page"{% endif %}>
+                <span class="sidebar__item-title">Overview</span>
+              </a>
+              {% if overview_active %}
+                <ul class="sidebar__toc" data-local-toc aria-label="On this page"></ul>
+              {% endif %}
+            </li>
+          {% endif %}
+          {% for grandchild in child.children %}
+            {% assign gc_active = false %}
+            {% if page.url == grandchild.url %}{% assign gc_active = true %}{% endif %}
+            <li class="sidebar__item{% if gc_active %} is-active{% endif %}">
+              <a href="{{ grandchild.url | relative_url }}"{% if gc_active %} aria-current="page"{% endif %}>
+                <span class="sidebar__item-title">{{ grandchild.label }}</span>
+              </a>
+              {% if gc_active %}
+                <ul class="sidebar__toc" data-local-toc aria-label="On this page"></ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </details>
+
+    {% else %}
+
+      {% assign prev_index = forloop.index0 | minus: 1 %}
+      {% assign prev_child = section.children[prev_index] %}
+      {% if forloop.first or prev_child.children %}
+        <ul class="sidebar__links sidebar__links--sequence">
+      {% endif %}
+
+      {% assign item_active = false %}
+      {% if page.url == child.url %}{% assign item_active = true %}{% endif %}
+      <li class="sidebar__item{% if item_active %} is-active{% endif %}">
+        <a href="{{ child.url | relative_url }}"{% if item_active %} aria-current="page"{% endif %}>
+          <span class="sidebar__item-title">{{ child.label }}</span>
+        </a>
+        {% if item_active %}
+          <ul class="sidebar__toc" data-local-toc aria-label="On this page"></ul>
+        {% endif %}
+      </li>
+
+      {% assign next_child = section.children[forloop.index] %}
+      {% if forloop.last or next_child.children %}
+        </ul>
+      {% endif %}
+
+    {% endif %}
+  {% endfor %}
+
+  {% if section.related_workflows %}
+    <div class="sidebar__related">
+      <span class="sidebar__related-label">Related workflows</span>
+      <ul class="sidebar__links">
+        {% for wf in section.related_workflows %}
+          <li class="sidebar__item">
+            <a href="{{ wf.url | relative_url }}">
+              <span class="sidebar__item-title">{{ wf.label }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  <div class="sidebar__section-footer">
+    <a href="{{ '/' | relative_url }}">&larr; Home</a>
+  </div>
+
+</nav>

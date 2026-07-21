@@ -39,6 +39,13 @@
 
 - label: "Standards"
   url: "/standards/"
+  local_sidebar: true
+  description: "Standards families for machines, panels, functional safety, cybersecurity, and hazardous areas."
+  related_workflows:
+    - label: "Standards Decision Workflow"
+      url: "/tools/crosswalks/standards-decision-workflow/"
+    - label: "Standards Finder"
+      url: "/tools/standards-finder/"
   match_prefixes:
     - "/standards/"
   children:
@@ -89,6 +96,13 @@
 
 - label: "Design"
   url: "/design/"
+  local_sidebar: true
+  description: "Wiring, architecture, motor selection, software stack, and AI-integration design references."
+  related_workflows:
+    - label: "Electrical Review"
+      url: "/design/workflows/electrical-review/"
+    - label: "Motor Selection Workflow"
+      url: "/design/workflows/motor-selection/"
   match_prefixes:
     - "/design/"
   children:
@@ -172,6 +186,13 @@
 
 - label: "Lifecycle"
   url: "/lifecycle/"
+  local_sidebar: true
+  description: "The project lifecycle in sequence, from concept through maintenance and management of change."
+  related_workflows:
+    - label: "Commissioning Templates"
+      url: "/lifecycle/guides/commissioning-templates/"
+    - label: "Troubleshooting Trees"
+      url: "/tools/troubleshooting/"
   match_prefixes:
     - "/lifecycle/"
   children:
@@ -216,6 +237,13 @@
 
 - label: "Communications"
   url: "/communications/"
+  local_sidebar: true
+  description: "Industrial network physical layers, protocols, and capture-based diagnostics."
+  related_workflows:
+    - label: "Communication Dropouts"
+      url: "/tools/troubleshooting/comms-dropouts/"
+    - label: "Toolkit: Capture Analysis"
+      url: "/tools/engineering-toolkit/"
   match_prefixes:
     - "/communications/"
   children:
@@ -300,6 +328,13 @@
 
 - label: "Tools"
   url: "/tools/"
+  local_sidebar: true
+  description: "Decision tools, worked scenarios, crosswalks, templates, and the Python toolkit."
+  related_workflows:
+    - label: "Electrical Review"
+      url: "/design/workflows/electrical-review/"
+    - label: "VFD Commissioning Guide"
+      url: "/lifecycle/guides/vfd-commissioning/"
   match_prefixes:
     - "/tools/"
     - "/about/"

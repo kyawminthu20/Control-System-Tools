@@ -15,6 +15,21 @@ related_standards:
   <p>How industrial networks are designed, configured, commissioned, and — when they misbehave — diagnosed. Every protocol page answers the same six questions: what it is, where it's used, how the network is designed, how devices are configured, how it's commissioned, and how it's diagnosed.</p>
 </div>
 
+<div class="section-guide">
+  <div class="section-guide__row">
+    <span class="section-guide__label">Use this when</span>
+    <p>You are selecting, designing, configuring, or diagnosing an industrial network or fieldbus protocol.</p>
+  </div>
+  <div class="section-guide__row">
+    <span class="section-guide__label">Start here</span>
+    <p>Facing an unfamiliar network? Use the <a href="#which-protocol-am-i-looking-at">protocol identification table</a> below. New to industrial Ethernet? Start with <a href="{{ '/communications/ethernet-fundamentals/' | relative_url }}">Ethernet Fundamentals</a>.</p>
+  </div>
+  <div class="section-guide__row">
+    <span class="section-guide__label">Next step</span>
+    <p>For live problems, follow the <a href="{{ '/communications/wireshark-methodology/' | relative_url }}">troubleshooting methodology</a> or the <a href="{{ '/tools/troubleshooting/comms-dropouts/' | relative_url }}">communication-dropout tree</a>; analyse captures offline with the <a href="{{ '/tools/engineering-toolkit/' | relative_url }}">Python toolkit</a>.</p>
+  </div>
+</div>
+
 > **First release.** This section starts with the protocols and tools most
 > common in machine and process work. Pages carry a review-status block —
 > most are <em>Review pending</em> until checked against the governing

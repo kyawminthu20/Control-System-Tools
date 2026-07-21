@@ -2,7 +2,7 @@
 
 <!-- AUTO-GENERATED TREE START -->
 ## Directory Tree
-**Last Auto-Updated:** 2026-07-20 06:27:46
+**Last Auto-Updated:** 2026-07-20 20:11:42
 
 ```text
 ├── .claude/
@@ -657,6 +657,7 @@
 │   │   ├── rag-tree-nodes.html
 │   │   ├── review-meta.html
 │   │   ├── sidebar-global.html
+│   │   ├── sidebar-section-local.html
 │   │   ├── sidebar-training-group.html
 │   │   ├── sidebar.html
 │   │   ├── stage-nav.html

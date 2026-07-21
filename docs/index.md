@@ -119,56 +119,6 @@ description: "Route from your project, lifecycle stage, or market to the standar
 </section>
 
 <section class="home-section">
-  <h2>Browse by standards family</h2>
-  <p class="home-section__intro">Already know which family applies? Jump straight in.</p>
-
-  <div class="card-grid">
-    <div class="card">
-      <span class="card__label">US Electrical</span>
-      <span class="card__title">NEC · NFPA 79 · UL 508A</span>
-      <p class="card__desc">US-market rules for industrial control panels and machinery electrical design. NEC is legally enforced; UL 508A covers panel listing.</p>
-      <a href="{{ '/standards/us-electrical/' | relative_url }}" class="card__link">View family &rarr;</a>
-    </div>
-
-    <div class="card">
-      <span class="card__label">International Machinery</span>
-      <span class="card__title">IEC 60204-1</span>
-      <p class="card__desc">Electrical equipment of machines for CE-marked and global markets. Equivalent scope to NFPA 79 outside the US.</p>
-      <a href="{{ '/standards/machinery/' | relative_url }}" class="card__link">View family &rarr;</a>
-    </div>
-
-    <div class="card">
-      <span class="card__label">Functional Safety</span>
-      <span class="card__title">ISO 12100 · 13849-1 · IEC 62061 · 61508 · 61511</span>
-      <p class="card__desc">Risk assessment and safety function design. PL path via ISO 13849-1; SIL path via IEC 62061 or IEC 61511 for process.</p>
-      <a href="{{ '/standards/functional-safety/' | relative_url }}" class="card__link">View family &rarr;</a>
-      <span class="badge badge--reviewed">Reviewed</span>
-    </div>
-
-    <div class="card">
-      <span class="card__label">Software &amp; Cybersecurity</span>
-      <span class="card__title">IEC 61131-3 · IEC 62443</span>
-      <p class="card__desc">PLC programming languages and safety software lifecycle. Industrial cybersecurity series for networked control systems.</p>
-      <a href="{{ '/design/software-stack/' | relative_url }}" class="card__link">Routing guide &rarr;</a>
-    </div>
-
-    <div class="card">
-      <span class="card__label">Crosswalks</span>
-      <span class="card__title">NFPA 79 ↔ IEC 60204-1 · UL 508A / NEC overlap</span>
-      <p class="card__desc">Side-by-side comparison tables mapping clause equivalencies between US and international standards.</p>
-      <a href="{{ '/tools/crosswalks/' | relative_url }}" class="card__link">View crosswalks &rarr;</a>
-    </div>
-
-    <div class="card">
-      <span class="card__label">Reference Models</span>
-      <span class="card__title">7-Layer Architecture · Safety Architecture · 15-Standard Stack</span>
-      <p class="card__desc">Cross-cutting reference models: machine architecture layers, universal safety architecture, semiconductor compliance stack.</p>
-      <a href="{{ '/design/software-stack/' | relative_url }}" class="card__link">View reference &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<section class="home-section">
   <h2>Browse by lifecycle stage</h2>
   <p class="home-section__intro">A structured lifecycle from concept through operation and management of change — each page lists the standards and outputs that apply.</p>
 
@@ -231,8 +181,63 @@ description: "Route from your project, lifecycle stage, or market to the standar
   </div>
 </section>
 
-<section class="home-section">
-  <h2>Browse by industry</h2>
+<section class="home-section home-explore">
+  <h2>Explore the field guide</h2>
+  <p class="home-section__intro">Beyond the entry routes above: browse by standards family or
+  industry overlay, or open the power-user views of the underlying reference library.</p>
+
+<div class="home-explore__block">
+  <h3>Browse by standards family</h3>
+  <p class="home-section__intro">Already know which family applies? Jump straight in.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <span class="card__label">US Electrical</span>
+      <span class="card__title">NEC · NFPA 79 · UL 508A</span>
+      <p class="card__desc">US-market rules for industrial control panels and machinery electrical design. NEC is legally enforced; UL 508A covers panel listing.</p>
+      <a href="{{ '/standards/us-electrical/' | relative_url }}" class="card__link">View family &rarr;</a>
+    </div>
+
+    <div class="card">
+      <span class="card__label">International Machinery</span>
+      <span class="card__title">IEC 60204-1</span>
+      <p class="card__desc">Electrical equipment of machines for CE-marked and global markets. Equivalent scope to NFPA 79 outside the US.</p>
+      <a href="{{ '/standards/machinery/' | relative_url }}" class="card__link">View family &rarr;</a>
+    </div>
+
+    <div class="card">
+      <span class="card__label">Functional Safety</span>
+      <span class="card__title">ISO 12100 · 13849-1 · IEC 62061 · 61508 · 61511</span>
+      <p class="card__desc">Risk assessment and safety function design. PL path via ISO 13849-1; SIL path via IEC 62061 or IEC 61511 for process.</p>
+      <a href="{{ '/standards/functional-safety/' | relative_url }}" class="card__link">View family &rarr;</a>
+      <span class="badge badge--reviewed">Reviewed</span>
+    </div>
+
+    <div class="card">
+      <span class="card__label">Software &amp; Cybersecurity</span>
+      <span class="card__title">IEC 61131-3 · IEC 62443</span>
+      <p class="card__desc">PLC programming languages and safety software lifecycle. Industrial cybersecurity series for networked control systems.</p>
+      <a href="{{ '/design/software-stack/' | relative_url }}" class="card__link">Routing guide &rarr;</a>
+    </div>
+
+    <div class="card">
+      <span class="card__label">Crosswalks</span>
+      <span class="card__title">NFPA 79 ↔ IEC 60204-1 · UL 508A / NEC overlap</span>
+      <p class="card__desc">Side-by-side comparison tables mapping clause equivalencies between US and international standards.</p>
+      <a href="{{ '/tools/crosswalks/' | relative_url }}" class="card__link">View crosswalks &rarr;</a>
+    </div>
+
+    <div class="card">
+      <span class="card__label">Reference Models</span>
+      <span class="card__title">7-Layer Architecture · Safety Architecture · 15-Standard Stack</span>
+      <p class="card__desc">Cross-cutting reference models: machine architecture layers, universal safety architecture, semiconductor compliance stack.</p>
+      <a href="{{ '/design/software-stack/' | relative_url }}" class="card__link">View reference &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<div class="home-explore__block">
+  <h3>Browse by industry</h3>
   <p class="home-section__intro">Every industry has an overlay that narrows the general standards. Six of the most common — see the full list on the industries page.</p>
 
   <div class="industry-tiles">
@@ -263,25 +268,27 @@ description: "Route from your project, lifecycle stage, or market to the standar
   </div>
 
   <p style="margin-top:1rem;"><a href="{{ '/industries/' | relative_url }}">All 9 industry overlays &rarr;</a></p>
-</section>
+</div>
 
 <details class="home-deep-dive">
   <summary>For power users — standards graph and source browser</summary>
 
-  <section class="home-section" style="margin-top:1.5rem;">
-    <h2 style="font-size:1.1rem;">Standards relationship graph</h2>
+  <div class="home-explore__block" style="margin-top:1.5rem;">
+    <h3 style="font-size:1.1rem;">Standards relationship graph</h3>
     <p class="home-section__intro">Interactive map of how standards reference and depend on each other.</p>
     <p><a href="{{ '/standards/graph/' | relative_url }}">Open the full graph &rarr;</a></p>
-  </section>
+  </div>
 
-  <section class="home-section">
-    <h2 style="font-size:1.1rem;">Source material</h2>
+  <div class="home-explore__block">
+    <h3 style="font-size:1.1rem;">Source material</h3>
     <p class="home-section__intro">
       Every page is backed by the project's reference library of clause-level source notes.
       Browse the raw notes in the <a href="{{ '/tools/rag-browser/' | relative_url }}">source browser</a>,
       or read how content is produced and reviewed on the
       <a href="{{ '/about/' | relative_url }}">About &amp; methodology page</a>.
     </p>
-  </section>
+  </div>
 
 </details>
+
+</section>

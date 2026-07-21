@@ -15,6 +15,21 @@ redirect_from:
   <p>Navigate from concept through commissioning by engineering task. Lifecycle stages provide structured progression; workflows guide decision points; commissioning templates support field verification.</p>
 </div>
 
+<div class="section-guide">
+  <div class="section-guide__row">
+    <span class="section-guide__label">Use this when</span>
+    <p>You are designing or reviewing wiring, panel and machine architecture, motor selection, the software stack, or AI/ML integration.</p>
+  </div>
+  <div class="section-guide__row">
+    <span class="section-guide__label">Start here</span>
+    <p><a href="{{ '/design/wiring/' | relative_url }}">Wiring &amp; Installation</a> for point-to-point design work; <a href="{{ '/design/architecture/' | relative_url }}">Architecture</a> when you are structuring the whole system.</p>
+  </div>
+  <div class="section-guide__row">
+    <span class="section-guide__label">Next step</span>
+    <p>Run the <a href="{{ '/design/workflows/electrical-review/' | relative_url }}">Electrical Review workflow</a> before release to build, then continue at the <a href="{{ '/lifecycle/build/' | relative_url }}">Build lifecycle stage</a>.</p>
+  </div>
+</div>
+
 ## Design &amp; Architecture
 
 <div class="workflow-card-grid">

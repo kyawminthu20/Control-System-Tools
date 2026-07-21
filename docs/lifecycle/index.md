@@ -24,6 +24,21 @@ related_standards:
   <p>A structured lifecycle from concept through operation and management of change — with standards overlay, roles, and entry/exit criteria at each stage.</p>
 </div>
 
+<div class="section-guide">
+  <div class="section-guide__row">
+    <span class="section-guide__label">Use this when</span>
+    <p>You need the stage sequence, entry/exit criteria, and standards overlay for a controls project with safety-related functions.</p>
+  </div>
+  <div class="section-guide__row">
+    <span class="section-guide__label">Start here</span>
+    <p>New project? Begin at <a href="{{ '/lifecycle/concept/' | relative_url }}">Stage 1 — Concept</a>. Mid-project? Jump to your current stage in the sidebar sequence; each stage names what must already be true to enter it.</p>
+  </div>
+  <div class="section-guide__row">
+    <span class="section-guide__label">Next step</span>
+    <p>Every stage page links its next stage. Field procedures live in the <a href="{{ '/lifecycle/guides/commissioning-templates/' | relative_url }}">commissioning guides</a>; changes after handover go through <a href="{{ '/lifecycle/management-of-change/' | relative_url }}">Management of Change</a>.</p>
+  </div>
+</div>
+
 > **Two lifecycles, one project.** This page defines the **functional-safety
 > lifecycle** — the analysis stages and verification gates that safety-related
 > control functions add to a project. It overlays the

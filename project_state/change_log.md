@@ -1,7 +1,37 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-20 (digital-twin arc deployed and live-verified)
+**Last Updated:** 2026-07-20 (Phase 52.3 task-first IA)
 **Status:** Active
+
+## 2026-07-20 — Phase 52.3 (Task-first information architecture)
+
+**Type:** Site navigation/IA only. **No technical content, corpus note, register value, or authority
+ceiling changed.** The owner-directed next Phase 52 slice (decision recorded 2026-07-17).
+
+- **Section-local sidebars extended beyond the training pilot** to Standards, Design, Lifecycle,
+  Communications, and Tools. New generic include `docs/_includes/sidebar-section-local.html` is driven
+  by `_data/navigation.yml` sections flagged `local_sidebar: true`; the router
+  (`_includes/sidebar.html`) keeps the training pilot at priority 1, the new section sidebars at
+  priority 2, and the global sidebar as fallback for everything else (Fundamentals non-pilot pages,
+  Industries, Home). Each local sidebar shows the parent landing page + section description, the page
+  sequence (flat children as one ordered list; grouped children as collapsible buckets with counts and
+  an Overview link), the active page with `aria-current` and the injected on-page outline
+  (`[data-local-toc]`, reusing the existing main.js hooks and bucket-state persistence), and a new
+  **Related workflows** block (`related_workflows` per section in navigation.yml).
+- **Homepage restructured task-first:** first journey is now hero → Start here → scenarios →
+  lifecycle ribbon; the standards-family cards, industry tiles, and the power-user graph/source-browser
+  details moved into a secondary **Explore the field guide** region (headings demoted to h3).
+- **Section landing pages** (Standards, Design, Lifecycle, Communications, Tools) each gained a
+  `section-guide` block with **Use this when / Start here / Next step** rows; links verified by the
+  site link checker.
+- **Search now available at every viewport** (52.3 acceptance): below 768px the topnav search box was
+  `display: none`; it now flexes into the row freed by the hidden nav links. CSS-only; the full 52.2
+  mobile drawer/responsive-context work stays deferred pending device verification.
+- No top-level navigation section added or removed; taxonomy order unchanged; no page orphaned.
+- Verified: full release gate PASSED (300 tests, 10 doctests, clean Jekyll build, 378 files
+  link-checked, boundary/quality checks green, legacy review-block warning at the pre-existing 166
+  baseline); desktop + 375px mobile rendering spot-checked in a real browser (local sidebar buckets,
+  active-page outline, related workflows, mobile search box all render).
 
 ## 2026-07-20 — Digital-twin arc deployed (delivery tail)
 

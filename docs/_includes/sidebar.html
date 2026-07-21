@@ -1,13 +1,17 @@
 {% comment %}
   Sidebar router.
 
-  Pilot: if the current page is inside a training_catalog topic_group whose
-  modules have been tagged with `sidebar_bucket`, render the local section
-  tree (sidebar-training-group.html). Otherwise fall back to the global
-  navigation sidebar (sidebar-global.html).
+  Priority 1 (training pilot): if the current page is inside a
+  training_catalog topic_group whose modules have been tagged with
+  `sidebar_bucket`, render the local section tree
+  (sidebar-training-group.html).
 
-  This keeps the pilot scoped to opted-in sections; a topic_group without
-  bucket tags on its modules continues to use the global sidebar.
+  Priority 2 (Phase 52.3): if the current page is inside a navigation.yml
+  section flagged `local_sidebar: true`, render the generic section-local
+  sidebar (sidebar-section-local.html).
+
+  Otherwise fall back to the global navigation sidebar (sidebar-global.html).
+  Sections without the flag continue to use the global sidebar.
 {% endcomment %}
 
 {% assign active_group = nil %}
@@ -28,8 +32,24 @@
   {% endif %}
 {% endif %}
 
+{% assign local_nav_section = nil %}
+{% unless active_group_has_buckets %}
+  {% for section in site.data.navigation %}
+    {% unless section.local_sidebar %}{% continue %}{% endunless %}
+    {% if section.match_prefixes %}
+      {% for prefix in section.match_prefixes %}
+        {% if page.url contains prefix %}{% assign local_nav_section = section %}{% endif %}
+      {% endfor %}
+    {% elsif section.url and page.url contains section.url %}
+      {% assign local_nav_section = section %}
+    {% endif %}
+  {% endfor %}
+{% endunless %}
+
 {% if active_group_has_buckets %}
   {% include sidebar-training-group.html active_group=active_group %}
+{% elsif local_nav_section %}
+  {% include sidebar-section-local.html section=local_nav_section %}
 {% else %}
   {% include sidebar-global.html %}
 {% endif %}
