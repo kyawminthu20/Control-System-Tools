@@ -1,7 +1,106 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-20 (Phase 52.4b COMPLETE — review-metadata debt at zero)
+**Last Updated:** 2026-07-20 (easy-first visualization standard prepared)
 **Status:** Active
+
+## 2026-07-20 — Project-behavior research recommendation
+
+**Type:** Planning/research only. **No site, corpus, toolkit, authority ceiling, or review status changed.**
+
+- Reframed `planning/recommendation.md` from a narrow crosswalk proposal into a product-level
+  behavioral contract for the field guide, canonical corpus, and `cst` toolkit: scope before detail,
+  evidence before assertion, local uncertainty, informative-not-authoritative mappings, one fact
+  rendered through many adapters, provenance-bearing results, fail-closed behavior, explicit human
+  authority, predictable accessibility, and capability never granting authority.
+- Extended the standards-correlation research using primary sources: NIST IR 8477, NIST IR 8278r1,
+  the NIST OSCAL mapping model and CSF Informative References, W3C PROV-O and WCAG 2.2, IEC
+  Electropedia, ISO 860, and the NIST AI RMF. The recommendation labels cross-domain applications as
+  project inferences rather than endorsements or conformance claims.
+- Added a multilayer operating model: seven value-path layers from authority/evidence through user
+  interaction; provenance, review/authority, configuration/change, safety/privacy/accessibility, and
+  verification/observability control planes; five end-to-end behavior traces; failure-containment
+  rules; and separate automated versus human evidence by layer. NASA's Systems Engineering Handbook
+  and NIST SP 800-160 Vol. 1 Rev. 1 are cited as proportionate lifecycle/trust-engineering patterns,
+  not compliance bases.
+- Recorded verified current contradictions for owner triage: homepage technical claims under a
+  `review_exempt` declaration; homepage analytics omitting the privacy restrictions used by the
+  default layout; corpus `STATUS` presence checked without allowed-value enforcement (one canonical
+  `AUTHORED` value currently passes); SAMPLE-backed calculations as the default public behavior;
+  edition/table compatibility not enforced; manually duplicated visible review badges; incomplete
+  generated-artifact freshness checks; and untested accessibility-critical interaction state. The
+  deeper traces also found canonical numeric placeholders that pass corpus quality checks, no
+  claim-level curated-page evidence seam, I/O signal semantics discarded by artifact generation,
+  normalized loop-sheet filename collisions that can overwrite distinct tags, and plausible empty
+  deliverables from a header-only input.
+- Prepared A0–E implementation packets with dependency order, phase-entry baseline, common
+  definition of done, bounded slices, primary change surfaces, test inventories, exit evidence,
+  stop conditions, and first-branch guidance. The owner behavior/vocabulary gate precedes product
+  changes. Shared analytics/privacy configuration is prepared as the lowest-risk first slice;
+  explicit design/demo mode is the high-value early safety slice after owner approval.
+- Added a project-wide novice-learning model to `planning/recommendation.md`: five learner stages,
+  one universal lesson spine, plain-language explanation rules, a recurring fictional pump-and-tank
+  system, and tailored teaching guidance for concepts, calculations, procedures, standards,
+  diagnostics, comparisons, lifecycle work, and system architecture.
+- Added topic-family recommendations for electrical fundamentals, control/PID, motors/drives, PLC
+  software, NEC application, standards and their functional-safety/cybersecurity/hazardous-area/
+  industry branches, wiring, architecture, AI/digital twins, lifecycle, communications, industries,
+  scenarios/crosswalks, toolkit artifacts, troubleshooting, and vendor references. Each identifies
+  a starting model, progression, likely misconceptions, learner evidence, and safety handoff.
+- Prepared Phase F: prerequisite inventory, original layered teaching model, cross-domain tracer
+  path, worked-example fading, misconception/retrieval/transfer checks, and validation with true
+  novices plus qualified practitioners. Technical review, learner readiness, accessibility, and
+  qualification are explicitly independent states; lesson completion never grants authority.
+- Added primary learning sources from the US Department of Education What Works Clearinghouse,
+  OSHA worker-training guidance, CAST UDL Guidelines 3.0, and the National Academies' *How People
+  Learn II*. Their patterns are project inputs, not proof that any page or the static site constitutes
+  an effective or qualifying training program.
+- Prepared the Phase F implementation dossier: baseline inventory across 242 pages in Fundamentals,
+  Standards, Design, Lifecycle, Communications, Industries, and Tools; a proposed page-level learning
+  contract; prerequisite-graph rules; stable learner blocks; an exact nine-page tracer route; seven
+  coordinated original diagram views; constructed dataset requirements; and a page conversion
+  checklist.
+- Split learner work into F0–F7 branch-sized slices from governance/fixtures through inventory,
+  teaching system, tracer conversion, moderated validation, and owner-authorized rollout. Added ten
+  owner decisions, task-based validation protocol, non-numeric rollout blockers, responsibility
+  separation, risk register, and an F0 ready-to-start checklist. No docs, corpus, toolkit, learner
+  metadata, review state, or authority behavior changed.
+- Directional source scan for phase planning: of 242 section pages, 7 match outcome/prerequisite
+  language, 24 match worked/constructed examples, 0 match guided-practice wording, 1 matches explicit
+  misconception wording, 0 match knowledge/self-check wording, 52 match common-mistake language, 178
+  match safety/qualified-person/LOTO language, and 66 match related/next-route language. These are
+  keyword indicators only, not page-quality scores; F1 replaces them with structured inventory.
+- Added a visual explanation system to the recommendation: stable visual grammar for physical,
+  power, signal, network, safety, provenance, authority, fault, and gap relationships; progressive
+  seven-view disclosure; purpose-to-visual selection guidance; accessibility/fallback rules;
+  evidence-to-learning traceability; and source ownership/freshness requirements.
+- Added 17 Mermaid diagrams with adjacent text alternatives: whole-product behavior, multilayer
+  value/control paths, learner progression, lesson spine, recurring pump/tank system, progressive
+  visual depth, evidence trace, topic map, phase dependencies, baseline chart, exact tracer path,
+  moderated validation loop, independent technical/learning/accessibility/qualification states,
+  visual-selection flow, beginner-page anatomy, interaction state model, and visual generation trace.
+- Added a page-by-page tracer visual storyboard plus visual QA across desktop, 320 px/200% zoom,
+  keyboard/screen reader, print/no JavaScript, dark/high-contrast, and generated-source freshness.
+  Planning only: no production visual, site asset, third-party runtime, or user-facing behavior was
+  added.
+- Deepened the visual implementation recommendation with a required nine-question visual design
+  record, bounded interaction patterns and failure behavior, topic-specific visual specifications for
+  22 families, a proposed manifest and traceability model, automated visual checks, F2.1–F2.11 work
+  units, and a review record template. Added detailed lesson blueprints for every page in the
+  nine-step tracer, including entry knowledge, observable outcome, opening prediction, primary visual,
+  worked reasoning, guided item, misconception, transfer, retrieval, and field handoff.
+- Added an easy-first visualization standard with first-view complexity budgets, three-pass
+  glance/trace/inspect disclosure, a five-question unfamiliar-learner simplicity gate, and an ordered
+  simplification procedure. Extended automated/manual QA and the visual acceptance record with
+  complexity exceptions, main-path recognition, one-sentence takeaway, abbreviation/branch checks,
+  single-factor transfer, and evidence-appropriate certainty.
+- Simplified the recommendation's learner-facing lesson-spine visual from a dense fifteen-node map to
+  six movements (orient, see, explain, watch, try, check/handoff), while retaining the detailed text
+  contract. Simplified the first pump/tank view to sensor → controller → motor/pump → process feedback,
+  plus only the independent safety and qualified-human relationships; power, network, disturbance,
+  and protection detail now appear in later coordinated views.
+- Validation for this planning-only change: Markdown/source inspection, link-target verification,
+  and full governed release gate PASSED (303 tests, 10 doctests, clean Jekyll build, zero broken
+  internal links, corpus safety/quality checks green).
 
 ## 2026-07-20 — Phase 52.4b tranche 3 (fundamentals + design + tools) — ROLLOUT COMPLETE
 

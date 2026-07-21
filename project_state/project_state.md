@@ -1,6 +1,6 @@
 # Project State
 
-**Last Updated:** 2026-07-20 (Phase 52.3 task-first IA + 52.4b review-metadata tranche 1 delivered)
+**Last Updated:** 2026-07-20 (Phase 52.4b complete; easy-first visualization standard prepared)
 **Digital-twin deepening arc (started 2026-07-19):** four approved slices — **49d evidence closure (COMPLETE)** →
 **53.1 twin maturity ladder (COMPLETE)** →
 **53.2 `src/cst/twin/` contract + sync-health (COMPLETE)** →
@@ -15,6 +15,45 @@ citation by axis**: cite NIST for the functional progression, label the synchron
 working vocabulary. ISO 23247-5:2026 confirmed current (existence/title/date only — body paywalled, page
 bot-gated; the "ISO body not read" caveat stands).
 **Status:** Active
+**Active research:** `planning/recommendation.md` now frames how the field guide, canonical corpus,
+and `cst` toolkit should act as one evidence-backed, safety-constrained decision-support product. It
+adds a seven-layer value path, five crosscutting control planes, end-to-end behavior traces, failure
+containment, and layer-specific verification/validation evidence. It is a non-authoritative
+recommendation pending owner review; no product behavior or authority ceiling changed. Confirmed
+follow-up candidates are organized into implementation-ready A0–E packets with dependency order,
+bounded slices, test inventories, exit evidence, and stop conditions. The first gate is owner
+acceptance or amendment of the behavior contract and shared vocabulary. The prepared lowest-risk
+first slice is shared analytics/privacy configuration; the highest-value early safety slice is
+explicit design/demo mode after owner approval.
+**Learner research:** the same recommendation now adds a novice-learning contract, five learner
+stages, a universal lesson spine, teaching patterns by content type, topic-family guidance across the
+full site taxonomy, five beginner pathways, assessment without false authority, accessibility rules,
+and an implementation-ready Phase F tracer path. Technical review, learner readiness, accessibility
+validation, and field qualification remain separate. The proposed recurring constructed example is
+a fictional pump-and-tank skid; it requires owner acceptance and novice validation before broad
+content conversion.
+The Phase F implementation dossier is now prepared with a 242-page section baseline, proposed lesson
+metadata, prerequisite-graph rules, reusable learner blocks, an exact nine-page tracer path, seven
+original system views, a fictional dataset specification, page conversion checklist, F0–F7 branch
+slices, moderated validation tasks, rollout thresholds, responsibility model, risk register, and an
+F0 ready-to-start checklist. No learner metadata or content contract is authoritative until the owner
+answers the recorded Phase F decisions.
+The recommendation now includes a visual explanation system and 17 embedded Mermaid diagrams covering
+product behavior, the multilayer value path, learner progression, lesson flow, the recurring system,
+progressive visual depth, evidence-to-learning traceability, the topic map, phase dependencies, the
+page baseline, tracer route, validation loop, and independent review/qualification states. Each new
+visual includes a text alternative. The Phase F dossier also specifies visual grammar, purpose-to-
+visual selection, accessibility rules, source ownership, tracer storyboard, and a cross-mode QA
+matrix. It now includes visual-selection and page-anatomy flows, an interaction state model, visual
+specifications for 22 topic families, nine detailed tracer lesson blueprints, a proposed visual
+manifest/generation trace, automated checks, F2.1–F2.11 work units, and a visual acceptance record.
+These remain planning recommendations; no site asset or runtime was changed.
+The visual recommendation now has an easy-first gate: one learner question/takeaway, five-to-seven
+first-view objects normally, one reading direction, one main path, at most two secondary branches,
+short familiar labels, bounded relationship/state counts, one changed condition, and vertical 320 px
+reflow. It uses glance/trace/inspect passes plus a five-question unfamiliar-learner check. The first
+lesson-flow and pump/tank diagrams were simplified to six-stage and six-object views; power, network,
+failure, and evidence details remain in later coordinated views.
 **Scope statement (2026-07-19):** The repository now carries an explicit scope-and-intent statement in
 [`README.md`](../README.md#scope-and-intent), `governance/AI_WORKFLOW.md` §0, and the AI/ML research
 README. It records that this is **defensive industrial-automation engineering**, maps the ambiguous
