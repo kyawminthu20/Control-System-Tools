@@ -10,6 +10,12 @@ related_standards:
     url: "/tools/crosswalks/standards-decision-workflow/"
   - name: "Crosswalks"
     url: "/tools/crosswalks/"
+review:
+  standard: "Standards library index"
+  edition: "n/a — routing page; editions are recorded on the child standard pages"
+  status: "Review pending"
+  coverage: "Family landing and routing page; scope summaries only, clause-level detail lives on the child pages."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

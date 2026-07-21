@@ -6,6 +6,12 @@ breadcrumb:
   - name: "Standards"
     url: "/standards/"
   - name: "Graph"
+review:
+  standard: "Standards relationship graph (site data)"
+  edition: "n/a — relationships derived from the standards pages"
+  status: "Review pending"
+  coverage: "Interactive dependency/reference map; edges are editorial summaries — verify on each standard's page."
+  last_reviewed: "March 2026"
 ---
 
 <div class="page-header">

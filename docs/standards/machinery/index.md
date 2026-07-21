@@ -17,6 +17,12 @@ related_standards:
 crosswalk_refs:
   - name: "NFPA 79 ↔ IEC 60204-1 Crosswalk"
     url: "/tools/crosswalks/nfpa79-iec60204/"
+review:
+  standard: "IEC 60204-1 family"
+  edition: "n/a — routing page; editions are recorded on the child standard pages"
+  status: "Review pending"
+  coverage: "Family landing page for international machinery electrical standards; routing and scope summary only."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

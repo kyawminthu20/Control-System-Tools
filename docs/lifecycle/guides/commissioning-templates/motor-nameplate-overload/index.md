@@ -10,6 +10,12 @@ redirect_from:
   - /implementation/commissioning-templates/motor-nameplate-overload/
   - /commissioning-templates/motor-nameplate-overload/
   - /commissioning-templates/motor-nameplate-overload/index.html
+review:
+  standard: "Field verification practice — OEM instructions and the site electrical safety program govern"
+  edition: "n/a — procedure-agnostic checklist"
+  status: "Review pending"
+  coverage: "Reminder-layer checklist for nameplate data and overload settings before energizing a motor branch; NEC Art. 430 work happens on the sizing pages."
+  last_reviewed: "July 2026"
 ---
 
 - Record motor nameplate voltage, frequency, phase, and full-load current

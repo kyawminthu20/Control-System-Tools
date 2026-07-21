@@ -20,6 +20,12 @@ redirect_from:
   - /implementation/scenarios/networked-safety-plc/
   - /scenarios/networked-safety-plc/
   - /scenarios/networked-safety-plc/index.html
+review:
+  standard: "ISO 13849-1 / IEC 62061 · IEC 62443"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Routing scenario for a networked safety PLC; safety-function path plus cybersecurity overlay at overview level."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

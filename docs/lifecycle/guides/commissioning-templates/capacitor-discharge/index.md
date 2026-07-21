@@ -10,6 +10,12 @@ redirect_from:
   - /implementation/commissioning-templates/capacitor-discharge/
   - /commissioning-templates/capacitor-discharge/
   - /commissioning-templates/capacitor-discharge/index.html
+review:
+  standard: "Field verification practice — OEM instructions and the site electrical safety program govern"
+  edition: "n/a — procedure-agnostic checklist"
+  status: "Review pending"
+  coverage: "Reminder-layer checklist for verifying discharge before work near power electronics; OEM waiting times and site LOTO govern."
+  last_reviewed: "July 2026"
 ---
 
 - Identify whether the equipment contains significant capacitance or a DC bus

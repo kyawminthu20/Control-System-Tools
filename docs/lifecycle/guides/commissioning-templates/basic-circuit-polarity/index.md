@@ -10,6 +10,12 @@ redirect_from:
   - /implementation/commissioning-templates/basic-circuit-polarity/
   - /commissioning-templates/basic-circuit-polarity/
   - /commissioning-templates/basic-circuit-polarity/index.html
+review:
+  standard: "Field verification practice — OEM instructions and the site electrical safety program govern"
+  edition: "n/a — procedure-agnostic checklist"
+  status: "Review pending"
+  coverage: "Reminder-layer checklist for first energization of a low-voltage circuit; site procedures and LOTO govern."
+  last_reviewed: "July 2026"
 ---
 
 - Confirm the intended source voltage is present

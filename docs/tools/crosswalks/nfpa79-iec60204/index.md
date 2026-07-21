@@ -15,6 +15,12 @@ related_standards:
 redirect_from:
   - /crosswalks/nfpa79-iec60204/
   - /crosswalks/nfpa79-iec60204/index.html
+review:
+  standard: "NFPA 79 ↔ IEC 60204-1"
+  edition: "NFPA 79:2024; IEC 60204-1:2016+AMD1:2021"
+  status: "Review pending"
+  coverage: "Topic-by-topic equivalency matrix; entries are role equivalence, not clause-identical requirements."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

@@ -10,6 +10,12 @@ redirect_from:
   - /implementation/commissioning-templates/motor-rotation-verification/
   - /commissioning-templates/motor-rotation-verification/
   - /commissioning-templates/motor-rotation-verification/index.html
+review:
+  standard: "Field verification practice — OEM instructions and the site electrical safety program govern"
+  edition: "n/a — procedure-agnostic checklist"
+  status: "Review pending"
+  coverage: "Reminder-layer checklist for first powered motor check or reconnection; site procedures and LOTO govern."
+  last_reviewed: "July 2026"
 ---
 
 - Confirm safe conditions for jog or brief start

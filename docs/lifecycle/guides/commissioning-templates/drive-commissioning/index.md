@@ -10,6 +10,12 @@ redirect_from:
   - /implementation/commissioning-templates/drive-commissioning/
   - /commissioning-templates/drive-commissioning/
   - /commissioning-templates/drive-commissioning/index.html
+review:
+  standard: "Field verification practice — OEM instructions and the site electrical safety program govern"
+  edition: "n/a — procedure-agnostic checklist"
+  status: "Review pending"
+  coverage: "Reminder-layer checklist for first power-up of a motor-drive system; drive OEM manual governs parameters and limits."
+  last_reviewed: "July 2026"
 ---
 
 ### Pre-power

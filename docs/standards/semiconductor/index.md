@@ -6,6 +6,12 @@ breadcrumb:
   - name: "Standards"
     url: "/standards/"
   - name: "Semiconductor"
+review:
+  standard: "SEMI S2 · S8 · S14"
+  edition: "n/a — routing page; editions are recorded on the child standard pages"
+  status: "Review pending"
+  coverage: "Family landing page for semiconductor equipment safety standards; routing and scope summary only."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

@@ -8,6 +8,12 @@ redirect_from:
   - /implementation/commissioning-templates/
   - /commissioning-templates/
   - /commissioning-templates/index.html
+review:
+  standard: "Field verification practice — OEM instructions and the site electrical safety program govern"
+  edition: "n/a — procedure-agnostic checklists"
+  status: "Review pending"
+  coverage: "Printable reminder-layer checklists; not a substitute for equipment-specific procedures, site LOTO, or qualified-person requirements."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

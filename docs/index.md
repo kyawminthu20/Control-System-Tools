@@ -2,6 +2,7 @@
 layout: home
 title: "Home"
 description: "Route from your project, lifecycle stage, or market to the standards, workflows, and training that apply."
+review_exempt: "navigation hub (home layout) — decision claims link to the reviewed source pages that hold the governed metadata"
 ---
 
 <section class="home-hero">

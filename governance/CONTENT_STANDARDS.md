@@ -55,6 +55,11 @@ Every technical page carries:
    ```
    Never write "current published spec" as an edition — record the revision
    or say it is not yet recorded.
+
+   Pages that are pure navigation or redirect stubs may opt out with
+   `review_exempt: "<reason>"` instead of a `review:` block — the reason is
+   mandatory, a page cannot declare both keys, and the exemption is for pages
+   with no technical claims of their own, never a shortcut for content pages.
 2. A `page-header` div (label, H1, one-line `<p>`).
 3. `related_standards` frontmatter where relevant (feeds the context panel).
 4. Internal links to related pages — no orphan pages.

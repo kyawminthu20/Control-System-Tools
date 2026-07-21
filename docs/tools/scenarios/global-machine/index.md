@@ -21,6 +21,12 @@ redirect_from:
   - /implementation/scenarios/global-machine/
   - /scenarios/global-machine/
   - /scenarios/global-machine/index.html
+review:
+  standard: "NFPA 79 · IEC 60204-1 · ISO 12100"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Dual-market (US + EU) routing scenario at overview level; overlap and divergence summarized, no clause-level determinations."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

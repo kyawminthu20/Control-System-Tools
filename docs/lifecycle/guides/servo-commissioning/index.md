@@ -6,6 +6,12 @@ redirect_from:
   - /implementation/servo-commissioning/
   - /workflows/servo-commissioning/
   - /workflows/servo-commissioning/index.html
+review:
+  standard: "Commissioning practice — drive/axis OEM documentation governs"
+  edition: "n/a — practice-level sequence, no single governing document"
+  status: "Review pending"
+  coverage: "Staged servo-axis commissioning sequence at practice level; tuning values and safety-function checks are project-specific."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

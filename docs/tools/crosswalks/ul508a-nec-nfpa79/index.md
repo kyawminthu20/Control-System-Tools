@@ -17,6 +17,12 @@ related_standards:
 redirect_from:
   - /crosswalks/ul508a-nec-nfpa79/
   - /crosswalks/ul508a-nec-nfpa79/index.html
+review:
+  standard: "UL 508A · NEC · NFPA 79"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Topic-level overlap matrix for the three US panel/machinery standards; scope boundaries summarized."
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

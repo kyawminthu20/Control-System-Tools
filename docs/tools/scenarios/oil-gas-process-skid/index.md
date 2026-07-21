@@ -24,6 +24,12 @@ redirect_from:
   - /implementation/scenarios/oil-gas-process-skid/
   - /scenarios/oil-gas-process-skid/
   - /scenarios/oil-gas-process-skid/index.html
+review:
+  standard: "IEC 61511 · IEC 60079 · NEC Art. 500–505"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Onshore O&G skid ESD/F&G/HIPPS walkthrough; SIS and hazardous-area routing at overview level."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

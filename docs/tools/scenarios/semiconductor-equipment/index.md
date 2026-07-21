@@ -25,6 +25,12 @@ redirect_from:
   - /implementation/scenarios/semiconductor-equipment/
   - /scenarios/semiconductor-equipment/
   - /scenarios/semiconductor-equipment/index.html
+review:
+  standard: "SEMI S2 / S8 / S14 and the 15-standard stack"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Fab-equipment compliance-stack overview; stack membership and rationale, not tool-specific evaluation."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

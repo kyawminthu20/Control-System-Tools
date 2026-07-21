@@ -12,6 +12,12 @@ related_standards:
     url: "/standards/machinery/iec-60204-1/"
   - name: "NFPA 79"
     url: "/standards/us-electrical/nfpa-79/"
+review:
+  standard: "ISO 12100 · ISO 13849-1 · IEC 62061 · IEC 61508 · IEC 61511"
+  edition: "n/a — routing page; editions are recorded on the child standard pages"
+  status: "Review pending"
+  coverage: "Family landing page for risk assessment and safety-function standards; PL/SIL route summary only."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

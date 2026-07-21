@@ -84,6 +84,47 @@ review:
     assert warnings == []
 
 
+def test_site_metadata_accepts_documented_exemption(tmp_path: Path) -> None:
+    page = tmp_path / "stub" / "index.md"
+    page.parent.mkdir()
+    page.write_text(
+        '---\ntitle: Moved\nreview_exempt: "redirect stub — no content"\n---\n',
+        encoding="utf-8",
+    )
+    errors, warnings = check_site_metadata(tmp_path)
+    assert errors == []
+    assert warnings == []
+
+
+def test_site_metadata_rejects_exemption_without_reason(tmp_path: Path) -> None:
+    page = tmp_path / "stub" / "index.md"
+    page.parent.mkdir()
+    page.write_text("---\ntitle: Moved\nreview_exempt:\n---\n", encoding="utf-8")
+    errors, _ = check_site_metadata(tmp_path)
+    assert any("requires a documented reason" in error for error in errors)
+
+
+def test_site_metadata_rejects_exemption_alongside_review_block(tmp_path: Path) -> None:
+    page = tmp_path / "stub" / "index.md"
+    page.parent.mkdir()
+    page.write_text(
+        """---
+title: Both
+review_exempt: "nav page"
+review:
+  standard: Test standard
+  edition: Test edition
+  status: Review pending
+  coverage: Test coverage
+  last_reviewed: July 2026
+---
+""",
+        encoding="utf-8",
+    )
+    errors, _ = check_site_metadata(tmp_path)
+    assert any("both review: and review_exempt:" in error for error in errors)
+
+
 def test_site_metadata_rejects_retired_status(tmp_path: Path) -> None:
     page = tmp_path / "topic" / "index.md"
     page.parent.mkdir()

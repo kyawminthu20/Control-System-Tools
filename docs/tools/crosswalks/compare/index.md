@@ -16,6 +16,12 @@ related_standards:
 redirect_from:
   - /crosswalks/compare/
   - /crosswalks/compare/index.html
+review:
+  standard: "Pairwise standards relationships (site data)"
+  edition: "n/a — relationship summaries derived from the standards pages"
+  status: "Review pending"
+  coverage: "Interactive side-by-side of editorial relationship summaries; not clause-level equivalence."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

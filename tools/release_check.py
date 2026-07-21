@@ -55,8 +55,10 @@ REVIEW_FIELDS = {"standard", "edition", "status", "coverage", "last_reviewed"}
 # Reduce these as the legacy metadata rollout proceeds; increases are release
 # failures. Corpus header debt was driven to zero in Phase 50.2, so any RAG file
 # missing CONTENT_CLASS/STATUS is now a hard failure. Site review-block rollout
-# (Phase 50.9) is still in progress.
-MAX_SITE_PAGES_WITHOUT_REVIEW = 166
+# (Phase 50.9 / 52.4): tranche 1 (2026-07-20) covered the finder, scenarios,
+# crosswalks, standards family indexes, and commissioning guides, and exempted
+# redirect stubs and the homepage nav hub via `review_exempt: "<reason>"`.
+MAX_SITE_PAGES_WITHOUT_REVIEW = 128
 MAX_RAG_WITHOUT_CONTENT_CLASS = 0
 MAX_RAG_WITHOUT_STATUS = 0
 
@@ -173,6 +175,17 @@ def check_site_metadata(docs_root: Path = DOCS) -> tuple[list[str], list[str]]:
         rel = path.relative_to(docs_root)
         if not frontmatter:
             errors.append(f"{rel}: missing YAML frontmatter")
+            continue
+        exempt = re.search(r"(?m)^review_exempt:\s*(.*?)\s*$", frontmatter)
+        if exempt:
+            # Governed opt-out for redirect stubs and pure navigation pages —
+            # a reason is mandatory so the release metric stays meaningful,
+            # and a page cannot be simultaneously exempt and reviewed.
+            reason = exempt.group(1).strip().strip("\"'")
+            if re.search(r"(?m)^review:\s*$", frontmatter):
+                errors.append(f"{rel}: declares both review: and review_exempt:")
+            elif not reason:
+                errors.append(f"{rel}: review_exempt requires a documented reason")
             continue
         if not re.search(r"(?m)^review:\s*$", frontmatter):
             missing_review.append(path)

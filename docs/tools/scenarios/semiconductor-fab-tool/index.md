@@ -24,6 +24,12 @@ redirect_from:
   - /implementation/scenarios/semiconductor-fab-tool/
   - /scenarios/semiconductor-fab-tool/
   - /scenarios/semiconductor-fab-tool/index.html
+review:
+  standard: "SEMI S2/S8/S14 · IEC 60204-1 · ISO 12100 · NFPA 79 · IEC 62443"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Etch/CVD tool design walkthrough; standards routing and interface points at overview level."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

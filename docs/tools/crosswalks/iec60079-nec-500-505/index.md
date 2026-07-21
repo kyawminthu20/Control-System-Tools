@@ -14,6 +14,12 @@ related_standards:
 redirect_from:
   - /crosswalks/iec60079-nec-500-505/
   - /crosswalks/iec60079-nec-500-505/index.html
+review:
+  standard: "IEC 60079 ↔ NEC Art. 500/505"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Zone-vs-Division alignment at topic level; not a substitute for the classification standards or the AHJ."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

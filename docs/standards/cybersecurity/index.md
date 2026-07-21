@@ -14,6 +14,12 @@ related_standards:
     url: "/tools/scenarios/networked-safety-plc/"
   - name: "Software Stack"
     url: "/design/software-stack/"
+review:
+  standard: "IEC 62443 family"
+  edition: "n/a — routing page; editions are recorded on the child standard pages"
+  status: "Review pending"
+  coverage: "Family landing page for industrial cybersecurity; routing and scope summary only."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

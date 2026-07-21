@@ -20,6 +20,12 @@ redirect_from:
   - /implementation/scenarios/offshore-platform-control/
   - /scenarios/offshore-platform-control/
   - /scenarios/offshore-platform-control/index.html
+review:
+  standard: "DNV-OS-D201 · IEC 61511 · IEC 60079"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Offshore ESD/F&G/power-management design walkthrough; class-rule and SIS routing at overview level, not a classification submission."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

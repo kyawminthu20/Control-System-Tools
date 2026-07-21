@@ -16,6 +16,12 @@ redirect_from:
   - /implementation/scenarios/process-skid/
   - /scenarios/process-skid/
   - /scenarios/process-skid/index.html
+review:
+  standard: "IEC 61511 · IEC 61508"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "SIS/ESD routing scenario; application-vs-foundation split summarized, SIL work not performed here."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

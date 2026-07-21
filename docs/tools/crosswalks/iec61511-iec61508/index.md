@@ -14,6 +14,12 @@ related_standards:
 redirect_from:
   - /crosswalks/iec61511-iec61508/
   - /crosswalks/iec61511-iec61508/index.html
+review:
+  standard: "IEC 61511 ↔ IEC 61508"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Application-vs-foundation relationship at topic level; lifecycle mapping summarized, no clause-level determinations."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

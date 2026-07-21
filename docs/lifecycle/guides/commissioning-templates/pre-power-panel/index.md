@@ -10,6 +10,12 @@ redirect_from:
   - /implementation/commissioning-templates/pre-power-panel/
   - /commissioning-templates/pre-power-panel/
   - /commissioning-templates/pre-power-panel/index.html
+review:
+  standard: "Field verification practice — OEM instructions and the site electrical safety program govern"
+  edition: "n/a — procedure-agnostic checklist"
+  status: "Review pending"
+  coverage: "Reminder-layer checklist for first energization of a panel or incoming supply; site procedures and LOTO govern."
+  last_reviewed: "July 2026"
 ---
 
 ### Incoming supply review

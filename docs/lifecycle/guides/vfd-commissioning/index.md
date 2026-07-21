@@ -6,6 +6,12 @@ redirect_from:
   - /implementation/vfd-commissioning/
   - /workflows/vfd-commissioning/
   - /workflows/vfd-commissioning/index.html
+review:
+  standard: "Commissioning practice — drive OEM documentation governs; NEC / IEC 60204-1 context"
+  edition: "n/a — practice-level sequence, no single governing document"
+  status: "Review pending"
+  coverage: "Structured VFD first-energization and functional-check sequence at practice level; parameter names vary by drive."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

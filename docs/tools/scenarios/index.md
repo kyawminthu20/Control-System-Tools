@@ -9,6 +9,12 @@ redirect_from:
   - /implementation/scenarios/
   - /scenarios/
   - /scenarios/index.html
+review:
+  standard: "Multiple — routing across the standards library"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Scenario catalogue with standards routing and next steps; worked examples, not compliance determinations."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

@@ -1,7 +1,40 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-20 (Phase 52.3 task-first IA)
+**Last Updated:** 2026-07-20 (Phase 52.4b tranche 1 — review-metadata rollout)
 **Status:** Active
+
+## 2026-07-20 — Phase 52.4b tranche 1 (review-metadata rollout, risk order)
+
+**Type:** Site metadata + release tooling. **No technical claim changed; no page marked Reviewed**
+(every new block is `Review pending` — only the owner may mark Reviewed).
+
+- **Governed exemption mechanism:** pages that are pure navigation or redirect stubs may declare
+  `review_exempt: "<reason>"` instead of a `review:` block. `tools/release_check.py` enforces it
+  (reason mandatory; declaring both keys is an error) with 3 new tests (suite 300 → 303); rule
+  documented in `governance/CONTENT_STANDARDS.md` §4. Exempted with documented reasons: the six
+  redirect stubs (`repository/`, `training/`, `troubleshooting/`, `verification/`,
+  `implementation/`, `field-engineering/`) and the homepage (home-layout navigation hub — its
+  decision claims link to pages that hold the governed metadata).
+- **31 review blocks added in the recommendation's risk order:** the Standards Finder + all 9
+  scenario pages (routing scenarios — coverage lines state "selection guidance, not a compliance
+  determination"); the 5 remaining crosswalk pages; the standards landing + 6 family index pages
+  ("routing page — editions recorded on the child standard pages"); and all 9 commissioning-guide
+  pages (checklists honestly framed as "reminder layer — OEM instructions and the site electrical
+  safety program govern"). Editions are stated only where the page itself pins them (e.g.
+  NFPA 79:2024 ↔ IEC 60204-1:2016+AMD1:2021 crosswalk); otherwise recorded as "exact governing
+  revisions not yet recorded" per CONTENT_STANDARDS §4. `last_reviewed` = the page's last
+  content-commit month.
+- **Baseline ratcheted 166 → 128** (`MAX_SITE_PAGES_WITHOUT_REVIEW`); any regression now fails the
+  release gate. Remaining backlog by section: fundamentals 56, industries 34, lifecycle stages 20,
+  tools 8, design 12, plus section landings — next tranches.
+- **Follow-on identified (not done here):** ~60 corpus-status "Reviewed" badges sit inside page
+  tables (industries, standards indexes, crosswalks, scenarios). They are corpus-module claims per
+  the /about/ vocabulary, distinct from page review status, but the 52.4 recommendation's
+  badge-honesty audit (verify each against `_index.yaml`, prefer computed summaries) is still open
+  and should be its own slice.
+- Verified: full release gate PASSED (303 tests, 10 doctests, clean Jekyll build, zero broken
+  links); review boxes confirmed rendering on scenario and commissioning pages (field-checklist
+  layout inherits default).
 
 ## 2026-07-20 — Phase 52.3 (Task-first information architecture)
 

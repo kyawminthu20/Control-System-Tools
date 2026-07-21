@@ -19,6 +19,12 @@ redirect_from:
   - /implementation/scenarios/machine-safety-implementation/
   - /scenarios/machine-safety-implementation/
   - /scenarios/machine-safety-implementation/index.html
+review:
+  standard: "ISO 12100 · ISO 13849-1 · IEC 62061"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "10-step builder workflow from risk assessment to validation; hardware and architecture examples are illustrative, not project-specific verification."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">
