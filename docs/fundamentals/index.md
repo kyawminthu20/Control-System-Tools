@@ -4,6 +4,12 @@ title: "Fundamentals"
 description: "Foundational modules on electrical theory, control theory, and motor/drive systems — the prerequisite layer before design, implementation, and verification references."
 breadcrumb:
   - name: "Fundamentals"
+review:
+  standard: "Training section index"
+  edition: "n/a — routing page; governing editions are recorded on the child pages"
+  status: "Review pending"
+  coverage: "Training hub landing page; module list and learning order only."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

@@ -11,6 +11,12 @@ related_standards:
     url: "/standards/us-electrical/nfpa-79/"
   - name: "ISO 13849-1"
     url: "/standards/functional-safety/iso-13849-1/"
+review:
+  standard: "Original engineering templates (project content)"
+  edition: "n/a — original templates"
+  status: "Review pending"
+  coverage: "Downloadable original templates; adapt to the project and governing editions before use."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

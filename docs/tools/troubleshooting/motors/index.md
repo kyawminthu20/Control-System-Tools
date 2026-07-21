@@ -6,6 +6,12 @@ redirect_from:
   - /troubleshooting/motors/
   - /workflows/motor-troubleshooting/
   - /workflows/motor-troubleshooting/index.html
+review:
+  standard: "Field troubleshooting practice — symptom-driven diagnostic trees"
+  edition: "n/a — practice reference"
+  status: "Review pending"
+  coverage: "Motor symptom decision tree; diagnostic guidance only, OEM documentation and site safety procedures govern."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

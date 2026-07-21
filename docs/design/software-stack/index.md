@@ -15,6 +15,12 @@ related_standards:
 redirect_from:
   - /software-stack/
   - /software-stack/index.html
+review:
+  standard: "Software stack routing — IEC 61131-3 · IEC 62443 context"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Routing guide for PLC software and cybersecurity layers; overview level."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

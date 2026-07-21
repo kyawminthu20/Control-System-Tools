@@ -6,6 +6,12 @@ redirect_from:
   - /repository/about/
 breadcrumb:
   - name: "About"
+review:
+  standard: "Site methodology statement"
+  edition: "n/a — methodology page"
+  status: "Review pending"
+  coverage: "Describes how content is produced, reviewed, and bounded; the governance documents in the repository are authoritative."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

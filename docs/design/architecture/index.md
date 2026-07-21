@@ -9,6 +9,12 @@ breadcrumb:
 redirect_from:
   - /reference/architecture/
   - /reference/architecture/index.html
+review:
+  standard: "Architecture reference index"
+  edition: "n/a — routing page; governing editions are recorded on the child pages"
+  status: "Review pending"
+  coverage: "Section hub for the architecture reference models."
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

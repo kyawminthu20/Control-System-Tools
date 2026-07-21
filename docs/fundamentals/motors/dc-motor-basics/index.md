@@ -12,6 +12,12 @@ redirect_from:
   - /fundamentals/electrical-machines/dc-motor-basics/
   - /fundamentals/electrical-machines/dc-motor-basics/index.html
 
+review:
+  standard: "Motor and drive engineering practice — vendor documentation governs application"
+  edition: "n/a — practice module"
+  status: "Review pending"
+  coverage: "Training module: DC Motor Basics — educational treatment; sizing and application decisions follow vendor data and the governing standards."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

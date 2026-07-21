@@ -12,6 +12,12 @@ redirect_from:
   - /fundamentals/fundamentals/conductor-ampacity/
   - /fundamentals/fundamentals/conductor-ampacity/index.html
 
+review:
+  standard: "NEC ampacity and termination-temperature rules"
+  edition: "taught against the NEC 2023 corpus basis; the locally enforceable edition governs — verify with the AHJ"
+  status: "Review pending"
+  coverage: "Training module on ampacity and termination temperature; worked as education, not a code determination."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

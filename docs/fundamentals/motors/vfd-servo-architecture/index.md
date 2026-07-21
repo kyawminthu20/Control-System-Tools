@@ -12,6 +12,12 @@ redirect_from:
   - /fundamentals/electrical-machines/vfd-servo-architecture/
   - /fundamentals/electrical-machines/vfd-servo-architecture/index.html
 
+review:
+  standard: "Motor and drive engineering practice — vendor documentation governs application"
+  edition: "n/a — practice module"
+  status: "Review pending"
+  coverage: "Training module: VFD and Servo Architecture — educational treatment; sizing and application decisions follow vendor data and the governing standards."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

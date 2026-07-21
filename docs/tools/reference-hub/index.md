@@ -7,6 +7,12 @@ breadcrumb:
 redirect_from:
   - /reference/
   - /reference/index.html
+review:
+  standard: "Reference model index"
+  edition: "n/a — routing page; governing editions are recorded on the child pages"
+  status: "Review pending"
+  coverage: "Hub for the cross-cutting reference models; model caveats live on the model pages."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

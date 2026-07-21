@@ -18,6 +18,12 @@ redirect_from:
   - /fundamentals/control-systems/interlocks-permissives-safety-trips/
   - /fundamentals/control-systems/interlocks-permissives-safety-trips/index.html
 
+review:
+  standard: "Control practice — interlock/permissive patterns; safety functions route to ISO 13849-1 / IEC 62061"
+  edition: "n/a — theory/practice module"
+  status: "Review pending"
+  coverage: "Training module on interlock, permissive, and trip patterns; safety-rated function design is governed by the functional-safety standards, not this module."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

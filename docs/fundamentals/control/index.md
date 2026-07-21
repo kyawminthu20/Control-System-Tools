@@ -10,6 +10,12 @@ redirect_from:
   - /fundamentals/control-systems/
   - /fundamentals/control-systems/index.html
 
+review:
+  standard: "Training section index"
+  edition: "n/a — routing page; governing editions are recorded on the child pages"
+  status: "Review pending"
+  coverage: "Control systems section landing page; module list and learning order only."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

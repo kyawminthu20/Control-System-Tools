@@ -12,6 +12,12 @@ redirect_from:
   - /fundamentals/fundamentals/equivalent-circuit-methods/
   - /fundamentals/fundamentals/equivalent-circuit-methods/index.html
 
+review:
+  standard: "Established electrical theory — no single governing standard"
+  edition: "n/a — textbook-level theory module"
+  status: "Review pending"
+  coverage: "Training module: Equivalent Circuit Methods — educational treatment; verify design decisions against the governing standards."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

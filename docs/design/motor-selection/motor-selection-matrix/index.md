@@ -11,6 +11,12 @@ breadcrumb:
 redirect_from:
   - /reference/motor-systems/motor-selection-matrix/
   - /reference/motor-systems/motor-selection-matrix/index.html
+review:
+  standard: "Motor selection practice — application engineering"
+  edition: "n/a — practice reference"
+  status: "Review pending"
+  coverage: "Cross-family comparison matrix; entries are role guidance, vendor data governs."
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

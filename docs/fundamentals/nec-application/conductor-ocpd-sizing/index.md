@@ -13,6 +13,12 @@ related_standards:
     url: "/standards/us-electrical/nec/"
 redirect_from:
   - /training/nec-application/conductor-ocpd-sizing/
+review:
+  standard: "NEC (NFPA 70) — article scope per the module"
+  edition: "taught against the NEC 2023 corpus basis; the locally enforceable edition governs — verify with the AHJ"
+  status: "Review pending"
+  coverage: "Training module: Conductor and OCPD Sizing Worked Examples — worked as education, not a code determination; the AHJ and enforceable edition govern."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

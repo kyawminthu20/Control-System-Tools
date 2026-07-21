@@ -11,6 +11,12 @@ breadcrumb:
 redirect_from:
   - /reference/architecture/machine-architecture-model/
   - /reference/architecture/machine-architecture-model/index.html
+review:
+  standard: "Original project reference model"
+  edition: "n/a — original 7-layer model, not drawn from a published standard"
+  status: "Review pending"
+  coverage: "Editorial architecture model for industrial machines; a thinking tool, not a normative structure."
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

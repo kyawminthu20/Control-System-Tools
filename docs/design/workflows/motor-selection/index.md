@@ -5,6 +5,12 @@ description: First-pass motor selection from load definition through protection 
 redirect_from:
   - /workflows/motor-selection/
   - /workflows/motor-selection/index.html
+review:
+  standard: "Motor selection practice — application engineering"
+  edition: "n/a — practice workflow"
+  status: "Review pending"
+  coverage: "Motor selection decision workflow; vendor data and project requirements govern."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

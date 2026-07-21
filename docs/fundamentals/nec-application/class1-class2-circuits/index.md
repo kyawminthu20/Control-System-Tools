@@ -15,6 +15,12 @@ related_standards:
     url: "/standards/us-electrical/nfpa-79/"
 redirect_from:
   - /training/nec-application/class1-class2-circuits/
+review:
+  standard: "NEC (NFPA 70) — article scope per the module"
+  edition: "taught against the NEC 2023 corpus basis; the locally enforceable edition governs — verify with the AHJ"
+  status: "Review pending"
+  coverage: "Training module: Class 1, Class 2, and Remote-Control Circuits — worked as education, not a code determination; the AHJ and enforceable edition govern."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

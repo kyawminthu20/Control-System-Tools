@@ -11,6 +11,12 @@ related_standards:
     url: "/standards/"
   - name: "ISO 13849-1"
     url: "/standards/functional-safety/iso-13849-1/"
+review:
+  standard: "Training section index"
+  edition: "n/a — routing page; governing editions are recorded on the child pages"
+  status: "Review pending"
+  coverage: "PLC software section landing page; module list and learning order only."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

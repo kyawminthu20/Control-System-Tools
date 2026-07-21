@@ -12,6 +12,12 @@ redirect_from:
   - /fundamentals/control-systems/servo-tuning/
   - /fundamentals/control-systems/servo-tuning/index.html
 
+review:
+  standard: "Established control theory and industrial practice — no single governing standard"
+  edition: "n/a — theory/practice module"
+  status: "Review pending"
+  coverage: "Training module: Servo Tuning Strategy — educational treatment; verify design decisions against the governing standards."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

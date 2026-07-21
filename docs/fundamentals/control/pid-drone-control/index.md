@@ -12,6 +12,12 @@ redirect_from:
   - /fundamentals/control-systems/pid-drone-control/
   - /fundamentals/control-systems/pid-drone-control/index.html
 
+review:
+  standard: "Established control theory and industrial practice — no single governing standard"
+  edition: "n/a — theory/practice module"
+  status: "Review pending"
+  coverage: "Training module: PID in Drone and Motion Control — educational treatment; verify design decisions against the governing standards."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

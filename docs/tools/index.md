@@ -4,6 +4,12 @@ title: "Tools"
 description: "Site-wide navigation and reference tools — RAG file browser, glossary, standards crosswalks, and the reference hub with architecture and motor-selection models."
 breadcrumb:
   - name: "Tools"
+review:
+  standard: "Tools section index"
+  edition: "n/a — routing page; governing editions are recorded on the child pages"
+  status: "Review pending"
+  coverage: "Section landing page; routes to decision tools, scenarios, crosswalks, templates, and the Python toolkit."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

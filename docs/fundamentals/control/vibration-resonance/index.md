@@ -12,6 +12,12 @@ redirect_from:
   - /fundamentals/control-systems/vibration-resonance/
   - /fundamentals/control-systems/vibration-resonance/index.html
 
+review:
+  standard: "Established control theory and industrial practice — no single governing standard"
+  edition: "n/a — theory/practice module"
+  status: "Review pending"
+  coverage: "Training module: Vibration and Resonance in Control Systems — educational treatment; verify design decisions against the governing standards."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

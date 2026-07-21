@@ -9,6 +9,12 @@ breadcrumb:
 redirect_from:
   - /reference/motor-systems/
   - /reference/motor-systems/index.html
+review:
+  standard: "Motor selection practice — application engineering"
+  edition: "n/a — practice reference"
+  status: "Review pending"
+  coverage: "Motor systems reference hub; selection guidance at practice level."
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

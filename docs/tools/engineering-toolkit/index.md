@@ -11,6 +11,12 @@ related_standards:
     url: "/standards/us-electrical/nec/"
   - name: "UL 508A"
     url: "/standards/us-electrical/ul-508a/"
+review:
+  standard: "cst toolkit documentation — standards citations are carried in each command's output"
+  edition: "n/a — toolkit documentation"
+  status: "Review pending"
+  coverage: "Documents the Python toolkit; SAMPLE-data outputs are illustrative and licensed table values are user-supplied, never bundled."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

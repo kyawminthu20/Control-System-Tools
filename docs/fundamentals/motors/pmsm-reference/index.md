@@ -8,6 +8,12 @@ breadcrumb:
   - name: "Motors, Drives, and Motion"
     url: "/fundamentals/motors/"
 repo_path: "control-standards/rag/training_modules/electrical_machines/pmsm_motor_reference.md"
+review:
+  standard: "Motor and drive engineering practice — vendor documentation governs application"
+  edition: "n/a — practice module"
+  status: "Review pending"
+  coverage: "Training module: PMSM Motor Reference — educational treatment; sizing and application decisions follow vendor data and the governing standards."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

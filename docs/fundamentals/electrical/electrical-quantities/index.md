@@ -12,6 +12,12 @@ redirect_from:
   - /fundamentals/fundamentals/electrical-quantities/
   - /fundamentals/fundamentals/electrical-quantities/index.html
 
+review:
+  standard: "Established electrical theory — no single governing standard"
+  edition: "n/a — textbook-level theory module"
+  status: "Review pending"
+  coverage: "Training module: Electrical Quantities and Circuit Language — educational treatment; verify design decisions against the governing standards."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

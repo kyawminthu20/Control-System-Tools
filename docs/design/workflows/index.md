@@ -5,6 +5,12 @@ description: Structured workflows for motor selection, drive commissioning, trou
 redirect_from:
   - /workflows/
   - /workflows/index.html
+review:
+  standard: "Workflow index"
+  edition: "n/a — routing page; governing editions are recorded on the child pages"
+  status: "Review pending"
+  coverage: "Section hub for design workflows."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

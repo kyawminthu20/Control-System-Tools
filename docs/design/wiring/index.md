@@ -7,6 +7,12 @@ breadcrumb:
     url: "/design/"
   - name: "Wiring & Installation"
 repo_path: "control-standards/rag/design_framework/wiring_practices/"
+review:
+  standard: "Wiring guide index"
+  edition: "n/a — routing page; governing editions are recorded on the child pages"
+  status: "Review pending"
+  coverage: "Section hub for the device-wiring guides; per-guide review status lives on each guide."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

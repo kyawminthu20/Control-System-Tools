@@ -7,6 +7,12 @@ breadcrumb:
 related_standards:
   - name: "IEC 62443"
     url: "/standards/cybersecurity/iec-62443/"
+review:
+  standard: "Industrial communications overview — the protocol specifications govern"
+  edition: "protocol specification versions are recorded on the child pages where pinned"
+  status: "Review pending"
+  coverage: "Section landing with the protocol identification table; per-protocol detail and caveats live on the child pages."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

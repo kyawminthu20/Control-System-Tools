@@ -12,6 +12,12 @@ redirect_from:
   - /fundamentals/electrical-machines/ac-vs-dc-motors/
   - /fundamentals/electrical-machines/ac-vs-dc-motors/index.html
 
+review:
+  standard: "Motor and drive engineering practice — vendor documentation governs application"
+  edition: "n/a — practice module"
+  status: "Review pending"
+  coverage: "Training module: AC vs DC Motors — educational treatment; sizing and application decisions follow vendor data and the governing standards."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

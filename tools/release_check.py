@@ -52,15 +52,11 @@ ALLOWED_SITE_STATUSES = {
 }
 REVIEW_FIELDS = {"standard", "edition", "status", "coverage", "last_reviewed"}
 
-# Reduce these as the legacy metadata rollout proceeds; increases are release
-# failures. Corpus header debt was driven to zero in Phase 50.2, so any RAG file
-# missing CONTENT_CLASS/STATUS is now a hard failure. Site review-block rollout
-# (Phase 50.9 / 52.4): tranche 1 (2026-07-20) covered the finder, scenarios,
-# crosswalks, standards family indexes, and commissioning guides, and exempted
-# redirect stubs and the homepage nav hub via `review_exempt: "<reason>"`.
-# Tranche 2 (2026-07-20) covered the 16 lifecycle stage pages and all 34
-# industries pages (overlays, water/wastewater, semiconductor facility).
-MAX_SITE_PAGES_WITHOUT_REVIEW = 78
+# Corpus header debt was driven to zero in Phase 50.2 and site review-block
+# debt to zero in Phase 52.4b (three tranches, 2026-07-20), so every site page
+# must now carry either a governed `review:` block or a documented
+# `review_exempt: "<reason>"` — a page with neither is a hard release failure.
+MAX_SITE_PAGES_WITHOUT_REVIEW = 0
 MAX_RAG_WITHOUT_CONTENT_CLASS = 0
 MAX_RAG_WITHOUT_STATUS = 0
 

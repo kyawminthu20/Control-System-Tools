@@ -6,6 +6,12 @@ breadcrumb:
   - name: "Troubleshooting"
 redirect_from:
   - /troubleshooting/
+review:
+  standard: "Field troubleshooting practice — symptom-driven diagnostic trees"
+  edition: "n/a — practice reference"
+  status: "Review pending"
+  coverage: "Troubleshooting tree index; OEM documentation and site safety procedures govern any intervention."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

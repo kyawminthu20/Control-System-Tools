@@ -5,6 +5,12 @@ description: Fast design-review and bench-troubleshooting workflows for resistiv
 redirect_from:
   - /workflows/electrical-review/
   - /workflows/electrical-review/index.html
+review:
+  standard: "Design review practice — NFPA 79 · UL 508A · NEC context"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Structured electrical design review workflow; checklist-level practice, calculations are performed against the governing editions."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

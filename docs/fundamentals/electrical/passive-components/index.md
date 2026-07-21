@@ -12,6 +12,12 @@ redirect_from:
   - /fundamentals/fundamentals/passive-components/
   - /fundamentals/fundamentals/passive-components/index.html
 
+review:
+  standard: "Established electrical theory — no single governing standard"
+  edition: "n/a — textbook-level theory module"
+  status: "Review pending"
+  coverage: "Training module: Passive Components: Resistors and Capacitors — educational treatment; verify design decisions against the governing standards."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

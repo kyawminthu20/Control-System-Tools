@@ -10,6 +10,12 @@ redirect_from:
   - /fundamentals/fundamentals/
   - /fundamentals/fundamentals/index.html
 
+review:
+  standard: "Training section index"
+  edition: "n/a — routing page; governing editions are recorded on the child pages"
+  status: "Review pending"
+  coverage: "Electrical fundamentals section landing page; module list and learning order only."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

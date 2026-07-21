@@ -12,6 +12,12 @@ redirect_from:
   - /fundamentals/electrical-machines/servo-feedback-inertia/
   - /fundamentals/electrical-machines/servo-feedback-inertia/index.html
 
+review:
+  standard: "Motor and drive engineering practice — vendor documentation governs application"
+  edition: "n/a — practice module"
+  status: "Review pending"
+  coverage: "Training module: Servo Feedback and Inertia Matching — educational treatment; sizing and application decisions follow vendor data and the governing standards."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

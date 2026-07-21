@@ -12,6 +12,12 @@ redirect_from:
   - /fundamentals/fundamentals/series-parallel-dividers/
   - /fundamentals/fundamentals/series-parallel-dividers/index.html
 
+review:
+  standard: "Established electrical theory — no single governing standard"
+  edition: "n/a — textbook-level theory module"
+  status: "Review pending"
+  coverage: "Training module: Series, Parallel, and Divider Methods — educational treatment; verify design decisions against the governing standards."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

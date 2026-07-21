@@ -11,6 +11,12 @@ breadcrumb:
 redirect_from:
   - /reference/architecture/compliance-stack/
   - /reference/architecture/compliance-stack/index.html
+review:
+  standard: "15-standard semiconductor compliance stack (editorial aggregation)"
+  edition: "exact governing revisions not yet recorded — verify each standard at the publisher"
+  status: "Review pending"
+  coverage: "Editorial aggregation of the semiconductor equipment stack; membership and applicability must be confirmed per tool and market."
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

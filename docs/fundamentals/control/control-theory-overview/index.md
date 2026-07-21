@@ -17,6 +17,12 @@ redirect_from:
   - /fundamentals/control-systems/control-theory-overview/
   - /fundamentals/control-systems/control-theory-overview/index.html
 
+review:
+  standard: "Established control theory and industrial practice — no single governing standard"
+  edition: "n/a — theory/practice module"
+  status: "Review pending"
+  coverage: "Training module: Control Theory Overview — educational treatment; verify design decisions against the governing standards."
+  last_reviewed: "July 2026"
 ---
 
 ## Why control theory exists

@@ -15,6 +15,12 @@ related_standards:
     url: "/standards/us-electrical/ul-508a/"
 redirect_from:
   - /training/nec-application/article-409-workflow/
+review:
+  standard: "NEC (NFPA 70) — article scope per the module"
+  edition: "taught against the NEC 2023 corpus basis; the locally enforceable edition governs — verify with the AHJ"
+  status: "Review pending"
+  coverage: "Training module: Practical Article 409 Workflow — worked as education, not a code determination; the AHJ and enforceable edition govern."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

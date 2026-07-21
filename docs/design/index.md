@@ -7,6 +7,12 @@ breadcrumb:
 redirect_from:
   - /engineering-workflow/
   - /engineering-workflow/index.html
+review:
+  standard: "Design section index"
+  edition: "n/a — routing page; governing editions are recorded on the child pages"
+  status: "Review pending"
+  coverage: "Section landing page; routes to wiring, architecture, motor selection, software stack, AI integration, and workflows."
+  last_reviewed: "July 2026"
 ---
 
 <div class="page-header">

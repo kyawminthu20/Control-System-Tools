@@ -15,6 +15,12 @@ related_standards:
     url: "/standards/us-electrical/nfpa-79/"
 redirect_from:
   - /training/nec-application/branch-circuits-vs-feeders/
+review:
+  standard: "NEC (NFPA 70) — article scope per the module"
+  edition: "taught against the NEC 2023 corpus basis; the locally enforceable edition governs — verify with the AHJ"
+  status: "Review pending"
+  coverage: "Training module: Branch Circuits vs. Feeders for Motor Loads — worked as education, not a code determination; the AHJ and enforceable edition govern."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose

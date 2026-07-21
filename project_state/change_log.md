@@ -1,7 +1,29 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-20 (Phase 52.4b tranche 2 — lifecycle + industries review metadata)
+**Last Updated:** 2026-07-20 (Phase 52.4b COMPLETE — review-metadata debt at zero)
 **Status:** Active
+
+## 2026-07-20 — Phase 52.4b tranche 3 (fundamentals + design + tools) — ROLLOUT COMPLETE
+
+**Type:** Site metadata only. **No technical claim changed; no page marked Reviewed.**
+
+- **77 `Review pending` blocks added:** the 6 training section hubs; 9 electrical-theory,
+  13 control, and 16 motors modules ("established theory/practice — no single governing
+  standard", with NEC-adjacent conductor-ampacity and IEC-earthing modules called out
+  individually, and the interlocks module explicitly routing safety-rated design to
+  ISO 13849-1 / IEC 62061); the 11 NEC-application modules ("taught against the NEC 2023
+  corpus basis; the locally enforceable edition governs — verify with the AHJ"; "worked as
+  education, not a code determination"); the 12 design pages (original reference models
+  labelled as editorial, not normative); and the remaining tools/landing pages (toolkit page
+  notes SAMPLE-data and user-supplied licensed tables; glossary defers to each standard's own
+  definitions). The RAG browser is `review_exempt` (interactive corpus browser — status lives
+  in each file's corpus header).
+- **Baseline ratcheted 78 → 0.** Every site page now carries either a governed `review:` block
+  or a documented `review_exempt` reason; a page with neither is a hard release failure. The
+  release gate now runs with **zero warnings** for the first time.
+- Verified: full release gate PASSED clean (303 tests, 10 doctests, clean build, zero broken
+  links, zero warnings); rendered boxes spot-checked on NEC-application, control, and design
+  pages.
 
 ## 2026-07-20 — Phase 52.4b tranche 2 (review metadata: lifecycle stages + industries)
 

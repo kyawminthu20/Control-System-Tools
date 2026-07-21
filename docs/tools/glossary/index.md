@@ -9,6 +9,12 @@ last_reviewed: "2026-03-08"
 redirect_from:
   - /glossary/
   - /glossary/index.html
+review:
+  standard: "Terminology across the standards library"
+  edition: "n/a — cross-standard glossary"
+  status: "Review pending"
+  coverage: "Paraphrased term definitions for education; each standard's own definitions govern."
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

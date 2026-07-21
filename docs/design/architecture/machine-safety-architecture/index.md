@@ -11,6 +11,12 @@ breadcrumb:
 redirect_from:
   - /reference/architecture/machine-safety-architecture/
   - /reference/architecture/machine-safety-architecture/index.html
+review:
+  standard: "Original template — ISO 13849-1 / IEC 62061 context"
+  edition: "exact governing revisions not yet recorded — verify on the linked standards pages"
+  status: "Review pending"
+  coverage: "Universal safety-architecture template; illustrative structure, project PL/SIL engineering governs."
+  last_reviewed: "April 2026"
 ---
 
 <div class="page-header">

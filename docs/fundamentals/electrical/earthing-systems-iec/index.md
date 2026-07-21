@@ -17,6 +17,12 @@ redirect_from:
   - /fundamentals/fundamentals/earthing-systems-iec/
   - /fundamentals/fundamentals/earthing-systems-iec/index.html
 
+review:
+  standard: "IEC earthing system classification (TN/TT/IT) — IEC 60364 context"
+  edition: "exact governing revisions not yet recorded — verify against the installation standard"
+  status: "Review pending"
+  coverage: "Training module on the five IEC earthing system types; installation design is governed by the applicable wiring rules."
+  last_reviewed: "July 2026"
 ---
 
 ## Purpose
