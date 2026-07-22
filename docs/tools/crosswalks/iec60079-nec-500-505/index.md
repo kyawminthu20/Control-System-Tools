@@ -201,9 +201,9 @@ Neither system is inherently safer than the other — the hazardous-area boundar
 | Intrinsic safety | IEC 60079-11 | <span class="badge badge--reviewed">Reviewed</span> |
 | Installation — Zone system | IEC 60079-14 | <span class="badge badge--reviewed">Reviewed</span> |
 | Inspection and maintenance | IEC 60079-17 | <span class="badge badge--reviewed">Reviewed</span> |
-| US Division system | NEC Art. 500, 501, 502, 503, 504, 505 | <span class="badge badge--reviewed">Reviewed</span> |
+| US Division system | NEC Art. 500, 504, 505 in corpus; Art. 501, 502, 503 not yet written | <span class="badge badge--partial">Partial coverage</span> |
 | NEC Zone system | NEC Art. 505 (2023 ed.) | <span class="badge badge--reviewed">Reviewed</span> |
-| Area classification (dust) | IEC 60079-10-2 | <span class="badge badge--verify">Not in corpus</span> |
+| Area classification (dust) | IEC 60079-10-2 | <span class="badge badge--gap">Planned</span> |
 
 ---
 

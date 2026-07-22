@@ -21,7 +21,6 @@ review:
 <div class="page-header">
   <span class="page-header__label">Semiconductor Facility — Chemical Systems</span>
   <h1>Bulk Chemical Distribution and Wet Process</h1>
-  <span class="badge badge--new">Phase 22</span>
 </div>
 
 This page covers facility-side liquid chemical infrastructure — from bulk storage through transfer skids, blend systems, and wet process supply to local panels and drains.

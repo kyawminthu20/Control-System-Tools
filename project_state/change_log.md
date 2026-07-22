@@ -1,7 +1,32 @@
 # Project Change Log
 
-**Last Updated:** 2026-07-20 (easy-first visualization standard prepared)
+**Last Updated:** 2026-07-21 (Phase 52.4 badge-honesty audit complete)
 **Status:** Active
+
+## 2026-07-21 — Phase 52.4 badge-honesty audit (site + gate)
+
+**Type:** Editorial-trust slice. **No authority ceiling, corpus content, or toolkit behavior changed.**
+
+- Audited every in-table corpus-status badge (68 `Reviewed` badge spans + 4 plain-text `Reviewed`
+  table cells) against `control-standards/rag/standards_intelligence/_index.yaml` and the corpus
+  files. All module-level claims verified true (13 modules, all `complete`). Two false claims found
+  and fixed:
+  - IEC 60079 ↔ NEC crosswalk claimed NEC Art. 501, 502, 503 as `Reviewed` — those articles are not
+    in the corpus (only 500, 504, 505 are). Row now reads "Partial coverage" with the honest split.
+  - Cybersecurity landing listed IEC 60079 as "NOT CONFIRMED IN CORPUS" — it is a complete module;
+    row now points to the Hazardous Area family instead.
+- Retired labels removed from governed pages per CONTENT_STANDARDS §3: `Not in corpus` ×5 (→
+  `Planned` for genuine gaps: IEC 60079-2/-7/-15, 60079-10-2 dust; → plain "Out of scope for this
+  corpus" for the notified-body row), `Not yet covered` ×3 (→ out-of-scope prose), `NOT CONFIRMED
+  IN CORPUS` ×1. Long-form corpus-gap flags ("IEC 60092 not in corpus — class rules summary only")
+  deliberately preserved — only bare status labels were retired.
+- Removed 16 stale internal `Phase 22/23/24` badges from semiconductor-facility page headers.
+- Fixed the about-page legend: `Partial coverage` now uses `badge--partial` (was `badge--new`).
+- Corrected stale `_index.yaml` NEC element count (10 → 19 article files) with a changelog entry.
+- **New automated gate:** `check_site_badges()` in `tools/release_check.py` (site + metadata
+  profiles) — every `Reviewed` badge/cell must resolve to a `complete` module in `_index.yaml`;
+  cited NEC articles and IEC 60079 parts must exist as corpus files; bare retired labels and
+  internal phase-number badges fail the release. 9 new tests (suite 303 → 312). Full gate green.
 
 ## 2026-07-20 — Project-behavior research recommendation
 

@@ -21,7 +21,6 @@ review:
 <div class="page-header">
   <span class="page-header__label">Semiconductor Facility — Crosswalks</span>
   <h1>System and Standards Crosswalks</h1>
-  <span class="badge badge--new">Phase 23</span>
 </div>
 
 This page maps two things: how facility utility systems depend on each other (system-to-system crosswalk), and which standards govern each system (standards-to-systems crosswalk). Both tables are planning tools, not engineering specifications.

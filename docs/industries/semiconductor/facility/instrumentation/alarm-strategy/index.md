@@ -23,7 +23,6 @@ review:
 <div class="page-header">
   <span class="page-header__label">Semiconductor Facility — Instrumentation</span>
   <h1>Alarm and Measurement Strategy</h1>
-  <span class="badge badge--new">Phase 23</span>
 </div>
 
 This page provides alarm philosophy, utility measurement guidance, and alarm class definitions for semiconductor facility utility systems. These are engineering planning references — not standards limits and not vendor setpoints.

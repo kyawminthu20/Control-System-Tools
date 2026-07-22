@@ -21,7 +21,6 @@ review:
 <div class="page-header">
   <span class="page-header__label">Semiconductor Facility — Control Design</span>
   <h1>Common Control Philosophy</h1>
-  <span class="badge badge--new">Phase 22</span>
 </div>
 
 This page defines a reusable control pattern for semiconductor facility utility systems — gas skids, chemical delivery skids, UPW modules, exhaust subsystems, and tool utility interfaces. The patterns here apply across systems; individual system pages describe how they are applied in specific contexts.

@@ -19,7 +19,6 @@ review:
 <div class="page-header">
   <span class="page-header__label">Industry Reference — Semiconductor Facility</span>
   <h1>Semiconductor Facility Utility Systems</h1>
-  <span class="badge badge--new">Phase 22</span>
 </div>
 
 This section covers the facility-side utility infrastructure that powers and interfaces with semiconductor process tools. It is distinct from equipment-oriented SEMI content (S2/S8/S14) — it addresses the building, utility, and controls layer that tools depend on.

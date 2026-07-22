@@ -21,7 +21,6 @@ review:
 <div class="page-header">
   <span class="page-header__label">Semiconductor Facility — Safety Architecture</span>
   <h1>Safety and Shutdown Architecture</h1>
-  <span class="badge badge--new">Phase 22</span>
 </div>
 
 This page maps the shutdown layers that appear across semiconductor facility utility systems — how they are structured, what inputs they respond to, what actions they take, and what documentation must exist before commissioning.

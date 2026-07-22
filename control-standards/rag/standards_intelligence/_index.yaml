@@ -1,6 +1,6 @@
 # Standards Intelligence Master Index
 # AI_READ_ACCESS: ALLOWED
-# Updated: 2026-07-17
+# Updated: 2026-07-21
 
 version: "2.0"
 content_class: "RAG_APPROVED"
@@ -13,7 +13,7 @@ standards:
       folder: "us/nec"
       edition: "2023"
       jurisdiction: "United States"
-      elements: 10
+      elements: 19
       element_type: "articles"
       status: "complete"
 
@@ -288,3 +288,7 @@ changelog:
       (6 occurrences); added the two missing guidance documents; corrected the
       UL 508A and IEC 60204-1 edition fields to the publisher-verified values
       established in Phase 45
+  - date: "2026-07-21"
+    action: >-
+      Phase 52.4 badge-honesty audit: corrected the stale NEC element count
+      (10 -> 19 article files present in us/nec); no content change

@@ -23,7 +23,6 @@ review:
 <div class="page-header">
   <span class="page-header__label">Semiconductor Facility — Instrumentation</span>
   <h1>Vendor and Manufacturer Families</h1>
-  <span class="badge badge--new">Phase 23</span>
 </div>
 
 This page compares common manufacturer families by measurement class. It is organized by what they measure — not by brand — so you can compare vendors where they actually compete.

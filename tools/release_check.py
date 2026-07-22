@@ -216,6 +216,158 @@ def check_site_metadata(docs_root: Path = DOCS) -> tuple[list[str], list[str]]:
     return errors, warnings
 
 
+# Phase 52.4 badge-honesty gate. In-table "Reviewed" badges are corpus-status
+# claims; every one must resolve to a standards_intelligence module marked
+# "complete" in _index.yaml, and any NEC article / IEC 60079 part it cites must
+# exist as a corpus file. Bare retired labels and internal phase numbers are
+# banned as badge text (long-form explanatory gap flags remain allowed).
+BADGE_TEXT_RE = re.compile(r'<span class="badge badge--[a-z-]+">([^<]+)</span>')
+PLAIN_REVIEWED_CELL_RE = re.compile(r"\|\s*Reviewed\s*\|")
+RETIRED_BADGE_LABELS = {
+    "complete",
+    "not in corpus",
+    "not yet covered",
+    "not confirmed in corpus",
+    "to verify",
+}
+PHASE_BADGE_RE = re.compile(r"(?i)^phase\s+\d+")
+# The about page hosts the badge legend — its badges define the vocabulary
+# rather than claim corpus status, so it is exempt from claim resolution.
+BADGE_CLAIM_EXEMPT = {Path("about/index.md")}
+STANDARD_TOKEN_MODULES: tuple[tuple[str, str], ...] = (
+    (r"\bNEC\b", "us/nec"),
+    (r"\bNFPA\s*79\b", "us/nfpa79"),
+    (r"\bUL\s*508A\b", "us/ul_508a"),
+    (r"60204", "international/machinery/iec_60204_1"),
+    (r"13849", "international/functional_safety/iso_13849_1"),
+    (r"12100", "international/functional_safety/iso_12100"),
+    (r"62061", "international/functional_safety/iec_62061"),
+    (r"61508", "international/functional_safety/iec_61508"),
+    (r"61511", "international/functional_safety/iec_61511"),
+    (r"60079", "international/hazardous_area/iec_60079"),
+    (r"\bSEMI\b", "international/semiconductor/semi"),
+    (r"62443", "international/cybersecurity/iec_62443"),
+    (r"\bABS\b", "international/offshore"),
+    (r"\bDNV\b", "international/offshore"),
+)
+REVIEWED_LOOKBACK_LINES = 8
+
+
+def _module_statuses(rag_root: Path = RAG) -> dict[str, str]:
+    """Parse folder -> status pairs from the standards intelligence index."""
+    index_path = rag_root / "standards_intelligence" / "_index.yaml"
+    statuses: dict[str, str] = {}
+    pending_folder: str | None = None
+    for line in index_path.read_text(encoding="utf-8").splitlines():
+        folder = re.search(r'folder:\s*"([^"]+)"', line)
+        if folder:
+            pending_folder = folder.group(1)
+            continue
+        status = re.search(r'status:\s*"([^"]+)"', line)
+        if status and pending_folder:
+            statuses[pending_folder] = status.group(1)
+            pending_folder = None
+    return statuses
+
+
+def _nec_articles(rag_root: Path = RAG) -> set[int]:
+    articles: set[int] = set()
+    nec_dir = rag_root / "standards_intelligence" / "us" / "nec"
+    for path in nec_dir.glob("NEC_*__Art*"):
+        art_token = path.name.split("__")[1]
+        for number in re.findall(r"\d+", art_token):
+            if int(number) >= 90:  # NEC article numbering starts at 90
+                articles.add(int(number))
+    return articles
+
+
+def _iec60079_parts(rag_root: Path = RAG) -> set[str]:
+    parts_dir = rag_root / "standards_intelligence" / "international" / "hazardous_area" / "iec_60079"
+    parts: set[str] = set()
+    for path in parts_dir.glob("IEC60079_*.md"):
+        token = path.stem[len("IEC60079_"):].split("__")[0]
+        parts.add(token.replace("_", "-"))
+    return parts
+
+
+def _check_reviewed_claim(
+    rel: Path,
+    line_number: int,
+    line: str,
+    context: str,
+    statuses: dict[str, str],
+    nec_articles: set[int],
+    iec60079_parts: set[str],
+) -> list[str]:
+    errors: list[str] = []
+    matched_modules = {
+        module
+        for token, module in STANDARD_TOKEN_MODULES
+        if re.search(token, context)
+    }
+    if not matched_modules:
+        errors.append(
+            f"{rel}:{line_number}: Reviewed badge with no resolvable standard"
+        )
+        return errors
+    for module in sorted(matched_modules):
+        if statuses.get(module) != "complete":
+            errors.append(
+                f"{rel}:{line_number}: Reviewed badge cites module {module!r} "
+                f"not marked complete in _index.yaml"
+            )
+    if re.search(r"\bNEC\b", line):
+        for span in re.findall(r"Art(?:icle)?s?\.?\s*([\d,\s]+)", line):
+            for number in re.findall(r"\d+", span):
+                if int(number) >= 90 and int(number) not in nec_articles:
+                    errors.append(
+                        f"{rel}:{line_number}: Reviewed badge cites NEC Art. "
+                        f"{number} which is not in the corpus"
+                    )
+    for part in re.findall(r"60079-(\d+(?:-\d+)?)", line):
+        if part not in iec60079_parts:
+            errors.append(
+                f"{rel}:{line_number}: Reviewed badge cites IEC 60079-{part} "
+                f"which is not in the corpus"
+            )
+    return errors
+
+
+def check_site_badges(
+    docs_root: Path = DOCS, rag_root: Path = RAG
+) -> list[str]:
+    """Verify in-table status badges against the corpus index and files."""
+    errors: list[str] = []
+    statuses = _module_statuses(rag_root)
+    nec_articles = _nec_articles(rag_root)
+    iec60079_parts = _iec60079_parts(rag_root)
+    for path in _site_pages(docs_root):
+        rel = path.relative_to(docs_root)
+        lines = path.read_text(encoding="utf-8", errors="ignore").splitlines()
+        for index, line in enumerate(lines, start=1):
+            for badge_text in BADGE_TEXT_RE.findall(line):
+                label = badge_text.strip().lower()
+                if label in RETIRED_BADGE_LABELS or PHASE_BADGE_RE.match(label):
+                    errors.append(
+                        f"{rel}:{index}: retired badge label {badge_text.strip()!r}"
+                    )
+            if rel in BADGE_CLAIM_EXEMPT:
+                continue
+            claims_reviewed = (
+                'badge--reviewed">Reviewed<' in line
+                or PLAIN_REVIEWED_CELL_RE.search(line) is not None
+            )
+            if not claims_reviewed:
+                continue
+            context = "\n".join(
+                lines[max(0, index - 1 - REVIEWED_LOOKBACK_LINES) : index]
+            )
+            errors += _check_reviewed_claim(
+                rel, index, line, context, statuses, nec_articles, iec60079_parts
+            )
+    return errors
+
+
 def _bundle_command() -> str | None:
     configured = shutil.which("bundle")
     if configured:
@@ -241,6 +393,7 @@ def run_corpus() -> tuple[list[str], list[str]]:
 
 def run_site() -> tuple[list[str], list[str]]:
     errors, warnings = check_site_metadata()
+    errors += check_site_badges()
     bundle = _bundle_command()
     if bundle is None:
         return errors + ["Bundler executable not found"], warnings
@@ -277,6 +430,8 @@ def main(argv: list[str] | None = None) -> int:
         site_errors, site_warnings = (
             run_site() if args.profile != "metadata" else check_site_metadata()
         )
+        if args.profile == "metadata":
+            site_errors += check_site_badges()
         errors += site_errors
         warnings += site_warnings
     if args.profile in ("toolkit", "full"):

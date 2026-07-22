@@ -21,7 +21,6 @@ review:
 <div class="page-header">
   <span class="page-header__label">Semiconductor Facility — Interface Engineering</span>
   <h1>Tool-Facility Interface (TFI)</h1>
-  <span class="badge badge--new">Phase 22</span>
 </div>
 
 This page defines the engineering boundary between facility utilities and semiconductor process tools — covering physical connections, signal exchange, permit-to-run logic, and fault ownership.

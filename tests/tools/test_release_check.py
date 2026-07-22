@@ -5,6 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from tools.release_check import (
+    check_site_badges,
     check_ai_register_generated,
     check_rag_metadata,
     check_rag_mirror,
@@ -143,3 +144,132 @@ review:
     )
     errors, _ = check_site_metadata(tmp_path)
     assert any("invalid review status" in error for error in errors)
+
+
+def _badge_corpus(tmp_path: Path) -> Path:
+    """Minimal standards_intelligence tree for badge-honesty tests."""
+    rag = tmp_path / "rag"
+    intel = rag / "standards_intelligence"
+    nec = intel / "us" / "nec"
+    hazloc = intel / "international" / "hazardous_area" / "iec_60079"
+    nec.mkdir(parents=True)
+    hazloc.mkdir(parents=True)
+    (intel / "_index.yaml").write_text(
+        """standards:
+  us:
+    - standard_id: "NEC_2023"
+      folder: "us/nec"
+      status: "complete"
+  international:
+    hazardous_area:
+      - standard_id: "IEC_60079"
+        folder: "international/hazardous_area/iec_60079"
+        status: "complete"
+    functional_safety:
+      - standard_id: "IEC_61511_2016"
+        folder: "international/functional_safety/iec_61511"
+        status: "draft"
+""",
+        encoding="utf-8",
+    )
+    (nec / "NEC_2023__Art500__hazardous_locations_general.md").write_text(
+        "AI_READ_ACCESS: ALLOWED\n", encoding="utf-8"
+    )
+    (nec / "NEC_2023__Art700_702__emergency_standby_systems.md").write_text(
+        "AI_READ_ACCESS: ALLOWED\n", encoding="utf-8"
+    )
+    (hazloc / "IEC60079_10_1__area_classification_gas.md").write_text(
+        "AI_READ_ACCESS: ALLOWED\n", encoding="utf-8"
+    )
+    return rag
+
+
+def _badge_page(tmp_path: Path, body: str) -> Path:
+    docs = tmp_path / "docs"
+    page = docs / "topic" / "index.md"
+    page.parent.mkdir(parents=True)
+    page.write_text(body, encoding="utf-8")
+    return docs
+
+
+def test_site_badges_rejects_retired_labels_and_phase_badges(tmp_path: Path) -> None:
+    docs = _badge_page(
+        tmp_path,
+        '<span class="badge badge--complete">Complete</span>\n'
+        '<span class="badge badge--gap">Not in corpus</span>\n'
+        '<span class="badge badge--new">Phase 22</span>\n',
+    )
+    errors = check_site_badges(docs, _badge_corpus(tmp_path))
+    assert sum("retired badge label" in error for error in errors) == 3
+
+
+def test_site_badges_allows_longform_gap_flags(tmp_path: Path) -> None:
+    docs = _badge_page(
+        tmp_path,
+        '<span class="badge badge--verify">IEC 60092 not in corpus — class rules summary only</span>\n',
+    )
+    assert check_site_badges(docs, _badge_corpus(tmp_path)) == []
+
+
+def test_site_badges_accepts_verified_module_and_article(tmp_path: Path) -> None:
+    docs = _badge_page(
+        tmp_path,
+        '| US route | NEC Art. 500, 700 | <span class="badge badge--reviewed">Reviewed</span> |\n'
+        '| Zone classification | IEC 60079-10-1 | <span class="badge badge--reviewed">Reviewed</span> |\n',
+    )
+    assert check_site_badges(docs, _badge_corpus(tmp_path)) == []
+
+
+def test_site_badges_rejects_article_missing_from_corpus(tmp_path: Path) -> None:
+    docs = _badge_page(
+        tmp_path,
+        '| US route | NEC Art. 500, 501 | <span class="badge badge--reviewed">Reviewed</span> |\n',
+    )
+    errors = check_site_badges(docs, _badge_corpus(tmp_path))
+    assert any("NEC Art. 501" in error for error in errors)
+
+
+def test_site_badges_rejects_part_missing_from_corpus(tmp_path: Path) -> None:
+    docs = _badge_page(
+        tmp_path,
+        '| Dust | IEC 60079-10-2 | <span class="badge badge--reviewed">Reviewed</span> |\n',
+    )
+    errors = check_site_badges(docs, _badge_corpus(tmp_path))
+    assert any("IEC 60079-10-2" in error for error in errors)
+
+
+def test_site_badges_rejects_incomplete_module(tmp_path: Path) -> None:
+    docs = _badge_page(
+        tmp_path,
+        '| SIS lifecycle | IEC 61511 | <span class="badge badge--reviewed">Reviewed</span> |\n',
+    )
+    errors = check_site_badges(docs, _badge_corpus(tmp_path))
+    assert any("iec_61511" in error and "not marked complete" in error for error in errors)
+
+
+def test_site_badges_rejects_unresolvable_reviewed_claim(tmp_path: Path) -> None:
+    docs = _badge_page(
+        tmp_path,
+        '| Mystery topic | <span class="badge badge--reviewed">Reviewed</span> |\n',
+    )
+    errors = check_site_badges(docs, _badge_corpus(tmp_path))
+    assert any("no resolvable standard" in error for error in errors)
+
+
+def test_site_badges_resolves_standard_from_preceding_lines(tmp_path: Path) -> None:
+    docs = _badge_page(
+        tmp_path,
+        "### IEC 60079 — Explosive Atmospheres\n\n"
+        '**Status:** <span class="badge badge--reviewed">Reviewed</span>\n',
+    )
+    assert check_site_badges(docs, _badge_corpus(tmp_path)) == []
+
+
+def test_site_badges_checks_plain_reviewed_table_cells(tmp_path: Path) -> None:
+    docs = _badge_page(
+        tmp_path,
+        "| Mystery standard | somewhere | Reviewed |\n"
+        "| Reviewed by | supervisor |\n",
+    )
+    errors = check_site_badges(docs, _badge_corpus(tmp_path))
+    assert sum("no resolvable standard" in error for error in errors) == 1

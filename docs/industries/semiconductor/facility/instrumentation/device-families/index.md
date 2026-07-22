@@ -23,7 +23,6 @@ review:
 <div class="page-header">
   <span class="page-header__label">Semiconductor Facility — Instrumentation</span>
   <h1>Device Family Library</h1>
-  <span class="badge badge--new">Phase 23</span>
 </div>
 
 This page groups instrument device families by engineering function and typical fab utility usage. Use it to identify which family fits a measurement point before selecting a specific product.

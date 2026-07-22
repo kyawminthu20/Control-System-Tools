@@ -21,7 +21,6 @@ review:
 <div class="page-header">
   <span class="page-header__label">Semiconductor Facility — Gas Systems</span>
   <h1>Bulk Specialty Gas Systems</h1>
-  <span class="badge badge--new">Phase 22</span>
 </div>
 
 This page covers facility-side gas infrastructure that feeds semiconductor tools and process areas. It addresses the supply and control path from the bulk source to the tool interface — not the internal process-tool gas box design.

@@ -1,6 +1,16 @@
 # Project State
 
-**Last Updated:** 2026-07-20 (Phase 52.4b complete; easy-first visualization standard prepared)
+**Last Updated:** 2026-07-21 (Phase 52.4 badge-honesty audit complete)
+**Phase 52.4 badge-honesty audit COMPLETE (2026-07-21):** all 68 in-table `Reviewed` badges + 4 plain
+`Reviewed` cells verified against `_index.yaml` (13 modules, all complete) and corpus files. Two false
+claims fixed (NEC Art. 501–503 crosswalk row → Partial coverage; cybersecurity "IEC 60079 NOT
+CONFIRMED IN CORPUS" → covered-separately pointer). Retired labels ("Not in corpus", "Not yet
+covered", "NOT CONFIRMED IN CORPUS") removed from governed pages; 16 stale internal Phase-number
+badges removed from the semiconductor-facility subtree; about-legend `Partial coverage` class fixed;
+stale `_index.yaml` NEC element count corrected 10 → 19. New `check_site_badges()` release gate
+(site + metadata profiles) machine-verifies every Reviewed claim against the corpus and bans bare
+retired/phase badge labels (+9 tests, suite 303 → 312). Long-form corpus-gap flags preserved.
+Remaining 52.4 item: only the parked 52.4a IEC 62061 rebuild (owner-gated, no licensed Ed. 2.2 text).
 **Digital-twin deepening arc (started 2026-07-19):** four approved slices — **49d evidence closure (COMPLETE)** →
 **53.1 twin maturity ladder (COMPLETE)** →
 **53.2 `src/cst/twin/` contract + sync-health (COMPLETE)** →

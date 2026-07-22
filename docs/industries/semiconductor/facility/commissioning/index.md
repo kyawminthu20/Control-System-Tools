@@ -21,7 +21,6 @@ review:
 <div class="page-header">
   <span class="page-header__label">Semiconductor Facility — Commissioning</span>
   <h1>Facility Utility System Commissioning</h1>
-  <span class="badge badge--new">Phase 23</span>
 </div>
 
 This page provides a structured commissioning and startup framework for semiconductor facility utility systems — gas, UPW, chemical, exhaust, and cleanroom. It is a planning reference, not a substitute for site-specific commissioning procedures.

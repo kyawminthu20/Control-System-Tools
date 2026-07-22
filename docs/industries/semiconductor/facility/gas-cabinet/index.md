@@ -27,7 +27,6 @@ review:
 <div class="page-header">
   <span class="page-header__label">Semiconductor Facility — Gas Systems</span>
   <h1>Gas Cabinet Control, Safety, and Interlock Architecture</h1>
-  <span class="badge badge--new">Phase 24</span>
 </div>
 
 This page is the cabinet-level companion to the broader [Bulk Specialty Gas Systems](/industries/semiconductor/facility/bulk-specialty-gas/) reference. It focuses on the local package where hazardous gas, purge sequencing, exhaust proof, valve proving, shutdown logic, and tool handshake all converge.

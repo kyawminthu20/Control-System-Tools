@@ -21,7 +21,6 @@ review:
 <div class="page-header">
   <span class="page-header__label">Semiconductor Facility — Water Systems</span>
   <h1>UPW and Wastewater Systems</h1>
-  <span class="badge badge--new">Phase 22</span>
 </div>
 
 This page covers facility water systems that most directly affect semiconductor processing quality — from incoming water pretreatment through ultrapure water delivery, reclaim, and wastewater handling.

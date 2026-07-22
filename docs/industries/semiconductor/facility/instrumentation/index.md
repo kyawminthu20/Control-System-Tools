@@ -21,7 +21,6 @@ review:
 <div class="page-header">
   <span class="page-header__label">Semiconductor Facility — Instrumentation</span>
   <h1>Facility Instrumentation Reference</h1>
-  <span class="badge badge--new">Phase 22</span>
 </div>
 
 This page covers instrument selection across semiconductor facility utility systems. It organizes by system and measurement type, includes a compliance lens for each application, and notes common manufacturer families.

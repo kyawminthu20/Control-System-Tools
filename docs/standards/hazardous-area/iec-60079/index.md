@@ -116,13 +116,13 @@ The reference library carries six core parts of the IEC 60079 series — the par
 |------|-------|--------|
 | **60079-0** | General requirements (marking, EPL, gas groups, T-codes) | ✓ |
 | **60079-1** | Flameproof enclosures (Ex d) | ✓ |
-| 60079-2 | Pressurization (Ex p) | <span class="badge badge--gap">Not in corpus</span> |
-| 60079-7 | Increased safety (Ex e) | <span class="badge badge--gap">Not in corpus</span> |
+| 60079-2 | Pressurization (Ex p) | <span class="badge badge--gap">Planned</span> |
+| 60079-7 | Increased safety (Ex e) | <span class="badge badge--gap">Planned</span> |
 | **60079-10-1** | Area classification — gas | ✓ |
 | 60079-10-2 | Area classification — dust | <span class="badge badge--gap">Planned</span> |
 | **60079-11** | Intrinsic safety (Ex i) | ✓ |
 | **60079-14** | Installation design and erection | ✓ |
-| 60079-15 | Non-sparking (Ex nA) | <span class="badge badge--gap">Not in corpus</span> |
+| 60079-15 | Non-sparking (Ex nA) | <span class="badge badge--gap">Planned</span> |
 | **60079-17** | Inspection and maintenance | ✓ |
 | 60079-18 | Encapsulation (Ex m) | <span class="badge badge--gap">Planned</span> |
 | 60079-31 | Dust ignition protection by enclosure (Ex t) | <span class="badge badge--gap">Planned</span> |

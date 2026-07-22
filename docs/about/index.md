@@ -75,7 +75,7 @@ Every technical page carries one of these statuses:
 |--------|---------|
 | <span class="badge badge--reviewed">Reviewed</span> | Authored from the reference library and checked by the author against the identified edition |
 | <span class="badge badge--verify">Review pending</span> | Content exists but technical review against the identified edition is outstanding |
-| <span class="badge badge--new">Partial coverage</span> | Only selected clauses or topics are covered |
+| <span class="badge badge--partial">Partial coverage</span> | Only selected clauses or topics are covered |
 | <span class="badge badge--verify">Needs revalidation</span> | Reviewed previously; the referenced edition may since have been superseded |
 | <span class="badge badge--gap">Planned</span> | Page or topic identified, content not yet written |
 

@@ -21,7 +21,6 @@ review:
 <div class="page-header">
   <span class="page-header__label">Semiconductor Facility — Exhaust Systems</span>
   <h1>Exhaust, Abatement, and Vacuum Systems</h1>
-  <span class="badge badge--new">Phase 22</span>
 </div>
 
 This page covers facility utility exhaust and abatement infrastructure — including process exhaust routing, toxic and corrosive capture, abatement support systems, and vacuum interfaces where facility connections matter.

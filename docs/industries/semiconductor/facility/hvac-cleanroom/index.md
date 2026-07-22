@@ -21,7 +21,6 @@ review:
 <div class="page-header">
   <span class="page-header__label">Semiconductor Facility — Environmental Control</span>
   <h1>HVAC and Cleanroom Environment</h1>
-  <span class="badge badge--new">Phase 22</span>
 </div>
 
 This page covers the environmental-control layer that protects product, process stability, and utility quality inside a semiconductor facility — from room pressure cascade and airflow control through cleanroom classification monitoring.
