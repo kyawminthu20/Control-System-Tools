@@ -26,7 +26,9 @@
 - **New automated gate:** `check_site_badges()` in `tools/release_check.py` (site + metadata
   profiles) — every `Reviewed` badge/cell must resolve to a `complete` module in `_index.yaml`;
   cited NEC articles and IEC 60079 parts must exist as corpus files; bare retired labels and
-  internal phase-number badges fail the release. 9 new tests (suite 303 → 312). Full gate green.
+  internal phase-number badges fail the release; shared includes are scanned for retired labels
+  too (the trust-boundary legend still said "Not yet covered" — now "Planned"). 10 new tests
+  (suite 303 → 313). Full gate green.
 
 ## 2026-07-20 — Project-behavior research recommendation
 

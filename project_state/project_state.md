@@ -9,7 +9,7 @@ covered", "NOT CONFIRMED IN CORPUS") removed from governed pages; 16 stale inter
 badges removed from the semiconductor-facility subtree; about-legend `Partial coverage` class fixed;
 stale `_index.yaml` NEC element count corrected 10 → 19. New `check_site_badges()` release gate
 (site + metadata profiles) machine-verifies every Reviewed claim against the corpus and bans bare
-retired/phase badge labels (+9 tests, suite 303 → 312). Long-form corpus-gap flags preserved.
+retired/phase badge labels, on pages and shared includes (+10 tests, suite 303 → 313). Long-form corpus-gap flags preserved.
 Remaining 52.4 item: only the parked 52.4a IEC 62061 rebuild (owner-gated, no licensed Ed. 2.2 text).
 **Digital-twin deepening arc (started 2026-07-19):** four approved slices — **49d evidence closure (COMPLETE)** →
 **53.1 twin maturity ladder (COMPLETE)** →

@@ -273,3 +273,14 @@ def test_site_badges_checks_plain_reviewed_table_cells(tmp_path: Path) -> None:
     )
     errors = check_site_badges(docs, _badge_corpus(tmp_path))
     assert sum("no resolvable standard" in error for error in errors) == 1
+
+
+def test_site_badges_rejects_retired_labels_in_shared_includes(tmp_path: Path) -> None:
+    docs = _badge_page(tmp_path, "no badges here\n")
+    includes = docs / "_includes"
+    includes.mkdir()
+    (includes / "legend.html").write_text(
+        '<span class="badge badge--gap">Not yet covered</span>\n', encoding="utf-8"
+    )
+    errors = check_site_badges(docs, _badge_corpus(tmp_path))
+    assert any("legend.html" in error and "retired badge label" in error for error in errors)

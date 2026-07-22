@@ -365,6 +365,21 @@ def check_site_badges(
             errors += _check_reviewed_claim(
                 rel, index, line, context, statuses, nec_articles, iec60079_parts
             )
+    # Shared includes render on every page, so a retired label there
+    # propagates site-wide (only the label rule applies — includes carry
+    # legends, not corpus-status claims of their own).
+    includes = docs_root / "_includes"
+    if includes.is_dir():
+        for path in sorted(includes.glob("*.html")):
+            rel = path.relative_to(docs_root)
+            text = path.read_text(encoding="utf-8", errors="ignore")
+            for index, line in enumerate(text.splitlines(), start=1):
+                for badge_text in BADGE_TEXT_RE.findall(line):
+                    label = badge_text.strip().lower()
+                    if label in RETIRED_BADGE_LABELS or PHASE_BADGE_RE.match(label):
+                        errors.append(
+                            f"{rel}:{index}: retired badge label {badge_text.strip()!r}"
+                        )
     return errors
 
 
